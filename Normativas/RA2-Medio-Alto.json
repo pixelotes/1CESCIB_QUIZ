@@ -1,0 +1,755 @@
+{
+  "tema": "Examen: Sistemas de Cumplimiento y Gestión de Riesgos",
+  "preguntas": [
+    {
+      "pregunta": "Una empresa de transporte logístico es designada como 'operador de servicios esenciales'. ¿Qué normativa europea le obliga específicamente a garantizar la seguridad de sus redes y sistemas de información?",
+      "respuestas": [
+        {
+          "texto": "GDPR (RGPD)",
+          "correcta": false,
+          "explicacion": "El GDPR protege datos personales, no la infraestructura de redes y sistemas de servicios esenciales."
+        },
+        {
+          "texto": "Directiva NIS / NIS2",
+          "correcta": true,
+          "explicacion": "La Directiva NIS y NIS2 obligan a la seguridad de redes y sistemas de información para proveedores de infraestructuras críticas en Europa."
+        },
+        {
+          "texto": "PSD2",
+          "correcta": false,
+          "explicacion": "PSD2 es específica para servicios de pago y sector bancario."
+        },
+        {
+          "texto": "ISO 22301",
+          "correcta": false,
+          "explicacion": "ISO 22301 es un estándar de continuidad del negocio, no la directiva legal de ciberseguridad obligatoria."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la gestión de riesgos, ¿cuál es la definición precisa de 'Vulnerabilidad'?",
+      "respuestas": [
+        {
+          "texto": "Un evento adverso que puede causar daño a la organización.",
+          "correcta": false,
+          "explicacion": "Eso es la definición de 'Amenaza'."
+        },
+        {
+          "texto": "La probabilidad de que un activo pierda su valor.",
+          "correcta": false,
+          "explicacion": "Eso está relacionado con el riesgo o el impacto, no con la vulnerabilidad en sí."
+        },
+        {
+          "texto": "Una debilidad de un activo (o ausencia de control) que permite que una amenaza se materialice.",
+          "correcta": true,
+          "explicacion": "La vulnerabilidad se define como una debilidad de los activos que hace que una amenaza pueda ocurrir."
+        },
+        {
+          "texto": "El coste económico derivado de un incidente de seguridad.",
+          "correcta": false,
+          "explicacion": "Eso es el 'Impacto'."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una empresa española utiliza un proveedor de servicios en la nube estadounidense para alojar datos médicos de pacientes españoles, ¿qué normativa de EE.UU. podría ser relevante considerar, además del GDPR?",
+      "respuestas": [
+        {
+          "texto": "SOX",
+          "correcta": false,
+          "explicacion": "SOX aplica a la contabilidad de empresas cotizadas."
+        },
+        {
+          "texto": "HIPAA",
+          "correcta": true,
+          "explicacion": "HIPAA es la ley de EE.UU. que garantiza la privacidad y seguridad de la información médica."
+        },
+        {
+          "texto": "PCI-DSS",
+          "correcta": false,
+          "explicacion": "PCI-DSS es para tarjetas de crédito."
+        },
+        {
+          "texto": "NIST CSF",
+          "correcta": false,
+          "explicacion": "NIST CSF es un marco de trabajo voluntario, no una ley obligatoria de privacidad sanitaria."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación matemática básica para el cálculo del Riesgo en la metodología cualitativa descrita?",
+      "respuestas": [
+        {
+          "texto": "Riesgo = Activo + Amenaza",
+          "correcta": false,
+          "explicacion": "No se suman componentes, se evalúan factores de ocurrencia y consecuencia."
+        },
+        {
+          "texto": "Riesgo = Probabilidad x Impacto",
+          "correcta": true,
+          "explicacion": "El riesgo se calcula a partir de la probabilidad de ocurrencia multiplicada por el impacto."
+        },
+        {
+          "texto": "Riesgo = Vulnerabilidad / Control",
+          "correcta": false,
+          "explicacion": "Esta fórmula no corresponde al modelo estándar presentado."
+        },
+        {
+          "texto": "Riesgo = Impacto - Probabilidad",
+          "correcta": false,
+          "explicacion": "El riesgo nunca es una resta del impacto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia al 'Riesgo Residual' del 'Riesgo Inherente'?",
+      "respuestas": [
+        {
+          "texto": "El riesgo residual es el riesgo antes de aplicar controles, y el inherente es el que queda después.",
+          "correcta": false,
+          "explicacion": "Es justo al revés."
+        },
+        {
+          "texto": "El riesgo inherente es el propio del activo sin medidas; el residual es el nivel de riesgo que permanece tras aplicar controles.",
+          "correcta": true,
+          "explicacion": "El riesgo inherente es el que existe per se, y el residual es el que queda tras aplicar controles de tratamiento."
+        },
+        {
+          "texto": "Son sinónimos, se usan indistintamente.",
+          "correcta": false,
+          "explicacion": "Representan dos estados diferentes del riesgo en el tiempo."
+        },
+        {
+          "texto": "El riesgo residual solo aplica a riesgos financieros.",
+          "correcta": false,
+          "explicacion": "Aplica a cualquier tipo de riesgo gestionado."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un diagrama de dependencias de activos, si el activo 'Servicio de Ventas' depende del activo 'Servidor Web', ¿cómo se calcula el riesgo del activo superior (Ventas)?",
+      "respuestas": [
+        {
+          "texto": "Es el promedio de los riesgos de los activos inferiores.",
+          "correcta": false,
+          "explicacion": "El promedio diluiría el riesgo crítico."
+        },
+        {
+          "texto": "El riesgo de un activo es el mayor de todos los activos de los que depende.",
+          "correcta": true,
+          "explicacion": "El riesgo de un activo se considera el mayor de todos los activos de los que depende."
+        },
+        {
+          "texto": "El activo superior no tiene riesgo, solo los activos físicos.",
+          "correcta": false,
+          "explicacion": "Los servicios heredan los riesgos de la tecnología que los soporta."
+        },
+        {
+          "texto": "Se suman todos los riesgos de la cadena.",
+          "correcta": false,
+          "explicacion": "La suma no es el método estándar para la herencia de riesgos en dependencias directas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el documento, ¿qué norma específica debe cumplir el sector público en España para garantizar la seguridad de sus sistemas?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Aunque se usa, la norma legal específica y obligatoria es otra."
+        },
+        {
+          "texto": "ENS (Esquema Nacional de Seguridad)",
+          "correcta": true,
+          "explicacion": "El ENS es la normativa de seguridad en el sector público español y establece requisitos para proveedores de servicios esenciales."
+        },
+        {
+          "texto": "NIST SP 800-53",
+          "correcta": false,
+          "explicacion": "Es un estándar del gobierno de EE.UU., no de España."
+        },
+        {
+          "texto": "PCI-DSS",
+          "correcta": false,
+          "explicacion": "Es para tarjetas de pago."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la metodología de gestión de riesgos, ¿qué representa un 'Mapa de Calor' (Heat Map)?",
+      "respuestas": [
+        {
+          "texto": "La temperatura de los servidores en el centro de datos.",
+          "correcta": false,
+          "explicacion": "En este contexto no es temperatura física."
+        },
+        {
+          "texto": "Una matriz gráfica donde se cruzan probabilidad e impacto para visualizar los niveles de riesgo.",
+          "correcta": true,
+          "explicacion": "El mapa de calor es una matriz donde las filas son el impacto y las columnas la probabilidad, usando colores para el nivel de riesgo."
+        },
+        {
+          "texto": "Un diagrama de flujo de los procesos de negocio.",
+          "correcta": false,
+          "explicacion": "El mapa de calor no muestra flujo, sino intensidad de riesgo."
+        },
+        {
+          "texto": "La distribución geográfica de las amenazas.",
+          "correcta": false,
+          "explicacion": "Se refiere a la severidad, no a la geografía."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de un sistema GRC (Governance, Risk and Compliance)?",
+      "respuestas": [
+        {
+          "texto": "Sustituir al departamento legal de la empresa.",
+          "correcta": false,
+          "explicacion": "Es una herramienta de apoyo, no un sustituto."
+        },
+        {
+          "texto": "Integrar el gobierno de la seguridad, la gestión de riesgos y el cumplimiento normativo en una sola plataforma.",
+          "correcta": true,
+          "explicacion": "GRC significa Gobierno (de la seguridad), (gestión del) Riesgo y (evaluación del) Cumplimiento, integrando estas funciones."
+        },
+        {
+          "texto": "Generar contraseñas seguras automáticamente.",
+          "correcta": false,
+          "explicacion": "Esa es una función de un gestor de contraseñas, no de un GRC."
+        },
+        {
+          "texto": "Realizar copias de seguridad de los datos.",
+          "correcta": false,
+          "explicacion": "Esa es una herramienta de Backup."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica el ciclo P-D-C-A en un Sistema de Gestión de Compliance?",
+      "respuestas": [
+        {
+          "texto": "Planificar, Delegar, Controlar, Archivar.",
+          "correcta": false,
+          "explicacion": "Los verbos no son correctos según el estándar ISO."
+        },
+        {
+          "texto": "Proteger, Detectar, Corregir, Analizar.",
+          "correcta": false,
+          "explicacion": "Aunque son acciones de seguridad, no son las fases del ciclo de mejora continua."
+        },
+        {
+          "texto": "Planificar, Hacer, Comprobar, Actuar (Plan-Do-Check-Act).",
+          "correcta": true,
+          "explicacion": "Los principales aspectos de un sistema de gestión son: Planificar, Hacer, Comprobar, Actuar (P-D-C-A)."
+        },
+        {
+          "texto": "Prevenir, Disuadir, Contener, Atacar.",
+          "correcta": false,
+          "explicacion": "Terminología más militar o de defensa activa, no de gestión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa regula específicamente las transacciones electrónicas y servicios de pago en el sector bancario europeo?",
+      "respuestas": [
+        {
+          "texto": "GDPR",
+          "correcta": false,
+          "explicacion": "Regula datos personales, no la operativa de pagos específicamente."
+        },
+        {
+          "texto": "PSD2",
+          "correcta": true,
+          "explicacion": "La PSD2 es la directiva europea sobre pagos digitales que exige seguridad y transparencia en las transacciones electrónicas."
+        },
+        {
+          "texto": "HIPAA",
+          "correcta": false,
+          "explicacion": "Es del sector salud en EE.UU."
+        },
+        {
+          "texto": "LSSI",
+          "correcta": false,
+          "explicacion": "Regula servicios de la sociedad de la información en general, no específicamente pagos bancarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una matriz de riesgos, ¿qué significa un riesgo situado en la 'región de riesgos inaceptables'?",
+      "respuestas": [
+        {
+          "texto": "Que el riesgo es tan bajo que no merece atención.",
+          "correcta": false,
+          "explicacion": "Eso sería un riesgo aceptable."
+        },
+        {
+          "texto": "Que el nivel de riesgo no es asumible para conseguir los objetivos y requiere acción inmediata.",
+          "correcta": true,
+          "explicacion": "Los riesgos inaceptables son aquellos cuyo nivel no es asumible por la organización para conseguir sus objetivos estratégicos."
+        },
+        {
+          "texto": "Que la empresa debe cerrar inmediatamente.",
+          "correcta": false,
+          "explicacion": "No implica cierre, sino gestión urgente."
+        },
+        {
+          "texto": "Que se debe transferir el riesgo a un seguro obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Transferir es una opción, pero mitigar o evitar son otras opciones válidas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de un Compliance Officer según el texto?",
+      "respuestas": [
+        {
+          "texto": "Instalar los antivirus en los ordenadores.",
+          "correcta": false,
+          "explicacion": "Esa es tarea del departamento de TI o Ciberseguridad operativa."
+        },
+        {
+          "texto": "Defender legalmente a la empresa en juicios.",
+          "correcta": false,
+          "explicacion": "Esa es tarea del departamento jurídico o abogados."
+        },
+        {
+          "texto": "Gestionar el programa de cumplimiento, supervisar riesgos y asegurar que se respetan las normas internas y externas.",
+          "correcta": true,
+          "explicacion": "El Compliance Officer es la persona responsable de la gestión del programa de cumplimiento."
+        },
+        {
+          "texto": "Decidir los objetivos comerciales de la empresa.",
+          "correcta": false,
+          "explicacion": "Esa es función de la Dirección General o CEO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia existe entre un 'Activo de Negocio' y un 'Activo de Soporte' (o tecnológico)?",
+      "respuestas": [
+        {
+          "texto": "No hay diferencia.",
+          "correcta": false,
+          "explicacion": "Son conceptos distintos."
+        },
+        {
+          "texto": "El activo de negocio es lo que aporta valor (ej. movilidad, reputación), mientras que el de soporte es el medio para conseguirlo (ej. coche, servidor).",
+          "correcta": true,
+          "explicacion": "El activo de soporte (ej. coche) es un medio para conseguir lo que realmente aporta valor, el activo de negocio (ej. movilidad)."
+        },
+        {
+          "texto": "El activo de negocio siempre es dinero y el de soporte siempre es personal.",
+          "correcta": false,
+          "explicacion": "Un proceso o información puede ser activo de negocio sin ser dinero físico."
+        },
+        {
+          "texto": "El activo de soporte es más importante que el de negocio.",
+          "correcta": false,
+          "explicacion": "El soporte existe para servir al negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece la norma ISO 19600 en relación con la 'independencia' de la función de cumplimiento?",
+      "respuestas": [
+        {
+          "texto": "Que el Compliance Officer no debe hablar con nadie.",
+          "correcta": false,
+          "explicacion": "Debe comunicarse constantemente."
+        },
+        {
+          "texto": "Que la supervisión puede o no ser llevada a cabo por una persona independiente, pero la auditoría sí debe ser independiente.",
+          "correcta": true,
+          "explicacion": "La supervisión puede no ser independiente, pero la auditoría debe ser realizada por una persona independiente."
+        },
+        {
+          "texto": "Que no se requiere independencia en ningún caso.",
+          "correcta": false,
+          "explicacion": "La independencia es clave para la auditoría."
+        },
+        {
+          "texto": "Que el Compliance Officer debe ser externo a la empresa obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Puede ser interno, siempre que tenga autoridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de 'normativa voluntaria' o estándar mencionado en el texto?",
+      "respuestas": [
+        {
+          "texto": "GDPR",
+          "correcta": false,
+          "explicacion": "Es un reglamento obligatorio."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": true,
+          "explicacion": "Se cita explícitamente como ejemplo de estándar voluntario (recomendado pero no obligatorio)."
+        },
+        {
+          "texto": "LOPDGDD",
+          "correcta": false,
+          "explicacion": "Es una ley orgánica española obligatoria."
+        },
+        {
+          "texto": "Ley SOX",
+          "correcta": false,
+          "explicacion": "Es una ley federal de EE.UU. obligatoria para cotizadas."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de impacto, ¿cuáles son las tres dimensiones clásicas de la seguridad de la información?",
+      "respuestas": [
+        {
+          "texto": "Velocidad, Almacenamiento, Conectividad.",
+          "correcta": false,
+          "explicacion": "Son características técnicas."
+        },
+        {
+          "texto": "Personas, Procesos, Tecnología.",
+          "correcta": false,
+          "explicacion": "Esos son los pilares de la implementación."
+        },
+        {
+          "texto": "Confidencialidad, Integridad, Disponibilidad.",
+          "correcta": true,
+          "explicacion": "Las dimensiones son facetas de un mismo riesgo: Confidencialidad, Integridad y Disponibilidad."
+        },
+        {
+          "texto": "Legal, Técnico, Operativo.",
+          "correcta": false,
+          "explicacion": "Son tipos de riesgos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué metodología española se menciona como referencia para catalogar amenazas y gestionar riesgos?",
+      "respuestas": [
+        {
+          "texto": "MAGERIT",
+          "correcta": true,
+          "explicacion": "MAGERIT v.3 se cita como metodología de análisis y gestión de riesgos utilizada en España."
+        },
+        {
+          "texto": "SCRUM",
+          "correcta": false,
+          "explicacion": "Es una metodología ágil de desarrollo."
+        },
+        {
+          "texto": "ITIL",
+          "correcta": false,
+          "explicacion": "Es para gestión de servicios TI."
+        },
+        {
+          "texto": "COBIT",
+          "correcta": false,
+          "explicacion": "Es un marco de gobierno de TI."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una empresa tiene un riesgo con 'Probabilidad: Alta' e 'Impacto: Bajo', y otro con 'Probabilidad: Baja' e 'Impacto: Crítico'. ¿Cuál suele ser prioritario en la matriz de riesgos general?",
+      "respuestas": [
+        {
+          "texto": "Siempre el de probabilidad alta.",
+          "correcta": false,
+          "explicacion": "Un evento frecuente pero inocuo no es crítico."
+        },
+        {
+          "texto": "Depende del cálculo numérico en la matriz (Probabilidad x Impacto), pero los impactos críticos suelen ponderar más alto.",
+          "correcta": true,
+          "explicacion": "Según la matriz de riesgos de ejemplo, un impacto 'Muy Alto' con probabilidad 'Media' da un riesgo de 6, mientras que un impacto bajo con probabilidad alta da un riesgo menor (4)."
+        },
+        {
+          "texto": "Tienen el mismo riesgo.",
+          "correcta": false,
+          "explicacion": "Raramente dan el mismo valor numérico y cualitativo."
+        },
+        {
+          "texto": "Ninguno requiere atención.",
+          "correcta": false,
+          "explicacion": "Ambos deben evaluarse."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de un GRC, ¿qué facilita la funcionalidad de 'Inventariado de Activos'?",
+      "respuestas": [
+        {
+          "texto": "Saber cuántas sillas hay en la oficina.",
+          "correcta": false,
+          "explicacion": "Se centra en activos de información y negocio."
+        },
+        {
+          "texto": "Modelar las dependencias para entender cómo un fallo técnico impacta en el negocio.",
+          "correcta": true,
+          "explicacion": "El GRC facilita el inventariado de activos y el modelado de dependencias para determinar la criticidad."
+        },
+        {
+          "texto": "Calcular la nómina de los empleados.",
+          "correcta": false,
+          "explicacion": "Eso es de RRHH."
+        },
+        {
+          "texto": "Vender los activos obsoletos.",
+          "correcta": false,
+          "explicacion": "No es una herramienta de subastas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el rol de la 'Dirección' en el sistema de gestión según ISO 19600?",
+      "respuestas": [
+        {
+          "texto": "Solo debe firmar los cheques.",
+          "correcta": false,
+          "explicacion": "Su rol es más amplio."
+        },
+        {
+          "texto": "Debe demostrar compromiso, asignar recursos y definir si la organización cumple con las normas.",
+          "correcta": true,
+          "explicacion": "La dirección debe implicarse y determinar si la organización está configurada conforme a las normas; sin su compromiso, el sistema falla."
+        },
+        {
+          "texto": "No tiene rol, es responsabilidad exclusiva del Compliance Officer.",
+          "correcta": false,
+          "explicacion": "La dirección es responsable última."
+        },
+        {
+          "texto": "Su única función es contratar auditores.",
+          "correcta": false,
+          "explicacion": "Es una de sus funciones, pero no la única."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué control mitiga el riesgo de 'Pérdida de la licencia de conducción' en el ejemplo del coche?",
+      "respuestas": [
+        {
+          "texto": "Revisar los neumáticos.",
+          "correcta": false,
+          "explicacion": "Eso evita pinchazos."
+        },
+        {
+          "texto": "Conducción prudente y respeto a las normas.",
+          "correcta": true,
+          "explicacion": "El control sugerido en el texto para la pérdida de licencia es 'Conducción prudente, respetando las normas de circulación'."
+        },
+        {
+          "texto": "Cambiar el aceite.",
+          "correcta": false,
+          "explicacion": "Eso evita averías mecánicas."
+        },
+        {
+          "texto": "Contratar un seguro.",
+          "correcta": false,
+          "explicacion": "El seguro no evita la retirada de la licencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los 'Controles' en la fase de tratamiento del riesgo?",
+      "respuestas": [
+        {
+          "texto": "Medidas (técnicas, organizativas, legales) que modifican el riesgo.",
+          "correcta": true,
+          "explicacion": "Para cada amenaza, se introduce un control que mitiga el riesgo."
+        },
+        {
+          "texto": "Exámenes a los empleados.",
+          "correcta": false,
+          "explicacion": "Eso es formación/evaluación."
+        },
+        {
+          "texto": "Dispositivos de vigilancia física únicamente.",
+          "correcta": false,
+          "explicacion": "Los controles pueden ser lógicos o legales también."
+        },
+        {
+          "texto": "Los mandos a distancia de los equipos.",
+          "correcta": false,
+          "explicacion": "Uso incorrecto del término."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa española adapta el GDPR al ordenamiento jurídico nacional?",
+      "respuestas": [
+        {
+          "texto": "LSSI-CE",
+          "correcta": false,
+          "explicacion": "Regula comercio electrónico."
+        },
+        {
+          "texto": "LOPDGDD",
+          "correcta": true,
+          "explicacion": "La LOPDGDD en España complementa al GDPR, adaptando aspectos específicos."
+        },
+        {
+          "texto": "Ley de Propiedad Intelectual",
+          "correcta": false,
+          "explicacion": "Regula derechos de autor."
+        },
+        {
+          "texto": "Código Penal",
+          "correcta": false,
+          "explicacion": "Contiene delitos, no la adaptación específica de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el ejemplo de selección de normativas, ¿qué debe cumplir una PyME que maneja datos personales?",
+      "respuestas": [
+        {
+          "texto": "Solo ISO 27001.",
+          "correcta": false,
+          "explicacion": "ISO es voluntaria."
+        },
+        {
+          "texto": "GDPR y LOPDGDD obligatoriamente.",
+          "correcta": true,
+          "explicacion": "Una PyME que maneja datos personales debe cumplir obligatoriamente GDPR y LOPDGDD."
+        },
+        {
+          "texto": "HIPAA.",
+          "correcta": false,
+          "explicacion": "Solo si tratara datos de salud de EE.UU."
+        },
+        {
+          "texto": "Ninguna, al ser pequeña está exenta.",
+          "correcta": false,
+          "explicacion": "El tamaño no exime del cumplimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve un 'Catálogo de Amenazas' como el de MAGERIT o NIST?",
+      "respuestas": [
+        {
+          "texto": "Para asustar a la dirección.",
+          "correcta": false,
+          "explicacion": "No es su propósito."
+        },
+        {
+          "texto": "Para ayudar al analista a identificar qué cosas malas le pueden pasar a sus activos sin tener que inventarlas desde cero.",
+          "correcta": true,
+          "explicacion": "El analista puede optar por elegir el catálogo más adecuado y seleccionar las amenazas más adecuadas para cada activo."
+        },
+        {
+          "texto": "Para listar los virus informáticos del año.",
+          "correcta": false,
+          "explicacion": "Es más amplio que solo malware."
+        },
+        {
+          "texto": "Para clasificar a los empleados.",
+          "correcta": false,
+          "explicacion": "No aplica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dimensión de impacto se ve afectada si un ransomware cifra todos los datos de la empresa y no se pueden leer?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad",
+          "correcta": false,
+          "explicacion": "El dato no se ha fugado necesariamente."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": false,
+          "explicacion": "El problema principal es el acceso."
+        },
+        {
+          "texto": "Disponibilidad",
+          "correcta": true,
+          "explicacion": "La disponibilidad se refiere a que los datos estén accesibles cuando se necesiten consultar; el cifrado impide esto."
+        },
+        {
+          "texto": "Autenticidad",
+          "correcta": false,
+          "explicacion": "No es la dimensión principal afectada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece la norma ISO 22301?",
+      "respuestas": [
+        {
+          "texto": "Sistemas de Gestión de Calidad.",
+          "correcta": false,
+          "explicacion": "Esa es la ISO 9001."
+        },
+        {
+          "texto": "Sistemas de Gestión de Continuidad de Negocio.",
+          "correcta": true,
+          "explicacion": "ISO 22301 es el estándar de continuidad del negocio, fundamental para mantener operaciones en caso de incidentes."
+        },
+        {
+          "texto": "Sistemas de Gestión Ambiental.",
+          "correcta": false,
+          "explicacion": "Esa es la ISO 14001."
+        },
+        {
+          "texto": "Seguridad en la Nube.",
+          "correcta": false,
+          "explicacion": "Esa es la ISO 27017."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la evaluación de riesgos, ¿qué escala utiliza MAGERIT v.3 para la probabilidad cualitativa?",
+      "respuestas": [
+        {
+          "texto": "Del 1 al 10.",
+          "correcta": false,
+          "explicacion": "No es la escala descrita."
+        },
+        {
+          "texto": "Muy Baja, Baja, Media, Alta, Muy Alta.",
+          "correcta": true,
+          "explicacion": "La escala cualitativa de MAGERIT v.3 va desde 'Muy Baja' a 'Muy Alta' (MB, B, M, A, MA)."
+        },
+        {
+          "texto": "Imposible, Probable, Seguro.",
+          "correcta": false,
+          "explicacion": "No es la escala estándar."
+        },
+        {
+          "texto": "A, B, C, D.",
+          "correcta": false,
+          "explicacion": "No es la escala estándar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento clave debe crearse para gestionar el cumplimiento según el primer archivo?",
+      "respuestas": [
+        {
+          "texto": "Un Registro de Normativas.",
+          "correcta": true,
+          "explicacion": "Se recomienda la creación de un Registro de Normativas que registre las aplicables, su alcance y responsabilidades."
+        },
+        {
+          "texto": "Una lista de la compra.",
+          "correcta": false,
+          "explicacion": "No es un documento de cumplimiento."
+        },
+        {
+          "texto": "Un manual de usuario del software.",
+          "correcta": false,
+          "explicacion": "Es un documento técnico."
+        },
+        {
+          "texto": "Un contrato de alquiler.",
+          "correcta": false,
+          "explicacion": "Es un documento legal específico."
+        }
+      ]
+    }
+  ]
+}

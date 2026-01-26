@@ -1,0 +1,1255 @@
+{
+  "tema": "Auditoría, PDSI, SGSI y Gestión de Riesgos (Nivel Avanzado)",
+  "preguntas": [
+    {
+      "pregunta": "En el marco de la relación entre ISO 27001, ISO 27002 y Magerit, ¿cuál es la función específica de la Declaración de Aplicabilidad (SOA)?",
+      "respuestas": [
+        {
+          "texto": "Justificar la inclusión o exclusión de los controles del Anexo A tras el análisis de riesgos.",
+          "correcta": true,
+          "explicacion": "El SOA (Statement of Applicability) o Documento de Selección de Controles vincula los riesgos detectados (por Magerit) con los controles seleccionados (de ISO 27001/27002) para tratarlos."
+        },
+        {
+          "texto": "Definir la metodología de análisis de riesgos a utilizar.",
+          "correcta": false,
+          "explicacion": "La metodología se define en la fase de planificación, pero el SOA es el resultado de seleccionar controles tras el análisis."
+        },
+        {
+          "texto": "Certificar que la empresa cumple con la norma ISO 27002.",
+          "correcta": false,
+          "explicacion": "ISO 27002 no es certificable por sí misma; el SOA es un requisito de la ISO 27001."
+        },
+        {
+          "texto": "Listar todos los activos de información de la compañía.",
+          "correcta": false,
+          "explicacion": "Eso corresponde al Inventario de Activos, no al SOA."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si durante una auditoría interna se detecta que un control implementado no mitiga el riesgo para el que fue diseñado, ¿en qué fase del ciclo PDCA se debe abordar la solución raíz?",
+      "respuestas": [
+        {
+          "texto": "Act (Actuar)",
+          "correcta": true,
+          "explicacion": "La detección ocurre en 'Check', pero la corrección, análisis de causa raíz y modificación del sistema para mejorar ocurren en 'Act'."
+        },
+        {
+          "texto": "Plan (Planificar)",
+          "correcta": false,
+          "explicacion": "Planificar define el sistema, pero la corrección de un fallo detectado es una acción de mejora (Act)."
+        },
+        {
+          "texto": "Do (Hacer)",
+          "correcta": false,
+          "explicacion": "Do es la operación diaria; cambiar cómo se opera por un fallo estructural es parte de la mejora (Act)."
+        },
+        {
+          "texto": "Check (Verificar)",
+          "correcta": false,
+          "explicacion": "Check es solo la fase de detección y monitoreo, no la de corrección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia crítica existe entre 'Eliminar' un riesgo y 'Mitigar' un riesgo?",
+      "respuestas": [
+        {
+          "texto": "Eliminar implica suprimir la fuente o el activo generador del riesgo; Mitigar implica aplicar controles para reducir impacto o probabilidad.",
+          "correcta": true,
+          "explicacion": "Eliminar es una estrategia drástica (ej. dejar de ofrecer un servicio), mientras que mitigar convive con el riesgo reduciéndolo."
+        },
+        {
+          "texto": "Eliminar es teórico y Mitigar es práctico.",
+          "correcta": false,
+          "explicacion": "Ambas son estrategias prácticas y reales de tratamiento de riesgos."
+        },
+        {
+          "texto": "Eliminar reduce el riesgo a cero sin coste; Mitigar siempre tiene coste.",
+          "correcta": false,
+          "explicacion": "Eliminar puede tener un coste de oportunidad altísimo (perder negocio), y el riesgo cero absoluto es utópico."
+        },
+        {
+          "texto": "Eliminar se usa para riesgos bajos y Mitigar para riesgos críticos.",
+          "correcta": false,
+          "explicacion": "Generalmente se eliminan riesgos inaceptables que no se pueden mitigar, no los bajos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de un PDSI, ¿por qué la Auditoría Interna tiene una función de 'doble vía' (hacia atrás y hacia adelante)?",
+      "respuestas": [
+        {
+          "texto": "Verifica la ejecución del plan actual (atrás) y descubre nuevos riesgos para priorizar proyectos en el futuro plan (adelante).",
+          "correcta": true,
+          "explicacion": "No solo hace un checklist de lo hecho, sino que sus hallazgos son la base ('input') para la estrategia del siguiente ciclo del PDSI."
+        },
+        {
+          "texto": "Revisa los logs del pasado y predice los ataques del futuro con IA.",
+          "correcta": false,
+          "explicacion": "Se refiere a la gestión estratégica del plan, no a una capacidad técnica de predicción."
+        },
+        {
+          "texto": "Audita a los empleados (atrás) y a la dirección (adelante).",
+          "correcta": false,
+          "explicacion": "La dirección de la auditoría se refiere al ciclo de vida del PDSI, no a la jerarquía organizacional."
+        },
+        {
+          "texto": "Verifica el hardware (atrás) y el software (adelante).",
+          "correcta": false,
+          "explicacion": "Es una distinción técnica irrelevante para el concepto de gestión del ciclo de vida del PDSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implicación tiene clasificar un hallazgo de auditoría como 'No Conformidad Mayor'?",
+      "respuestas": [
+        {
+          "texto": "Indica un incumplimiento sistémico o total de un requisito de la norma que pone en riesgo la eficacia del SGSI.",
+          "correcta": true,
+          "explicacion": "A diferencia de una menor (fallo puntual), la mayor señala una ruptura grave del sistema que suele impedir la certificación."
+        },
+        {
+          "texto": "Es una sugerencia de mejora que la empresa puede decidir no implementar.",
+          "correcta": false,
+          "explicacion": "Eso sería una 'Observación' o 'Oportunidad de Mejora'. Una No Conformidad exige corrección obligatoria."
+        },
+        {
+          "texto": "Implica una multa automática por parte de la agencia de protección de datos.",
+          "correcta": false,
+          "explicacion": "La auditoría interna/certificación no impone multas legales automáticamente; eso corresponde a inspecciones gubernamentales."
+        },
+        {
+          "texto": "Significa que se ha detectado un virus en el sistema.",
+          "correcta": false,
+          "explicacion": "Un virus es un incidente de seguridad; una No Conformidad es un fallo en el sistema de gestión o procesos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la metodología de análisis de riesgos descrita, ¿cómo afecta la implementación de un control al cálculo del riesgo?",
+      "respuestas": [
+        {
+          "texto": "Transforma el Riesgo Intrínseco en Riesgo Residual, modificando los valores de Probabilidad y/o Impacto.",
+          "correcta": true,
+          "explicacion": "El control actúa como factor reductor sobre la probabilidad de la amenaza o el impacto en el activo, resultando en el riesgo residual."
+        },
+        {
+          "texto": "Aumenta el valor del activo, incrementando el riesgo total.",
+          "correcta": false,
+          "explicacion": "El control protege el activo, no aumenta necesariamente su valor intrínseco ni el riesgo (lo reduce)."
+        },
+        {
+          "texto": "Elimina la amenaza por completo, dejando el riesgo en cero.",
+          "correcta": false,
+          "explicacion": "Raramente elimina la amenaza (el hacker sigue existiendo); reduce la vulnerabilidad o el impacto."
+        },
+        {
+          "texto": "No afecta al cálculo numérico, es solo una medida cualitativa.",
+          "correcta": false,
+          "explicacion": "En metodologías como Magerit, los controles tienen un efecto directo en el cálculo del nivel de riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué elemento es indispensable definir ANTES de comenzar la Fase 1 (Análisis de Situación) de un PDSI para evitar un proyecto inabarcable?",
+      "respuestas": [
+        {
+          "texto": "El Alcance (Scope) del plan.",
+          "correcta": true,
+          "explicacion": "Definir qué departamentos, procesos o sistemas entran en el PDSI es vital. Sin acotar el alcance, el análisis sería infinito e ineficaz."
+        },
+        {
+          "texto": "El presupuesto detallado de los cortafuegos.",
+          "correcta": false,
+          "explicacion": "El presupuesto de soluciones técnicas se define en la fase de proyectos, no antes del análisis."
+        },
+        {
+          "texto": "La contratación del auditor externo.",
+          "correcta": false,
+          "explicacion": "El PDSI es un plan interno (aunque se apoye en consultoras); la auditoría externa viene mucho después (Fase Check o Certificación)."
+        },
+        {
+          "texto": "La elección de la marca del antivirus.",
+          "correcta": false,
+          "explicacion": "Es una decisión táctica técnica, no estratégica de definición del plan."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia sutil entre 'Integridad' y 'Confidencialidad' en un ataque de Ransomware?",
+      "respuestas": [
+        {
+          "texto": "El cifrado no autorizado atenta contra la Disponibilidad; si además roban datos es Confidencialidad; si los modifican corruptamente es Integridad.",
+          "correcta": true,
+          "explicacion": "El ransomware clásico ataca primariamente la Disponibilidad. La doble extorsión (robo) ataca la Confidencialidad. La corrupción de datos ataca la Integridad."
+        },
+        {
+          "texto": "El ransomware solo afecta a la Integridad porque cambia los archivos.",
+          "correcta": false,
+          "explicacion": "El impacto principal suele ser la Disponibilidad (no se puede acceder). El cambio es un medio, no el fin principal."
+        },
+        {
+          "texto": "El ransomware solo afecta a la Confidencialidad porque los hackers ven los datos.",
+          "correcta": false,
+          "explicacion": "Si solo cifran sin exfiltrar, la confidencialidad podría mantenerse intacta técnicamente (aunque no se asume)."
+        },
+        {
+          "texto": "No hay diferencia, todo es pérdida de datos.",
+          "correcta": false,
+          "explicacion": "En gestión de riesgos (CIA), distinguir el tipo de impacto es vital para valorar el activo correctamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se dice que el Inventario de Activos es un prerrequisito para el Análisis de Riesgos?",
+      "respuestas": [
+        {
+          "texto": "Porque las amenazas no existen en el vacío; explotan vulnerabilidades específicas de activos concretos.",
+          "correcta": true,
+          "explicacion": "No se puede calcular 'Riesgo = P x I' si no sabes cuál es el activo que recibe el Impacto (I)."
+        },
+        {
+          "texto": "Porque lo exige el departamento financiero para amortizaciones.",
+          "correcta": false,
+          "explicacion": "Aunque finanzas lo use, en seguridad su función es ser la base del mapa de riesgos."
+        },
+        {
+          "texto": "Porque hay que etiquetar los ordenadores con códigos de barras.",
+          "correcta": false,
+          "explicacion": "Eso es gestión física de inventario, no la razón lógica de su necesidad en riesgos."
+        },
+        {
+          "texto": "Porque Magerit no funciona sin un listado de empleados.",
+          "correcta": false,
+          "explicacion": "Magerit requiere activos (info, servicios, SW, HW), no solo empleados."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una auditoría técnica, ¿qué ventaja ofrece una prueba de 'Caja Blanca' sobre una de 'Caja Negra'?",
+      "respuestas": [
+        {
+          "texto": "Permite detectar vulnerabilidades internas, lógicas o de configuración que no son visibles desde el perímetro externo.",
+          "correcta": true,
+          "explicacion": "Al tener acceso a código y arquitectura, puede hallar fallos profundos que un ataque externo de fuerza bruta podría no revelar nunca."
+        },
+        {
+          "texto": "Es más rápida y barata porque no requiere analizar nada.",
+          "correcta": false,
+          "explicacion": "Suele ser más costosa y lenta debido a la gran cantidad de información que se debe analizar."
+        },
+        {
+          "texto": "Simula fielmente un ataque real de un hacker externo desconocido.",
+          "correcta": false,
+          "explicacion": "Esa es la definición de Caja Negra. La Caja Blanca no es una simulación 'realista' externa."
+        },
+        {
+          "texto": "No requiere autorización de la dirección.",
+          "correcta": false,
+          "explicacion": "Toda auditoría requiere autorización explícita; sin ella es delito."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento clave conecta los hallazgos de la auditoría con la mejora continua en la fase de Seguimiento?",
+      "respuestas": [
+        {
+          "texto": "El Plan de Acción Correctiva (PAC).",
+          "correcta": true,
+          "explicacion": "Sin un PAC que asigne responsables, recursos y fechas a los hallazgos, la auditoría se convierte en un informe muerto sin seguimiento."
+        },
+        {
+          "texto": "El informe ejecutivo.",
+          "correcta": false,
+          "explicacion": "El informe presenta los problemas, el PAC planifica las soluciones."
+        },
+        {
+          "texto": "La factura del auditor.",
+          "correcta": false,
+          "explicacion": "No tiene relevancia técnica en la mejora del sistema."
+        },
+        {
+          "texto": "El log del firewall.",
+          "correcta": false,
+          "explicacion": "Es una evidencia técnica, no un documento de gestión de mejora."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación entre el análisis de riesgos y el presupuesto de seguridad en el PDSI?",
+      "respuestas": [
+        {
+          "texto": "El análisis de riesgos justifica la inversión priorizando recursos donde el riesgo (Probabilidad x Impacto) es mayor.",
+          "correcta": true,
+          "explicacion": "Evita gastar en proteger activos de bajo valor y focaliza el presupuesto en reducir riesgos críticos (Zona Roja)."
+        },
+        {
+          "texto": "El presupuesto define los riesgos: si hay poco dinero, se decide que hay pocos riesgos.",
+          "correcta": false,
+          "explicacion": "Ignorar riesgos por falta de presupuesto es negligencia. El riesgo existe independientemente del dinero."
+        },
+        {
+          "texto": "No tienen relación; seguridad debe tener presupuesto ilimitado.",
+          "correcta": false,
+          "explicacion": "Ninguna empresa tiene recursos ilimitados; la gestión de riesgos es precisamente para optimizar recursos finitos."
+        },
+        {
+          "texto": "El análisis de riesgos se hace después de gastar el presupuesto para ver qué sobró.",
+          "correcta": false,
+          "explicacion": "Sería una gestión inversa y deficiente. Primero se analiza, luego se invierte."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de auditoría es más apropiada para verificar si un proceso de 'Gestión de Incidentes' se cumple realmente en la práctica?",
+      "respuestas": [
+        {
+          "texto": "Pruebas de Recorrido (Walkthrough).",
+          "correcta": true,
+          "explicacion": "Seguir el rastro de un incidente real o simulado de principio a fin es la única forma de ver si los procedimientos escritos se ejecutan en la realidad."
+        },
+        {
+          "texto": "Revisión estática de la política documental.",
+          "correcta": false,
+          "explicacion": "Verificar que el papel existe no garantiza que se use."
+        },
+        {
+          "texto": "Escaneo de puertos.",
+          "correcta": false,
+          "explicacion": "Verifica estado técnico, no procesos de gestión humana."
+        },
+        {
+          "texto": "Inventario de hardware.",
+          "correcta": false,
+          "explicacion": "Irrelevante para verificar un flujo de trabajo de gestión."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de ISO 27001, ¿qué distingue a la Cláusula 4 'Contexto de la Organización'?",
+      "respuestas": [
+        {
+          "texto": "Obliga a identificar cuestiones internas/externas y partes interesadas para definir el Alcance del SGSI.",
+          "correcta": true,
+          "explicacion": "Es el punto de partida estratégico. No se puede proteger la organización sin entender su entorno legal, de mercado y cultural."
+        },
+        {
+          "texto": "Define los controles técnicos de red.",
+          "correcta": false,
+          "explicacion": "Eso corresponde al Anexo A / ISO 27002."
+        },
+        {
+          "texto": "Establece la política de contraseñas.",
+          "correcta": false,
+          "explicacion": "Es un control específico (A.9), no una cláusula de alto nivel sobre el contexto."
+        },
+        {
+          "texto": "Es opcional para empresas pequeñas.",
+          "correcta": false,
+          "explicacion": "Ninguna cláusula (4-10) es opcional en ISO 27001."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una organización ignora la Fase 2 (Estrategia) del PDSI y salta directamente a la Fase 3 (Proyectos)?",
+      "respuestas": [
+        {
+          "texto": "Corre el riesgo de implementar medidas desconectadas del negocio, ineficientes o que no aportan valor real.",
+          "correcta": true,
+          "explicacion": "Sin alineación estratégica, se pueden comprar 'juguetes tecnológicos' caros que no protegen los procesos críticos del negocio."
+        },
+        {
+          "texto": "Ahorra tiempo y es más eficiente.",
+          "correcta": false,
+          "explicacion": "Puede parecer rápido al inicio, pero suele resultar en desperdicio de recursos a largo plazo."
+        },
+        {
+          "texto": "Es el procedimiento recomendado para Startups.",
+          "correcta": false,
+          "explicacion": "Incluso una startup necesita saber qué protege y por qué antes de actuar."
+        },
+        {
+          "texto": "La norma ISO 27001 prohíbe tener estrategia.",
+          "correcta": false,
+          "explicacion": "Falso, la norma exige liderazgo y planificación estratégica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función de la 'Matriz de Hallazgos' en el informe de auditoría?",
+      "respuestas": [
+        {
+          "texto": "Estructurar la evidencia contrastando Criterio (norma) vs Condición (realidad) para determinar la Causa y Efecto.",
+          "correcta": true,
+          "explicacion": "Es la herramienta formal que soporta la conclusión del auditor, evitando opiniones subjetivas."
+        },
+        {
+          "texto": "Listar los nombres de los empleados auditados.",
+          "correcta": false,
+          "explicacion": "Eso es parte del registro de trabajo, no la matriz de resultados/hallazgos."
+        },
+        {
+          "texto": "Calcular el presupuesto de la auditoría.",
+          "correcta": false,
+          "explicacion": "Es una herramienta técnica de auditoría, no financiera."
+        },
+        {
+          "texto": "Programar las reuniones de cierre.",
+          "correcta": false,
+          "explicacion": "Eso es parte de la gestión del proyecto de auditoría, no del análisis de hallazgos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que el Riesgo Residual sea 'Aceptable'?",
+      "respuestas": [
+        {
+          "texto": "Que, tras aplicar controles, el nivel de riesgo restante está por debajo del umbral de tolerancia definido por la dirección.",
+          "correcta": true,
+          "explicacion": "La seguridad total no existe. La dirección define cuánto riesgo tolera (Zona Verde); si el residual cae ahí, se acepta."
+        },
+        {
+          "texto": "Que el riesgo es cero.",
+          "correcta": false,
+          "explicacion": "El riesgo cero es imposible teórica y prácticamente."
+        },
+        {
+          "texto": "Que el auditor ha firmado el documento.",
+          "correcta": false,
+          "explicacion": "La aceptación del riesgo es responsabilidad de la Dirección, no del auditor."
+        },
+        {
+          "texto": "Que no se ha detectado ninguna amenaza.",
+          "correcta": false,
+          "explicacion": "Las amenazas siguen existiendo, pero la organización se considera protegida adecuadamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la 'Ingeniería Social' se considera una auditoría de 'factor humano'?",
+      "respuestas": [
+        {
+          "texto": "Porque explota sesgos cognitivos y falta de concienciación en lugar de fallos de software.",
+          "correcta": true,
+          "explicacion": "Ataca al eslabón más débil (la persona) mediante manipulación psicológica, independientemente de la tecnología."
+        },
+        {
+          "texto": "Porque la realizan robots.",
+          "correcta": false,
+          "explicacion": "Se llama 'social' precisamente porque interactúa con humanos."
+        },
+        {
+          "texto": "Porque es ilegal realizarla.",
+          "correcta": false,
+          "explicacion": "Es legal si está autorizada dentro de una auditoría ética."
+        },
+        {
+          "texto": "Porque solo afecta a RRHH.",
+          "correcta": false,
+          "explicacion": "Afecta a cualquier empleado con acceso a información, desde recepción hasta CEO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega el 'Responsable de Seguridad' (CISO) en la matriz RACI de un proyecto de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Suele ser el 'Responsable' (Accountable/Responsible) de la correcta ejecución y seguimiento, aunque delegue tareas.",
+          "correcta": true,
+          "explicacion": "Es quien rinde cuentas ante la dirección sobre el éxito o fracaso de la estrategia de seguridad."
+        },
+        {
+          "texto": "Es quien instala físicamente los cables.",
+          "correcta": false,
+          "explicacion": "Ese es un rol técnico operativo, no de gestión/gobierno."
+        },
+        {
+          "texto": "Es solo 'Informado' (I), no tiene poder de decisión.",
+          "correcta": false,
+          "explicacion": "Un CISO sin poder de decisión o ejecución hace ineficaz el SGSI."
+        },
+        {
+          "texto": "Es el auditor externo.",
+          "correcta": false,
+          "explicacion": "El CISO es un rol interno."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un activo tiene una valoración de Confidencialidad=5 (Alto) y Disponibilidad=1 (Bajo), ¿cuál es su Impacto base para el cálculo de riesgo en un enfoque conservador?",
+      "respuestas": [
+        {
+          "texto": "5 (Alto), ya que se suele tomar el valor más crítico de la tríada CIA.",
+          "correcta": true,
+          "explicacion": "El impacto se define por el 'peor escenario'. Si la filtración de datos destruye la empresa, el activo es crítico, aunque no importe si se apaga."
+        },
+        {
+          "texto": "3 (Promedio).",
+          "correcta": false,
+          "explicacion": "Promediar diluye la gravedad de los riesgos críticos. En seguridad se gestiona por picos de riesgo."
+        },
+        {
+          "texto": "1 (Bajo), se toma el menor valor.",
+          "correcta": false,
+          "explicacion": "Eso dejaría desprotegida la confidencialidad, lo cual es inaceptable."
+        },
+        {
+          "texto": "0, porque los valores son contradictorios.",
+          "correcta": false,
+          "explicacion": "No son contradictorios; un activo puede ser secreto pero irrelevante operacionalmente (ej. copia de seguridad histórica)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia a la 'Auditoría Forense' de la 'Auditoría de Cumplimiento'?",
+      "respuestas": [
+        {
+          "texto": "La forense es reactiva (post-incidente) buscando evidencias legales; la de cumplimiento es preventiva buscando alineación normativa.",
+          "correcta": true,
+          "explicacion": "Tienen objetivos opuestos en el tiempo: una investiga 'el crimen' pasado, la otra previene sanciones futuras."
+        },
+        {
+          "texto": "La forense se hace con microscopios.",
+          "correcta": false,
+          "explicacion": "Es forense 'digital', usando software de análisis de discos y redes."
+        },
+        {
+          "texto": "La de cumplimiento es opcional.",
+          "correcta": false,
+          "explicacion": "El cumplimiento legal (GDPR, etc.) es obligatorio por definición."
+        },
+        {
+          "texto": "Son sinónimos.",
+          "correcta": false,
+          "explicacion": "Sus metodologías, objetivos y entregables son totalmente distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el ciclo PDCA, ¿cuál es el peligro de quedarse estancado en la fase 'Plan'?",
+      "respuestas": [
+        {
+          "texto": "La 'parálisis por análisis': tener documentos perfectos pero ninguna medida de seguridad real implementada.",
+          "correcta": true,
+          "explicacion": "Un SGSI documental que no pasa a 'Do' (implementación) no protege nada. El papel no frena a los hackers."
+        },
+        {
+          "texto": "Gastar demasiado dinero en licencias de software.",
+          "correcta": false,
+          "explicacion": "El gasto ocurre en 'Do'. En 'Plan' se gasta tiempo de consultoría/gestión."
+        },
+        {
+          "texto": "Tener demasiada seguridad implementada.",
+          "correcta": false,
+          "explicacion": "Al contrario, en fase Plan aún no se ha implementado nada."
+        },
+        {
+          "texto": "Que los auditores no tengan trabajo.",
+          "correcta": false,
+          "explicacion": "Los auditores pueden auditar el Plan, pero detectarán que no hay realidad operativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica la 'Segregación de Funciones' como control de seguridad organizacional?",
+      "respuestas": [
+        {
+          "texto": "Que ninguna persona tenga control total sobre un proceso crítico (ej. quien solicita el pago no debe ser quien lo autoriza).",
+          "correcta": true,
+          "explicacion": "Reduce el riesgo de fraude interno o error humano al requerir colusión para comprometer el proceso."
+        },
+        {
+          "texto": "Que cada empleado tenga una oficina separada.",
+          "correcta": false,
+          "explicacion": "Se refiere a roles y permisos lógicos/procesales, no a espacio físico."
+        },
+        {
+          "texto": "Que las redes Wi-Fi estén separadas.",
+          "correcta": false,
+          "explicacion": "Eso es segregación de redes (técnica), no de funciones (organizativa)."
+        },
+        {
+          "texto": "Que se despida a la mitad de la plantilla.",
+          "correcta": false,
+          "explicacion": "No tiene relación con reducción de personal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es vital realizar una 'Revisión por la Dirección' al final del ciclo PDCA (Fase Check/Act)?",
+      "respuestas": [
+        {
+          "texto": "Para asegurar que el SGSI sigue alineado con el negocio y aprobar los recursos para la mejora continua.",
+          "correcta": true,
+          "explicacion": "Cierra el ciclo de responsabilidad. El CISO informa, pero la Dirección debe validar que el sistema sirve a los objetivos de la empresa."
+        },
+        {
+          "texto": "Para que el director aprenda a configurar el firewall.",
+          "correcta": false,
+          "explicacion": "La dirección revisa desempeño y estrategia, no configuración técnica."
+        },
+        {
+          "texto": "Es un trámite burocrático sin valor real.",
+          "correcta": false,
+          "explicacion": "Sin el respaldo directivo renovado, el SGSI pierde fuerza y presupuesto."
+        },
+        {
+          "texto": "Para buscar culpables de los incidentes.",
+          "correcta": false,
+          "explicacion": "El objetivo es la mejora del sistema, no la caza de brujas (cultura de culpa)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define a un 'Quick Win' en la priorización de proyectos del PDSI?",
+      "respuestas": [
+        {
+          "texto": "Alto impacto en la reducción de riesgos con bajo esfuerzo/coste de implementación.",
+          "correcta": true,
+          "explicacion": "Son estratégicos para ganar tracción y demostrar valor temprano (ej. activar MFA que ya está incluido en la licencia)."
+        },
+        {
+          "texto": "Proyectos de alto coste y largo plazo.",
+          "correcta": false,
+          "explicacion": "Esos son proyectos estratégicos estructurales, no 'ganancias rápidas'."
+        },
+        {
+          "texto": "Proyectos que no sirven para nada pero se ven bonitos.",
+          "correcta": false,
+          "explicacion": "Deben tener impacto real en la seguridad."
+        },
+        {
+          "texto": "Ganar un premio de lotería.",
+          "correcta": false,
+          "explicacion": "Término de gestión de proyectos, no de juegos de azar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principal riesgo de utilizar una 'Checklist' genérica en una auditoría sin adaptarla?",
+      "respuestas": [
+        {
+          "texto": "Pasar por alto riesgos específicos de la organización que no están en la lista estándar.",
+          "correcta": true,
+          "explicacion": "Las checklists son ayudas, no sustitutos del criterio del auditor. Cada empresa tiene un contexto único."
+        },
+        {
+          "texto": "Que es demasiado larga y se tarda mucho.",
+          "correcta": false,
+          "explicacion": "El problema no es la longitud, sino la relevancia y cobertura real del riesgo."
+        },
+        {
+          "texto": "Que el papel es caro.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Que es ilegal usar checklists.",
+          "correcta": false,
+          "explicacion": "Son una herramienta estándar recomendada (ej. ISO 27002), siempre que se usen bien."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación existe entre 'Vulnerabilidad' y 'Amenaza' en la fórmula del riesgo?",
+      "respuestas": [
+        {
+          "texto": "La amenaza explota la vulnerabilidad. Sin vulnerabilidad, la amenaza no puede causar impacto (Riesgo = 0).",
+          "correcta": true,
+          "explicacion": "Si llueve (amenaza) pero tienes un techo perfecto (sin vulnerabilidad), no te mojas (sin impacto). Se necesitan ambos para que haya riesgo."
+        },
+        {
+          "texto": "Son lo mismo.",
+          "correcta": false,
+          "explicacion": "Amenaza es externa/evento (lluvia), vulnerabilidad es interna/debilidad (agujero en el techo)."
+        },
+        {
+          "texto": "La vulnerabilidad crea la amenaza.",
+          "correcta": false,
+          "explicacion": "Tener un agujero no hace que llueva. La amenaza suele ser independiente."
+        },
+        {
+          "texto": "La amenaza protege la vulnerabilidad.",
+          "correcta": false,
+          "explicacion": "Conceptualmente absurdo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Defensa en Profundidad' (Defense in Depth)?",
+      "respuestas": [
+        {
+          "texto": "Estrategia de usar múltiples capas de seguridad redundantes para que si una falla, otra detenga la amenaza.",
+          "correcta": true,
+          "explicacion": "Ejemplo: Firewall + IPS + Antivirus + Concienciación. No confiar en una sola 'bala de plata'."
+        },
+        {
+          "texto": "Enterrar los servidores bajo tierra.",
+          "correcta": false,
+          "explicacion": "Eso es seguridad física o búnker, no el concepto de capas lógicas de defensa."
+        },
+        {
+          "texto": "Contratar a muchos abogados.",
+          "correcta": false,
+          "explicacion": "Defensa legal no es lo mismo que defensa en profundidad técnica."
+        },
+        {
+          "texto": "Atacar a los hackers antes de que nos ataquen.",
+          "correcta": false,
+          "explicacion": "Eso es 'Hack back' u ofensiva, y generalmente es ilegal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia el 'Plan Director de Seguridad' (PDSI) del 'Plan de Continuidad de Negocio' (BCP)?",
+      "respuestas": [
+        {
+          "texto": "El PDSI es estratégico para gestionar la seguridad día a día y mejorar; el BCP es reactivo para sobrevivir a desastres graves.",
+          "correcta": true,
+          "explicacion": "El PDSI evita que ocurran cosas malas; el BCP define qué hacer cuando ocurren cosas catastróficas para seguir operando."
+        },
+        {
+          "texto": "Son el mismo documento con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Tienen alcances y objetivos muy distintos (Gestión vs Supervivencia)."
+        },
+        {
+          "texto": "El PDSI es para TI y el BCP es para Finanzas.",
+          "correcta": false,
+          "explicacion": "Ambos involucran a toda la organización, especialmente el BCP."
+        },
+        {
+          "texto": "El BCP se hace primero y luego el PDSI.",
+          "correcta": false,
+          "explicacion": "Suelen desarrollarse en paralelo o el BCP es un proyecto dentro del PDSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica la 'Trazabilidad' en un sistema de auditoría?",
+      "respuestas": [
+        {
+          "texto": "La capacidad de reconstruir la historia de un evento o dato paso a paso mediante logs y registros inalterables.",
+          "correcta": true,
+          "explicacion": "Es fundamental para la responsabilidad (accountability). Saber quién hizo qué, cuándo y cómo."
+        },
+        {
+          "texto": "Dibujar líneas en un mapa.",
+          "correcta": false,
+          "explicacion": "Se refiere a rastreo de eventos, no dibujo."
+        },
+        {
+          "texto": "Que el sistema sea rápido.",
+          "correcta": false,
+          "explicacion": "Trazabilidad suele consumir recursos, no acelerarlos."
+        },
+        {
+          "texto": "Que se puedan borrar los datos para siempre.",
+          "correcta": false,
+          "explicacion": "Al contrario, trazabilidad requiere conservar registros."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre en la Fase 5 (Aprobación) del PDSI si la Dirección rechaza el plan?",
+      "respuestas": [
+        {
+          "texto": "El proceso debe retroceder para ajustar alcance, prioridades o presupuesto hasta alinearse con la visión directiva.",
+          "correcta": true,
+          "explicacion": "Un PDSI no aprobado no se ejecuta. Es un ciclo iterativo hasta conseguir el respaldo (y los fondos)."
+        },
+        {
+          "texto": "Se ejecuta el plan de todas formas en secreto.",
+          "correcta": false,
+          "explicacion": "Imposible sin recursos y autoridad; además sería insubordinación."
+        },
+        {
+          "texto": "Se despide al auditor.",
+          "correcta": false,
+          "explicacion": "El rechazo suele ser por desalineación estratégica o presupuestaria, no culpa del auditor."
+        },
+        {
+          "texto": "Se falsifica la firma del director.",
+          "correcta": false,
+          "explicacion": "Delito grave."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué las 'Entrevistas' son una herramienta de auditoría de doble filo?",
+      "respuestas": [
+        {
+          "texto": "Permiten obtener información cualitativa valiosa, pero son subjetivas y requieren verificación con evidencias (confiar pero verificar).",
+          "correcta": true,
+          "explicacion": "El personal puede mentir, ocultar fallos o desconocer la realidad. Lo que dicen debe contrastarse con lo que hacen (observación/logs)."
+        },
+        {
+          "texto": "Porque son muy caras.",
+          "correcta": false,
+          "explicacion": "El tiempo es coste, pero el riesgo principal es la subjetividad/veracidad."
+        },
+        {
+          "texto": "Porque está prohibido hablar con los empleados.",
+          "correcta": false,
+          "explicacion": "Es esencial hablar con ellos para entender la cultura de seguridad."
+        },
+        {
+          "texto": "Porque los auditores no saben hablar.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo último de la 'Mejora Continua' (Kaizen) en un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Evitar la entropía y obsolescencia de la seguridad ante un entorno de amenazas cambiante.",
+          "correcta": true,
+          "explicacion": "La seguridad es un estado dinámico, no una meta estática. Si no mejoras, empeoras relativamente a las amenazas."
+        },
+        {
+          "texto": "Llegar a la perfección y no hacer nada más.",
+          "correcta": false,
+          "explicacion": "La perfección no existe en seguridad."
+        },
+        {
+          "texto": "Cambiar por cambiar.",
+          "correcta": false,
+          "explicacion": "La mejora debe ser dirigida y basada en riesgos, no cambios aleatorios."
+        },
+        {
+          "texto": "Gastar todo el presupuesto anual.",
+          "correcta": false,
+          "explicacion": "El objetivo es la eficacia, no el gasto por el gasto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Falso Positivo' en el contexto de una auditoría técnica o monitorización?",
+      "respuestas": [
+        {
+          "texto": "Una alerta que indica una vulnerabilidad o incidente que en realidad no existe o no es relevante.",
+          "correcta": true,
+          "explicacion": "Es 'ruido'. Si hay muchos, fatigan al analista y pueden hacer que se ignoren alertas reales."
+        },
+        {
+          "texto": "Un virus real que el antivirus no detectó.",
+          "correcta": false,
+          "explicacion": "Eso es un 'Falso Negativo' (lo más peligroso)."
+        },
+        {
+          "texto": "Un empleado que miente.",
+          "correcta": false,
+          "explicacion": "No es terminología técnica de detección."
+        },
+        {
+          "texto": "Un resultado positivo en un test de drogas.",
+          "correcta": false,
+          "explicacion": "Fuera de contexto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación tiene el RGPD (GDPR) con la gestión de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Obliga a notificar las brechas de datos personales a la autoridad de control en un plazo máximo (ej. 72 horas).",
+          "correcta": true,
+          "explicacion": "Introduce un requisito legal estricto de tiempo y forma en la respuesta a incidentes que afecten a datos personales."
+        },
+        {
+          "texto": "Prohíbe tener incidentes.",
+          "correcta": false,
+          "explicacion": "La ley exige diligencia y notificación, sabe que los incidentes son inevitables."
+        },
+        {
+          "texto": "Exige que los incidentes se publiquen en Facebook.",
+          "correcta": false,
+          "explicacion": "La notificación es a la autoridad y a los afectados, no necesariamente redes sociales públicas indiscriminadas."
+        },
+        {
+          "texto": "Solo aplica a empresas de tecnología.",
+          "correcta": false,
+          "explicacion": "Aplica a cualquier entidad que trate datos de ciudadanos europeos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa 'Hardening' (Endurecimiento) de un sistema?",
+      "respuestas": [
+        {
+          "texto": "El proceso de asegurar un sistema reduciendo su superficie de ataque (cerrar puertos, deshabilitar servicios innecesarios, parches).",
+          "correcta": true,
+          "explicacion": "Es una medida preventiva técnica básica: configuración segura por defecto."
+        },
+        {
+          "texto": "Hacer el hardware más resistente a golpes.",
+          "correcta": false,
+          "explicacion": "Eso es 'Ruggedizing' físico. Hardening en ciberseguridad es lógico."
+        },
+        {
+          "texto": "Hacer las contraseñas más difíciles de recordar.",
+          "correcta": false,
+          "explicacion": "Eso suele ser contraproducente. Hardening es sobre configuración del sistema."
+        },
+        {
+          "texto": "Poner el servidor en una caja fuerte.",
+          "correcta": false,
+          "explicacion": "Seguridad física, no hardening de SO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la utilidad de los '5 Porqués' en el análisis de un incidente?",
+      "respuestas": [
+        {
+          "texto": "Superar la causa inmediata (síntoma) para encontrar la causa raíz sistémica y evitar la recurrencia.",
+          "correcta": true,
+          "explicacion": "Ej: No basta saber que 'el servidor cayó por falta de parche' (síntoma), sino 'por qué no hay proceso de parcheo' (causa raíz)."
+        },
+        {
+          "texto": "Buscar cinco culpables para despedir.",
+          "correcta": false,
+          "explicacion": "Busca causas en procesos, no personas (culpabilizar es malo para la cultura de seguridad)."
+        },
+        {
+          "texto": "Es un método para interrogar sospechosos.",
+          "correcta": false,
+          "explicacion": "Es una técnica de análisis de calidad/procesos, no policial."
+        },
+        {
+          "texto": "Hacer la reunión cinco veces más larga.",
+          "correcta": false,
+          "explicacion": "Busca eficiencia en la solución a largo plazo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre 'Autenticación' y 'Autorización'?",
+      "respuestas": [
+        {
+          "texto": "Autenticación verifica quién eres (Identidad); Autorización verifica qué puedes hacer (Permisos).",
+          "correcta": true,
+          "explicacion": "Entrar al edificio con tu carnet es autenticación; que tu llave abra solo tu despacho es autorización."
+        },
+        {
+          "texto": "Son sinónimos.",
+          "correcta": false,
+          "explicacion": "Son procesos distintos y secuenciales (primero AuthN, luego AuthZ)."
+        },
+        {
+          "texto": "Autenticación es para máquinas y Autorización para humanos.",
+          "correcta": false,
+          "explicacion": "Ambos aplican a usuarios y servicios/máquinas."
+        },
+        {
+          "texto": "Autorización es poner la contraseña.",
+          "correcta": false,
+          "explicacion": "Poner la contraseña es Autenticación (verificar identidad)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una 'Amenaza Avanzada Persistente' (APT)?",
+      "respuestas": [
+        {
+          "texto": "Un atacante sofisticado (a menudo estatal) que permanece oculto en la red durante largo tiempo para robar datos continuamente.",
+          "correcta": true,
+          "explicacion": "Se diferencia del malware común por su persistencia, dirección humana y objetivos específicos de alto valor."
+        },
+        {
+          "texto": "Un virus que no se puede borrar.",
+          "correcta": false,
+          "explicacion": "Es un actor/campaña, no solo un archivo de virus."
+        },
+        {
+          "texto": "Un empleado que siempre llega tarde.",
+          "correcta": false,
+          "explicacion": "Eso es un problema disciplinario, no una APT."
+        },
+        {
+          "texto": "Una auditoría muy larga.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la 'Gestión de Cambios' es crítica para la seguridad?",
+      "respuestas": [
+        {
+          "texto": "Porque muchos incidentes provienen de cambios no autorizados, no probados o mal documentados que introducen vulnerabilidades.",
+          "correcta": true,
+          "explicacion": "Controlar qué cambia en producción asegura que no se rompa la seguridad existente."
+        },
+        {
+          "texto": "Para que los programadores trabajen más lento.",
+          "correcta": false,
+          "explicacion": "Busca estabilidad y seguridad, no lentitud (aunque añade burocracia necesaria)."
+        },
+        {
+          "texto": "Para evitar que la empresa evolucione.",
+          "correcta": false,
+          "explicacion": "Permite evolucionar de forma segura (controlada)."
+        },
+        {
+          "texto": "Es solo para cumplir la ISO 9001.",
+          "correcta": false,
+          "explicacion": "Es vital para la disponibilidad e integridad (CIA), no solo calidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el cálculo de riesgos, ¿qué pasa si la Probabilidad es Alta (5) pero el Impacto es Insignificante (1)?",
+      "respuestas": [
+        {
+          "texto": "El Riesgo es Bajo/Medio (5), y probablemente se acepte o se trate con procedimientos rutinarios, no proyectos estratégicos.",
+          "correcta": true,
+          "explicacion": "Ej: Que se funda una bombilla. Pasa mucho, importa poco. No requiere un Comité de Crisis."
+        },
+        {
+          "texto": "El Riesgo es Crítico porque la probabilidad es alta.",
+          "correcta": false,
+          "explicacion": "El riesgo es producto de ambos factores. Sin impacto, no hay crisis."
+        },
+        {
+          "texto": "Se debe invertir millones para evitarlo.",
+          "correcta": false,
+          "explicacion": "Sería ineficiente (ROI negativo)."
+        },
+        {
+          "texto": "Se ignora completamente.",
+          "correcta": false,
+          "explicacion": "Se gestiona (aceptación o proceso simple), no se ignora a ciegas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Principio de Mínimo Privilegio'?",
+      "respuestas": [
+        {
+          "texto": "Dar a cada usuario o proceso solo los permisos estrictamente necesarios para realizar su función y nada más.",
+          "correcta": true,
+          "explicacion": "Limita el daño si esa cuenta es comprometida (movimiento lateral restringido)."
+        },
+        {
+          "texto": "Que nadie tenga permisos de administrador.",
+          "correcta": false,
+          "explicacion": "Alguien debe administrar, pero solo cuando es necesario (just-in-time)."
+        },
+        {
+          "texto": "Pagar los sueldos más bajos posibles.",
+          "correcta": false,
+          "explicacion": "No tiene relación laboral."
+        },
+        {
+          "texto": "Usar ordenadores viejos.",
+          "correcta": false,
+          "explicacion": "No tiene relación con hardware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una DMZ (Zona Desmilitarizada) en arquitectura de red?",
+      "respuestas": [
+        {
+          "texto": "Una subred física o lógica que expone los servicios externos de la organización a Internet, aislando la red interna (LAN).",
+          "correcta": true,
+          "explicacion": "Si hackean el servidor web en la DMZ, la red interna con los datos críticos sigue protegida por otro firewall."
+        },
+        {
+          "texto": "Una zona sin leyes donde vale todo.",
+          "correcta": false,
+          "explicacion": "Metáfora bélica incorrecta en este contexto."
+        },
+        {
+          "texto": "La sala de descanso de los empleados.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una red sin firewalls.",
+          "correcta": false,
+          "explicacion": "Al revés, suele estar entre dos firewalls."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué rol cumple el 'Propietario del Activo' (Data Owner) en la clasificación de la información?",
+      "respuestas": [
+        {
+          "texto": "Es quien mejor conoce el valor de la información y debe decidir su nivel de clasificación (ej. Confidencial vs Público).",
+          "correcta": true,
+          "explicacion": "TI custodia los datos, pero el dueño (ej. Director Financiero para datos fiscales) define cuán importantes son."
+        },
+        {
+          "texto": "Es quien compró el ordenador.",
+          "correcta": false,
+          "explicacion": "Propiedad del activo de información vs activo físico. En ISO 27001 importa la responsabilidad sobre los datos."
+        },
+        {
+          "texto": "Es el CISO.",
+          "correcta": false,
+          "explicacion": "El CISO pone las normas de clasificación, el Propietario etiqueta sus datos."
+        },
+        {
+          "texto": "Nadie, la información es libre.",
+          "correcta": false,
+          "explicacion": "En una empresa, la información tiene dueños responsables."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Phishing'?",
+      "respuestas": [
+        {
+          "texto": "Un ataque de ingeniería social que usa correos fraudulentos para engañar al usuario y robar credenciales.",
+          "correcta": true,
+          "explicacion": "Es la amenaza más común de vector de entrada inicial hoy en día."
+        },
+        {
+          "texto": "Pescar en el lago.",
+          "correcta": false,
+          "explicacion": "Juego de palabras (Fishing), pero en ciberseguridad es estafa."
+        },
+        {
+          "texto": "Un virus que borra el disco duro.",
+          "correcta": false,
+          "explicacion": "El phishing es el método de engaño, el malware es lo que puede venir después."
+        },
+        {
+          "texto": "Configurar mal el router.",
+          "correcta": false,
+          "explicacion": "Eso es una vulnerabilidad técnica, no un ataque social."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre BIA (Business Impact Analysis) y Análisis de Riesgos?",
+      "respuestas": [
+        {
+          "texto": "El BIA se centra en las consecuencias de la interrupción del negocio (tiempo de recuperación); el Análisis de Riesgos en la probabilidad de las amenazas.",
+          "correcta": true,
+          "explicacion": "BIA define 'cuánto duele y qué rápido debo volver' (RTO/RPO); Riesgos define 'qué probable es que ocurra y cómo lo evito'."
+        },
+        {
+          "texto": "Son lo mismo.",
+          "correcta": false,
+          "explicacion": "Son complementarios pero distintos. BIA es clave para Continuidad (BCP)."
+        },
+        {
+          "texto": "El BIA es para marketing.",
+          "correcta": false,
+          "explicacion": "Es para continuidad de negocio y operaciones."
+        },
+        {
+          "texto": "El Análisis de Riesgos solo mira dinero.",
+          "correcta": false,
+          "explicacion": "Mira impacto operativo, legal, reputacional, etc."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SIEM (Security Information and Event Management)?",
+      "respuestas": [
+        {
+          "texto": "Una solución que centraliza y correlaciona logs de múltiples fuentes para detectar incidentes en tiempo real.",
+          "correcta": true,
+          "explicacion": "Es el 'cerebro' del centro de operaciones de seguridad (SOC), permitiendo ver ataques complejos que tocan varios sistemas."
+        },
+        {
+          "texto": "Un antivirus gratuito.",
+          "correcta": false,
+          "explicacion": "Es una herramienta de gestión y monitoreo compleja, no un antivirus de endpoint."
+        },
+        {
+          "texto": "La política de seguridad de la empresa.",
+          "correcta": false,
+          "explicacion": "Es software/hardware, no un documento."
+        },
+        {
+          "texto": "Un tipo de cable de red.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa RTO (Recovery Time Objective)?",
+      "respuestas": [
+        {
+          "texto": "El tiempo máximo tolerable que un sistema puede estar caído antes de causar un daño inaceptable al negocio.",
+          "correcta": true,
+          "explicacion": "Define la urgencia de la recuperación. Si RTO=4h, debes arreglarlo en menos de 4h."
+        },
+        {
+          "texto": "El tiempo que se tarda en hacer una copia de seguridad.",
+          "correcta": false,
+          "explicacion": "Eso es ventana de backup."
+        },
+        {
+          "texto": "La cantidad de datos que se pueden perder.",
+          "correcta": false,
+          "explicacion": "Eso es RPO (Recovery Point Objective)."
+        },
+        {
+          "texto": "El tiempo real que tardaron en arreglarlo.",
+          "correcta": false,
+          "explicacion": "El RTO es el objetivo fijado, el tiempo real puede ser distinto (y si es mayor, hay problema)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Obsolescencia Tecnológica' como riesgo?",
+      "respuestas": [
+        {
+          "texto": "El riesgo derivado de usar sistemas sin soporte del fabricante, que ya no reciben parches de seguridad.",
+          "correcta": true,
+          "explicacion": "Un sistema 'End of Life' es una vulnerabilidad permanente conocida por los atacantes."
+        },
+        {
+          "texto": "Tener ordenadores feos.",
+          "correcta": false,
+          "explicacion": "Estética no es seguridad."
+        },
+        {
+          "texto": "Que los empleados quieran el último iPhone.",
+          "correcta": false,
+          "explicacion": "Preferencia de usuario vs Riesgo de seguridad por falta de parches."
+        },
+        {
+          "texto": "Usar papel en vez de digital.",
+          "correcta": false,
+          "explicacion": "Eso es obsolescencia de procesos, pero en ciberseguridad preocupa el software/hardware vulnerable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Zero-Day' (Día Cero)?",
+      "respuestas": [
+        {
+          "texto": "Una vulnerabilidad desconocida por el fabricante (y sin parche) que está siendo explotada activamente.",
+          "correcta": true,
+          "explicacion": "Es muy peligrosa porque no hay defensa directa (parche) disponible, solo mitigaciones."
+        },
+        {
+          "texto": "El primer día de trabajo.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "El día que se instala el antivirus.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un virus que no hace nada.",
+          "correcta": false,
+          "explicacion": "Suelen ser exploits muy valiosos y dañinos."
+        }
+      ]
+    }
+  ]
+}

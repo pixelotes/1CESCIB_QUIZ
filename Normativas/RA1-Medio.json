@@ -1,0 +1,605 @@
+{
+  "tema": "Normativa de Ciberseguridad - Profundización en Cumplimiento y Ética",
+  "preguntas": [
+    {
+      "pregunta": "Si una empresa decide implementar la norma ISO 27001 para mejorar su imagen, ¿qué tipo de cumplimiento está ejerciendo?",
+      "respuestas": [
+        {
+          "texto": "Cumplimiento de estándares y mejores prácticas.",
+          "correcta": true,
+          "explicacion": "Las normas ISO son estándares desarrollados por organizaciones especializadas y su adopción es voluntaria para ganar competitividad."
+        },
+        {
+          "texto": "Cumplimiento regulatorio obligatorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los estándares, a diferencia de las leyes, generalmente no son de obligado cumplimiento legal."
+        },
+        {
+          "texto": "Cumplimiento de ética empresarial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ética se refiere a valores y principios, no a marcos técnicos de gestión como una ISO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo directo de una norma interna de la empresa?",
+      "respuestas": [
+        {
+          "texto": "El Reglamento General de Protección de Datos (RGPD).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es una norma externa obligatoria de origen europeo."
+        },
+        {
+          "texto": "Un código ético que prohíbe aceptar regalos de proveedores.",
+          "correcta": true,
+          "explicacion": "Las normas internas son los propios códigos éticos y de conducta de la empresa."
+        },
+        {
+          "texto": "La Ley de Servicios de la Sociedad de la Información (LSSI).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una ley estatal, por tanto, una norma externa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del 'Buen Gobierno' en una organización?",
+      "respuestas": [
+        {
+          "texto": "Aumentar las ventas trimestrales a toda costa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El objetivo económico no puede perseguirse a toda costa; debe respetar principios universales."
+        },
+        {
+          "texto": "Evitar prácticas corruptas y garantizar la transparencia.",
+          "correcta": true,
+          "explicacion": "El Buen Gobierno busca evitar la corrupción y ofrecer veracidad y confianza a socios e inversores."
+        },
+        {
+          "texto": "Sustituir a las leyes nacionales vigentes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un mecanismo para garantizar que se cumplan las leyes, no para sustituirlas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Establecer las políticas de retribución de los directivos es una actividad propia de:",
+      "respuestas": [
+        {
+          "texto": "El Buen Gobierno.",
+          "correcta": true,
+          "explicacion": "La definición de las políticas de retribución de consejeros y directivos es parte de las actividades del Buen Gobierno."
+        },
+        {
+          "texto": "La Responsabilidad Social Corporativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La RSC se enfoca más en el impacto social y medioambiental."
+        },
+        {
+          "texto": "El departamento de marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una función de supervisión de la alta dirección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia a la Ética Empresarial del Buen Gobierno?",
+      "respuestas": [
+        {
+          "texto": "La ética son los valores y el Buen Gobierno es el mecanismo de control.",
+          "correcta": true,
+          "explicacion": "La ética son los principios que rigen las acciones, mientras que el Buen Gobierno es el mecanismo para asegurar el cumplimiento normativo."
+        },
+        {
+          "texto": "No hay diferencia, son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque están relacionados, tienen enfoques diferentes (valores vs. control)."
+        },
+        {
+          "texto": "La ética es obligatoria por ley y el Buen Gobierno es voluntario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden tener componentes voluntarios u obligatorios según la regulación de cada país."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un comercial que engaña sobre las capacidades de un producto para cerrar una venta está fallando en:",
+      "respuestas": [
+        {
+          "texto": "Ética empresarial.",
+          "correcta": true,
+          "explicacion": "Eliminar la publicidad engañosa y evitar el engaño son objetivos de la ética empresarial."
+        },
+        {
+          "texto": "Protección de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. A menos que use datos ilegalmente, el engaño comercial es una falta ética, no necesariamente de privacidad."
+        },
+        {
+          "texto": "Propiedad Industrial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La propiedad industrial protege marcas y patentes, no la veracidad de la venta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué figura debe vigilar que no haya conflictos de interés entre el responsable de compras y un proveedor?",
+      "respuestas": [
+        {
+          "texto": "El Compliance Officer.",
+          "correcta": true,
+          "explicacion": "El Director de cumplimiento debe gestionar herramientas de control de conflictos de interés y corrupción."
+        },
+        {
+          "texto": "El responsable de almacén.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene funciones de supervisión de cumplimiento normativo."
+        },
+        {
+          "texto": "El Community Manager.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sus funciones son de comunicación externa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe asegurar el informático respecto a las actas de las reuniones de la empresa?",
+      "respuestas": [
+        {
+          "texto": "Que se puedan borrar si el jefe lo pide.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las actas no deben poder falsearse a posteriori."
+        },
+        {
+          "texto": "Que tengan fecha correcta para trazabilidad y no puedan ser falseadas.",
+          "correcta": true,
+          "explicacion": "Es importante que las actas tengan trazabilidad para imputar responsabilidades y que no se puedan falsear en investigaciones."
+        },
+        {
+          "texto": "Que ocupen el menor espacio posible en el disco duro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La prioridad es la integridad y validez legal, no el almacenamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el Programa de Compliance se considera 'algo vivo'?",
+      "respuestas": [
+        {
+          "texto": "Porque las leyes cambian y la actividad de negocio evoluciona.",
+          "correcta": true,
+          "explicacion": "Las normas se adecúan a la tecnología y los nuevos mercados exigen evaluar nuevos cumplimientos."
+        },
+        {
+          "texto": "Porque consume muchos recursos eléctricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El término 'vivo' se refiere a su necesidad de actualización constante."
+        },
+        {
+          "texto": "Porque solo se activa cuando hay un juicio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Debe estar activo y supervisado continuamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una empresa mediana no puede costear un departamento de compliance propio?",
+      "respuestas": [
+        {
+          "texto": "Está exenta de cumplir la ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Todas las empresas deben cumplir la legislación."
+        },
+        {
+          "texto": "Puede subcontratar la función a empresas de consultoría especializadas.",
+          "correcta": true,
+          "explicacion": "La función de Compliance Officer se puede subcontratar en empresas pequeñas y medianas."
+        },
+        {
+          "texto": "Debe cerrar la empresa inmediatamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existen alternativas legales de gestión como la externalización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué se refiere el principio de 'Privacidad por defecto'?",
+      "respuestas": [
+        {
+          "texto": "A que la empresa siempre tiene razón en caso de duda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se refiere a la configuración técnica de la privacidad."
+        },
+        {
+          "texto": "A que los sistemas deben ofrecer la mayor privacidad posible de forma automática.",
+          "correcta": true,
+          "explicacion": "Los sistemas deben estar configurados para ofrecer la máxima privacidad y garantizar la confidencialidad de entrada."
+        },
+        {
+          "texto": "A que la privacidad es un defecto del sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una garantía fundamental para el usuario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de estas leyes obliga a proteger la 'identidad digital' de la empresa?",
+      "respuestas": [
+        {
+          "texto": "Ley de Marcas.",
+          "correcta": true,
+          "explicacion": "La marca y el nombre comercial forman parte de la identidad digital y deben protegerse contra abusos."
+        },
+        {
+          "texto": "Ley de Prevención de Blanqueo de Capitales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta ley busca prevenir el flujo de dinero de actividades delictivas."
+        },
+        {
+          "texto": "Ley de Propiedad Intelectual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Protege las obras creadas, no la marca corporativa en sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Responsabilidad Proactiva' según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Esperar a que el usuario reclame para actuar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es ser reactivo, no proactivo."
+        },
+        {
+          "texto": "Implementar medidas para evitar riesgos y poder demostrar que se cumple.",
+          "correcta": true,
+          "explicacion": "Las empresas deben implantar mecanismos para garantizar el cumplimiento y poder demostrarlo ante las autoridades."
+        },
+        {
+          "texto": "Contratar un seguro que pague las multas de la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad proactiva exige control constante y evidencias."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de datos personales se consideran de 'categoría especial'?",
+      "respuestas": [
+        {
+          "texto": "El número de teléfono y el correo electrónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son datos personales comunes."
+        },
+        {
+          "texto": "Datos de salud, ideología, religión o vida sexual.",
+          "correcta": true,
+          "explicacion": "Estos datos están especialmente protegidos por el RGPD debido a su sensibilidad."
+        },
+        {
+          "texto": "El CIF de una empresa proveedora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos corporativos quedan fuera del ámbito de datos personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si viajas por la UE y puedes ver tus series contratadas en España, ¿qué estrategia europea se está aplicando?",
+      "respuestas": [
+        {
+          "texto": "Estrategia para un mercado único digital europeo.",
+          "correcta": true,
+          "explicacion": "La portabilidad transfronteriza de contenidos en línea es parte de los cambios legislativos de esta estrategia."
+        },
+        {
+          "texto": "Ley General de Telecomunicaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La portabilidad de contenidos es un reglamento europeo específico."
+        },
+        {
+          "texto": "Ley de Propiedad Intelectual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque toca derechos de autor, el mecanismo de acceso transfronterizo es del mercado único digital."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica el 'derecho a la portabilidad' de los datos?",
+      "respuestas": [
+        {
+          "texto": "Llevar los datos personales en un USB a todas partes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se refiere al transporte físico del usuario."
+        },
+        {
+          "texto": "Que el interesado pueda recibir sus datos y transmitirlos a otro responsable.",
+          "correcta": true,
+          "explicacion": "Es el derecho a obtener los datos en un formato estructurado para pasarlos a otra empresa."
+        },
+        {
+          "texto": "Poder usar el móvil en otro país con la misma tarifa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el fin de las tarifas de itinerancia o roaming."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta de la AEPD ayuda a las empresas pequeñas a cumplir el RGPD?",
+      "respuestas": [
+        {
+          "texto": "FACILITA.",
+          "correcta": true,
+          "explicacion": "Las empresas de menos de 250 empleados que no realizan tratamientos de alto riesgo pueden usar FACILITA."
+        },
+        {
+          "texto": "Red Trabaja.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un servicio para gestiones relativas al empleo."
+        },
+        {
+          "texto": "CERTIFICADO SILCON.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un certificado electrónico de la Seguridad Social."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Minimización de datos'?",
+      "respuestas": [
+        {
+          "texto": "Comprimir los archivos para que ocupen menos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un principio de privacidad, no de almacenamiento técnico."
+        },
+        {
+          "texto": "Recoger solo los datos adecuados, pertinentes y limitados a lo necesario.",
+          "correcta": true,
+          "explicacion": "Significa no solicitar más datos de los estrictamente necesarios para el fin perseguido."
+        },
+        {
+          "texto": "Borrar todos los datos cada 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos se conservan el tiempo necesario para el tratamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la sanción máxima si una empresa ignora el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Una simple advertencia por escrito siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las sanciones pueden ser muy elevadas y correctivas."
+        },
+        {
+          "texto": "Multas administrativas y prohibición del tratamiento de datos.",
+          "correcta": true,
+          "explicacion": "Las autoridades pueden prohibir el tratamiento, ordenar la supresión de datos e imponer multas elevadas."
+        },
+        {
+          "texto": "No hay sanciones si la empresa es pequeña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Todas las empresas están obligadas a cumplir la legislación y pueden ser sancionadas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento debe firmar el Responsable con el Encargado del tratamiento?",
+      "respuestas": [
+        {
+          "texto": "Un contrato de compraventa de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La venta de datos personales sin consentimiento es ilegal."
+        },
+        {
+          "texto": "Un contrato o acto jurídico vinculante que estipule las condiciones del tratamiento.",
+          "correcta": true,
+          "explicacion": "Debe estipular medidas de seguridad, plazos y cómo se devolverán los datos al finalizar."
+        },
+        {
+          "texto": "Un recibo de entrega de llaves.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se requiere un contrato específico de protección de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "El 'interés legítimo' del responsable es una condición para que el tratamiento de datos sea:",
+      "respuestas": [
+        {
+          "texto": "Lícito.",
+          "correcta": true,
+          "explicacion": "El tratamiento será lícito si cumple condiciones como el consentimiento o el interés legítimo del responsable."
+        },
+        {
+          "texto": "Seudonimizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La seudonimización es una medida técnica, no una base de licitud."
+        },
+        {
+          "texto": "Ilegal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al contrario, es una de las bases legales para tratar datos correctamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué permite hacer la 'Sede Electrónica del Punto de Acceso General' (PAG)?",
+      "respuestas": [
+        {
+          "texto": "Ver series de televisión gratis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un portal de trámites administrativos."
+        },
+        {
+          "texto": "Acceder de forma única a trámites y servicios electrónicos de las AAPP.",
+          "correcta": true,
+          "explicacion": "Es un punto único de acceso para ciudadanos y empresas a trámites de diferentes ministerios y administraciones."
+        },
+        {
+          "texto": "Hackear otras empresas legalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un servicio público oficial para el cumplimiento legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué se refiere el principio de 'Limitación de la finalidad'?",
+      "respuestas": [
+        {
+          "texto": "A que los datos solo pueden usarse para el fin específico por el que se recogieron.",
+          "correcta": true,
+          "explicacion": "Los datos no serán tratados ulteriormente de forma incompatible con los fines determinados y legítimos iniciales."
+        },
+        {
+          "texto": "A que la empresa no puede tener más de 10 fines sociales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se refiere exclusivamente al uso de los datos personales."
+        },
+        {
+          "texto": "A que el tratamiento de datos debe terminar en un año.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tiempo depende de la necesidad del fin, no hay un límite fijo de un año."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe hacer una empresa si utiliza software sin la licencia adecuada?",
+      "respuestas": [
+        {
+          "texto": "Esconderlo cuando vengan inspectores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una actividad ilícita que genera riesgos penales y económicos."
+        },
+        {
+          "texto": "Regularizarlo, ya que la LPI protege el software y prohíbe el uso ilegal.",
+          "correcta": true,
+          "explicacion": "La LPI protege los programas de ordenador y la empresa debe velar por el uso de licencias legítimas."
+        },
+        {
+          "texto": "Decir que es una copia de seguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las copias de seguridad también requieren licencias válidas para su uso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley obliga a identificar los mensajes publicitarios con la palabra 'publi' o 'publicidad'?",
+      "respuestas": [
+        {
+          "texto": "La LSSI-CE.",
+          "correcta": true,
+          "explicacion": "Las comunicaciones comerciales lanzadas por internet deben estar identificadas claramente como publicidad."
+        },
+        {
+          "texto": "La Ley de Propiedad Industrial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Protege marcas, no regula el formato del spam o publicidad."
+        },
+        {
+          "texto": "El Código Penal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el fraude es penal, el formato de la publicidad lo regula la LSSI-CE."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función de la ISO 26000?",
+      "respuestas": [
+        {
+          "texto": "Cifrar correos electrónicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una norma de responsabilidad social, no técnica de cifrado."
+        },
+        {
+          "texto": "Regular la responsabilidad social corporativa.",
+          "correcta": true,
+          "explicacion": "Establece principios para que las empresas operen de manera ética y transparente."
+        },
+        {
+          "texto": "Gestionar las contraseñas de los usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa sería parte de un sistema de gestión de seguridad (ISO 27001)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el Buen Gobierno afecta también a las empresas privadas?",
+      "respuestas": [
+        {
+          "texto": "Solo afecta a las públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las privadas también deben ofrecer veracidad y confianza."
+        },
+        {
+          "texto": "Porque deben ofrecer veracidad y confianza a clientes y socios.",
+          "correcta": true,
+          "explicacion": "El Buen Gobierno garantiza que la actividad de la empresa privada sea ética y transparente para sus grupos de interés."
+        },
+        {
+          "texto": "Porque el gobierno las obliga a contratar a políticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al contrario, el Buen Gobierno busca evitar conflictos de interés y corrupción."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Estrategia Nacional de Ciberseguridad'?",
+      "respuestas": [
+        {
+          "texto": "Un virus informático creado por el Estado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un marco de planificación política."
+        },
+        {
+          "texto": "Un marco legal y estratégico para mejorar la seguridad digital del país.",
+          "correcta": true,
+          "explicacion": "Es parte del desarrollo legal en materia de ciberseguridad iniciado en 2013 y actualizado en 2019."
+        },
+        {
+          "texto": "Una red social exclusiva para militares.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a toda la seguridad de las redes y sistemas de información nacionales."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un diagrama de flujo de datos, ¿cuál es la última etapa del ciclo de vida de la información?",
+      "respuestas": [
+        {
+          "texto": "Almacenamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una etapa intermedia."
+        },
+        {
+          "texto": "Destrucción.",
+          "correcta": true,
+          "explicacion": "El ciclo de vida termina cuando los datos se eliminan de forma segura."
+        },
+        {
+          "texto": "Captura.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es la primera etapa del tratamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué derecho permite a un usuario no ser objeto de una decisión basada solo en algoritmos?",
+      "respuestas": [
+        {
+          "texto": "Derecho a no someterse a decisiones automatizadas.",
+          "correcta": true,
+          "explicacion": "Incluye la elaboración de perfiles y garantiza que haya intervención humana en decisiones importantes."
+        },
+        {
+          "texto": "Derecho a la portabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se refiere a mover los datos, no a cómo se toman decisiones con ellos."
+        },
+        {
+          "texto": "Derecho de acceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Permite conocer los datos, pero no impide el procesamiento automático."
+        }
+      ]
+    }
+  ]
+}

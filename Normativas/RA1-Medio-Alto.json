@@ -1,0 +1,755 @@
+{
+  "tema": "Master Quiz: Cumplimiento Normativo y Diseño de Sistemas",
+  "preguntas": [
+    {
+      "pregunta": "En el marco del cumplimiento normativo, ¿cuál es la diferencia jurídica fundamental entre un Reglamento Europeo (como el GDPR) y una Directiva Europea (como la NIS)?",
+      "respuestas": [
+        {
+          "texto": "El Reglamento es voluntario, mientras que la Directiva es obligatoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los Reglamentos son obligatorios. Las normas voluntarias suelen ser estándares como ISO."
+        },
+        {
+          "texto": "El Reglamento es de aplicación directa e inmediata en todos los países miembros, mientras que la Directiva requiere una transposición a la legislación nacional.",
+          "correcta": true,
+          "explicacion": "Correcto. El Reglamento (GDPR) aplica tal cual se publica; la Directiva (NIS) marca un objetivo que cada país debe integrar en sus propias leyes."
+        },
+        {
+          "texto": "La Directiva solo aplica al sector público y el Reglamento al privado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden aplicar a ambos sectores dependiendo de su contenido."
+        },
+        {
+          "texto": "No hay diferencia jurídica, son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen mecanismos de aplicación legal totalmente distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la UD1, ¿cuál es el objetivo principal de la norma ISO 26000?",
+      "respuestas": [
+        {
+          "texto": "Establecer los requisitos para un Sistema de Gestión de Seguridad de la Información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la ISO 27001."
+        },
+        {
+          "texto": "Regular la Responsabilidad Social Corporativa (RSC).",
+          "correcta": true,
+          "explicacion": "Correcto. La ISO 26000 guía a las organizaciones sobre cómo operar de manera socialmente responsable, ética y transparente."
+        },
+        {
+          "texto": "Definir los protocolos técnicos de encriptación de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una norma técnica de TI."
+        },
+        {
+          "texto": "Sustituir al Código Penal en delitos corporativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ninguna norma ISO sustituye a la ley."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una entidad financiera que opera en Europa implementa la PSD2. ¿Qué aspecto específico de la seguridad regula esta directiva que no cubren otras normas generales?",
+      "respuestas": [
+        {
+          "texto": "La seguridad y transparencia en las transacciones electrónicas y pagos digitales (Open Banking).",
+          "correcta": true,
+          "explicacion": "Correcto. PSD2 obliga a abrir APIs bancarias bajo estrictos controles de seguridad y autenticación reforzada para pagos."
+        },
+        {
+          "texto": "La protección de datos de salud de los empleados del banco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería GDPR o normativa laboral/sanitaria."
+        },
+        {
+          "texto": "La seguridad física de las sucursales bancarias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PSD2 es sobre pagos digitales y servicios de información de cuentas."
+        },
+        {
+          "texto": "La prevención del blanqueo de capitales exclusivamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque relacionado, la norma específica para blanqueo es la LPBCYFT; PSD2 es operativa de pagos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la estructura de gobierno corporativo, ¿quién ostenta el 'Poder de Decisión' final sobre los riesgos y estrategias de cumplimiento?",
+      "respuestas": [
+        {
+          "texto": "El Compliance Officer.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Compliance Officer tiene poder de iniciativa y supervisión, pero no de decisión final estratégica."
+        },
+        {
+          "texto": "El Consejo de Administración.",
+          "correcta": true,
+          "explicacion": "Correcto. El Consejo es el máximo responsable de la toma de decisiones, la asignación de recursos y la definición del apetito de riesgo."
+        },
+        {
+          "texto": "El auditor externo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El auditor revisa, no decide."
+        },
+        {
+          "texto": "El Director de TI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TI implementa, no define la estrategia legal corporativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa española de seguridad aplica específicamente al sector público y a los proveedores privados que le prestan servicios esenciales?",
+      "respuestas": [
+        {
+          "texto": "LOPDGDD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a todos (público y privado) en materia de datos, pero no es el esquema de seguridad de sistemas específico."
+        },
+        {
+          "texto": "ENS (Esquema Nacional de Seguridad)",
+          "correcta": true,
+          "explicacion": "Correcto. El ENS establece los requisitos de seguridad obligatorios para la administración electrónica y sus proveedores."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un estándar voluntario, aunque el ENS se inspira en él, la norma legal es el ENS."
+        },
+        {
+          "texto": "LPBCYFT",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es sobre blanqueo de capitales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la UD1, ¿cuál es una característica indispensable para garantizar la trazabilidad y validez legal de las actas de reuniones en una empresa?",
+      "respuestas": [
+        {
+          "texto": "Deben estar escritas a mano.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El formato no es lo crítico, sino la integridad."
+        },
+        {
+          "texto": "Deben tener fecha correcta y no poder ser falseadas a posteriori.",
+          "correcta": true,
+          "explicacion": "Correcto. La integridad y la fecha cierta son cruciales para que sirvan de evidencia (trazabilidad) en una investigación."
+        },
+        {
+          "texto": "Deben ser públicas para todos los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las actas del consejo suelen ser confidenciales."
+        },
+        {
+          "texto": "Deben guardarse solo en papel.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden y suelen guardarse digitalmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un proveedor de servicios cloud en España aloja datos de un hospital de EE.UU. ¿Qué normativa estadounidense de alcance extraterritorial debe cumplir respecto a esos datos de salud?",
+      "respuestas": [
+        {
+          "texto": "SOX",
+          "correcta": false,
+          "explicacion": "Incorrecto. SOX es financiera."
+        },
+        {
+          "texto": "HIPAA",
+          "correcta": true,
+          "explicacion": "Correcto. HIPAA protege la privacidad de la información médica de ciudadanos de EE.UU. y aplica a sus proveedores donde quiera que estén."
+        },
+        {
+          "texto": "NIST",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIST son estándares técnicos, no una ley de privacidad obligatoria por sí misma en este contexto."
+        },
+        {
+          "texto": "GDPR solamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque debe cumplir GDPR por estar en España, ignorar HIPAA le acarrearía sanciones de EE.UU. por los datos de origen."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación jerárquica y funcional entre el GDPR y la LOPDGDD?",
+      "respuestas": [
+        {
+          "texto": "La LOPDGDD sustituye al GDPR en España.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un reglamento europeo no se sustituye."
+        },
+        {
+          "texto": "Son normativas independientes sin relación.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La LOPDGDD es complementaria al GDPR, adaptando y desarrollando aspectos específicos en el ámbito nacional.",
+          "correcta": true,
+          "explicacion": "Correcto. La ley española rellena los huecos que el reglamento europeo deja a los estados miembros y adapta el régimen sancionador."
+        },
+        {
+          "texto": "El GDPR solo aplica a multinacionales y la LOPDGDD a PyMEs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas aplican a todos los que tratan datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece la 'Directiva NIS' (y NIS2) respecto a los sectores a los que aplica?",
+      "respuestas": [
+        {
+          "texto": "Aplica exclusivamente a empresas de telecomunicaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es mucho más amplia."
+        },
+        {
+          "texto": "Aplica a cualquier empresa que tenga una página web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería la LSSI."
+        },
+        {
+          "texto": "Obliga a garantizar la seguridad de redes y sistemas a proveedores de servicios esenciales e infraestructuras críticas (energía, transporte, salud, banca, etc.).",
+          "correcta": true,
+          "explicacion": "Correcto. Su foco es la resiliencia de los servicios críticos para la sociedad y la economía."
+        },
+        {
+          "texto": "Es una norma voluntaria de calidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una directiva obligatoria de ciberseguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Puede un Compliance Officer tener su salario vinculado directamente a los objetivos de ventas comerciales?",
+      "respuestas": [
+        {
+          "texto": "Sí, para incentivar que la empresa crezca.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso crearía un conflicto de intereses peligroso."
+        },
+        {
+          "texto": "No, porque generaría un conflicto de interés al tener que elegir entre cumplir la norma o alcanzar el bonus.",
+          "correcta": true,
+          "explicacion": "Correcto. La independencia del Compliance Officer exige que su retribución no dependa de los resultados financieros que él mismo debe vigilar."
+        },
+        {
+          "texto": "Sí, siempre que lo apruebe el Consejo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sigue siendo una mala práctica de gobierno corporativo."
+        },
+        {
+          "texto": "Es irrelevante cómo cobre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modelo de incentivos es clave para la ética."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que una normativa sea 'Vinculante' frente a 'Voluntaria'?",
+      "respuestas": [
+        {
+          "texto": "Vinculante conlleva sanciones legales (multas) por incumplimiento; Voluntaria es opcional (como ISO) para mejorar reputación o procesos.",
+          "correcta": true,
+          "explicacion": "Correcto. Las leyes (GDPR) son vinculantes; los estándares (ISO) son voluntarios salvo que un contrato o ley los exija."
+        },
+        {
+          "texto": "Vinculante significa que es internacional; Voluntaria que es local.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El alcance geográfico no define la obligatoriedad."
+        },
+        {
+          "texto": "Voluntaria significa que es gratis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Certificarse en normas voluntarias suele costar dinero."
+        },
+        {
+          "texto": "No hay diferencia real.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la selección de normativas, ¿por qué una empresa podría adoptar ISO 27001 si ya cumple con el GDPR?",
+      "respuestas": [
+        {
+          "texto": "Porque ISO 27001 exime de multas del GDPR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No exime, aunque ayuda a demostrar diligencia."
+        },
+        {
+          "texto": "Porque facilita el cumplimiento al proporcionar un marco sistemático de gestión de seguridad (SGSI) alineado con los requisitos legales.",
+          "correcta": true,
+          "explicacion": "Correcto. ISO 27001 operacionaliza la seguridad ('cómo hacerlo') que el GDPR exige ('qué proteger')."
+        },
+        {
+          "texto": "Porque el GDPR obliga a tener ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El GDPR no obliga a certificarse en normas específicas."
+        },
+        {
+          "texto": "Porque ISO 27001 es más barata de implementar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suele requerir una inversión significativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el caso 'Enron' mencionado en la UD1, ¿cuál fue la lección aprendida sobre la responsabilidad de los ejecutivos?",
+      "respuestas": [
+        {
+          "texto": "Que los ejecutivos nunca van a la cárcel.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Enron demostró lo contrario."
+        },
+        {
+          "texto": "Que desconocer los controles o delegar ciegamente no exime de responsabilidad penal (el 'tonto útil' puede acabar en la cárcel).",
+          "correcta": true,
+          "explicacion": "Correcto. El caso ilustra que la ignorancia deliberada o la falta de supervisión real por parte de la dirección conlleva responsabilidad penal grave."
+        },
+        {
+          "texto": "Que la contabilidad creativa es legal si genera beneficios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es ilegal y fraudulenta."
+        },
+        {
+          "texto": "Que el Compliance Officer es el único responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad última recayó en los máximos ejecutivos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la LPBCYFT y qué tipo de empresas están obligadas por ella (art. 2)?",
+      "respuestas": [
+        {
+          "texto": "Ley de Protección de Bases de Ciberseguridad; aplica a tecnológicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Siglas incorrectas."
+        },
+        {
+          "texto": "Ley de Prevención de Blanqueo de Capitales y Financiación del Terrorismo; aplica a sectores regulados (banca, inmobiliarias, joyas, casinos, etc.).",
+          "correcta": true,
+          "explicacion": "Correcto. Busca prevenir que dinero de actividades delictivas entre en el sistema legal."
+        },
+        {
+          "texto": "Ley de Prevención de Brechas de Ciberseguridad; aplica al sector salud.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Es una norma voluntaria de calidad financiera.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una ley de obligado cumplimiento muy estricta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función del 'Registro de Normativas' recomendado en la UD2?",
+      "respuestas": [
+        {
+          "texto": "Registrar las visitas a la web de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Identificar, documentar y mantener actualizadas las leyes y normas aplicables, su alcance y responsabilidades.",
+          "correcta": true,
+          "explicacion": "Correcto. Es la herramienta base para saber qué reglas del juego aplican a la empresa en cada momento."
+        },
+        {
+          "texto": "Es un registro contable de multas pagadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sustituir al contrato laboral de los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Puede una PyME subcontratar la función de Compliance Officer?",
+      "respuestas": [
+        {
+          "texto": "No, debe ser siempre un empleado en plantilla por ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay prohibición de externalizar, especialmente en empresas pequeñas."
+        },
+        {
+          "texto": "Sí, las empresas medianas y pequeñas pueden subcontratar a consultoras especializadas para esta función.",
+          "correcta": true,
+          "explicacion": "Correcto. La UD1 menciona explícitamente esta posibilidad para adaptar el coste y la especialización a las necesidades de la PyME."
+        },
+        {
+          "texto": "Solo si la PyME cotiza en bolsa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sí, pero el responsable final deja de ser la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se delega la función, pero la responsabilidad última de la empresa (persona jurídica) permanece."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa obliga a las empresas en España a facilitar información 'No Financiera' (ambiental, social) además de sus cuentas?",
+      "respuestas": [
+        {
+          "texto": "La Ley de Transparencia e Información No Financiera (EINF).",
+          "correcta": true,
+          "explicacion": "Correcto. La UD1 menciona que desde el año 95 y normativas posteriores, las empresas deben ser transparentes sobre su impacto social y ambiental."
+        },
+        {
+          "texto": "El Reglamento General de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo cubre datos personales."
+        },
+        {
+          "texto": "La Directiva NIS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cubre ciberseguridad."
+        },
+        {
+          "texto": "No es obligatorio, es solo marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una obligación legal para ciertas empresas."
+        }
+      ]
+    },
+    {
+      "pregunta": "En caso de un incidente de ciberseguridad en un operador de servicios esenciales, ¿qué norma exige la notificación obligatoria a las autoridades?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO define la gestión de incidentes, pero la obligación legal de notificar viene de la Directiva."
+        },
+        {
+          "texto": "Directiva NIS / Ley NIS",
+          "correcta": true,
+          "explicacion": "Correcto. La Directiva NIS impone la obligación de notificar incidentes significativos a los CSIRT nacionales."
+        },
+        {
+          "texto": "LSSI",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Código Ético de la empresa",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia de alcance entre 'Corporate Compliance' y 'Cumplimiento Regulatorio' según la UD1?",
+      "respuestas": [
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen matices."
+        },
+        {
+          "texto": "El cumplimiento regulatorio se centra solo en leyes externas; el Corporate Compliance incluye también códigos éticos internos y políticas voluntarias.",
+          "correcta": true,
+          "explicacion": "Correcto. Corporate Compliance es el concepto paraguas que abarca tanto lo legal (hard law) como lo ético/interno (soft law)."
+        },
+        {
+          "texto": "Corporate Compliance es solo para EE.UU.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Cumplimiento Regulatorio es voluntario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lo regulatorio suele ser obligatorio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa estadounidense introdujo controles estrictos de contabilidad y auditoría tras escándalos financieros?",
+      "respuestas": [
+        {
+          "texto": "HIPAA",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es de salud."
+        },
+        {
+          "texto": "SOX (Sarbanes-Oxley Act)",
+          "correcta": true,
+          "explicacion": "Correcto. Surgió tras Enron/WorldCom para asegurar la fiabilidad de la información financiera corporativa."
+        },
+        {
+          "texto": "GDPR",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es europea."
+        },
+        {
+          "texto": "ISO 9001",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es de calidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la gestión de riesgos de cumplimiento, ¿qué se entiende por 'Riesgo Reputacional'?",
+      "respuestas": [
+        {
+          "texto": "El riesgo de que los servidores se caigan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es riesgo operativo o de disponibilidad."
+        },
+        {
+          "texto": "El impacto negativo en la imagen y confianza de la marca ante clientes y sociedad por un incumplimiento.",
+          "correcta": true,
+          "explicacion": "Correcto. La pérdida de confianza puede ser más costosa a largo plazo que la propia multa."
+        },
+        {
+          "texto": "El riesgo de pagar demasiados impuestos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "El riesgo de fluctuación de moneda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es riesgo financiero de mercado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué rol juega la 'Autonomía del Paciente' (Ley 41/2002) en el cumplimiento normativo sanitario en España?",
+      "respuestas": [
+        {
+          "texto": "Ninguno, solo aplica a médicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta al tratamiento de datos."
+        },
+        {
+          "texto": "Regula el consentimiento informado y el acceso a la historia clínica, complementando al GDPR en el sector salud.",
+          "correcta": true,
+          "explicacion": "Correcto. Define quién, cómo y cuándo se puede acceder a la información médica, siendo una norma sectorial crítica."
+        },
+        {
+          "texto": "Sustituye al GDPR en hospitales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lo complementa."
+        },
+        {
+          "texto": "Prohíbe el uso de ordenadores en consultas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio del Buen Gobierno busca evitar que directivos tomen decisiones en beneficio propio en lugar de la empresa?",
+      "respuestas": [
+        {
+          "texto": "Transparencia de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Prevención del Conflicto de Interés.",
+          "correcta": true,
+          "explicacion": "Correcto. El conflicto de interés ocurre cuando el interés personal choca con el deber profesional."
+        },
+        {
+          "texto": "Maximización de beneficios.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Confidencialidad absoluta.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una empresa española quiere certificarse en Continuidad de Negocio para cumplir requisitos de un cliente de infraestructura crítica, ¿qué estándar elegiría?",
+      "respuestas": [
+        {
+          "texto": "ISO 9001",
+          "correcta": false,
+          "explicacion": "Incorrecto. Calidad."
+        },
+        {
+          "texto": "ISO 22301",
+          "correcta": true,
+          "explicacion": "Correcto. Es el estándar internacional específico para Business Continuity Management Systems (BCMS)."
+        },
+        {
+          "texto": "ISO 14001",
+          "correcta": false,
+          "explicacion": "Incorrecto. Medio ambiente."
+        },
+        {
+          "texto": "ENS",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS es obligatorio (ley), no una certificación voluntaria internacional estándar (aunque tiene certificación propia)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la responsabilidad penal de las personas jurídicas introducida en el Código Penal español (reforma 2010/2015)?",
+      "respuestas": [
+        {
+          "texto": "Las empresas nunca pueden ser responsables penalmente, solo las personas físicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso cambió con la reforma."
+        },
+        {
+          "texto": "La empresa puede ser condenada por delitos cometidos en su nombre o beneficio si no ejerció el debido control (Compliance).",
+          "correcta": true,
+          "explicacion": "Correcto. La falta de un modelo de prevención de delitos hace a la empresa responsable penalmente."
+        },
+        {
+          "texto": "Solo aplica a delitos fiscales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a un catálogo amplio de delitos."
+        },
+        {
+          "texto": "La responsabilidad se transfiere automáticamente al gobierno.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica que el Compliance Officer tenga 'Poder de Iniciativa' pero no de 'Decisión'?",
+      "respuestas": [
+        {
+          "texto": "Que puede investigar, proponer y alertar, pero no puede firmar estrategias finales ni sancionar directamente sin respaldo del Consejo.",
+          "correcta": true,
+          "explicacion": "Correcto. Su rol es operativo y de supervisión; el gobierno corporativo reserva la decisión estratégica a la dirección."
+        },
+        {
+          "texto": "Que no puede hacer nada sin permiso previo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tiene autonomía para iniciar supervisiones."
+        },
+        {
+          "texto": "Que es un puesto puramente administrativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Que manda más que el CEO.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué sector es regulado por la normativa 'HIPAA'?",
+      "respuestas": [
+        {
+          "texto": "Sector Bancario en Europa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sector Salud en Estados Unidos.",
+          "correcta": true,
+          "explicacion": "Correcto. Health Insurance Portability and Accountability Act."
+        },
+        {
+          "texto": "Sector Transporte en Asia.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sector Nuclear Global.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el ciclo de vida de una normativa en la empresa, ¿por qué es necesaria la 'Revisión y Actualización Continua'?",
+      "respuestas": [
+        {
+          "texto": "Porque los consultores necesitan cobrar horas extra.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Porque el entorno legislativo y las amenazas cambian constantemente; una norma de ayer puede no servir hoy.",
+          "correcta": true,
+          "explicacion": "Correcto. El cumplimiento estático es cumplimiento muerto. Nuevas leyes (IA, Ciberseguridad) aparecen constantemente."
+        },
+        {
+          "texto": "No es necesaria, las leyes nunca cambian.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las leyes cambian frecuentemente."
+        },
+        {
+          "texto": "Solo se revisa si hay una multa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es reactivo y tardío."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa europea de protección de datos tiene un alcance extraterritorial (aplica a empresas fuera de la UE si tratan datos de europeos)?",
+      "respuestas": [
+        {
+          "texto": "LOPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es nacional."
+        },
+        {
+          "texto": "GDPR (RGPD)",
+          "correcta": true,
+          "explicacion": "Correcto. El Reglamento aplica a cualquier entidad del mundo que ofrezca bienes/servicios o monitorice a ciudadanos en la UE."
+        },
+        {
+          "texto": "HIPAA",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es de EE.UU."
+        },
+        {
+          "texto": "NIS",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se enfoca en entidades establecidas en la UE."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué organismo en España emite guías de ciberseguridad y esquemas de certificación (como el ENS) para el sector público?",
+      "respuestas": [
+        {
+          "texto": "La Agencia Tributaria.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "CCN-CERT (Centro Criptológico Nacional).",
+          "correcta": true,
+          "explicacion": "Correcto. Es el organismo adscrito al CNI responsable de la ciberseguridad del sector público y esquemas como el ENS."
+        },
+        {
+          "texto": "La Policía Local.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "INCIBE (para ciudadanos/empresas) solamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. INCIBE es para ciudadanos/empresas, pero el regulador del ENS y sector público es el CCN."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1255 @@
+{
+  "tema": "Gestión de Incidentes de Ciberseguridad, Monitorización y OSINT",
+  "preguntas": [
+    {
+      "pregunta": "Dentro del contexto de taxonomías de incidentes, ¿cuál es la diferencia fundamental entre 'Taxonomía' y 'Clasificación'?",
+      "respuestas": [
+        {
+          "texto": "La taxonomía es el marco teórico o 'diccionario' jerárquico, mientras que la clasificación es la aplicación práctica de asignar un incidente real a esas categorías.",
+          "correcta": true,
+          "explicacion": "La taxonomía define la estructura y el lenguaje común, mientras que la clasificación es el proceso activo de etiquetar un evento específico usando esa estructura."
+        },
+        {
+          "texto": "La clasificación es el sistema global de amenazas y la taxonomía es la etiqueta final que se pone al informe.",
+          "correcta": false,
+          "explicacion": "Es al revés: la taxonomía es el sistema global y la clasificación es la acción de etiquetar."
+        },
+        {
+          "texto": "La taxonomía se utiliza solo para incidentes técnicos (malware), mientras que la clasificación se usa para incidentes de gestión (legal).",
+          "correcta": false,
+          "explicacion": "Ambos conceptos se aplican a todo tipo de incidentes; no dependen de si es técnico o de gestión."
+        },
+        {
+          "texto": "No existe diferencia real, son términos intercambiables en la norma ISO 27035.",
+          "correcta": false,
+          "explicacion": "Tienen propósitos distintos y jerarquías diferentes; usarlos indistintamente es un error común."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un SOC necesita priorizar la interoperabilidad entre países de la UE y simplificar el reporte regulatorio (como NIS2), ¿qué taxonomía de referencia sería la más adecuada?",
+      "respuestas": [
+        {
+          "texto": "Taxonomía de referencia de ENISA",
+          "correcta": true,
+          "explicacion": "ENISA está diseñada específicamente para la cooperación transfronteriza y el reporte regulatorio en la UE, priorizando la interoperabilidad y simplicidad."
+        },
+        {
+          "texto": "MITRE ATT&CK",
+          "correcta": false,
+          "explicacion": "MITRE se enfoca en el comportamiento técnico (TTPs) y es demasiado detallado para reportes regulatorios de alto nivel."
+        },
+        {
+          "texto": "VERIS",
+          "correcta": false,
+          "explicacion": "VERIS está orientado al análisis de riesgos y métricas estadísticas (como el informe DBIR), no primariamente a la interoperabilidad de CSIRTs."
+        },
+        {
+          "texto": "NIST Incident Categories",
+          "correcta": false,
+          "explicacion": "NIST es excelente para procedimientos operativos y agencias federales de EE.UU., pero ENISA es el estándar para la UE."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el marco VERIS, ¿cuál de los siguientes elementos NO forma parte de las 4 A's que narran la historia del incidente?",
+      "respuestas": [
+        {
+          "texto": "Analysis (Análisis)",
+          "correcta": true,
+          "explicacion": "Las 4 A's de VERIS son: Actors (Actores), Actions (Acciones), Assets (Activos) y Attributes (Atributos). Analysis no es una de las categorías base."
+        },
+        {
+          "texto": "Actors (Actores)",
+          "correcta": false,
+          "explicacion": "Actors es una categoría válida (quién provocó el incidente)."
+        },
+        {
+          "texto": "Attributes (Atributos)",
+          "correcta": false,
+          "explicacion": "Attributes es una categoría válida (cómo se vio afectado el activo: CIA)."
+        },
+        {
+          "texto": "Assets (Activos)",
+          "correcta": false,
+          "explicacion": "Assets es una categoría válida (qué fue afectado)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se considera que detectar un Indicador de Ataque (IoA) causa más 'dolor' al adversario que detectar un Indicador de Compromiso (IoC)?",
+      "respuestas": [
+        {
+          "texto": "Porque los IoA se basan en Tácticas, Técnicas y Procedimientos (TTPs), obligando al atacante a rediseñar su metodología completa, mientras que los IoC (como un hash) son fáciles de cambiar.",
+          "correcta": true,
+          "explicacion": "Los IoC (hash, IP) son efímeros y fáciles de modificar. Los IoA atacan el comportamiento (el 'cómo'), lo cual es difícil y costoso de cambiar para el atacante."
+        },
+        {
+          "texto": "Porque los IoA son evidencias forenses que permiten acciones legales inmediatas contra el atacante.",
+          "correcta": false,
+          "explicacion": "Los IoC suelen ser la evidencia forense estática. Los IoA son comportamentales y de tiempo real."
+        },
+        {
+          "texto": "Porque los IoC generan demasiados falsos positivos, haciendo que el atacante pase desapercibido.",
+          "correcta": false,
+          "explicacion": "La razón del 'dolor' no es los falsos positivos, sino la dificultad de evadir la detección comportamental."
+        },
+        {
+          "texto": "No hay diferencia real, ambos afectan por igual a la infraestructura del atacante.",
+          "correcta": false,
+          "explicacion": "Existe una gran diferencia en la 'Pirámide del Dolor'; cambiar un hash es trivial, cambiar una técnica no."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una arquitectura de detección, ¿cuál es el propósito principal de la 'Normalización' de logs?",
+      "respuestas": [
+        {
+          "texto": "Traducir logs de diferentes formatos (XML, Syslog, JSON) a un esquema común para permitir su correlación y análisis unificado.",
+          "correcta": true,
+          "explicacion": "La normalización resuelve el problema de la heterogeneidad de fuentes, convirtiendo datos dispares en un formato estándar como ECS o CIM."
+        },
+        {
+          "texto": "Añadir información de contexto como GeoIP o resolución DNS al log crudo.",
+          "correcta": false,
+          "explicacion": "Eso se define como 'Enriquecimiento', no normalización."
+        },
+        {
+          "texto": "Asegurar que los logs no han sido modificados mediante hashing.",
+          "correcta": false,
+          "explicacion": "Eso se refiere a la Integridad o Cadena de Custodia."
+        },
+        {
+          "texto": "Almacenar los logs en almacenamiento frío (Cold Storage) para cumplimiento legal.",
+          "correcta": false,
+          "explicacion": "Eso es parte de la política de Retención."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja principal ofrece la Supervisión Continua frente a la Supervisión Periódica en ciberseguridad?",
+      "respuestas": [
+        {
+          "texto": "Elimina los 'puntos ciegos' temporales y permite la detección en tiempo real, reduciendo el tiempo de permanencia del atacante.",
+          "correcta": true,
+          "explicacion": "La supervisión periódica deja ventanas de tiempo donde un atacante puede operar libremente. La continua ofrece una 'película en tiempo real'."
+        },
+        {
+          "texto": "Es mucho más barata de implementar porque no requiere herramientas automatizadas.",
+          "correcta": false,
+          "explicacion": "Al contrario, la supervisión continua suele requerir mayor inversión en herramientas y personal (SOC 24/7)."
+        },
+        {
+          "texto": "Se enfoca exclusivamente en el cumplimiento normativo (Compliance) en lugar de la seguridad operativa.",
+          "correcta": false,
+          "explicacion": "La supervisión periódica suele enfocarse en Compliance; la continua se enfoca en SecOps (Seguridad Operativa)."
+        },
+        {
+          "texto": "Reduce el número de falsos positivos al analizar menos datos.",
+          "correcta": false,
+          "explicacion": "Al analizar más datos en tiempo real, la gestión de falsos positivos se vuelve más crítica, no necesariamente menor."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de OSINT, ¿cuál es la distinción crítica entre 'OSINT Pasivo' y 'Reconocimiento Activo'?",
+      "respuestas": [
+        {
+          "texto": "El OSINT Pasivo no interactúa con los sistemas del objetivo (indetectable), mientras que el Reconocimiento Activo (ej. escaneo de puertos) genera tráfico y logs en el objetivo.",
+          "correcta": true,
+          "explicacion": "Esta distinción es vital para la OPSEC y la legalidad. El OSINT puro prioriza la pasividad para no alertar al objetivo ni cometer intrusión."
+        },
+        {
+          "texto": "El OSINT Pasivo utiliza herramientas pagas, mientras que el Activo utiliza herramientas gratuitas.",
+          "correcta": false,
+          "explicacion": "El coste de la herramienta no define si es pasivo o activo, sino la interacción con el objetivo."
+        },
+        {
+          "texto": "El OSINT Pasivo se realiza en la Dark Web y el Activo en la Surface Web.",
+          "correcta": false,
+          "explicacion": "Ambos tipos pueden realizarse en cualquier capa de la web."
+        },
+        {
+          "texto": "El Reconocimiento Activo es legal siempre, mientras que el Pasivo requiere orden judicial.",
+          "correcta": false,
+          "explicacion": "Al revés, el reconocimiento activo puede ser ilegal si se considera un ataque/intrusión, mientras que el pasivo (información pública) es generalmente legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué métrica de eficacia de reglas de detección se define como el porcentaje de ataques totales que el sistema es capaz de ver (Recall)?",
+      "respuestas": [
+        {
+          "texto": "Recall = TP / (TP + FN)",
+          "correcta": true,
+          "explicacion": "El Recall o Sensibilidad mide cuántos ataques reales detectamos del total existente. Un Recall bajo indica puntos ciegos peligrosos."
+        },
+        {
+          "texto": "Precision = TP / (TP + FP)",
+          "correcta": false,
+          "explicacion": "Esta fórmula corresponde a la Precisión (cuántas de mis alertas son reales), no al Recall."
+        },
+        {
+          "texto": "Accuracy = (TP + TN) / Total",
+          "correcta": false,
+          "explicacion": "Esta es la exactitud global, no el Recall."
+        },
+        {
+          "texto": "MTTD (Mean Time to Detect)",
+          "correcta": false,
+          "explicacion": "El MTTD mide tiempo, no porcentaje de cobertura de ataques."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la triada de visibilidad del SOC, ¿qué ventaja única aporta la monitorización de 'Endpoint' (EDR) frente a la de 'Red'?",
+      "respuestas": [
+        {
+          "texto": "Permite ver la actividad incluso si el tráfico de red está cifrado y monitorizar procesos en memoria o cambios en el registro local.",
+          "correcta": true,
+          "explicacion": "Con el uso extendido de HTTPS, la red a menudo está ciega al contenido. El EDR ve lo que ocurre en el dispositivo antes de cifrarse o después de descifrarse."
+        },
+        {
+          "texto": "Es la única fuente que permite análisis forense post-incidente.",
+          "correcta": false,
+          "explicacion": "Tanto los logs como la red permiten análisis forense (ej. PCAP, logs de sistema)."
+        },
+        {
+          "texto": "Es mucho más fácil de desplegar porque no requiere instalar agentes.",
+          "correcta": false,
+          "explicacion": "El EDR requiere agentes en cada host, lo cual es más complejo de gestionar que un sensor de red pasivo."
+        },
+        {
+          "texto": "Sustituye completamente a los logs de sistema.",
+          "correcta": false,
+          "explicacion": "No sustituye, complementa. Los logs del sistema (Windows Events) siguen siendo necesarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de un sistema SOAR (Security Orchestration, Automation, and Response) en comparación con un SIEM tradicional?",
+      "respuestas": [
+        {
+          "texto": "Orquestar herramientas dispares y automatizar respuestas mediante Playbooks (ej. aislar un host automáticamente).",
+          "correcta": true,
+          "explicacion": "Mientras el SIEM se centra en visibilidad y alertas, el SOAR se centra en la eficiencia y la ejecución de acciones de respuesta automatizadas."
+        },
+        {
+          "texto": "Recopilar y almacenar logs para cumplimiento normativo a largo plazo.",
+          "correcta": false,
+          "explicacion": "Esa es una función primaria del SIEM y sus sistemas de almacenamiento."
+        },
+        {
+          "texto": "Analizar malware mediante sandboxing en la nube.",
+          "correcta": false,
+          "explicacion": "Aunque puede integrarse, el análisis de malware no es la definición central de SOAR."
+        },
+        {
+          "texto": "Sustituir a los analistas de nivel 3 (Threat Hunters).",
+          "correcta": false,
+          "explicacion": "El SOAR ayuda a automatizar tareas repetitivas (L1/L2), pero no sustituye el análisis complejo humano."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de comportamiento (UEBA), ¿qué implica detectar una 'Anomalía Contextual'?",
+      "respuestas": [
+        {
+          "texto": "Un evento que es técnicamente normal en sí mismo, pero sospechoso debido al momento, lugar o usuario que lo ejecuta.",
+          "correcta": true,
+          "explicacion": "Ejemplo: Un administrador usando PowerShell es normal, pero si lo usa el recepcionista es una anomalía contextual."
+        },
+        {
+          "texto": "Un evento que supera un umbral numérico fijo, como 50 GB de transferencia.",
+          "correcta": false,
+          "explicacion": "Eso sería una anomalía puntual o volumétrica."
+        },
+        {
+          "texto": "Una secuencia de eventos que parecen benignos individualmente pero maliciosos en conjunto.",
+          "correcta": false,
+          "explicacion": "Eso define una 'Anomalía Colectiva'."
+        },
+        {
+          "texto": "La detección de un hash de malware conocido.",
+          "correcta": false,
+          "explicacion": "Eso es detección basada en firmas, no una anomalía comportamental."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué problema matemático conocido como la 'Paradoja del Falso Positivo' afecta a los sistemas de detección de anomalías?",
+      "respuestas": [
+        {
+          "texto": "Dado que la inmensa mayoría del tráfico es legítimo, incluso una tasa de error muy baja (1%) genera miles de falsos positivos diarios.",
+          "correcta": true,
+          "explicacion": "Al analizar millones de eventos, un pequeño porcentaje de error se traduce en un volumen inmanejable de alertas falsas, causando fatiga."
+        },
+        {
+          "texto": "Los sistemas de IA aprenden el comportamiento malicioso y lo clasifican como normal con el tiempo.",
+          "correcta": false,
+          "explicacion": "Eso se llama 'Data Poisoning' o deriva del modelo, no la paradoja del falso positivo."
+        },
+        {
+          "texto": "El sistema deja de detectar ataques reales porque se acostumbra a las alertas.",
+          "correcta": false,
+          "explicacion": "Eso es desensibilización del analista, no un problema matemático del sistema."
+        },
+        {
+          "texto": "Es imposible distinguir matemáticamente un usuario de un bot.",
+          "correcta": false,
+          "explicacion": "No es imposible, es el objetivo del UEBA; la paradoja se refiere al volumen de errores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia operativa existe entre un IDS (Sistema de Detección de Intrusos) y un IPS (Sistema de Prevención)?",
+      "respuestas": [
+        {
+          "texto": "El IDS es pasivo (copia y analiza) y solo alerta; el IPS está en línea con el tráfico y puede bloquear/descartar paquetes.",
+          "correcta": true,
+          "explicacion": "El IDS opera en modo promiscuo sin afectar la red; el IPS opera 'inline' y puede detener el ataque, pero su fallo corta la red."
+        },
+        {
+          "texto": "El IDS se usa para redes internas y el IPS solo para el perímetro.",
+          "correcta": false,
+          "explicacion": "Ambos pueden usarse en cualquier ubicación dependiendo de la estrategia."
+        },
+        {
+          "texto": "El IDS detecta firmas y el IPS detecta comportamiento.",
+          "correcta": false,
+          "explicacion": "Ambos pueden usar firmas o heurística; la diferencia es la capacidad de bloqueo (acción)."
+        },
+        {
+          "texto": "El IPS es una versión obsoleta del IDS.",
+          "correcta": false,
+          "explicacion": "Al contrario, ambos coexisten. El IPS es más activo, pero el IDS sigue siendo útil para visibilidad sin riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe mejor la técnica 'Living off the Land' (LOTL)?",
+      "respuestas": [
+        {
+          "texto": "El uso de herramientas legítimas y preinstaladas en el sistema (como PowerShell o WMI) por parte del atacante para evitar ser detectado.",
+          "correcta": true,
+          "explicacion": "Al usar herramientas propias del sistema, el atacante se mimetiza con operaciones normales, evadiendo detecciones basadas en firmas de malware externo."
+        },
+        {
+          "texto": "La infección de sistemas mediante dispositivos físicos USB abandonados en las instalaciones.",
+          "correcta": false,
+          "explicacion": "Eso es un vector de ataque físico/USB, no LOTL."
+        },
+        {
+          "texto": "El robo de credenciales mediante phishing para acceder a servicios en la nube.",
+          "correcta": false,
+          "explicacion": "Eso es robo de credenciales, no necesariamente uso de herramientas nativas del SO para ejecución."
+        },
+        {
+          "texto": "El ataque a infraestructuras críticas agrícolas o de gestión de tierras.",
+          "correcta": false,
+          "explicacion": "Interpretación literal incorrecta del término."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el ciclo de vida de un incidente, ¿cómo puede OSINT apoyar específicamente la fase de 'Contención'?",
+      "respuestas": [
+        {
+          "texto": "Identificando dominios de Command & Control (C2) e infraestructura del atacante para bloquear comunicaciones salientes.",
+          "correcta": true,
+          "explicacion": "El análisis externo permite ver qué infraestructura está usando el atacante (IPs, Dominios) y bloquearla en el firewall para cortar su control."
+        },
+        {
+          "texto": "Restaurando las copias de seguridad de los sistemas afectados.",
+          "correcta": false,
+          "explicacion": "Eso es parte de la fase de Recuperación y es una tarea interna."
+        },
+        {
+          "texto": "Analizando el código fuente del malware para crear una vacuna.",
+          "correcta": false,
+          "explicacion": "Eso es Ingeniería Inversa, no OSINT primariamente."
+        },
+        {
+          "texto": "Notificando a los usuarios afectados por correo electrónico.",
+          "correcta": false,
+          "explicacion": "Eso es gestión de comunicación/crisis."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para asegurar la validez legal de una evidencia OSINT (como un tweet amenazante), ¿qué mecanismo técnico es imprescindible?",
+      "respuestas": [
+        {
+          "texto": "Sellado de tiempo (Trusted Timestamping) y Hashing para garantizar integridad y existencia en un momento dado.",
+          "correcta": true,
+          "explicacion": "Dada la volatilidad de la web, se debe probar que el contenido existía y no ha sido alterado tras la captura."
+        },
+        {
+          "texto": "Imprimir la pantalla en papel y firmarla ante notario.",
+          "correcta": false,
+          "explicacion": "Aunque útil, la evidencia digital requiere preservación electrónica (hash) para ser robusta técnicamente."
+        },
+        {
+          "texto": "Descargar el contenido usando una VPN para anonimizar la descarga.",
+          "correcta": false,
+          "explicacion": "Eso protege al analista (OPSEC), pero no valida la evidencia legalmente."
+        },
+        {
+          "texto": "Solicitar permiso al autor del tweet antes de capturarlo.",
+          "correcta": false,
+          "explicacion": "Contraproducente y no requerido para información pública en investigaciones."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia a Suricata de Snort en términos de arquitectura de procesamiento?",
+      "respuestas": [
+        {
+          "texto": "Suricata fue diseñado con multihilo nativo desde el inicio, mientras que Snort fue históricamente monohilo (hasta versiones recientes).",
+          "correcta": true,
+          "explicacion": "El multihilo nativo permite a Suricata procesar un solo flujo usando múltiples núcleos, ideal para alto rendimiento."
+        },
+        {
+          "texto": "Suricata solo funciona en Linux y Snort solo en Windows.",
+          "correcta": false,
+          "explicacion": "Ambos son multiplataforma."
+        },
+        {
+          "texto": "Snort utiliza formato JSON para logs y Suricata utiliza binario.",
+          "correcta": false,
+          "explicacion": "Es al revés o inexacto; Suricata destaca por su log nativo JSON (EVE.json)."
+        },
+        {
+          "texto": "Suricata no soporta reglas, solo análisis de comportamiento.",
+          "correcta": false,
+          "explicacion": "Suricata soporta reglas y es compatible con el formato de Snort."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de reglas SIEM, ¿qué es el 'Tuning' o afinamiento?",
+      "respuestas": [
+        {
+          "texto": "Es el proceso cíclico de ajustar reglas para reducir falsos positivos, añadiendo excepciones o condiciones más específicas.",
+          "correcta": true,
+          "explicacion": "El tuning es necesario para evitar la fatiga de alertas, filtrando herramientas legítimas o ajustando umbrales."
+        },
+        {
+          "texto": "Es la instalación inicial del software SIEM en los servidores.",
+          "correcta": false,
+          "explicacion": "Eso es despliegue o implementación."
+        },
+        {
+          "texto": "Es el proceso de borrado de logs antiguos para liberar espacio.",
+          "correcta": false,
+          "explicacion": "Eso es retención o purgado de datos."
+        },
+        {
+          "texto": "Es la contratación de personal especializado para el SOC.",
+          "correcta": false,
+          "explicacion": "Eso es staffing o gestión de recursos humanos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Typosquatting' en el contexto de la monitorización de marca?",
+      "respuestas": [
+        {
+          "texto": "El registro de dominios con errores tipográficos intencionales (ej. gogle.com) para engañar a usuarios.",
+          "correcta": true,
+          "explicacion": "Los atacantes usan estos dominios para phishing o malware, aprovechando errores de escritura de los usuarios."
+        },
+        {
+          "texto": "El secuestro de sesiones mediante inyección SQL.",
+          "correcta": false,
+          "explicacion": "Eso es un ataque web diferente."
+        },
+        {
+          "texto": "La publicación de comentarios negativos falsos en redes sociales.",
+          "correcta": false,
+          "explicacion": "Eso es daño reputacional, pero no typosquatting técnico."
+        },
+        {
+          "texto": "El uso de contraseñas por defecto en servidores web.",
+          "correcta": false,
+          "explicacion": "Eso es mala configuración de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante integrar la 'Inteligencia de Amenazas' (Threat Intelligence) en el enriquecimiento de logs?",
+      "respuestas": [
+        {
+          "texto": "Permite cruzar IPs o Hashes observados con bases de datos globales de amenazas para identificar ataques conocidos automáticamente.",
+          "correcta": true,
+          "explicacion": "El enriquecimiento con Threat Intel aporta contexto externo (ej. 'esta IP es de una botnet conocida') al dato interno."
+        },
+        {
+          "texto": "Aumenta la velocidad de indexación de los logs en la base de datos.",
+          "correcta": false,
+          "explicacion": "El enriquecimiento suele añadir carga de procesamiento, no aumenta la velocidad de indexación."
+        },
+        {
+          "texto": "Reduce el tamaño de almacenamiento de los logs.",
+          "correcta": false,
+          "explicacion": "Al añadir datos extra, el tamaño del log aumenta."
+        },
+        {
+          "texto": "Garantiza que los logs cumplan con GDPR.",
+          "correcta": false,
+          "explicacion": "La Threat Intel es técnica; el cumplimiento de GDPR depende del manejo de datos personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define a un 'Initial Access Broker' (IAB)?",
+      "respuestas": [
+        {
+          "texto": "Ciberdelincuentes que obtienen acceso a redes corporativas y luego venden ese acceso a otros grupos (como bandas de Ransomware).",
+          "correcta": true,
+          "explicacion": "Son intermediarios clave en el ecosistema criminal, eliminando la fase de intrusión inicial para otros atacantes."
+        },
+        {
+          "texto": "Un software que gestiona el inicio de sesión único (SSO) en empresas.",
+          "correcta": false,
+          "explicacion": "Eso es un Identity Provider (IdP)."
+        },
+        {
+          "texto": "El primer analista que responde a una alerta en un SOC.",
+          "correcta": false,
+          "explicacion": "Ese es el Analista de Nivel 1 o Triage."
+        },
+        {
+          "texto": "Un tipo de firewall que bloquea conexiones entrantes.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la taxonomía MITRE ATT&CK, ¿qué representan las 'Tácticas'?",
+      "respuestas": [
+        {
+          "texto": "El objetivo táctico del adversario o el 'por qué' (ej. Acceso Inicial, Persistencia).",
+          "correcta": true,
+          "explicacion": "Las tácticas son las categorías de alto nivel que describen la meta del atacante en esa fase."
+        },
+        {
+          "texto": "El método específico técnico o el 'cómo' (ej. PowerShell, Fuerza Bruta).",
+          "correcta": false,
+          "explicacion": "Esas son las 'Técnicas'."
+        },
+        {
+          "texto": "Los grupos de actores de amenaza (ej. APT28).",
+          "correcta": false,
+          "explicacion": "Esos son los 'Grupos' o Adversarios."
+        },
+        {
+          "texto": "Las herramientas de software utilizadas para defenderse.",
+          "correcta": false,
+          "explicacion": "Esas son las Mitigaciones o Data Sources."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica una 'Anomalía Colectiva' en detección de comportamiento?",
+      "respuestas": [
+        {
+          "texto": "Un conjunto de eventos que individualmente son normales, pero cuya ocurrencia conjunta o secuencial indica un patrón malicioso.",
+          "correcta": true,
+          "explicacion": "Ejemplo: VPN -> Acceso a Archivos -> Descarga en 10 segundos. Por separado bien, juntos es inhumano/script."
+        },
+        {
+          "texto": "Un ataque DDoS que afecta a muchos usuarios a la vez.",
+          "correcta": false,
+          "explicacion": "Eso es un ataque de disponibilidad, no necesariamente una anomalía colectiva en el sentido de patrón de comportamiento individual."
+        },
+        {
+          "texto": "Cuando todo un departamento cambia su contraseña al mismo tiempo.",
+          "correcta": false,
+          "explicacion": "Puede ser una anomalía, pero el término técnico se refiere más a la relación de eventos."
+        },
+        {
+          "texto": "La detección de un virus en múltiples ordenadores.",
+          "correcta": false,
+          "explicacion": "Eso es un brote o epidemia de malware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el riesgo principal asociado a los repositorios de código públicos (GitHub, GitLab) desde la perspectiva OSINT?",
+      "respuestas": [
+        {
+          "texto": "La fuga de secretos 'hardcoded' (API keys, credenciales, claves privadas) dejados por error por los desarrolladores.",
+          "correcta": true,
+          "explicacion": "Es un vector crítico; los desarrolladores a menudo suben código con credenciales incrustadas que los atacantes escanean automáticamente."
+        },
+        {
+          "texto": "La inyección de código SQL en la plataforma de GitHub.",
+          "correcta": false,
+          "explicacion": "El riesgo es la exposición de datos de la empresa, no la vulnerabilidad de la plataforma GitHub."
+        },
+        {
+          "texto": "El robo de ancho de banda de los repositorios.",
+          "correcta": false,
+          "explicacion": "Irrelevante para la seguridad corporativa."
+        },
+        {
+          "texto": "La saturación del servidor por demasiados commits.",
+          "correcta": false,
+          "explicacion": "Problema operacional, no de seguridad OSINT."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una regla Snort, ¿qué significa la opción 'nocase'?",
+      "respuestas": [
+        {
+          "texto": "Indica al motor de detección que ignore la distinción entre mayúsculas y minúsculas al buscar el contenido.",
+          "correcta": true,
+          "explicacion": "Es vital para evitar evasiones simples donde el atacante cambia 'GET' por 'get' o 'Get'."
+        },
+        {
+          "texto": "Indica que la regla no tiene un caso de uso definido.",
+          "correcta": false,
+          "explicacion": "Interpretación incorrecta."
+        },
+        {
+          "texto": "Significa que no se generará alerta (No Case).",
+          "correcta": false,
+          "explicacion": "Falso, la alerta depende de la acción (alert/drop)."
+        },
+        {
+          "texto": "Indica que solo busque en la cabecera del paquete.",
+          "correcta": false,
+          "explicacion": "Para eso existen otros modificadores como http_header."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Correlación Secuencial' en un SIEM?",
+      "respuestas": [
+        {
+          "texto": "Una técnica que utiliza el orden cronológico de eventos distintos para identificar un patrón de ataque complejo (Kill Chain).",
+          "correcta": true,
+          "explicacion": "Permite detectar la progresión: primero escaneo, luego exploit, luego usuario creado."
+        },
+        {
+          "texto": "La suma de todos los eventos en un periodo de tiempo.",
+          "correcta": false,
+          "explicacion": "Eso es correlación de umbral o volumétrica."
+        },
+        {
+          "texto": "La comparación de logs con una base de datos de firmas.",
+          "correcta": false,
+          "explicacion": "Eso es detección por firmas o enriquecimiento."
+        },
+        {
+          "texto": "El almacenamiento de logs en orden de llegada.",
+          "correcta": false,
+          "explicacion": "Eso es indexación o almacenamiento, no correlación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta el análisis de 'Flujo de Red' (NetFlow/IPFix) que no aporta la captura completa de paquetes (PCAP)?",
+      "respuestas": [
+        {
+          "texto": "Ofrece metadatos resumidos (quién, cuándo, cuánto) siendo mucho más ligero y barato de almacenar que el contenido completo.",
+          "correcta": true,
+          "explicacion": "PCAP guarda todo (payload), lo cual es costoso. NetFlow guarda la 'conversación', ideal para detectar volúmenes y exfiltración sin ver el contenido."
+        },
+        {
+          "texto": "Permite ver el contenido exacto de los archivos transferidos.",
+          "correcta": false,
+          "explicacion": "Eso lo hace el PCAP, no NetFlow."
+        },
+        {
+          "texto": "Analiza los procesos que se ejecutan en el servidor.",
+          "correcta": false,
+          "explicacion": "Eso lo hace el EDR o logs de sistema."
+        },
+        {
+          "texto": "Descifra el tráfico HTTPS automáticamente.",
+          "correcta": false,
+          "explicacion": "NetFlow no descifra; solo ve volúmenes y puertos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la fase de 'Evaluación y Decisión' (Triaje) en la clasificación de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Determinar si un evento es realmente un incidente, su tipo y activar el Playbook correspondiente.",
+          "correcta": true,
+          "explicacion": "Es el punto crítico donde la clasificación dicta la respuesta: qué protocolo seguir y qué recursos asignar."
+        },
+        {
+          "texto": "Restaurar los sistemas desde copias de seguridad.",
+          "correcta": false,
+          "explicacion": "Fase de Recuperación."
+        },
+        {
+          "texto": "Escribir el informe final para la auditoría.",
+          "correcta": false,
+          "explicacion": "Actividad Post-Incidente."
+        },
+        {
+          "texto": "Monitorizar la red en busca de anomalías.",
+          "correcta": false,
+          "explicacion": "Fase de Detección."
+        }
+      ]
+    },
+    {
+      "pregunta": "En aprendizaje automático (Machine Learning), ¿para qué es ideal el 'Aprendizaje Supervisado' en ciberseguridad?",
+      "respuestas": [
+        {
+          "texto": "Para clasificar amenazas conocidas basándose en grandes volúmenes de datos previamente etiquetados (ej. distinguir malware de archivos limpios).",
+          "correcta": true,
+          "explicacion": "Requiere 'etiquetas' previas (entrenamiento). Es muy bueno para clasificar lo que ya sabe reconocer, pero falla con ataques totalmente nuevos."
+        },
+        {
+          "texto": "Para detectar ataques Zero-Day nunca antes vistos sin conocimiento previo.",
+          "correcta": false,
+          "explicacion": "Para eso es mejor el Aprendizaje No Supervisado (clustering/anomalías)."
+        },
+        {
+          "texto": "Para agrupar datos sin saber qué son.",
+          "correcta": false,
+          "explicacion": "Eso es Clustering (No Supervisado)."
+        },
+        {
+          "texto": "Para automatizar la respuesta a incidentes mediante scripts.",
+          "correcta": false,
+          "explicacion": "Eso es SOAR, no necesariamente ML supervisado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por 'Shadow IT' y por qué es relevante para la monitorización?",
+      "respuestas": [
+        {
+          "texto": "Servicios y tecnologías contratados por empleados al margen del departamento de TI, creando una superficie de ataque no controlada.",
+          "correcta": true,
+          "explicacion": "Son puntos ciegos (ej. Trello público, Dropbox personal) que escapan a la seguridad corporativa pero contienen datos sensibles."
+        },
+        {
+          "texto": "El equipo de TI que trabaja en el turno de noche.",
+          "correcta": false,
+          "explicacion": "Interpretación literal incorrecta."
+        },
+        {
+          "texto": "La red oscura o Dark Web utilizada por hackers.",
+          "correcta": false,
+          "explicacion": "Shadow IT se refiere a tecnología interna no autorizada, no a la Dark Web."
+        },
+        {
+          "texto": "Una técnica de ofuscación de malware.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si clasificamos erróneamente un incidente de 'Ransomware' como 'Fallo de Hardware', ¿cuál es una consecuencia crítica en el ciclo de respuesta?",
+      "respuestas": [
+        {
+          "texto": "Se da al atacante 'tiempo de permanencia' (dwell time) libre para moverse lateralmente mientras el ticket se asigna incorrectamente a soporte físico.",
+          "correcta": true,
+          "explicacion": "El error de clasificación impide activar al SOC, dejando la puerta abierta a la expansión del ataque."
+        },
+        {
+          "texto": "El hardware se estropeará permanentemente.",
+          "correcta": false,
+          "explicacion": "El daño es lógico (cifrado), no físico, aunque la consecuencia operativa es grave."
+        },
+        {
+          "texto": "El usuario se enfadará por la lentitud del PC.",
+          "correcta": false,
+          "explicacion": "Es una consecuencia menor comparada con la brecha de seguridad."
+        },
+        {
+          "texto": "Aumentará artificialmente la métrica de ataques de malware.",
+          "correcta": false,
+          "explicacion": "Al revés, disminuirá artificialmente la métrica de malware y aumentará la de fallos hardware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia existe entre un 'Falso Positivo' y un 'Falso Negativo'?",
+      "respuestas": [
+        {
+          "texto": "Falso Positivo es una falsa alarma (ruido), Falso Negativo es un ataque real no detectado (peligro).",
+          "correcta": true,
+          "explicacion": "El falso positivo molesta al analista; el falso negativo compromete la seguridad de la empresa."
+        },
+        {
+          "texto": "Falso Positivo es cuando el ataque es real pero no importa, Falso Negativo es cuando importa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Falso Positivo es un error de software, Falso Negativo es un error humano.",
+          "correcta": false,
+          "explicacion": "Ambos son errores de detección del sistema/regla."
+        },
+        {
+          "texto": "Son términos estadísticos que no aplican a ciberseguridad.",
+          "correcta": false,
+          "explicacion": "Son fundamentales para medir la eficacia de la detección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal limitación de la 'Detección basada en Firma'?",
+      "respuestas": [
+        {
+          "texto": "Es incapaz de detectar ataques desconocidos (Zero-Day) o modificados, ya que busca coincidencias exactas.",
+          "correcta": true,
+          "explicacion": "Si el atacante cambia un solo bit, el hash cambia y la firma falla. Es un modelo reactivo."
+        },
+        {
+          "texto": "Genera demasiados falsos positivos.",
+          "correcta": false,
+          "explicacion": "Al contrario, suele tener pocos falsos positivos porque la coincidencia es exacta."
+        },
+        {
+          "texto": "Consume demasiados recursos de CPU.",
+          "correcta": false,
+          "explicacion": "Es muy eficiente y rápida comparada con la heurística."
+        },
+        {
+          "texto": "Requiere conexión a internet constante.",
+          "correcta": false,
+          "explicacion": "Puede funcionar con bases de datos locales offline."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega la 'Correlación de Umbral' (Thresholding) en la detección?",
+      "respuestas": [
+        {
+          "texto": "Detecta anomalías volumétricas, convirtiendo múltiples eventos individuales (ej. intentos de login fallidos) en una única alerta significativa.",
+          "correcta": true,
+          "explicacion": "Ayuda a identificar fuerza bruta o DoS, donde un solo evento no es indicativo, pero muchos en poco tiempo sí lo son."
+        },
+        {
+          "texto": "Detecta la secuencia lógica de pasos de un ataque.",
+          "correcta": false,
+          "explicacion": "Eso es correlación secuencial."
+        },
+        {
+          "texto": "Bloquea IPs basándose en su geolocalización.",
+          "correcta": false,
+          "explicacion": "Eso es filtrado o enriquecimiento GeoIP."
+        },
+        {
+          "texto": "Elimina logs duplicados para ahorrar espacio.",
+          "correcta": false,
+          "explicacion": "Eso es deduplicación o agregación."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de OSINT y Auditoría, ¿por qué es importante la distinción entre Surface Web, Deep Web y Dark Web?",
+      "respuestas": [
+        {
+          "texto": "Porque define la accesibilidad y las herramientas necesarias; la Deep Web no está indexada pero es accesible, mientras que la Dark Web requiere software específico (Tor).",
+          "correcta": true,
+          "explicacion": "Entender dónde buscar es clave. La mayoría de la información técnica útil está en la Deep Web (repositorios, foros), no solo en Google o la Dark Web."
+        },
+        {
+          "texto": "Porque es ilegal investigar en la Dark Web.",
+          "correcta": false,
+          "explicacion": "No es ilegal investigar, siempre que no se cometan delitos (compra de datos robados, etc.)."
+        },
+        {
+          "texto": "Porque la Surface Web no contiene información de inteligencia.",
+          "correcta": false,
+          "explicacion": "Falso, las redes sociales (Surface) son una fuente enorme de OSINT."
+        },
+        {
+          "texto": "Porque la Deep Web solo contiene contenido ilegal.",
+          "correcta": false,
+          "explicacion": "Falso, la Deep Web incluye bases de datos académicas, foros de registro, intranets legítimas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es XDR (Extended Detection and Response) y en qué se diferencia del EDR?",
+      "respuestas": [
+        {
+          "texto": "Es una evolución del EDR que integra nativamente telemetría de endpoint, red, nube y correo para una detección y respuesta unificada.",
+          "correcta": true,
+          "explicacion": "El EDR solo ve el endpoint. El XDR rompe los silos integrando múltiples dominios de seguridad en una sola plataforma."
+        },
+        {
+          "texto": "Es un antivirus más barato para pequeñas empresas.",
+          "correcta": false,
+          "explicacion": "Suele ser una solución más compleja y completa."
+        },
+        {
+          "texto": "Es una herramienta exclusiva para análisis de red.",
+          "correcta": false,
+          "explicacion": "Eso sería un N-DR (Network Detection and Response)."
+        },
+        {
+          "texto": "Es un servicio manual de consultoría.",
+          "correcta": false,
+          "explicacion": "Es una plataforma tecnológica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se busca detectar con el 'User Profiling' en un sistema UEBA?",
+      "respuestas": [
+        {
+          "texto": "Desviaciones en los hábitos individuales de un usuario (horarios, accesos) comparado con su propio histórico.",
+          "correcta": true,
+          "explicacion": "Establece una línea base personal. Si Juan nunca entra los sábados y hoy sí, es una anomalía de perfil."
+        },
+        {
+          "texto": "Si el usuario está usando contraseñas débiles.",
+          "correcta": false,
+          "explicacion": "Eso es auditoría de contraseñas."
+        },
+        {
+          "texto": "Si el usuario ha instalado juegos en el PC.",
+          "correcta": false,
+          "explicacion": "Eso es control de inventario/software."
+        },
+        {
+          "texto": "Si el usuario está contento con la empresa.",
+          "correcta": false,
+          "explicacion": "Eso es RRHH, no ciberseguridad (aunque puede relacionarse con Insider Threat)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función del 'Sellado de Tiempo' (Time Stamping) en la gestión de logs?",
+      "respuestas": [
+        {
+          "texto": "Garantizar la integridad cronológica de la evidencia, asegurando que sabemos exactamente cuándo ocurrió un evento mediante sincronización NTP segura.",
+          "correcta": true,
+          "explicacion": "Sin una marca de tiempo fiable y sincronizada, la reconstrucción forense (quién hizo qué antes que quién) es imposible o inválida legalmente."
+        },
+        {
+          "texto": "Hacer que los logs ocupen menos espacio.",
+          "correcta": false,
+          "explicacion": "Irrelevante para el espacio."
+        },
+        {
+          "texto": "Borrar los logs automáticamente después de cierto tiempo.",
+          "correcta": false,
+          "explicacion": "Eso es rotación/retención."
+        },
+        {
+          "texto": "Acelerar la búsqueda en la base de datos.",
+          "correcta": false,
+          "explicacion": "Ayuda a filtrar, pero su función es integridad y orden."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué taxonomía utiliza un enfoque basado en las '4 A's' (Actors, Actions, Assets, Attributes)?",
+      "respuestas": [
+        {
+          "texto": "VERIS",
+          "correcta": true,
+          "explicacion": "VERIS estructura la clasificación del incidente narrando la historia a través de estos cuatro pilares."
+        },
+        {
+          "texto": "ENISA",
+          "correcta": false,
+          "explicacion": "ENISA usa categorías jerárquicas simples."
+        },
+        {
+          "texto": "MITRE ATT&CK",
+          "correcta": false,
+          "explicacion": "Usa Tácticas y Técnicas."
+        },
+        {
+          "texto": "NIST",
+          "correcta": false,
+          "explicacion": "Usa vectores de ataque e impacto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se considera la 'Detección de Anomalías' (Heurística) como un método proactivo?",
+      "respuestas": [
+        {
+          "texto": "Porque puede identificar ataques nunca antes vistos (Zero-Days) basándose en desviaciones del comportamiento normal, sin necesitar una firma previa.",
+          "correcta": true,
+          "explicacion": "No espera a que el proveedor de antivirus envíe una actualización; detecta la intención o la rareza de la acción en tiempo real."
+        },
+        {
+          "texto": "Porque elimina los falsos positivos automáticamente.",
+          "correcta": false,
+          "explicacion": "Al contrario, suele generar más falsos positivos que las firmas."
+        },
+        {
+          "texto": "Porque bloquea todo el tráfico por defecto.",
+          "correcta": false,
+          "explicacion": "Eso sería una política de Whitelisting estricta, no detección de anomalías."
+        },
+        {
+          "texto": "Porque es más barata de implementar.",
+          "correcta": false,
+          "explicacion": "Suele ser más compleja y costosa."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de OSINT, ¿qué se puede detectar monitorizando sitios de 'Paste' (como Pastebin)?",
+      "respuestas": [
+        {
+          "texto": "Volcados de bases de datos, listas de correos hackeados, configuraciones y pruebas de concepto de exploits.",
+          "correcta": true,
+          "explicacion": "Los atacantes usan estos sitios para compartir rápidamente datos robados o código malicioso de forma anónima."
+        },
+        {
+          "texto": "La ubicación física de los servidores de la empresa.",
+          "correcta": false,
+          "explicacion": "Difícilmente, a menos que se filtre en un log."
+        },
+        {
+          "texto": "El tráfico de red en tiempo real.",
+          "correcta": false,
+          "explicacion": "Pastebin es almacenamiento de texto estático, no un monitor de red."
+        },
+        {
+          "texto": "Virus en archivos adjuntos de correo.",
+          "correcta": false,
+          "explicacion": "Pastebin es texto plano, no suele usarse para adjuntos de correo directos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Cadena de Custodia' en el manejo de logs?",
+      "respuestas": [
+        {
+          "texto": "El conjunto de procedimientos que aseguran la trazabilidad, integridad y validez legal de la evidencia desde su recolección hasta su presentación.",
+          "correcta": true,
+          "explicacion": "Incluye hashing, sellado de tiempo y control de acceso (Audit trail) para probar que el log no ha sido manipulado."
+        },
+        {
+          "texto": "La conexión física de cables entre servidores.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La jerarquía de mando en el SOC.",
+          "correcta": false,
+          "explicacion": "Eso es cadena de mando."
+        },
+        {
+          "texto": "La secuencia de ataques de un hacker.",
+          "correcta": false,
+          "explicacion": "Eso es Kill Chain."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un uso principal del framework MITRE ATT&CK para un equipo de Defensa (Blue Team)?",
+      "respuestas": [
+        {
+          "texto": "Ingeniería de Detección y Threat Hunting: crear reglas específicas para detectar técnicas concretas y buscar proactivamente amenazas.",
+          "correcta": true,
+          "explicacion": "Permite mapear las defensas contra técnicas reales, identificando huecos en la cobertura."
+        },
+        {
+          "texto": "Reportar incidentes a la policía.",
+          "correcta": false,
+          "explicacion": "No es una herramienta de reporte legal."
+        },
+        {
+          "texto": "Calcular el coste financiero de un incidente.",
+          "correcta": false,
+          "explicacion": "No tiene métricas financieras (VERIS es mejor para eso)."
+        },
+        {
+          "texto": "Gestionar las contraseñas de los usuarios.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que una taxonomía como ENISA sea 'operativa y de coordinación'?",
+      "respuestas": [
+        {
+          "texto": "Que prioriza la simplicidad y el lenguaje común para facilitar la respuesta rápida y la comunicación entre equipos distintos (CSIRTs).",
+          "correcta": true,
+          "explicacion": "No busca el detalle forense extremo, sino que todos entiendan rápidamente qué pasa para coordinarse."
+        },
+        {
+          "texto": "Que solo sirve para coordinar ataques.",
+          "correcta": false,
+          "explicacion": "Es defensiva."
+        },
+        {
+          "texto": "Que requiere operaciones matemáticas complejas.",
+          "correcta": false,
+          "explicacion": "Se refiere a operaciones de seguridad, no matemáticas."
+        },
+        {
+          "texto": "Que es obligatoria para operar en bolsa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja tiene el uso de 'Honeytokens' o arquitecturas de engaño?",
+      "respuestas": [
+        {
+          "texto": "Actúan como trampas de alerta temprana; cualquier interacción con ellos es, por definición, una anomalía sospechosa.",
+          "correcta": true,
+          "explicacion": "Son recursos falsos (archivos, usuarios) que ningún usuario legítimo debería tocar. Si se tocan, hay un intruso."
+        },
+        {
+          "texto": "Aceleran el tráfico de red.",
+          "correcta": false,
+          "explicacion": "No afectan al rendimiento."
+        },
+        {
+          "texto": "Desencriptan el ransomware.",
+          "correcta": false,
+          "explicacion": "No tienen esa capacidad."
+        },
+        {
+          "texto": "Sustituyen al firewall.",
+          "correcta": false,
+          "explicacion": "Son complementarios, sensores internos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'MTTD' (Mean Time to Detect) y por qué es importante segmentarlo por clasificación?",
+      "respuestas": [
+        {
+          "texto": "Es el tiempo medio que se tarda en detectar un incidente. Segmentarlo permite ver si somos más rápidos detectando ciertos tipos (ej. Malware) que otros (ej. Intrusiones).",
+          "correcta": true,
+          "explicacion": "Es un KPI crítico de eficiencia del SOC. Un MTTD alto implica mayor riesgo y tiempo de exposición."
+        },
+        {
+          "texto": "Es el tiempo medio de reparación del hardware.",
+          "correcta": false,
+          "explicacion": "Eso sería MTTR (Repair) en mantenimiento físico."
+        },
+        {
+          "texto": "Es el tiempo máximo de duración de un ataque.",
+          "correcta": false,
+          "explicacion": "Mide nuestra velocidad de reacción, no la duración del ataque."
+        },
+        {
+          "texto": "Es el tiempo de descanso de los analistas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la monitorización de red, ¿qué es un 'Chokepoint'?",
+      "respuestas": [
+        {
+          "texto": "Un punto crítico de la red por donde pasa obligatoriamente el tráfico, ideal para colocar sensores (IDS/IPS) y maximizar la visibilidad.",
+          "correcta": true,
+          "explicacion": "Identificar estos cuellos de botella asegura que inspeccionamos el tráfico más relevante sin tener que monitorizar cada cable."
+        },
+        {
+          "texto": "Un ataque de denegación de servicio que ahoga la red.",
+          "correcta": false,
+          "explicacion": "Eso es congestión o DoS."
+        },
+        {
+          "texto": "Un fallo en el cableado.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un punto donde se pierden paquetes por mala configuración.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre 'Aprendizaje Supervisado' y 'Aprendizaje No Supervisado' en ML para seguridad?",
+      "respuestas": [
+        {
+          "texto": "El supervisado entrena con datos etiquetados (conoce la respuesta), el no supervisado busca patrones/grupos en datos sin etiquetar (desconoce la respuesta).",
+          "correcta": true,
+          "explicacion": "Supervisado = Clasificación (Malware/No Malware). No Supervisado = Detección de Anomalías (Outliers)."
+        },
+        {
+          "texto": "El supervisado requiere un humano mirando la pantalla 24/7.",
+          "correcta": false,
+          "explicacion": "Se refiere al entrenamiento del algoritmo, no a la vigilancia humana."
+        },
+        {
+          "texto": "El no supervisado es más preciso siempre.",
+          "correcta": false,
+          "explicacion": "Depende del caso de uso; el no supervisado suele tener más falsos positivos."
+        },
+        {
+          "texto": "El supervisado solo funciona para texto.",
+          "correcta": false,
+          "explicacion": "Funciona para cualquier dato etiquetado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Explicabilidad' en los sistemas de IA/ML y por qué es un reto en el SOC?",
+      "respuestas": [
+        {
+          "texto": "La capacidad de entender por qué el modelo tomó una decisión. Si el sistema es una 'caja negra', el analista no puede validar si la alerta es real o un error.",
+          "correcta": true,
+          "explicacion": "A diferencia de una regla simple (if X then Y), el ML usa matemáticas complejas. Sin explicabilidad, se pierde confianza en la herramienta."
+        },
+        {
+          "texto": "La capacidad del analista de explicar el incidente al directivo.",
+          "correcta": false,
+          "explicacion": "Importante, pero en este contexto se refiere a la IA (XAI)."
+        },
+        {
+          "texto": "La documentación del código fuente del malware.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La traducción de logs a lenguaje natural.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica que la clasificación de incidentes 'dispara obligaciones legales' (como en GDPR)?",
+      "respuestas": [
+        {
+          "texto": "Si un incidente se clasifica como 'Brecha de Datos Personales', se activa legalmente un plazo (ej. 72h) para notificar a las autoridades.",
+          "correcta": true,
+          "explicacion": "Una mala clasificación puede llevar a no notificar a tiempo, resultando en sanciones graves por incumplimiento normativo."
+        },
+        {
+          "texto": "Que solo los abogados pueden clasificar incidentes.",
+          "correcta": false,
+          "explicacion": "La clasificación es técnica/operativa, pero con consecuencias legales."
+        },
+        {
+          "texto": "Que todos los incidentes deben publicarse en el periódico.",
+          "correcta": false,
+          "explicacion": "Solo se notifican a la autoridad y afectados si procede, no necesariamente prensa."
+        },
+        {
+          "texto": "Que el SOC debe ser dirigido por un juez.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        }
+      ]
+    }
+  ]
+}

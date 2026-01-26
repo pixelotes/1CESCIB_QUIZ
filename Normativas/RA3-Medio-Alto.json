@@ -1,0 +1,505 @@
+{
+  "tema": "UD3 Responsabilidad penal y Compliance",
+  "preguntas": [
+    {
+      "pregunta": "¿En qué momento se introdujo por primera vez en España la responsabilidad penal de las personas jurídicas (empresas)?",
+      "respuestas": [
+        {
+          "texto": "Con la aprobación del primer Código Penal en 1822.",
+          "correcta": false,
+          "explicacion": "En 1822 se aprobó el primer código, pero las personas jurídicas estaban exentas de responsabilidad penal hasta mucho después."
+        },
+        {
+          "texto": "Con la reforma del Código Penal de diciembre de 2010.",
+          "correcta": true,
+          "explicacion": "El documento indica que fue en la reforma de 2010 cuando se dispuso por primera vez la posible atribución de responsabilidad penal a las personas jurídicas."
+        },
+        {
+          "texto": "Siempre ha existido en el derecho penal español.",
+          "correcta": false,
+          "explicacion": "Históricamente, solo las personas físicas podían ser condenadas."
+        },
+        {
+          "texto": "Con la Ley Orgánica 1/2015.",
+          "correcta": false,
+          "explicacion": "La Ley 1/2015 estableció un nuevo marco y amplió la reforma, pero la introducción inicial fue en 2010."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para que una empresa sea responsable penalmente de un delito cometido por un empleado, ¿qué condición debe cumplirse según el documento?",
+      "respuestas": [
+        {
+          "texto": "El delito debe haberse cometido en beneficio propio del empleado.",
+          "correcta": false,
+          "explicacion": "El documento especifica explícitamente que no aplica si es en beneficio propio del empleado."
+        },
+        {
+          "texto": "El delito debe haberse cometido fuera del horario laboral.",
+          "correcta": false,
+          "explicacion": "El horario no es el factor determinante, sino el beneficio obtenido."
+        },
+        {
+          "texto": "El delito debe haberse cometido en beneficio de la persona jurídica.",
+          "correcta": true,
+          "explicacion": "La responsabilidad penal se atribuye cuando el delito cometido por el empleado reporta un beneficio, directo o indirecto, a la empresa."
+        },
+        {
+          "texto": "El empleado debe ser un administrador o directivo.",
+          "correcta": false,
+          "explicacion": "También aplica a empleados si el delito beneficia a la empresa, aunque hay distinciones en el tipo de responsabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es uno de los pasos esenciales para un Plan de Prevención de Riesgos Penales mencionado en el texto?",
+      "respuestas": [
+        {
+          "texto": "Establecer un sistema disciplinario que sancione incumplimientos.",
+          "correcta": false,
+          "explicacion": "Este es un paso esencial mencionado (punto 5 en el documento)."
+        },
+        {
+          "texto": "Identificar actividades en las que puedan cometerse delitos.",
+          "correcta": false,
+          "explicacion": "Este es el primer paso mencionado para la prevención."
+        },
+        {
+          "texto": "Ocultar las evidencias digitales para evitar sanciones.",
+          "correcta": true,
+          "explicacion": "Ocultar evidencias es contrario al cumplimiento normativo y ético; el plan debe imponer la obligación de informar riesgos, no ocultarlos."
+        },
+        {
+          "texto": "Realizar verificación periódica del modelo.",
+          "correcta": false,
+          "explicacion": "La verificación y actualización del modelo es un paso necesario (punto 6 en el documento)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto del Compliance Penal, ¿cómo se definen las 'amenazas' dentro de la ecuación del riesgo?",
+      "respuestas": [
+        {
+          "texto": "Las amenazas son los delitos que pueden ocurrir.",
+          "correcta": true,
+          "explicacion": "El documento define el riesgo como probabilidad x consecuencias, donde las amenazas específicas en este ámbito son los delitos."
+        },
+        {
+          "texto": "Las amenazas son las multas económicas.",
+          "correcta": false,
+          "explicacion": "Las multas o sanciones se consideran las 'consecuencias' del riesgo, no la amenaza en sí."
+        },
+        {
+          "texto": "Las amenazas son los fallos de hardware.",
+          "correcta": false,
+          "explicacion": "Aunque es un riesgo operativo, en el contexto puramente penal, la amenaza es la comisión de un delito."
+        },
+        {
+          "texto": "Las amenazas son los empleados descontentos.",
+          "correcta": false,
+          "explicacion": "Los empleados pueden ser un vector, pero la amenaza definida en el modelo de Compliance Penal es el delito en sí mismo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de delito suele asociarse con los procesos de compras en una organización, según los ejemplos del documento?",
+      "respuestas": [
+        {
+          "texto": "Daños informáticos.",
+          "correcta": false,
+          "explicacion": "Los daños informáticos se asocian a procesos de servicios TIC."
+        },
+        {
+          "texto": "Soborno a funcionarios o autoridades.",
+          "correcta": true,
+          "explicacion": "El documento vincula explícitamente el soborno a funcionarios con los procesos de compras."
+        },
+        {
+          "texto": "Blanqueo de capitales.",
+          "correcta": false,
+          "explicacion": "El blanqueo se asocia más comúnmente a procesos de ventas o capitalización en los ejemplos dados."
+        },
+        {
+          "texto": "Delitos contra la propiedad intelectual.",
+          "correcta": false,
+          "explicacion": "Esto se vincula a fabricación, ingeniería o generación de contenidos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el artículo 264 del Código Penal citado, ¿qué acción se castiga como delito de daños informáticos?",
+      "respuestas": [
+        {
+          "texto": "El borrado accidental de datos propios.",
+          "correcta": false,
+          "explicacion": "Debe ser sin autorización y afectar a datos ajenos, además de no ser accidental (dolo)."
+        },
+        {
+          "texto": "El borrado o daño grave de datos o programas ajenos sin autorización.",
+          "correcta": true,
+          "explicacion": "El texto cita: 'El que por cualquier medio, sin autorización y de manera grave borrase [...] datos informáticos... ajenos'."
+        },
+        {
+          "texto": "El uso de redes sociales en horario laboral.",
+          "correcta": false,
+          "explicacion": "Esto puede ser una falta laboral, pero no constituye el delito de daños informáticos descrito."
+        },
+        {
+          "texto": "La instalación de software con licencia válida.",
+          "correcta": false,
+          "explicacion": "Esto es una práctica legal y correcta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es una consecuencia directa en materia de ciberseguridad (no solo legal) de utilizar software sin licencia?",
+      "respuestas": [
+        {
+          "texto": "Mejora el rendimiento de los equipos.",
+          "correcta": false,
+          "explicacion": "El software pirata no garantiza mejor rendimiento y suele ser inestable."
+        },
+        {
+          "texto": "Garantiza el soporte técnico del fabricante.",
+          "correcta": false,
+          "explicacion": "El software ilegal carece de garantía y soporte oficial."
+        },
+        {
+          "texto": "Puede contener malware que comprometa la seguridad de la organización.",
+          "correcta": true,
+          "explicacion": "El documento destaca que al instalar software ilegal puedes estar instalando malware, comprometiendo la seguridad."
+        },
+        {
+          "texto": "Reduce los costes sin ningún riesgo asociado.",
+          "correcta": false,
+          "explicacion": "Aunque reduce el coste de licencia, introduce riesgos legales y técnicos muy altos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué medida de control se sugiere para mitigar riesgos en pagos grandes a proveedores?",
+      "respuestas": [
+        {
+          "texto": "Realizar los pagos en efectivo para no dejar rastro.",
+          "correcta": false,
+          "explicacion": "Esto aumenta el riesgo de blanqueo y falta de trazabilidad."
+        },
+        {
+          "texto": "Segregación de funciones (firma mancomunada).",
+          "correcta": true,
+          "explicacion": "Se sugiere repartir responsabilidades, por ejemplo, requiriendo la firma de más de una persona para pagos grandes."
+        },
+        {
+          "texto": "Eliminar los procedimientos internos para agilizar.",
+          "correcta": false,
+          "explicacion": "Los procedimientos claros son un control necesario, no algo a eliminar."
+        },
+        {
+          "texto": "Utilizar un solo proveedor sin evaluarlo.",
+          "correcta": false,
+          "explicacion": "Se recomienda la homologación de proveedores y tener más de uno considerado seguro."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma establece los requisitos para un Sistema de Gestión de Compliance Penal?",
+      "respuestas": [
+        {
+          "texto": "ISO 9001",
+          "correcta": false,
+          "explicacion": "ISO 9001 es para gestión de calidad."
+        },
+        {
+          "texto": "UNE 19601",
+          "correcta": true,
+          "explicacion": "El documento identifica la UNE 19601 como la norma para sistemas de gestión de Compliance Penal certificables."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "ISO 27001 es para seguridad de la información."
+        },
+        {
+          "texto": "ISO 14001",
+          "correcta": false,
+          "explicacion": "ISO 14001 es para gestión ambiental."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la norma ISO 37001 (antisoborno), ¿qué significa la 'diligencia debida'?",
+      "respuestas": [
+        {
+          "texto": "Pagar los sobornos lo más rápido posible.",
+          "correcta": false,
+          "explicacion": "La norma busca prevenir el soborno, no facilitarlo."
+        },
+        {
+          "texto": "Ignorar los antecedentes de los socios comerciales.",
+          "correcta": false,
+          "explicacion": "Es justo lo contrario."
+        },
+        {
+          "texto": "Saber con quién estás tratando (terceros) para evitar contratar proveedores poco fiables.",
+          "correcta": true,
+          "explicacion": "La diligencia debida implica investigar y evaluar a terceros antes de establecer relaciones comerciales."
+        },
+        {
+          "texto": "Delegar toda la responsabilidad en los empleados sin supervisión.",
+          "correcta": false,
+          "explicacion": "La norma exige compromiso de la dirección y supervisión."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el marco de la gestión de riesgos penales, ¿qué delito específico asocia el documento directamente con los 'Procesos de contratación de personal'?",
+      "respuestas": [
+        {
+          "texto": "Estafa.",
+          "correcta": false,
+          "explicacion": "La estafa se vincula en el documento con los procesos de ventas, no con la contratación."
+        },
+        {
+          "texto": "Tráfico de influencias.",
+          "correcta": true,
+          "explicacion": "El documento identifica el tráfico de influencias como el riesgo principal en los procesos de contratación (ej. contratar a familiares de funcionarios para obtener favores)."
+        },
+        {
+          "texto": "Blanqueo de capitales.",
+          "correcta": false,
+          "explicacion": "El blanqueo de capitales se asocia a procesos de ventas y capitalización."
+        },
+        {
+          "texto": "Delitos contra la propiedad intelectual.",
+          "correcta": false,
+          "explicacion": "Estos se vinculan a procesos de fabricación, ingeniería o generación de contenidos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Circular 1/2016 de la Fiscalía General del Estado mencionada en el texto, ¿cuál es el valor jurídico crítico de tener implementado un modelo de prevención de delitos?",
+      "respuestas": [
+        {
+          "texto": "Garantiza automáticamente que la empresa nunca será investigada.",
+          "correcta": false,
+          "explicacion": "No evita la investigación, pero es clave para la defensa posterior."
+        },
+        {
+          "texto": "Podría ser considerado para atenuar o eximir la responsabilidad penal de la persona jurídica.",
+          "correcta": true,
+          "explicacion": "La circular establece que un modelo eficaz puede servir como eximente o atenuante de la pena ante un delito cometido en el seno de la empresa."
+        },
+        {
+          "texto": "Sustituye la responsabilidad penal de la empresa por una multa administrativa leve.",
+          "correcta": false,
+          "explicacion": "No cambia la naturaleza penal del proceso a administrativo."
+        },
+        {
+          "texto": "Transfiere toda la responsabilidad penal exclusivamente al empleado que cometió el delito.",
+          "correcta": false,
+          "explicacion": "La responsabilidad de la persona jurídica es independiente, aunque el modelo ayude a defenderla."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para mitigar específicamente el delito de 'Descubrimiento y revelación de secretos', ¿qué herramienta tecnológica de control recomienda explícitamente el documento?",
+      "respuestas": [
+        {
+          "texto": "Herramientas de DLP (Data Loss Prevention).",
+          "correcta": true,
+          "explicacion": "El texto cita textualmente la implementación de herramientas tecnológicas de DLP como un control específico para este delito."
+        },
+        {
+          "texto": "Antivirus de nueva generación.",
+          "correcta": false,
+          "explicacion": "Aunque es una medida de seguridad básica, el documento especifica DLP para evitar la fuga de secretos."
+        },
+        {
+          "texto": "Sistemas de alimentación ininterrumpida (SAI).",
+          "correcta": false,
+          "explicacion": "Los SAI garantizan la disponibilidad eléctrica, no la confidencialidad de los secretos."
+        },
+        {
+          "texto": "Firewall perimetral.",
+          "correcta": false,
+          "explicacion": "El firewall protege accesos externos, pero el DLP es la herramienta específica para controlar la salida de información sensible."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la ISO 37001, ¿qué implica el principio de 'Proporcionalidad' al implementar un sistema antisoborno?",
+      "respuestas": [
+        {
+          "texto": "Que las multas deben ser proporcionales al salario del empleado.",
+          "correcta": false,
+          "explicacion": "La proporcionalidad se refiere al diseño del sistema, no a las sanciones disciplinarias."
+        },
+        {
+          "texto": "Que todas las empresas deben aplicar idénticos controles independientemente de su tamaño.",
+          "correcta": false,
+          "explicacion": "Esto contradice el principio de proporcionalidad, que busca adaptación."
+        },
+        {
+          "texto": "Que las medidas deben adecuarse a los riesgos que enfrenta la empresa y a su tamaño.",
+          "correcta": true,
+          "explicacion": "No se exige lo mismo a una PyME local que a una multinacional; los controles deben escalar según el riesgo y la complejidad."
+        },
+        {
+          "texto": "Que el presupuesto de compliance debe ser proporcional a los beneficios netos.",
+          "correcta": false,
+          "explicacion": "El presupuesto es un recurso, pero el principio rector es la adecuación al riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes situaciones describe mejor un 'Conflicto de intereses' según los ejemplos de corrupción del documento?",
+      "respuestas": [
+        {
+          "texto": "Un empleado que roba material de oficina para uso personal.",
+          "correcta": false,
+          "explicacion": "Eso es hurto o apropiación indebida, no necesariamente un conflicto de intereses en la toma de decisiones."
+        },
+        {
+          "texto": "Un responsable político que es accionista de una empresa que participa en un concurso público que él adjudica.",
+          "correcta": true,
+          "explicacion": "El documento usa este ejemplo preciso: tener poder de decisión sobre algo que te beneficia económicamente de forma privada."
+        },
+        {
+          "texto": "Una empresa que no inscribe a sus trabajadores en la Seguridad Social.",
+          "correcta": false,
+          "explicacion": "El documento clasifica esto como 'Incumplimiento de leyes' (laborales/fiscales), no conflicto de intereses."
+        },
+        {
+          "texto": "El pago de una 'mordida' para acelerar un trámite.",
+          "correcta": false,
+          "explicacion": "Eso se define como 'Pago de sobornos', una categoría distinta al conflicto de intereses."
+        }
+      ]
+    },
+    {
+      "pregunta": "En relación con los delitos informáticos del Artículo 264, ¿qué factor agrava la pena de prisión de seis meses a tres años?",
+      "respuestas": [
+        {
+          "texto": "Que el delito se cometa utilizando una red WiFi pública.",
+          "correcta": false,
+          "explicacion": "El medio de conexión no es el agravante citado en el extracto."
+        },
+        {
+          "texto": "Que el resultado producido (daño, borrado, alteración) sea grave.",
+          "correcta": true,
+          "explicacion": "El artículo 264 condiciona la pena a que 'el resultado producido fuera grave'."
+        },
+        {
+          "texto": "Que el autor sea un administrador de sistemas.",
+          "correcta": false,
+          "explicacion": "Aunque la posición puede influir, el texto destaca la gravedad del resultado como condición del tipo penal."
+        },
+        {
+          "texto": "Que los datos afectados sean de carácter personal únicamente.",
+          "correcta": false,
+          "explicacion": "El artículo habla de datos informáticos o programas en general, la clave es la gravedad del daño."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juegan los 'Sistemas forensic' dentro de la intersección entre TIC y Compliance Penal según el documento?",
+      "respuestas": [
+        {
+          "texto": "Recabar evidencias formalmente válidas para ser expuestas ante un posible proceso judicial.",
+          "correcta": true,
+          "explicacion": "La tecnología forense permite asegurar la cadena de custodia y validez de la prueba digital en un juicio."
+        },
+        {
+          "texto": "Monitorizar la productividad de los empleados en tiempo real.",
+          "correcta": false,
+          "explicacion": "Eso es monitorización laboral, no análisis forense para procesos penales."
+        },
+        {
+          "texto": "Eliminar automáticamente virus y malware.",
+          "correcta": false,
+          "explicacion": "Esa es función del antivirus, no de los sistemas forenses."
+        },
+        {
+          "texto": "Realizar copias de seguridad automáticas en la nube.",
+          "correcta": false,
+          "explicacion": "El backup es prevención/recuperación; el forense es investigación post-incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación entre la responsabilidad penal de la persona jurídica y la de la persona física (autor material) según la Ley Orgánica 1/2015?",
+      "respuestas": [
+        {
+          "texto": "Son la misma responsabilidad; si se condena a uno, se condena al otro automáticamente.",
+          "correcta": false,
+          "explicacion": "Son responsabilidades distinguibles."
+        },
+        {
+          "texto": "Se distingue entre la responsabilidad individual del autor material y la responsabilidad de la empresa por el beneficio obtenido.",
+          "correcta": true,
+          "explicacion": "El documento aclara que se distinguen ambas: quien comete el acto y la entidad que se beneficia de él."
+        },
+        {
+          "texto": "La responsabilidad de la persona jurídica anula la de la persona física.",
+          "correcta": false,
+          "explicacion": "El autor material sigue siendo responsable de sus actos."
+        },
+        {
+          "texto": "Solo existe responsabilidad de la persona jurídica si el autor material es un directivo.",
+          "correcta": false,
+          "explicacion": "También aplica si el autor es un empleado bajo la autoridad de los administradores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece la norma UNE 19601 respecto a su integración con otros sistemas?",
+      "respuestas": [
+        {
+          "texto": "Es incompatible con normas ISO internacionales.",
+          "correcta": false,
+          "explicacion": "Al contrario, busca la integración."
+        },
+        {
+          "texto": "Incorpora buenas prácticas para integrarse con sistemas como ISO 19600 o ISO 37001.",
+          "correcta": true,
+          "explicacion": "Está diseñada bajo la estructura de alto nivel para convivir y complementar sistemas de gestión de compliance y antisoborno."
+        },
+        {
+          "texto": "Solo puede integrarse con el Reglamento General de Protección de Datos (GDPR).",
+          "correcta": false,
+          "explicacion": "Su estructura permite integración con múltiples sistemas de gestión, no solo GDPR."
+        },
+        {
+          "texto": "Sustituye a la norma ISO 9001 en temas de calidad.",
+          "correcta": false,
+          "explicacion": "Son ámbitos diferentes (Penal vs Calidad) que pueden coexistir."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de un ciberincidente, ¿a qué se refiere el documento con el 'daño por dos partes'?",
+      "respuestas": [
+        {
+          "texto": "Al daño en el hardware y al daño en el software.",
+          "correcta": false,
+          "explicacion": "Esta es una distinción técnica, no de impacto organizacional/legal."
+        },
+        {
+          "texto": "Al daño reputacional/económico del incidente Y la sanción impuesta por las autoridades.",
+          "correcta": true,
+          "explicacion": "El documento destaca que la organización sufre por el ataque en sí (pérdida de imagen, dinero) y además por la multa penal/administrativa que le puede caer."
+        },
+        {
+          "texto": "Al daño a la empresa y el daño al atacante.",
+          "correcta": false,
+          "explicacion": "El daño al atacante no es una preocupación del compliance penal corporativo."
+        },
+        {
+          "texto": "Al daño en los datos presentes y en los datos futuros.",
+          "correcta": false,
+          "explicacion": "Interpretación vaga que no corresponde al texto."
+        }
+      ]
+    }
+  ]
+}

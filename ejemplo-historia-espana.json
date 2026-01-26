@@ -1,0 +1,130 @@
+{
+  "tema": "Historia de España - Transición Democrática",
+  "preguntas": [
+    {
+      "pregunta": "¿En qué año se firmó la Constitución española actual?",
+      "respuestas": [
+        {
+          "texto": "1975",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1975 fue el año de la muerte de Franco y el inicio del reinado de Juan Carlos I, pero la Constitución se aprobó después."
+        },
+        {
+          "texto": "1978",
+          "correcta": true,
+          "explicacion": "¡Correcto! La Constitución española se aprobó en referéndum el 6 de diciembre de 1978 y entró en vigor el 29 de diciembre del mismo año."
+        },
+        {
+          "texto": "1981",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1981 fue el año del intento de golpe de Estado del 23-F, tres años después de la aprobación de la Constitución."
+        },
+        {
+          "texto": "1982",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1982 fue cuando el PSOE ganó las elecciones generales con mayoría absoluta, liderado por Felipe González."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién fue el primer presidente del Gobierno de la democracia?",
+      "respuestas": [
+        {
+          "texto": "Adolfo Suárez",
+          "correcta": true,
+          "explicacion": "¡Correcto! Adolfo Suárez fue nombrado presidente del Gobierno por el Rey en 1976 y fue el artífice de la Transición democrática."
+        },
+        {
+          "texto": "Felipe González",
+          "correcta": false,
+          "explicacion": "Incorrecto. Felipe González fue presidente del Gobierno desde 1982 hasta 1996, pero no fue el primero de la democracia."
+        },
+        {
+          "texto": "Santiago Carrillo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Santiago Carrillo fue el líder del Partido Comunista de España durante la Transición, pero nunca fue presidente del Gobierno."
+        },
+        {
+          "texto": "Manuel Fraga",
+          "correcta": false,
+          "explicacion": "Incorrecto. Manuel Fraga fue ministro durante el franquismo y fundó Alianza Popular, pero nunca llegó a ser presidente del Gobierno."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué nombre recibió el intento de golpe de Estado del 23 de febrero de 1981?",
+      "respuestas": [
+        {
+          "texto": "La Sanjurjada",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Sanjurjada fue un intento de golpe de Estado en 1932 durante la Segunda República, liderado por el General Sanjurjo."
+        },
+        {
+          "texto": "El Tejerazo o 23-F",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se conoce como el Tejerazo (por el teniente coronel Tejero) o simplemente 23-F. El Rey Juan Carlos I fue decisivo para frenar el golpe."
+        },
+        {
+          "texto": "La Gloriosa",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Gloriosa fue la Revolución de 1868 que destronó a Isabel II, no tiene relación con los eventos de 1981."
+        },
+        {
+          "texto": "El Pronunciamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque 'pronunciamiento' es un término general para golpes militares en España, el de 1981 tiene nombres específicos: Tejerazo o 23-F."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué acuerdo político de 1977 fue fundamental para la Transición?",
+      "respuestas": [
+        {
+          "texto": "El Pacto de La Moncloa",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los Pactos de la Moncloa fueron firmados en octubre de 1977 por los principales partidos políticos para estabilizar la economía y consolidar la democracia."
+        },
+        {
+          "texto": "El Pacto de San Sebastián",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Pacto de San Sebastián fue un acuerdo de 1930 entre republicanos y nacionalistas para derrocar la monarquía de Alfonso XIII."
+        },
+        {
+          "texto": "El Pacto del Tinell",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Pacto del Tinell fue un acuerdo electoral catalán de 2003 entre partidos de izquierda y nacionalistas para gobernar en Cataluña."
+        },
+        {
+          "texto": "El Tratado de Roma",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Tratado de Roma de 1957 creó la Comunidad Económica Europea, pero no está relacionado con los acuerdos de la Transición española."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo ingresó España en la Comunidad Económica Europea (CEE)?",
+      "respuestas": [
+        {
+          "texto": "1978",
+          "correcta": false,
+          "explicacion": "Incorrecto. En 1978 se aprobó la Constitución española, pero el ingreso en la CEE llegaría años después."
+        },
+        {
+          "texto": "1982",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1982 fue el año de las elecciones que dieron la victoria al PSOE, pero España aún no había ingresado en la CEE."
+        },
+        {
+          "texto": "1986",
+          "correcta": true,
+          "explicacion": "¡Correcto! España ingresó en la CEE el 1 de enero de 1986, junto con Portugal, durante el gobierno de Felipe González."
+        },
+        {
+          "texto": "1992",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1992 fue un año importante para España (Olimpiadas de Barcelona, Expo de Sevilla), pero ya era miembro de la CEE desde 1986."
+        }
+      ]
+    }
+  ]
+}

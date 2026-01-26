@@ -1,0 +1,1255 @@
+{
+  "tema": "Auditoría, PDSI, SGSI y Gestión de Riesgos",
+  "preguntas": [
+    {
+      "pregunta": "En el contexto de la seguridad informática, ¿cuál es el objetivo principal de una auditoría?",
+      "respuestas": [
+        {
+          "texto": "Determinar si las medidas de seguridad son adecuadas, eficaces y cumplen con las normas.",
+          "correcta": true,
+          "explicacion": "El objetivo principal es evaluar, examinar y verificar el estado de los sistemas para asegurar su eficacia y cumplimiento."
+        },
+        {
+          "texto": "Instalar el software antivirus más reciente en todos los equipos de la organización.",
+          "correcta": false,
+          "explicacion": "La instalación de software es una medida de seguridad o mantenimiento, no el objetivo de evaluación y verificación de la auditoría."
+        },
+        {
+          "texto": "Desarrollar aplicaciones móviles seguras para los clientes.",
+          "correcta": false,
+          "explicacion": "El desarrollo de aplicaciones es un proceso de ingeniería, mientras que la auditoría revisa y valida los controles de esos sistemas."
+        },
+        {
+          "texto": "Eliminar todos los riesgos operativos de la empresa.",
+          "correcta": false,
+          "explicacion": "El objetivo de la auditoría es evaluar controles y proponer mejoras, no eliminar riesgos, lo cual es imposible."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia entre una auditoría de Caja Blanca y una de Caja Negra?",
+      "respuestas": [
+        {
+          "texto": "La Caja Blanca implica conocimiento total del sistema, mientras que la Caja Negra no tiene conocimiento previo.",
+          "correcta": true,
+          "explicacion": "La Caja Blanca permite un análisis exhaustivo con información total (código, usuarios), mientras que la Caja Negra simula un ataque externo sin información previa."
+        },
+        {
+          "texto": "La Caja Negra se realiza internamente y la Caja Blanca externamente.",
+          "correcta": false,
+          "explicacion": "La clasificación depende del nivel de información del auditor, no de quién realiza la auditoría."
+        },
+        {
+          "texto": "La Caja Blanca solo revisa hardware y la Caja Negra solo software.",
+          "correcta": false,
+          "explicacion": "Ambas pueden revisar diversos aspectos técnicos; la diferencia radica en la información disponible para el auditor."
+        },
+        {
+          "texto": "La Caja Negra es más detallada porque tiene acceso al código fuente.",
+          "correcta": false,
+          "explicacion": "Es al revés; la Caja Blanca es la que tiene acceso al código y arquitectura para un análisis detallado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define mejor a un Plan Director de Seguridad Informática (PDSI)?",
+      "respuestas": [
+        {
+          "texto": "Un documento estratégico que define iniciativas y proyectos a medio-largo plazo.",
+          "correcta": true,
+          "explicacion": "El PDSI es una hoja de ruta estratégica que alinea la seguridad con los objetivos del negocio y planifica proyectos a futuro."
+        },
+        {
+          "texto": "Un conjunto de procedimientos diarios para la gestión de incidentes.",
+          "correcta": false,
+          "explicacion": "Eso describe más bien la parte operativa de un SGSI, mientras que el PDSI es una planificación estratégica de proyectos."
+        },
+        {
+          "texto": "Una auditoría técnica de los cortafuegos y antivirus.",
+          "correcta": false,
+          "explicacion": "El análisis técnico es solo una parte de la fase de análisis del PDSI, no el plan en sí mismo."
+        },
+        {
+          "texto": "La certificación oficial ISO 27001.",
+          "correcta": false,
+          "explicacion": "El PDSI puede ayudar a lograr una certificación, pero es un plan de proyectos, no la certificación en sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la norma ISO 27001, ¿qué fase del ciclo PDCA corresponde a la Auditoría Interna?",
+      "respuestas": [
+        {
+          "texto": "Check (Verificar)",
+          "correcta": true,
+          "explicacion": "La auditoría interna entra en la fase 'Check' para verificar de forma objetiva que el SGSI cumple y es eficaz."
+        },
+        {
+          "texto": "Plan (Planificar)",
+          "correcta": false,
+          "explicacion": "La fase Plan se dedica a definir políticas y analizar riesgos, no a auditar."
+        },
+        {
+          "texto": "Do (Hacer)",
+          "correcta": false,
+          "explicacion": "La fase Do se refiere a la implementación de controles, no a su verificación."
+        },
+        {
+          "texto": "Act (Actuar)",
+          "correcta": false,
+          "explicacion": "La fase Act se centra en tomar acciones correctivas basadas en los resultados de la auditoría."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación fundamental entre Magerit y la norma ISO 27001?",
+      "respuestas": [
+        {
+          "texto": "Magerit es la metodología ('CÓMO') para realizar el análisis de riesgos exigido por la ISO 27001 ('QUÉ').",
+          "correcta": true,
+          "explicacion": "ISO 27001 exige un análisis de riesgos (Cláusula 6.1) y Magerit proporciona la metodología para realizarlo."
+        },
+        {
+          "texto": "Magerit es una norma certificable que sustituye a la ISO 27001 en España.",
+          "correcta": false,
+          "explicacion": "Magerit no es una norma certificable, es una metodología de análisis; ISO 27001 es la norma certificable."
+        },
+        {
+          "texto": "ISO 27001 detalla cómo implementar controles técnicos y Magerit define los requisitos legales.",
+          "correcta": false,
+          "explicacion": "ISO 27002 detalla los controles, e ISO 27001 los requisitos. Magerit se enfoca en el análisis de riesgos."
+        },
+        {
+          "texto": "Son documentos contradictorios y no deben usarse juntos.",
+          "correcta": false,
+          "explicacion": "Al contrario, se complementan: Magerit ayuda a cumplir los requisitos de análisis de riesgos de la ISO 27001."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de riesgos, ¿cómo se calcula el nivel de riesgo?",
+      "respuestas": [
+        {
+          "texto": "Probabilidad x Impacto",
+          "correcta": true,
+          "explicacion": "El riesgo se calcula multiplicando la probabilidad de ocurrencia por el impacto (criticidad del activo)."
+        },
+        {
+          "texto": "Amenaza + Vulnerabilidad",
+          "correcta": false,
+          "explicacion": "Amenaza y vulnerabilidad son componentes del escenario de riesgo, pero el cálculo cuantitativo o cualitativo suele ser P x I."
+        },
+        {
+          "texto": "Coste del control - Valor del activo",
+          "correcta": false,
+          "explicacion": "Esto se relacionaría con el retorno de inversión de seguridad, no con el nivel de riesgo inherente."
+        },
+        {
+          "texto": "Impacto / Probabilidad",
+          "correcta": false,
+          "explicacion": "La fórmula estándar es una multiplicación, no una división."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Riesgo Residual'?",
+      "respuestas": [
+        {
+          "texto": "El riesgo que permanece después de haber implantado los controles o salvaguardas.",
+          "correcta": true,
+          "explicacion": "El riesgo residual indica el grado de exposición del activo a las amenazas después de aplicar controles."
+        },
+        {
+          "texto": "El riesgo al que está expuesto un activo 'por defecto' antes de aplicar controles.",
+          "correcta": false,
+          "explicacion": "Ese es el concepto de 'Riesgo Intrínseco'."
+        },
+        {
+          "texto": "El riesgo transferido a una compañía de seguros.",
+          "correcta": false,
+          "explicacion": "Transferir es una estrategia de tratamiento, pero el riesgo residual es lo que queda en la organización tras mitigar."
+        },
+        {
+          "texto": "El riesgo que se decide eliminar por completo.",
+          "correcta": false,
+          "explicacion": "El riesgo residual es lo que 'sobra' o queda, no lo que se elimina."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué función cumplen los 'Quick Wins' en la priorización de proyectos de un PDSI?",
+      "respuestas": [
+        {
+          "texto": "Son iniciativas de poco esfuerzo y coste que producen mejoras sustanciales en seguridad.",
+          "correcta": true,
+          "explicacion": "Se agrupan así los proyectos cuya consecución requiere poco esfuerzo pero genera un impacto positivo rápido."
+        },
+        {
+          "texto": "Son los proyectos más costosos y de largo plazo.",
+          "correcta": false,
+          "explicacion": "Al contrario, se caracterizan por requerir poco esfuerzo y dar resultados rápidos, no a largo plazo."
+        },
+        {
+          "texto": "Son auditorías sorpresa realizadas por la dirección.",
+          "correcta": false,
+          "explicacion": "Los Quick Wins son proyectos o iniciativas de mejora, no un tipo de auditoría."
+        },
+        {
+          "texto": "Son riesgos aceptados por la organización.",
+          "correcta": false,
+          "explicacion": "Son acciones de mejora (proyectos), no riesgos pasivos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia principal existe entre ISO 27001 e ISO 27002?",
+      "respuestas": [
+        {
+          "texto": "La ISO 27001 contiene requisitos certificables, mientras que la ISO 27002 es una guía de buenas prácticas.",
+          "correcta": true,
+          "explicacion": "ISO 27001 establece el 'qué' y es certificable; ISO 27002 es el 'cómo' (guía de implementación) y no es certificable."
+        },
+        {
+          "texto": "La ISO 27001 es para empresas grandes y la ISO 27002 para pequeñas.",
+          "correcta": false,
+          "explicacion": "Ambas normas son aplicables a organizaciones de cualquier tamaño; su diferencia es su propósito (requisitos vs. guía)."
+        },
+        {
+          "texto": "La ISO 27001 es obligatoria por ley y la ISO 27002 es voluntaria.",
+          "correcta": false,
+          "explicacion": "La certificación ISO 27001 es voluntaria (salvo exigencia contractual), no una ley universal."
+        },
+        {
+          "texto": "La ISO 27001 es el vocabulario y la ISO 27002 los requisitos.",
+          "correcta": false,
+          "explicacion": "El vocabulario está en la ISO 27000. La 27001 son los requisitos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué rol juega la 'Declaración de Aplicabilidad' (SOA) en un PDSI o SGSI?",
+      "respuestas": [
+        {
+          "texto": "Es un documento que lista los controles de seguridad que aplican a la organización y su estado de implementación.",
+          "correcta": true,
+          "explicacion": "También llamado 'Documento de Selección de Controles', detalla qué medidas se aplican y su grado de madurez."
+        },
+        {
+          "texto": "Es el contrato firmado con los auditores externos.",
+          "correcta": false,
+          "explicacion": "El SOA es un documento interno de gestión de controles, no un contrato comercial."
+        },
+        {
+          "texto": "Es el manual técnico de configuración de los firewalls.",
+          "correcta": false,
+          "explicacion": "El SOA es de gestión y cumplimiento normativo, no un manual técnico específico de un dispositivo."
+        },
+        {
+          "texto": "Es la política que define las vacaciones de los empleados de TI.",
+          "correcta": false,
+          "explicacion": "El SOA se refiere a controles de seguridad de la información (ISO 27001 Anexo A), no a recursos humanos generales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo de la fase de 'Planificación' (Plan) en el ciclo PDCA de un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Definir el alcance, analizar riesgos y elaborar la política de seguridad.",
+          "correcta": true,
+          "explicacion": "En esta fase se establecen los cimientos: alcance, objetivos, análisis de riesgos y selección de controles."
+        },
+        {
+          "texto": "Implantar los controles de seguridad técnicos y organizativos.",
+          "correcta": false,
+          "explicacion": "La implantación corresponde a la fase 'Do' (Hacer)."
+        },
+        {
+          "texto": "Realizar auditorías internas para verificar el cumplimiento.",
+          "correcta": false,
+          "explicacion": "Las auditorías corresponden a la fase 'Check' (Verificar)."
+        },
+        {
+          "texto": "Aplicar acciones correctivas ante no conformidades.",
+          "correcta": false,
+          "explicacion": "Las acciones correctivas son parte de la fase 'Act' (Actuar)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una auditoría, ¿qué se entiende por 'Análisis de Brechas' (Gap Analysis)?",
+      "respuestas": [
+        {
+          "texto": "La comparación entre la situación actual y las exigencias de estándares o buenas prácticas.",
+          "correcta": true,
+          "explicacion": "Consiste en identificar la distancia entre lo que existe (situación actual) y lo que debería existir (nivel deseado/norma)."
+        },
+        {
+          "texto": "El análisis de agujeros físicos en la sala de servidores.",
+          "correcta": false,
+          "explicacion": "Se refiere a brechas de cumplimiento o control, no necesariamente a agujeros físicos."
+        },
+        {
+          "texto": "La revisión de los logs del firewall únicamente.",
+          "correcta": false,
+          "explicacion": "El análisis de brechas es una comparación estratégica o de cumplimiento, no solo una revisión técnica de logs."
+        },
+        {
+          "texto": "El cálculo de pérdidas financieras tras un ataque.",
+          "correcta": false,
+          "explicacion": "Eso sería un análisis de impacto post-incidente, no un Gap Analysis de cumplimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la responsabilidad de la Alta Dirección en un PDSI?",
+      "respuestas": [
+        {
+          "texto": "Aprobar el plan y garantizar que esté alineado con la estrategia y objetivos del negocio.",
+          "correcta": true,
+          "explicacion": "El éxito depende del compromiso directivo; deben aprobar el plan y asegurar recursos y alineación estratégica."
+        },
+        {
+          "texto": "Instalar los parches de seguridad en los servidores.",
+          "correcta": false,
+          "explicacion": "Esa es una tarea técnica del departamento de TI, no de la Alta Dirección."
+        },
+        {
+          "texto": "Redactar el código de las aplicaciones internas.",
+          "correcta": false,
+          "explicacion": "La dirección se encarga del gobierno y estrategia, no del desarrollo de software."
+        },
+        {
+          "texto": "Realizar personalmente las pruebas de penetración.",
+          "correcta": false,
+          "explicacion": "Las pruebas técnicas las realizan auditores o técnicos especializados, no la dirección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué elementos componen la tríada CIA (o CID en español) que protege un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad, Integridad y Disponibilidad.",
+          "correcta": true,
+          "explicacion": "Son los principios rectores de la seguridad de la información."
+        },
+        {
+          "texto": "Control, Inspección y Auditoría.",
+          "correcta": false,
+          "explicacion": "Son actividades de gestión, no los atributos de la información a proteger."
+        },
+        {
+          "texto": "Coste, Impacto y Análisis.",
+          "correcta": false,
+          "explicacion": "Son términos financieros o de riesgo, no la tríada de seguridad de la información."
+        },
+        {
+          "texto": "Ciberseguridad, Informática y Datos.",
+          "correcta": false,
+          "explicacion": "Son términos generales del sector, no los pilares de protección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste la estrategia de 'Transferir' el riesgo?",
+      "respuestas": [
+        {
+          "texto": "Pasar el riesgo a un tercero, por ejemplo, contratando un seguro.",
+          "correcta": true,
+          "explicacion": "Implica mover la responsabilidad financiera o de gestión a otra entidad (seguros, proveedores)."
+        },
+        {
+          "texto": "Aplicar controles técnicos para reducir la probabilidad.",
+          "correcta": false,
+          "explicacion": "Eso es 'Mitigar' el riesgo."
+        },
+        {
+          "texto": "Eliminar el proceso que causa el riesgo.",
+          "correcta": false,
+          "explicacion": "Eso es 'Eliminar' el riesgo."
+        },
+        {
+          "texto": "Aceptar formalmente que el riesgo puede ocurrir.",
+          "correcta": false,
+          "explicacion": "Eso es 'Asumir' o 'Aceptar' el riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la auditoría forense?",
+      "respuestas": [
+        {
+          "texto": "La que se realiza tras un incidente para analizar evidencias y determinar causas y responsables.",
+          "correcta": true,
+          "explicacion": "Se enfoca en el análisis post-incidente de evidencias digitales para determinar alcance y autoría."
+        },
+        {
+          "texto": "La revisión anual de las cuentas financieras de la empresa.",
+          "correcta": false,
+          "explicacion": "Esa es una auditoría financiera, no informática forense."
+        },
+        {
+          "texto": "Una simulación de ataque de ingeniería social.",
+          "correcta": false,
+          "explicacion": "La ingeniería social es un tipo de auditoría preventiva, la forense es reactiva tras un incidente."
+        },
+        {
+          "texto": "La auditoría de cumplimiento del RGPD.",
+          "correcta": false,
+          "explicacion": "Esa es una auditoría de cumplimiento (compliance), no forense."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un Mapa de Calor en el contexto de la gestión de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Una herramienta visual para priorizar riesgos basada en Probabilidad e Impacto.",
+          "correcta": true,
+          "explicacion": "Sitúa los riesgos en ejes (X e Y) creando zonas (roja, amarilla, verde) para decidir la urgencia de actuación."
+        },
+        {
+          "texto": "Un plano físico de la temperatura del Centro de Procesamiento de Datos (CPD).",
+          "correcta": false,
+          "explicacion": "Aunque existen mapas térmicos de CPDs, en gestión de riesgos se refiere a la matriz probabilidad/impacto."
+        },
+        {
+          "texto": "Un registro de los empleados que más utilizan Internet.",
+          "correcta": false,
+          "explicacion": "No tiene relación con el uso de internet, sino con la evaluación de riesgos."
+        },
+        {
+          "texto": "El mapa de la red corporativa y sus conexiones.",
+          "correcta": false,
+          "explicacion": "Eso es un diagrama de red o topología, no un mapa de calor de riesgos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento es la 'Hoja de Ruta' estratégica a medio-largo plazo en seguridad?",
+      "respuestas": [
+        {
+          "texto": "El Plan Director de Seguridad Informática (PDSI).",
+          "correcta": true,
+          "explicacion": "El PDSI se define como el mapa estratégico o hoja de ruta de proyectos a 1-3 años."
+        },
+        {
+          "texto": "El informe de auditoría técnica.",
+          "correcta": false,
+          "explicacion": "El informe es una foto de un momento puntual, no la hoja de ruta estratégica."
+        },
+        {
+          "texto": "La norma ISO 27002.",
+          "correcta": false,
+          "explicacion": "La ISO 27002 es una guía de buenas prácticas, no un plan estratégico específico de la empresa."
+        },
+        {
+          "texto": "El inventario de activos.",
+          "correcta": false,
+          "explicacion": "El inventario es una lista de recursos, necesario para el plan, pero no es el plan en sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué metodología se utiliza comúnmente para el análisis de causa raíz en auditoría?",
+      "respuestas": [
+        {
+          "texto": "Los 5 Porqués.",
+          "correcta": true,
+          "explicacion": "Es un método interrogativo iterativo para llegar a la causa original de un problema."
+        },
+        {
+          "texto": "El triángulo de la CIA.",
+          "correcta": false,
+          "explicacion": "CIA se usa para valorar activos, no para encontrar la causa raíz de un fallo."
+        },
+        {
+          "texto": "La matriz RACI.",
+          "correcta": false,
+          "explicacion": "RACI se usa para asignar responsabilidades, no para análisis de causa raíz."
+        },
+        {
+          "texto": "El escaneo de puertos.",
+          "correcta": false,
+          "explicacion": "Es una técnica de recolección de evidencia técnica, no de análisis causal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué caracteriza a una Auditoría Interna frente a una Externa?",
+      "respuestas": [
+        {
+          "texto": "Es realizada por personal de la organización y busca la mejora continua y preparación para externas.",
+          "correcta": true,
+          "explicacion": "Se enfoca en el cumplimiento de políticas internas y la autoevaluación antes de revisiones externas."
+        },
+        {
+          "texto": "Es realizada siempre por el gobierno y busca multar a la empresa.",
+          "correcta": false,
+          "explicacion": "La auditoría interna es propia de la organización, no del gobierno, y busca mejorar, no multar."
+        },
+        {
+          "texto": "Ofrece un dictamen totalmente imparcial para obtener una certificación oficial.",
+          "correcta": false,
+          "explicacion": "La imparcialidad total y la certificación son características clave de la auditoría externa."
+        },
+        {
+          "texto": "Solo revisa aspectos financieros.",
+          "correcta": false,
+          "explicacion": "En el contexto de seguridad informática, revisa controles de seguridad, no finanzas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una vulnerabilidad en el contexto de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Una debilidad o 'puerta abierta' en un activo que puede ser explotada.",
+          "correcta": true,
+          "explicacion": "Se define como debilidades (software sin parches, contraseñas débiles) que permiten el daño."
+        },
+        {
+          "texto": "Un evento externo que causa daño, como un hacker o un incendio.",
+          "correcta": false,
+          "explicacion": "Eso se define como 'Amenaza'."
+        },
+        {
+          "texto": "El valor económico del activo.",
+          "correcta": false,
+          "explicacion": "Eso es parte de la valoración del activo, no la vulnerabilidad."
+        },
+        {
+          "texto": "La medida de seguridad instalada.",
+          "correcta": false,
+          "explicacion": "Eso es un 'Control' o 'Salvaguarda'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica la fase 'Act' (Actuar) en el ciclo de mejora continua del SGSI?",
+      "respuestas": [
+        {
+          "texto": "Aplicar acciones correctivas y preventivas basadas en los resultados de la verificación.",
+          "correcta": true,
+          "explicacion": "Es la fase donde se corrige el sistema y se mejora basándose en auditorías e incidentes."
+        },
+        {
+          "texto": "Planificar los nuevos objetivos de seguridad del año.",
+          "correcta": false,
+          "explicacion": "La definición de objetivos corresponde a la fase 'Plan'."
+        },
+        {
+          "texto": "Ejecutar los controles de seguridad diariamente.",
+          "correcta": false,
+          "explicacion": "La ejecución diaria es parte de la fase 'Do' (Operación)."
+        },
+        {
+          "texto": "Monitorizar los indicadores de desempeño.",
+          "correcta": false,
+          "explicacion": "La monitorización es parte de la fase 'Check'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el propósito del Anexo A de la norma ISO 27001?",
+      "respuestas": [
+        {
+          "texto": "Proporcionar una lista de controles de seguridad de referencia.",
+          "correcta": true,
+          "explicacion": "Contiene una lista de controles (114 en v2013, 93 en v2022) que la organización puede elegir para tratar riesgos."
+        },
+        {
+          "texto": "Definir el vocabulario de seguridad.",
+          "correcta": false,
+          "explicacion": "El vocabulario está en ISO 27000."
+        },
+        {
+          "texto": "Explicar detalladamente cómo implementar cada control.",
+          "correcta": false,
+          "explicacion": "El detalle de implementación ('el cómo') está en la ISO 27002, no en el Anexo A de la 27001."
+        },
+        {
+          "texto": "Establecer las multas por incumplimiento.",
+          "correcta": false,
+          "explicacion": "ISO 27001 es una norma voluntaria de gestión, no un código penal o sancionador."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por 'Amenaza' en el análisis de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Cualquier evento (accidental o intencionado) que puede causar daño a un activo.",
+          "correcta": true,
+          "explicacion": "Incluye acciones maliciosas (hackers), errores humanos o desastres ambientales que pueden explotar vulnerabilidades."
+        },
+        {
+          "texto": "Una debilidad interna del sistema.",
+          "correcta": false,
+          "explicacion": "La debilidad interna es una 'Vulnerabilidad'."
+        },
+        {
+          "texto": "El coste de reparar el sistema.",
+          "correcta": false,
+          "explicacion": "Eso es parte del impacto o coste de recuperación, no la amenaza en sí."
+        },
+        {
+          "texto": "El software antivirus instalado.",
+          "correcta": false,
+          "explicacion": "El antivirus es un control contra amenazas, no la amenaza."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué rol desempeña la Auditoría Interna respecto al Plan Director (PDSI)?",
+      "respuestas": [
+        {
+          "texto": "Verifica si los proyectos se completaron y si están dando los resultados esperados (función de verificación).",
+          "correcta": true,
+          "explicacion": "Comprueba la ejecución del plan actual y sus hallazgos alimentan la creación del siguiente PDSI."
+        },
+        {
+          "texto": "Define el presupuesto inicial de los proyectos.",
+          "correcta": false,
+          "explicacion": "El presupuesto se define en la fase de planificación del PDSI, no por la auditoría."
+        },
+        {
+          "texto": "Implementa técnicamente los firewalls planificados.",
+          "correcta": false,
+          "explicacion": "La implementación es responsabilidad de TI/Sistemas, la auditoría solo verifica."
+        },
+        {
+          "texto": "Es la encargada de despedir a los empleados que incumplen normas.",
+          "correcta": false,
+          "explicacion": "La auditoría reporta hallazgos; las acciones disciplinarias corresponden a RRHH o Dirección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué fase del ciclo de vida de una auditoría se realiza la 'Reunión de Inicio' (Kick-off)?",
+      "respuestas": [
+        {
+          "texto": "Fase 1: Planificación.",
+          "correcta": true,
+          "explicacion": "Es parte de la planificación, donde se presenta el plan a la dirección y responsables para confirmar fechas y alcances."
+        },
+        {
+          "texto": "Fase 2: Ejecución.",
+          "correcta": false,
+          "explicacion": "La ejecución es el trabajo de campo posterior a la reunión de inicio."
+        },
+        {
+          "texto": "Fase 4: Informe.",
+          "correcta": false,
+          "explicacion": "El informe es el resultado final, el Kick-off es al principio."
+        },
+        {
+          "texto": "Fase 5: Seguimiento.",
+          "correcta": false,
+          "explicacion": "El seguimiento ocurre meses después de terminar la auditoría."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Matriz RACI en la gestión de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Una herramienta para asignar claramente funciones y responsabilidades en proyectos o acciones.",
+          "correcta": true,
+          "explicacion": "Define quién es Responsable, Aprobador, Consultado e Informado para cada tarea."
+        },
+        {
+          "texto": "Una herramienta para escanear virus.",
+          "correcta": false,
+          "explicacion": "RACI es de gestión organizativa, no software antivirus."
+        },
+        {
+          "texto": "Un tipo de ataque de denegación de servicio.",
+          "correcta": false,
+          "explicacion": "RACI es un acrónimo de gestión, no un ciberataque."
+        },
+        {
+          "texto": "El índice de riesgos críticos actuales.",
+          "correcta": false,
+          "explicacion": "Eso sería un mapa de riesgos o matriz de riesgos, no RACI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de auditoría simula comportamientos humanos para engañar al personal?",
+      "respuestas": [
+        {
+          "texto": "Auditoría de ingeniería social.",
+          "correcta": true,
+          "explicacion": "Incluye pruebas de phishing, llamadas falsas o visitas simuladas para probar el factor humano."
+        },
+        {
+          "texto": "Auditoría de infraestructura.",
+          "correcta": false,
+          "explicacion": "Se centra en sistemas, redes y servidores, no en el engaño a personas."
+        },
+        {
+          "texto": "Auditoría de código fuente.",
+          "correcta": false,
+          "explicacion": "Revisa el software, no el comportamiento de las personas."
+        },
+        {
+          "texto": "Auditoría física.",
+          "correcta": false,
+          "explicacion": "Revisa controles de acceso a edificios y hardware, no técnicas de engaño psicológico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que la ISO 27001 sea una norma 'certificable'?",
+      "respuestas": [
+        {
+          "texto": "Que una entidad externa puede auditar y validar oficialmente que la organización cumple los requisitos.",
+          "correcta": true,
+          "explicacion": "Permite obtener un sello oficial tras una auditoría externa exitosa."
+        },
+        {
+          "texto": "Que es obligatorio por ley cumplirla para abrir una empresa.",
+          "correcta": false,
+          "explicacion": "La certificación es voluntaria y comercial, no un requisito legal de apertura de negocio."
+        },
+        {
+          "texto": "Que solo se puede usar en formato digital con certificados electrónicos.",
+          "correcta": false,
+          "explicacion": "Se refiere a la certificación del sistema de gestión, no al uso de certificados digitales técnicos."
+        },
+        {
+          "texto": "Que el personal debe tener un diploma universitario.",
+          "correcta": false,
+          "explicacion": "Certifica los procesos de la empresa, no los títulos académicos del personal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se define el 'Impacto' en la valoración de activos?",
+      "respuestas": [
+        {
+          "texto": "En términos de daño al negocio (pérdida financiera, reputacional, legal).",
+          "correcta": true,
+          "explicacion": "El impacto debe medirse por las consecuencias para el negocio, no solo en términos técnicos."
+        },
+        {
+          "texto": "Por el uso de CPU del servidor.",
+          "correcta": false,
+          "explicacion": "El uso de CPU es una métrica técnica, no un impacto de negocio."
+        },
+        {
+          "texto": "Por el número de virus detectados.",
+          "correcta": false,
+          "explicacion": "Eso es una métrica de actividad de amenazas, no el impacto sobre el activo."
+        },
+        {
+          "texto": "Por el coste de compra del hardware.",
+          "correcta": false,
+          "explicacion": "El valor de reposición es un factor, pero el impacto incluye daños intangibles como reputación o multas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Plan de Acción Correctiva' (PAC)?",
+      "respuestas": [
+        {
+          "texto": "Un plan detallado para solucionar los hallazgos de una auditoría, con responsables y fechas.",
+          "correcta": true,
+          "explicacion": "Es el documento donde la empresa auditada explica cómo arreglará los problemas detectados."
+        },
+        {
+          "texto": "El plan para instalar actualizaciones de Windows automáticamente.",
+          "correcta": false,
+          "explicacion": "Eso es una política de parches, el PAC es una respuesta a hallazgos de auditoría."
+        },
+        {
+          "texto": "El manual de usuario de la aplicación de auditoría.",
+          "correcta": false,
+          "explicacion": "El PAC es un plan de gestión de mejoras, no un manual de software."
+        },
+        {
+          "texto": "Un plan para despedir a los auditores.",
+          "correcta": false,
+          "explicacion": "El objetivo es la mejora continua del sistema, no acciones laborales contra auditores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se debe hacer en la Fase 1 (Análisis de situación inicial) de un PDSI?",
+      "respuestas": [
+        {
+          "texto": "Realizar un inventario de activos y evaluar la madurez actual de la seguridad.",
+          "correcta": true,
+          "explicacion": "Es fundamental conocer el punto de partida: activos, organización, técnica y cumplimiento."
+        },
+        {
+          "texto": "Comprar inmediatamente el hardware más caro.",
+          "correcta": false,
+          "explicacion": "Las compras se deciden en el plan de acción (Fase 3/4), no antes de analizar la situación."
+        },
+        {
+          "texto": "Ignorar la situación actual y planificar para un escenario ideal.",
+          "correcta": false,
+          "explicacion": "El PDSI debe basarse en un diagnóstico realista de la situación actual."
+        },
+        {
+          "texto": "Delegar todo el análisis en el becario.",
+          "correcta": false,
+          "explicacion": "Requiere apoyo de la dirección y conocimiento profundo de la organización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Ingeniería Social' en el contexto de auditorías?",
+      "respuestas": [
+        {
+          "texto": "Técnicas que intentan manipular a las personas para que revelen información confidencial.",
+          "correcta": true,
+          "explicacion": "Se basa en el engaño humano (phishing, llamadas) más que en fallos técnicos puros."
+        },
+        {
+          "texto": "La construcción física de centros de datos seguros.",
+          "correcta": false,
+          "explicacion": "Eso es ingeniería civil o de infraestructura, no ingeniería social."
+        },
+        {
+          "texto": "El análisis de redes sociales de la empresa.",
+          "correcta": false,
+          "explicacion": "Aunque usa información de redes sociales, la ingeniería social es el acto de manipular, no solo analizar marketing."
+        },
+        {
+          "texto": "La programación de robots sociales.",
+          "correcta": false,
+          "explicacion": "No tiene relación con robótica, sino con psicología aplicada al hacking."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia la 'Caja Gris' de la 'Caja Negra'?",
+      "respuestas": [
+        {
+          "texto": "La Caja Gris tiene conocimiento parcial (ej. credenciales básicas), la Negra ninguno.",
+          "correcta": true,
+          "explicacion": "Caja Gris es un equilibrio que simula amenazas internas o con acceso limitado, frente al desconocimiento total de la Negra."
+        },
+        {
+          "texto": "La Caja Gris es ilegal y la Negra es legal.",
+          "correcta": false,
+          "explicacion": "Ambas son legales si están autorizadas en una auditoría."
+        },
+        {
+          "texto": "La Caja Gris es para hardware y la Negra para software.",
+          "correcta": false,
+          "explicacion": "La distinción es por nivel de información, no por el tipo de activo auditado."
+        },
+        {
+          "texto": "No hay diferencia, son sinónimos.",
+          "correcta": false,
+          "explicacion": "Tienen definiciones distintas basadas en la información previa disponible para el auditor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un KPI en la auditoría y gestión de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Indicador Clave de Rendimiento: una métrica cuantificable para evaluar el éxito.",
+          "correcta": true,
+          "explicacion": "Sirven para medir la eficacia de las acciones (ej. tiempo medio de resolución de incidentes)."
+        },
+        {
+          "texto": "Una herramienta de hacking para romper contraseñas.",
+          "correcta": false,
+          "explicacion": "KPI es un término de gestión, no una herramienta de ataque."
+        },
+        {
+          "texto": "El protocolo de seguridad de la red Wi-Fi.",
+          "correcta": false,
+          "explicacion": "El protocolo Wi-Fi es WPA/WPA2/WPA3, no KPI."
+        },
+        {
+          "texto": "El nombre del comité de seguridad.",
+          "correcta": false,
+          "explicacion": "KPI son siglas de Key Performance Indicator, no de un comité."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se busca con la 'Segregación de Redes' (mencionada como control)?",
+      "respuestas": [
+        {
+          "texto": "Separar redes (ej. invitados vs corporativa) para limitar el acceso y contener intrusiones.",
+          "correcta": true,
+          "explicacion": "Es una salvaguarda para evitar que un acceso en una zona de bajo riesgo comprometa activos críticos."
+        },
+        {
+          "texto": "Unir todas las redes para que sea más fácil compartir archivos.",
+          "correcta": false,
+          "explicacion": "Eso aumentaría el riesgo; la segregación busca lo contrario: aislar para proteger."
+        },
+        {
+          "texto": "Desconectar la empresa de Internet permanentemente.",
+          "correcta": false,
+          "explicacion": "La segregación gestiona el tráfico interno, no implica aislamiento total del exterior."
+        },
+        {
+          "texto": "Aumentar la velocidad de internet.",
+          "correcta": false,
+          "explicacion": "Es una medida de seguridad, no necesariamente de rendimiento (aunque puede ayudar)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Inventario de Activos'?",
+      "respuestas": [
+        {
+          "texto": "Una lista completa y actualizada de hardware, software, datos, servicios y personal.",
+          "correcta": true,
+          "explicacion": "Es el paso previo esencial para proteger la organización ('no puedes proteger lo que no conoces')."
+        },
+        {
+          "texto": "El inventario de muebles de la oficina.",
+          "correcta": false,
+          "explicacion": "En seguridad TI, se enfoca en activos de información y tecnológicos, no mobiliario general."
+        },
+        {
+          "texto": "La lista de la compra de papelería.",
+          "correcta": false,
+          "explicacion": "Se refiere a activos críticos para el negocio y la información."
+        },
+        {
+          "texto": "El registro de horas de entrada y salida de los empleados.",
+          "correcta": false,
+          "explicacion": "Eso es control de presencia, no un inventario de activos de información."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa 'Mitigar' un riesgo?",
+      "respuestas": [
+        {
+          "texto": "Aplicar controles para reducir la probabilidad o el impacto del riesgo.",
+          "correcta": true,
+          "explicacion": "Es la estrategia más común, buscando bajar el riesgo a un nivel aceptable (ej. parchear, MFA)."
+        },
+        {
+          "texto": "Ignorar el riesgo hasta que pase algo.",
+          "correcta": false,
+          "explicacion": "Eso no es gestionar el riesgo, es negligencia o aceptación pasiva indebida."
+        },
+        {
+          "texto": "Transferir el riesgo a un seguro.",
+          "correcta": false,
+          "explicacion": "Eso es 'Transferir', no mitigar directamente la causa."
+        },
+        {
+          "texto": "Eliminar el activo para que no haya riesgo.",
+          "correcta": false,
+          "explicacion": "Eso es 'Eliminar' el riesgo, una estrategia distinta a la mitigación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una 'No Conformidad' en una auditoría?",
+      "respuestas": [
+        {
+          "texto": "El incumplimiento de un requisito de la norma, política o procedimiento establecido.",
+          "correcta": true,
+          "explicacion": "Es un hallazgo que indica que algo no se está haciendo según lo planificado o exigido."
+        },
+        {
+          "texto": "Cuando el auditor no está de acuerdo con el café de la oficina.",
+          "correcta": false,
+          "explicacion": "Se refiere a desviaciones de normas técnicas o de gestión, no preferencias personales."
+        },
+        {
+          "texto": "Una sugerencia de mejora opcional.",
+          "correcta": false,
+          "explicacion": "La No Conformidad es un incumplimiento que *debe* corregirse, no una simple sugerencia."
+        },
+        {
+          "texto": "Un cumplimiento excelente de la norma.",
+          "correcta": false,
+          "explicacion": "Es lo contrario: un fallo o falta de cumplimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la relación del PDSI con la estrategia de negocio?",
+      "respuestas": [
+        {
+          "texto": "El PDSI debe alinearse con los objetivos del negocio para proteger lo que es realmente valioso.",
+          "correcta": true,
+          "explicacion": "Proteger los sistemas es proteger el negocio; el plan debe apoyar las metas corporativas."
+        },
+        {
+          "texto": "El PDSI es independiente y no debe importarle el negocio.",
+          "correcta": false,
+          "explicacion": "Un PDSI aislado fracasa; su éxito depende de alinearse con el negocio y la dirección."
+        },
+        {
+          "texto": "El negocio debe adaptarse al PDSI, aunque pierda dinero.",
+          "correcta": false,
+          "explicacion": "La seguridad está para dar soporte y viabilidad al negocio, no para obstaculizarlo irracionalmente."
+        },
+        {
+          "texto": "El PDSI solo se alinea con el departamento de limpieza.",
+          "correcta": false,
+          "explicacion": "Debe alinearse con la estrategia global y la alta dirección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Disponibilidad' en la tríada CIA?",
+      "respuestas": [
+        {
+          "texto": "Que la información y los sistemas estén accesibles para el personal autorizado cuando se necesiten.",
+          "correcta": true,
+          "explicacion": "Garantiza la continuidad operativa y el acceso a los datos."
+        },
+        {
+          "texto": "Que la información sea pública para todo el mundo.",
+          "correcta": false,
+          "explicacion": "Disponibilidad es para usuarios *autorizados*, no necesariamente público general."
+        },
+        {
+          "texto": "Que nadie pueda modificar la información.",
+          "correcta": false,
+          "explicacion": "Eso es 'Integridad'."
+        },
+        {
+          "texto": "Que nadie pueda ver la información.",
+          "correcta": false,
+          "explicacion": "Eso es 'Confidencialidad'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica la fase 'Check' (Verificar) en el ciclo PDCA?",
+      "respuestas": [
+        {
+          "texto": "Monitorizar, medir, analizar y evaluar el desempeño y eficacia del SGSI (auditorías).",
+          "correcta": true,
+          "explicacion": "Es la fase de evaluación para asegurar que lo implementado funciona según lo planeado."
+        },
+        {
+          "texto": "Implementar firewalls.",
+          "correcta": false,
+          "explicacion": "Eso es fase 'Do'."
+        },
+        {
+          "texto": "Redactar la política de seguridad.",
+          "correcta": false,
+          "explicacion": "Eso es fase 'Plan'."
+        },
+        {
+          "texto": "Corregir los fallos detectados.",
+          "correcta": false,
+          "explicacion": "Eso es fase 'Act'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve una 'Lista de Verificación' (Checklist) en una auditoría?",
+      "respuestas": [
+        {
+          "texto": "Como instrumento para recopilar evidencias de forma estructurada (preguntas sí/no, revisiones).",
+          "correcta": true,
+          "explicacion": "Asegura que se revisan todos los puntos necesarios y documenta los hallazgos."
+        },
+        {
+          "texto": "Para hacer la lista de la compra de la empresa.",
+          "correcta": false,
+          "explicacion": "Se usa para verificar controles de seguridad, no compras generales."
+        },
+        {
+          "texto": "Para anotar las contraseñas de los usuarios.",
+          "correcta": false,
+          "explicacion": "Anotar contraseñas sería una mala práctica de seguridad."
+        },
+        {
+          "texto": "Para evaluar el rendimiento de la CPU.",
+          "correcta": false,
+          "explicacion": "Para eso se usan herramientas de monitorización, no checklists manuales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Riesgo Intrínseco'?",
+      "respuestas": [
+        {
+          "texto": "El riesgo al que está expuesto un activo por su propia naturaleza, antes de aplicar controles.",
+          "correcta": true,
+          "explicacion": "Es el riesgo bruto derivado del valor del activo y sus amenazas antes de mitigar."
+        },
+        {
+          "texto": "El riesgo que queda después de poner antivirus.",
+          "correcta": false,
+          "explicacion": "Ese es el Riesgo Residual."
+        },
+        {
+          "texto": "El riesgo de que los empleados lleguen tarde.",
+          "correcta": false,
+          "explicacion": "Se refiere a riesgos de seguridad de la información sobre los activos."
+        },
+        {
+          "texto": "Un riesgo inventado por el auditor.",
+          "correcta": false,
+          "explicacion": "Es un cálculo real basado en activos y amenazas identificadas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el rol del CISO (Chief Information Security Officer)?",
+      "respuestas": [
+        {
+          "texto": "Es el responsable de la seguridad de la información, coordina el PDSI y el SGSI.",
+          "correcta": true,
+          "explicacion": "Es la figura ejecutiva encargada de la estrategia y gobierno de la seguridad."
+        },
+        {
+          "texto": "Es el técnico que repara las impresoras.",
+          "correcta": false,
+          "explicacion": "El CISO es un rol directivo/estratégico, no de soporte técnico básico."
+        },
+        {
+          "texto": "Es el auditor externo.",
+          "correcta": false,
+          "explicacion": "El CISO es parte de la organización interna (rol de gobierno), el auditor externo es independiente."
+        },
+        {
+          "texto": "Es el desarrollador de la página web.",
+          "correcta": false,
+          "explicacion": "El CISO supervisa la seguridad, no programa la web directamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una auditoría de cumplimiento (compliance)?",
+      "respuestas": [
+        {
+          "texto": "Verifica que la organización cumpla con normas legales o reglamentarias (GDPR, ENS, etc.).",
+          "correcta": true,
+          "explicacion": "Se centra en asegurar que se respetan las leyes y regulaciones externas aplicables."
+        },
+        {
+          "texto": "Verifica que los ordenadores enciendan rápido.",
+          "correcta": false,
+          "explicacion": "Eso es rendimiento, no cumplimiento legal."
+        },
+        {
+          "texto": "Verifica si los empleados están contentos.",
+          "correcta": false,
+          "explicacion": "Eso es clima laboral, no cumplimiento normativo de seguridad."
+        },
+        {
+          "texto": "Simula un ataque de hackers rusos.",
+          "correcta": false,
+          "explicacion": "Eso sería un pentesting o auditoría técnica de caja negra, no de cumplimiento legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por 'Activos Críticos'?",
+      "respuestas": [
+        {
+          "texto": "Aquellos activos (información, procesos) sin los cuales la empresa no puede subsistir u operar.",
+          "correcta": true,
+          "explicacion": "Son los elementos vitales para el negocio que deben ser el foco principal del PDSI."
+        },
+        {
+          "texto": "Los ordenadores que tienen luces LED.",
+          "correcta": false,
+          "explicacion": "La estética no define la criticidad, sino el valor para el negocio."
+        },
+        {
+          "texto": "Solo los servidores web.",
+          "correcta": false,
+          "explicacion": "Pueden ser bases de datos, personas o procesos internos, no solo servidores web."
+        },
+        {
+          "texto": "Los activos que son más baratos de reemplazar.",
+          "correcta": false,
+          "explicacion": "Generalmente los críticos tienen alto valor o impacto, no bajo coste."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SLA (Acuerdo de Nivel de Servicio)?",
+      "respuestas": [
+        {
+          "texto": "Un contrato que define el nivel de servicio esperado (ej. disponibilidad) y métricas de rendimiento.",
+          "correcta": true,
+          "explicacion": "Establece compromisos de calidad y tiempos de respuesta con proveedores o áreas internas."
+        },
+        {
+          "texto": "Un virus que afecta a los servidores Linux.",
+          "correcta": false,
+          "explicacion": "SLA es un término legal/gestión, no un malware."
+        },
+        {
+          "texto": "Un sistema de luces de alarma.",
+          "correcta": false,
+          "explicacion": "SLA es un acuerdo documental, no un dispositivo físico."
+        },
+        {
+          "texto": "La contraseña del administrador.",
+          "correcta": false,
+          "explicacion": "SLA son siglas de Service Level Agreement, no una credencial."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la fase de 'Mejora' (Act) del SGSI, ¿cuál es el objetivo principal?",
+      "respuestas": [
+        {
+          "texto": "Garantizar la evolución continua del sistema mediante correcciones y optimizaciones.",
+          "correcta": true,
+          "explicacion": "Busca que el sistema no se estanque, aprendiendo de errores y adaptándose a cambios."
+        },
+        {
+          "texto": "Volver a comprar todos los equipos.",
+          "correcta": false,
+          "explicacion": "La mejora continua se basa en procesos y ajustes, no necesariamente en reemplazar todo el hardware."
+        },
+        {
+          "texto": "Despedir al CISO.",
+          "correcta": false,
+          "explicacion": "El objetivo es mejorar el sistema, no purgar personal arbitrariamente."
+        },
+        {
+          "texto": "Realizar copias de seguridad.",
+          "correcta": false,
+          "explicacion": "Las copias son una operación diaria (Do), la mejora (Act) analiza si esas copias son efectivas y corrige fallos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante el inventario de activos en el análisis de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Porque cada activo está expuesto a amenazas específicas y tiene vulnerabilidades asociadas.",
+          "correcta": true,
+          "explicacion": "Es el paso 1 del análisis; sin saber qué tienes, no puedes saber qué riesgos corre."
+        },
+        {
+          "texto": "Para saber cuánto dinero gastar en la cena de empresa.",
+          "correcta": false,
+          "explicacion": "El inventario de activos TI es para seguridad y continuidad, no para eventos sociales."
+        },
+        {
+          "texto": "Solo sirve para la contabilidad, no para seguridad.",
+          "correcta": false,
+          "explicacion": "Es vital para seguridad porque define la superficie de ataque y el valor a proteger."
+        },
+        {
+          "texto": "Para rellenar papel y archivarlo.",
+          "correcta": false,
+          "explicacion": "Es un documento vivo y base para el análisis de riesgos, no burocracia inútil."
+        }
+      ]
+    }
+  ]
+}

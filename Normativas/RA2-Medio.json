@@ -1,0 +1,1255 @@
+{
+  "tema": "Normativa de Seguridad y Gestión de Riesgos - Conceptos Fundamentales",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es un 'Activo' en el análisis de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Cualquier recurso que tiene valor para la organización y cuya pérdida supone un coste.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un activo es algo con valor, ya sea físico, lógico o intangible como la reputación."
+        },
+        {
+          "texto": "Únicamente el dinero en efectivo de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En seguridad, abarca desde información hasta personal e infraestructuras."
+        },
+        {
+          "texto": "Un software que ya no se utiliza.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si no se utiliza ni tiene valor, no suele considerarse un activo crítico."
+        },
+        {
+          "texto": "El local donde se sitúa la competencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los activos deben pertenecer o ser necesarios para la propia organización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la definición de 'Amenaza'?",
+      "respuestas": [
+        {
+          "texto": "Una debilidad en un servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso define a una vulnerabilidad."
+        },
+        {
+          "texto": "Cualquier circunstancia que puede tener un impacto negativo sobre los activos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las amenazas pueden ser naturales o producidas por el hombre."
+        },
+        {
+          "texto": "El coste de comprar un firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un coste de implementación de control."
+        },
+        {
+          "texto": "Un proceso de negocio como el cálculo de nóminas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un ejemplo de activo de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una 'Vulnerabilidad'?",
+      "respuestas": [
+        {
+          "texto": "Un ataque de denegación de servicio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es una amenaza materializada."
+        },
+        {
+          "texto": "La probabilidad de que ocurra un desastre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La probabilidad es una de las variables para calcular el riesgo."
+        },
+        {
+          "texto": "Una debilidad o ausencia de salvaguarda que permite que una amenaza ocurra.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el punto débil que facilita que la amenaza cause daño."
+        },
+        {
+          "texto": "Un informe de auditoría externa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría verifica el sistema, no es una debilidad en sí misma."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se calcula el nivel de 'Riesgo'?",
+      "respuestas": [
+        {
+          "texto": "Multiplicando la Probabilidad por el Impacto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la medida del daño probable sobre un sistema basándose en estas dos variables."
+        },
+        {
+          "texto": "Sumando el valor de todos los activos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El valor del activo influye en el impacto, pero no define el riesgo por sí solo."
+        },
+        {
+          "texto": "Dividiendo las amenazas entre las vulnerabilidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa fórmula no es estándar en gestión de riesgos."
+        },
+        {
+          "texto": "Restando los controles al impacto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los controles reducen el riesgo, no se restan aritméticamente del impacto inicial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia al 'Riesgo Inherente' del 'Riesgo Residual'?",
+      "respuestas": [
+        {
+          "texto": "No hay diferencia, son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Representan estados distintos de la gestión."
+        },
+        {
+          "texto": "El inherente es el que existe per se; el residual es el que queda tras aplicar controles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El objetivo del tratamiento es que el riesgo residual sea aceptable."
+        },
+        {
+          "texto": "El inherente solo aplica a hardware y el residual a software.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican a cualquier tipo de escenario de riesgo."
+        },
+        {
+          "texto": "El residual siempre es cero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Siempre suele quedar un nivel de riesgo, por pequeño que sea."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una Auditoría en un sistema de gestión?",
+      "respuestas": [
+        {
+          "texto": "Instalar parches de seguridad automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría es un proceso de verificación, no una herramienta técnica."
+        },
+        {
+          "texto": "Verificar que los procedimientos se han implantado correctamente y son efectivos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sirve para asegurar que el sistema cumple sus objetivos y los requisitos."
+        },
+        {
+          "texto": "Aumentar el presupuesto del departamento de IT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque puede justificar inversiones, no es su fin primordial."
+        },
+        {
+          "texto": "Sustituir al Compliance Officer.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son funciones complementarias; el auditor revisa lo que el Officer gestiona."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué caracteriza a una 'Auditoría' frente a la 'Supervisión'?",
+      "respuestas": [
+        {
+          "texto": "La auditoría es menos formal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supervisión suele ser menos formal que la auditoría."
+        },
+        {
+          "texto": "La auditoría suele ser realizada por una persona independiente de la función revisada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La independencia es clave en las auditorías, especialmente las formales."
+        },
+        {
+          "texto": "La supervisión se hace una vez al año y la auditoría a diario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supervisión es más frecuente y la auditoría menos (ej. anual)."
+        },
+        {
+          "texto": "La auditoría no requiere documentación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría se basa en el examen de documentos y evidencias."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que la ISO 19600 fuera una 'Guía de buenas prácticas'?",
+      "respuestas": [
+        {
+          "texto": "Que era obligatorio cumplirla por ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los estándares ISO suelen ser voluntarios, no leyes."
+        },
+        {
+          "texto": "Que proporcionaba recomendaciones pero no era certificable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Servía para orientar pero no permitía una certificación formal del sistema."
+        },
+        {
+          "texto": "Que solo la podían usar empresas públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es aplicable a cualquier organización."
+        },
+        {
+          "texto": "Que sustituía al código penal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ayuda al cumplimiento legal pero no lo sustituye."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal evolución de la ISO 37301:2021 respecto a la 19600?",
+      "respuestas": [
+        {
+          "texto": "Ha pasado de ser una guía de recomendaciones a una norma de requisitos certificable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ahora las empresas pueden demostrar formalmente su compromiso mediante una certificación."
+        },
+        {
+          "texto": "Se ha centrado exclusivamente en el sector bancario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sigue siendo transversal para todos los sectores."
+        },
+        {
+          "texto": "Ha eliminado la necesidad de auditorías internas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al contrario, exige auditorías periódicas internas y externas."
+        },
+        {
+          "texto": "Ya no requiere el compromiso de la alta dirección.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Enfatiza aún más la gobernanza y el rol activo de la dirección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la ISO 27001?",
+      "respuestas": [
+        {
+          "texto": "Una ley europea de protección de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el GDPR."
+        },
+        {
+          "texto": "Un estándar para la gestión de la seguridad de la información (SGSI).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Describe cómo debe ser un sistema para proteger la información organizacional."
+        },
+        {
+          "texto": "Un manual técnico para configurar routers Cisco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un estándar de gestión, no un manual de configuración técnica específica."
+        },
+        {
+          "texto": "Una guía de contabilidad para multinacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso se parecería más a normativas como SOX."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación hay entre la ISO 27001 y la ISO 27002?",
+      "respuestas": [
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen enfoques diferentes pero complementarios."
+        },
+        {
+          "texto": "La 27001 define el sistema de gestión y la 27002 es un código de prácticas con controles específicos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 27002 detalla contramedidas para los escenarios de riesgo típicos."
+        },
+        {
+          "texto": "La 27002 invalida a la 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se usan de forma conjunta."
+        },
+        {
+          "texto": "La 27001 es para hardware y la 27002 para personas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas cubren dimensiones técnicas y organizativas de la seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas P-D-C-A en el ciclo de mejora continua?",
+      "respuestas": [
+        {
+          "texto": "Proteger, Detectar, Corregir, Analizar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son funciones de seguridad, no las fases del ciclo de gestión estándar."
+        },
+        {
+          "texto": "Planificar, Hacer, Comprobar, Actuar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la base de los sistemas de gestión modernos (Plan-Do-Check-Act)."
+        },
+        {
+          "texto": "Privacidad, Datos, Cumplimiento, Auditoría.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque son temas relevantes, no corresponden a las siglas del ciclo."
+        },
+        {
+          "texto": "Permitir, Denegar, Consultar, Archivar.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién es el responsable de asignar autoridad y recursos al Compliance Officer?",
+      "respuestas": [
+        {
+          "texto": "Los empleados de base.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La alta dirección de la organización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La dirección debe asegurar que el programa de cumplimiento sea eficaz."
+        },
+        {
+          "texto": "El departamento de marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La Agencia de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD supervisa el cumplimiento legal externo, no gestiona los recursos internos de la empresa."
+        }
+      ]
+    },
+    {
+      "pregunta": "En seguridad, ¿qué es un activo 'Intangible'?",
+      "respuestas": [
+        {
+          "texto": "Un servidor en la nube.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque no lo toquemos físicamente, suele considerarse un activo lógico/tecnológico."
+        },
+        {
+          "texto": "Algo que no tiene presencia física pero sí valor, como la marca o reputación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Su deterioro puede suponer una gran pérdida de negocio."
+        },
+        {
+          "texto": "Un cable de fibra óptica roto.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "El edificio de las oficinas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es infraestructura física."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un riesgo tiene probabilidad 'Media' e impacto 'Muy Alto', ¿qué herramienta usamos para visualizar su nivel?",
+      "respuestas": [
+        {
+          "texto": "Un diagrama de flujo de caja.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Una Matriz de Riesgos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta matriz permite cruzar ambos valores para obtener un nivel de riesgo cualitativo."
+        },
+        {
+          "texto": "Un organigrama de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un inventario de hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué mide la dimensión de 'Integridad' en la valoración de impacto?",
+      "respuestas": [
+        {
+          "texto": "Si la información es secreta o no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es confidencialidad."
+        },
+        {
+          "texto": "El mantenimiento de la exactitud y completitud de los datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Asegura que la información no ha sido alterada sin autorización."
+        },
+        {
+          "texto": "Si el sistema está encendido o apagado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es disponibilidad."
+        },
+        {
+          "texto": "La rapidez con la que se guardan los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué obliga la Directiva NIS en relación a la ciberseguridad?",
+      "respuestas": [
+        {
+          "texto": "A que todas las personas usen contraseñas de 20 caracteres.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "A garantizar la seguridad de redes y sistemas en sectores esenciales e infraestructuras críticas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Busca la resiliencia en servicios como salud, energía o transporte."
+        },
+        {
+          "texto": "A prohibir el teletrabajo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "A que las empresas solo usen software europeo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Apetito del Riesgo'?",
+      "respuestas": [
+        {
+          "texto": "Las ganas de un hacker de entrar en un sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La cantidad de riesgo que una organización está dispuesta a asumir para alcanzar sus objetivos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Define qué riesgos son 'aceptables' y cuáles deben ser tratados obligatoriamente."
+        },
+        {
+          "texto": "El presupuesto anual para seguros contra incendios.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La probabilidad de que una empresa sea sancionada.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función de un 'GRC' (Governance, Risk and Compliance)?",
+      "respuestas": [
+        {
+          "texto": "Es un tipo de firewall de última generación.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Software para gestionar de forma integrada el gobierno, los riesgos y el cumplimiento normativo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Facilita inventariado, análisis de riesgos y seguimiento de tareas de cumplimiento."
+        },
+        {
+          "texto": "Un protocolo de red para transferir archivos pesados.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Una norma ISO de reciente creación.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué exige la ISO 37301 respecto al 'Contexto de la Organización'?",
+      "respuestas": [
+        {
+          "texto": "Solo recomienda analizarlo por encima.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso era en la ISO 19600."
+        },
+        {
+          "texto": "Exige un análisis detallado y documentado para adaptar el CMS al entorno específico.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un requisito formal para asegurar que el sistema es adecuado a la realidad de la empresa."
+        },
+        {
+          "texto": "Obliga a que la oficina esté en un país de la UE.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "No menciona el contexto organizacional.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante documentar los procesos en un Sistema de Gestión?",
+      "respuestas": [
+        {
+          "texto": "Para que la oficina se vea más ordenada.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Para garantizar la trazabilidad, cumplimiento de requisitos y facilitar auditorías.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El sistema debe estar debidamente documentado y actualizado periódicamente."
+        },
+        {
+          "texto": "Porque lo dice el código de barras de los productos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Para que los empleados tengan más trabajo administrativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una empresa multinacional con actividad en EE.UU. cotiza en bolsa?",
+      "respuestas": [
+        {
+          "texto": "Debe cumplir obligatoriamente con la ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27001 es voluntaria."
+        },
+        {
+          "texto": "Aplica la ley SOX (Sarbanes-Oxley) sobre transparencia y contabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una normativa específica para empresas que cotizan en mercados estadounidenses."
+        },
+        {
+          "texto": "Queda exenta de cumplir el GDPR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si trata datos de ciudadanos europeos, debe cumplirlo igualmente."
+        },
+        {
+          "texto": "Solo debe cumplir normativas españolas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de 'Tratamiento del Riesgo'?",
+      "respuestas": [
+        {
+          "texto": "Ignorar el riesgo hasta que pase algo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso no es una gestión proactiva."
+        },
+        {
+          "texto": "Implementar controles o salvaguardas para reducir el nivel de riesgo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Implica tomar medidas para mitigar la probabilidad o el impacto."
+        },
+        {
+          "texto": "Borrar el activo del inventario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar el activo elimina el riesgo, pero suele ser inviable para el negocio."
+        },
+        {
+          "texto": "Subir el sueldo al Compliance Officer.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa la dimensión de 'Disponibilidad'?",
+      "respuestas": [
+        {
+          "texto": "Que el servidor sea gratuito.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Que la información y los sistemas sean accesibles cuando se necesiten.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es vital para que la actividad de negocio no se detenga."
+        },
+        {
+          "texto": "Que los empleados trabajen los fines de semana.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Que haya muchos backups en la oficina.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los backups ayudan a la disponibilidad, pero no son la definición de la dimensión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Mapa de Calor' en un informe ejecutivo de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Un gráfico de la temperatura del Centro de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Una representación visual donde se clasifican los riesgos por colores según su gravedad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Facilita identificar rápidamente dónde están los problemas más urgentes."
+        },
+        {
+          "texto": "Un plano de incendios de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un gráfico de ventas por zonas geográficas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función del Esquema Nacional de Seguridad (ENS) en España?",
+      "respuestas": [
+        {
+          "texto": "Regular el uso de las redes sociales privadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Establecer requisitos de ciberseguridad para el sector público y sus proveedores esenciales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una normativa local obligatoria para el ámbito de la administración pública española."
+        },
+        {
+          "texto": "Vender licencias de antivirus a los ciudadanos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sustituir a la ISO 27001 en todo el mundo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS es de ámbito nacional español."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Cultura de Compliance' según la ISO 37301?",
+      "respuestas": [
+        {
+          "texto": "Hacer exámenes sorpresa a los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un conjunto de valores y medidas para fomentar un comportamiento ético en todos los niveles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se exige que la organización tome medidas específicas para construir y mantener esta cultura."
+        },
+        {
+          "texto": "Ir vestido de forma formal a la oficina.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Tener muchos cuadros con las normas colgados en la pared.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación hay entre un proceso de negocio y un activo tecnológico?",
+      "respuestas": [
+        {
+          "texto": "Son independientes y no se relacionan.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Los procesos de negocio suelen apoyarse en activos tecnológicos para funcionar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por ejemplo, el proceso de 'Venta on-line' depende de servidores y bases de datos."
+        },
+        {
+          "texto": "El activo tecnológico es más importante que el proceso de negocio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El valor real para la organización suele estar en el proceso o servicio de negocio."
+        },
+        {
+          "texto": "Solo se relacionan si hay una auditoría.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué se refiere el principio de 'Mejora Continua'?",
+      "respuestas": [
+        {
+          "texto": "A comprar el ordenador más nuevo cada mes.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "A aprender de las revisiones y auditorías para optimizar el sistema con el tiempo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Basado en el ciclo PDCA, el sistema evoluciona a medida que la organización aprende."
+        },
+        {
+          "texto": "A cambiar las normas de la empresa constantemente.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "A aumentar el número de empleados sin parar.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué exige la ISO 37301 respecto a las 'Acciones Correctivas'?",
+      "respuestas": [
+        {
+          "texto": "Que se aborden solo si hay tiempo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un proceso documentado para gestionar no conformidades con seguimiento de las acciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se requiere rigor en la solución de problemas detectados para que el CMS sea eficaz."
+        },
+        {
+          "texto": "Que se oculten las no conformidades a la alta dirección.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "No exige un proceso formal.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué información suele incluir una Matriz de Riesgos simplificada?",
+      "respuestas": [
+        {
+          "texto": "Amenaza, Probabilidad, Impacto y Nivel de Riesgo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la estructura básica para evaluar cada escenario de riesgo."
+        },
+        {
+          "texto": "Nombre del empleado y su salario.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Fecha de compra del servidor y garantía.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Solo el listado de leyes aplicables.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un diagrama de dependencias, ¿qué ocurre con el riesgo de un servicio?",
+      "respuestas": [
+        {
+          "texto": "Se mantiene igual aunque sus servidores fallen.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Es igual al mayor de todos los activos de los que depende.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si un servidor crítico tiene riesgo alto, el servicio que corre sobre él también lo tiene."
+        },
+        {
+          "texto": "Se divide por el número de activos tecnológicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Solo se ve afectado por el riesgo del personal.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es MAGERIT?",
+      "respuestas": [
+        {
+          "texto": "Un virus que afecta a servidores Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Una metodología española de análisis y gestión de riesgos en sistemas de información.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el estándar promovido por el CCN-CERT en España."
+        },
+        {
+          "texto": "Una marca de cortafuegos por hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un reglamento europeo de ciberseguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la frecuencia típica de una auditoría formal?",
+      "respuestas": [
+        {
+          "texto": "Cada 10 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Anual (una vez al año).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mientras que la supervisión es continua, la auditoría suele tener una frecuencia menor y planificada."
+        },
+        {
+          "texto": "Todos los lunes por la mañana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería más propio de actividades de supervisión o monitoreo."
+        },
+        {
+          "texto": "Solo cuando hay un incidente grave.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Debe ser proactiva y periódica para verificar la efectividad del sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe hacer la dirección ante cambios internos o externos relevantes?",
+      "respuestas": [
+        {
+          "texto": "Nada, el sistema no debe cambiar nunca.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Asegurar la eficacia del proceso de gestión adaptándose a los cambios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El sistema de gestión debe ser dinámico y responder a nuevas realidades."
+        },
+        {
+          "texto": "Esperar a la siguiente auditoría externa para actuar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La dirección debe supervisar el sistema de forma continua."
+        },
+        {
+          "texto": "Delegar toda la responsabilidad en los proveedores.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el enfoque de la ISO 22301?",
+      "respuestas": [
+        {
+          "texto": "Gestión de la calidad del producto final.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Gestión de la continuidad del negocio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ayuda a que la infraestructura crítica siga operando ante incidentes."
+        },
+        {
+          "texto": "Prevención de riesgos laborales físicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Gestión de residuos electrónicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué obliga el GDPR en toda la Unión Europea?",
+      "respuestas": [
+        {
+          "texto": "A comprar solo ordenadores fabricados en la UE.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "A proteger obligatoriamente los datos personales de los ciudadanos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una normativa vinculante y de obligado cumplimiento por ley."
+        },
+        {
+          "texto": "A instalar un firewall en cada casa particular.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Es solo una recomendación voluntaria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un reglamento obligatorio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué caracteriza a un activo de 'Infraestructura Física'?",
+      "respuestas": [
+        {
+          "texto": "Los servidores virtuales.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Las ubicaciones físicas donde se desarrollan los procesos (oficinas, datacenters).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Incluye edificios, plantas de producción y almacenes."
+        },
+        {
+          "texto": "Las bases de datos SQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto (es un activo lógico/de información)."
+        },
+        {
+          "texto": "La formación de los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es vital la 'Participación del Personal' en un CMS?",
+      "respuestas": [
+        {
+          "texto": "Para que puedan hacer auditorías ellos mismos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Porque el éxito del sistema depende de que el personal esté concienciado y formado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La dirección debe informar y concienciar a todos los niveles sobre los beneficios del sistema."
+        },
+        {
+          "texto": "Para que trabajen más horas gratis.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "No es necesaria si la dirección tiene las cosas claras.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe hacer un Compliance Officer con las 'Partes Interesadas' (terceros)?",
+      "respuestas": [
+        {
+          "texto": "Ocultarles el sistema de gestión por seguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Informarles sobre la implantación del sistema y sus beneficios (clientes, proveedores).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La comunicación con terceros afectados es un aspecto clave del sistema."
+        },
+        {
+          "texto": "Hacerles firmar un contrato de exclusividad obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "No tiene ninguna responsabilidad con ellos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una empresa tiene riesgos en la región 'Inaceptable'?",
+      "respuestas": [
+        {
+          "texto": "Se consideran riesgos aceptables si la empresa tiene dinero.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Deben ser tratados prioritariamente porque no son asumibles por la organización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se requiere una acción inmediata para mitigar el riesgo."
+        },
+        {
+          "texto": "Se deben borrar del informe para no asustar a la dirección.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Solo se tratan si sobran recursos al final del año.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función del catálogo de amenazas del anexo V de la AEPD?",
+      "respuestas": [
+        {
+          "texto": "Es un catálogo de hackers famosos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Proporcionar una guía práctica para evaluaciones de impacto en protección de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ayuda a identificar amenazas que comprometen la privacidad."
+        },
+        {
+          "texto": "Vender seguros contra robos de identidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Es un manual de leyes internacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Plan de Acción' tras un análisis de riesgos?",
+      "respuestas": [
+        {
+          "texto": "Una fiesta para celebrar que se terminó el análisis.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un conjunto de propuestas de mejora y proyectos para reducir los riesgos detectados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Suele presentarse con formato de proyecto e hitos temporales."
+        },
+        {
+          "texto": "Un listado de empleados que deben ser despedidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "El manual de instrucciones del antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el coste de equilibrio en la protección de un activo?",
+      "respuestas": [
+        {
+          "texto": "Gastar siempre lo máximo posible.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "El punto donde el coste de protección es proporcional al valor del riesgo que se mitiga.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No es eficiente gastar más en proteger algo que lo que vale el propio activo o el daño potencial."
+        },
+        {
+          "texto": "El precio de mercado de un firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Gastar cero euros en seguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué exige la ISO 37301 respecto al compromiso de la Alta Dirección?",
+      "respuestas": [
+        {
+          "texto": "Que solo asistan a una reunión al año.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Un rol activo, con asignación de recursos y rendición de cuentas clara.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La dirección es responsable última y debe liderar el cumplimiento."
+        },
+        {
+          "texto": "Que firmen los documentos sin leerlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "No es un requisito de esta norma.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia de 'Roles y Responsabilidades' entre ISO 19600 y 37301?",
+      "respuestas": [
+        {
+          "texto": "No hay diferencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La 37301 exige la asignación clara de roles con responsabilidades específicas para el CMS.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 19600 solo indicaba su importancia, pero no lo exigía formalmente."
+        },
+        {
+          "texto": "La 37301 elimina el puesto de Compliance Officer.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "La 19600 era más estricta en este punto.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que la gestión de riesgos debe basarse en datos 'Empíricos'?",
+      "respuestas": [
+        {
+          "texto": "Que se basa en suposiciones de internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Que utiliza datos objetivos del histórico de la propia empresa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Permite estimar la frecuencia de forma más precisa que las opiniones subjetivas."
+        },
+        {
+          "texto": "Que se basa solo en los horóscopos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Que son datos inventados por el auditor.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué sector aplica prioritariamente la directiva PSD2?",
+      "respuestas": [
+        {
+          "texto": "Salud.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Bancario y pagos digitales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Exige seguridad y transparencia en las transacciones electrónicas europeas."
+        },
+        {
+          "texto": "Energético.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Educativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un beneficio directo del cumplimiento normativo para una empresa?",
+      "respuestas": [
+        {
+          "texto": "Poder subir los precios sin justificación.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Mejorar la reputación y fortalecer la confianza de los clientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! También reduce el riesgo de sanciones legales."
+        },
+        {
+          "texto": "Evitar tener que pagar impuestos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sustituir a los empleados por robots.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aspecto NO debe faltar en un Sistema de Gestión según el material?",
+      "respuestas": [
+        {
+          "texto": "Servicio de cafetería gratuito.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Identificación y evaluación de los riesgos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin conocer las amenazas no se pueden proteger los objetivos de negocio."
+        },
+        {
+          "texto": "Uniforme obligatorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Uso exclusivo de Mac.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    }
+  ]
+}

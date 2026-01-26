@@ -1,0 +1,755 @@
+{
+  "tema": "Normativa de Ciberseguridad - UD1: Cumplimiento Normativo y Legal",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué se entiende por cumplimiento normativo (Compliance)?",
+      "respuestas": [
+        {
+          "texto": "La actuación de personas jurídicas para cumplir leyes, compromisos éticos y códigos de conducta.",
+          "correcta": true,
+          "explicacion": "El cumplimiento normativo implica actuar conforme a la legalidad y a los estándares éticos propios de la empresa."
+        },
+        {
+          "texto": "Únicamente el cumplimiento de las leyes penales del país.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Además de las leyes, incluye códigos de conducta internos y compromisos éticos."
+        },
+        {
+          "texto": "Un conjunto de normas opcionales para mejorar la imagen externa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Muchas de las normas son de obligado cumplimiento legal, no son opcionales."
+        },
+        {
+          "texto": "La gestión exclusiva de los recursos humanos de una empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una función transversal que afecta a riesgos legales, operativos y de reputación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia principal entre un Reglamento y una Directiva de la UE?",
+      "respuestas": [
+        {
+          "texto": "El Reglamento es de aplicación inmediata y la Directiva requiere trasposición nacional.",
+          "correcta": true,
+          "explicacion": "Los reglamentos obligan directamente tras su entrada en vigor, mientras que las directivas deben ser adaptadas por cada país a su legislación propia."
+        },
+        {
+          "texto": "La Directiva es obligatoria y el Reglamento es solo una recomendación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son vinculantes, pero difieren en su forma de aplicación."
+        },
+        {
+          "texto": "El Reglamento solo afecta a empresas públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta tanto a entidades públicas como privadas."
+        },
+        {
+          "texto": "No hay diferencia; son dos nombres para el mismo concepto legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen mecanismos de aplicación y efectos jurídicos distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué figura es responsable de supervisar y gestionar el Programa de Cumplimiento en una organización?",
+      "respuestas": [
+        {
+          "texto": "El Delegado de Prevención.",
+          "correcta": false,
+          "explicacion": "Esa figura se encarga de Riesgos Laborales, no del cumplimiento normativo general."
+        },
+        {
+          "texto": "El Compliance Officer.",
+          "correcta": true,
+          "explicacion": "Es el responsable de supervisar y gestionar todas las cuestiones relacionadas con el Programa de Compliance."
+        },
+        {
+          "texto": "El Director Comercial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. De hecho, el sueldo del Compliance Officer no debería depender de ventas para evitar conflictos de interés."
+        },
+        {
+          "texto": "Cualquier empleado administrativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Requiere una designación específica y responsabilidades claras."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley española vela por la privacidad de los datos personales en formato electrónico o papel?",
+      "respuestas": [
+        {
+          "texto": "LSSI-CE.",
+          "correcta": false,
+          "explicacion": "La LSSI-CE regula el comercio electrónico y servicios de internet, no específicamente la privacidad general."
+        },
+        {
+          "texto": "LOPDGDD.",
+          "correcta": true,
+          "explicacion": "La Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales traspone el RGPD a la legislación española."
+        },
+        {
+          "texto": "Ley de Propiedad Intelectual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta ley protege las creaciones literarias, artísticas o científicas."
+        },
+        {
+          "texto": "Ley General de Telecomunicaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Regula el sector de las comunicaciones, no la protección de datos general."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'dato personal' según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Solo el nombre y el número de DNI.",
+          "correcta": false,
+          "explicacion": "Es una definición demasiado limitada; incluye cualquier información que identifique a la persona."
+        },
+        {
+          "texto": "Toda información sobre una persona física identificada o identificable.",
+          "correcta": true,
+          "explicacion": "Incluye identificadores como nombres, números, datos de localización o factores específicos de su identidad física o social."
+        },
+        {
+          "texto": "Cualquier información corporativa de una empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos corporativos (CIF, marcas) quedan fuera del ámbito de datos personales."
+        },
+        {
+          "texto": "Únicamente la información médica de un paciente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos médicos son categorías especiales, pero no los únicos datos personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio del RGPD establece que los datos deben ser exactos y actualizados?",
+      "respuestas": [
+        {
+          "texto": "Principio de integridad.",
+          "correcta": false,
+          "explicacion": "La integridad se refiere a la seguridad y protección contra tratamientos no autorizados."
+        },
+        {
+          "texto": "Principio de minimización.",
+          "correcta": false,
+          "explicacion": "La minimización implica pedir solo los datos estrictamente necesarios."
+        },
+        {
+          "texto": "Principio de exactitud.",
+          "correcta": true,
+          "explicacion": "Obliga a que los datos sean correctos, suprimiendo o rectificando los inexactos sin dilación."
+        },
+        {
+          "texto": "Principio de licitud.",
+          "correcta": false,
+          "explicacion": "La licitud se refiere a que el tratamiento tenga una base legal válida."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué empresas obliga la Ley 25/2013 a emitir facturas electrónicas desde 2015?",
+      "respuestas": [
+        {
+          "texto": "A todas las tiendas online españolas.",
+          "correcta": false,
+          "explicacion": "No todas las tiendas online están obligadas por esta ley específica, solo las que trabajan con el sector público."
+        },
+        {
+          "texto": "A las empresas que tienen relación comercial con la Administración Pública.",
+          "correcta": true,
+          "explicacion": "Esta ley impulsa la factura electrónica obligatoria en el Sector Público."
+        },
+        {
+          "texto": "Solo a las grandes multinacionales tecnológicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a cualquier empresa, independientemente de su tamaño, si factura a la Administración."
+        },
+        {
+          "texto": "A las empresas de menos de 10 trabajadores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación no depende del número de empleados."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el plazo máximo para notificar una brecha de seguridad a las autoridades según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "24 horas.",
+          "correcta": false,
+          "explicacion": "Es un plazo demasiado corto; el reglamento otorga un margen mayor."
+        },
+        {
+          "texto": "72 horas.",
+          "correcta": true,
+          "explicacion": "Las violaciones de seguridad con riesgo para la privacidad deben notificarse en un máximo de 72 horas."
+        },
+        {
+          "texto": "15 días hábiles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cumplimiento debe ser mucho más rápido para mitigar riesgos."
+        },
+        {
+          "texto": "Un mes natural.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un mes es el plazo para responder a derechos de rectificación, no para brechas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué regula el artículo 22 de la LSSI-CE?",
+      "respuestas": [
+        {
+          "texto": "El uso de la firma electrónica.",
+          "correcta": false,
+          "explicacion": "La firma electrónica se regula por su propia ley (59/2003)."
+        },
+        {
+          "texto": "La utilización de cookies en páginas web.",
+          "correcta": true,
+          "explicacion": "Establece la obligación de informar y obtener el consentimiento para instalar cookies."
+        },
+        {
+          "texto": "Las sanciones por spam telefónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se centra en el almacenamiento y recuperación de datos en equipos terminales."
+        },
+        {
+          "texto": "El registro de nombres de dominio .es.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los dominios se rigen por normativa específica gestionada por Red.es."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de obras protege la Ley de Propiedad Intelectual (LPI)?",
+      "respuestas": [
+        {
+          "texto": "Solo libros físicos impresos.",
+          "correcta": false,
+          "explicacion": "Es una visión incompleta; protege obras en cualquier soporte."
+        },
+        {
+          "texto": "Creaciones literarias, artísticas o científicas, incluyendo programas de ordenador.",
+          "correcta": true,
+          "explicacion": "La LPI protege libros, fotos, gráficos, planos y explícitamente el software (programas de ordenador)."
+        },
+        {
+          "texto": "Únicamente las marcas y logotipos comerciales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Propiedad Industrial, no Intelectual."
+        },
+        {
+          "texto": "Solo los secretos industriales de fabricación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los secretos industriales tienen su propia protección legal separada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia a los derechos 'morales' de los 'patrimoniales' en la LPI española?",
+      "respuestas": [
+        {
+          "texto": "Los morales se pueden vender y los patrimoniales no.",
+          "correcta": false,
+          "explicacion": "Es justo al revés; los patrimoniales son los que se pueden explotar económicamente."
+        },
+        {
+          "texto": "Los morales son inalienables e irrenunciables; los patrimoniales regulan la explotación y copia.",
+          "correcta": true,
+          "explicacion": "El autor siempre conserva el derecho moral al reconocimiento de autoría, mientras que puede ceder los derechos de explotación."
+        },
+        {
+          "texto": "No hay diferencia real en la ley española.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La distinción es fundamental en nuestro ordenamiento jurídico."
+        },
+        {
+          "texto": "Los derechos morales solo duran 2 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los derechos morales suelen ser perpetuos para el autor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién asigna en España los nombres de dominio de segundo nivel (como '.es')?",
+      "respuestas": [
+        {
+          "texto": "ICANN.",
+          "correcta": false,
+          "explicacion": "ICANN gestiona dominios genéricos (como .com), no los territoriales de España."
+        },
+        {
+          "texto": "Red.es.",
+          "correcta": true,
+          "explicacion": "Es la autoridad encargada de asignar los dominios territoriales de España."
+        },
+        {
+          "texto": "La Oficina Española de Patentes y Marcas (OEPM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La OEPM gestiona marcas, pero no nombres de dominio."
+        },
+        {
+          "texto": "Telefónica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un operador, no la autoridad de registro."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del Buen Gobierno corporativo?",
+      "respuestas": [
+        {
+          "texto": "Maximizar los beneficios a cualquier precio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El buen gobierno establece que 'no todo vale' para ganar dinero."
+        },
+        {
+          "texto": "Evitar prácticas corruptas y ofrecer transparencia a clientes e inversores.",
+          "correcta": true,
+          "explicacion": "Busca garantizar la veracidad, confianza y transparencia en la gestión de la empresa."
+        },
+        {
+          "texto": "Sustituir a las leyes nacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un mecanismo complementario para garantizar el cumplimiento de dichas leyes."
+        },
+        {
+          "texto": "Reducir el número de empleados para ser más eficientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación directa con la gestión de plantilla."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una empresa no tiene contrato escrito con un empleado sobre la explotación de una obra?",
+      "respuestas": [
+        {
+          "texto": "La empresa nunca podrá usar la obra.",
+          "correcta": false,
+          "explicacion": "La ley prevé una cesión tácita limitada si no hay contrato."
+        },
+        {
+          "texto": "Se supone una cesión tácita de explotación por 2 años y solo para la actividad de la empresa.",
+          "correcta": true,
+          "explicacion": "Es la solución por defecto que establece el artículo 51 de la LPI si no se pacta otra cosa por escrito."
+        },
+        {
+          "texto": "La empresa se convierte en autora legal de la obra para siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El autor real siempre es la persona física que la crea."
+        },
+        {
+          "texto": "El empleado debe pagar a la empresa por haber usado sus equipos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ley protege los derechos del creador."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de protección de datos, ¿qué es un 'Encargado del Tratamiento'?",
+      "respuestas": [
+        {
+          "texto": "La persona que decide los fines y medios del tratamiento.",
+          "correcta": false,
+          "explicacion": "Esa descripción corresponde al 'Responsable del Tratamiento'."
+        },
+        {
+          "texto": "La empresa que realiza un tratamiento por encargo de otra (ej. una gestoría).",
+          "correcta": true,
+          "explicacion": "Trata datos de los que otra empresa es responsable para cumplir un servicio contratado."
+        },
+        {
+          "texto": "El cliente que entrega sus datos a la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el 'Interesado' o 'Afectado'."
+        },
+        {
+          "texto": "El inspector de la Agencia Española de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el agente de la Autoridad de Control."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica permite identificar a una persona mediante información adicional que figura por separado?",
+      "respuestas": [
+        {
+          "texto": "Anonimización.",
+          "correcta": false,
+          "explicacion": "La anonimización es irreversible; no permite volver a identificar al sujeto."
+        },
+        {
+          "texto": "Seudonimización.",
+          "correcta": true,
+          "explicacion": "Permite la identificación solo mediante información adicional protegida y separada."
+        },
+        {
+          "texto": "Cifrado simétrico.",
+          "correcta": false,
+          "explicacion": "El cifrado es una medida de seguridad, pero no define el estado del dato como la seudonimización."
+        },
+        {
+          "texto": "Indexación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La indexación es una forma de organizar datos, no una técnica de privacidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo es obligatorio nombrar a un Delegado de Protección de Datos (DPD)?",
+      "respuestas": [
+        {
+          "texto": "En todas las pymes de menos de 10 trabajadores.",
+          "correcta": false,
+          "explicacion": "Generalmente no es obligatorio para pymes pequeñas a menos que realicen tratamientos específicos de riesgo."
+        },
+        {
+          "texto": "Cuando se realizan tratamientos de datos a gran escala o de categorías especiales.",
+          "correcta": true,
+          "explicacion": "Es obligatorio para autoridades públicas y empresas que monitorizan a gran escala o tratan datos sensibles."
+        },
+        {
+          "texto": "Solo si la empresa ha tenido una sanción previa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación depende de la actividad, no del historial de sanciones."
+        },
+        {
+          "texto": "Cuando la empresa tiene más de 500 empleados, sin importar qué datos trate.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral de empleados no es el único factor, sino el tipo de tratamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica el principio de 'Responsabilidad Proactiva' (Accountability)?",
+      "respuestas": [
+        {
+          "texto": "Que el usuario es responsable de proteger sus propios datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad recae sobre quien trata los datos."
+        },
+        {
+          "texto": "Que las empresas deben aplicar medidas técnicas y organizativas y poder demostrar su cumplimiento.",
+          "correcta": true,
+          "explicacion": "No basta con cumplir; hay que estar en condiciones de demostrar que se cumple ante las autoridades."
+        },
+        {
+          "texto": "Que el Estado pagará las multas en caso de hackeo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El responsable del tratamiento asume las consecuencias."
+        },
+        {
+          "texto": "Que solo hay que actuar después de que ocurra un problema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La proactividad exige prevenir antes de que ocurra el daño."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué busca la 'Privacidad desde el diseño'?",
+      "respuestas": [
+        {
+          "texto": "Añadir seguridad solo cuando el producto ya está a la venta.",
+          "correcta": false,
+          "explicacion": "Eso sería reactivo; el diseño exige integración inicial."
+        },
+        {
+          "texto": "Integrar medidas de protección de datos desde la fase inicial de concepción de un producto o servicio.",
+          "correcta": true,
+          "explicacion": "La privacidad se considera una parte integral del desarrollo, no un añadido posterior."
+        },
+        {
+          "texto": "Ocultar el diseño del software para que no lo copien.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso se refiere a secretos comerciales o propiedad industrial."
+        },
+        {
+          "texto": "Hacer que los términos y condiciones sean difíciles de leer.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD exige transparencia y lenguaje claro."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la norma ISO 27001 en una empresa?",
+      "respuestas": [
+        {
+          "texto": "Garantizar que los empleados cobran el sueldo mínimo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con normativas laborales."
+        },
+        {
+          "texto": "Establecer un estándar para implantar un Sistema de Gestión de Seguridad de la Información.",
+          "correcta": true,
+          "explicacion": "Es un estándar internacional de 'mejores prácticas' para gestionar la seguridad."
+        },
+        {
+          "texto": "Obligar por ley a todas las tiendas físicas a tener cámaras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los estándares ISO son generalmente de adopción voluntaria."
+        },
+        {
+          "texto": "Regular el reciclaje de residuos tecnológicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa sería una norma de gestión ambiental (como ISO 14001)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué información debe mostrar obligatoriamente una web con fines comerciales según la LSSI-CE?",
+      "respuestas": [
+        {
+          "texto": "Solo el catálogo de productos.",
+          "correcta": false,
+          "explicacion": "Es insuficiente; la ley exige datos de identificación legal."
+        },
+        {
+          "texto": "Denominación social, NIF, domicilio y datos de inscripción registral.",
+          "correcta": true,
+          "explicacion": "Son datos mínimos para que el consumidor sepa quién está detrás de la actividad económica."
+        },
+        {
+          "texto": "La biografía completa del fundador de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un requisito legal."
+        },
+        {
+          "texto": "El código fuente de la página para demostrar transparencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso podría comprometer la seguridad y la propiedad intelectual."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué derecho permite a un ciudadano solicitar que se borren sus datos personales de internet?",
+      "respuestas": [
+        {
+          "texto": "Derecho de oposición.",
+          "correcta": false,
+          "explicacion": "El derecho de oposición sirve para detener un tratamiento específico, no necesariamente para borrar el dato."
+        },
+        {
+          "texto": "Derecho a la supresión (o derecho al olvido).",
+          "correcta": true,
+          "explicacion": "Es el derecho a que se eliminen los datos cuando ya no son necesarios o el consentimiento se retira."
+        },
+        {
+          "texto": "Derecho de acceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El acceso permite saber qué datos tienen sobre nosotros."
+        },
+        {
+          "texto": "Derecho de portabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La portabilidad permite llevar los datos de un proveedor a otro."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se define el 'tratamiento' de datos según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Solo el acto de vender los datos a terceros.",
+          "correcta": false,
+          "explicacion": "Es una definición muy pobre; el tratamiento incluye casi cualquier acción."
+        },
+        {
+          "texto": "Cualquier operación realizada sobre datos personales, como recogida, registro, consulta o supresión.",
+          "correcta": true,
+          "explicacion": "Incluye tanto procesos automatizados como manuales de gestión de la información."
+        },
+        {
+          "texto": "Solo el almacenamiento de datos en servidores en la nube.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Consultar una ficha en papel también es tratamiento."
+        },
+        {
+          "texto": "La reparación física de los discos duros que contienen datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es mantenimiento de hardware, no tratamiento de datos per se."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'activo' bajo protección de Propiedad Industrial?",
+      "respuestas": [
+        {
+          "texto": "Una novela escrita por un empleado.",
+          "correcta": false,
+          "explicacion": "Eso entra en Propiedad Intelectual."
+        },
+        {
+          "texto": "Una marca, un nombre comercial o una patente.",
+          "correcta": true,
+          "explicacion": "Son creaciones inmateriales relacionadas con la industria y el comercio protegidas por la OEPM."
+        },
+        {
+          "texto": "Un edificio de oficinas propiedad de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es propiedad inmobiliaria (tangible)."
+        },
+        {
+          "texto": "El código fuente de una aplicación móvil propia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El software se protege por Propiedad Intelectual (como obra literaria)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el sueldo de un Compliance Officer no debe depender de las ventas?",
+      "respuestas": [
+        {
+          "texto": "Porque ya cobran demasiado dinero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene que ver con la cuantía, sino con el incentivo."
+        },
+        {
+          "texto": "Para evitar conflictos de interés y asegurar su objetividad al supervisar normas.",
+          "correcta": true,
+          "explicacion": "Si dependiera de las ventas, podría verse tentado a ignorar incumplimientos para no frenar el negocio."
+        },
+        {
+          "texto": "Porque la ley dice que deben ser voluntarios sin sueldo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son profesionales que reciben una remuneración por su alta responsabilidad."
+        },
+        {
+          "texto": "Para que no tengan relación con el departamento comercial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Deben tener relación con todos, pero con independencia jerárquica y de incentivos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Responsabilidad Social Corporativa' (RSC) según la ISO 26000?",
+      "respuestas": [
+        {
+          "texto": "La obligación de pagar impuestos en el país de origen.",
+          "correcta": false,
+          "explicacion": "Eso es cumplimiento fiscal básico, no RSC."
+        },
+        {
+          "texto": "Hacer las cosas bien desde el principio, considerando el impacto en la sociedad y el medio ambiente.",
+          "correcta": true,
+          "explicacion": "Implica un compromiso ético voluntario que va más allá de la ley."
+        },
+        {
+          "texto": "Organizar cenas de empresa cada navidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene impacto social o ético relevante."
+        },
+        {
+          "texto": "Garantizar que no haya sindicatos en la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. De hecho, la RSC suele fomentar el diálogo social."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento ayuda a alinear el cumplimiento del RGPD con la seguridad técnica en una pyme?",
+      "respuestas": [
+        {
+          "texto": "El balance de situación contable.",
+          "correcta": false,
+          "explicacion": "Es un documento financiero, no técnico-legal."
+        },
+        {
+          "texto": "El Plan Director de Seguridad (PDS).",
+          "correcta": true,
+          "explicacion": "El PDS integra objetivos de seguridad con el cumplimiento de normativas como el RGPD."
+        },
+        {
+          "texto": "La guía de teléfonos interna.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene valor normativo o de seguridad."
+        },
+        {
+          "texto": "El contrato de alquiler de las oficinas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un documento legal pero ajeno a la ciberseguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A quién debe informar un proveedor de acceso a internet (ISP) sobre amenazas como virus o spam?",
+      "respuestas": [
+        {
+          "texto": "Solo a la policía si hay un robo.",
+          "correcta": false,
+          "explicacion": "Debe informar proactivamente a sus propios usuarios."
+        },
+        {
+          "texto": "A sus usuarios, sobre medios técnicos de protección y herramientas de filtrado.",
+          "correcta": true,
+          "explicacion": "Es una obligación de transparencia e información según la normativa de servicios de internet."
+        },
+        {
+          "texto": "A los fabricantes de antivirus para que les den comisiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación es de protección al cliente, no comercial."
+        },
+        {
+          "texto": "A nadie, para no asustar a los clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La falta de información puede acarrear responsabilidades legales al ISP."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley establece medidas para proteger infraestructuras fundamentales ante ataques terroristas?",
+      "respuestas": [
+        {
+          "texto": "Ley de Marcas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las marcas no tienen relación con infraestructuras críticas."
+        },
+        {
+          "texto": "Ley 8/2011 de Protección de Infraestructuras Críticas.",
+          "correcta": true,
+          "explicacion": "Regula la protección de servicios esenciales (energía, agua, transporte) frente a amenazas graves."
+        },
+        {
+          "texto": "Reglamento General de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD protege datos, no infraestructuras físicas o de red críticas."
+        },
+        {
+          "texto": "Ley del Juego.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Regula casinos y apuestas online."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'ética empresarial' según los materiales del curso?",
+      "respuestas": [
+        {
+          "texto": "Un conjunto de trucos para pagar menos impuestos legalmente.",
+          "correcta": false,
+          "explicacion": "Eso sería ingeniería fiscal, a menudo contraria a la ética empresarial."
+        },
+        {
+          "texto": "Valores y principios por los cuales se rige una empresa en sus acciones y actividades.",
+          "correcta": true,
+          "explicacion": "Busca mejorar la reputación, evitar corrupción y fomentar un buen ambiente laboral."
+        },
+        {
+          "texto": "La obligación de que el jefe sea siempre amable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un concepto mucho más amplio de gestión organizacional y responsabilidad."
+        },
+        {
+          "texto": "Un documento que se firma pero no hace falta cumplir.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para que sea real, debe ser coherente y alcanzable."
+        }
+      ]
+    }
+  ]
+}

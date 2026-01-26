@@ -1,0 +1,1505 @@
+{
+  "tema": "Seguridad de la Información y Concienciación (Basado en documentación CCN-CERT e INCIBE)",
+  "preguntas": [
+    {
+      "pregunta": "Según el módulo de Introducción, ¿cuál es la diferencia principal entre 'Seguridad de la Información' y 'Seguridad Informática'?",
+      "respuestas": [
+        {
+          "texto": "Son sinónimos y se utilizan indistintamente en el entorno empresarial.",
+          "correcta": false,
+          "explicacion": "El texto especifica claramente que no son sinónimos."
+        },
+        {
+          "texto": "La seguridad informática es más amplia y engloba a la seguridad de la información.",
+          "correcta": false,
+          "explicacion": "Es al revés, la seguridad de la información engloba a la informática."
+        },
+        {
+          "texto": "La seguridad informática se limita a la información automatizada (sistemas), mientras que la seguridad de la información protege la información en todas sus formas (oral, escrita, electrónica).",
+          "correcta": true,
+          "explicacion": "Correcto. La seguridad de la información protege el activo 'información' en cualquier soporte o estado, mientras que la informática se centra en los sistemas TIC."
+        },
+        {
+          "texto": "La seguridad de la información se ocupa solo de la protección legal de los datos.",
+          "correcta": false,
+          "explicacion": "La seguridad de la información abarca aspectos técnicos, organizativos y legales, no solo legales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Además de la tríada clásica (Confidencialidad, Integridad, Disponibilidad), ¿qué otras dimensiones de la seguridad contempla la legislación vigente y el Esquema Nacional de Seguridad?",
+      "respuestas": [
+        {
+          "texto": "Rapidez y Eficiencia.",
+          "correcta": false,
+          "explicacion": "Estas son métricas de rendimiento, no dimensiones de seguridad."
+        },
+        {
+          "texto": "Autenticidad y Trazabilidad.",
+          "correcta": true,
+          "explicacion": "El documento menciona explícitamente Autenticidad (garantía de identidad) y Trazabilidad (rastreo de acciones) como dimensiones adicionales clave."
+        },
+        {
+          "texto": "Usabilidad y Accesibilidad.",
+          "correcta": false,
+          "explicacion": "Son atributos de calidad de software, pero no dimensiones de seguridad de la información."
+        },
+        {
+          "texto": "Portabilidad y Escalabilidad.",
+          "correcta": false,
+          "explicacion": "Son características de arquitectura de sistemas, no dimensiones de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la gestión de seguridad, ¿qué es un control o salvaguarda?",
+      "respuestas": [
+        {
+          "texto": "Una auditoría externa realizada anualmente.",
+          "correcta": false,
+          "explicacion": "La auditoría es un proceso de revisión, no el control en sí mismo."
+        },
+        {
+          "texto": "Un software antivirus exclusivamente.",
+          "correcta": false,
+          "explicacion": "Un antivirus es un tipo de control técnico, pero la definición es más amplia."
+        },
+        {
+          "texto": "Cualquier práctica, procedimiento o mecanismo diseñado para reducir el nivel de riesgo.",
+          "correcta": true,
+          "explicacion": "Esta es la definición correcta; abarca medidas técnicas, organizativas y legales para mitigar riesgos."
+        },
+        {
+          "texto": "El análisis forense posterior a un incidente.",
+          "correcta": false,
+          "explicacion": "El análisis forense es una actividad reactiva, mientras que un control busca reducir el riesgo (aunque puede ser correctivo)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Guía CCN-CERT BP/01, ¿qué caracteriza a una Amenaza Persistente Avanzada (APT)?",
+      "respuestas": [
+        {
+          "texto": "Son ataques masivos y rápidos que buscan afectar al mayor número de usuarios en minutos.",
+          "correcta": false,
+          "explicacion": "Las APT son dirigidas y lentas, no masivas y rápidas."
+        },
+        {
+          "texto": "Es un ataque dirigido, sofisticado, que busca mantenerse en el sistema de forma prolongada y sigilosa para exfiltrar información.",
+          "correcta": true,
+          "explicacion": "Correcto. Las claves son: dirigido, persistente (larga duración), sigiloso y enfocado en objetivos de alto valor (espionaje, robo de datos)."
+        },
+        {
+          "texto": "Son ataques realizados exclusivamente por 'script kiddies' usando herramientas básicas.",
+          "correcta": false,
+          "explicacion": "Las APT suelen estar patrocinadas por Estados o grandes organizaciones criminales, con altos recursos."
+        },
+        {
+          "texto": "Se basan únicamente en la denegación de servicio (DDoS).",
+          "correcta": false,
+          "explicacion": "Aunque pueden usar DDoS, su objetivo principal suele ser el robo de información, no solo la interrupción."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la red TOR, ¿cómo se garantiza el anonimato de la comunicación?",
+      "respuestas": [
+        {
+          "texto": "Se establece una conexión VPN directa con el servidor destino.",
+          "correcta": false,
+          "explicacion": "TOR no es una VPN directa; usa un circuito de nodos."
+        },
+        {
+          "texto": "Se crea un circuito virtual con tres nodos aleatorios donde la información se cifra en capas, descifrándose una capa en cada salto.",
+          "correcta": true,
+          "explicacion": "El documento explica que TOR usa 3 nodos (entrada, medio, salida) y el cifrado por capas (cebolla) asegura que ningún nodo conoce origen y destino simultáneamente."
+        },
+        {
+          "texto": "El navegador bloquea las cookies y el historial, impidiendo el rastreo.",
+          "correcta": false,
+          "explicacion": "Eso es navegación privada local, no anonimato en la red como ofrece TOR."
+        },
+        {
+          "texto": "Se utiliza un servidor proxy único que oculta la IP de origen.",
+          "correcta": false,
+          "explicacion": "TOR es más complejo que un simple proxy, utilizando múltiples saltos para mayor anonimato."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia fundamental existe entre el 'Borrado seguro' de datos y el formateo estándar de un disco?",
+      "respuestas": [
+        {
+          "texto": "El formateo elimina los datos permanentemente, mientras que el borrado seguro los guarda en una papelera oculta.",
+          "correcta": false,
+          "explicacion": "Es al revés, el formateo estándar a menudo permite la recuperación."
+        },
+        {
+          "texto": "El borrado seguro implica la sobrescritura de los datos (wiping) varias veces para hacerlos irrecuperables, mientras que el formateo puede dejar los datos latentes.",
+          "correcta": true,
+          "explicacion": "El formateo suele borrar solo la tabla de asignación de archivos. El borrado seguro sobrescribe físicamente los sectores del disco para impedir recuperación forense."
+        },
+        {
+          "texto": "No hay diferencia técnica, es solo terminología legal.",
+          "correcta": false,
+          "explicacion": "Existe una gran diferencia técnica en cómo se tratan los bits en el disco."
+        },
+        {
+          "texto": "El borrado seguro solo se aplica a cintas magnéticas.",
+          "correcta": false,
+          "explicacion": "Aplica a discos duros, SSDs, USBs, etc."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los metadatos en un documento ofimático y por qué suponen un riesgo?",
+      "respuestas": [
+        {
+          "texto": "Son virus incrustados que se ejecutan al abrir el archivo.",
+          "correcta": false,
+          "explicacion": "Eso es malware/macros, no metadatos."
+        },
+        {
+          "texto": "Es información oculta (autor, tiempo de edición, versiones previas, software usado) que puede revelar datos sensibles no visibles en el cuerpo del documento.",
+          "correcta": true,
+          "explicacion": "Correcto. Los metadatos pueden filtrar nombres de usuarios, rutas de servidores o comentarios internos que no deberían ser públicos."
+        },
+        {
+          "texto": "Son los datos cifrados que protegen el documento con contraseña.",
+          "correcta": false,
+          "explicacion": "El cifrado protege el contenido; los metadatos describen el contenido."
+        },
+        {
+          "texto": "Son errores de formato que corrompen el archivo.",
+          "correcta": false,
+          "explicacion": "Los metadatos son una característica funcional, no un error."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de 'Protección del puesto de trabajo', ¿qué es la política de 'Mesas Limpias'?",
+      "respuestas": [
+        {
+          "texto": "Una normativa de higiene para evitar enfermedades en la oficina.",
+          "correcta": false,
+          "explicacion": "Se refiere a seguridad de la información, no a higiene sanitaria."
+        },
+        {
+          "texto": "La obligación de guardar bajo llave o destruir documentación sensible y bloquear el equipo al ausentarse del puesto o finalizar la jornada.",
+          "correcta": true,
+          "explicacion": "Evita el acceso no autorizado a información física (papeles, post-its) o lógica (pantalla desbloqueada) cuando el usuario no está."
+        },
+        {
+          "texto": "La prohibición de comer o beber cerca de los equipos informáticos.",
+          "correcta": false,
+          "explicacion": "Aunque es una buena práctica, 'Mesas Limpias' se enfoca en la confidencialidad de la información expuesta."
+        },
+        {
+          "texto": "La obligación de formatear el ordenador cada mes.",
+          "correcta": false,
+          "explicacion": "Eso sería una medida técnica extrema e ineficiente, no relacionada con el concepto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principal riesgo asociado al uso de dispositivos USB (pendrives) en la empresa?",
+      "respuestas": [
+        {
+          "texto": "Que tienen poca capacidad de almacenamiento.",
+          "correcta": false,
+          "explicacion": "Actualmente tienen gran capacidad, lo cual aumenta el riesgo de exfiltración masiva."
+        },
+        {
+          "texto": "Su alto coste económico.",
+          "correcta": false,
+          "explicacion": "Son dispositivos muy económicos."
+        },
+        {
+          "texto": "La facilidad de pérdida/robo con información sensible y la posibilidad de introducir malware en la red corporativa.",
+          "correcta": true,
+          "explicacion": "Son los dos grandes vectores: fuga de datos (si no están cifrados) e infección (si traen malware de fuera)."
+        },
+        {
+          "texto": "Son incompatibles con la mayoría de sistemas modernos.",
+          "correcta": false,
+          "explicacion": "Siguen siendo un estándar universal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la formación en concienciación, ¿cuál es el objetivo final de un programa de concienciación eficaz?",
+      "respuestas": [
+        {
+          "texto": "Cumplir con el expediente para evitar multas del RGPD.",
+          "correcta": false,
+          "explicacion": "El cumplimiento es una consecuencia o ventaja, no el objetivo final."
+        },
+        {
+          "texto": "Que los empleados memoricen todas las políticas de seguridad.",
+          "correcta": false,
+          "explicacion": "Memorizar no implica actuar correctamente en situaciones de estrés."
+        },
+        {
+          "texto": "Modificar el comportamiento de los empleados para crear una cultura de seguridad donde actúen como un 'cortafuegos humano'.",
+          "correcta": true,
+          "explicacion": "El documento enfatiza el cambio de comportamiento y la creación de cultura por encima de la simple transmisión de información."
+        },
+        {
+          "texto": "Enseñar a los empleados a configurar firewalls y antivirus.",
+          "correcta": false,
+          "explicacion": "Esa es formación técnica para personal de IT, no concienciación general."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de incidentes, ¿cuál es la diferencia entre 'Tasa de clics' (Phish-prone percentage) y 'Tasa de reportes'?",
+      "respuestas": [
+        {
+          "texto": "La tasa de clics mide quién cae en la trampa, mientras que la tasa de reportes mide quién notifica activamente la amenaza.",
+          "correcta": true,
+          "explicacion": "Correcto. La tasa de reportes es actualmente considerada la métrica más importante de éxito (cultura activa)."
+        },
+        {
+          "texto": "La tasa de reportes mide cuántos correos recibe el usuario.",
+          "correcta": false,
+          "explicacion": "Mide la acción del usuario de informar a seguridad, no el volumen recibido."
+        },
+        {
+          "texto": "Son la misma métrica con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Miden comportamientos opuestos (fallar vs. alertar)."
+        },
+        {
+          "texto": "La tasa de clics solo aplica a malware, no a phishing.",
+          "correcta": false,
+          "explicacion": "La tasa de clics es la métrica estándar para simulaciones de phishing."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Ransomware' y a qué dimensión de la seguridad afecta principalmente en primera instancia?",
+      "respuestas": [
+        {
+          "texto": "Un software espía que afecta a la Confidencialidad.",
+          "correcta": false,
+          "explicacion": "Aunque la doble extorsión afecta la confidencialidad, el impacto inmediato primario es otro."
+        },
+        {
+          "texto": "Un malware que cifra los datos y pide un rescate, afectando principalmente a la Disponibilidad (Riesgo Operativo).",
+          "correcta": true,
+          "explicacion": "Al cifrar los datos, la empresa no puede operar (Disponibilidad). Posteriormente puede haber extorsión por filtración (Confidencialidad)."
+        },
+        {
+          "texto": "Un ataque de denegación de servicio distribuido.",
+          "correcta": false,
+          "explicacion": "Un DDoS satura el servicio, el ransomware secuestra los datos/sistemas."
+        },
+        {
+          "texto": "Una técnica de ingeniería social telefónica.",
+          "correcta": false,
+          "explicacion": "Eso sería Vishing."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el documento de 'Protección del puesto de trabajo', ¿por qué se deben limitar los permisos de administración (usuario administrador) en los equipos locales?",
+      "respuestas": [
+        {
+          "texto": "Para ahorrar costes de licencias de software.",
+          "correcta": false,
+          "explicacion": "No tiene relación directa con el coste de licencias."
+        },
+        {
+          "texto": "Porque si un malware infecta el equipo, heredará los permisos del usuario; si es administrador, el daño será mucho mayor y más difícil de revertir.",
+          "correcta": true,
+          "explicacion": "El principio de mínimo privilegio es clave. Un usuario estándar limita el alcance de una infección."
+        },
+        {
+          "texto": "Para que el usuario no pueda cambiar el fondo de pantalla.",
+          "correcta": false,
+          "explicacion": "Es un efecto secundario trivial, no la razón de seguridad."
+        },
+        {
+          "texto": "Para mejorar la velocidad de internet del equipo.",
+          "correcta": false,
+          "explicacion": "Los permisos no afectan al ancho de banda."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es BYOD (Bring Your Own Device) y cuál es su principal riesgo?",
+      "respuestas": [
+        {
+          "texto": "Es la política de comprar equipos baratos. El riesgo es que se rompen.",
+          "correcta": false,
+          "explicacion": "BYOD se refiere al uso de dispositivos personales."
+        },
+        {
+          "texto": "El uso de dispositivos personales para fines laborales. El riesgo es la falta de control corporativo sobre la seguridad de esos dispositivos y la mezcla de datos.",
+          "correcta": true,
+          "explicacion": "Los dispositivos personales suelen carecer de las medidas de seguridad corporativas (DLP, antivirus gestionado, cifrado), exponiendo datos de la empresa."
+        },
+        {
+          "texto": "Es un protocolo de red inalámbrica.",
+          "correcta": false,
+          "explicacion": "No es un protocolo técnico, es una tendencia/política organizativa."
+        },
+        {
+          "texto": "La prohibición total de usar móviles en el trabajo.",
+          "correcta": false,
+          "explicacion": "Al contrario, es permitir su uso."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de contraseñas, ¿qué práctica se considera insegura según las guías?",
+      "respuestas": [
+        {
+          "texto": "Usar gestores de contraseñas.",
+          "correcta": false,
+          "explicacion": "Las guías recomiendan gestores de contraseñas (como KeePass) para manejar claves complejas."
+        },
+        {
+          "texto": "Compartir contraseñas genéricas entre varios usuarios.",
+          "correcta": true,
+          "explicacion": "Esto impide la trazabilidad (saber quién hizo qué) y aumenta el riesgo si un empleado deja la empresa."
+        },
+        {
+          "texto": "Cambiar la contraseña si se sospecha de un compromiso.",
+          "correcta": false,
+          "explicacion": "Esto es una práctica recomendada."
+        },
+        {
+          "texto": "Usar una longitud mínima de 8 caracteres alfanuméricos.",
+          "correcta": false,
+          "explicacion": "Es un requisito mínimo estándar de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Ingeniería Social?",
+      "respuestas": [
+        {
+          "texto": "El diseño de infraestructuras de red social.",
+          "correcta": false,
+          "explicacion": "No tiene que ver con ingeniería civil o arquitectura social."
+        },
+        {
+          "texto": "Técnicas de manipulación psicológica para engañar a las personas y obtener información confidencial o acceso a sistemas.",
+          "correcta": true,
+          "explicacion": "Ataca al 'firewall humano', explotando sesgos cognitivos, urgencia, autoridad, etc."
+        },
+        {
+          "texto": "El uso de redes sociales para marketing.",
+          "correcta": false,
+          "explicacion": "Es marketing, no un ataque de seguridad."
+        },
+        {
+          "texto": "Un ataque de fuerza bruta contra contraseñas.",
+          "correcta": false,
+          "explicacion": "La fuerza bruta es técnica; la ingeniería social es psicológica/humana."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la normativa legal española mencionada (LOPD, ENS), ¿cuál es el objetivo del Esquema Nacional de Seguridad (ENS)?",
+      "respuestas": [
+        {
+          "texto": "Regular el comercio electrónico en empresas privadas.",
+          "correcta": false,
+          "explicacion": "Eso suele recaer en la LSSI."
+        },
+        {
+          "texto": "Crear los principios y requisitos de seguridad para la protección de la información en el ámbito de la Administración Electrónica (Sector Público).",
+          "correcta": true,
+          "explicacion": "El ENS (RD 3/2010 y actualizaciones) se enfoca en el sector público y sus proveedores."
+        },
+        {
+          "texto": "Sustituir al RGPD europeo.",
+          "correcta": false,
+          "explicacion": "El ENS complementa y convive con el RGPD, no lo sustituye."
+        },
+        {
+          "texto": "Prohibir el uso de la nube en España.",
+          "correcta": false,
+          "explicacion": "El ENS regula cómo usarla de forma segura, no la prohíbe."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia existe entre un control 'Preventivo' y uno 'Detectivo'?",
+      "respuestas": [
+        {
+          "texto": "El preventivo actúa después del incidente; el detectivo antes.",
+          "correcta": false,
+          "explicacion": "Es al revés."
+        },
+        {
+          "texto": "El preventivo intenta evitar que el riesgo se materialice (ej. firewall); el detectivo alerta cuando ya ha ocurrido o está ocurriendo (ej. IDS).",
+          "correcta": true,
+          "explicacion": "Correcto. Prevención reduce probabilidad; Detección reduce el tiempo de respuesta."
+        },
+        {
+          "texto": "El preventivo es físico (puertas); el detectivo es lógico (software).",
+          "correcta": false,
+          "explicacion": "Ambos pueden ser físicos o lógicos (ej. una cámara es detectiva física, un firewall es preventivo lógico)."
+        },
+        {
+          "texto": "No hay diferencia, son términos legales.",
+          "correcta": false,
+          "explicacion": "Tienen funciones operativas muy distintas en la gestión del riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "En relación con el correo electrónico, ¿qué es el 'Phishing'?",
+      "respuestas": [
+        {
+          "texto": "Un virus que borra el disco duro.",
+          "correcta": false,
+          "explicacion": "El phishing es el método de entrega/engaño, no necesariamente el payload (carga) final."
+        },
+        {
+          "texto": "El envío de correos fraudulentos suplantando una identidad legítima para engañar al usuario y robar credenciales o infectar el equipo.",
+          "correcta": true,
+          "explicacion": "Es la definición clásica de suplantación de identidad por correo."
+        },
+        {
+          "texto": "La pesca de datos en redes wifi abiertas.",
+          "correcta": false,
+          "explicacion": "Eso sería 'sniffing'."
+        },
+        {
+          "texto": "El bloqueo de correos spam por parte del servidor.",
+          "correcta": false,
+          "explicacion": "Eso es filtrado antispam."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el documento de 'Mejores Prácticas', ¿qué es una 'Botnet' en el contexto del IoT (Internet de las Cosas)?",
+      "respuestas": [
+        {
+          "texto": "Una red de robots industriales.",
+          "correcta": false,
+          "explicacion": "Se refiere a robots de software/malware, no físicos industriales."
+        },
+        {
+          "texto": "Un conjunto de dispositivos infectados y controlados remotamente por un atacante, usados a menudo para ataques DDoS.",
+          "correcta": true,
+          "explicacion": "Los dispositivos IoT con seguridad pobre (cámaras, tostadoras) son reclutados para estas redes zombis."
+        },
+        {
+          "texto": "Una herramienta de ayuda al usuario (chatbot).",
+          "correcta": false,
+          "explicacion": "Eso es un bot de chat, no una botnet maliciosa."
+        },
+        {
+          "texto": "La red interna de una empresa tecnológica.",
+          "correcta": false,
+          "explicacion": "Una botnet implica infección y control malicioso externo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué función cumple un SIEM (Security Information and Event Management) en un SOC?",
+      "respuestas": [
+        {
+          "texto": "Es el antivirus de los ordenadores de usuario.",
+          "correcta": false,
+          "explicacion": "El SIEM es una herramienta de gestión centralizada, no un endpoint protection."
+        },
+        {
+          "texto": "Centraliza, correlaciona y analiza los registros (logs) y eventos de seguridad de múltiples fuentes para detectar incidentes.",
+          "correcta": true,
+          "explicacion": "El SIEM es el 'cerebro' que recibe alertas de firewalls, servidores, etc., y busca patrones de ataque."
+        },
+        {
+          "texto": "Es el sistema que gestiona las nóminas de los empleados.",
+          "correcta": false,
+          "explicacion": "Irrelevante para la seguridad operativa."
+        },
+        {
+          "texto": "Es un firewall físico.",
+          "correcta": false,
+          "explicacion": "El SIEM analiza los logs del firewall, pero no es el firewall."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la recomendación principal respecto a las cuentas de usuario y contraseñas por defecto en dispositivos nuevos (routers, IoT)?",
+      "respuestas": [
+        {
+          "texto": "Dejarlas como están para no olvidar la clave.",
+          "correcta": false,
+          "explicacion": "Es una práctica de altísimo riesgo ya que son públicas."
+        },
+        {
+          "texto": "Cambiarlas inmediatamente por contraseñas robustas, ya que las predeterminadas son conocidas por los atacantes.",
+          "correcta": true,
+          "explicacion": "Las credenciales por defecto (admin/admin) están documentadas en internet y son el primer vector de ataque."
+        },
+        {
+          "texto": "Escribirlas en un post-it pegado al dispositivo.",
+          "correcta": false,
+          "explicacion": "Vulnera la seguridad física."
+        },
+        {
+          "texto": "Eliminar la necesidad de contraseña.",
+          "correcta": false,
+          "explicacion": "Eliminar la autenticación expone el dispositivo totalmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Vishing'?",
+      "respuestas": [
+        {
+          "texto": "Phishing realizado a través de videollamada.",
+          "correcta": false,
+          "explicacion": "Vishing viene de Voice Phishing (voz), habitualmente telefónico, no necesariamente video."
+        },
+        {
+          "texto": "Ingeniería social realizada a través de llamadas telefónicas (Voz).",
+          "correcta": true,
+          "explicacion": "El atacante llama haciéndose pasar por soporte técnico, banco, etc."
+        },
+        {
+          "texto": "Phishing a través de SMS.",
+          "correcta": false,
+          "explicacion": "Eso es Smishing."
+        },
+        {
+          "texto": "El robo de información visual (fotos).",
+          "correcta": false,
+          "explicacion": "No tiene relación."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la estrategia de concienciación, ¿qué es el 'Microlearning'?",
+      "respuestas": [
+        {
+          "texto": "Cursos de formación para empresas pequeñas.",
+          "correcta": false,
+          "explicacion": "Se refiere al formato del contenido, no al tamaño de la empresa."
+        },
+        {
+          "texto": "Contenido formativo muy breve y enfocado (píldoras de 2-3 minutos) entregado frecuentemente para combatir la curva del olvido.",
+          "correcta": true,
+          "explicacion": "Es más efectivo que cursos largos anuales porque mantiene la atención y refuerza conceptos continuamente."
+        },
+        {
+          "texto": "Aprender a usar microchips.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Formación técnica de bajo nivel (código máquina).",
+          "correcta": false,
+          "explicacion": "Microlearning es una metodología pedagógica, no un tema técnico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa HTTPS y por qué es importante para la navegación segura?",
+      "respuestas": [
+        {
+          "texto": "Hyper Text Transfer Protocol Secure. Cifra la comunicación entre el navegador y el servidor, protegiendo los datos en tránsito.",
+          "correcta": true,
+          "explicacion": "Usa SSL/TLS para evitar que alguien en la red (man-in-the-middle) lea los datos enviados (como contraseñas)."
+        },
+        {
+          "texto": "Significa que la página web ha sido validada por el gobierno.",
+          "correcta": false,
+          "explicacion": "El certificado lo emite una CA, no necesariamente el gobierno, y valida identidad/cifrado, no contenido legal."
+        },
+        {
+          "texto": "Es un protocolo que hace que la web cargue más rápido.",
+          "correcta": false,
+          "explicacion": "HTTPS suele ser ligeramente más lento por el cifrado (aunque HTTP/2 mejora esto), pero su fin es la seguridad."
+        },
+        {
+          "texto": "Garantiza que el sitio web no tiene virus.",
+          "correcta": false,
+          "explicacion": "Un sitio HTTPS puede alojar malware; el cifrado solo protege el 'tubo' de comunicación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Gobernanza' en seguridad de la información?",
+      "respuestas": [
+        {
+          "texto": "Instalar el sistema operativo más moderno.",
+          "correcta": false,
+          "explicacion": "Eso es gestión técnica/mantenimiento."
+        },
+        {
+          "texto": "El conjunto de responsabilidades, políticas y procesos que aseguran que la seguridad se alinea con los objetivos del negocio y se gestiona desde la dirección.",
+          "correcta": true,
+          "explicacion": "Implica que la alta dirección define la estrategia, asigna recursos y supervisa el cumplimiento (ej. Comité de Seguridad)."
+        },
+        {
+          "texto": "La configuración de los firewalls.",
+          "correcta": false,
+          "explicacion": "Es una tarea operativa, no de gobernanza."
+        },
+        {
+          "texto": "El cumplimiento exclusivo de leyes gubernamentales.",
+          "correcta": false,
+          "explicacion": "La gobernanza incluye leyes, pero también estrategia interna, riesgos y objetivos de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega el CISO (Chief Information Security Officer)?",
+      "respuestas": [
+        {
+          "texto": "Es el técnico que repara los ordenadores.",
+          "correcta": false,
+          "explicacion": "Ese sería soporte técnico/helpdesk."
+        },
+        {
+          "texto": "Es el responsable ejecutivo de alinear la estrategia de seguridad con los objetivos de negocio y gestionar el riesgo de la información.",
+          "correcta": true,
+          "explicacion": "Es un rol directivo/estratégico encargado de la visión global de la seguridad."
+        },
+        {
+          "texto": "Es el encargado de programar la página web.",
+          "correcta": false,
+          "explicacion": "Rol de desarrollo."
+        },
+        {
+          "texto": "Es un auditor externo.",
+          "correcta": false,
+          "explicacion": "El CISO es un rol interno (habitualmente)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un Plan de Continuidad de Negocio (BCP)?",
+      "respuestas": [
+        {
+          "texto": "Un documento que explica cómo vender más.",
+          "correcta": false,
+          "explicacion": "Eso es un plan de ventas."
+        },
+        {
+          "texto": "Un conjunto de procedimientos para restaurar las funciones críticas de la organización y volver a la normalidad tras un incidente grave o desastre.",
+          "correcta": true,
+          "explicacion": "Abarca más que la recuperación técnica (DRP); incluye personas, procesos, comunicación y operaciones alternativas."
+        },
+        {
+          "texto": "La copia de seguridad de los archivos.",
+          "correcta": false,
+          "explicacion": "Los backups son una herramienta del plan, no el plan completo."
+        },
+        {
+          "texto": "El contrato de mantenimiento de los ordenadores.",
+          "correcta": false,
+          "explicacion": "Es gestión de proveedores."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de riesgos, ¿cómo se define habitualmente el 'Riesgo'?",
+      "respuestas": [
+        {
+          "texto": "Riesgo = Amenaza + Antivirus.",
+          "correcta": false,
+          "explicacion": "Fórmula incorrecta."
+        },
+        {
+          "texto": "Riesgo = Probabilidad de ocurrencia x Impacto sobre el negocio.",
+          "correcta": true,
+          "explicacion": "Es la fórmula estándar. Cuanto mayor sea la probabilidad o el impacto, mayor es el riesgo."
+        },
+        {
+          "texto": "Riesgo = Coste del hardware / Vida útil.",
+          "correcta": false,
+          "explicacion": "Eso es amortización contable."
+        },
+        {
+          "texto": "Riesgo = Número de hackers en internet.",
+          "correcta": false,
+          "explicacion": "Eso es parte del panorama de amenazas, pero no la definición de riesgo para una empresa concreta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Riesgo Residual'?",
+      "respuestas": [
+        {
+          "texto": "El riesgo que queda después de aplicar los controles o medidas de seguridad.",
+          "correcta": true,
+          "explicacion": "Nunca existe la seguridad al 100%. El riesgo que subsiste tras mitigar se debe aceptar, transferir o evitar."
+        },
+        {
+          "texto": "El riesgo de los residuos informáticos (basura electrónica).",
+          "correcta": false,
+          "explicacion": "Confusión terminológica."
+        },
+        {
+          "texto": "El riesgo inicial antes de hacer nada.",
+          "correcta": false,
+          "explicacion": "Ese es el Riesgo Inherente."
+        },
+        {
+          "texto": "El riesgo que asumen los clientes.",
+          "correcta": false,
+          "explicacion": "El riesgo residual lo asume la dirección de la empresa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre la norma ISO 27001 y la ISO 27002?",
+      "respuestas": [
+        {
+          "texto": "La 27001 es para ordenadores y la 27002 para móviles.",
+          "correcta": false,
+          "explicacion": "Ambas son agnósticas a la tecnología."
+        },
+        {
+          "texto": "La ISO 27001 define los requisitos para un Sistema de Gestión (es certificable), mientras que la 27002 es un código de buenas prácticas (guía de controles, no certificable).",
+          "correcta": true,
+          "explicacion": "La 27001 es la norma de 'qué debes tener' para certificarte; la 27002 te dice 'cómo' implementar los controles."
+        },
+        {
+          "texto": "La 27001 es antigua y la 27002 es la versión moderna.",
+          "correcta": false,
+          "explicacion": "Son normas complementarias de la misma familia, actualizadas periódicamente."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Tienen propósitos y estructuras diferentes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un CSIRT (Computer Security Incident Response Team)?",
+      "respuestas": [
+        {
+          "texto": "Un certificado de seguridad.",
+          "correcta": false,
+          "explicacion": "No es un papel, es un equipo de personas."
+        },
+        {
+          "texto": "Un equipo de expertos responsable de recibir, revisar y responder a informes y actividades de incidentes de seguridad.",
+          "correcta": true,
+          "explicacion": "Es el equipo operativo (como el CCN-CERT) que gestiona la respuesta técnica ante ataques."
+        },
+        {
+          "texto": "Un software antivirus avanzado.",
+          "correcta": false,
+          "explicacion": "El CSIRT usa software, pero es un ente organizativo."
+        },
+        {
+          "texto": "El departamento de ventas de tecnología.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Shoulder Surfing'?",
+      "respuestas": [
+        {
+          "texto": "Navegar por internet usando los hombros.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        },
+        {
+          "texto": "Una técnica de ingeniería social física consistente en mirar por encima del hombro de alguien para obtener contraseñas o información confidencial en pantalla.",
+          "correcta": true,
+          "explicacion": "Es un riesgo físico común en transporte público o cafeterías."
+        },
+        {
+          "texto": "Un tipo de ataque de red.",
+          "correcta": false,
+          "explicacion": "Es un ataque visual/físico."
+        },
+        {
+          "texto": "El uso de dispositivos compartidos.",
+          "correcta": false,
+          "explicacion": "No define la técnica de espionaje visual."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la regla básica de seguridad para el software (S.O. y aplicaciones)?",
+      "respuestas": [
+        {
+          "texto": "Nunca actualizar para evitar que el equipo vaya lento.",
+          "correcta": false,
+          "explicacion": "Práctica muy peligrosa; las vulnerabilidades conocidas se explotarán."
+        },
+        {
+          "texto": "Mantenerlo siempre actualizado con los últimos parches de seguridad del fabricante.",
+          "correcta": true,
+          "explicacion": "Las actualizaciones corrigen vulnerabilidades (agujeros de seguridad) que el malware utiliza para infectar."
+        },
+        {
+          "texto": "Usar siempre software pirata.",
+          "correcta": false,
+          "explicacion": "Ilegal y suele contener malware."
+        },
+        {
+          "texto": "Instalar todas las barras de herramientas gratuitas posibles.",
+          "correcta": false,
+          "explicacion": "Suelen ser adware o spyware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Deep Web' (Internet Profunda) en contraposición a la 'Surface Web'?",
+      "respuestas": [
+        {
+          "texto": "Es exclusivamente el mercado de drogas y armas.",
+          "correcta": false,
+          "explicacion": "Confusión con Dark Web. La Deep Web incluye todo lo no indexado (intranets, bases de datos académicas, banca online)."
+        },
+        {
+          "texto": "El contenido de internet que no es indexado por los buscadores convencionales (Google, Bing), que puede ser legítimo o no.",
+          "correcta": true,
+          "explicacion": "Es la parte 'sumergida' del iceberg; incluye páginas dinámicas, privadas, etc."
+        },
+        {
+          "texto": "Son las páginas web con fondo negro.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Es el internet de alta velocidad.",
+          "correcta": false,
+          "explicacion": "No tiene que ver con la velocidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante el bloqueo de sesión automático por inactividad?",
+      "respuestas": [
+        {
+          "texto": "Para ahorrar energía de la pantalla.",
+          "correcta": false,
+          "explicacion": "Es un beneficio marginal, no el de seguridad."
+        },
+        {
+          "texto": "Para evitar que, si el usuario se ausenta, un tercero acceda a sus datos o realice acciones en su nombre.",
+          "correcta": true,
+          "explicacion": "Garantiza que la autenticación (contraseña) sea necesaria si el usuario deja el equipo desatendido."
+        },
+        {
+          "texto": "Para que el ordenador vaya más rápido al volver.",
+          "correcta": false,
+          "explicacion": "No afecta al rendimiento."
+        },
+        {
+          "texto": "Para obligar al usuario a memorizar su contraseña.",
+          "correcta": false,
+          "explicacion": "No es el objetivo principal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque de 'Ingeniería Social Inversa'?",
+      "respuestas": [
+        {
+          "texto": "Cuando el hacker arregla el ordenador.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Cuando el atacante crea una situación o problema para que sea la propia víctima quien le contacte pidiendo ayuda y revele información.",
+          "correcta": true,
+          "explicacion": "El atacante gana la confianza previamente para que la víctima acuda a él voluntariamente."
+        },
+        {
+          "texto": "Analizar un virus para ver cómo funciona.",
+          "correcta": false,
+          "explicacion": "Eso es Ingeniería Inversa de software, no social."
+        },
+        {
+          "texto": "Insultar al atacante.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto legal español, ¿qué es la AEPD?",
+      "respuestas": [
+        {
+          "texto": "Asociación Española de Programadores.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Agencia Española de Protección de Datos, encargada de velar por el cumplimiento de la normativa de privacidad (LOPD/RGPD).",
+          "correcta": true,
+          "explicacion": "Es la autoridad de control en materia de privacidad en España."
+        },
+        {
+          "texto": "Agencia Estatal de Policía Digital.",
+          "correcta": false,
+          "explicacion": "No existe con ese nombre."
+        },
+        {
+          "texto": "Asociación de Empresas Públicas Digitales.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Smishing'?",
+      "respuestas": [
+        {
+          "texto": "Phishing a través de mensajes SMS o mensajería instantánea.",
+          "correcta": true,
+          "explicacion": "SMS + Phishing. Busca que el usuario haga clic en un enlace malicioso enviado al móvil."
+        },
+        {
+          "texto": "Fumar mientras se usa el ordenador.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        },
+        {
+          "texto": "Un tipo de virus que borra fotos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Borrado seguro de datos.",
+          "correcta": false,
+          "explicacion": "Confusión con 'Smashing' o 'Wiping'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Defensa en Profundidad' (Defense in Depth)?",
+      "respuestas": [
+        {
+          "texto": "Esconder los servidores en un sótano profundo.",
+          "correcta": false,
+          "explicacion": "Seguridad física literal, pero no el concepto estratégico."
+        },
+        {
+          "texto": "Aplicar múltiples capas de medidas de seguridad (físicas, técnicas, administrativas) para que, si una falla, otra detenga la amenaza.",
+          "correcta": true,
+          "explicacion": "Modelo 'cebolla': antivirus + firewall + concienciación + cifrado + seguridad física, etc."
+        },
+        {
+          "texto": "Tener un solo firewall muy potente.",
+          "correcta": false,
+          "explicacion": "Eso es seguridad perimetral simple, punto único de fallo."
+        },
+        {
+          "texto": "Atacar al hacker antes de que nos ataque.",
+          "correcta": false,
+          "explicacion": "Eso es defensa ofensiva o 'hack back', legalmente dudoso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'autenticación de doble factor' (2FA) o multifactor (MFA)?",
+      "respuestas": [
+        {
+          "texto": "Tener dos contraseñas escritas en un papel.",
+          "correcta": false,
+          "explicacion": "Eso es un factor (algo que sabes) duplicado y mal gestionado."
+        },
+        {
+          "texto": "Combinar dos o más elementos de categorías distintas para verificar la identidad: algo que sabes (clave), algo que tienes (móvil/token) o algo que eres (biometría).",
+          "correcta": true,
+          "explicacion": "Aumenta drásticamente la seguridad porque el atacante necesita robar dos elementos distintos."
+        },
+        {
+          "texto": "Entrar al sistema dos veces seguidas.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Usar la misma contraseña en dos webs.",
+          "correcta": false,
+          "explicacion": "Práctica peligrosa (reutilización de credenciales)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué riesgo específico introduce el uso de redes WiFi públicas (hoteles, aeropuertos)?",
+      "respuestas": [
+        {
+          "texto": "Gastan más batería del dispositivo.",
+          "correcta": false,
+          "explicacion": "No es un riesgo de seguridad de la información."
+        },
+        {
+          "texto": "El tráfico puede ser interceptado por terceros (sniffing) si no está cifrado, o pueden ser puntos de acceso falsos (Rogue AP).",
+          "correcta": true,
+          "explicacion": "En redes abiertas, la información viaja en texto claro si no se usa HTTPS/VPN."
+        },
+        {
+          "texto": "Son más lentas.",
+          "correcta": false,
+          "explicacion": "Inconveniente de uso, no de seguridad."
+        },
+        {
+          "texto": "No permiten acceder a redes sociales.",
+          "correcta": false,
+          "explicacion": "Depende de la configuración, no es un riesgo intrínseco."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Principio de Mínimo Privilegio'?",
+      "respuestas": [
+        {
+          "texto": "Dar a los usuarios los permisos mínimos necesarios para realizar su trabajo, y nada más.",
+          "correcta": true,
+          "explicacion": "Limita el daño que un usuario (o un malware usando su cuenta) puede hacer."
+        },
+        {
+          "texto": "Pagar el salario mínimo a los empleados de seguridad.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Que el jefe tenga acceso a todo y los empleados a nada.",
+          "correcta": false,
+          "explicacion": "Los directivos también deben tener privilegios limitados a su función para evitar riesgos (ej. CEO fraud)."
+        },
+        {
+          "texto": "Usar el ordenador lo menos posible.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una VPN (Virtual Private Network) y para qué sirve en teletrabajo?",
+      "respuestas": [
+        {
+          "texto": "Un antivirus para la nube.",
+          "correcta": false,
+          "explicacion": "Confusión de términos."
+        },
+        {
+          "texto": "Una tecnología que crea un túnel cifrado y seguro sobre una red pública (internet), permitiendo acceder a recursos corporativos como si se estuviera en la oficina.",
+          "correcta": true,
+          "explicacion": "Protege la confidencialidad e integridad de la conexión remota."
+        },
+        {
+          "texto": "Un reproductor de video privado.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Una red social corporativa.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "En seguridad física, ¿qué es un SAI (o UPS)?",
+      "respuestas": [
+        {
+          "texto": "Sistema de Acceso Inteligente.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Sistema de Alimentación Ininterrumpida. Proporciona energía eléctrica de emergencia para evitar apagones bruscos y proteger la disponibilidad y hardware.",
+          "correcta": true,
+          "explicacion": "Evita pérdida de datos en RAM y daños en discos por cortes de luz, permitiendo un apagado ordenado."
+        },
+        {
+          "texto": "Servicio de Atención Informática.",
+          "correcta": false,
+          "explicacion": "Confusión de siglas."
+        },
+        {
+          "texto": "Software Anti-Intrusión.",
+          "correcta": false,
+          "explicacion": "Eso sería un IDS/IPS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Ingeniería Social' tipo 'Baiting' (Gancho)?",
+      "respuestas": [
+        {
+          "texto": "Pescar peces digitales.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Dejar un dispositivo físico infectado (ej. USB) en un lugar visible para que la víctima lo encuentre y lo conecte por curiosidad.",
+          "correcta": true,
+          "explicacion": "Explota la curiosidad humana. El dispositivo instala malware al conectarse."
+        },
+        {
+          "texto": "Enviar correos masivos.",
+          "correcta": false,
+          "explicacion": "Eso es Spam o Phishing masivo."
+        },
+        {
+          "texto": "Insultar en foros para provocar reacciones.",
+          "correcta": false,
+          "explicacion": "Eso es 'Trolling'."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según los modelos de gestión, ¿qué ventaja tiene la 'Gestión externalizada' de la seguridad (MSSP)?",
+      "respuestas": [
+        {
+          "texto": "Es gratis.",
+          "correcta": false,
+          "explicacion": "Tiene un coste contractual."
+        },
+        {
+          "texto": "Alta especialización y experiencia del personal externo, y herramientas avanzadas que serían muy costosas de adquirir internamente.",
+          "correcta": true,
+          "explicacion": "Permite acceder a talento y tecnología puntera (SOC externo) compartiendo costes."
+        },
+        {
+          "texto": "El personal externo conoce mejor el negocio que los internos.",
+          "correcta": false,
+          "explicacion": "Esa es la desventaja; el externo conoce menos la idiosincrasia del negocio."
+        },
+        {
+          "texto": "No requiere firmar contratos.",
+          "correcta": false,
+          "explicacion": "Requiere contratos estrictos y SLAs."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'confidencialidad' dentro de la tríada CIA?",
+      "respuestas": [
+        {
+          "texto": "Que la información esté disponible cuando se necesite.",
+          "correcta": false,
+          "explicacion": "Eso es Disponibilidad."
+        },
+        {
+          "texto": "Garantizar que la información solo es accesible por personas o procesos autorizados.",
+          "correcta": true,
+          "explicacion": "Evita la divulgación no autorizada."
+        },
+        {
+          "texto": "Que la información no haya sido modificada.",
+          "correcta": false,
+          "explicacion": "Eso es Integridad."
+        },
+        {
+          "texto": "Que sepamos quién hizo qué.",
+          "correcta": false,
+          "explicacion": "Eso es Trazabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que un sistema tenga 'Integridad'?",
+      "respuestas": [
+        {
+          "texto": "Que el sistema es honesto.",
+          "correcta": false,
+          "explicacion": "Concepto humano, no técnico."
+        },
+        {
+          "texto": "Que la información es exacta, completa y no ha sido manipulada o alterada sin autorización.",
+          "correcta": true,
+          "explicacion": "Asegura la fiabilidad del dato."
+        },
+        {
+          "texto": "Que el sistema nunca se apaga.",
+          "correcta": false,
+          "explicacion": "Eso es Disponibilidad."
+        },
+        {
+          "texto": "Que los datos están cifrados.",
+          "correcta": false,
+          "explicacion": "El cifrado ayuda a la confidencialidad, la integridad se suele verificar con hashes."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de copias de seguridad (Backups), ¿qué es la regla 3-2-1 (implícita en buenas prácticas)?",
+      "respuestas": [
+        {
+          "texto": "3 copias de datos, en 2 soportes diferentes, y 1 de ellas fuera de la sede (off-site).",
+          "correcta": true,
+          "explicacion": "Es el estándar de oro. Protege contra fallo de hardware (soportes distintos) y desastre físico/ransomware (copia externa)."
+        },
+        {
+          "texto": "Hacer copias a las 3, a las 2 y a la 1 de la tarde.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "3 personas responsables, 2 servidores y 1 contraseña.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Guardar 3 versiones, borrar 2 y quedarse con 1.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Incidente de Seguridad'?",
+      "respuestas": [
+        {
+          "texto": "Cualquier evento adverso que comprometa la confidencialidad, integridad o disponibilidad de los activos de información.",
+          "correcta": true,
+          "explicacion": "Definición amplia que incluye virus, robos, accesos no autorizados, incendios, etc."
+        },
+        {
+          "texto": "Cuando se rompe el monitor.",
+          "correcta": false,
+          "explicacion": "Es una avería de hardware, no necesariamente un incidente de seguridad si no afecta datos."
+        },
+        {
+          "texto": "Olvidar la contraseña.",
+          "correcta": false,
+          "explicacion": "Es una incidencia de servicio, no de seguridad (salvo que sea por ataque)."
+        },
+        {
+          "texto": "Recibir un correo de publicidad.",
+          "correcta": false,
+          "explicacion": "Es molestia, no incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Espionaje Industrial' o 'Ciberespionaje'?",
+      "respuestas": [
+        {
+          "texto": "Robar material de oficina.",
+          "correcta": false,
+          "explicacion": "Es hurto físico."
+        },
+        {
+          "texto": "El uso de técnicas ilícitas para obtener secretos comerciales, propiedad intelectual o información estratégica de competidores o gobiernos.",
+          "correcta": true,
+          "explicacion": "Busca ventaja económica o estratégica, no destrucción inmediata."
+        },
+        {
+          "texto": "Mirar el perfil de LinkedIn de un competidor.",
+          "correcta": false,
+          "explicacion": "Eso es inteligencia de fuentes abiertas (OSINT) legal."
+        },
+        {
+          "texto": "Hackear un videojuego.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Firewall' (Cortafuegos)?",
+      "respuestas": [
+        {
+          "texto": "Una pared resistente al fuego en el CPD.",
+          "correcta": false,
+          "explicacion": "Ese es el sentido literal en arquitectura, no en informática."
+        },
+        {
+          "texto": "Un dispositivo o software que monitoriza y controla el tráfico de red entrante y saliente basándose en reglas de seguridad preestablecidas.",
+          "correcta": true,
+          "explicacion": "Separa redes seguras de inseguras (internet), permitiendo o bloqueando paquetes."
+        },
+        {
+          "texto": "Un programa para quemar CDs.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Un tipo de virus.",
+          "correcta": false,
+          "explicacion": "Es una herramienta de defensa."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Guía CCN-CERT, ¿qué se recomienda respecto a los servicios 'innecesarios' en un sistema?",
+      "respuestas": [
+        {
+          "texto": "Dejarlos activados por si acaso se usan en el futuro.",
+          "correcta": false,
+          "explicacion": "Aumenta la superficie de ataque inútilmente."
+        },
+        {
+          "texto": "Deshabilitarlos o desinstalarlos para reducir la superficie de ataque.",
+          "correcta": true,
+          "explicacion": "Menos servicios = menos vulnerabilidades potenciales (Hardening)."
+        },
+        {
+          "texto": "Instalar más servicios para confundir al atacante.",
+          "correcta": false,
+          "explicacion": "Seguridad por oscuridad ineficiente y peligrosa."
+        },
+        {
+          "texto": "Ponerles contraseñas vacías.",
+          "correcta": false,
+          "explicacion": "Peligrosísimo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Riesgo Reputacional' derivado de un ciberataque?",
+      "respuestas": [
+        {
+          "texto": "El coste de comprar nuevos ordenadores.",
+          "correcta": false,
+          "explicacion": "Riesgo económico/operativo."
+        },
+        {
+          "texto": "La pérdida de confianza de clientes, socios y mercado, y el daño a la imagen de marca tras hacerse público un incidente.",
+          "correcta": true,
+          "explicacion": "Es difícil de cuantificar pero puede ser devastador a largo plazo (pérdida de clientes)."
+        },
+        {
+          "texto": "La multa que pone la AEPD.",
+          "correcta": false,
+          "explicacion": "Riesgo legal."
+        },
+        {
+          "texto": "Que los empleados hablen mal del jefe.",
+          "correcta": false,
+          "explicacion": "No es el foco principal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Exploit'?",
+      "respuestas": [
+        {
+          "texto": "Un explorador de internet.",
+          "correcta": false,
+          "explicacion": "Confusión con 'Explorer'."
+        },
+        {
+          "texto": "Un fragmento de software o comando que aprovecha una vulnerabilidad (bug) específica para provocar un comportamiento no intencionado o ganar acceso.",
+          "correcta": true,
+          "explicacion": "Es la 'llave' que usa la vulnerabilidad para entrar."
+        },
+        {
+          "texto": "Una explosión de la batería.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Un usuario experto.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la criptografía asimétrica (Clave Pública/Privada)?",
+      "respuestas": [
+        {
+          "texto": "Un sistema donde la misma clave cifra y descifra.",
+          "correcta": false,
+          "explicacion": "Eso es simétrica."
+        },
+        {
+          "texto": "Un sistema que usa un par de claves: una pública para cifrar y una privada (secreta) para descifrar (o viceversa para firma digital).",
+          "correcta": true,
+          "explicacion": "Permite comunicación segura sin haber intercambiado un secreto previamente. Base de HTTPS y certificados digitales."
+        },
+        {
+          "texto": "Un sistema de cifrado roto.",
+          "correcta": false,
+          "explicacion": "Es el estándar actual de seguridad."
+        },
+        {
+          "texto": "Escribir al revés.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la LOPD y RGPD, ¿qué son los derechos ARCO (ahora ampliados)?",
+      "respuestas": [
+        {
+          "texto": "Acceso, Rectificación, Cancelación y Oposición.",
+          "correcta": true,
+          "explicacion": "Son los derechos básicos del ciudadano sobre sus datos personales."
+        },
+        {
+          "texto": "Análisis, Riesgo, Control y Organización.",
+          "correcta": false,
+          "explicacion": "Términos de gestión, no derechos."
+        },
+        {
+          "texto": "Asociación, Reunión, Comprensión y Orden.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Alta, Retiro, Compra y Oferta.",
+          "correcta": false,
+          "explicacion": "Términos comerciales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el modelo de madurez CMM aplicado a seguridad, ¿qué significa un nivel 0 (Inexistente)?",
+      "respuestas": [
+        {
+          "texto": "Que la seguridad es perfecta y no hay riesgo.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "Que no existen procesos de seguridad definidos; la seguridad es caótica o nula.",
+          "correcta": true,
+          "explicacion": "Es el nivel más bajo, sin gestión ni consciencia."
+        },
+        {
+          "texto": "Que los procesos están optimizados.",
+          "correcta": false,
+          "explicacion": "Ese sería el nivel 5."
+        },
+        {
+          "texto": "Que se externaliza la seguridad.",
+          "correcta": false,
+          "explicacion": "No tiene que ver con el modelo de madurez."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Seguridad Física'?",
+      "respuestas": [
+        {
+          "texto": "Tener antivirus.",
+          "correcta": false,
+          "explicacion": "Seguridad lógica."
+        },
+        {
+          "texto": "Las medidas para proteger el hardware y las instalaciones de amenazas tangibles (acceso no autorizado, incendio, inundación, robo).",
+          "correcta": true,
+          "explicacion": "Incluye cerraduras, cámaras, vigilantes, extintores, SAIs."
+        },
+        {
+          "texto": "Hacer ejercicio para estar fuerte.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "La seguridad de la física cuántica.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        }
+      ]
+    }
+  ]
+}

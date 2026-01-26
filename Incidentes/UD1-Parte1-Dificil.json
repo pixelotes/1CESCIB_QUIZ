@@ -1,0 +1,1255 @@
+{
+  "tema": "Ciberseguridad Avanzada: Gestión, Normativa y Técnica (CCN-CERT / INCIBE)",
+  "preguntas": [
+    {
+      "pregunta": "En el contexto de la gestión de riesgos, ¿cómo se calcula el 'Riesgo Residual' y cuál es su implicación para la dirección?",
+      "respuestas": [
+        {
+          "texto": "Riesgo Residual = Riesgo Inherente + Controles. La dirección debe eliminarlo totalmente.",
+          "correcta": false,
+          "explicacion": "La fórmula es incorrecta (se restan los controles) y el riesgo residual nunca se elimina totalmente."
+        },
+        {
+          "texto": "Riesgo Residual = Riesgo Inherente - Impacto de las Salvaguardas. La dirección debe decidir si lo acepta, lo transfiere o aplica más controles.",
+          "correcta": true,
+          "explicacion": "El riesgo residual es el que subsiste tras aplicar las medidas de seguridad. Es responsabilidad de la dirección gestionarlo (aceptarlo es una opción válida)."
+        },
+        {
+          "texto": "Riesgo Residual = Amenaza x Vulnerabilidad. Es un valor técnico que no concierne a la dirección.",
+          "correcta": false,
+          "explicacion": "Esa es la fórmula general del riesgo, no del residual. La dirección es la máxima responsable."
+        },
+        {
+          "texto": "Es el riesgo asociado a los residuos de hardware.",
+          "correcta": false,
+          "explicacion": "Confusión terminológica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Guía CCN-CERT, ¿qué característica distingue el cifrado de la red TOR (The Onion Router) frente a una VPN tradicional de un solo salto?",
+      "respuestas": [
+        {
+          "texto": "TOR cifra todo el tráfico de extremo a extremo con una sola clave que solo posee el destino.",
+          "correcta": false,
+          "explicacion": "TOR usa cifrado por capas (cebolla), no una sola clave de extremo a extremo en el sentido tradicional."
+        },
+        {
+          "texto": "En TOR, el tráfico se cifra en múltiples capas; cada nodo del circuito (entrada, medio, salida) descifra solo su capa correspondiente, impidiendo que ningún nodo único conozca el origen y el destino simultáneamente.",
+          "correcta": true,
+          "explicacion": "Esta compartimentación de la información es la base del anonimato en TOR, a diferencia de una VPN donde el proveedor conoce origen y destino."
+        },
+        {
+          "texto": "TOR no cifra el tráfico, solo oculta la IP.",
+          "correcta": false,
+          "explicacion": "El cifrado es fundamental en TOR."
+        },
+        {
+          "texto": "La VPN es más segura porque usa tres nodos obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Las VPN suelen ser punto a punto; TOR es quien usa el circuito de tres nodos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia crítica entre un Plan de Continuidad de Negocio (BCP) y un Plan de Recuperación ante Desastres (DRP)?",
+      "respuestas": [
+        {
+          "texto": "El BCP se enfoca en restaurar la infraestructura tecnológica (TI), mientras que el DRP se ocupa de los procesos de negocio globales.",
+          "correcta": false,
+          "explicacion": "Es al revés."
+        },
+        {
+          "texto": "Son documentos idénticos exigidos por la ISO 27001.",
+          "correcta": false,
+          "explicacion": "Son distintos, aunque relacionados."
+        },
+        {
+          "texto": "El DRP es un subconjunto técnico del BCP; el BCP asegura que la organización siga operando (procesos, personas, comunicación), mientras el DRP se centra específicamente en levantar los sistemas informáticos caídos.",
+          "correcta": true,
+          "explicacion": "Correcto. El BCP es la estrategia global ('el negocio no para'), el DRP es la táctica técnica ('recuperar los servidores')."
+        },
+        {
+          "texto": "El BCP es preventivo y el DRP es detectivo.",
+          "correcta": false,
+          "explicacion": "Ambos son reactivos/correctivos ante un incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un ataque de 'Ransomware' con doble extorsión, ¿cuál es el segundo vector de amenaza si la empresa tiene copias de seguridad perfectas?",
+      "respuestas": [
+        {
+          "texto": "El cifrado de los backups.",
+          "correcta": false,
+          "explicacion": "Si las copias son perfectas (offline), no están cifradas. La amenaza es otra."
+        },
+        {
+          "texto": "La exfiltración previa de datos sensibles y la amenaza de hacerlos públicos (Doxing) si no se paga, afectando a la confidencialidad y reputación.",
+          "correcta": true,
+          "explicacion": "Aunque recuperes los datos (Disponibilidad), el atacante amenaza con publicar los datos robados (Confidencialidad), forzando el pago."
+        },
+        {
+          "texto": "La instalación de mineros de criptomonedas.",
+          "correcta": false,
+          "explicacion": "Es posible, pero no es la base de la 'doble extorsión'."
+        },
+        {
+          "texto": "El bloqueo físico de las oficinas.",
+          "correcta": false,
+          "explicacion": "No es un ataque cibernético estándar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica el principio de 'Defensa en Profundidad' aplicado a la seguridad perimetral y del puesto de trabajo?",
+      "respuestas": [
+        {
+          "texto": "Confiar exclusivamente en el cortafuegos perimetral para filtrar todo el tráfico malicioso.",
+          "correcta": false,
+          "explicacion": "Eso es el modelo antiguo de 'castillo y foso'."
+        },
+        {
+          "texto": "Asumir que el perímetro será vulnerado y aplicar controles en capas sucesivas (Red, Endpoint, Aplicación, Datos, Usuario) para retardar o detener el avance del atacante.",
+          "correcta": true,
+          "explicacion": "Es la estrategia de redundancia de controles. Si falla el firewall, actúa el EDR; si falla el EDR, el usuario no tiene permisos de admin, etc."
+        },
+        {
+          "texto": "Instalar el mismo software antivirus en todos los servidores y clientes.",
+          "correcta": false,
+          "explicacion": "Esto crea un punto único de fallo (monocultivo de seguridad)."
+        },
+        {
+          "texto": "Contratar un seguro de ciberriesgos.",
+          "correcta": false,
+          "explicacion": "Es transferencia de riesgo, no defensa técnica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la normativa (ENS/RGPD), ¿quién es el 'Responsable del Tratamiento' de los datos?",
+      "respuestas": [
+        {
+          "texto": "La empresa informática que aloja los servidores.",
+          "correcta": false,
+          "explicacion": "Ese suele ser el 'Encargado del Tratamiento'."
+        },
+        {
+          "texto": "El empleado que introduce los datos.",
+          "correcta": false,
+          "explicacion": "Es un usuario."
+        },
+        {
+          "texto": "La persona física o jurídica (la empresa/organización) que determina los fines y medios del tratamiento de los datos personales.",
+          "correcta": true,
+          "explicacion": "Es quien decide 'para qué' y 'cómo' se usan los datos y responde legalmente ante la AEPD."
+        },
+        {
+          "texto": "El Delegado de Protección de Datos (DPO).",
+          "correcta": false,
+          "explicacion": "El DPO supervisa y asesora, pero la responsabilidad última es de la entidad (Responsable)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el protocolo HTTP se considera inseguro frente a HTTPS en redes WiFi públicas, específicamente en relación a los ataques 'Man-in-the-Middle' (MitM)?",
+      "respuestas": [
+        {
+          "texto": "Porque HTTP no valida la dirección IP del servidor.",
+          "correcta": false,
+          "explicacion": "El problema principal no es la IP."
+        },
+        {
+          "texto": "Porque en HTTP la información viaja en texto plano, permitiendo a un atacante intermediario leer credenciales y modificar el tráfico (inyección de código).",
+          "correcta": true,
+          "explicacion": "Sin cifrado (TLS), cualquiera en la misma red puede usar un sniffer (como Wireshark) y ver todo."
+        },
+        {
+          "texto": "Porque HTTP es más lento y permite ataques de fuerza bruta.",
+          "correcta": false,
+          "explicacion": "No es una cuestión de velocidad."
+        },
+        {
+          "texto": "Porque HTTPS solo funciona en redes privadas.",
+          "correcta": false,
+          "explicacion": "Falso, es el estándar de internet."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de incidentes, ¿cuál es la función de la fase de 'Lecciones Aprendidas' (Post-Mortem)?",
+      "respuestas": [
+        {
+          "texto": "Buscar al culpable para despedirlo.",
+          "correcta": false,
+          "explicacion": "El enfoque punitivo es contraproducente para la cultura de reporte."
+        },
+        {
+          "texto": "Analizar qué ocurrió, qué funcionó bien y qué falló en la respuesta, para actualizar los procedimientos y evitar la recurrencia.",
+          "correcta": true,
+          "explicacion": "Es la fase crítica para la mejora continua del sistema de gestión de seguridad (ciclo PDCA)."
+        },
+        {
+          "texto": "Calcular el coste económico exacto para el seguro.",
+          "correcta": false,
+          "explicacion": "Es una parte, pero no el objetivo principal de mejora de seguridad."
+        },
+        {
+          "texto": "Restaurar las copias de seguridad.",
+          "correcta": false,
+          "explicacion": "Eso pertenece a la fase de Recuperación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de Ingeniería Social se conoce como 'Pretexting'?",
+      "respuestas": [
+        {
+          "texto": "El envío masivo de correos genéricos.",
+          "correcta": false,
+          "explicacion": "Eso es Phishing genérico."
+        },
+        {
+          "texto": "La creación de un escenario inventado (historia o pretexto) convincente para persuadir a la víctima de que entregue información (ej. hacerse pasar por auditor o soporte técnico).",
+          "correcta": true,
+          "explicacion": "Implica una elaboración narrativa previa para ganar confianza y justificar la solicitud de datos."
+        },
+        {
+          "texto": "Mirar la pantalla por encima del hombro.",
+          "correcta": false,
+          "explicacion": "Eso es Shoulder Surfing."
+        },
+        {
+          "texto": "Buscar en la basura.",
+          "correcta": false,
+          "explicacion": "Eso es Dumpster Diving."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de contraseñas, ¿qué es un ataque de 'Diccionario' y cómo se mitiga eficazmente?",
+      "respuestas": [
+        {
+          "texto": "Probar todas las combinaciones posibles de caracteres. Se mitiga con contraseñas cortas.",
+          "correcta": false,
+          "explicacion": "Eso es fuerza bruta pura. Las contraseñas cortas ayudan al atacante."
+        },
+        {
+          "texto": "Probar palabras comunes y variantes. Se mitiga usando contraseñas largas, aleatorias y sin significado semántico (o frases de paso complejas).",
+          "correcta": true,
+          "explicacion": "El ataque de diccionario es rápido contra palabras reales. La aleatoriedad y longitud lo hacen inviable."
+        },
+        {
+          "texto": "Robar el archivo de contraseñas del servidor. Se mitiga con firewalls.",
+          "correcta": false,
+          "explicacion": "El robo de hashes es otro tipo de ataque."
+        },
+        {
+          "texto": "Adivinar la contraseña por las redes sociales del usuario. Se mitiga no teniendo redes sociales.",
+          "correcta": false,
+          "explicacion": "Eso es perfilado/ingeniería social, no ataque de diccionario técnico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia funcional entre un IDS (Sistema de Detección de Intrusos) y un IPS (Sistema de Prevención de Intrusos)?",
+      "respuestas": [
+        {
+          "texto": "El IDS bloquea el ataque y el IPS solo avisa.",
+          "correcta": false,
+          "explicacion": "Es al revés."
+        },
+        {
+          "texto": "El IDS monitoriza y alerta (modo pasivo), mientras que el IPS se sitúa en línea con el tráfico y puede bloquear activamente los paquetes maliciosos (modo activo).",
+          "correcta": true,
+          "explicacion": "El IDS es como una alarma (detecta), el IPS es como un guarda de seguridad (actúa/detiene)."
+        },
+        {
+          "texto": "El IDS es hardware y el IPS es software.",
+          "correcta": false,
+          "explicacion": "Ambos pueden ser hardware o software."
+        },
+        {
+          "texto": "No hay diferencia, son sinónimos comerciales.",
+          "correcta": false,
+          "explicacion": "Tienen implicaciones operativas muy distintas (riesgo de falsos positivos bloqueando tráfico legítimo en IPS)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una APT (Amenaza Persistente Avanzada) y por qué los antivirus tradicionales suelen fallar en su detección?",
+      "respuestas": [
+        {
+          "texto": "Es un virus muy rápido. Los antivirus fallan por falta de memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Es un ataque dirigido y manual que utiliza herramientas personalizadas o técnicas 'Living off the Land' (usar herramientas propias del sistema) para evadir firmas conocidas.",
+          "correcta": true,
+          "explicacion": "Las APT no suelen usar malware genérico detectable por firmas; usan técnicas de ocultación y movimientos laterales sigilosos durante meses."
+        },
+        {
+          "texto": "Es un ataque de denegación de servicio. Los antivirus no sirven para DDoS.",
+          "correcta": false,
+          "explicacion": "Una APT busca exfiltración, no (habitualmente) denegación."
+        },
+        {
+          "texto": "Es un ataque físico a las instalaciones.",
+          "correcta": false,
+          "explicacion": "APT se refiere al ámbito ciber."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica la 'Seguridad por Diseño' (Security by Design) en el desarrollo de software?",
+      "respuestas": [
+        {
+          "texto": "Contratar diseñadores gráficos para hacer la app bonita.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Integrar requisitos y controles de seguridad en todas las fases del ciclo de vida de desarrollo (SDLC), desde la concepción hasta el despliegue, y no como un añadido final.",
+          "correcta": true,
+          "explicacion": "Es más barato y eficaz corregir vulnerabilidades en el diseño que parchear un sistema en producción."
+        },
+        {
+          "texto": "Instalar un antivirus al finalizar el desarrollo.",
+          "correcta": false,
+          "explicacion": "Eso es seguridad reactiva 'bolt-on' (añadida), lo opuesto a 'by design'."
+        },
+        {
+          "texto": "Usar solo software de código abierto.",
+          "correcta": false,
+          "explicacion": "El código abierto no garantiza seguridad por diseño per se."
+        }
+      ]
+    },
+    {
+      "pregunta": "En criptografía, ¿qué propiedad garantiza una función HASH (resumen)?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad: permite recuperar el mensaje original.",
+          "correcta": false,
+          "explicacion": "El hash es irreversible (one-way), no permite recuperar el mensaje."
+        },
+        {
+          "texto": "Integridad: cualquier cambio mínimo en el archivo original genera un hash completamente diferente, permitiendo detectar alteraciones.",
+          "correcta": true,
+          "explicacion": "Se usa para verificar que un archivo no ha sido modificado (checksums, firmas digitales)."
+        },
+        {
+          "texto": "Disponibilidad: comprime el archivo para que ocupe menos.",
+          "correcta": false,
+          "explicacion": "No es compresión."
+        },
+        {
+          "texto": "Autenticación: cifra con clave pública.",
+          "correcta": false,
+          "explicacion": "El hash no usa claves (salvo HMAC), es un algoritmo matemático público."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué riesgo específico aborda el control de seguridad 'NAC' (Network Access Control)?",
+      "respuestas": [
+        {
+          "texto": "El acceso a páginas web prohibidas.",
+          "correcta": false,
+          "explicacion": "Eso es filtrado web/proxy."
+        },
+        {
+          "texto": "La conexión de dispositivos no autorizados o inseguros (sin parches/antivirus) a la red corporativa física o WiFi.",
+          "correcta": true,
+          "explicacion": "El NAC evalúa el estado de salud del dispositivo y su identidad antes de dejarle entrar en la red (cuarentena, VLANs)."
+        },
+        {
+          "texto": "La velocidad de la red.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "El spam en el correo.",
+          "correcta": false,
+          "explicacion": "Eso es antispam."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el modelo de responsabilidad compartida en la Nube (Cloud Computing), ¿quién es responsable de la seguridad de los datos en un modelo SaaS (Software as a Service)?",
+      "respuestas": [
+        {
+          "texto": "Exclusivamente el proveedor de la nube.",
+          "correcta": false,
+          "explicacion": "Error común. El proveedor asegura la infraestructura y la app, pero no el uso de los datos."
+        },
+        {
+          "texto": "Siempre es responsabilidad compartida: el proveedor asegura la plataforma y la aplicación, pero el cliente es responsable de la gestión de accesos (quién entra) y la clasificación de sus datos.",
+          "correcta": true,
+          "explicacion": "Si un usuario pone una contraseña débil en Salesforce/Office365, es culpa del cliente, no del proveedor."
+        },
+        {
+          "texto": "El gobierno del país donde están los servidores.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "Nadie, la nube es segura por defecto.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Zero Day' (Día Cero)?",
+      "respuestas": [
+        {
+          "texto": "El día que se instala el sistema operativo.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una vulnerabilidad desconocida por el fabricante y para la cual no existe parche. Los atacantes la explotan libremente hasta que se descubre y corrige.",
+          "correcta": true,
+          "explicacion": "Es el ataque más peligroso porque las defensas tradicionales (basadas en firmas/parches) no pueden detenerlo a priori."
+        },
+        {
+          "texto": "Una licencia de software que caduca en un día.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un virus que borra todo en 24 horas.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de una DMZ (Zona Desmilitarizada) en una arquitectura de red segura?",
+      "respuestas": [
+        {
+          "texto": "Alojar los datos más confidenciales de la empresa.",
+          "correcta": false,
+          "explicacion": "Nunca. Los datos sensibles deben estar en la red interna (backend)."
+        },
+        {
+          "texto": "Aislar los servicios que deben ser accesibles desde internet (web, correo) de la red interna (LAN), impidiendo que un compromiso en el servidor público de acceso directo a la red interna.",
+          "correcta": true,
+          "explicacion": "Actúa como zona intermedia (buffer). Si hackean el servidor web en la DMZ, el firewall interno protege la base de datos en la LAN."
+        },
+        {
+          "texto": "Conectar los ordenadores de los empleados a internet directamente.",
+          "correcta": false,
+          "explicacion": "Peligroso."
+        },
+        {
+          "texto": "Es una zona sin vigilancia.",
+          "correcta": false,
+          "explicacion": "Al contrario, está muy vigilada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia existe entre 'Autenticación' y 'Autorización'?",
+      "respuestas": [
+        {
+          "texto": "Son sinónimos.",
+          "correcta": false,
+          "explicacion": "Conceptos distintos."
+        },
+        {
+          "texto": "La Autenticación verifica QUIÉN eres (usuario/contraseña); la Autorización determina QUÉ puedes hacer (permisos de lectura/escritura).",
+          "correcta": true,
+          "explicacion": "Primero te identificas (Autenticación), luego el sistema comprueba tus derechos (Autorización)."
+        },
+        {
+          "texto": "La Autenticación es para entrar en el edificio y la Autorización para el ordenador.",
+          "correcta": false,
+          "explicacion": "Ambos conceptos aplican tanto física como lógicamente."
+        },
+        {
+          "texto": "La Autorización es previa a la Autenticación.",
+          "correcta": false,
+          "explicacion": "No puedes autorizar a alguien que no sabes quién es."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Esteganografía'?",
+      "respuestas": [
+        {
+          "texto": "El arte de escribir códigos secretos incomprensibles.",
+          "correcta": false,
+          "explicacion": "Eso es criptografía."
+        },
+        {
+          "texto": "La técnica de ocultar la existencia de un mensaje dentro de otro archivo portador (ej. una imagen o audio), de modo que pase desapercibido.",
+          "correcta": true,
+          "explicacion": "A diferencia del cifrado (que se ve 'ruido' sospechoso), la esteganografía oculta el hecho mismo de la comunicación."
+        },
+        {
+          "texto": "El estudio de los dinosaurios.",
+          "correcta": false,
+          "explicacion": "Irrelevante."
+        },
+        {
+          "texto": "Una técnica de borrado de discos.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En seguridad móvil, ¿qué es el 'Sandboxing' de aplicaciones?",
+      "respuestas": [
+        {
+          "texto": "Jugar en la playa con el móvil.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un mecanismo de aislamiento que impide que una aplicación acceda a los datos o procesos de otras aplicaciones o del sistema operativo sin permiso explícito.",
+          "correcta": true,
+          "explicacion": "Es la base de la seguridad en iOS y Android. Si una app es maliciosa, su daño queda contenido en su 'caja de arena'."
+        },
+        {
+          "texto": "Llenar el móvil de arena para destruirlo.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un modo de ahorro de batería.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque 'Man-in-the-Middle' (MitM)?",
+      "respuestas": [
+        {
+          "texto": "Un ataque donde el agresor se interpone en la comunicación entre dos partes, pudiendo leer o modificar los mensajes sin que ellas lo sepan.",
+          "correcta": true,
+          "explicacion": "Rompe la confidencialidad y potencialmente la integridad. Típico en WiFis abiertas o mediante ARP Spoofing."
+        },
+        {
+          "texto": "Un ataque al servidor central de la empresa.",
+          "correcta": false,
+          "explicacion": "Demasiado genérico."
+        },
+        {
+          "texto": "Un empleado desleal dentro de la empresa.",
+          "correcta": false,
+          "explicacion": "Eso es una 'Amenaza Interna' (Insider Threat)."
+        },
+        {
+          "texto": "Un virus que ataca al procesador.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que un sistema sea 'No Repudiable' (No Repudio)?",
+      "respuestas": [
+        {
+          "texto": "Que el sistema no puede rechazar ninguna conexión.",
+          "correcta": false,
+          "explicacion": "Eso sería vulnerabilidad a DoS."
+        },
+        {
+          "texto": "Que una entidad no puede negar haber realizado una acción (haber enviado un mensaje o firmado un documento) porque existe prueba técnica irrefutable.",
+          "correcta": true,
+          "explicacion": "Es fundamental en transacciones comerciales y legales (firma digital)."
+        },
+        {
+          "texto": "Que el sistema nunca falla.",
+          "correcta": false,
+          "explicacion": "Fiabilidad."
+        },
+        {
+          "texto": "Que el usuario no puede borrar sus datos.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de realizar pruebas de 'Penetration Testing' (Pentesting)?",
+      "respuestas": [
+        {
+          "texto": "Comprobar si el firewall está encendido.",
+          "correcta": false,
+          "explicacion": "Eso es una revisión de configuración básica."
+        },
+        {
+          "texto": "Simular un ataque real controlado (Hacking Ético) para identificar y explotar vulnerabilidades antes que los atacantes reales, evaluando la resistencia del sistema.",
+          "correcta": true,
+          "explicacion": "Va más allá del escaneo de vulnerabilidades; el pentester intenta 'entrar' para demostrar el impacto real."
+        },
+        {
+          "texto": "Instalar parches de seguridad.",
+          "correcta": false,
+          "explicacion": "Es una tarea de administración, consecuencia del pentest."
+        },
+        {
+          "texto": "Formar a los usuarios.",
+          "correcta": false,
+          "explicacion": "No es el objetivo directo."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de borrado seguro, ¿qué es la 'Desmagnetización' (Degaussing)?",
+      "respuestas": [
+        {
+          "texto": "Limpiar la pantalla con un imán.",
+          "correcta": false,
+          "explicacion": "Dañaría la pantalla."
+        },
+        {
+          "texto": "Un método de destrucción de datos en soportes magnéticos (discos duros, cintas) mediante la aplicación de un campo magnético potente que elimina la información y suele inutilizar el dispositivo.",
+          "correcta": true,
+          "explicacion": "Es un método físico de alto nivel de seguridad para medios magnéticos."
+        },
+        {
+          "texto": "Formatear el disco tres veces.",
+          "correcta": false,
+          "explicacion": "Eso es borrado lógico/software."
+        },
+        {
+          "texto": "Quitar la electricidad estática.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Keylogger'?",
+      "respuestas": [
+        {
+          "texto": "Un software para gestionar contraseñas.",
+          "correcta": false,
+          "explicacion": "Eso es un Password Manager."
+        },
+        {
+          "texto": "Un tipo de malware o dispositivo físico que registra cada pulsación del teclado para robar contraseñas y mensajes escritos.",
+          "correcta": true,
+          "explicacion": "Amenaza crítica a la confidencialidad."
+        },
+        {
+          "texto": "Una llave USB de seguridad.",
+          "correcta": false,
+          "explicacion": "Token."
+        },
+        {
+          "texto": "El registro de entrada a la oficina.",
+          "correcta": false,
+          "explicacion": "Log de acceso físico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Ingeniería Social Inversa'?",
+      "respuestas": [
+        {
+          "texto": "Cuando el atacante sabotea primero el sistema de la víctima para que luego esta le pida ayuda, momento en el que solicita las credenciales para 'solucionarlo'.",
+          "correcta": true,
+          "explicacion": "Crea dependencia y confianza previa."
+        },
+        {
+          "texto": "Ingeniería social hecha por robots.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Defenderse de la ingeniería social.",
+          "correcta": false,
+          "explicacion": "Eso es concienciación."
+        },
+        {
+          "texto": "Hacerse amigo del atacante.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define a un 'Script Kiddie' frente a un Hacker profesional?",
+      "respuestas": [
+        {
+          "texto": "La edad.",
+          "correcta": false,
+          "explicacion": "No necesariamente."
+        },
+        {
+          "texto": "El Script Kiddie carece de conocimientos profundos y usa herramientas/scripts creados por otros para atacar, buscando notoriedad fácil; el profesional entiende el funcionamiento técnico subyacente.",
+          "correcta": true,
+          "explicacion": "Es una distinción de habilidad técnica y motivación."
+        },
+        {
+          "texto": "El Script Kiddie trabaja para el gobierno.",
+          "correcta": false,
+          "explicacion": "Falso."
+        },
+        {
+          "texto": "El Hacker profesional nunca comete delitos.",
+          "correcta": false,
+          "explicacion": "Existen los 'Black Hat' profesionales."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el marco del ENS, ¿qué significa clasificar un sistema como de 'Nivel ALTO'?",
+      "respuestas": [
+        {
+          "texto": "Que está en un edificio alto.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        },
+        {
+          "texto": "Que el impacto de un incidente en dicho sistema tendría consecuencias graves o catastróficas para la organización, la seguridad nacional o los derechos de los ciudadanos.",
+          "correcta": true,
+          "explicacion": "La clasificación determina la rigurosidad de las medidas de seguridad a aplicar."
+        },
+        {
+          "texto": "Que cuesta mucho dinero.",
+          "correcta": false,
+          "explicacion": "No se mide por coste directo, sino por impacto/criticidad."
+        },
+        {
+          "texto": "Que usa tecnología antigua.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Spear Phishing'?",
+      "respuestas": [
+        {
+          "texto": "Phishing sobre pesca deportiva.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una variante de phishing altamente dirigida y personalizada hacia una persona o grupo específico, utilizando información previa para aumentar la credibilidad.",
+          "correcta": true,
+          "explicacion": "A diferencia del phishing masivo ('red de arrastre'), este es un 'arpón' dirigido a un objetivo concreto."
+        },
+        {
+          "texto": "Phishing por SMS.",
+          "correcta": false,
+          "explicacion": "Smishing."
+        },
+        {
+          "texto": "Phishing por voz.",
+          "correcta": false,
+          "explicacion": "Vishing."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Superficie de Ataque'?",
+      "respuestas": [
+        {
+          "texto": "El tamaño de la sala de servidores.",
+          "correcta": false,
+          "explicacion": "No es físico."
+        },
+        {
+          "texto": "La suma de todos los puntos de acceso, vulnerabilidades, puertos abiertos y servicios expuestos que un atacante podría intentar explotar.",
+          "correcta": true,
+          "explicacion": "El objetivo del hardening es reducir esta superficie (cerrar puertos, desinstalar software inútil)."
+        },
+        {
+          "texto": "El monitor del ordenador.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "El área geográfica de la empresa.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque 'Whaling' (Caza de Ballenas)?",
+      "respuestas": [
+        {
+          "texto": "Atacar a grandes empresas.",
+          "correcta": false,
+          "explicacion": "Relacionado, pero específico a personas."
+        },
+        {
+          "texto": "Un tipo de Spear Phishing dirigido exclusivamente a altos ejecutivos (CEO, CFO) o cargos críticos, buscando robar credenciales de máximo nivel o autorizar pagos fraudulentos.",
+          "correcta": true,
+          "explicacion": "Las 'ballenas' son los objetivos de mayor valor."
+        },
+        {
+          "texto": "Robar bases de datos muy grandes.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un ataque ecologista.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un WAF (Web Application Firewall)?",
+      "respuestas": [
+        {
+          "texto": "Un firewall normal pero más barato.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un firewall especializado que analiza el tráfico HTTP/HTTPS a nivel de aplicación (Capa 7) para proteger servidores web de ataques específicos como SQL Injection o XSS.",
+          "correcta": true,
+          "explicacion": "Un firewall de red tradicional (capa 3/4) deja pasar el tráfico web (puerto 80/443) sin ver si lleva código malicioso dentro; el WAF sí lo ve."
+        },
+        {
+          "texto": "Un antivirus web.",
+          "correcta": false,
+          "explicacion": "Término impreciso."
+        },
+        {
+          "texto": "Una aplicación para diseñar webs seguras.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Ransomware as a Service' (RaaS)?",
+      "respuestas": [
+        {
+          "texto": "Un servicio de protección contra ransomware.",
+          "correcta": false,
+          "explicacion": "Al contrario, es para distribuirlo."
+        },
+        {
+          "texto": "Un modelo de negocio criminal donde los desarrolladores del malware lo alquilan a afiliados (atacantes) a cambio de una comisión de los rescates obtenidos.",
+          "correcta": true,
+          "explicacion": "Democratiza el cibercrimen, permitiendo que gente sin conocimientos técnicos lance ataques complejos."
+        },
+        {
+          "texto": "Pagar el rescate a plazos.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un virus que solo afecta a servidores.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Obsolescencia Tecnológica' como riesgo de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Que el ordenador sea lento.",
+          "correcta": false,
+          "explicacion": "Problema de productividad, no seguridad."
+        },
+        {
+          "texto": "El uso de hardware o software que ya no recibe soporte ni actualizaciones de seguridad del fabricante (End of Life), quedando expuesto a nuevas vulnerabilidades sin solución.",
+          "correcta": true,
+          "explicacion": "Ejemplo: Usar Windows XP hoy en día es un riesgo crítico."
+        },
+        {
+          "texto": "Comprar tecnología barata.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "No tener el último modelo de iPhone.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Honeypot' (Tarro de Miel)?",
+      "respuestas": [
+        {
+          "texto": "Un regalo para los clientes.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un sistema señuelo diseñado para parecer vulnerable y atractivo, con el fin de atraer a los atacantes, distraerlos y estudiar sus técnicas sin poner en riesgo los sistemas reales.",
+          "correcta": true,
+          "explicacion": "Es una herramienta de inteligencia y detección temprana."
+        },
+        {
+          "texto": "Un repositorio de contraseñas.",
+          "correcta": false,
+          "explicacion": "Peligroso si fuera así."
+        },
+        {
+          "texto": "Una técnica de phishing romántico.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "En seguridad inalámbrica, ¿por qué WEP es obsoleto y peligroso?",
+      "respuestas": [
+        {
+          "texto": "Porque es lento.",
+          "correcta": false,
+          "explicacion": "No es la razón principal."
+        },
+        {
+          "texto": "Porque su algoritmo de cifrado tiene vulnerabilidades matemáticas graves que permiten obtener la clave en minutos escuchando el tráfico.",
+          "correcta": true,
+          "explicacion": "Se rompió hace años. Se debe usar WPA2 o WPA3."
+        },
+        {
+          "texto": "Porque no soporta móviles modernos.",
+          "correcta": false,
+          "explicacion": "Suelen mantener retrocompatibilidad, pero no se debe usar."
+        },
+        {
+          "texto": "Porque solo funciona en EEUU.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'CEO Fraud' o 'BEC' (Business Email Compromise)?",
+      "respuestas": [
+        {
+          "texto": "Hackear el ordenador del CEO.",
+          "correcta": false,
+          "explicacion": "Puede ser parte, pero el fraude es el engaño financiero."
+        },
+        {
+          "texto": "Un ataque donde se suplanta o compromete la cuenta de un directivo para ordenar transferencias bancarias urgentes y fraudulentas al departamento financiero.",
+          "correcta": true,
+          "explicacion": "Causa pérdidas millonarias basándose en la autoridad del supuesto remitente."
+        },
+        {
+          "texto": "Spam comercial.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Falsificar la firma en papel.",
+          "correcta": false,
+          "explicacion": "Es digital."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Firma Digital' y qué garantiza?",
+      "respuestas": [
+        {
+          "texto": "Escanear la firma manuscrita.",
+          "correcta": false,
+          "explicacion": "Eso es firma digitalizada, sin valor criptográfico."
+        },
+        {
+          "texto": "Un mecanismo criptográfico que garantiza la Autenticidad (es quien dice ser), la Integridad (no se modificó) y el No Repudio del documento.",
+          "correcta": true,
+          "explicacion": "Usa la clave privada del firmante y un hash del documento."
+        },
+        {
+          "texto": "Poner el nombre al final del email.",
+          "correcta": false,
+          "explicacion": "Sin valor probatorio fuerte."
+        },
+        {
+          "texto": "Una contraseña para abrir el PDF.",
+          "correcta": false,
+          "explicacion": "Eso es cifrado/control de acceso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Shadow IT'?",
+      "respuestas": [
+        {
+          "texto": "El equipo de seguridad nocturno.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "El uso de dispositivos, software o servicios en la nube por parte de los empleados sin el conocimiento ni aprobación del departamento de TI.",
+          "correcta": true,
+          "explicacion": "Ejemplo: usar Dropbox personal para subir datos de empresa porque 'es más cómodo'. Riesgo alto de fuga de datos."
+        },
+        {
+          "texto": "La Dark Web.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Ordenadores pintados de negro.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Buffer Overflow' (Desbordamiento de Búfer)?",
+      "respuestas": [
+        {
+          "texto": "Cuando se llena el disco duro.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una vulnerabilidad de programación donde un programa escribe más datos en un bloque de memoria (búfer) de los que este puede contener, sobrescribiendo memoria adyacente y permitiendo potencialmente ejecutar código malicioso.",
+          "correcta": true,
+          "explicacion": "Clásico fallo de seguridad en software no gestionado (C/C++)."
+        },
+        {
+          "texto": "Cuando internet va lento por mucha descarga.",
+          "correcta": false,
+          "explicacion": "Congestión."
+        },
+        {
+          "texto": "Derramar café en el teclado.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Cross-Site Scripting' (XSS)?",
+      "respuestas": [
+        {
+          "texto": "Cruzar cables de red.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una vulnerabilidad web que permite a un atacante inyectar scripts maliciosos en páginas vistas por otros usuarios, robando sus cookies de sesión.",
+          "correcta": true,
+          "explicacion": "Ataca al usuario final a través de la web vulnerable."
+        },
+        {
+          "texto": "Diseñar webs con Excel.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un error de base de datos.",
+          "correcta": false,
+          "explicacion": "Eso suele ser SQL Injection."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Inyección SQL' (SQL Injection)?",
+      "respuestas": [
+        {
+          "texto": "Poner una inyección al servidor.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Una técnica de ataque web donde se inserta código SQL malicioso en los campos de entrada para manipular la base de datos subyacente (robar datos, borrarlos, saltar login).",
+          "correcta": true,
+          "explicacion": "Ocurre cuando la aplicación no valida (sanitiza) los datos introducidos por el usuario."
+        },
+        {
+          "texto": "Instalar SQL Server pirata.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un virus de hoja de cálculo.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un 'Rootkit'?",
+      "respuestas": [
+        {
+          "texto": "Un kit de herramientas de jardinería.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un tipo de malware diseñado para ocultar su propia existencia y la de otros procesos maliciosos, obteniendo privilegios de administrador (root) y siendo muy difícil de detectar por el sistema operativo.",
+          "correcta": true,
+          "explicacion": "Se 'engancha' al núcleo del sistema para mentir al usuario sobre qué procesos corren."
+        },
+        {
+          "texto": "El usuario administrador en Linux.",
+          "correcta": false,
+          "explicacion": "Root es el usuario; Rootkit es el malware."
+        },
+        {
+          "texto": "Un router de cocina.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Sniffing' de red?",
+      "respuestas": [
+        {
+          "texto": "Oler el equipo quemado.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Capturar y analizar los paquetes de datos que circulan por una red, pudiendo leer información confidencial si no está cifrada.",
+          "correcta": true,
+          "explicacion": "Herramientas como Wireshark se usan para esto (tanto para diagnóstico como para ataque)."
+        },
+        {
+          "texto": "Cortar el cable de red.",
+          "correcta": false,
+          "explicacion": "DoS físico."
+        },
+        {
+          "texto": "Limpiar la red de virus.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "En análisis forense, ¿qué es la 'Cadena de Custodia'?",
+      "respuestas": [
+        {
+          "texto": "Una cadena de metal para atar el PC.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "El procedimiento documentado que registra cronológicamente quién tuvo acceso a las evidencias digitales, garantizando que no han sido manipuladas desde su recolección hasta el juicio.",
+          "correcta": true,
+          "explicacion": "Sin ella, las pruebas digitales suelen ser invalidadas en un juicio."
+        },
+        {
+          "texto": "La lista de sospechosos.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "La copia de seguridad.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Typosquatting'?",
+      "respuestas": [
+        {
+          "texto": "Hacer sentadillas mientras escribes.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Registrar dominios web muy similares a los de marcas populares, aprovechando errores tipográficos de los usuarios (ej. 'gogle.com') para dirigirlos a sitios maliciosos.",
+          "correcta": true,
+          "explicacion": "Ingeniería social pasiva basada en el error humano al teclear."
+        },
+        {
+          "texto": "Escribir con faltas de ortografía a propósito.",
+          "correcta": false,
+          "explicacion": "No."
+        },
+        {
+          "texto": "Un tipo de fuente de letra.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Biometría' como factor de autenticación y cuál es su principal inconveniente frente a una contraseña?",
+      "respuestas": [
+        {
+          "texto": "Es algo que sabes. Inconveniente: se olvida.",
+          "correcta": false,
+          "explicacion": "La biometría es 'algo que eres'."
+        },
+        {
+          "texto": "Uso de rasgos físicos (huella, cara) para identificar. Inconveniente: si tus datos biométricos son robados o comprometidos, no puedes 'cambiarlos' como una contraseña.",
+          "correcta": true,
+          "explicacion": "No puedes cambiarte la huella dactilar si te la copian. Es un riesgo de por vida."
+        },
+        {
+          "texto": "Es muy barata. Inconveniente: falla mucho.",
+          "correcta": false,
+          "explicacion": "No es el principal problema de seguridad."
+        },
+        {
+          "texto": "Es solo para películas.",
+          "correcta": false,
+          "explicacion": "Falso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque 'DDOS' (Distributed Denial of Service)?",
+      "respuestas": [
+        {
+          "texto": "Borrar el sistema operativo del servidor.",
+          "correcta": false,
+          "explicacion": "No necesariamente."
+        },
+        {
+          "texto": "Saturar un servidor o red con una avalancha de tráfico proveniente de múltiples fuentes (botnet) simultáneamente, dejándolo inoperativo para los usuarios legítimos.",
+          "correcta": true,
+          "explicacion": "Ataca la Disponibilidad. Al ser distribuido, es difícil de bloquear por IP."
+        },
+        {
+          "texto": "Robar datos distribuidos.",
+          "correcta": false,
+          "explicacion": "No es robo, es interrupción."
+        },
+        {
+          "texto": "Un error de distribución de software.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'Shoulder Surfing' digital o remoto?",
+      "respuestas": [
+        {
+          "texto": "No existe.",
+          "correcta": false,
+          "explicacion": "Sí existe variantes."
+        },
+        {
+          "texto": "El uso de malware o herramientas de administración remota (RAT) para ver la pantalla del usuario en tiempo real sin que este se dé cuenta.",
+          "correcta": true,
+          "explicacion": "Es la versión lógica de mirar por encima del hombro."
+        },
+        {
+          "texto": "Navegar con el hombro.",
+          "correcta": false,
+          "explicacion": "Absurdo."
+        },
+        {
+          "texto": "Usar gafas de realidad virtual.",
+          "correcta": false,
+          "explicacion": "No."
+        }
+      ]
+    }
+  ]
+}
