@@ -1,0 +1,255 @@
+{
+    "tema": "Test tema3 del libro: Credenciales y PKI",
+    "preguntas": [
+        {
+            "pregunta": "¿Cuál de las siguientes autoridades no corresponde a la infraestructura PKI?",
+            "respuestas": [
+                {
+                    "texto": "Autoridad de dominio.",
+                    "correcta": true,
+                    "explicacion": "En una PKI estándar existen CA (Certificación), RA (Registro) y VA (Validación). La 'Autoridad de Dominio' es un concepto de redes Windows (AD), no de PKI pública."
+                },
+                {
+                    "texto": "Autoridad de certificación.",
+                    "correcta": false,
+                    "explicacion": "Es el componente principal (CA) que emite los certificados."
+                },
+                {
+                    "texto": "Autoridad de registro.",
+                    "correcta": false,
+                    "explicacion": "Es el componente (RA) que verifica la identidad del solicitante."
+                },
+                {
+                    "texto": "Autoridad de validación.",
+                    "correcta": false,
+                    "explicacion": "Es el componente que informa sobre la validez o revocación (OCSP)."
+                }
+            ]
+        },
+        {
+            "pregunta": "De los siguientes campos, ¿cuál no está incluido en un certificado PKI?",
+            "respuestas": [
+                {
+                    "texto": "Número de serie.",
+                    "correcta": false,
+                    "explicacion": "Es un campo obligatorio para identificar el certificado."
+                },
+                {
+                    "texto": "Autoridad de dominio.",
+                    "correcta": true,
+                    "explicacion": "No es un campo del estándar X.509 para certificados digitales."
+                },
+                {
+                    "texto": "Sujeto.",
+                    "correcta": false,
+                    "explicacion": "Identifica al propietario del certificado."
+                },
+                {
+                    "texto": "Clave pública del sujeto.",
+                    "correcta": false,
+                    "explicacion": "Es la parte clave que el certificado distribuye."
+                }
+            ]
+        },
+        {
+            "pregunta": "El portal cautivo es:",
+            "respuestas": [
+                {
+                    "texto": "Ninguna de las respuestas anteriores es correcta",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Un servicio que evita el acceso inmediato a su sistema (NAC).",
+                    "correcta": true,
+                    "explicacion": "Actúa como barrera de Control de Acceso a la Red (NAC), redirigiendo el tráfico hasta que el usuario se autentica."
+                },
+                {
+                    "texto": "Un punto de acceso.",
+                    "correcta": false,
+                    "explicacion": "Es un software, no el dispositivo físico (AP)."
+                },
+                {
+                    "texto": "Una web de autenticación.",
+                    "correcta": false,
+                    "explicacion": "Aunque usa una web, su definición técnica correcta aquí es su función de bloqueo/control (NAC)."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Es seguro el baúl de credenciales de Windows 10?",
+            "respuestas": [
+                {
+                    "texto": "No, pero utilizando software externo.",
+                    "correcta": true,
+                    "explicacion": "Según el criterio del libro, se considera que por sí solo puede no ser suficiente comparado con gestores dedicados robustos."
+                },
+                {
+                    "texto": "Sí, en cualquier caso.",
+                    "correcta": false,
+                    "explicacion": "Ninguna herramienta es segura 'en cualquier caso'."
+                },
+                {
+                    "texto": "No, en cualquier caso.",
+                    "correcta": false,
+                    "explicacion": "Es una herramienta válida en entornos corporativos integrados."
+                },
+                {
+                    "texto": "No existe tal baúl de credenciales.",
+                    "correcta": false,
+                    "explicacion": "Sí existe (Credential Manager)."
+                }
+            ]
+        },
+        {
+            "pregunta": "Las credenciales son:",
+            "respuestas": [
+                {
+                    "texto": "El nombre de usuario.",
+                    "correcta": false,
+                    "explicacion": "Eso es solo la identificación (pública)."
+                },
+                {
+                    "texto": "Un mecanismo de verificación.",
+                    "correcta": true,
+                    "explicacion": "Son los datos (usuario + secreto) que permiten verificar la identidad."
+                },
+                {
+                    "texto": "Una tarjeta con banda magnética.",
+                    "correcta": false,
+                    "explicacion": "Es un soporte físico."
+                },
+                {
+                    "texto": "Una tarjeta con chip de lectura NFC.",
+                    "correcta": false,
+                    "explicacion": "Es un soporte físico."
+                }
+            ]
+        },
+        {
+            "pregunta": "Los certificados no podrán utilizarse para:",
+            "respuestas": [
+                {
+                    "texto": "Autenticar.",
+                    "correcta": false,
+                    "explicacion": "Es uno de sus usos principales (verificar identidad)."
+                },
+                {
+                    "texto": "Firmar.",
+                    "correcta": false,
+                    "explicacion": "Es su uso para garantizar integridad y no repudio."
+                },
+                {
+                    "texto": "Cifrar.",
+                    "correcta": false,
+                    "explicacion": "Se usan para cifrar comunicaciones (ej. HTTPS)."
+                },
+                {
+                    "texto": "Pagar.",
+                    "correcta": true,
+                    "explicacion": "Aunque aseguran la transacción, el certificado digital no es un medio de pago en sí mismo (como una tarjeta de crédito)."
+                }
+            ]
+        },
+        {
+            "pregunta": "Para firmar un documento, no es válido usar:",
+            "respuestas": [
+                {
+                    "texto": "Código secreto.",
+                    "correcta": false,
+                    "explicacion": "Puede referirse a un PIN asociado a la firma."
+                },
+                {
+                    "texto": "Un método basado en biometría.",
+                    "correcta": false,
+                    "explicacion": "La firma biométrica es legalmente válida en muchos contextos."
+                },
+                {
+                    "texto": "Firma manuscrita.",
+                    "correcta": false,
+                    "explicacion": "Es el método tradicional válido."
+                },
+                {
+                    "texto": "El escaneado del documento firmado.",
+                    "correcta": true,
+                    "explicacion": "Una imagen escaneada ('pegada') no tiene validez legal ni técnica, ya que no garantiza la integridad ni la autoría real."
+                }
+            ]
+        },
+        {
+            "pregunta": "Un par de clave asimétrica es:",
+            "respuestas": [
+                {
+                    "texto": "Que el propietario tiene la clave pública y la clave privada la tiene la otra parte.",
+                    "correcta": false,
+                    "explicacion": "Incorrecto, la privada nunca se comparte."
+                },
+                {
+                    "texto": "Que las partes comparten ambas claves para encriptar y desencriptar.",
+                    "correcta": false,
+                    "explicacion": "Eso sería criptografía simétrica."
+                },
+                {
+                    "texto": "Ninguna de las respuestas anteriores es correcta.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Compartir la clave pública para encriptar y el propietario tiene la privada para desencriptar.",
+                    "correcta": true,
+                    "explicacion": "Es el principio básico: lo que cifra la pública solo lo descifra la privada (confidencialidad)."
+                }
+            ]
+        },
+        {
+            "pregunta": "Una clave simétrica es:",
+            "respuestas": [
+                {
+                    "texto": "Que ambas partes tienen la clave pública, pero solo la parte contraria tiene la clave privada.",
+                    "correcta": false,
+                    "explicacion": "Mezcla conceptos de asimétrica."
+                },
+                {
+                    "texto": "Que ambas partes tienen dos claves: una para encriptar y otra para desencriptar.",
+                    "correcta": false,
+                    "explicacion": "Eso es asimétrica."
+                },
+                {
+                    "texto": "Que ambas partes comparten la misma clave para encriptar y para desencriptar.",
+                    "correcta": true,
+                    "explicacion": "Es la definición de simétrica (secreto compartido)."
+                },
+                {
+                    "texto": "Que ambas partes tienen la clave pública, pero solo el propietario tiene la clave privada.",
+                    "correcta": false,
+                    "explicacion": "Eso es asimétrica."
+                }
+            ]
+        },
+        {
+            "pregunta": "Una infraestructura PKI es:",
+            "respuestas": [
+                {
+                    "texto": "Un equipo humano que gestiona certificados digitales de la organización.",
+                    "correcta": false,
+                    "explicacion": "Es solo la parte de RRHH."
+                },
+                {
+                    "texto": "Un software de gestión de certificados digitales locales.",
+                    "correcta": false,
+                    "explicacion": "Es solo la parte de software."
+                },
+                {
+                    "texto": "Una autoridad cualificada para emitir, renovar o revocar certificados digitales.",
+                    "correcta": false,
+                    "explicacion": "Eso es la CA específicamente."
+                },
+                {
+                    "texto": "Un conjunto de equipos para gestionar certificados digitales.",
+                    "correcta": true,
+                    "explicacion": "PKI engloba todo: Hardware, Software, Personas, Políticas y Procedimientos."
+                }
+            ]
+        }
+    ]
+}

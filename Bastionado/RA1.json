@@ -1,0 +1,365 @@
+{
+    "tema": "Cuestionario RA1: Bastionado de redes y sistemas",
+    "preguntas": [
+        {
+            "pregunta": "La información sobre incidentes:",
+            "respuestas": [
+                {
+                    "texto": "Debe establecerse, de forma preventiva, con una semana de margen para actualizar la información",
+                    "correcta": false,
+                    "explicacion": "La gestión de incidentes requiere inmediatez; establecer márgenes de una semana dejaría el sistema vulnerable."
+                },
+                {
+                    "texto": "Debe estar constantemente actualizada y eliminar aquellas partes de las que no exista peligro alguno",
+                    "correcta": false,
+                    "explicacion": "No se debe eliminar información histórica, ya que es necesaria para análisis forenses y estadísticas de seguridad."
+                },
+                {
+                    "texto": "Debe estar constantemente actualizada",
+                    "correcta": true,
+                    "explicacion": "Es fundamental mantener un registro al día para responder eficazmente a las amenazas y aprender de ellas."
+                },
+                {
+                    "texto": "Los incidentes deben ser resueltos, nada más",
+                    "correcta": false,
+                    "explicacion": "Además de resolverse, deben registrarse, clasificarse y analizarse para prevenir futuras ocurrencias."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cómo podemos comprobar la fortaleza de los servidores?",
+            "respuestas": [
+                {
+                    "texto": "Recopilando los logs del sistema",
+                    "correcta": false,
+                    "explicacion": "Los logs sirven para auditar qué ha pasado, pero no miden activamente la resistencia ante ataques."
+                },
+                {
+                    "texto": "Utilizando herramientas como WAF, PHPIDS o HIDS",
+                    "correcta": true,
+                    "explicacion": "Estas herramientas (Firewall de Aplicación Web, Sistemas de Detección de Intrusos) ponen a prueba y vigilan la seguridad activa del servidor."
+                },
+                {
+                    "texto": "Protegiendo el gestor de arranque",
+                    "correcta": false,
+                    "explicacion": "Es una técnica de bastionado específica (hardening), no un método de comprobación general."
+                },
+                {
+                    "texto": "Monitorizando la RAM, CPU y espacio ocupado en disco",
+                    "correcta": false,
+                    "explicacion": "Esto comprueba el rendimiento y la disponibilidad, no la seguridad."
+                }
+            ]
+        },
+        {
+            "pregunta": "La mejor forma de evitar ataques es:",
+            "respuestas": [
+                {
+                    "texto": "Prevenir",
+                    "correcta": true,
+                    "explicacion": "La seguridad proactiva (prevención) siempre es más efectiva y económica que la reactiva (corrección de daños)."
+                },
+                {
+                    "texto": "Aislar completamente el equipamiento informático",
+                    "correcta": false,
+                    "explicacion": "Sería seguro pero inútil, ya que los sistemas necesitan comunicarse para dar servicio."
+                },
+                {
+                    "texto": "Emplear herramientas externas validadas",
+                    "correcta": false,
+                    "explicacion": "Ayuda, pero no es la 'mejor forma' por sí sola sin una estrategia preventiva integral."
+                },
+                {
+                    "texto": "Utilizar herramientas propias del sistema operativo",
+                    "correcta": false,
+                    "explicacion": "Es necesario pero insuficiente; se requiere una estrategia de defensa en profundidad."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuáles de los siguientes elementos gestiona un CMDB?",
+            "respuestas": [
+                {
+                    "texto": "Gestión de contratos",
+                    "correcta": true,
+                    "explicacion": "La CMDB (Base de Datos de Gestión de Configuración) vincula los activos con sus contratos de soporte y licencias."
+                },
+                {
+                    "texto": "Inventario hardware",
+                    "correcta": true,
+                    "explicacion": "Es la función central: tener registrados todos los elementos físicos (CIs) de la infraestructura."
+                },
+                {
+                    "texto": "Datos de usuarios",
+                    "correcta": true,
+                    "explicacion": "Asocia los equipos y servicios a sus propietarios o usuarios responsables."
+                },
+                {
+                    "texto": "Monitorización de red",
+                    "correcta": false,
+                    "explicacion": "La monitorización es un proceso en tiempo real, mientras que la CMDB almacena información de configuración y relaciones."
+                }
+            ]
+        },
+        {
+            "pregunta": "Una de las medidas de seguridad perimetral más recomendadas es:",
+            "respuestas": [
+                {
+                    "texto": "Cortafuegos por puertos",
+                    "correcta": false,
+                    "explicacion": "Es la seguridad básica de red (capa 4), pero insuficiente contra ataques modernos a aplicaciones."
+                },
+                {
+                    "texto": "Cifrado y apertura SSL",
+                    "correcta": false,
+                    "explicacion": "Protege la confidencialidad de los datos en tránsito, pero no filtra el tráfico malicioso perimetral."
+                },
+                {
+                    "texto": "Análisis forense",
+                    "correcta": false,
+                    "explicacion": "Es una medida reactiva que se realiza después de un incidente, no preventiva."
+                },
+                {
+                    "texto": "Cortafuegos de aplicaciones",
+                    "correcta": true,
+                    "explicacion": "Los WAF (Web Application Firewall) analizan el tráfico de capa 7, bloqueando ataques complejos que pasan los firewalls tradicionales."
+                }
+            ]
+        },
+        {
+            "pregunta": "De los siguientes accesos, ¿cuál es el más seguro?",
+            "respuestas": [
+                {
+                    "texto": "No utilizar contraseña",
+                    "correcta": false,
+                    "explicacion": "Representa una vulnerabilidad crítica."
+                },
+                {
+                    "texto": "Contraseña de más de 8 caracteres alfanuméricos y caracteres especiales.",
+                    "correcta": false,
+                    "explicacion": "Es una buena práctica de higiene, pero sigue siendo un único factor de autenticación."
+                },
+                {
+                    "texto": "Contraseña de más de 12 dígitos",
+                    "correcta": false,
+                    "explicacion": "La longitud mejora la seguridad frente a fuerza bruta, pero sigue siendo un solo factor."
+                },
+                {
+                    "texto": "Contraseña con segundo factor de autenticación",
+                    "correcta": true,
+                    "explicacion": "Añadir un segundo factor (algo que tienes o eres) reduce drásticamente el riesgo de compromiso de la cuenta."
+                }
+            ]
+        },
+        {
+            "pregunta": "A la hora de rellenar la ficha de formalización de un proceso hay una serie de ítems. Empareja las palabras con el significado:",
+            "respuestas": [
+                {
+                    "texto": "Objeto -> Cuál es la utilidad del proceso | Identificacion de los controles del proceso -> Por el sistema operativo o por el software base | Alcance -> Momento en que se inicia y termina | Estado en que queda el proceso -> Cerrado y huerfano",
+                    "correcta": true,
+                    "explicacion": "Relación correcta de los campos estándar en la documentación de procesos de sistemas."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cual es una de las principales características de la norma ISO/IEC 27001?",
+            "respuestas": [
+                {
+                    "texto": "Sistemas de vigilancia y monitorización",
+                    "correcta": false,
+                    "explicacion": "Son controles técnicos derivados, no la característica definitoria de la norma de gestión."
+                },
+                {
+                    "texto": "Compromiso de alta dirección",
+                    "correcta": true,
+                    "explicacion": "La norma exige liderazgo y compromiso directivo (Capítulo 5) como pilar fundamental para el éxito del SGSI."
+                },
+                {
+                    "texto": "Análisis profundo de la incidencia",
+                    "correcta": false,
+                    "explicacion": "Es parte de la operativa, pero no el rasgo principal de la norma."
+                },
+                {
+                    "texto": "Resolución y puesta en marcha de los dispositivos afectados",
+                    "correcta": false,
+                    "explicacion": "Es una tarea de recuperación técnica."
+                }
+            ]
+        },
+        {
+            "pregunta": "Análisis de riesgo es",
+            "respuestas": [
+                {
+                    "texto": "La fase de evaluación de la exposición de los activos ante las nuevas amenazas",
+                    "correcta": false,
+                    "explicacion": "Incompleto; el análisis debe considerar todas las amenazas, no solo las nuevas."
+                },
+                {
+                    "texto": "El estudio del análisis de los activos y de los ataques producidos",
+                    "correcta": false,
+                    "explicacion": "Se centra en lo preventivo (amenazas potenciales), no solo en ataques pasados."
+                },
+                {
+                    "texto": "El estudio de las causas y motivaciones de posibles amenazas y posibles ataques de penetración en los sistemas",
+                    "correcta": true,
+                    "explicacion": "Define correctamente el proceso de identificar amenazas, vulnerabilidades e impactos potenciales."
+                },
+                {
+                    "texto": "El análisis de los eventos producidos en los ataques a los sistemas",
+                    "correcta": false,
+                    "explicacion": "Esto se corresponde más con la auditoría o el análisis forense."
+                }
+            ]
+        },
+        {
+            "pregunta": "Los sistemas deben ser actualizados para",
+            "respuestas": [
+                {
+                    "texto": "Evitar los ataques desde internet",
+                    "correcta": false,
+                    "explicacion": "Actualizar no evita que intenten atacarte, pero cierra las puertas que usarían."
+                },
+                {
+                    "texto": "Mejorar la rapidez de los servicios implementados",
+                    "correcta": false,
+                    "explicacion": "Puede ser un efecto secundario, pero el objetivo de seguridad es otro."
+                },
+                {
+                    "texto": "Mejorar el rendimiento en la red",
+                    "correcta": false,
+                    "explicacion": "Es optimización, no seguridad."
+                },
+                {
+                    "texto": "Mitigar posibles ataques porque pueden haber actualizado vulnerabilidades",
+                    "correcta": true,
+                    "explicacion": "Las actualizaciones (parches) corrigen fallos de código conocidos que los atacantes explotan."
+                }
+            ]
+        },
+        {
+            "pregunta": "Un estándar de seguridad en el ámbito cibernético es:",
+            "respuestas": [
+                {
+                    "texto": "Un conjunto de medidas para proteger los datos de los servidores",
+                    "correcta": false,
+                    "explicacion": "Es una definición muy limitada."
+                },
+                {
+                    "texto": "No existe el estándar como tal",
+                    "correcta": false,
+                    "explicacion": "Existen muchos estándares reconocidos internacionalmente (ISO, NIST, etc.)."
+                },
+                {
+                    "texto": "Un conjunto de medidas para proteger dispositivos",
+                    "correcta": false,
+                    "explicacion": "Demasiado específico."
+                },
+                {
+                    "texto": "Un conjunto de técnicas para proteger el entorno del usuario u organización",
+                    "correcta": true,
+                    "explicacion": "Abarca las directrices, marcos de trabajo y mejores prácticas para asegurar la información globalmente."
+                }
+            ]
+        },
+        {
+            "pregunta": "Hardening es lo mismo que",
+            "respuestas": [
+                {
+                    "texto": "La palabra anglosajona que se utiliza en hacking",
+                    "correcta": false,
+                    "explicacion": "Es un término de defensa (Blue Team), no de ataque."
+                },
+                {
+                    "texto": "Bastionado",
+                    "correcta": true,
+                    "explicacion": "Es la traducción exacta al español: el proceso de asegurar un sistema reduciendo sus vulnerabilidades."
+                },
+                {
+                    "texto": "No tiene equivalencia en español",
+                    "correcta": false,
+                    "explicacion": "Sí la tiene: bastionado o endurecimiento."
+                },
+                {
+                    "texto": "Endurecer el sistema de redes",
+                    "correcta": false,
+                    "explicacion": "Aplica a sistemas operativos y aplicaciones, no solo a redes."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuales de los siguientes requisitos debe cumplir la economia circular?",
+            "respuestas": [
+                {
+                    "texto": "Eliminar los combustibles contaminantes",
+                    "correcta": true,
+                    "explicacion": "Busca la sostenibilidad reduciendo el uso de recursos no renovables."
+                },
+                {
+                    "texto": "Reparar elementos",
+                    "correcta": false,
+                    "explicacion": "Es una estrategia válida, pero en este test específico se priorizan otras opciones como la reutilización."
+                },
+                {
+                    "texto": "Convertir desechos",
+                    "correcta": false,
+                    "explicacion": "Parte del reciclaje."
+                },
+                {
+                    "texto": "Reutilizar productos",
+                    "correcta": true,
+                    "explicacion": "Es uno de los principios clave (Reducir, Reutilizar, Reciclar) para alargar la vida útil."
+                }
+            ]
+        },
+        {
+            "pregunta": "Para bastionar un equipo, la primera acción será:",
+            "respuestas": [
+                {
+                    "texto": "Escanear el router principal",
+                    "correcta": false,
+                    "explicacion": "Esto es una acción de red, no sobre el equipo en sí."
+                },
+                {
+                    "texto": "Desactivar los programas de la nube",
+                    "correcta": false,
+                    "explicacion": "No es el paso crítico inicial."
+                },
+                {
+                    "texto": "Desinstalar aplicaciones y servicios innecesarios",
+                    "correcta": true,
+                    "explicacion": "Se basa en el principio de minimización: reducir la superficie de ataque eliminando lo que no se usa."
+                },
+                {
+                    "texto": "Instalar antivirus gratuitos",
+                    "correcta": false,
+                    "explicacion": "Es una medida complementaria, pero no la base estructural del bastionado."
+                }
+            ]
+        },
+        {
+            "pregunta": "RGPD es la sigla de",
+            "respuestas": [
+                {
+                    "texto": "Reglamento General para Penetración de Datos",
+                    "correcta": false,
+                    "explicacion": "Término inventado."
+                },
+                {
+                    "texto": "Reglamento General de Protección de Datos",
+                    "correcta": true,
+                    "explicacion": "Corresponde a la normativa europea de privacidad (GDPR en inglés)."
+                },
+                {
+                    "texto": "Regulación General de Penetración para Extraer Datos",
+                    "correcta": false,
+                    "explicacion": "Término inventado."
+                },
+                {
+                    "texto": "Regulación Gran Protección de Datos",
+                    "correcta": false,
+                    "explicacion": "Incorrecto."
+                }
+            ]
+        }
+    ]
+}

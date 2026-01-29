@@ -1,0 +1,350 @@
+{
+    "tema": "Cuestionario RA2: Control de acceso y autenticación",
+    "preguntas": [
+        {
+            "pregunta": "Relaciona los siguientes mecanismos de autenticación con los ejemplos",
+            "respuestas": [
+                {
+                    "texto": "Fisicos -> Llave | Inherentes -> biometria | Basados en el conocimiento -> contraseña",
+                    "correcta": true,
+                    "explicacion": "Clasificación clásica: Algo que tienes (Físico), Algo que eres (Inherente), Algo que sabes (Conocimiento)."
+                }
+            ]
+        },
+        {
+            "pregunta": "Relaciona las siguientes técnicas de autenticación con sus características:",
+            "respuestas": [
+                {
+                    "texto": "contraseñas -> +usabilidad, -seguridad | biométricas -> +seguras, +caras | basadas en token -> +seguras, -usabilidad",
+                    "correcta": true,
+                    "explicacion": "Las contraseñas son fáciles pero débiles; la biometría es robusta pero costosa de implementar; los tokens son seguros pero incómodos de llevar."
+                }
+            ]
+        },
+        {
+            "pregunta": "Según las recomendaciones de entidades como el INCIBE, ¿cuál es el primer elemento que se debe resolver para proteger la información de una organización?",
+            "respuestas": [
+                {
+                    "texto": "La fortificaión de la red interna",
+                    "correcta": false,
+                    "explicacion": "Es un paso posterior."
+                },
+                {
+                    "texto": "El alta de usuarios en los servidores",
+                    "correcta": false,
+                    "explicacion": "Es una tarea administrativa."
+                },
+                {
+                    "texto": "La organización de la red intranet",
+                    "correcta": false,
+                    "explicacion": "Es arquitectura de red."
+                },
+                {
+                    "texto": "El control de acceso a la información",
+                    "correcta": true,
+                    "explicacion": "Antes de proteger técnicamente, se debe definir quién puede acceder a qué (política de acceso)."
+                }
+            ]
+        },
+        {
+            "pregunta": "Según el texto, ¿cuál es el principio fundamental que se debe mantener al asignar permisos de acceso a la información para no cometer errores de asignación?",
+            "respuestas": [
+                {
+                    "texto": "Principio de mínimo privilegio",
+                    "correcta": true,
+                    "explicacion": "Significa otorgar únicamente los permisos estrictamente necesarios para realizar la tarea, ni uno más."
+                },
+                {
+                    "texto": "Principio de confianza cero",
+                    "correcta": false,
+                    "explicacion": "Zero Trust es un modelo de seguridad más amplio, no solo una regla de asignación de permisos."
+                },
+                {
+                    "texto": "Principio de auditoría continua",
+                    "correcta": false,
+                    "explicacion": "Es un mecanismo de control, no de asignación inicial."
+                },
+                {
+                    "texto": "Principio de acceso total",
+                    "correcta": false,
+                    "explicacion": "Es contrario a la seguridad."
+                }
+            ]
+        },
+        {
+            "pregunta": "Marca dos plataformas de seguridad perimetral",
+            "respuestas": [
+                {
+                    "texto": "DNSsec",
+                    "correcta": false,
+                    "explicacion": "Es una extensión de seguridad para el protocolo DNS, no una plataforma perimetral en sí."
+                },
+                {
+                    "texto": "Sistema anti-DDoS",
+                    "correcta": true,
+                    "explicacion": "Protege el perímetro de la red mitigando ataques de denegación de servicio."
+                },
+                {
+                    "texto": "Cortafuegos",
+                    "correcta": true,
+                    "explicacion": "Es la herramienta principal de seguridad perimetral para filtrar tráfico."
+                },
+                {
+                    "texto": "Antivirus",
+                    "correcta": false,
+                    "explicacion": "Generalmente se instala en los puntos finales (endpoints), no en el perímetro."
+                }
+            ]
+        },
+        {
+            "pregunta": "Marca los sistemas que sirvan como segundo factor de autenticación",
+            "respuestas": [
+                {
+                    "texto": "Certificado digital",
+                    "correcta": false,
+                    "explicacion": "Suele usarse como método de identificación principal, aunque técnicamente es 'algo que tienes'."
+                },
+                {
+                    "texto": "Token móvil",
+                    "correcta": true,
+                    "explicacion": "Genera códigos temporales (OTP), actuando como factor de posesión."
+                },
+                {
+                    "texto": "Token USB",
+                    "correcta": true,
+                    "explicacion": "Hardware físico que se conecta para validar la posesión (ej. YubiKey)."
+                },
+                {
+                    "texto": "Huella dactilar",
+                    "correcta": true,
+                    "explicacion": "Factor biométrico (algo que eres), muy común como segundo factor."
+                }
+            ]
+        },
+        {
+            "pregunta": "Respecto a los mecanismos de acceso, el relativo a inherente:",
+            "respuestas": [
+                {
+                    "texto": "Aquellos que acompañan al usuario",
+                    "correcta": true,
+                    "explicacion": "Se refiere a rasgos intrínsecos de la persona (biometría: huella, iris, cara)."
+                },
+                {
+                    "texto": "Aquello que solo el usuario tiene",
+                    "correcta": false,
+                    "explicacion": "Referencia a objetos físicos (tokens, tarjetas)."
+                },
+                {
+                    "texto": "Un código de un solo uso",
+                    "correcta": false,
+                    "explicacion": "Es un secreto temporal."
+                },
+                {
+                    "texto": "Aquello que solo el usuario conoce",
+                    "correcta": false,
+                    "explicacion": "Referencia a información (contraseñas, PINs)."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué significa el principio de mínimo privilegio?",
+            "respuestas": [
+                {
+                    "texto": "Únicamente debe existir un administrador",
+                    "correcta": false,
+                    "explicacion": "No limita el número de administradores, sino sus permisos."
+                },
+                {
+                    "texto": "Asignar solo los permisos necesarios",
+                    "correcta": true,
+                    "explicacion": "Garantiza que un usuario comprometido cause el mínimo daño posible."
+                },
+                {
+                    "texto": "Tener un número mínimo de carcteres en la fase de paso",
+                    "correcta": false,
+                    "explicacion": "Eso se refiere a la política de complejidad de contraseñas."
+                },
+                {
+                    "texto": "Al menos que haya un usuario con la mínima restricción",
+                    "correcta": false,
+                    "explicacion": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Para qué se utilizan los distintos tipos de mecanismos de autenticación?",
+            "respuestas": [
+                {
+                    "texto": "Para personas que tengan alguna discapacidad",
+                    "correcta": false,
+                    "explicacion": "La accesibilidad es importante, pero no el objetivo principal de la autenticación."
+                },
+                {
+                    "texto": "Para dar al usuario varias opciones",
+                    "correcta": false,
+                    "explicacion": "La usabilidad es secundaria frente a la seguridad."
+                },
+                {
+                    "texto": "Para garantizar el acceso único",
+                    "correcta": true,
+                    "explicacion": "El objetivo es asegurar sin dudas (no repudio) que la identidad que accede es legítima."
+                },
+                {
+                    "texto": "Para facilitar al usuario la tarea de autenticación",
+                    "correcta": false,
+                    "explicacion": "A menudo la seguridad añade fricción (más pasos), no facilidad."
+                }
+            ]
+        },
+        {
+            "pregunta": "En el contexto de la autenticación con claves criptográficas, ¿cuál es el algoritmo de clave pública que usa curvas elípticas?",
+            "respuestas": [
+                {
+                    "texto": "RSA",
+                    "correcta": false,
+                    "explicacion": "Se basa en la factorización de números enteros."
+                },
+                {
+                    "texto": "ECDSA",
+                    "correcta": true,
+                    "explicacion": "Siglas de 'Elliptic Curve Digital Signature Algorithm'."
+                },
+                {
+                    "texto": "DSA",
+                    "correcta": false,
+                    "explicacion": "Algoritmo de firma digital clásico basado en logaritmos discretos."
+                },
+                {
+                    "texto": "Ed25519",
+                    "correcta": false,
+                    "explicacion": "Es una implementación específica de curva, pero ECDSA es el nombre genérico del estándar."
+                }
+            ]
+        },
+        {
+            "pregunta": "En el contexto de la criptografía asimétrica para SSH, ¿cuál de los siguientes algoritmos se menciona que ya no se recomienda usar debido al tamaño de su clave?",
+            "respuestas": [
+                {
+                    "texto": "ECDSA",
+                    "correcta": false,
+                    "explicacion": "Es moderno y seguro."
+                },
+                {
+                    "texto": "RSA",
+                    "correcta": false,
+                    "explicacion": "Sigue siendo seguro si se usan claves de tamaño adecuado (2048+ bits)."
+                },
+                {
+                    "texto": "Ed25519",
+                    "correcta": false,
+                    "explicacion": "Es uno de los más recomendados actualmente."
+                },
+                {
+                    "texto": "DSA",
+                    "correcta": true,
+                    "explicacion": "Está obsoleto porque su diseño limita las claves a 1024 bits, inseguro hoy en día."
+                }
+            ]
+        },
+        {
+            "pregunta": "Las tecnologías biométricas se dividen en dos grandes categorías. ¿Cuáles son?",
+            "respuestas": [
+                {
+                    "texto": "Mediciones estáticas y mediciones dinámicas",
+                    "correcta": false,
+                    "explicacion": "Terminología poco precisa."
+                },
+                {
+                    "texto": "Mediciones morfológicas y mediciones de contacto",
+                    "correcta": false,
+                    "explicacion": "Incorrecto."
+                },
+                {
+                    "texto": "Mediciones de hardware y mediciones de software",
+                    "correcta": false,
+                    "explicacion": "Clasificación técnica."
+                },
+                {
+                    "texto": "Mediciones fisiológicas y mediciones del comportamiento",
+                    "correcta": true,
+                    "explicacion": "Fisiológicas (huella, iris, ADN) vs Comportamiento (forma de andar, tecleo, firma)."
+                }
+            ]
+        },
+        {
+            "pregunta": "En la práctica de implementación de doble factor de autenticación (2FA) en un sistema Linux, ¿qué archivo de configuración de SSH se debe modificar para activar la autenticación por desafío-respuesta?",
+            "respuestas": [
+                {
+                    "texto": "/etc/pam.d/sshd",
+                    "correcta": false,
+                    "explicacion": "Se modifica para integrar PAM, pero la directiva específica de SSH está en otro sitio."
+                },
+                {
+                    "texto": "/etc/ssh/ssh_config",
+                    "correcta": false,
+                    "explicacion": "Es la configuración del cliente (saliente)."
+                },
+                {
+                    "texto": "~/.google_authenticator",
+                    "correcta": false,
+                    "explicacion": "Es el fichero de configuración de usuario, no del servicio."
+                },
+                {
+                    "texto": "/etc/ssh/sshd_config",
+                    "correcta": true,
+                    "explicacion": "Es el archivo del servidor donde se habilita la directiva 'ChallengeResponseAuthentication'."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la principal diferencia que se señala entre una tarjeta inteligente de memoria y una tarjeta inteligente con procesador?",
+            "respuestas": [
+                {
+                    "texto": "Las tarjetas con procesador solo sirven para el control de acceso físico",
+                    "correcta": false,
+                    "explicacion": "También sirven para acceso lógico y firma."
+                },
+                {
+                    "texto": "Las tarjetas de memoria almacenan más información que las de procesador",
+                    "correcta": false,
+                    "explicacion": "No es la diferencia clave."
+                },
+                {
+                    "texto": "Las tarjetas de memoria usan NFC y las de procesador no",
+                    "correcta": false,
+                    "explicacion": "Ambas pueden tener tecnología contactless."
+                },
+                {
+                    "texto": "Las tarjetas con procesador contienen un microprocesador y memoria",
+                    "correcta": true,
+                    "explicacion": "La CPU integrada permite realizar operaciones criptográficas seguras dentro de la tarjeta."
+                }
+            ]
+        },
+        {
+            "pregunta": "El texto explica el concepto de 'port knocking'. ¿Cuál es el propósito de esta técnica?",
+            "respuestas": [
+                {
+                    "texto": "Abrir un puerto de forma dinámica solo tras recibir una secuencia correcta de intentos de conexión a otros puertos.",
+                    "correcta": true,
+                    "explicacion": "Es un método de seguridad por oscuridad que mantiene los puertos cerrados hasta recibir una 'llamada secreta'."
+                },
+                {
+                    "texto": "Bloquear una dirección IP que intenta conectarse a demasiados puertos a la vez.",
+                    "correcta": false,
+                    "explicacion": "Eso sería detección de escaneo de puertos (ej. Fail2Ban)."
+                },
+                {
+                    "texto": "Realizar un escaneo de todos los puertos abiertos en un servidor.",
+                    "correcta": false,
+                    "explicacion": "Eso es un escaneo de puertos ofensivo."
+                },
+                {
+                    "texto": "Enviar paquetes de datos a puertos aleatorios para sobrecargar un servicio.",
+                    "correcta": false,
+                    "explicacion": "Eso es un ataque de denegación de servicio."
+                }
+            ]
+        }
+    ]
+}
