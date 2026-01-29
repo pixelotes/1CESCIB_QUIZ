@@ -1,0 +1,1505 @@
+{
+    "tema": "Incidents de ciberseguretat - Examen 1ª Evaluación",
+    "preguntas": [
+        {
+            "pregunta": "¿Cuál es la diferencia matizada entre privacidad y confidencialidad según los textos aportados?",
+            "respuestas": [
+                {
+                    "texto": "La confidencialidad es un requisito legal, mientras que la privacidad es opcional.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "No hay diferencia, son exactamente lo mismo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La privacidad se refiere a datos personales, mientras que la confidencialidad abarca cualquier información protegida por la organización.",
+                    "correcta": true,
+                    "explicacion": "La privacidad se refiere específicamente a datos de carácter personal (que pueden o no ser públicos), mientras que la confidencialidad protege cualquier información (personal o corporativa) que la entidad no quiere difundir."
+                },
+                {
+                    "texto": "La privacidad es para empresas privadas y la confidencialidad para organismos públicos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cómo debe protegerse el canal de comunicación en una red Wifi corporativa?",
+            "respuestas": [
+                {
+                    "texto": "Cifrando el canal (ej. SSL/WPA2 Enterprise) para proteger la información.",
+                    "correcta": true,
+                    "explicacion": "Se debe cifrar el canal mediante SSL (o protocolos de cifrado robustos) para garantizar la seguridad de la información."
+                },
+                {
+                    "texto": "Dejando la red abierta para facilitar la conexión de visitas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Ocultando el nombre de la red (SSID) solamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Usando cifrado WEP (obsoleto).",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué implica la política de \"mesas limpias\"?",
+            "respuestas": [
+                {
+                    "texto": "Guardar toda documentación sensible al ausentarse y no tener contraseñas a la vista.",
+                    "correcta": true,
+                    "explicacion": "Implica guardar la documentación adecuadamente al ausentarse o finalizar la jornada, y no tener contraseñas apuntadas en post-its."
+                },
+                {
+                    "texto": "Limpiar el polvo del escritorio diariamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "No comer ni beber en el puesto de trabajo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Tener el escritorio del sistema operativo sin iconos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué tipo de sitios web se recomienda bloquear técnicamente?",
+            "respuestas": [
+                {
+                    "texto": "Sitios con contenido inadecuado, ilegal o plataformas de intercambio de archivos.",
+                    "correcta": true,
+                    "explicacion": "Sitios contrarios a la legislación, contenido inadecuado o plataformas de intercambio de archivos (fuente de virus)."
+                },
+                {
+                    "texto": "Redes sociales profesionales.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Periódicos digitales.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Páginas de la competencia.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Si un usuario tiene permisos de administrador local en su equipo, ¿qué riesgo existe?",
+            "respuestas": [
+                {
+                    "texto": "Puede desactivar el antivirus o instalar software no autorizado.",
+                    "correcta": true,
+                    "explicacion": "Puede desactivar el antivirus, instalar software no legítimo o eliminar restricciones de seguridad."
+                },
+                {
+                    "texto": "El equipo funcionará más lento.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "No podrá acceder al correo corporativo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Se borrarán los archivos automáticamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Tirar documentos con datos personales (como CVs) a una papelera convencional que acaba en un contenedor público puede derivar en:",
+            "respuestas": [
+                {
+                    "texto": "Sanciones económicas para la empresa por incumplimiento de la protección de datos.",
+                    "correcta": true,
+                    "explicacion": "Esto puede suponer una sanción económica severa según la legislación vigente de protección de datos de carácter personal."
+                },
+                {
+                    "texto": "Un ahorro en costes de destrucción de documentos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Ningún riesgo, ya que el papel se recicla.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Un problema menor de limpieza en la oficina.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál de los siguientes eventos debe ser notificado obligatoriamente por el empleado?",
+            "respuestas": [
+                {
+                    "texto": "Alertas de virus, pérdida de dispositivos móviles o llamadas sospechosas pidiendo datos.",
+                    "correcta": true,
+                    "explicacion": "Se deben notificar alertas de virus, llamadas sospechosas, pérdida de dispositivos, actividad sospechosa, borrado accidental o hallazgo de información en sitios indebidos."
+                },
+                {
+                    "texto": "Cuando recibe un correo publicitario legítimo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El cambio de fondo de pantalla de su escritorio.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Cuando olvida su propia contraseña y la restablece.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué riesgo conlleva la instalación no controlada de aplicaciones P2P (Peer-to-Peer) en un equipo de trabajo?",
+            "respuestas": [
+                {
+                    "texto": "Compartir accidentalmente directorios con información corporativa sensible.",
+                    "correcta": true,
+                    "explicacion": "Al usar P2P, se puede compartir por error con toda la red directorios que contienen información corporativa sensible (nóminas, datos personales, etc.)."
+                },
+                {
+                    "texto": "Que el ordenador funcione más rápido de lo permitido.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Incompatibilidad con los drivers de la impresora.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Aumento de la factura eléctrica de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué métrica es la más valorada actualmente en la \"Era de la Cultura\"?",
+            "respuestas": [
+                {
+                    "texto": "El tiempo tardado en completar el curso.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La tasa de reportes (quién identifica la amenaza).",
+                    "correcta": true,
+                    "explicacion": "Se ha pasado de medir fallos a medir comportamientos positivos. Un aumento en la tasa de reportes es el principal indicador de éxito hoy en día."
+                },
+                {
+                    "texto": "La tasa de clics (quién falla).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El número de certificados emitidos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "En el mensaje dirigido a los empleados, ¿cómo se debe presentar una simulación de phishing?",
+            "respuestas": [
+                {
+                    "texto": "Como una trampa para pillar a los distraídos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Como una tarea administrativa obligatoria.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Como un examen para evaluar su desempeño laboral.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Como un entrenamiento equivalente a un simulacro de incendios.",
+                    "correcta": true,
+                    "explicacion": "El texto sugiere explicar que no es un examen para buscar culpables, sino un entrenamiento del instinto digital, igual que se hace un simulacro para reaccionar ante fuego real."
+                }
+            ]
+        },
+        {
+            "pregunta": "Ante la duda sobre un correo electrónico sospechoso, ¿cuál es la acción más importante que debe realizar un empleado?",
+            "respuestas": [
+                {
+                    "texto": "Reportarlo utilizando el botón o canal habilitado.",
+                    "correcta": true,
+                    "explicacion": "Lo más importante es saber qué hacer al sospechar: usar el botón de reporte. El texto enfatiza que es preferible analizar 10 correos buenos a perder 1 malicioso."
+                },
+                {
+                    "texto": "Borrarlo inmediatamente y no decir nada.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Reenviarlo a un compañero para pedir opinión.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Abrirlo en el móvil para ver si es seguro.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es el propósito de la gamificación en un plan de concienciación?",
+            "respuestas": [
+                {
+                    "texto": "Hacer que la formación parezca un videojuego para niños.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Reducir el presupuesto de formación.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Sustituir a los formadores humanos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Aumentar la participación (engagement) mediante puntos e insignias.",
+                    "correcta": true,
+                    "explicacion": "Aplicar mecánicas de juego fomenta una competencia sana y motiva a los empleados a participar y reportar amenazas."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué demostraron ataques como WannaCry respecto a la concienciación?",
+            "respuestas": [
+                {
+                    "texto": "Que los antivirus eran suficientes.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Que el coste de un fallo de concienciación (un clic) podía ser millonario y paralizante.",
+                    "correcta": true,
+                    "explicacion": "La epidemia de ransomware hizo tangible el riesgo, demostrando que un solo error humano podía detener multinacionales, impulsando la Era del Riesgo."
+                },
+                {
+                    "texto": "Que la formación era solo un tema de RR.HH.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Que el ransomware no afecta a grandes empresas.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué se realiza principalmente en la fase de \"Definición de proyectos e iniciativas\" del PDSI?",
+            "respuestas": [
+                {
+                    "texto": "Se realiza el inventario de activos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Se definen las acciones concretas para alcanzar el nivel de seguridad requerido.",
+                    "correcta": true,
+                    "explicacion": "Se definen las acciones concretas (técnicas, organizativas, normativas) necesarias para alcanzar los objetivos de seguridad."
+                },
+                {
+                    "texto": "Se aprueba el plan por la dirección.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Se ejecutan las auditorías de certificación.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Durante la fase de ejecución, ¿cuál es el objetivo clave de recopilar evidencia (logs, actas, capturas)?",
+            "respuestas": [
+                {
+                    "texto": "Sustentar de forma objetiva las conclusiones del informe contrastando teoría y práctica.",
+                    "correcta": true,
+                    "explicacion": "Justificación: El objetivo es obtener pruebas objetivas que sustenten cualquier conclusión posterior, contrastando lo que dicen los documentos (teoría) con la realidad práctica."
+                },
+                {
+                    "texto": "Llenar espacio en el disco duro del auditor para justificar sus honorarios.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Generar manuales de usuario para los nuevos sistemas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Espiar a los empleados para reportar su comportamiento a recursos humanos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la función principal del Responsable de Seguridad (CISO) en el contexto del PDSI?",
+            "respuestas": [
+                {
+                    "texto": "Reparar los ordenadores de los usuarios.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Desarrollar la página web de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Coordinar y realizar el seguimiento de las iniciativas de seguridad.",
+                    "correcta": true,
+                    "explicacion": "Su función es coordinar y hacer seguimiento de todas las iniciativas y proyectos de seguridad puestos en marcha."
+                },
+                {
+                    "texto": "Firmar las nóminas de los empleados.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué es la Declaración de Aplicabilidad (SOA) en un SGSI?",
+            "respuestas": [
+                {
+                    "texto": "El manual de usuario de las aplicaciones.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El documento que selecciona los controles aplicables y su estado de madurez.",
+                    "correcta": true,
+                    "explicacion": "Es el documento que lista los controles de seguridad que aplican a la organización y su estado de implementación."
+                },
+                {
+                    "texto": "El contrato con la empresa auditora.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El plan de marketing de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Para qué se utilizan los indicadores de desempeño (KPI) en el PDSI?",
+            "respuestas": [
+                {
+                    "texto": "Para medir la eficacia de las acciones y el cumplimiento de objetivos.",
+                    "correcta": true,
+                    "explicacion": "Sirven para evaluar el logro de los objetivos y la eficacia de las acciones (ej. tiempo medio de resolución de incidentes)."
+                },
+                {
+                    "texto": "Para saber qué empleado trabaja más horas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Para calcular el beneficio neto de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Para inventariar los equipos informáticos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "En la estrategia de seguridad, ¿qué define la \"Misión\"?",
+            "respuestas": [
+                {
+                    "texto": "El propósito fundamental del plan.",
+                    "correcta": true,
+                    "explicacion": "La misión define el propósito fundamental del plan (ej. garantizar la protección integral de los activos)."
+                },
+                {
+                    "texto": "Hacia dónde se quiere llegar en el futuro.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La lista técnica de controles a aplicar.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El presupuesto detallado.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué tipo de auditoría prueba la resistencia de la organización ante ataques externos simulando el comportamiento de un ciberdelincuente?",
+            "respuestas": [
+                {
+                    "texto": "Pentesting (Caja Negra).",
+                    "correcta": true,
+                    "explicacion": "El pentesting (test de intrusión), especialmente en modalidad caja negra, evalúa la exposición real ante amenazas externas."
+                },
+                {
+                    "texto": "Auditoría de cumplimiento (Compliance).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Auditoría Forense.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Revisión de código (Caja Blanca).",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué elemento es fundamental identificar al inicio del análisis de riesgos?",
+            "respuestas": [
+                {
+                    "texto": "Los activos de información de la organización.",
+                    "correcta": true,
+                    "explicacion": "El primer paso es identificar los activos de información (datos, aplicaciones, servicios) que tienen valor para la organización."
+                },
+                {
+                    "texto": "El precio de las licencias de software futuro.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El nombre del auditor externo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La fecha de la próxima auditoría.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Según el modelo de madurez CMM descrito, ¿qué caracteriza al nivel \"Inicial\"?",
+            "respuestas": [
+                {
+                    "texto": "No existe ningún control de seguridad (Nivel Inexistente).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Las medidas existen pero no se gestionan formalmente y dependen de las personas.",
+                    "correcta": true,
+                    "explicacion": "En el nivel inicial las salvaguardas existen pero no se gestionan; el éxito depende de la suerte o la pericia individual, sin procesos formales."
+                },
+                {
+                    "texto": "El control está documentado y aprobado formalmente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La eficacia del control se mide con indicadores (KPIs).",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "En la valoración de activos, ¿a qué se refiere el pilar de \"Integridad\"?",
+            "respuestas": [
+                {
+                    "texto": "Al valor económico de compra del hardware.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Al impacto si la información se filtra a personas no autorizadas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Al impacto si el activo deja de estar accesible o disponible.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Al impacto si los datos son modificados sin autorización.",
+                    "correcta": true,
+                    "explicacion": "Justificación: La Integridad evalúa qué pasaría si los datos de un activo son modificados sin autorización (ej. errores en facturación, datos corruptos)."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué implica la Cláusula 8 \"Operación\"?",
+            "respuestas": [
+                {
+                    "texto": "Buscar nuevas normativas aplicables.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Definir teóricamente los riesgos sin actuar sobre ellos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Implementar y controlar los procesos planificados en el día a día.",
+                    "correcta": true,
+                    "explicacion": "Esta cláusula trata sobre implementar y controlar los procesos planificados y las acciones definidas en la planificación (gestión del día a día)."
+                },
+                {
+                    "texto": "Revisar la estrategia a largo plazo de la compañía.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué caracteriza a una auditoría de \"Caja Gris\"?",
+            "respuestas": [
+                {
+                    "texto": "Conocimiento total del sistema.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Conocimiento parcial del sistema (ej. credenciales limitadas).",
+                    "correcta": true,
+                    "explicacion": "El auditor tiene un conocimiento parcial del sistema (ej. credenciales básicas), simulando una amenaza interna o usuario con privilegios limitados."
+                },
+                {
+                    "texto": "Ningún conocimiento del sistema.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Solo acceso físico a las instalaciones.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué es el \"Riesgo Residual\"?",
+            "respuestas": [
+                {
+                    "texto": "El riesgo máximo calculado antes de hacer nada.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Un riesgo que no se puede eliminar nunca.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El riesgo que queda después de aplicar un control de mitigación.",
+                    "correcta": true,
+                    "explicacion": "Justificación: Es el riesgo que permanece o \"queda\" después de haber aplicado controles de mitigación."
+                },
+                {
+                    "texto": "El riesgo asociado a los residuos físicos de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué característica define principalmente a una auditoría interna?",
+            "respuestas": [
+                {
+                    "texto": "Es realizada por una consultora independiente para obtener una certificación.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Es realizada por personal de la propia organización enfocándose en la mejora continua.",
+                    "correcta": true,
+                    "explicacion": "La auditoría interna es realizada por personal de la propia organización y está enfocada en la mejora continua y la preparación de futuras auditorías externas."
+                },
+                {
+                    "texto": "Se centra exclusivamente en simular ataques externos sin conocimiento previo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Su único fin es encontrar culpables tras un incidente de seguridad.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿En qué consiste una auditoría técnica o de infraestructura?",
+            "respuestas": [
+                {
+                    "texto": "Evaluar el cumplimiento legal de la LOPD.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Analizar la configuración y seguridad de sistemas, redes y dispositivos.",
+                    "correcta": true,
+                    "explicacion": "Analiza la configuración, seguridad y estado de sistemas, redes y servidores (ej. escaneo de vulnerabilidades)."
+                },
+                {
+                    "texto": "Revisar los contratos de los empleados.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Simular engaños telefónicos a los usuarios.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué incluye la Cláusula 9 \"Evaluación del Desempeño\"?",
+            "respuestas": [
+                {
+                    "texto": "La asignación de recursos y competencias del personal.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Auditorías internas y revisión por la dirección para medir la eficacia del SGSI.",
+                    "correcta": true,
+                    "explicacion": "Esta cláusula se centra en medir la eficacia del SGSI mediante seguimiento, medición, auditorías internas y revisión por la dirección."
+                },
+                {
+                    "texto": "La operación diaria de los controles de seguridad.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La identificación de activos y amenazas.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "En el marco VERIS, ¿a qué categoría corresponde la pregunta \"¿Qué hicieron?\"?",
+            "respuestas": [
+                {
+                    "texto": "Attributes (Atributos).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Actors (Actores).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Actions (Acciones).",
+                    "correcta": true,
+                    "explicacion": "Corresponde a \"Actions\" (Acciones). Describe métodos como Malware, Hacking, Social, etc."
+                },
+                {
+                    "texto": "Assets (Activos).",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la filosofía principal de la taxonomía de referencia de ENISA?",
+            "respuestas": [
+                {
+                    "texto": "Generación de métricas de riesgo para aseguradoras.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Análisis forense detallado a nivel de bits.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Simulación de adversarios y Red Teaming.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Coordinación e interoperabilidad entre CSIRTs de diferentes países.",
+                    "correcta": true,
+                    "explicacion": "Su filosofía es operativa y de coordinación. Busca la interoperabilidad para que equipos (CSIRTs) de diferentes países hablen un idioma común simplificado."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la diferencia fundamental entre taxonomía y clasificación en el contexto de la gestión de incidentes?",
+            "respuestas": [
+                {
+                    "texto": "La clasificación es el sistema teórico, mientras que la taxonomía es la acción de etiquetar el incidente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La taxonomía se utiliza solo para incidentes internos y la clasificación para incidentes externos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "No existe diferencia, ambos términos son sinónimos exactos en ciberseguridad.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La taxonomía es el sistema jerárquico de categorización (el marco teórico), mientras que la clasificación es el proceso de asignar un incidente a dicho sistema.",
+                    "correcta": true,
+                    "explicacion": "La taxonomía es el marco teórico o \"diccionario\" de categorías jerárquicas, mientras que la clasificación es el proceso práctico de asignar un incidente real a una de esas categorías."
+                }
+            ]
+        },
+        {
+            "pregunta": "En la fase de evaluación y decisión, ¿qué efecto directo tiene la clasificación del incidente sobre la respuesta?",
+            "respuestas": [
+                {
+                    "texto": "La clasificación no afecta a la respuesta, solo sirve para estadísticas posteriores.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Determina únicamente el coste económico del incidente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Determina la activación del \"Playbook\" o protocolo de respuesta específico para ese tipo de amenaza.",
+                    "correcta": true,
+                    "explicacion": "La clasificación dicta qué procedimiento o \"Playbook\" seguir. Por ejemplo, clasificar algo como \"Phishing\" activa protocolos distintos que si se clasifica como \"DDoS\"."
+                },
+                {
+                    "texto": "Solo afecta a la fase de lecciones aprendidas, no a la contención.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Por qué es importante la granularidad en la clasificación para los informes ejecutivos (Reporting)?",
+            "respuestas": [
+                {
+                    "texto": "Para que los informes sean más largos e impresionantes.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Para justificar presupuestos y validar estrategias de defensa específicas mediante tendencias claras.",
+                    "correcta": true,
+                    "explicacion": "Si se clasifica todo genéricamente (ej. \"Virus\"), no se puede justificar la inversión en herramientas específicas (ej. anti-ransomware) ante la dirección."
+                },
+                {
+                    "texto": "La granularidad no es importante, lo mejor es simplificar al máximo para los ejecutivos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Para confundir a los auditores externos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Según el RGPD (GDPR), si un incidente se clasifica como \"Brecha de Datos Personales\", ¿qué obligación legal se dispara inmediatamente?",
+            "respuestas": [
+                {
+                    "texto": "La obligación de notificar a la autoridad en un plazo de 72 horas.",
+                    "correcta": true,
+                    "explicacion": "El \"reloj legal\" comienza a correr, obligando a notificar a la autoridad de control en un plazo máximo de 72 horas."
+                },
+                {
+                    "texto": "La obligación de formatear todos los servidores afectados.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La obligación de pagar una multa preventiva inmediata.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "No genera ninguna obligación adicional respecto a otros incidentes.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la principal debilidad de la detección basada en firmas?",
+            "respuestas": [
+                {
+                    "texto": "Genera demasiados falsos positivos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Consume demasiados recursos de CPU.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Es difícil de implementar en redes pequeñas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Es reactiva y no detecta ataques modificados o Zero-Day.",
+                    "correcta": true,
+                    "explicacion": "Es reactiva. Si el atacante cambia un solo bit del archivo (hash diferente) o usa un ataque nuevo (Zero-Day), la firma falla."
+                }
+            ]
+        },
+        {
+            "pregunta": "En el contexto de SOAR, ¿a qué se refiere la \"Orquestación\"?",
+            "respuestas": [
+                {
+                    "texto": "Visualizar datos en un dashboard unificado.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Unir herramientas dispares para coordinar flujos de trabajo.",
+                    "correcta": true,
+                    "explicacion": "Justificación: La orquestación consiste en unir herramientas dispares para que trabajen juntas (ej. SIEM habla con Firewall)."
+                },
+                {
+                    "texto": "Detectar anomalías usando Machine Learning.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Ejecutar scripts de limpieza de disco automáticamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué caracteriza a una Anomalía Colectiva?",
+            "respuestas": [
+                {
+                    "texto": "Un único evento que se desvía drásticamente del promedio.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Una serie de eventos benignos que, en conjunto, indican un patrón malicioso.",
+                    "correcta": true,
+                    "explicacion": "Son una serie de eventos que individualmente parecen benignos (normales), pero que observados en conjunto o secuencia indican un patrón malicioso."
+                },
+                {
+                    "texto": "Cualquier evento detectado por una firma antivirus.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Un evento que ocurre en un horario inusual.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es el objetivo del Testing Activo (Purple Teaming) en la auditoría de detección?",
+            "respuestas": [
+                {
+                    "texto": "Revisar manualmente el código fuente de las reglas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Simular comportamientos de ataque para verificar si son detectados.",
+                    "correcta": true,
+                    "explicacion": "Ejecutar simulaciones de comportamiento (ataques simulados) para verificar empíricamente si la analítica detecta la acción, en lugar de asumir que lo hará."
+                },
+                {
+                    "texto": "Contratar un seguro de ciberseguridad.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Instalar actualizaciones de software automáticamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Por qué es crucial la telemetría del Endpoint (EDR) frente al cifrado de red (HTTPS)?",
+            "respuestas": [
+                {
+                    "texto": "Porque el EDR es más barato que analizar el tráfico de red.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Porque la red no guarda logs de conexión.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Porque el EDR bloquea el tráfico HTTPS automáticamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Porque permite ver la actividad maliciosa que la red no ve por estar cifrada.",
+                    "correcta": true,
+                    "explicacion": "Justificación: Con el cifrado HTTPS, la red no puede ver el contenido del ataque; el EDR ve lo que ocurre en el dispositivo después de descifrar."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué define a la técnica de ataque \"Living off the Land\" (LOTL)?",
+            "respuestas": [
+                {
+                    "texto": "La instalación de malware personalizado compilado por el atacante.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El uso de herramientas propias y legítimas del sistema operativo con fines maliciosos.",
+                    "correcta": true,
+                    "explicacion": "LOTL es una técnica donde los atacantes abusan de herramientas y características legítimas del sistema operativo para realizar actividades maliciosas y evitar ser detectados."
+                },
+                {
+                    "texto": "El robo de credenciales mediante campañas de phishing masivo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El ataque físico a las infraestructuras terrestres de comunicaciones.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué característica arquitectónica distingue principalmente a Suricata frente a las versiones clásicas de Snort?",
+            "respuestas": [
+                {
+                    "texto": "Uso de un lenguaje de reglas incompatible con el estándar.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Incapacidad para inspeccionar la Capa 7 (Aplicación).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Arquitectura multihilo nativa para alto rendimiento.",
+                    "correcta": true,
+                    "explicacion": "Suricata fue diseñado desde cero con una arquitectura multihilo nativa, permitiendo usar múltiples núcleos de CPU para procesar un solo flujo, ideal para alta velocidad."
+                },
+                {
+                    "texto": "Arquitectura monohilo para mayor estabilidad.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Por qué se dice que detectar IoAs causa más \"dolor\" al atacante que detectar IoCs?",
+            "respuestas": [
+                {
+                    "texto": "Porque los IoAs implican multas legales.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Porque los IoAs revelan la identidad real del atacante.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Porque les obliga a rediseñar sus tácticas y procedimientos de ataque.",
+                    "correcta": true,
+                    "explicacion": "Justificación: Detectar IoAs (Tácticas, Técnicas) obliga al atacante a rediseñar todo su ataque, mientras que cambiar un IoC (Hash, IP) es fácil para ellos."
+                },
+                {
+                    "texto": "Porque los IoAs son imposibles de cambiar.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "En una regla de Snort, ¿qué elemento define si el tráfico analizado va desde el exterior hacia mis servidores?",
+            "respuestas": [
+                {
+                    "texto": "El protocolo de transporte (TCP/UDP).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El operador de dirección (->) y las variables de red origen/destino.",
+                    "correcta": true,
+                    "explicacion": "La dirección se define mediante las variables de red y el operador de dirección, por ejemplo: $EXTERNAL_NET -> $HTTP_SERVERS."
+                },
+                {
+                    "texto": "La acción de la cabecera (alert, drop).",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La opción \"flow: established\".",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuáles son las dos funciones principales que combina una solución SIEM?",
+            "respuestas": [
+                {
+                    "texto": "Bloqueo de puertos y eliminación de virus.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Backup de datos y restauración de sistemas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Recopilación de logs y correlación de eventos.",
+                    "correcta": true,
+                    "explicacion": "Justificación: El SIEM combina la recopilación y gestión de logs con la correlación y análisis de eventos para detectar amenazas."
+                },
+                {
+                    "texto": "Gestión de identidades y cifrado de discos.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué información aporta principalmente el flujo de red (NetFlow/IPFix) a la visibilidad del SOC?",
+            "respuestas": [
+                {
+                    "texto": "Los procesos que se están ejecutando en el servidor.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Los intentos de login fallidos en el sistema operativo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El contenido completo de los paquetes de datos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Metadatos de la conversación: quién habló con quién y volumen de datos.",
+                    "correcta": true,
+                    "explicacion": "Justificación: NetFlow analiza quién habló con quién, cuándo, cuánto tiempo y el volumen de datos (metadatos de la conversación)."
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué ventaja ofrece Suricata en cuanto a la generación de logs para facilitar la integración con SIEMs?",
+            "respuestas": [
+                {
+                    "texto": "Requiere convertir manualmente los logs a XML.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Solo genera alertas de texto plano sin detalles.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Genera logs estructurados en formato JSON (EVE.json).",
+                    "correcta": true,
+                    "explicacion": "Suricata puede generar logs estructurados en formato JSON (EVE.json) nativamente, lo que facilita enormemente su ingesta por sistemas SIEM."
+                },
+                {
+                    "texto": "Utiliza exclusivamente formato binario propietario.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es una ventaja clave del XDR frente al EDR tradicional?",
+            "respuestas": [
+                {
+                    "texto": "Se centra exclusivamente en los logs del firewall.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Es mucho más barato y sencillo de implementar que un antivirus.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Integra nativamente red, nube y correo para una respuesta unificada.",
+                    "correcta": true,
+                    "explicacion": "Justificación: El XDR evoluciona el EDR integrando nativamente red, nube y correo, permitiendo una respuesta unificada en múltiples dominios."
+                },
+                {
+                    "texto": "No requiere instalación de agentes en los endpoints.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué consecuencia operativa tiene un sistema de detección con una Precisión baja?",
+            "respuestas": [
+                {
+                    "texto": "Un consumo excesivo de CPU en el sensor.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "La imposibilidad de detectar ataques Zero-Day.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Puntos ciegos peligrosos donde no se detectan ataques reales.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Exceso de ruido y fatiga de alertas debido a muchos Falsos Positivos.",
+                    "correcta": true,
+                    "explicacion": "Una precisión baja implica que el porcentaje de alertas reales respecto al total es bajo, lo que genera mucho ruido y fatiga de alertas por falsos positivos."
+                }
+            ]
+        },
+        {
+            "pregunta": "En el proceso de validación de datos OSINT, ¿qué implica la \"Contextualización\"?",
+            "respuestas": [
+                {
+                    "texto": "Determinar el contexto del dato (ej. si una IP es un nodo Tor) para filtrar falsos positivos.",
+                    "correcta": true,
+                    "explicacion": "Implica determinar el contexto del dato (ej. si una IP es un nodo Tor o un proxy malicioso) para filtrar falsos positivos."
+                },
+                {
+                    "texto": "Confirmar con el atacante si la amenaza es real.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Guardar la información en un formato legible por humanos.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Comparar el dato con noticias de periódicos locales.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Durante la fase de Contención y Erradicación, ¿cómo ayuda OSINT a mitigar el ataque?",
+            "respuestas": [
+                {
+                    "texto": "Identificando dominios de Command & Control (C2) para bloquear comunicaciones salientes.",
+                    "correcta": true,
+                    "explicacion": "En la contención, OSINT permite identificar dominios de Command & Control (C2) mediante registros pasivos de DNS para bloquear comunicaciones."
+                },
+                {
+                    "texto": "Monitorizando fugas de datos post-incidente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Contextualizando alertas internas del IDS.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Eliminando malware de los servidores afectados.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué función cumple el sellado de tiempo (Trusted Timestamping) en la validez legal de una prueba OSINT?",
+            "respuestas": [
+                {
+                    "texto": "Demostrar irrefutablemente la existencia del contenido en un momento específico.",
+                    "correcta": true,
+                    "explicacion": "Demuestra de manera irrefutable la existencia del contenido en un momento específico, contrarrestando la volatilidad."
+                },
+                {
+                    "texto": "Cifrar el contenido para que solo el juez pueda leerlo.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Localizar geográficamente al autor del contenido.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Traducir el contenido a un lenguaje legal.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué riesgo de seguridad conlleva el análisis de perfiles de empleados en LinkedIn para una organización?",
+            "respuestas": [
+                {
+                    "texto": "Revelan jerarquías y tecnologías internas útiles para realizar ataques de spear-phishing.",
+                    "correcta": true,
+                    "explicacion": "Los perfiles en LinkedIn revelan tecnologías usadas y jerarquías que facilitan ataques de spear-phishing e ingeniería social."
+                },
+                {
+                    "texto": "Permiten el acceso directo a la VPN de la empresa.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Exponen el código fuente de las aplicaciones.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Generan vulnerabilidades de desbordamiento de búfer.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué parte de la web se caracteriza por contener contenido no indexado por buscadores tradicionales pero accesible sin software especial (ej. bases de datos académicas)?",
+            "respuestas": [
+                {
+                    "texto": "Deep Web.",
+                    "correcta": true,
+                    "explicacion": "La Deep Web contiene contenido no indexado pero accesible, como bases de datos o foros con registro, a diferencia de la Dark Web que requiere software especial."
+                },
+                {
+                    "texto": "Surface Web.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Dark Web.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Grey Web.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué utilidad crítica tiene Wayback Machine en una investigación de incidente mediante OSINT?",
+            "respuestas": [
+                {
+                    "texto": "Demostrar la existencia de contenido malicioso en un momento dado ante su posible eliminación.",
+                    "correcta": true,
+                    "explicacion": "Su función es investigar el historial de un sitio y demostrar la existencia de contenido malicioso que pudo haber sido eliminado."
+                },
+                {
+                    "texto": "Recuperar contraseñas de administrador olvidadas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Identificar la IP real detrás de un proxy.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Desencriptar archivos afectados por ransomware.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué función cumplen los \"Initial Access Brokers\" (IAB) en el ecosistema del cibercrimen?",
+            "respuestas": [
+                {
+                    "texto": "Obtienen acceso no autorizado a redes para venderlo a otros actores maliciosos.",
+                    "correcta": true,
+                    "explicacion": "Los IAB se especializan en obtener acceso no autorizado a redes para luego vender dicho acceso a otros actores, como grupos de ransomware."
+                },
+                {
+                    "texto": "Desarrollan software antivirus falso.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Se dedican exclusivamente al robo de tarjetas de crédito físicas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Son activistas que denuncian vulnerabilidades éticamente.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué es el \"BlockChain\" en el contexto de los Bitcoins?",
+            "respuestas": [
+                {
+                    "texto": "El software monedero que se instala en el ordenador para guardar las claves privadas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "El servidor central de un banco que valida las operaciones de criptomonedas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Una gran base de datos descentralizada donde se registran todas las transacciones en bloques enlazados.",
+                    "correcta": true,
+                    "explicacion": "Según el texto, el Blockchain es una gran base de datos donde se registra cada transacción. Los datos se guardan en bloques enlazados criptográficamente (hash) con el anterior, formando una cadena con todo el historial."
+                },
+                {
+                    "texto": "El algoritmo de cifrado utilizado para ocultar la identidad del comprador.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Es suficiente tener instalado un antivirus para garantizar la seguridad del equipo?",
+            "respuestas": [
+                {
+                    "texto": "No, una aplicación antimalware sola no es suficiente, se requieren medidas adicionales.",
+                    "correcta": true,
+                    "explicacion": "El documento de buenas prácticas advierte explícitamente que una aplicación antimalware por sí sola NO es suficiente; debe complementarse con otras medidas y buenas prácticas."
+                },
+                {
+                    "texto": "Sí, los antivirus modernos bloquean el 100% de las amenazas.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Solo es suficiente si el equipo no está conectado a internet.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Sí, pero solo si es una versión de pago.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "Dado que no existe un sistema 100% seguro, ¿qué nombre recibe el riesgo que una entidad debe aceptar tras aplicar las medidas de protección?",
+            "respuestas": [
+                {
+                    "texto": "Riesgo integral.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Riesgo residual.",
+                    "correcta": true,
+                    "explicacion": "El documento de buenas prácticas establece que siempre hay que aceptar un riesgo conocido como riesgo residual, asumiendo un compromiso entre el nivel de seguridad, los recursos disponibles y la funcionalidad."
+                },
+                {
+                    "texto": "Amenaza persistente.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Riesgo latente.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué dimensión de la seguridad permite reproducir un histórico de acciones para saber quién hizo qué?",
+            "respuestas": [
+                {
+                    "texto": "Integridad.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Disponibilidad.",
+                    "correcta": false,
+                    "explicacion": ""
+                },
+                {
+                    "texto": "Trazabilidad.",
+                    "correcta": true,
+                    "explicacion": "La trazabilidad es la dimensión que permite reproducir la secuencia de acciones sobre un proceso y determinar la autoría de cada acción."
+                },
+                {
+                    "texto": "Confidencialidad.",
+                    "correcta": false,
+                    "explicacion": ""
+                }
+            ]
+        }
+    ]
+}
