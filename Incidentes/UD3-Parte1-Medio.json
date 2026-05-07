@@ -1,0 +1,1880 @@
+{
+  "tema": "RA3 - Recopilación, almacenamiento y análisis de evidencias de ciberseguridad (parte 1)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la norma ISO/IEC considerada 'crítica' para el First Responder, ya que define las fases de identificación, recolección, adquisición y preservación de evidencia digital?",
+      "respuestas": [
+        {
+          "texto": "ISO/IEC 27035",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27035 es la norma 'paraguas' que regula la gestión global del incidente, pero no define las fases técnicas del First Responder."
+        },
+        {
+          "texto": "ISO/IEC 27037",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 27037 es la norma crítica para el First Responder, y diferencia las cuatro fases: identificación, recolección, adquisición y preservación."
+        },
+        {
+          "texto": "ISO/IEC 27041",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27041 trata sobre la idoneidad del método (validar que las herramientas usadas sean fiables), no sobre las fases del First Responder."
+        },
+        {
+          "texto": "ISO/IEC 27042",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27042 se centra en cómo interpretar los datos sin sesgos (correlación y reconstrucción temporal), no en su recolección."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista usa FTK Imager para adquirir un disco. ¿Qué norma ISO le obliga a validar previamente que esa herramienta es fiable?",
+      "respuestas": [
+        {
+          "texto": "ISO/IEC 27037",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 dice CÓMO recoger los datos, pero no se centra en validar la fiabilidad de la herramienta usada."
+        },
+        {
+          "texto": "ISO/IEC 27042",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27042 trata sobre el análisis e interpretación de los datos sin sesgos, no sobre la validación de herramientas."
+        },
+        {
+          "texto": "ISO/IEC 27041",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 27041 (Idoneidad del método) obliga a validar las herramientas antes de usarlas en un caso real, garantizando que no fallaron."
+        },
+        {
+          "texto": "ISO/IEC 27035",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27035 cubre la gestión global del incidente, pero no entra en validar la idoneidad técnica de las herramientas forenses."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el RFC 3227, ¿cuál de los siguientes elementos debe recolectarse ANTES en el orden de volatilidad?",
+      "respuestas": [
+        {
+          "texto": "Disco duro y datos persistentes",
+          "correcta": false,
+          "explicacion": "Incorrecto. El disco duro es uno de los elementos menos volátiles y se recolecta después de la memoria y los archivos temporales."
+        },
+        {
+          "texto": "Tabla de enrutamiento, caché ARP y memoria RAM",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tras los registros y caché de CPU, lo siguiente es la tabla de enrutamiento, caché ARP, tabla de procesos y RAM. Son altamente volátiles."
+        },
+        {
+          "texto": "Logs remotos y datos de monitorización",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs remotos están en la posición 5 del orden canónico, después del disco duro."
+        },
+        {
+          "texto": "Medios de archivo como DVDs y backups",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los medios de archivo son los menos volátiles del orden canónico (posición 7), por lo que se recolectan al final."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué estándar es especialmente útil porque ofrece guías específicas para distintos tipos de datos (archivos, sistemas operativos, tráfico de red, aplicaciones) y se enfoca en operaciones más allá de los juicios?",
+      "respuestas": [
+        {
+          "texto": "ISO/IEC 27037",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 es más burocrática y se centra en las directrices de adquisición, no en guías por tipo de dato para operaciones."
+        },
+        {
+          "texto": "RFC 3227",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RFC 3227 es la referencia para el orden de volatilidad, pero no ofrece guías específicas por tipo de dato."
+        },
+        {
+          "texto": "NIST SP 800-86",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIST SP 800-86 es pragmático, orientado a operaciones (troubleshooting y recuperación), y aporta guías específicas para distintos tipos de datos."
+        },
+        {
+          "texto": "ISO/IEC 27042",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27042 cubre análisis e interpretación, pero sin el enfoque operacional ni las guías por tipo de dato del NIST."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué fase ISO/IEC 27037 corresponde a 'crear la copia forense de los datos' (clonado bit a bit o imagen de memoria)?",
+      "respuestas": [
+        {
+          "texto": "Recolección (Collection)",
+          "correcta": false,
+          "explicacion": "Incorrecto. La recolección es tomar el dispositivo físico (ej. incautar el portátil), no crear la copia de los datos."
+        },
+        {
+          "texto": "Identificación",
+          "correcta": false,
+          "explicacion": "Incorrecto. La identificación es saber qué buscar (físico o lógico) y priorizar según volatilidad, antes de tocar nada."
+        },
+        {
+          "texto": "Preservación",
+          "correcta": false,
+          "explicacion": "Incorrecto. La preservación garantiza que lo ya adquirido no se altere con el tiempo (hashing, almacenamiento en frío)."
+        },
+        {
+          "texto": "Adquisición (Acquisition)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La adquisición es la fase donde se crea la copia forense de los datos, ya sea mediante clonado bit a bit o imagen de memoria."
+        }
+      ]
+    },
+    {
+      "pregunta": "El ciclo de 4 fases del NIST SP 800-86 es:",
+      "respuestas": [
+        {
+          "texto": "Identification → Collection → Acquisition → Preservation",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la secuencia de la ISO/IEC 27037, no el ciclo del NIST SP 800-86."
+        },
+        {
+          "texto": "Collection → Examination → Analysis → Reporting",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ciclo NIST es Collection → Examination → Analysis → Reporting, más operacional que el ISO."
+        },
+        {
+          "texto": "Detection → Containment → Eradication → Recovery",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son fases típicas del ciclo de respuesta a incidentes (NIST 800-61), no del análisis forense en NIST 800-86."
+        },
+        {
+          "texto": "Planning → Detection → Response → Lessons Learned",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es un esquema más cercano a la ISO/IEC 27035 sobre gestión de incidentes, no al NIST SP 800-86."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si dos analistas distintos, en laboratorios separados y usando herramientas diferentes pero equivalentes, llegan a las mismas conclusiones sobre la misma evidencia, se cumple el principio de:",
+      "respuestas": [
+        {
+          "texto": "Repetibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La repetibilidad es cuando el MISMO analista, con las MISMAS herramientas y procedimientos, obtiene el mismo resultado."
+        },
+        {
+          "texto": "Trazabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad consiste en reconstruir la historia de la evidencia desde su identificación hasta su presentación."
+        },
+        {
+          "texto": "Reproducibilidad",
+          "correcta": true,
+          "explicacion": "¡Correcto! La reproducibilidad valida que el hallazgo es real y no un glitch de una herramienta concreta, al ser confirmado por otro analista con herramientas distintas."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La integridad garantiza que la evidencia no se ha modificado desde su adquisición, mediante hashes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Documentar que se usó 'Volatility v2.6' en lugar de 'Volatility v3' es una aplicación práctica del principio de:",
+      "respuestas": [
+        {
+          "texto": "Reproducibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reproducibilidad implica usar herramientas distintas (pero equivalentes); si registramos la versión exacta es para que otro pueda repetir el mismo análisis."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La integridad se verifica con hashes, no documentando versiones de software."
+        },
+        {
+          "texto": "Trazabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad se centra en el ciclo de vida y la cadena de custodia de la evidencia, no en la versión del software."
+        },
+        {
+          "texto": "Repetibilidad",
+          "correcta": true,
+          "explicacion": "¡Correcto! La repetibilidad exige que el mismo analista con las mismas herramientas obtenga el mismo resultado, por eso la versión exacta del software es crítica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista calcula el SHA-256 de una imagen forense al adquirirla y vuelve a calcularlo tras el análisis para comprobar que no ha cambiado. ¿Qué principio forense está aplicando?",
+      "respuestas": [
+        {
+          "texto": "Reproducibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reproducibilidad se refiere a que otro analista llegue a las mismas conclusiones, no a verificar que un archivo no se haya modificado."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": true,
+          "explicacion": "¡Correcto! El uso de hashes (MD5, SHA-256) antes y después garantiza la integridad: si cambia un bit, el hash cambia totalmente."
+        },
+        {
+          "texto": "Mínima intrusión",
+          "correcta": false,
+          "explicacion": "Incorrecto. La mínima intrusión consiste en no causar más daño que el propio incidente; es un principio de proporcionalidad operativa."
+        },
+        {
+          "texto": "Minimización de alteración",
+          "correcta": false,
+          "explicacion": "Incorrecto. La minimización de alteración aplica a sistemas vivos: tocar lo menos posible y saber qué se ha cambiado, no a verificar archivos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Decidir NO apagar un servidor de producción crítico para clonar el disco, optando por una adquisición lógica en caliente, responde al principio de:",
+      "respuestas": [
+        {
+          "texto": "Mínima intrusión (proporcionalidad)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El principio de mínima intrusión dice que la investigación no debe causar más daño que el propio incidente; en producción se asume riesgo controlado."
+        },
+        {
+          "texto": "Repetibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La repetibilidad se refiere a obtener el mismo resultado con el mismo método, no a decidir si apagar o no un servidor."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la integridad es importante, la decisión de no apagar el servidor responde a la proporcionalidad operativa, no a la integridad."
+        },
+        {
+          "texto": "Trazabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad documenta quién hizo qué con la evidencia, no la decisión sobre el método de adquisición."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista ejecuta binarios estáticamente compilados desde un USB externo en lugar de instalar herramientas en el sistema víctima. ¿Qué principio aplica?",
+      "respuestas": [
+        {
+          "texto": "Cadena de custodia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cadena de custodia documenta el ciclo de vida de la evidencia, no la forma de ejecutar herramientas en el sistema víctima."
+        },
+        {
+          "texto": "Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La integridad se garantiza con hashes; aquí se intenta evitar alterar el sistema, no verificar que algo no cambió."
+        },
+        {
+          "texto": "Minimización de alteración",
+          "correcta": true,
+          "explicacion": "¡Correcto! En sistemas vivos, el objetivo no es 'no tocar' (imposible), sino tocar lo menos posible. Usar binarios externos evita alterar las librerías del sistema operativo."
+        },
+        {
+          "texto": "Reproducibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reproducibilidad valida que otro analista llegue al mismo resultado, no se relaciona con minimizar la alteración del sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de evidencia se considera la 'escena del crimen' moderna y contiene típicamente claves de cifrado, credenciales en texto claro y código de malware inyectado?",
+      "respuestas": [
+        {
+          "texto": "Disco duro (HDD/SSD)",
+          "correcta": false,
+          "explicacion": "Incorrecto. El disco es evidencia no volátil; suele contener instaladores, logs y archivos persistentes, pero no claves de cifrado en uso ni código inyectado."
+        },
+        {
+          "texto": "Logs del sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs registran eventos del sistema, pero no contienen claves de cifrado activas ni el payload del malware desencriptado."
+        },
+        {
+          "texto": "Memoria RAM",
+          "correcta": true,
+          "explicacion": "¡Correcto! La RAM contiene claves de cifrado (BitLocker, TrueCrypt), credenciales (artefactos Mimikatz), procesos inyectados y el payload desencriptado del malware."
+        },
+        {
+          "texto": "Tablas ARP",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las tablas ARP son útiles para detectar ataques de red local como ARP spoofing, pero no contienen claves ni payloads."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de evidencia volátil, ¿qué situación es un INDICADOR CLÁSICO DE COMPROMISO al revisar procesos en ejecución?",
+      "respuestas": [
+        {
+          "texto": "Que explorer.exe sea proceso padre de varios procesos de aplicaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Que explorer.exe lance aplicaciones es comportamiento normal del usuario interactivo en Windows."
+        },
+        {
+          "texto": "Que svchost.exe esté lanzando powershell.exe",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un IOC clásico: svchost gestiona servicios de Windows, no debería lanzar PowerShell. Esa relación padre-hijo anómala indica probable inyección o ejecución maliciosa."
+        },
+        {
+          "texto": "Que existan múltiples instancias de svchost.exe",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es totalmente normal: Windows agrupa servicios en distintas instancias de svchost.exe, no es indicador de compromiso por sí mismo."
+        },
+        {
+          "texto": "Que un proceso tenga conexiones de red en estado ESTABLISHED",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tener conexiones ESTABLISHED es lo normal en cualquier proceso de red; lo sospechoso sería el destino o el patrón, no el estado en sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la recuperación forense de archivos borrados es especialmente compleja en discos SSD modernos comparada con HDDs tradicionales?",
+      "respuestas": [
+        {
+          "texto": "Porque los SSD cifran automáticamente todos los datos por hardware",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque algunos SSD tienen cifrado por hardware (SED), no es la causa principal de la dificultad para recuperar archivos borrados."
+        },
+        {
+          "texto": "Porque el comando TRIM y el Garbage Collection destruyen la evidencia eliminada en minutos",
+          "correcta": true,
+          "explicacion": "¡Correcto! TRIM y Garbage Collection liberan activamente las celdas marcadas como borradas, eliminando la evidencia en minutos y complicando la recuperación."
+        },
+        {
+          "texto": "Porque los SSD tienen sectores reasignados aleatoriamente y no se pueden leer",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los SSDs sí se pueden leer, y aunque hacen wear leveling, eso no impide la lectura forense; el problema real es TRIM."
+        },
+        {
+          "texto": "Porque los SSD no admiten copias bit a bit con herramientas como dd o dc3dd",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los SSDs sí admiten copias bit a bit con dd o dc3dd; lo que complica la recuperación es la destrucción activa de los datos liberados."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un atacante con privilegios de administrador ha realizado 'log wiping' en un servidor comprometido. ¿Dónde es más probable que aún existan registros válidos del incidente?",
+      "respuestas": [
+        {
+          "texto": "En el Visor de Eventos del propio servidor comprometido",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el atacante tiene privilegios y ha hecho log wiping, los logs locales del propio servidor son los primeros que habrá borrado o alterado."
+        },
+        {
+          "texto": "En SIEM, firewall perimetral o servidor Syslog remoto",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos son evidencia externa (contextual): residen en un dominio de seguridad distinto al activo comprometido, así que el atacante difícilmente puede borrarlos."
+        },
+        {
+          "texto": "En la caché del navegador del propio servidor",
+          "correcta": false,
+          "explicacion": "Incorrecto. La caché del navegador es local y volátil, fácilmente alterable y no contiene registros estructurados del incidente."
+        },
+        {
+          "texto": "En los archivos del registro de Windows del propio servidor",
+          "correcta": false,
+          "explicacion": "Incorrecto. El registro local también es manipulable por un atacante con privilegios de administrador, igual que los logs locales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la VENTAJA TÁCTICA de utilizar un snapshot de VM (VMware/Hyper-V) frente a clonar un disco físico?",
+      "respuestas": [
+        {
+          "texto": "Que es más rápido al no requerir hashes criptográficos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes son obligatorios igualmente en cualquier evidencia, también en snapshots de VM."
+        },
+        {
+          "texto": "Que captura disco, RAM y estado de CPU, permitiendo pausar el ataque para analizarlo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un snapshot captura disco + RAM + estado de CPU, lo que permite 'pausar' el ataque sin que el malware detecte herramientas o revertir a estados previos."
+        },
+        {
+          "texto": "Que evita la necesidad de mantener cadena de custodia digital",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cadena de custodia se mantiene SIEMPRE, sea sobre un disco físico, una imagen o un snapshot."
+        },
+        {
+          "texto": "Que es admisible legalmente sin necesidad de hashes ni firmas digitales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Toda evidencia digital requiere hash y validación de integridad para ser admisible, también los snapshots."
+        }
+      ]
+    },
+    {
+      "pregunta": "En entornos cloud como AWS o Azure, ¿cuál es la fuente principal de evidencia que permite saber 'quién hizo qué sobre qué recurso'?",
+      "respuestas": [
+        {
+          "texto": "Los logs locales del servidor virtual",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs locales de la VM no muestran las acciones realizadas a través de la consola o API del proveedor cloud."
+        },
+        {
+          "texto": "Las trazas de API (ej. CloudTrail en AWS)",
+          "correcta": true,
+          "explicacion": "¡Correcto! CloudTrail (AWS) o sus equivalentes en Azure/GCP registran identidad, acción y recurso, dando la trazabilidad completa de las operaciones cloud."
+        },
+        {
+          "texto": "Los snapshots automáticos de las máquinas virtuales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los snapshots capturan el estado del disco/RAM, pero no registran qué acciones realizó cada identidad sobre cada recurso."
+        },
+        {
+          "texto": "Los logs de Active Directory federado con el cloud",
+          "correcta": false,
+          "explicacion": "Incorrecto. AD federado puede mostrar autenticación, pero no las acciones específicas realizadas sobre cada recurso cloud."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principal RETO forense de los contenedores Docker/Kubernetes?",
+      "respuestas": [
+        {
+          "texto": "Que no admiten cálculo de hashes criptográficos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cualquier dato en contenedores admite cálculo de hash; el reto no está en el hashing sino en la persistencia."
+        },
+        {
+          "texto": "Que solo admiten adquisición lógica, nunca física",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición de contenedores es viable; el problema es el ciclo de vida efímero, no el tipo de adquisición."
+        },
+        {
+          "texto": "Que son efímeros: si el contenedor muere, sus logs internos y archivos temporales mueren con él",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los contenedores son efímeros por diseño (copy-on-write). Hay que capturar el runtime antes de que el orquestador lo destruya."
+        },
+        {
+          "texto": "Que no permiten la captura de tráfico de red",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tráfico de red de contenedores se puede capturar con herramientas estándar como tcpdump o usando port mirroring."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un log original de un servidor web que muestra una inyección SQL es un ejemplo de evidencia:",
+      "respuestas": [
+        {
+          "texto": "Secundaria",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una evidencia secundaria sugiere un hecho pero necesita corroboración (ej. un post-it con una contraseña). Aquí el log prueba el hecho directamente."
+        },
+        {
+          "texto": "Primaria",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una evidencia primaria es la fuente original o un duplicado certificado que prueba el hecho por sí misma, como el log original con la inyección."
+        },
+        {
+          "texto": "Híbrida",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las evidencias híbridas son cosas como PCAPs o dumps de memoria: combinan características volátiles y persistentes. El log es persistente."
+        },
+        {
+          "texto": "Externa contextual",
+          "correcta": false,
+          "explicacion": "Incorrecto. La evidencia externa contextual son logs de firewall, SIEM o IDS perimetrales, no logs locales del propio servidor web atacado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia clave existe entre una copia forense bit-stream y una copia lógica?",
+      "respuestas": [
+        {
+          "texto": "La copia lógica es más fiable porque solo copia archivos íntegros",
+          "correcta": false,
+          "explicacion": "Incorrecto. La copia lógica es más rápida pero MENOS fiable forensemente, ya que pierde datos borrados y slack space."
+        },
+        {
+          "texto": "La copia bit-stream incluye espacio no asignado y slack space, donde habitan archivos borrados",
+          "correcta": true,
+          "explicacion": "¡Correcto! La copia bit-stream copia sector a sector incluyendo zonas no asignadas, mientras que la lógica solo copia archivos visibles por el SO."
+        },
+        {
+          "texto": "La copia lógica genera hashes y la bit-stream no",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos tipos de copia deben validarse mediante hashes. Es un requisito de integridad, no una diferencia entre métodos."
+        },
+        {
+          "texto": "La copia bit-stream solo se puede hacer con disco apagado y la lógica con disco encendido",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas modalidades pueden hacerse en distintos escenarios; la diferencia clave es qué se copia, no cuándo se copia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el slack space es relevante en una adquisición forense?",
+      "respuestas": [
+        {
+          "texto": "Porque almacena los hashes generados por dc3dd al vuelo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes se almacenan en archivos de log generados por la herramienta, no en el slack space del disco analizado."
+        },
+        {
+          "texto": "Porque contiene metadatos del sistema de archivos imprescindibles para el arranque",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los metadatos críticos del FS están en estructuras como MFT o inodos, no en el slack space."
+        },
+        {
+          "texto": "Porque puede contener datos remanentes de archivos borrados que no son visibles para el SO",
+          "correcta": true,
+          "explicacion": "¡Correcto! El slack y el unallocated space pueden contener datos remanentes de archivos borrados. Por eso solo la copia bit-stream los preserva."
+        },
+        {
+          "texto": "Porque contiene exclusivamente las claves de cifrado en reposo del disco",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las claves de cifrado en reposo se gestionan mediante TPM/HSM o estructuras específicas, no residen en slack space."
+        }
+      ]
+    },
+    {
+      "pregunta": "Antes de adquirir evidencia de un equipo encendido con BitLocker activado, ¿cuál es el riesgo CRÍTICO de elegir una adquisición en frío?",
+      "respuestas": [
+        {
+          "texto": "Que se perderá la cadena de custodia automáticamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cadena de custodia se mantiene mediante procedimientos, no se pierde 'automáticamente' por apagar un equipo."
+        },
+        {
+          "texto": "Que se podría tardar más en generar la imagen forense",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duración no es el riesgo crítico; lo realmente grave es que los datos pueden quedar inaccesibles."
+        },
+        {
+          "texto": "Que se invalidará la evidencia por incumplimiento de ISO 27037",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 no obliga a un único método; lo que invalida la evidencia es no documentar la decisión, no la decisión en sí."
+        },
+        {
+          "texto": "Que apagar el equipo podría dejar los datos cifrados inaccesibles para siempre si no tenemos las claves",
+          "correcta": true,
+          "explicacion": "¡Correcto! Con FDE activo (BitLocker, FileVault, LUKS), apagar el equipo cierra el volumen cifrado. Sin claves de recuperación, los datos quedan inaccesibles."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué método de adquisición es el recomendado para 'infraestructura crítica en producción con cifrado de disco activo'?",
+      "respuestas": [
+        {
+          "texto": "Adquisición en frío",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición en frío en un sistema con FDE activo podría dejar los datos inaccesibles, además de causar interrupción del servicio."
+        },
+        {
+          "texto": "Adquisición en caliente (live acquisition)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La adquisición en caliente es la recomendada en producción con cifrado activo: preserva información volátil y mantiene el cifrado descifrado en RAM."
+        },
+        {
+          "texto": "Extracción física del soporte",
+          "correcta": false,
+          "explicacion": "Incorrecto. La extracción física implica apagar y desmontar; en producción es inaceptable, y en cifrado activo puede ser destructivo."
+        },
+        {
+          "texto": "Arranque controlado con CAINE o DEFT",
+          "correcta": false,
+          "explicacion": "Incorrecto. CAINE/DEFT son distros forenses para arranque tras apagado; equivalen a una adquisición en frío, inadecuada en este caso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principal RIESGO de una adquisición en caliente que la diferencia de una en frío?",
+      "respuestas": [
+        {
+          "texto": "Que no permite calcular hashes durante el proceso",
+          "correcta": false,
+          "explicacion": "Incorrecto. Durante una adquisición en caliente sí se pueden y deben calcular hashes con dc3dd u otras herramientas."
+        },
+        {
+          "texto": "Que introduce modificaciones inevitables en el estado del sistema (RAM y logs)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La adquisición en caliente deja una huella inevitable: alteraciones en RAM y logs. Por eso requiere justificación documental."
+        },
+        {
+          "texto": "Que no es válida ante un juez",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición en caliente es perfectamente válida si está justificada técnicamente y bien documentada."
+        },
+        {
+          "texto": "Que requiere usar siempre MD5 en lugar de SHA-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición en caliente puede y debe usar SHA-256; MD5 está considerado criptográficamente roto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal ventaja de un Network TAP frente a un SPAN Port (port mirroring) para captura de tráfico?",
+      "respuestas": [
+        {
+          "texto": "Que el TAP es más barato y fácil de configurar",
+          "correcta": false,
+          "explicacion": "Incorrecto. El TAP suele ser más caro que un SPAN; su valor está en la fiabilidad técnica, no en el coste."
+        },
+        {
+          "texto": "Que el TAP permite captura cifrada nativamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ningún método de captura descifra TLS por sí mismo; eso requiere claves de sesión o intercepción adicional."
+        },
+        {
+          "texto": "Que el TAP no descarta paquetes y no es visible para el atacante",
+          "correcta": true,
+          "explicacion": "¡Correcto! El TAP es hardware sin IP (invisible) y garantiza el 100% de los paquetes. El SPAN puede descartar paquetes si se satura el ancho de banda."
+        },
+        {
+          "texto": "Que el TAP guarda automáticamente capturas en formato PCAP cifrado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un TAP solo replica el tráfico; el almacenamiento en PCAP lo gestiona la herramienta de captura conectada al TAP."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el comando 'tcpdump -i eth0 -s 0 -w captura.pcap', ¿por qué es VITAL incluir '-s 0'?",
+      "respuestas": [
+        {
+          "texto": "Para capturar solo paquetes IPv4 y descartar IPv6",
+          "correcta": false,
+          "explicacion": "Incorrecto. La opción '-s 0' no filtra por versión de IP; eso se haría con filtros BPF."
+        },
+        {
+          "texto": "Para capturar el paquete completo y no solo la cabecera",
+          "correcta": true,
+          "explicacion": "¡Correcto! '-s 0' establece snaplen ilimitado, capturando paquetes completos en lugar de solo las cabeceras (por defecto algunas versiones limitan)."
+        },
+        {
+          "texto": "Para evitar guardar la captura en disco y reducir el tamaño",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: captura más datos por paquete, no menos. Y la captura sí se guarda con '-w'."
+        },
+        {
+          "texto": "Para activar el modo promiscuo en la interfaz",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modo promiscuo se activa por defecto en tcpdump; no se controla con '-s 0'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta es la 'versión forense del Departamento de Defensa de EE.UU.' que calcula hash al vuelo durante el clonado?",
+      "respuestas": [
+        {
+          "texto": "FTK Imager",
+          "correcta": false,
+          "explicacion": "Incorrecto. FTK Imager es el estándar de facto gratuito de AccessData, pero no es desarrollo del DoD."
+        },
+        {
+          "texto": "Guymager",
+          "correcta": false,
+          "explicacion": "Incorrecto. Guymager es una herramienta gráfica multihilo para Linux, pero no proviene del Departamento de Defensa de EE.UU."
+        },
+        {
+          "texto": "dc3dd",
+          "correcta": true,
+          "explicacion": "¡Correcto! dc3dd es la versión forense de dd desarrollada por el Departamento de Defensa de EE.UU., con cálculo de hash al vuelo y barra de progreso."
+        },
+        {
+          "texto": "EnCase Imager",
+          "correcta": false,
+          "explicacion": "Incorrecto. EnCase Imager (formato .E01) es comercial de OpenText/Guidance Software, ampliamente usado por fuerzas de seguridad pero no del DoD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia entre un write-blocker hardware y un montaje 'mount -o ro' en Linux?",
+      "respuestas": [
+        {
+          "texto": "El hardware filtra físicamente comandos SCSI/ATA WRITE; es el estándar judicial",
+          "correcta": true,
+          "explicacion": "¡Correcto! El hardware actúa como puente físico que filtra comandos de escritura, siendo más robusto ante fallos humanos. Es el estándar judicial."
+        },
+        {
+          "texto": "El software es más rápido pero menos compatible con discos modernos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia clave no es la velocidad; ambos métodos son válidos pero el hardware es más seguro ante errores humanos."
+        },
+        {
+          "texto": "El software solo funciona en Linux y el hardware solo en Windows",
+          "correcta": false,
+          "explicacion": "Incorrecto. El write-blocker hardware funciona independientemente del SO del analista; el software depende del SO."
+        },
+        {
+          "texto": "El hardware no es admisible en juicios europeos por falta de certificación CE",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los write-blockers hardware son ampliamente aceptados en tribunales y son el estándar judicial recomendado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda el uso de Zeek (antes Bro) frente a tcpdump para análisis a largo plazo en infraestructura corporativa?",
+      "respuestas": [
+        {
+          "texto": "Porque Zeek descifra el tráfico TLS automáticamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Zeek no descifra TLS automáticamente; requiere claves o intercepción previa, igual que cualquier otra herramienta."
+        },
+        {
+          "texto": "Porque genera logs de transacciones en lugar de capturar el payload completo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Zeek genera logs de transacciones (http.log, dns.log, conn.log) sin almacenar el payload. Ocupa mucho menos y es más fácil de analizar históricamente."
+        },
+        {
+          "texto": "Porque tcpdump no funciona en redes de 10Gbps",
+          "correcta": false,
+          "explicacion": "Incorrecto. tcpdump funciona en redes de 10Gbps (con el hardware adecuado); el reto allí es el volumen y el descarte de paquetes."
+        },
+        {
+          "texto": "Porque Zeek incluye un IDS/IPS integrado por defecto",
+          "correcta": false,
+          "explicacion": "Incorrecto. Zeek puede usarse para detección, pero no es un IDS/IPS clásico tipo Suricata o Snort. Su valor está en la generación de logs."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta de captura de RAM en Linux permite enviar el volcado vía red (con netcat) para no tocar el disco del sistema víctima?",
+      "respuestas": [
+        {
+          "texto": "WinPmem",
+          "correcta": false,
+          "explicacion": "Incorrecto. WinPmem es para Windows, parte del proyecto Rekall/Velociraptor."
+        },
+        {
+          "texto": "DumpIt",
+          "correcta": false,
+          "explicacion": "Incorrecto. DumpIt es la herramienta de Comae (Magnet) para Windows; genera un .raw localmente con doble clic."
+        },
+        {
+          "texto": "Belkasoft RAM Capturer",
+          "correcta": false,
+          "explicacion": "Incorrecto. Belkasoft RAM Capturer es robusto contra anti-debugging pero está orientado a Windows."
+        },
+        {
+          "texto": "LiME (Linux Memory Extractor)",
+          "correcta": true,
+          "explicacion": "¡Correcto! LiME es un módulo de kernel para Linux/Android que permite captura completa vía netcat por red, evitando escribir en el disco víctima."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras un incidente, un analista está preparando el plan de adquisición. Sabe que los logs de un servidor con la hora desincronizada no podrán correlacionarse con el firewall. ¿Qué debe documentar OBLIGATORIAMENTE?",
+      "respuestas": [
+        {
+          "texto": "El time skew o desfase horario entre el sistema víctima y una fuente fiable",
+          "correcta": true,
+          "explicacion": "¡Correcto! Documentar el time skew permite reconstruir la línea temporal después corrigiendo el desfase, esencial para correlacionar logs entre sistemas."
+        },
+        {
+          "texto": "El UID/GID de todos los usuarios del sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los UIDs son útiles, pero no resuelven el problema de correlación temporal entre sistemas."
+        },
+        {
+          "texto": "El hash MD5 del fichero /etc/passwd",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hashear /etc/passwd no aporta nada al problema del desfase horario en correlación de logs."
+        },
+        {
+          "texto": "La versión del kernel de Linux y los módulos cargados",
+          "correcta": false,
+          "explicacion": "Incorrecto. La versión del kernel es información útil del sistema, pero no resuelve el problema de correlación temporal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué MD5 y SHA-1 se consideran 'criptográficamente rotos' para uso forense actual?",
+      "respuestas": [
+        {
+          "texto": "Porque generan hashes de longitud variable que dificultan la verificación",
+          "correcta": false,
+          "explicacion": "Incorrecto. MD5 y SHA-1 generan hashes de longitud fija (128 y 160 bits respectivamente). El problema es la resistencia a colisiones."
+        },
+        {
+          "texto": "Porque no son compatibles con bloqueadores de escritura por hardware",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los write-blockers son agnósticos al algoritmo de hash; no es un problema de compatibilidad."
+        },
+        {
+          "texto": "Porque requieren más recursos de cómputo que SHA-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo al contrario: MD5 y SHA-1 son MÁS rápidos que SHA-256, no más caros computacionalmente."
+        },
+        {
+          "texto": "Porque existen ataques de colisión prácticos como SHAttered para SHA-1",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se han demostrado ataques de colisión prácticos (SHAttered en SHA-1, ataques contra MD5) que permiten generar dos archivos distintos con el mismo hash."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tu evidencia se ha trasladado de un disco local a un bucket S3 en la nube. ¿Qué verificación es OBLIGATORIA según las buenas prácticas?",
+      "respuestas": [
+        {
+          "texto": "Verificación 'hash-to-hash' contrastando el hash de origen con el del destino",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cualquier traslado de evidencia (disco a disco, o subida a la nube) requiere verificación hash-to-hash para confirmar integridad post-transferencia."
+        },
+        {
+          "texto": "Cifrar el bucket con AES-128 antes de la subida",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado debe ser AES-256 según el estándar; pero además, el cifrado no sustituye la verificación de integridad."
+        },
+        {
+          "texto": "Eliminar la evidencia local tras la subida para evitar duplicados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Nunca se elimina la evidencia original tras la copia; el principio es preservar todas las copias controladas."
+        },
+        {
+          "texto": "Convertir la imagen a formato propietario .E01 antes del upload",
+          "correcta": false,
+          "explicacion": "Incorrecto. El formato .E01 es valioso pero no obligatorio. Lo obligatorio es la verificación hash-to-hash."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una Autoridad de Sellado de Tiempo (TSA) según RFC 3161 garantiza:",
+      "respuestas": [
+        {
+          "texto": "Que la evidencia fue adquirida con herramientas certificadas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La TSA no certifica herramientas; solo aporta una hora atómica fiable a un hash dado."
+        },
+        {
+          "texto": "Que la evidencia existía en un estado exacto en un momento preciso (no repudio temporal)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La TSA recibe el hash y lo firma con hora atómica fiable. Demuestra que la evidencia existía en ese estado en ese momento exacto."
+        },
+        {
+          "texto": "Que la evidencia ha sido firmada por su propietario original",
+          "correcta": false,
+          "explicacion": "Incorrecto. El no repudio de autoría se logra con firmas digitales del actor, no con sellado temporal de tercero."
+        },
+        {
+          "texto": "Que el contenido de la evidencia es legítimo y no malicioso",
+          "correcta": false,
+          "explicacion": "Incorrecto. La TSA ni siquiera ve el contenido (solo recibe el hash). No puede valorar legitimidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda NTS (Network Time Security) en lugar de NTP tradicional para sincronizar laboratorios forenses?",
+      "respuestas": [
+        {
+          "texto": "Porque NTS añade autenticación criptográfica y cifrado, evitando ataques MITM que desincronizen relojes",
+          "correcta": true,
+          "explicacion": "¡Correcto! NTP es vulnerable a MITM. NTS añade autenticación y cifrado, asegurando que la fuente de tiempo es legítima y no se ha alterado en tránsito."
+        },
+        {
+          "texto": "Porque NTS es más preciso, ofreciendo precisión a nivel de nanosegundos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia clave entre NTS y NTP no es la precisión; ambos pueden alcanzar precisiones similares."
+        },
+        {
+          "texto": "Porque NTS funciona con servidores Stratum 0 directamente sin intermediarios",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTS funciona con la misma jerarquía Stratum que NTP. La diferencia es la seguridad, no la topología."
+        },
+        {
+          "texto": "Porque NTS no requiere conexión a Internet, a diferencia de NTP",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tanto NTP como NTS pueden funcionar con servidores locales o remotos. La diferencia clave es la seguridad criptográfica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué problema resuelve el 'rehashing programado' en repositorios de evidencias a largo plazo?",
+      "respuestas": [
+        {
+          "texto": "El bit rot o degradación silenciosa de datos en los medios de almacenamiento",
+          "correcta": true,
+          "explicacion": "¡Correcto! Medios magnéticos y SSD pueden sufrir cambios aleatorios de bits con el tiempo (bit rot). El rehashing programado detecta esa corrupción."
+        },
+        {
+          "texto": "La caducidad de los certificados digitales utilizados en las firmas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La renovación de certificados es un tema de gestión de PKI, no se resuelve con rehashing periódico."
+        },
+        {
+          "texto": "La obsolescencia de los algoritmos criptográficos como SHA-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la migración de algoritmos es importante, el rehashing programado se diseña para detectar corrupción de datos, no obsolescencia."
+        },
+        {
+          "texto": "El cumplimiento normativo de retención según RGPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. RGPD se relaciona con políticas de retención y privacidad, no se resuelve técnicamente con rehashing."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué medida es la más apropiada para evitar que un analista altere INVOLUNTARIAMENTE la fecha de 'último acceso' de un documento de evidencia al abrirlo?",
+      "respuestas": [
+        {
+          "texto": "Renombrar el archivo añadiendo un sufijo .evidencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. Renombrar también es una modificación de metadatos y no impide que se altere la fecha de último acceso al abrir el archivo."
+        },
+        {
+          "texto": "Comprimir el archivo en un ZIP cifrado antes de analizarlo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Comprimir altera el archivo y los hashes; sería una contaminación grave de la evidencia."
+        },
+        {
+          "texto": "Calcular un nuevo hash cada vez que se accede al archivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Calcular hashes detecta cambios pero no los previene; aquí el objetivo es evitar la modificación, no detectarla."
+        },
+        {
+          "texto": "Montar el repositorio de evidencias en modo read-only (write-blocker software)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un montaje read-only impide que el SO o las aplicaciones (como Word) actualicen metadatos como la fecha de último acceso al abrir archivos."
+        }
+      ]
+    },
+    {
+      "pregunta": "El identificador 'CASO-2024-001-HD01' en una cadena de custodia es un ejemplo de:",
+      "respuestas": [
+        {
+          "texto": "Hash SHA-256 truncado del dispositivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un hash SHA-256 sería una cadena hexadecimal de 64 caracteres, no este formato alfanumérico estructurado."
+        },
+        {
+          "texto": "Identificador único asociado al caso y al ítem",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un identificador único alfanumérico que etiqueta tanto el contenedor físico como la imagen lógica, vinculándolos al caso."
+        },
+        {
+          "texto": "Token de acceso al sistema EMS (Evidence Management System)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los tokens de acceso son credenciales temporales generadas por sistemas; este formato es un identificador estable de evidencia."
+        },
+        {
+          "texto": "Código de partición lógica de la imagen forense",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las particiones lógicas se identifican mediante UUIDs o etiquetas del FS, no con este formato de caso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los TRES PILARES de validez probatoria que la cadena de custodia debe proteger?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad, Integridad y Disponibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la tríada CID general de seguridad de la información, pero no son los pilares específicos de validez probatoria."
+        },
+        {
+          "texto": "Repetibilidad, Reproducibilidad y Trazabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son principios forenses generales, pero los pilares específicos de validez probatoria son distintos."
+        },
+        {
+          "texto": "Autenticidad, Integridad y No repudio",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos son los tres pilares: Autenticidad (es lo que dice ser), Integridad (no se ha alterado) y No repudio (las acciones no pueden negarse)."
+        },
+        {
+          "texto": "Cifrado, Hashing y Firma digital",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son TÉCNICAS que ayudan a proteger los pilares, pero no son los pilares en sí mismos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué información sobre la fecha y hora es CRÍTICO incluir en una cadena de custodia digital?",
+      "respuestas": [
+        {
+          "texto": "Solo la fecha en formato local del país de adquisición",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo la fecha local es ambigua y dificulta correlacionar con sistemas internacionales o de otras zonas horarias."
+        },
+        {
+          "texto": "La hora con precisión de minuto, sin necesidad de zona horaria",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin zona horaria, las marcas temporales son ambiguas y pueden invalidar la prueba en correlaciones."
+        },
+        {
+          "texto": "La fecha y hora con zona horaria (UTC/GMT) y sincronización fiable",
+          "correcta": true,
+          "explicacion": "¡Correcto! La zona horaria UTC/GMT es crítica, preferiblemente con sincronización fiable (NTP/RFC 3161). Sin ella, las marcas temporales no son inequívocas."
+        },
+        {
+          "texto": "Solo la fecha en formato ISO 8601, la hora es opcional",
+          "correcta": false,
+          "explicacion": "Incorrecto. La hora es esencial para reconstruir la línea temporal del incidente; nunca es opcional."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tecnología es CONSIDERADA EL ESTÁNDAR DE ORO para preservación legal de evidencias durante un periodo retención (ej. 5 años)?",
+      "respuestas": [
+        {
+          "texto": "RAID 6 con replicación geográfica",
+          "correcta": false,
+          "explicacion": "Incorrecto. RAID 6 protege contra fallos de hardware, pero no impide modificaciones intencionadas. No es WORM."
+        },
+        {
+          "texto": "Snapshots cifrados de máquina virtual",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los snapshots de VM son útiles para análisis pero no garantizan inmutabilidad por sí mismos."
+        },
+        {
+          "texto": "Almacenamiento WORM (Write Once, Read Many)",
+          "correcta": true,
+          "explicacion": "¡Correcto! WORM permite escribir una vez y evita borrado o modificación durante el periodo de retención. Es el estándar de oro para preservación legal."
+        },
+        {
+          "texto": "Backups incrementales en cintas LTO",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cintas LTO pueden ser WORM, pero los backups incrementales por sí solos no garantizan inmutabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "En AWS, ¿qué característica del servicio S3 implementa la inmutabilidad WORM a nivel de objeto?",
+      "respuestas": [
+        {
+          "texto": "S3 Server-Side Encryption (SSE-KMS)",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSE-KMS cifra el objeto en reposo, pero no impide que se borre o modifique."
+        },
+        {
+          "texto": "S3 Cross-Region Replication",
+          "correcta": false,
+          "explicacion": "Incorrecto. La replicación geográfica protege contra desastres regionales, pero no garantiza inmutabilidad."
+        },
+        {
+          "texto": "S3 Object Lock",
+          "correcta": true,
+          "explicacion": "¡Correcto! S3 Object Lock implementa inmutabilidad WORM a nivel de objeto, impidiendo borrado o modificación durante el periodo de retención configurado."
+        },
+        {
+          "texto": "S3 Lifecycle Policies",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las Lifecycle Policies gestionan el ciclo de vida (transición, expiración) pero pueden incluso eliminar objetos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una organización quiere almacenar evidencias de casos cerrados durante 7 años, totalmente desconectadas de la red. ¿Qué arquitectura es la adecuada?",
+      "respuestas": [
+        {
+          "texto": "Object Storage S3-compatible con versionado activado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Object Storage es ideal para acceso bajo demanda a escala, pero está conectado a la red. No cumple el requisito de aislamiento físico."
+        },
+        {
+          "texto": "Repositorio Forense Dedicado con interfaces 10GbE",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los repositorios dedicados son ideales para investigaciones activas, pero no son la opción óptima para archivado a largo plazo desconectado."
+        },
+        {
+          "texto": "NAS empresarial con cifrado AES-256 y RAID 10",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque seguro, sigue conectado a la red corporativa. No es air-gapped."
+        },
+        {
+          "texto": "Cold Storage cifrado en cintas LTO o servicios tipo Glacier",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cold Storage en cintas o Glacier ofrece air-gap físico (inmunes a ciberataques remotos) e ideal para retención larga de evidencias cerradas."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un sistema de gestión de evidencias con RBAC, ¿qué permisos debería tener el rol 'Recolector'?",
+      "respuestas": [
+        {
+          "texto": "Permisos de lectura sobre todos los casos del repositorio",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso violaría el principio de mínimo privilegio: el recolector solo necesita depositar, no consultar otros casos."
+        },
+        {
+          "texto": "Permisos de administración sobre el sistema de almacenamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. La administración del almacenamiento es de IT; el recolector no debería tener tal alcance."
+        },
+        {
+          "texto": "Permisos de escritura (Write-only o Append-only) sin acceso a otros casos",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Recolector deposita evidencias (escribe) pero no debe ver casos ajenos. Append-only impide incluso modificar lo que él mismo escribió."
+        },
+        {
+          "texto": "Permisos de lectura/escritura solo sobre el caso al que está asignado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el rol 'Analista', no el 'Recolector'. El recolector idealmente no debe poder leer ni siquiera lo que él mismo deposita."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio defiende que el administrador de sistemas (IT) que gestiona el almacenamiento NO debe tener la clave para descifrar las evidencias?",
+      "respuestas": [
+        {
+          "texto": "Principio de mínima intrusión",
+          "correcta": false,
+          "explicacion": "Incorrecto. La mínima intrusión se refiere a no causar más daño del necesario en la investigación, no a separar funciones."
+        },
+        {
+          "texto": "Principio de cadena de custodia continua",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cadena de custodia documenta interacciones, pero no es exactamente el principio que separa al admin de las claves."
+        },
+        {
+          "texto": "Separación de funciones (Segregation of Duties)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La separación de funciones evita conflictos de interés: el admin de IT gestiona el almacenamiento, pero el equipo DFIR/DPO posee las claves."
+        },
+        {
+          "texto": "Principio de proporcionalidad técnica",
+          "correcta": false,
+          "explicacion": "Incorrecto. La proporcionalidad se refiere al daño que la investigación causa frente al incidente, no a la separación de claves."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la 'regla de oro' en la gestión de claves de cifrado de evidencias?",
+      "respuestas": [
+        {
+          "texto": "Rotar las claves cada 30 días automáticamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rotación es importante, pero la regla de oro es otra: la separación de la clave y los datos."
+        },
+        {
+          "texto": "Nunca almacenar la clave de cifrado en el mismo medio que los datos cifrados",
+          "correcta": true,
+          "explicacion": "¡Correcto! La regla de oro: si clave y datos están en el mismo medio, un robo del medio compromete ambos. Por eso se usan HSM o KMS separados."
+        },
+        {
+          "texto": "Usar siempre claves de 4096 bits o superiores",
+          "correcta": false,
+          "explicacion": "Incorrecto. La longitud de clave depende del algoritmo (AES-256 usa 256 bits, no 4096). La 'regla de oro' es sobre el almacenamiento, no la longitud."
+        },
+        {
+          "texto": "Renovar la clave cada vez que se accede a la evidencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. Renovar tras cada acceso sería operativamente inviable y no es la regla de oro reconocida."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un atacante con privilegios de root en un servidor borra los logs locales tras el ataque. ¿Por qué los logs enviados al SIEM remoto SIGUEN siendo válidos?",
+      "respuestas": [
+        {
+          "texto": "Porque el SIEM cifra automáticamente todos los logs entrantes",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado del SIEM no es la razón principal; la razón es la separación de dominios de seguridad."
+        },
+        {
+          "texto": "Porque los logs del SIEM están en un dominio de seguridad distinto al activo comprometido",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SIEM/Syslog remoto se encuentra en otro dominio de seguridad. El atacante con root local no tiene acceso a ese sistema separado."
+        },
+        {
+          "texto": "Porque el SIEM utiliza WORM por defecto en todos los logs",
+          "correcta": false,
+          "explicacion": "Incorrecto. El WORM no está activado por defecto en todos los SIEM; es una configuración adicional."
+        },
+        {
+          "texto": "Porque los logs del SIEM están firmados digitalmente al crearse",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma digital aporta no repudio, pero la razón fundamental es la separación de dominios, no la firma."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una organización enfrenta una demanda y ha sido incapaz de demostrar quién accedió a una evidencia y cuándo. ¿Qué riesgo se ha materializado?",
+      "respuestas": [
+        {
+          "texto": "Incumplimiento RGPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. El incumplimiento RGPD se da por recopilar datos sin base legal o sin medidas de seguridad, no por fallos en la cadena de custodia."
+        },
+        {
+          "texto": "Sanción regulatoria por NIS2/DORA",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS2/DORA aplican a sectores críticos por incumplimiento de retención y custodia, pero el riesgo principal aquí es la invalidez probatoria."
+        },
+        {
+          "texto": "Invalidez probatoria por ruptura de la cadena de custodia",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no se demuestra quién tocó qué y cuándo, la prueba se impugna. El atacante queda impune o se pierde el litigio."
+        },
+        {
+          "texto": "Responsabilidad corporativa ante accionistas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad corporativa puede derivar después, pero el riesgo inmediato y específico es la invalidez probatoria."
+        }
+      ]
+    },
+    {
+      "pregunta": "Apagar bruscamente un servidor para 'detener el ataque' sin volcar antes la RAM es un ejemplo clásico de:",
+      "respuestas": [
+        {
+          "texto": "Pérdida de datos volátiles por ignorar el orden de volatilidad",
+          "correcta": true,
+          "explicacion": "¡Correcto! Apagar antes de capturar la RAM destruye conexiones activas, procesos, claves de cifrado y artefactos de malware fileless. Error muy típico en niveles junior."
+        },
+        {
+          "texto": "Aplicación correcta del principio de proporcionalidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La proporcionalidad busca evitar daño, pero apagar destruye evidencia volátil insustituible. Es lo opuesto a una buena práctica."
+        },
+        {
+          "texto": "Cumplimiento de la ISO/IEC 27037",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 prioriza preservar la volatilidad. Apagar sin volcar la RAM viola las directrices de la norma."
+        },
+        {
+          "texto": "Aplicación del principio de mínima intrusión",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar es una intrusión MÁXIMA: corta servicios y destruye RAM. La mínima intrusión es justo lo contrario."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista cree firmemente que el incidente fue un ransomware y solo busca evidencias que confirmen esa hipótesis, ignorando indicios de robo de propiedad intelectual. Esto es:",
+      "respuestas": [
+        {
+          "texto": "Sesgo de herramienta",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sesgo de herramienta es confiar ciegamente en una herramienta concreta ('si mi software no lo detectó, no existe')."
+        },
+        {
+          "texto": "Sesgo de confirmación",
+          "correcta": true,
+          "explicacion": "¡Correcto! El sesgo de confirmación es buscar solo evidencias que confirmen una teoría preconcebida, descartando las que la contradicen."
+        },
+        {
+          "texto": "Sobreajuste de evidencias",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sobreajuste es forzar una evidencia débil para que encaje en una narrativa compleja, no descartar evidencias contradictorias."
+        },
+        {
+          "texto": "Dependencia excesiva de herramientas automáticas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es el síndrome del 'botón mágico'; aquí el problema es cognitivo, no de dependencia tecnológica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Antes de procesar una evidencia, un analista verifica que el hash de la copia de trabajo coincide con el hash de la fase de adquisición. ¿Qué fase metodológica está aplicando?",
+      "respuestas": [
+        {
+          "texto": "Identificación de fuentes relevantes",
+          "correcta": false,
+          "explicacion": "Incorrecto. La identificación de fuentes consiste en priorizar qué artefactos analizar (RAM, logs, etc.), no en validar integridad."
+        },
+        {
+          "texto": "Extracción controlada",
+          "correcta": false,
+          "explicacion": "Incorrecto. La extracción controlada es el uso de herramientas como dd o uac para extraer artefactos del sistema."
+        },
+        {
+          "texto": "Validación de integridad (hashes heredados)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Antes de procesar, se verifica que el hash de la copia de trabajo coincide con el de adquisición. Si no cuadra, la evidencia está contaminada."
+        },
+        {
+          "texto": "Preparación del entorno aislado",
+          "correcta": false,
+          "explicacion": "Incorrecto. La preparación del entorno aislado es trabajar en una Forensic Workstation desconectada, no validar hashes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Trabajar en una máquina forense desconectada de Internet (air-gap) protege principalmente contra:",
+      "respuestas": [
+        {
+          "texto": "La activación de funciones de autodestrucción o comunicación externa del malware",
+          "correcta": true,
+          "explicacion": "¡Correcto! El air-gap evita que un malware analizado se autoactive comunicándose con C2 o detonando funciones de wiper que dañen evidencia."
+        },
+        {
+          "texto": "La pérdida de datos volátiles durante el análisis",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos volátiles ya se han perdido o adquirido antes de llegar al laboratorio; el air-gap es para protección durante análisis."
+        },
+        {
+          "texto": "Los ataques de fuerza bruta sobre las claves de cifrado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ataques de fuerza bruta locales no requieren red; el air-gap no los previene."
+        },
+        {
+          "texto": "La degradación de los hashes por bit rot",
+          "correcta": false,
+          "explicacion": "Incorrecto. El bit rot es una cuestión de medio físico, no relacionada con la conectividad de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué archivo de logs en un sistema Linux (Debian/Ubuntu) registra los intentos de login, uso de sudo y autenticación SSH?",
+      "respuestas": [
+        {
+          "texto": "/var/log/syslog",
+          "correcta": false,
+          "explicacion": "Incorrecto. syslog es el cajón de sastre con mensajes del kernel y servicios generales, pero la autenticación tiene su archivo dedicado."
+        },
+        {
+          "texto": "/var/log/messages",
+          "correcta": false,
+          "explicacion": "Incorrecto. messages existe en RHEL/CentOS y es similar a syslog, pero no es el archivo dedicado a autenticación."
+        },
+        {
+          "texto": "/var/log/auth.log",
+          "correcta": true,
+          "explicacion": "¡Correcto! En Debian/Ubuntu, auth.log registra intentos de login, sudo y SSH. En RHEL/CentOS, su equivalente es /var/log/secure."
+        },
+        {
+          "texto": "/var/log/kern.log",
+          "correcta": false,
+          "explicacion": "Incorrecto. kern.log contiene mensajes del kernel exclusivamente, no eventos de autenticación de usuarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué artefacto de Windows confirma que un ejecutable se EJECUTÓ en el sistema, incluso si el archivo original ha sido borrado?",
+      "respuestas": [
+        {
+          "texto": "Event Logs (.evtx)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los Event Logs registran eventos como logons, pero no necesariamente confirman la ejecución de un binario específico si no está auditada."
+        },
+        {
+          "texto": "Hive SAM del registro",
+          "correcta": false,
+          "explicacion": "Incorrecto. SAM contiene cuentas locales y hashes de contraseñas, no rastros de ejecución de binarios."
+        },
+        {
+          "texto": "Archivos Prefetch (.pf)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los archivos .pf se crean para acelerar la carga de aplicaciones y confirman ejecución incluso si el binario original (ej. mimikatz.exe) fue borrado."
+        },
+        {
+          "texto": "NTUSER.DAT",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTUSER.DAT contiene preferencias del usuario y algunos rastros de uso, pero la huella canónica de ejecución son Prefetch (junto a Amcache/Shimcache)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un entorno corporativo, ¿qué framework permite extraer y parsear todos los artefactos de Windows en minutos definiendo 'Targets' (qué copiar) y 'Modules' (cómo procesarlo)?",
+      "respuestas": [
+        {
+          "texto": "Velociraptor",
+          "correcta": false,
+          "explicacion": "Incorrecto. Velociraptor hace endpoint monitoring y consultas VQL en flota, pero su modelo no se basa en Targets/Modules."
+        },
+        {
+          "texto": "Event Log Explorer",
+          "correcta": false,
+          "explicacion": "Incorrecto. Event Log Explorer visualiza archivos .evtx, no extrae multitud de artefactos de un sistema."
+        },
+        {
+          "texto": "ELK Stack",
+          "correcta": false,
+          "explicacion": "Incorrecto. ELK es una solución de centralización y búsqueda de logs, no un framework de triaje forense de endpoints."
+        },
+        {
+          "texto": "KAPE (Kroll Artifact Parser and Extractor)",
+          "correcta": true,
+          "explicacion": "¡Correcto! KAPE usa Targets para definir qué archivos copiar y Modules para procesarlos, permitiendo triaje forense rápido."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un análisis de tráfico de red, identificas conexiones recurrentes a la misma IP cada 60 segundos exactos. Esto se conoce como:",
+      "respuestas": [
+        {
+          "texto": "Patrón de beaconing hacia un servidor C2",
+          "correcta": true,
+          "explicacion": "¡Correcto! El beaconing son conexiones recurrentes en intervalos fijos hacia un C2, detectables por la delta de tiempo entre paquetes (Iat)."
+        },
+        {
+          "texto": "Patrón de keepalive de TCP normal",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los keepalive TCP suelen tener intervalos variables y solo aparecen en sesiones inactivas, no como conexiones nuevas regulares."
+        },
+        {
+          "texto": "Patrón de exfiltración masiva de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La exfiltración masiva se detecta por volumen de tráfico saliente, no por la regularidad temporal."
+        },
+        {
+          "texto": "Patrón de escaneo de puertos sigiloso",
+          "correcta": false,
+          "explicacion": "Incorrecto. El escaneo de puertos genera múltiples intentos a distintos puertos en una IP, no conexiones regulares al mismo destino."
+        }
+      ]
+    },
+    {
+      "pregunta": "Cuando NO disponemos del PCAP completo, ¿qué fuente equivale a 'la factura telefónica de la red' (quién habló con quién y cuánto, sin contenido)?",
+      "respuestas": [
+        {
+          "texto": "Logs de Proxy",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs de Proxy aportan URL completa y categoría, no son una mera 'factura telefónica' sin contenido."
+        },
+        {
+          "texto": "NetFlow",
+          "correcta": true,
+          "explicacion": "¡Correcto! NetFlow es la 'factura telefónica' de la red: registra origen, destino, puertos, volumen y tiempo, sin contenido. Muy útil para detectar exfiltraciones masivas."
+        },
+        {
+          "texto": "Logs de IDS/IPS",
+          "correcta": false,
+          "explicacion": "Incorrecto. IDS/IPS aportan detección por firmas o comportamiento, no son simples metadatos de conexión."
+        },
+        {
+          "texto": "Capturas tcpdump con flag -s 0",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo al contrario: '-s 0' captura el paquete completo, incluido payload. NetFlow es solo metadatos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En análisis de malware, ¿qué tipo de hashing permite identificar VARIANTES de la misma familia de malware con pequeñas modificaciones?",
+      "respuestas": [
+        {
+          "texto": "SHA-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 cambia totalmente con un solo bit modificado: detecta archivos idénticos, no variantes."
+        },
+        {
+          "texto": "MD5",
+          "correcta": false,
+          "explicacion": "Incorrecto. MD5 también es sensible a cualquier cambio. Sirve para identificación exacta, no para variantes."
+        },
+        {
+          "texto": "SSDEEP (hashing difuso)",
+          "correcta": true,
+          "explicacion": "¡Correcto! SSDEEP es hashing difuso: genera hashes que se mantienen similares ante pequeños cambios, ideal para identificar variantes de la misma familia."
+        },
+        {
+          "texto": "CRC32",
+          "correcta": false,
+          "explicacion": "Incorrecto. CRC32 es un código de detección de errores, no es criptográfico ni difuso. No sirve para análisis de malware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica analiza la Tabla de Direcciones de Importación (IAT) para identificar malware desarrollado por el mismo autor o con capacidades similares?",
+      "respuestas": [
+        {
+          "texto": "Hash difuso (SSDEEP)",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSDEEP analiza similitud del binario completo, no la tabla de imports específicamente."
+        },
+        {
+          "texto": "Hash IMPHASH (Import Hashing)",
+          "correcta": true,
+          "explicacion": "¡Correcto! IMPHASH analiza la IAT. Como el linker construye la IAT según el orden de las funciones en el código fuente, autores similares producen IMPHASH similares."
+        },
+        {
+          "texto": "FLOSS (FireEye Labs Obfuscated String Solver)",
+          "correcta": false,
+          "explicacion": "Incorrecto. FLOSS extrae strings ofuscadas o comprimidas en memoria, no analiza la IAT."
+        },
+        {
+          "texto": "YARA Rules",
+          "correcta": false,
+          "explicacion": "Incorrecto. YARA permite definir reglas para detectar patrones en archivos, pero no es específicamente sobre la IAT."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un mutex es valioso como IOC porque:",
+      "respuestas": [
+        {
+          "texto": "Permite ver el contenido cifrado del C2",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un mutex no descifra ni revela contenido de comunicaciones; es un objeto de sincronización."
+        },
+        {
+          "texto": "El malware lo usa para no infectar el mismo host dos veces, siendo una firma muy estable",
+          "correcta": true,
+          "explicacion": "¡Correcto! El malware usa mutex para evitar reinfectarse en el mismo host. Como suele estar hardcodeado, es una firma muy estable y útil para detección."
+        },
+        {
+          "texto": "Identifica unívocamente la máquina infectada en la red",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un mutex no identifica máquinas; identifica una instancia de proceso en ejecución dentro del SO."
+        },
+        {
+          "texto": "Permite recuperar el código fuente original del malware",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un mutex es un objeto de sincronización; no aporta información para recuperar código fuente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué formato estándar deben normalizarse los IOCs para su ingesta en plataformas MISP o SIEM?",
+      "respuestas": [
+        {
+          "texto": "JSON-LD",
+          "correcta": false,
+          "explicacion": "Incorrecto. JSON-LD es un formato genérico para datos enlazados; no es el estándar específico para inteligencia de amenazas."
+        },
+        {
+          "texto": "STIX/TAXII",
+          "correcta": true,
+          "explicacion": "¡Correcto! STIX (estructura) y TAXII (transporte) son los estándares para compartir inteligencia de amenazas, ingestables en MISP, SIEM y plataformas de threat intel."
+        },
+        {
+          "texto": "CEF (Common Event Format)",
+          "correcta": false,
+          "explicacion": "Incorrecto. CEF es un formato de logs común usado por SIEM, pero no es el estándar específico para IOCs estructurados de amenazas."
+        },
+        {
+          "texto": "OpenIOC v2.0",
+          "correcta": false,
+          "explicacion": "Incorrecto. OpenIOC fue una propuesta de Mandiant pero ha quedado superada por STIX/TAXII como estándar industrial."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista escribe en su informe técnico: 'El servidor estaba muy comprometido por un atacante experto'. ¿Qué principio de redacción técnica está VIOLANDO?",
+      "respuestas": [
+        {
+          "texto": "Trazabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad exige que cada hallazgo remita a una evidencia concreta. Aquí el problema es otro: el uso de adjetivos subjetivos."
+        },
+        {
+          "texto": "Reproducibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reproducibilidad se refiere a que otro analista pueda llegar al mismo resultado, no es lo violado aquí."
+        },
+        {
+          "texto": "Precisión atómica (evitar adjetivos calificativos)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La precisión atómica exige evitar adjetivos como 'muy comprometido' o 'experto'. Hay que sustituir por hechos verificables y observables."
+        },
+        {
+          "texto": "Repetibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La repetibilidad se refiere al mismo analista obteniendo el mismo resultado con las mismas herramientas, no al lenguaje."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué describe MEJOR el 'concepto de pivotaje' en el análisis forense profesional?",
+      "respuestas": [
+        {
+          "texto": "Cambiar de herramienta cuando una falla en el análisis de un artefacto",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cambiar de herramienta es parte del análisis, pero no es 'pivotaje'. El pivotaje es saltar entre tipos de evidencia."
+        },
+        {
+          "texto": "Saltar entre evidencias de distinta naturaleza para construir una narrativa sólida",
+          "correcta": true,
+          "explicacion": "¡Correcto! Pivotaje es saltar de red a endpoint, de endpoint a ejecutable, etc., correlacionando evidencias para construir una narrativa robusta."
+        },
+        {
+          "texto": "Rotar a otro analista para evitar el sesgo de confirmación",
+          "correcta": false,
+          "explicacion": "Incorrecto. Rotar analistas ayuda contra sesgos, pero no es lo que se llama 'pivotaje' en metodología forense."
+        },
+        {
+          "texto": "Cambiar la prioridad de los artefactos según orden de volatilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La priorización por volatilidad es propia de la fase de adquisición, no es el pivotaje analítico."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para correlacionar artefactos entre evidencias, ¿qué identificadores comunes son los MÁS USADOS por un analista forense?",
+      "respuestas": [
+        {
+          "texto": "Hashes MD5 y direcciones MAC",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque son útiles, no son los principales para correlación interna de artefactos."
+        },
+        {
+          "texto": "UID/GID y números de inodo",
+          "correcta": false,
+          "explicacion": "Incorrecto. UID/GID e inodos son específicos de Linux y útiles, pero los identificadores de correlación más usados son los temporales y de proceso."
+        },
+        {
+          "texto": "Timestamps, PIDs/TIDs y handles de archivo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Timestamps (cronológica), PIDs/TIDs (procesos a llamadas) y handles (procesos a archivos) son los identificadores clave para correlación interna."
+        },
+        {
+          "texto": "VendorID, ProductID y números de serie de USB",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son útiles para casos específicos de USB, pero no son los identificadores genéricos de correlación entre artefactos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la propuesta de práctica de laboratorio sobre conexión reversa en servidor RRHH, ¿por qué se justifica NO apagar el servidor antes del paso 1 (captura de memoria)?",
+      "respuestas": [
+        {
+          "texto": "Porque apagarlo destruiría la evidencia volátil en RAM, incluyendo el proceso malicioso activo y conexiones de red",
+          "correcta": true,
+          "explicacion": "¡Correcto! Apagar destruye RAM. Perderíamos el proceso malicioso, conexiones C2 activas, claves y artefactos fileless."
+        },
+        {
+          "texto": "Porque la política de RRHH prohíbe apagar servidores sin autorización del CISO",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque pueda existir una política, la justificación técnica es la pérdida de evidencia volátil, no la administrativa."
+        },
+        {
+          "texto": "Porque LiME no puede ejecutarse en sistemas apagados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es cierto que LiME requiere sistema vivo, la razón fundamental es no perder los datos volátiles."
+        },
+        {
+          "texto": "Porque dc3dd necesita el sistema encendido para clonar",
+          "correcta": false,
+          "explicacion": "Incorrecto. dc3dd puede usarse en sistemas apagados (booteando con CAINE/DEFT). La razón está en la RAM."
+        }
+      ]
+    },
+    {
+      "pregunta": "El concepto de 'Principio de Locard digital' establece que:",
+      "respuestas": [
+        {
+          "texto": "Toda evidencia digital se degrada con el tiempo (bit rot)",
+          "correcta": false,
+          "explicacion": "Incorrecto. El bit rot es un fenómeno real, pero no es lo que dice el principio de Locard digital."
+        },
+        {
+          "texto": "Cualquier interacción con el sistema altera el sistema",
+          "correcta": true,
+          "explicacion": "¡Correcto! El principio de Locard digital adapta el principio de Locard físico: toda interacción deja huella; en sistemas vivos no existe la 'adquisición cero-cambios'."
+        },
+        {
+          "texto": "Todo malware deja al menos tres tipos de IOCs en el sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal regla numérica; el malware puede dejar muchos IOCs o ser muy sigiloso."
+        },
+        {
+          "texto": "Los hashes deben calcularse al menos por duplicado para garantizar integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hashing dual existe en algunos contextos legacy, pero no es el principio de Locard."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de un incidente de fuga de datos por USB en Linux, ¿qué archivo o comando es la fuente principal para identificar el VendorID, ProductID y número de serie del dispositivo?",
+      "respuestas": [
+        {
+          "texto": "/etc/passwd y /etc/shadow",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos archivos contienen información de usuarios y hashes de contraseñas, no datos de dispositivos USB."
+        },
+        {
+          "texto": "/var/log/wtmp y /var/log/btmp",
+          "correcta": false,
+          "explicacion": "Incorrecto. wtmp y btmp registran logins exitosos y fallidos, no eventos de hardware USB."
+        },
+        {
+          "texto": "dmesg o /var/log/syslog",
+          "correcta": true,
+          "explicacion": "¡Correcto! dmesg y syslog registran eventos del kernel, incluyendo VendorID, ProductID y número de serie cuando se conecta un USB."
+        },
+        {
+          "texto": "/etc/crontab y /var/spool/cron/",
+          "correcta": false,
+          "explicacion": "Incorrecto. Crontab y los spool de cron contienen tareas programadas, no eventos de hardware."
+        }
+      ]
+    },
+    {
+      "pregunta": "El comando 'ausearch -f /etc/shadow' permite a un analista forense:",
+      "respuestas": [
+        {
+          "texto": "Buscar eventos de auditd relacionados con accesos al archivo /etc/shadow",
+          "correcta": true,
+          "explicacion": "¡Correcto! ausearch consulta los logs de auditd buscando eventos sobre archivos críticos como /etc/shadow, útil para detectar accesos no autorizados."
+        },
+        {
+          "texto": "Calcular el hash SHA-256 del archivo /etc/shadow",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para calcular hashes se usa sha256sum u otras herramientas; ausearch consulta los logs de auditoría."
+        },
+        {
+          "texto": "Cifrar el archivo /etc/shadow con AES-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. ausearch no cifra archivos; consulta logs del subsistema de auditoría del kernel."
+        },
+        {
+          "texto": "Restaurar la versión anterior del archivo /etc/shadow desde un backup",
+          "correcta": false,
+          "explicacion": "Incorrecto. ausearch no restaura archivos; es una herramienta de consulta de auditoría."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el Systemd Journal es considerado más fiable forensemente que /var/log/syslog en cuanto a integridad?",
+      "respuestas": [
+        {
+          "texto": "Porque está cifrado por defecto con AES-256",
+          "correcta": false,
+          "explicacion": "Incorrecto. Systemd Journal no está cifrado por defecto; su valor radica en el formato binario."
+        },
+        {
+          "texto": "Porque al ser un registro binario es más difícil de manipular que un archivo de texto plano",
+          "correcta": true,
+          "explicacion": "¡Correcto! El formato binario del Journal hace que la manipulación sea más difícil que en texto plano, reforzando la integridad de la evidencia."
+        },
+        {
+          "texto": "Porque se almacena automáticamente en un servidor remoto",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Journal se almacena localmente en /var/log/journal/. Para enviarlo remotamente se requiere configuración adicional."
+        },
+        {
+          "texto": "Porque incluye firmas digitales en cada entrada del log",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Journal soporta sellado con FSS (Forward Secure Sealing), pero no es habilitado por defecto. Lo que aporta intrínsecamente es el formato binario."
+        }
+      ]
+    },
+    {
+      "pregunta": "En Linux, ¿cuáles son los puntos MÁS COMUNES donde un atacante establece persistencia tras comprometer el sistema?",
+      "respuestas": [
+        {
+          "texto": "Servicios systemd (.service), crontabs y modificación de bash_history",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque los dos primeros son correctos, el bash_history se MODIFICA para BORRAR rastros, no es un mecanismo de persistencia."
+        },
+        {
+          "texto": "Servicios systemd en /etc/systemd/system/ y crontabs en /etc/cron.* o /var/spool/cron/",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los servicios systemd y las tareas cron son los puntos más comunes de persistencia para sobrevivir reinicios."
+        },
+        {
+          "texto": "Modificación del archivo /etc/passwd añadiendo un nuevo shell por defecto",
+          "correcta": false,
+          "explicacion": "Incorrecto. /etc/passwd se modifica para crear usuarios con UID 0, pero no es el mecanismo más común; los servicios y cron sí lo son."
+        },
+        {
+          "texto": "Edición del archivo /etc/hostname para suplantar la identidad del servidor",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cambiar /etc/hostname no proporciona persistencia ni acceso; solo cambia el nombre del equipo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un analista observa que el bash_history de un usuario tiene un 'salto temporal' de 3 horas sin comandos registrados. ¿Qué debe sospechar?",
+      "respuestas": [
+        {
+          "texto": "Que es un comportamiento normal: el usuario simplemente no usó la terminal en ese tiempo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque puede ser normal, en una investigación profesional cualquier laguna debe sospecharse y validarse cruzadamente, no asumirse benigna."
+        },
+        {
+          "texto": "Que el archivo bash_history se ha cifrado durante esas 3 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. bash_history no soporta cifrado nativo; un salto no implica cifrado."
+        },
+        {
+          "texto": "Que comandos pueden haber sido borrados o el HISTFILE desactivado, requiriendo validación cruzada con MAC times de inodos",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las 'lagunas' deben sospecharse: el atacante pudo desactivar HISTFILE o borrar entradas. Se valida cruzando con MAC times en el sistema de archivos."
+        },
+        {
+          "texto": "Que el sistema operativo se reinició y bash_history se rotó automáticamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. bash_history no se rota automáticamente por reinicio; se acumula entre sesiones."
+        }
+      ]
+    },
+    {
+      "pregunta": "El 'sobreajuste de evidencias' como error analítico se refiere a:",
+      "respuestas": [
+        {
+          "texto": "Confiar ciegamente en una herramienta forense particular",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es 'sesgo de herramienta', no sobreajuste de evidencias."
+        },
+        {
+          "texto": "Forzar una evidencia débil para que encaje en una narrativa compleja",
+          "correcta": true,
+          "explicacion": "¡Correcto! El sobreajuste consiste en forzar interpretaciones; a veces un error en un log es solo un error de software, no una técnica avanzada de evasión."
+        },
+        {
+          "texto": "Buscar solo evidencias que confirmen una hipótesis preconcebida",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es 'sesgo de confirmación', un sesgo distinto al sobreajuste."
+        },
+        {
+          "texto": "Depender excesivamente de herramientas automáticas y no saber interpretar manualmente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el síndrome del 'botón mágico', no sobreajuste de evidencias."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al analizar logs de Proxy y Firewall, ¿por qué se correlacionan en un incidente real?",
+      "respuestas": [
+        {
+          "texto": "Porque el Firewall registra el contenido HTTP completo y el Proxy solo metadatos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es lo contrario: el Proxy permite ver URL completas (incluso TLS si lo intercepta), el Firewall ve a nivel de capa 3/4."
+        },
+        {
+          "texto": "Para detectar Shadow IT y conexiones que evaden las políticas corporativas",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cruzar logs de Proxy y Firewall identifica 'Shadow IT': conexiones que pasan por el Firewall pero no por el Proxy, posiblemente evadiendo políticas."
+        },
+        {
+          "texto": "Para identificar cuál de los dos sistemas tiene la hora más precisa",
+          "correcta": false,
+          "explicacion": "Incorrecto. La sincronización horaria se gestiona con NTP/NTS, no comparando logs de Proxy y Firewall."
+        },
+        {
+          "texto": "Para descifrar tráfico TLS sin necesidad de las claves",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se puede descifrar TLS sin claves o intercepción previa, da igual cuántos logs se correlacionen."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un User-Agent 'Mozilla/5.0' detectado en una conexión al puerto 4444 debe considerarse:",
+      "respuestas": [
+        {
+          "texto": "Una alerta roja inmediata de actividad sospechosa",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un User-Agent estándar de navegador en un puerto no estándar (4444 es típico de Metasploit) es una incongruencia clara y debe escalar como IOC."
+        },
+        {
+          "texto": "Tráfico web normal que ha cambiado de puerto por balanceo de carga",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los balanceadores no asignan puertos como 4444 al tráfico web; ese es un puerto típicamente asociado a malware o herramientas ofensivas."
+        },
+        {
+          "texto": "Una conexión de un dispositivo IoT que usa cabeceras HTTP estándar",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los IoTs suelen usar User-Agents específicos del fabricante, no Mozilla genérico, y rara vez puertos como 4444."
+        },
+        {
+          "texto": "Tráfico legítimo de una aplicación de monitorización corporativa",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplicaciones corporativas legítimas usan User-Agents identificables y puertos documentados, no esa combinación."
+        }
+      ]
+    },
+    {
+      "pregunta": "La principal LIMITACIÓN forense de un PCAP completo en redes corporativas modernas es:",
+      "respuestas": [
+        {
+          "texto": "Que solo registra metadatos, no el contenido real de las comunicaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo al contrario: PCAP captura todo el contenido. Lo que solo registra metadatos es NetFlow."
+        },
+        {
+          "texto": "El volumen de datos generado y el cifrado TLS/SSL que oculta el payload",
+          "correcta": true,
+          "explicacion": "¡Correcto! En redes modernas, casi todo el tráfico está cifrado con TLS, ocultando el payload. Además, el volumen de un PCAP completo es enorme."
+        },
+        {
+          "texto": "Que solo es analizable con herramientas de pago como EnCase",
+          "correcta": false,
+          "explicacion": "Incorrecto. PCAP es analizable con muchas herramientas gratuitas como Wireshark, tshark o Zeek."
+        },
+        {
+          "texto": "Que requiere reiniciar todos los routers para activar la captura",
+          "correcta": false,
+          "explicacion": "Incorrecto. La captura PCAP no requiere reiniciar la infraestructura; se hace mediante TAP, SPAN o herramientas en endpoints."
+        }
+      ]
+    }
+  ]
+}

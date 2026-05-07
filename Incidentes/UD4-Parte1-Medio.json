@@ -1,0 +1,1505 @@
+{
+  "tema": "Ciberseguridad - Ingeniería y Clasificación Operativa",
+  "preguntas": [
+    {
+      "pregunta": "Según la relación jerárquica de la documentación en respuesta a incidentes, ¿cuál es el propósito principal de un 'Runbook'?",
+      "respuestas": [
+        {
+          "texto": "Proporcionar el marco normativo y organizativo para el nivel directivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este es el propósito de un SOP (Standard Operating Procedure)."
+        },
+        {
+          "texto": "Definir el flujo de decisiones por tipo de incidente para el analista o CSIRT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este es el propósito de un Playbook (Manual de respuesta a incidentes)."
+        },
+        {
+          "texto": "Describir los pasos técnicos exactos y comandos ejecutables, orientados a la automatización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Runbook o guión de ejecución técnica proporciona los comandos precisos y es el candidato directo a la automatización mediante plataformas SOAR."
+        },
+        {
+          "texto": "Documentar teóricamente qué ocurre durante un ciberataque genérico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un runbook es estrictamente operativo y técnico, no un documento teórico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué característica de un procedimiento técnico eficaz nos referimos cuando exigimos que dos analistas distintos lleguen al mismo resultado ejecutando el mismo playbook?",
+      "respuestas": [
+        {
+          "texto": "Trazabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad se refiere a poder vincular cada acción a un timestamp, un responsable y una evidencia."
+        },
+        {
+          "texto": "Reproducibilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La reproducibilidad garantiza que el resultado no dependa de la interpretación individual del analista, asegurando un proceso estandarizado."
+        },
+        {
+          "texto": "Precisión técnica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La precisión técnica requiere que cada paso sea inequívoco y con comandos exactos, lo cual facilita la reproducibilidad, pero no es el concepto descrito."
+        },
+        {
+          "texto": "Automatización potencial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se refiere a escribir el procedimiento de manera que pueda ser ejecutado por un motor SOAR."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al redactar la sección 'Acciones técnicas paso a paso' en un playbook, ¿qué estilo de redacción se considera correcto?",
+      "respuestas": [
+        {
+          "texto": "Imperativo directo y segunda persona (ej. 'Accede a la consola SIEM...').",
+          "correcta": true,
+          "explicacion": "¡Correcto! El corazón operativo del documento debe evitar la voz pasiva o impersonal para no generar ambigüedad bajo la presión del incidente."
+        },
+        {
+          "texto": "Voz pasiva y tiempo pasado (ej. 'Se revisaron los logs del sistema...').",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este formato es típico de un informe post-incidente, no de una guía operativa a seguir en vivo."
+        },
+        {
+          "texto": "Impersonal y genérico (ej. 'Proceder con la revisión general').",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario especifica explícitamente que usar formas impersonales y ambiguas es un error común que debe evitarse."
+        },
+        {
+          "texto": "Enunciativo de alto nivel (ej. 'El analista debe aislar la red afectada').",
+          "correcta": false,
+          "explicacion": "Incorrecto. Falta la precisión técnica exigida ('ejecutar netsh interface...', etc.)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el modelado técnico de flujos de actuación, ¿cuál es la herramienta idónea para la fase de clasificación y 'triage' inicial de una alerta?",
+      "respuestas": [
+        {
+          "texto": "Procedimientos condicionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos se usan para la lógica interna del playbook (IF/THEN/ELSE)."
+        },
+        {
+          "texto": "Árboles de acciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos modelan el flujo de ejecución secuencial del propio playbook."
+        },
+        {
+          "texto": "Diagramas de decisión (decision trees).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los diagramas de decisión permiten guiar al analista sin ambigüedad desde la alerta inicial hasta la selección del playbook correcto."
+        },
+        {
+          "texto": "Diagramas de Ishikawa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ishikawa se emplea en la fase posterior de Análisis de Causa Raíz (RCA)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Respecto a la sección de 'Identificación del procedimiento' en un playbook, ¿cómo debe gestionarse el versionado?",
+      "respuestas": [
+        {
+          "texto": "El analista debe usar siempre la versión más antigua para asegurar la compatibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Usar versiones obsoletas genera inconsistencias operativas."
+        },
+        {
+          "texto": "El identificador (ID) del playbook debe cambiar completamente con cada nueva versión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario estipula que el ID es estático; lo que cambia y se controla es la versión del documento."
+        },
+        {
+          "texto": "Debe tratarse como gestión de código: repositorio versionado, revisiones formales y control de cambios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para evitar que los analistas ejecuten versiones obsoletas (ej. 1.2 frente a 2.0) durante un incidente, es vital un control riguroso similar al código fuente."
+        },
+        {
+          "texto": "Es un campo opcional que solo se rellena si el incidente llega a los medios de comunicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un campo exigible y obligatorio para cualquier procedimiento técnico estructurado."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de la integración con herramientas de seguridad, ¿cómo se debe referenciar el uso del SIEM en un playbook correctamente construido?",
+      "respuestas": [
+        {
+          "texto": "Especificando comandos ambiguos como 'buscar actividad maliciosa'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto carece de la precisión técnica necesaria."
+        },
+        {
+          "texto": "Indicando la extracción de volcados de memoria RAM directamente desde el SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SIEM no extrae RAM; esto se hace mediante herramientas forenses o capacidades del EDR."
+        },
+        {
+          "texto": "Especificando las queries exactas a ejecutar (en KQL, SPL, etc.), tablas a consultar y ventanas temporales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un procedimiento ejecutable requiere que el analista sepa exactamente qué instrucción lanzar contra el SIEM para encontrar los IoCs."
+        },
+        {
+          "texto": "Utilizándolo exclusivamente para automatizar el aislamiento de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El aislamiento de red es función primordial del EDR o Firewall, no del SIEM directamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la operativa de respuesta a incidentes, ¿cuál es el destino natural y propósito final de construir Runbooks perfectamente definidos?",
+      "respuestas": [
+        {
+          "texto": "Su impresión en papel para la custodia del departamento legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque deben documentarse, el destino natural de un runbook estructurado no es archivarse en papel."
+        },
+        {
+          "texto": "Su implementación como automatización en un motor SOAR.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuando un runbook tiene entradas, condiciones y acciones inequívocas, su destino es la plataforma SOAR para su ejecución orquestada."
+        },
+        {
+          "texto": "El análisis en profundidad del malware mediante desensambladores (Reverse Engineering).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis de malware es una tarea forense específica, no el propósito organizativo de un runbook."
+        },
+        {
+          "texto": "La capacitación comercial del equipo de ventas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los runbooks son guiones operativos de seguridad, ajenos a áreas comerciales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al tratar un ataque de ransomware moderno, ¿en qué consiste la técnica de 'Doble Extorsión'?",
+      "respuestas": [
+        {
+          "texto": "En pedir dos rescates diferentes: uno en Bitcoin y otro en Monero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque usen criptomonedas, la doble extorsión no se refiere al tipo de moneda solicitada."
+        },
+        {
+          "texto": "En cifrar los servidores de la víctima y simultáneamente lanzar un ataque DDoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería considerado 'triple extorsión' en algunos contextos, pero la doble extorsión clásica implica robo de datos."
+        },
+        {
+          "texto": "En la exfiltración previa de datos sensibles antes de ejecutar el cifrado masivo de los ficheros.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al robar los datos primero, el atacante maximiza la presión amenazando con publicarlos si no se paga el rescate."
+        },
+        {
+          "texto": "En infectar también los backups inmutables del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Destruir los backups es una técnica (Inhibit System Recovery), pero la doble extorsión hace referencia al robo/exfiltración."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica qué técnicas maliciosas están asociadas directamente a la categoría de incidentes 'Compromiso de cuentas':",
+      "respuestas": [
+        {
+          "texto": "RCE (Remote Code Execution) y Path Traversal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas técnicas están asociadas a la explotación de vulnerabilidades web."
+        },
+        {
+          "texto": "Credential stuffing, Kerberoasting y Bypass de MFA.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El temario agrupa estas tácticas como vectores principales para la toma de control de credenciales de usuario."
+        },
+        {
+          "texto": "DNS tunneling y Steganografía.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas utilizadas primordialmente para la exfiltración de datos."
+        },
+        {
+          "texto": "ARP spoofing y BGP hijacking.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Corresponden a los ataques dirigidos a infraestructura de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Ante un incidente de 'Exfiltración de datos', ¿qué condicionante legal exige una detección y respuesta inmediata en un entorno corporativo europeo?",
+      "respuestas": [
+        {
+          "texto": "La ventana de notificación obligatoria de 72 horas exigida por el RGPD/NIS2.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La fuga de información personal o sensible impone un marco temporal legal estricto de notificación, elevando la prioridad del incidente."
+        },
+        {
+          "texto": "El estándar PCI DSS que exige un borrado seguro en 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque PCI DSS aplica a tarjetas, el condicionante general mencionado para este tipo de ataques es la ventana de 72 horas del RGPD/NIS2."
+        },
+        {
+          "texto": "La Ley PIC que bloquea el tráfico saliente automáticamente a los 15 minutos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal automatismo impuesto por la Ley PIC."
+        },
+        {
+          "texto": "La obligación de recomprar los datos exfiltrados bajo la directiva DORA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ninguna ley obliga a pagar a los extorsionadores."
+        }
+      ]
+    },
+    {
+      "pregunta": "La instalación de un backdoor en un servidor web que permite la ejecución remota de comandos y suele usarse como punto de pivoting hacia la red interna se denomina:",
+      "respuestas": [
+        {
+          "texto": "Ataque DDoS L7.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un DDoS inunda recursos para afectar disponibilidad, no instala backdoors de comandos."
+        },
+        {
+          "texto": "Webshell.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una webshell (ej. en PHP, ASP) establece persistencia y un canal de control C2 usando tráfico HTTP/S aparentemente legítimo."
+        },
+        {
+          "texto": "Golden Ticket.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ticket dorado es una técnica de compromiso de Active Directory, no un script en un servidor web."
+        },
+        {
+          "texto": "BGP Hijacking.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un secuestro de rutas a nivel de red, ajeno a aplicaciones web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnicas son indicadores claros de 'Movimiento Lateral' en fases avanzadas de un ataque?",
+      "respuestas": [
+        {
+          "texto": "PsExec, abuso de RDP y propagación por SMB.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El uso de estas herramientas (muchas veces LOLBins del propio sistema) indica que el atacante se desplaza internamente por la red."
+        },
+        {
+          "texto": "DDoS volumétrico L3/L4 y escaneo masivo de puertos externos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas perimetrales o de ataque de red, previas al compromiso interno."
+        },
+        {
+          "texto": "Inyección SQL y Cross-Site Scripting (XSS).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tácticas de explotación de vulnerabilidades orientadas a la entrada inicial o escalada web."
+        },
+        {
+          "texto": "Phishing y credential stuffing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas para el compromiso inicial de cuentas, no técnicas post-compromiso para desplazarse entre equipos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para priorizar el desarrollo de procedimientos dentro del SOC, se utilizan cuatro criterios objetivos. Estos son: Impacto potencial, Complejidad técnica, Necesidad de reacción inmediata y...",
+      "respuestas": [
+        {
+          "texto": "Disponibilidad de plataforma SOAR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La plataforma SOAR es la vía de ejecución, no un criterio intrínseco del incidente para priorizar su diseño."
+        },
+        {
+          "texto": "Costo de las herramientas requeridas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se utiliza el costo de la herramienta, sino criterios del riesgo en sí."
+        },
+        {
+          "texto": "Frecuencia histórica.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La recurrencia del incidente en el sector o en la organización es clave para ponderar la prioridad de crear un playbook para el mismo."
+        },
+        {
+          "texto": "Nivel TLP asociado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Traffic Light Protocol define las reglas de compartición de inteligencia, no la priorización de desarrollo procedimental."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al mapear incidentes con controles técnicos, ¿qué herramienta corresponde a la categoría de 'Controles de Identidad' y sirve para mitigar credenciales robadas?",
+      "respuestas": [
+        {
+          "texto": "NDR (Network Detection and Response).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El NDR detecta anomalías en el tráfico, es un control de Red."
+        },
+        {
+          "texto": "MFA (Multi-Factor Authentication).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El doble factor exige un componente adicional a la contraseña, invalidando la utilidad directa de credenciales comprometidas."
+        },
+        {
+          "texto": "FIM (File Integrity Monitoring).",
+          "correcta": false,
+          "explicacion": "Incorrecto. FIM pertenece a los controles de Endpoint para vigilar archivos locales."
+        },
+        {
+          "texto": "WAF (Web Application Firewall).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El WAF es un control de red/aplicación para proteger servicios expuestos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la arquitectura de respuesta a incidentes, ¿cuál es el componente que actúa como 'nodo de integración universal' consumiendo telemetría de todos los controles de la red, endpoint, identidad e infraestructura?",
+      "respuestas": [
+        {
+          "texto": "Firewall NGFW.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall es un control de red, pero no agrupa logs de endpoint o identidad en bruto de toda la empresa."
+        },
+        {
+          "texto": "SIEM (Security Information and Event Management).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SIEM centraliza, correlaciona y alerta sobre eventos de todos los controles técnicos cruzados de la organización."
+        },
+        {
+          "texto": "PAM (Privileged Access Management).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PAM gestiona y custodia cuentas con privilegios elevados."
+        },
+        {
+          "texto": "CMDB (Configuration Management Database).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La CMDB guarda el inventario de activos, no correlaciona la telemetría de seguridad de dichos activos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa descrita, ¿cuál es el tiempo máximo de contención estipulado para un incidente de 'Ransomware' (Prioridad P0)?",
+      "respuestas": [
+        {
+          "texto": "≤ 1 hora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1 hora es el umbral para Compromiso de Cuentas o Webshells (P1)."
+        },
+        {
+          "texto": "≤ 4 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 4 horas es el umbral para Fuerza Bruta o DDoS (P2)."
+        },
+        {
+          "texto": "≤ 15 minutos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los incidentes P0 como el Ransomware requieren contención casi inmediata para evitar cifrado o movimiento lateral masivo."
+        },
+        {
+          "texto": "Inmediato (0 minutos) de forma exclusivamente manual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El estándar marca <= 15 min, y además recomienda fuertemente automatización SOAR para cumplirlo."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el mapeo operativo para un incidente de 'Explotación de vulnerabilidades', ¿qué acción técnica de mitigación temporal se usa prioritariamente?",
+      "respuestas": [
+        {
+          "texto": "Apagado forzoso del centro de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una medida excesiva y destructiva como primera acción."
+        },
+        {
+          "texto": "Virtual patching mediante el WAF / IPS.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aplicar un 'parche virtual' bloquea el intento de explotación en el perímetro antes de llegar a la vulnerabilidad del servidor."
+        },
+        {
+          "texto": "Formatado completo del disco duro afectado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso destruiría las evidencias y el servicio prematuramente."
+        },
+        {
+          "texto": "Revocar automáticamente las cuentas de usuario de Active Directory de toda la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se hace en un compromiso general de identidad (ej. Pass-the-Ticket global), no para una vulnerabilidad técnica en un servidor web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué valor práctico ofrece vincular la taxonomía de los procedimientos con el marco MITRE ATT&CK?",
+      "respuestas": [
+        {
+          "texto": "Permite calcular con exactitud la multa de la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El marco técnico no se ocupa de la cuantificación de multas legales."
+        },
+        {
+          "texto": "Facilita la búsqueda de IoCs, creación de reglas de detección y comunicación estructurada sobre TTPs.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al saber que el ransomware usa T1486 o T1490, el analista puede recurrir a la inteligencia comunitaria sobre esas tácticas."
+        },
+        {
+          "texto": "Garantiza que el incidente se contenga en menos de 15 minutos de forma automática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contención automática requiere la implementación de un SOAR y EDR, no solo mapear el concepto en MITRE."
+        },
+        {
+          "texto": "Sustituye completamente la necesidad de usar un SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE es una base de conocimiento teórica, mientras que el SIEM es una herramienta técnica operativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa Completa, si un SOC detecta un 'Ataque de red (DDoS)', ¿qué nivel de prioridad tiene y a qué equipo se le asigna típicamente?",
+      "respuestas": [
+        {
+          "texto": "Prioridad P0; Equipo Crisis Team.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa severidad recae sobre Ransomware o Exfiltración."
+        },
+        {
+          "texto": "Prioridad P2; Equipo NOC + Ops.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los ataques DDoS apuntan a disponibilidad e infraestructura, requiriendo coordinación con ISP o equipos de redes (Network Operations Center)."
+        },
+        {
+          "texto": "Prioridad P1; Equipo de Threat Intelligence.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad principal recae en infraestructura y anti-DDoS."
+        },
+        {
+          "texto": "Prioridad P0; Equipo Legal + DPO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Legal y DPO intervienen primariamente en brechas de datos o impacto normativo severo, no mitigando saturación de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al definir la 'Trazabilidad' en un procedimiento técnico (Playbook), ¿qué elementos mínimos se deben vincular a cada acción?",
+      "respuestas": [
+        {
+          "texto": "Un timestamp temporal, un responsable y una evidencia o registro.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Toda acción debe dejar un rastro auditable respondiendo a cuándo se hizo, quién la hizo y qué registro lo prueba (ej. log del EDR)."
+        },
+        {
+          "texto": "Un coste económico de la acción y la aprobación del CEO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Acciones operativas menores no requieren validación continua del CEO ni estimación económica en tiempo real."
+        },
+        {
+          "texto": "La eliminación permanente de los metadatos de las herramientas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La trazabilidad requiere mantener registros y metadatos, no eliminarlos."
+        },
+        {
+          "texto": "Una publicación inmediata en redes sociales o ISACs sectoriales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compartir inteligencia requiere una autorización formal y no es un paso técnico implícito en cada acción interna."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué control técnico de infraestructura permite aislar zonas de red para limitar directamente la propagación lateral del atacante?",
+      "respuestas": [
+        {
+          "texto": "Gestión de parches (Tenable).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Parchear elimina vulnerabilidades, pero no aísla topológicamente la red en caso de que ya haya un compromiso activo."
+        },
+        {
+          "texto": "Segmentación VLAN.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Configurar VLANs o microsegmentación impide que equipos de distintas zonas se comuniquen libremente, bloqueando el avance del intruso."
+        },
+        {
+          "texto": "Backups inmutables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los backups permiten recuperar datos cifrados, pero no evitan que el intruso salte a otros sistemas."
+        },
+        {
+          "texto": "Credential Vaulting (PAM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. PAM protege credenciales de alto nivel, lo que mitiga el riesgo general, pero no es un control arquitectónico de red puro."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el caso de 'Movimiento Lateral', ¿cuál es la primera acción contemplada en la secuencia procedimental de la Matriz Operativa?",
+      "respuestas": [
+        {
+          "texto": "Detección a través del SIEM / EDR.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al igual que con muchos incidentes P0, la detección y alertado es el paso inicial que dispara el mapeo de hosts afectados."
+        },
+        {
+          "texto": "Virtual Patching del WAF.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es para vulnerabilidades web."
+        },
+        {
+          "texto": "Llamada inmediata a las Fuerzas de Seguridad del Estado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este tipo de escalado no es una acción técnica primaria."
+        },
+        {
+          "texto": "Apagar inmediatamente todos los Domain Controllers.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Causaría disrupción total y no sigue la secuencia procedimental estructurada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al documentar un procedimiento en forma de 'árboles de acciones', ¿qué representan estos esquemas visuales?",
+      "respuestas": [
+        {
+          "texto": "Gráficos estadísticos del número de incidentes del año pasado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son diagramas lógicos, no gráficos de reportes."
+        },
+        {
+          "texto": "Estructuras secuenciales con bifurcaciones condicionales que modelan el flujo de ejecución del propio playbook.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son la representación visual del procedimiento (el camino a seguir según cada decisión) antes de escribirlo en texto."
+        },
+        {
+          "texto": "Mapeos estáticos de las IPs de la empresa para visualizar servidores vulnerables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Representan procesos y decisiones temporales, no diagramas estáticos de red topológica."
+        },
+        {
+          "texto": "El análisis Causa-Raíz post-mortem enviado al equipo legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se usan durante la creación e ingeniería del procedimiento, no al finalizar un caso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de evasión está frecuentemente asociada al incidente 'Compromiso de cuentas' en la matriz de tácticas operativas?",
+      "respuestas": [
+        {
+          "texto": "Ofuscación de código PHP en uploads.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se asocia a incidentes de Webshells."
+        },
+        {
+          "texto": "Steganografía en imágenes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se vincula a las técnicas de exfiltración de datos sin ser detectado."
+        },
+        {
+          "texto": "Adversary-in-the-middle (AiTM) o fatiga de notificaciones (MFA fatigue).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas técnicas permiten a los atacantes sortear los controles MFA tradicionales y apoderarse de la cuenta y sus tokens."
+        },
+        {
+          "texto": "Ejecución de exploits tipo 0-day en servidores sin parchear.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se trata de 'Explotación de vulnerabilidades', no un simple robo de credenciales de usuario."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica uno de los controles de red encargados de analizar tráfico anómalo en el interior de la infraestructura y que ayuda en la respuesta a incidentes de exfiltración o movimientos laterales.",
+      "respuestas": [
+        {
+          "texto": "NDR (Network Detection and Response).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El NDR es clave para detectar anomalías de comportamiento a nivel de red, más allá de la protección perimetral del Firewall."
+        },
+        {
+          "texto": "SSO (Single Sign-On).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SSO es un control de identidad."
+        },
+        {
+          "texto": "EDR (Endpoint Detection and Response).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El EDR supervisa hosts individuales, no analiza tráfico de red de manera distribuida (eso lo hace el NDR)."
+        },
+        {
+          "texto": "FIM (File Integrity Monitoring).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Monitoriza archivos en el disco duro, no tráfico de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Antes de proceder al aislamiento de red de un endpoint infectado por malware, ¿qué acción forense crítica debe valorarse si el tiempo lo permite?",
+      "respuestas": [
+        {
+          "texto": "Apagar el equipo inmediatamente para detener el cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar el equipo destruye evidencias volátiles."
+        },
+        {
+          "texto": "Capturar la memoria RAM con herramientas como WinPmem o LIME.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La memoria RAM contiene claves de cifrado, credenciales en claro y conexiones activas que desaparecen al reiniciar o aislar el sistema."
+        },
+        {
+          "texto": "Restaurar un snapshot del sistema operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Restaurar el sistema elimina todas las pistas sobre cómo entró el atacante y qué hizo."
+        },
+        {
+          "texto": "Actualizar el motor del antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Actualizar el AV no preserva evidencias y puede alterar el estado del sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta forense de línea de comandos es el estándar mencionado para analizar volcados de memoria RAM y extraer procesos, conexiones y comandos?",
+      "respuestas": [
+        {
+          "texto": "Sysmon",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sysmon monitorea eventos de Windows en tiempo real, no analiza volcados de RAM a posteriori."
+        },
+        {
+          "texto": "Autoruns",
+          "correcta": false,
+          "explicacion": "Incorrecto. Autoruns verifica los puntos de persistencia y arranque en el registro de Windows."
+        },
+        {
+          "texto": "Volatility",
+          "correcta": true,
+          "explicacion": "¡Correcto! Volatility (v2 o v3) permite ejecutar plugins como pslist, netscan y malfind sobre la memoria RAM capturada."
+        },
+        {
+          "texto": "Zeek/Bro",
+          "correcta": false,
+          "explicacion": "Incorrecto. Zeek es un analizador de tráfico de red, no de memoria."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras un incidente de compromiso de credenciales y posterior bloqueo de la cuenta, ¿qué acción es obligatoria respecto a los tokens (OAuth/JWT) emitidos previamente?",
+      "respuestas": [
+        {
+          "texto": "Renovarlos automáticamente con una vigencia de 30 días.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay que revocarlos, no renovarlos."
+        },
+        {
+          "texto": "Revocar explícitamente los refresh tokens y sesiones activas en el IdP.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Bloquear la cuenta no invalida automáticamente las sesiones ni tokens ya emitidos; deben revocarse mediante comandos como Revoke-MgUserSignInSession."
+        },
+        {
+          "texto": "Cifrarlos usando la nueva contraseña generada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los tokens no se cifran con contraseñas de usuario de este modo; deben ser invalidados."
+        },
+        {
+          "texto": "No es necesario hacer nada, caducan al instante de bloquear la cuenta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Muchos tokens mantienen la sesión activa hasta su caducidad natural si no se revocan."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué vector de ataque inicial suele responder la recepción masiva de notificaciones push de MFA no solicitadas por el usuario legítimo?",
+      "respuestas": [
+        {
+          "texto": "BGP Hijacking.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BGP Hijacking secuestra rutas de red, no afecta al MFA."
+        },
+        {
+          "texto": "Ataque DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DDoS inunda de tráfico la red, no el teléfono con peticiones MFA."
+        },
+        {
+          "texto": "Fatiga de notificaciones (MFA Fatigue) por compromiso previo de contraseña.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El atacante, que ya tiene la contraseña, bombardea al usuario con peticiones MFA esperando que apruebe una por cansancio o error."
+        },
+        {
+          "texto": "Ataque de fuerza bruta offline.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un ataque offline no interactúa con los servidores de MFA en vivo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante el análisis de actividad de red sospechosa, ¿qué indicaría un volumen inusualmente alto de consultas DNS con nombres de subdominios muy largos y sin sentido aparente?",
+      "respuestas": [
+        {
+          "texto": "Un ataque de Path Traversal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Path Traversal ataca servidores web buscando subir o bajar directorios (../)."
+        },
+        {
+          "texto": "Posible DNS Tunneling o uso de DGA (Domain Generation Algorithms).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los atacantes usan subdominios largos y ofuscados para exfiltrar datos (tunneling) o evadir bloqueos conectándose a C2 dinámicos (DGA)."
+        },
+        {
+          "texto": "Un escaneo pasivo de puertos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un escaneo de puertos ataca IPs y puertos directamente, no abusa de la longitud de resolución DNS."
+        },
+        {
+          "texto": "Configuración correcta del balanceador de carga.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto es claramente un patrón de tráfico anómalo, no tráfico legítimo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué mitigación técnica temporal se recomienda aplicar urgentemente si se detecta la explotación de una vulnerabilidad web (RCE) en un servidor crítico que no puede ser apagado?",
+      "respuestas": [
+        {
+          "texto": "Cambiar las contraseñas de todos los usuarios de la base de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es una buena práctica, no mitiga el RCE activo a nivel web."
+        },
+        {
+          "texto": "Crear un parche virtual (Virtual Patch) específico en el WAF (Web Application Firewall).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El WAF puede bloquear el payload malicioso exacto de la CVE, protegiendo al servidor vulnerable sin necesidad de detener el servicio."
+        },
+        {
+          "texto": "Habilitar la política de contraseñas complejas en el Active Directory.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No sirve de nada frente a un RCE explotado a nivel de aplicación web."
+        },
+        {
+          "texto": "Aislar la red de toda la compañía.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una medida totalmente desproporcionada que causa una disrupción mayor al propio ataque."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un servidor web atacado cuenta con balanceo de carga (ej. HAProxy o AWS ALB), ¿cuál es el método recomendado para aislarlo en caso de compromiso web?",
+      "respuestas": [
+        {
+          "texto": "Desconectar físicamente el cable de red del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En entornos con balanceadores suele bastar con aislarlo lógicamente, y físicamente puede ser imposible (ej. en Cloud)."
+        },
+        {
+          "texto": "Retirar el servidor del pool de servidores activos (estado 'draining' o 'disable') en el balanceador.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esto desvía el tráfico hacia nodos sanos sin parada del servicio global, permitiendo el aislamiento y posterior forense del nodo infectado."
+        },
+        {
+          "texto": "Borrar el archivo de configuración del balanceador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto destruiría el enrutamiento de todo el clúster, provocando la caída del servicio."
+        },
+        {
+          "texto": "Apagar todos los nodos del clúster por precaución.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ventaja del HA (Alta Disponibilidad) es poder aislar el infectado y que los demás asuman la carga."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al analizar un log de acceso (access.log) de Nginx, ¿qué tipo de ataque indica el payload `union|select|from|where`?",
+      "respuestas": [
+        {
+          "texto": "SQL Injection (Inyección SQL).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas palabras clave son propias de sentencias de bases de datos relacionales, usadas comúnmente en inyecciones SQL."
+        },
+        {
+          "texto": "Cross-Site Scripting (XSS).",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS se asocia más con etiquetas `<script>`, `alert()`, etc."
+        },
+        {
+          "texto": "Command Injection (RCE).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Command Injection usa binarios del sistema como `/bin/sh`, `exec()`, `passthru`, etc."
+        },
+        {
+          "texto": "Path Traversal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Path Traversal usa patrones de escape de directorios como `../` o `%2e%2e%2f`."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras limpiar un endpoint de malware, ¿qué herramienta de Sysinternals es fundamental para verificar que no quedan mecanismos de persistencia en Windows?",
+      "respuestas": [
+        {
+          "texto": "Netcat",
+          "correcta": false,
+          "explicacion": "Incorrecto. Netcat es una herramienta de red, no de gestión de persistencia en el sistema."
+        },
+        {
+          "texto": "Process Monitor",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque útil para ver actividad en tiempo real, no es la ideal para revisar el inventario estático de puntos de persistencia."
+        },
+        {
+          "texto": "Autoruns",
+          "correcta": true,
+          "explicacion": "¡Correcto! Autoruns permite obtener una visión consolidada de claves de registro Run/RunOnce, tareas programadas, servicios y carpetas de inicio."
+        },
+        {
+          "texto": "Tcpview",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tcpview muestra conexiones TCP y UDP activas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al proporcionar nuevas credenciales a un usuario tras un compromiso, ¿qué control técnico adicional debe exigirse para asegurar el acceso?",
+      "respuestas": [
+        {
+          "texto": "Que use la misma contraseña anterior pero añadiendo un número al final.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto es una mala práctica de contraseñas. Debe requerirse alta entropía y contraseña nueva."
+        },
+        {
+          "texto": "Deshabilitar el MFA para que no se bloquee de nuevo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al contrario, el MFA debe reforzarse."
+        },
+        {
+          "texto": "Obligar a cambiar la contraseña en el primer inicio de sesión ('ChangePasswordAtLogon').",
+          "correcta": true,
+          "explicacion": "¡Correcto! Garantiza que la contraseña temporal generada por el administrador no se reutilice y que el usuario establezca su propio secreto final."
+        },
+        {
+          "texto": "Enviarle la nueva contraseña mediante un correo a la cuenta comprometida.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Siempre se debe comunicar por un canal fuera de banda (teléfono, SMS alternativo), ya que el atacante podría seguir leyendo el correo."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el esquema de versionado semántico de Playbooks (MAJOR.MINOR.PATCH), ¿qué tipo de cambio justificaría pasar de la versión 2.0 a la 3.0 (cambio MAJOR)?",
+      "respuestas": [
+        {
+          "texto": "Corregir un error tipográfico en la descripción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería un cambio PATCH (2.0.1)."
+        },
+        {
+          "texto": "Añadir un nuevo IoC o hash a la lista de comprobación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Actualizar IoCs es considerado PATCH."
+        },
+        {
+          "texto": "Cambio estructural profundo: adición de nuevas fases o reescritura del flujo principal.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un cambio MAJOR implica una alteración radical en el procedimiento operativo que cambia cómo se afronta el incidente en su núcleo."
+        },
+        {
+          "texto": "Incorporar una herramienta secundaria adicional sin alterar el flujo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un cambio MINOR (2.1)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la estandarización, ¿cuál es un error grave pero frecuente al redactar la sección 'Validación de la Contención' en un Playbook?",
+      "respuestas": [
+        {
+          "texto": "Omitir los criterios objetivos y dar el incidente por contenido sin verificarlo formalmente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Dar por contenido un incidente sin verificación cruzada (ej. verificar la pérdida real de conectividad o fin del cifrado) lleva a reactivaciones del ataque."
+        },
+        {
+          "texto": "Exigir que la contención sea firmada por el CEO en todos los casos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación suele recaer en analistas técnicos (L2/L3) o Incident Commanders, no el CEO."
+        },
+        {
+          "texto": "Utilizar el EDR para comprobar el aislamiento del host.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es precisamente una buena práctica de verificación, no un error."
+        },
+        {
+          "texto": "Establecer que la validación de contención se haga antes que la fase de erradicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el orden natural de respuesta a incidentes (Contención -> Erradicación)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Orquestación' dentro de los pilares fundamentales de una plataforma SOAR?",
+      "respuestas": [
+        {
+          "texto": "La ejecución de acciones automáticas sin la necesidad de intervención humana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso define al pilar de 'Automatización', no de orquestación."
+        },
+        {
+          "texto": "El uso exclusivo de modelos de inteligencia artificial para predecir futuros incidentes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SOAR no se centra principalmente en IA predictiva, sino en la operativa reactiva unificada."
+        },
+        {
+          "texto": "La capacidad de conectar y coordinar múltiples herramientas heterogéneas (SIEM, EDR, Firewall) a través de un flujo centralizado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La orquestación une sistemas diferentes para que el analista no tenga que saltar de consola en consola perdiendo tiempo."
+        },
+        {
+          "texto": "La custodia legal de evidencias criptográficas en formato inmutable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto pertenece a la recolección y custodia forense, no es el propósito de la orquestación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué modelo de automatización SOAR se denomina 'Human-in-the-Loop'?",
+      "respuestas": [
+        {
+          "texto": "El SOAR prepara la acción y la presenta al analista para su aprobación con un clic antes de ejecutarla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se usa para acciones de impacto medio o cuando la confianza no es total, garantizando que el humano tiene la última palabra."
+        },
+        {
+          "texto": "El SOAR ejecuta todo de forma autónoma sin notificar a nadie.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se denomina 'Automatización Completa' o Fully Automated."
+        },
+        {
+          "texto": "El SOAR ejecuta la acción, pero le da al analista una ventana de 10 minutos para revertirla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este modelo en el que se ejecuta primero y se puede deshacer se llama 'Human-on-the-Loop'."
+        },
+        {
+          "texto": "El analista hace todo manualmente y el SOAR solo redacta el informe.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SOAR asume partes ejecutivas, no es un mero procesador de texto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la evaluación para decidir si un paso de un playbook es 'automatizable', ¿qué criterio se opone a la automatización completa?",
+      "respuestas": [
+        {
+          "texto": "Alta frecuencia de uso del paso en incidentes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La alta frecuencia fomenta la necesidad de automatizar."
+        },
+        {
+          "texto": "Disponibilidad de una API REST robusta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las APIs facilitan enormemente la automatización."
+        },
+        {
+          "texto": "Un alto riesgo de consecuencias graves si ocurre un falso positivo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si un paso automático falla y aisla un servidor crítico por error, el daño puede ser enorme. Esos pasos requieren validación humana (Human-in-the-loop)."
+        },
+        {
+          "texto": "Alta previsibilidad y determinismo de la acción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El determinismo es ideal para la automatización."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al gestionar bloqueos automatizados de IPs maliciosas a través de un SOAR, ¿qué regla de exclusión automática (Allowlist) DEBE existir siempre?",
+      "respuestas": [
+        {
+          "texto": "Nunca se deben excluir IPs; si el SIEM las detecta, deben bloquearse siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un error crítico de implementación que causa auto-denegación de servicio."
+        },
+        {
+          "texto": "IPs de los rangos internos de la organización, de proveedores críticos y de redes CDN conocidas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas IPs nunca deben bloquearse automáticamente, ya que aislarían a la empresa de internet o afectarían a sus propios sistemas (falsos positivos)."
+        },
+        {
+          "texto": "Cualquier IP geolocalizada en Europa o Estados Unidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los atacantes utilizan infraestructura global, y no se debe crear allowlist genérico por país."
+        },
+        {
+          "texto": "Cualquier IP de conexión a red TOR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las conexiones TOR suelen ser indicadores de riesgo y candidatas perfectas a bloqueo, no exclusión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre con el almacenamiento de las evidencias digitales cuando se captura información automáticamente mediante scripts (ej. Velociraptor)?",
+      "respuestas": [
+        {
+          "texto": "Se envían por correo electrónico al analista en texto claro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso violaría la confidencialidad de la información."
+        },
+        {
+          "texto": "Se borran a los 3 días si no se usan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las evidencias forenses deben custodiarse a largo plazo."
+        },
+        {
+          "texto": "Se calculan hashes (SHA-256), se genera un manifiesto y se almacenan en un bucket cifrado inmutable (WORM).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esto garantiza la cadena de custodia probatoria, impidiendo la manipulación de la evidencia original extraída del sistema."
+        },
+        {
+          "texto": "Se imprimen y se adjuntan físicamente al expediente judicial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La digitalización requiere resguardo digital cifrado, la impresión rompe la usabilidad de la evidencia electrónica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la nomenclatura de Playbooks, ¿qué significaría un playbook etiquetado como 'PB-PHI-CRED-003'?",
+      "respuestas": [
+        {
+          "texto": "Playbook de Ransomware con encriptación prioritaria 3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ransomware se categorizaría como 'RAN'."
+        },
+        {
+          "texto": "Playbook de Phishing con robo de credenciales, iteración o tipo 3.",
+          "correcta": true,
+          "explicacion": "¡Correcto! 'PHI' hace referencia a Phishing, 'CRED' a credenciales y '003' es su ordinal numérico."
+        },
+        {
+          "texto": "Playbook de Movimiento Lateral en credenciales internas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Movimiento lateral entraría bajo intrusión ('INT') y subtipo 'LATERAL'."
+        },
+        {
+          "texto": "Playbook obsoleto eliminado del sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ID no indica si está obsoleto, eso lo determina la etiqueta de versión y su presencia en la rama main o archive."
+        }
+      ]
+    },
+    {
+      "pregunta": "En las métricas de evaluación de un sistema SOAR, ¿qué significa 'MTTC'?",
+      "respuestas": [
+        {
+          "texto": "Mean Time to Communicate (Tiempo medio para comunicar).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la comunicación es importante, la Métrica clave es sobre contención."
+        },
+        {
+          "texto": "Maximum Total Time to Crash (Tiempo máximo de colapso total).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese término no existe en métricas operativas."
+        },
+        {
+          "texto": "Mean Time to Contain (Tiempo medio desde la alerta hasta la contención).",
+          "correcta": true,
+          "explicacion": "¡Correcto! SOAR persigue reducir drásticamente este indicador, minimizando la ventana en que el atacante puede hacer daño activo."
+        },
+        {
+          "texto": "Mean Time to Detect (Tiempo medio de detección).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tiempo de detección corresponde a la métrica MTTD."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un atacante establece persistencia alterando tareas programadas en Linux, ¿qué comandos verificarían la presencia de este mecanismo (cron)?",
+      "respuestas": [
+        {
+          "texto": "Get-WMIObject y Autoruns.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas herramientas son específicas de sistemas Windows."
+        },
+        {
+          "texto": "crontab -l; ls /etc/cron.*; systemctl list-units --state enabled",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas instrucciones de Linux revisan tanto las tareas programadas (cron) como los servicios de Systemd configurados al arranque."
+        },
+        {
+          "texto": "iptables -L y route -n",
+          "correcta": false,
+          "explicacion": "Incorrecto. Muestran configuraciones de firewall y enrutamiento, no tareas programadas."
+        },
+        {
+          "texto": "journalctl -u sshd",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso consulta los logs de autenticación remota (SSH), no los programadores de tareas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Uno de los errores más comunes en implantaciones de plataformas SOAR es:",
+      "respuestas": [
+        {
+          "texto": "Integrar la plataforma de SOAR directamente con el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Integrar herramientas de red es un caso de uso válido y deseado para SOAR."
+        },
+        {
+          "texto": "Intentar automatizar antes de tener playbooks formalizados y documentados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No se puede automatizar el caos. La progresión lógica obliga a documentar, formalizar y finalmente automatizar en ese orden."
+        },
+        {
+          "texto": "Usar Python para escribir los playbooks.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El uso de lenguajes como Python es soportado e idóneo para personalizaciones complejas en plataformas como Cortex XSOAR."
+        },
+        {
+          "texto": "Implementar modos 'Human-in-the-loop'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese enfoque de control humano para acciones críticas es un acierto, no un error."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué campo de un Playbook detalla los criterios de éxito verificables que indican que un incidente dejó de propagarse?",
+      "respuestas": [
+        {
+          "texto": "Condiciones de activación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas indican cuándo iniciar el Playbook, no su validación final."
+        },
+        {
+          "texto": "Metadatos del playbook.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Contienen versión, autores, aprobación, etc."
+        },
+        {
+          "texto": "Validación de la Contención.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Define los criterios objetivos, como la ausencia de tráfico a un C2, para confirmar que el entorno está contenido antes de darlo por asegurado."
+        },
+        {
+          "texto": "Taxonomía MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Relaciona técnicas del atacante, no validaciones operativas de estado de contención."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un incidente de RCE detectado por el WAF, ¿por qué se desaconseja apagar sin más un servidor crítico sin redundancia?",
+      "respuestas": [
+        {
+          "texto": "Porque el malware saltaría inmediatamente a otro servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si estuviera apagado no tendría forma técnica de saltar (aunque es posible que ya lo hubiera hecho antes)."
+        },
+        {
+          "texto": "Para aplicar una mitigación técnica temporal (virtual patch) sin detener un servicio de producción vital sin autorización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuando la disponibilidad es crítica y no hay balanceo, el aislamiento forzado genera disrupción extrema. Se aplica un 'Virtual Patch' en el WAF mientras se agenda una ventana de mantenimiento."
+        },
+        {
+          "texto": "Porque un servidor Windows no puede apagarse remotamente vía EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí puede aislarse o apagarse mediante utilidades si es necesario."
+        },
+        {
+          "texto": "Para permitir que la policía registre el ataque en vivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contención de la empresa y mantenimiento del servicio prima sobre la observación pasiva del ataque."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un nuevo incidente en producción revela deficiencias (gaps) en un Playbook existente, ¿cuál es la política para su actualización?",
+      "respuestas": [
+        {
+          "texto": "Debe esperar a la revisión anual rutinaria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los fallos graves descubiertos tienen prioridad alta de actualización."
+        },
+        {
+          "texto": "Actualización prioritaria máxima en un plazo de 5 días hábiles tras el cierre del incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un gap en producción es un disparador obligatorio que debe corregirse inmediatamente para proteger a la organización frente a eventos repetidos."
+        },
+        {
+          "texto": "No se puede actualizar el playbook, se debe crear uno completamente nuevo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se actualiza siguiendo el control de versiones semántico (ej. PATCH o MINOR)."
+        },
+        {
+          "texto": "Se retira inmediatamente el Playbook y se trabaja sin él hasta el siguiente año.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Carecer de Playbook empeora la situación; debe editarse y seguir los flujos de Git con validación por pares."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la captura de un volcado forense de la red ante actividad sospechosa (PCAP), ¿qué comandos/herramientas usa un analista?",
+      "respuestas": [
+        {
+          "texto": "Volatility y Autoruns.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son para memoria y persistencia de disco/registro, no tráfico de red."
+        },
+        {
+          "texto": "tcpdump y tshark.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tcpdump y tshark (la interfaz de línea de comandos de Wireshark) son los estándares principales para atrapar flujos de paquetes crudos para forense de red."
+        },
+        {
+          "texto": "Nmap y Shodan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Nmap escanea puertos y Shodan audita internet, pero no graban streams de red nativos estilo PCAP."
+        },
+        {
+          "texto": "KAPE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Kroll Artifact Parser (KAPE) busca artefactos estructurados en Windows, no volcados directos de interfaz de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el caso de 'Automatización Asistida' (Human-on-the-loop), ¿cómo interviene el analista?",
+      "respuestas": [
+        {
+          "texto": "Debe aprobar todas y cada una de las tareas antes de que el SOAR actúe.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería Human-IN-the-loop."
+        },
+        {
+          "texto": "No interviene de ningún modo ni puede modificar las acciones ejecutadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería Automatización Completa (Fully Automated)."
+        },
+        {
+          "texto": "El SOAR ejecuta la acción automáticamente debido a la urgencia, pero notifica al analista y le da una ventana de tiempo para revertirla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un balance ideal para acciones de respuesta ultrarrápidas, dejando control de rollback al humano."
+        },
+        {
+          "texto": "El analista escribe el script Python y el SOAR solo evalúa si compila.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este concepto no tiene relación con entornos de programación o compilación."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la política de archivo de Playbooks en plataformas de versionado, ¿qué debe hacerse con las versiones obsoletas?",
+      "respuestas": [
+        {
+          "texto": "Se borran físicamente del repositorio para liberar espacio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar versiones anteriores va en contra de la normativa de auditoría."
+        },
+        {
+          "texto": "Se sobreescriben por las versiones nuevas directamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sobrescribir destruye el rastro forense y de auditoría de los procedimientos usados en el pasado."
+        },
+        {
+          "texto": "Se mueven a una rama de archivo (ej. archive/...) y nunca se eliminan, manteniendo el historial mínimo requerido.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por requisitos legales y de auditoría, las formas pasadas de proceder de un equipo de seguridad deben quedar intactas en el repositorio."
+        },
+        {
+          "texto": "Se publican obligatoriamente en un ISAC público para revisión de pares externos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un playbook contiene inteligencia táctica interna; su divulgación abierta está prohibida."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de estas opciones representa una búsqueda forense correcta para hallar webshells (PHP) ofuscadas mediante búsqueda manual en el sistema de ficheros de un servidor?",
+      "respuestas": [
+        {
+          "texto": "`grep -r 'eval.*base64_decode' /var/www/`",
+          "correcta": true,
+          "explicacion": "¡Correcto! Funciones de PHP como `eval` en combinación con `base64_decode` son sintaxis clásicas y críticas usadas por las webshells para esconder su lógica maliciosa."
+        },
+        {
+          "texto": "`netstat -tuln | grep 80`",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto sólo dice que el puerto 80 web está abierto, no escanea ficheros maliciosos ofuscados."
+        },
+        {
+          "texto": "`nslookup -type=TXT malicious.com`",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es una consulta para exfiltración DNS o túneles de texto, no audita shells locales."
+        },
+        {
+          "texto": "`journalctl -u httpd | grep 500`",
+          "correcta": false,
+          "explicacion": "Incorrecto. Mostrará los errores 500 del servidor, pero no buscará directamente código ofuscado incrustado en los ficheros del servidor web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué elemento es fundamental que esté documentado en las acciones de bloqueo automático de IP en el SOAR/Firewall para asegurar el ciclo de vida de la regla?",
+      "respuestas": [
+        {
+          "texto": "La fecha de expiración, habitualmente de 30 días, y trazabilidad referenciando el ID del incidente que originó el bloqueo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las IPs cambian de propietario; una lista de bloqueo eterna (sin expiración) acaba generando problemas operativos. También es clave tener trazabilidad hacia el incidente."
+        },
+        {
+          "texto": "El consentimiento expreso del usuario atacado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los bloqueos perimetrales no requieren ni competen a las voluntades de los usuarios finales."
+        },
+        {
+          "texto": "El uso exclusivo de algoritmos de Machine Learning de terceros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bloquear una IP se basa en listas, TI y reglas estáticas, no en usar obligatoriamente ML externo."
+        },
+        {
+          "texto": "La activación de la directiva NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La aplicación técnica del bloqueo de firewall no interacciona automáticamente activando normativas legales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro del flujo automatizado de recolección inicial de evidencias (via Velociraptor/scripts), ¿qué paso criptográfico se da sobre los artefactos para asegurar su integridad antes de subirlos a almacenamiento seguro?",
+      "respuestas": [
+        {
+          "texto": "Se traducen los datos a Base64.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La codificación Base64 no aporta cifrado, firma ni integridad probatoria."
+        },
+        {
+          "texto": "Se comprimen en un ZIP sin contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dejarlos sin seguridad rompería el control de cadena de custodia e integridad."
+        },
+        {
+          "texto": "Se les calcula el hash SHA-256 a todos los artefactos para generar un manifiesto de evidencias firmado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cálculo de SHA-256 provee el 'sello inmutable' demostrando matemáticamente en los procesos judiciales que el archivo no ha sido alterado desde su extracción."
+        },
+        {
+          "texto": "Se ejecuta de inmediato el borrado criptográfico del disco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Realizar borrado sobre el disco rompe toda posibilidad de hacer forenses profundos después."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué plataforma Open Source (Gratuita) se destaca en el temario por sus capacidades como plataforma SOAR y su alta personalización en equipos de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Splunk SOAR",
+          "correcta": false,
+          "explicacion": "Incorrecto. Splunk (ex-Phantom) es una plataforma puramente comercial y de pago."
+        },
+        {
+          "texto": "Palo Alto XSOAR",
+          "correcta": false,
+          "explicacion": "Incorrecto. También es una solución de clase comercial y empresarial."
+        },
+        {
+          "texto": "TheHive + Cortex",
+          "correcta": true,
+          "explicacion": "¡Correcto! Juntas operan como sistema open source gratuito que facilita gestión de casos de respuesta a incidentes y el disparo de acciones orquestadas (analyzers/responders)."
+        },
+        {
+          "texto": "Microsoft Sentinel",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ecosistema SIEM/SOAR comercial asociado fuertemente a Microsoft Cloud (Azure)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un entorno Azure AD (Entra ID), ¿cuál de los siguientes comandos de PowerShell automatizables se usa para invalidar los tokens y obligar a relogueo total de un usuario comprometido?",
+      "respuestas": [
+        {
+          "texto": "Revoke-MgUserSignInSession",
+          "correcta": true,
+          "explicacion": "¡Correcto! Este comando anula todas las sesiones activas asociadas al perfil en los repositorios de Entra ID/Microsoft Graph."
+        },
+        {
+          "texto": "Disable-ADAccount",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese comando deshabilita la cuenta en un Active Directory local de Windows Server, no revoca tokens cloud explícitamente."
+        },
+        {
+          "texto": "Delete-UserToken",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa sintaxis no se corresponde con módulos oficiales de Azure/Graph."
+        },
+        {
+          "texto": "Set-ADUser -PasswordNeverExpires $true",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta configuración es de altísimo riesgo y empeoraría gravemente la situación permitiendo persistencia al atacante."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el Procedimiento 3.4 (Explotación de Vulnerabilidad en Servidor), ¿qué función técnica concreta cumple el comando 'chmod 444' y 'chown root' sobre ficheros estáticos de una aplicación web?",
+      "respuestas": [
+        {
+          "texto": "Elevar privilegios del proceso del servidor apache.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hace exactamente lo contrario, los restringe."
+        },
+        {
+          "texto": "Hardening de permisos, asegurando que el usuario de ejecución (www-data) carezca de permisos de escritura fuera de lo necesario.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas mitigaciones limitan severamente el daño al impedir que el atacante (aprovechando vulnerabilidades) modifique ficheros críticos o incruste webshells sobre activos de sistema."
+        },
+        {
+          "texto": "Establecer la persistencia de cronjobs ocultos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un comando de administración legítima, no malicioso per se."
+        },
+        {
+          "texto": "Ejecutar la webshell con permisos de Administrador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cambiar ownership a root en este contexto sirve para proteger el archivo, no ejecutarlo maliciosamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué sucede con los playbooks obsoletos cuando se aprueba y publica (merge) una versión con cambios 'MINOR' sobre un procedimiento técnico?",
+      "respuestas": [
+        {
+          "texto": "Pasan a publicarse abiertamente en las webs institucionales del CSIRT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su difusión violaría la protección y TLP interna del documento."
+        },
+        {
+          "texto": "Las versiones obsoletas se mueven a la rama de archivo (archive/..) por obligación de control de auditoría.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La gestión de versiones dictamina el resguardo inalterado de los playbooks anteriores para trazar auditorías retrospectivas legales de actuaciones operativas pasadas."
+        },
+        {
+          "texto": "Se sobreescribe forzosamente la versión original borrándola para evitar colisiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La sobreescritura rompe las trazas necesarias; se archiva en otra ubicación (version-control)."
+        },
+        {
+          "texto": "Se retrotrae todo el SOAR a versiones de código base iniciales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hace rollback en el código, la versión antigua documentada queda almacenada."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la evaluación para clasificar una alerta como 'Severidad CRÍTICA - P1' en un árbol de decisión automatizado, ¿qué dos factores clave dispararían esta severidad máxima tras el Match de IoCs positivos?",
+      "respuestas": [
+        {
+          "texto": "Aviso de la compañía de luz externa y pérdida de paquetes TCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es irrelevante con un match crítico de software o actividad de red."
+        },
+        {
+          "texto": "Presencia del host en segmento en Producción Crítica y/o existencia confirmada de Movimiento Lateral en red.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Como figura en los árboles lógicos del temario, cuando la detección impacta a servidores core, sistemas VIP o se verifica desplazamiento a lo largo de sistemas, la severidad escala directamente a Crítico."
+        },
+        {
+          "texto": "Falta de conexión al servidor de logs de syslog (Auditoria).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un gap de monitorización, no una confirmación explícita de ataque Crítico."
+        },
+        {
+          "texto": "Escaneo perimetral del puerto 80 por parte de Shodan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los escaneos en puertos públicos suelen considerarse ruido de fondo (Bajo) si no hay explotación confirmada."
+        }
+      ]
+    }
+  ]
+}

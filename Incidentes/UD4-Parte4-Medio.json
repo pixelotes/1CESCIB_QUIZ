@@ -1,0 +1,2630 @@
+{
+  "tema": "RA4CE4 - Restablecimiento de servicios afectados por un incidente de ciberseguridad",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es el principio rector del restablecimiento controlado tras un incidente?",
+      "respuestas": [
+        {
+          "texto": "Restaurar el servicio lo más rápido posible para minimizar el impacto al negocio",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad por sí sola no es el objetivo; un servicio restaurado rápidamente puede seguir comprometido."
+        },
+        {
+          "texto": "Restaurar un servicio equivale a volver a la normalidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justamente el material insiste en que restaurar un servicio NO equivale a volver a la normalidad."
+        },
+        {
+          "texto": "La vuelta a la normalidad es el resultado de un proceso controlado, validado y monitorizado",
+          "correcta": true,
+          "explicacion": "¡Correcto! Este es el principio rector: la normalidad solo se alcanza tras un proceso riguroso, trazable y validado, no por el simple hecho de que el servicio responda."
+        },
+        {
+          "texto": "Lo prioritario es declarar la normalidad cuanto antes para tranquilizar a la dirección",
+          "correcta": false,
+          "explicacion": "Incorrecto. Declarar la normalidad sin haberla verificado es uno de los errores graves que el material advierte explícitamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre recuperación técnica y restauración operativa?",
+      "respuestas": [
+        {
+          "texto": "La recuperación técnica se centra en la disponibilidad; la restauración operativa garantiza seguridad e integridad",
+          "correcta": true,
+          "explicacion": "¡Correcto! La recuperación técnica busca que el servicio funcione (disponibilidad), mientras que la restauración operativa certifica que funciona de forma segura, íntegra y confiable."
+        },
+        {
+          "texto": "La recuperación técnica la realiza el CISO; la restauración operativa la realiza el equipo de sistemas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo al revés: la recuperación técnica la declara el equipo de sistemas/infraestructura, y la restauración operativa la declara el CISO o responsable de seguridad."
+        },
+        {
+          "texto": "Son sinónimos y pueden usarse indistintamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. El material señala explícitamente que su confusión es una fuente habitual de incidentes recurrentes y que es imprescindible distinguirlos."
+        },
+        {
+          "texto": "La recuperación técnica dura días y la operativa, horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al contrario: la recuperación técnica suele durar horas, mientras que la operativa requiere horas o días adicionales de validación."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un servidor restaurado responde a peticiones y los usuarios pueden conectarse. ¿Qué afirmación es correcta?",
+      "respuestas": [
+        {
+          "texto": "El sistema está oficialmente recuperado y se puede declarar la vuelta a la normalidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La conectividad es solo un indicador de disponibilidad, no de integridad ni de ausencia de compromiso."
+        },
+        {
+          "texto": "Es un indicador de éxito incorrecto pero habitual; el sistema podría seguir comprometido",
+          "correcta": true,
+          "explicacion": "¡Correcto! El material lo identifica explícitamente como 'indicador de éxito incorrecto pero habitual'. El sistema podría tener un rootkit activo, exfiltrar datos o mantener una conexión C2."
+        },
+        {
+          "texto": "La integridad queda automáticamente garantizada al restablecerse la disponibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Disponibilidad e integridad son dimensiones independientes que deben verificarse por separado."
+        },
+        {
+          "texto": "Solo es necesario verificar adicionalmente que los logs estén operativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La restauración operativa requiere múltiples verificaciones: integridad de datos, ausencia de artefactos maliciosos, hardening, rotación de credenciales, etc."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los cuatro estados fundamentales de un sistema post-incidente, en orden correcto?",
+      "respuestas": [
+        {
+          "texto": "Comprometido → Limpio → Probado → Operativo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta no es la nomenclatura técnica utilizada en el material."
+        },
+        {
+          "texto": "Contaminado → Parcialmente restaurado → Validado → En producción normalizada",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos son los cuatro estados fundamentales definidos. Cada transición requiere criterios técnicos verificables y aprobación formal."
+        },
+        {
+          "texto": "Aislado → Reconstruido → Aceptado → Publicado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el aislamiento es parte del estado contaminado, esta no es la secuencia formal de estados."
+        },
+        {
+          "texto": "Crítico → Estable → Producción → Cerrado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos términos no corresponden a los estados técnicamente definidos en el modelo de gestión post-incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué acción está PROHIBIDA en un sistema en estado 'Contaminado'?",
+      "respuestas": [
+        {
+          "texto": "Realizar análisis forense e investigación sin modificar evidencias",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis forense es precisamente una de las acciones permitidas en este estado."
+        },
+        {
+          "texto": "Aislar el sistema en cuarentena de red",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contención mediante aislamiento es una acción permitida y recomendada."
+        },
+        {
+          "texto": "Reintegración a producción",
+          "correcta": true,
+          "explicacion": "¡Correcto! La reintegración a producción está expresamente prohibida en estado contaminado, junto con la restauración a otros sistemas sin cuarentena y el acceso de usuarios de negocio."
+        },
+        {
+          "texto": "Recoger artefactos para análisis",
+          "correcta": false,
+          "explicacion": "Incorrecto. La recogida de artefactos para análisis es una acción permitida en este estado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el riesgo principal del estado 'Parcialmente restaurado'?",
+      "respuestas": [
+        {
+          "texto": "La pérdida total de datos por corrupción del backup",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este riesgo es transversal pero no es el principal específicamente identificado para este estado."
+        },
+        {
+          "texto": "La falsa sensación de seguridad: superficie de ataque residual no evidente",
+          "correcta": true,
+          "explicacion": "¡Correcto! El material lo identifica explícitamente como riesgo principal: un sistema parcialmente restaurado puede presentar superficie de ataque residual no evidente a primera vista."
+        },
+        {
+          "texto": "El coste económico excesivo de mantener el sistema en staging",
+          "correcta": false,
+          "explicacion": "Incorrecto. El coste no es el riesgo técnico principal en este estado."
+        },
+        {
+          "texto": "La indisponibilidad prolongada del servicio",
+          "correcta": false,
+          "explicacion": "Incorrecto. La indisponibilidad es una consecuencia, no el riesgo de seguridad principal de este estado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién debe emitir la declaración formal de vuelta a la normalidad?",
+      "respuestas": [
+        {
+          "texto": "El equipo técnico de operaciones de forma unilateral",
+          "correcta": false,
+          "explicacion": "Incorrecto. El material indica explícitamente que NUNCA debe ser emitida unilateralmente por el equipo técnico de operaciones."
+        },
+        {
+          "texto": "El responsable de seguridad (CISO o equivalente) con el respaldo del propietario del servicio",
+          "correcta": true,
+          "explicacion": "¡Correcto! La declaración formal corresponde al CISO con respaldo del propietario del servicio, garantizando la doble validación seguridad+negocio."
+        },
+        {
+          "texto": "Cualquier administrador con privilegios de root",
+          "correcta": false,
+          "explicacion": "Incorrecto. La declaración formal es una decisión gobernada, no técnica, y requiere figuras de responsabilidad concretas."
+        },
+        {
+          "texto": "El director financiero al validar el coste del incidente",
+          "correcta": false,
+          "explicacion": "Incorrecto. El director financiero no tiene rol técnico en la declaración de normalidad post-incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el periodo mínimo recomendado de monitorización en alerta máxima en estado 'En producción normalizada'?",
+      "respuestas": [
+        {
+          "texto": "24 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. El mínimo recomendado es superior."
+        },
+        {
+          "texto": "48 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. El material especifica un periodo mayor."
+        },
+        {
+          "texto": "72 horas",
+          "correcta": true,
+          "explicacion": "¡Correcto! El periodo mínimo recomendado de observación post-incidente en alerta máxima es de 72 horas sin anomalías detectadas."
+        },
+        {
+          "texto": "30 días",
+          "correcta": false,
+          "explicacion": "Incorrecto. 30 días es excesivo como mínimo de alerta máxima, aunque la monitorización reforzada sí puede prolongarse."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué mecanismo de persistencia tiene la dificultad de detección MÁS ALTA?",
+      "respuestas": [
+        {
+          "texto": "Llaves SSH no autorizadas en authorized_keys",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su detección es 'baja': se identifican fácilmente con una revisión de ficheros."
+        },
+        {
+          "texto": "Cuentas de usuario ocultas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su detección es 'baja': se detectan con una auditoría de cuentas."
+        },
+        {
+          "texto": "Webshells en servidores web",
+          "correcta": false,
+          "explicacion": "Incorrecto. La dificultad de detección de webshells es 'media', no la más alta."
+        },
+        {
+          "texto": "Living off the land (LoLBins) y rootkits a nivel de kernel",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los LoLBins (uso de herramientas legítimas) tienen dificultad 'muy alta', y los rootkits de kernel también, requiriendo análisis fuera del sistema vivo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda priorizar el análisis offline del sistema comprometido?",
+      "respuestas": [
+        {
+          "texto": "Porque consume menos recursos de CPU",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es de seguridad, no de rendimiento."
+        },
+        {
+          "texto": "Para evitar que un rootkit pueda ocultar su presencia al sistema operativo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un rootkit activo puede manipular las llamadas al sistema y ocultarse de las herramientas que se ejecutan en el sistema vivo. Montar el disco en un sistema forense externo evita esa interferencia."
+        },
+        {
+          "texto": "Porque permite aplicar parches sin reiniciar",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis offline no está orientado a la aplicación de parches."
+        },
+        {
+          "texto": "Porque acelera la restauración de los servicios",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis offline es más lento, pero más fiable; no se elige por velocidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dice el material sobre la restauración desde el último backup disponible?",
+      "respuestas": [
+        {
+          "texto": "Es siempre la mejor opción porque contiene los datos más recientes",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justamente lo contrario: el backup más reciente es estadísticamente el más probable de estar contaminado."
+        },
+        {
+          "texto": "El backup más reciente es estadísticamente el más probable de estar contaminado",
+          "correcta": true,
+          "explicacion": "¡Correcto! La regla importante indica que nunca debe restaurarse desde el último backup disponible sin verificar su integridad y estado de compromiso, ya que es el candidato con mayor probabilidad de contaminación."
+        },
+        {
+          "texto": "Es seguro siempre que el backup esté almacenado en la nube",
+          "correcta": false,
+          "explicacion": "Incorrecto. El medio de almacenamiento no garantiza por sí mismo que el backup no contenga compromiso."
+        },
+        {
+          "texto": "Solo debe usarse si no existe ningún otro backup",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque hay matiz, la regla práctica es seleccionar el backup anterior al EPCD, no necesariamente el último."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste la regla 3-2-1-1-0 de backups?",
+      "respuestas": [
+        {
+          "texto": "3 backups por hora, 2 verificados, 1 cifrado, 1 firmado, 0 manuales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta nomenclatura no corresponde a la regla 3-2-1-1-0."
+        },
+        {
+          "texto": "3 copias, en 2 medios distintos, 1 offsite, 1 offline/inmutable, 0 errores verificados en restauraciones de prueba",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la evolución de la clásica regla 3-2-1, añadiendo una copia offline/inmutable y la verificación de cero errores en restauraciones de prueba."
+        },
+        {
+          "texto": "3 días de retención, 2 administradores, 1 cifrado, 1 firma, 0 ediciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. La regla 3-2-1-1-0 se refiere a copias y características, no a roles ni firmas."
+        },
+        {
+          "texto": "3 nubes, 2 países, 1 cinta, 1 disco, 0 dependencias externas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La regla no especifica nubes ni países concretos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que un almacenamiento sea WORM?",
+      "respuestas": [
+        {
+          "texto": "Write On Remote Media: escritura en medio remoto",
+          "correcta": false,
+          "explicacion": "Incorrecto. WORM no se refiere a la ubicación remota."
+        },
+        {
+          "texto": "Write Once, Read Many: se escribe una vez y se lee muchas veces, sin posibilidad de modificación",
+          "correcta": true,
+          "explicacion": "¡Correcto! WORM (Write Once, Read Many) garantiza la inmutabilidad del backup: una vez escrito, no puede modificarse ni eliminarse, protegiendo contra atacantes con credenciales comprometidas."
+        },
+        {
+          "texto": "Workload Optimized RAM Memory",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un acrónimo relacionado con memoria."
+        },
+        {
+          "texto": "Web Originated Replication Mode",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se trata de un modo de replicación web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál NO es una fuente típica de reintroducción de vulnerabilidades durante la recuperación?",
+      "respuestas": [
+        {
+          "texto": "Backup con versión vulnerable de software",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una de las fuentes principales: restaurar versiones obsoletas trae sus CVEs asociados."
+        },
+        {
+          "texto": "Certificados y secretos sin rotar tras el incidente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una fuente clásica: si se reutilizan credenciales que estuvieron expuestas, el atacante mantiene acceso."
+        },
+        {
+          "texto": "Pipeline de despliegue (IaC, imagen Docker base) sin actualizar",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el IaC o la imagen base son vulnerables, el rebuild reproducirá la vulnerabilidad."
+        },
+        {
+          "texto": "Aplicación de los últimos parches de seguridad antes de poner en producción",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esto es una buena práctica obligatoria, NO una fuente de reintroducción de vulnerabilidades. Justamente forma parte de la lista de verificación previa a la reintegración."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el principio clave del apartado de fundamentos, el sistema que vuelve a producción tras un incidente debe ser:",
+      "respuestas": [
+        {
+          "texto": "Idéntico al original para garantizar compatibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el sistema es idéntico, mantendrá las mismas vulnerabilidades que permitieron el incidente."
+        },
+        {
+          "texto": "Más seguro que el que fue comprometido, no simplemente igual",
+          "correcta": true,
+          "explicacion": "¡Correcto! El principio clave establece que la recuperación es una oportunidad de mejora: el sistema debe volver a producción más seguro que el comprometido, con parches, hardening y controles reforzados."
+        },
+        {
+          "texto": "Solo restaurado en su funcionalidad mínima",
+          "correcta": false,
+          "explicacion": "Incorrecto. Restaurar funcionalidad mínima no garantiza seguridad ni resuelve el vector de ataque."
+        },
+        {
+          "texto": "Igual o equivalente, siempre que la disponibilidad esté garantizada",
+          "correcta": false,
+          "explicacion": "Incorrecto. La disponibilidad sola no satisface el principio: la integridad y la mejora del estado de seguridad son obligatorias."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo se debe aplicar la estrategia de recuperación bare-metal?",
+      "respuestas": [
+        {
+          "texto": "Cuando solo se ha producido una corrupción a nivel de aplicación",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para una corrupción a nivel de aplicación es suficiente con un restore parcial; bare-metal es desproporcionado."
+        },
+        {
+          "texto": "Cuando el sistema operativo está comprometido a nivel de kernel/firmware o existe sospecha de persistencia en componentes de bajo nivel (UEFI, MBR)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Bare-metal recovery es la opción cuando hay sospecha de rootkits, bootkits o cuando la cadena de confianza no puede reestablecerse sin reconstrucción completa."
+        },
+        {
+          "texto": "Siempre que el RTO sea inferior a 30 minutos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un RTO bajo favorece más bien al restore desde backup verificado, no necesariamente al bare-metal."
+        },
+        {
+          "texto": "Únicamente para entornos virtualizados de pruebas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bare-metal aplica tanto a hardware físico como a VMs vacías, y es una técnica de producción, no de pruebas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante una recuperación bare-metal, ¿qué se debe hacer ANTES de arrancar la imagen restaurada?",
+      "respuestas": [
+        {
+          "texto": "Conectar inmediatamente el sistema a la red de producción para recibir actualizaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. La conexión a producción solo se realiza tras la validación en entorno aislado."
+        },
+        {
+          "texto": "Verificar la integridad de la imagen restaurada y validar el medio de arranque (hash SHA-256 contrastado con origen)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El proceso técnico exige validar el hash del medio de arranque y verificar la integridad de la imagen restaurada antes de arrancar."
+        },
+        {
+          "texto": "Habilitar acceso remoto SSH para los usuarios de negocio",
+          "correcta": false,
+          "explicacion": "Incorrecto. El acceso de usuarios solo se habilita tras validación completa y reintegración."
+        },
+        {
+          "texto": "Restaurar también todas las credenciales originales para mantener compatibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las credenciales deben rotarse, nunca reutilizarse tal cual estaban."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre 'verificabilidad' e 'inmutabilidad' en backups?",
+      "respuestas": [
+        {
+          "texto": "Verificabilidad implica que se ha probado la restauración; inmutabilidad que está cifrado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque hay relación con esos conceptos, no es la definición exacta usada en el material."
+        },
+        {
+          "texto": "Verificabilidad permite comprobar criptográficamente la integridad; inmutabilidad impide modificar o borrar el backup tras su creación",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son las dos propiedades fundamentales: verificabilidad mediante hashes/firmas, e inmutabilidad mediante WORM o equivalentes que resisten incluso a credenciales comprometidas."
+        },
+        {
+          "texto": "Verificabilidad es manual; inmutabilidad es automática",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas pueden automatizarse y no se distinguen por el tipo de gestión."
+        },
+        {
+          "texto": "Son sinónimos cuando se aplica WORM",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son propiedades distintas: un backup puede ser verificable pero no inmutable, o viceversa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el 'dwell time' en el contexto de un ataque?",
+      "respuestas": [
+        {
+          "texto": "El tiempo que tarda el atacante en cifrar todos los datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la duración del cifrado en un ransomware, no el dwell time."
+        },
+        {
+          "texto": "El tiempo que el atacante permanece sin ser detectado en la red comprometida",
+          "correcta": true,
+          "explicacion": "¡Correcto! El dwell time es el periodo entre el compromiso inicial y la detección. En ataques con dwell time largo (semanas o meses), los backups recientes pueden estar contaminados."
+        },
+        {
+          "texto": "El tiempo de respuesta del SIEM a una alerta",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería 'time to respond' o latencia de detección/respuesta."
+        },
+        {
+          "texto": "La duración total de la indisponibilidad del servicio",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la duración del incidente desde el punto de vista operativo, no el dwell time."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué nivel de inmutabilidad ofrece la MÁXIMA protección según el material?",
+      "respuestas": [
+        {
+          "texto": "Software WORM (Object Lock S3, MinIO, Wasabi)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la protección es 'alta', no es la máxima; depende de la política temporal configurable."
+        },
+        {
+          "texto": "Almacenamiento inmutable a nivel de firmware (NetApp SnapLock, Dell EMC DataDomain)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su protección es 'muy alta' pero no la máxima absoluta según la tabla del material."
+        },
+        {
+          "texto": "Cinta offline con air gap",
+          "correcta": true,
+          "explicacion": "¡Correcto! La cinta offline con air gap ofrece protección 'máxima' por desconexión física total: ningún atacante con acceso lógico puede alcanzarla."
+        },
+        {
+          "texto": "Cloud inmutable administrado por el proveedor (Azure Immutable Blob, AWS Glacier)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su protección es 'alta', pero menor que la cinta offline con air gap."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa EPCD en el contexto de selección del punto de restauración?",
+      "respuestas": [
+        {
+          "texto": "Estimated Patch Compliance Date",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un acrónimo relacionado con parches."
+        },
+        {
+          "texto": "Earliest Possible Compromise Date: la fecha más temprana posible del compromiso",
+          "correcta": true,
+          "explicacion": "¡Correcto! El EPCD se identifica mediante análisis forense, y se debe seleccionar el backup anterior al EPCD más reciente posible para evitar restaurar contenido comprometido."
+        },
+        {
+          "texto": "Encryption Public Certificate Date",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con certificados ni con cifrado."
+        },
+        {
+          "texto": "End-Point Compromise Detection",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde a este acrónimo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la matriz de decisión, ¿cuándo es preferible 'Rebuild' frente a 'Restore'?",
+      "respuestas": [
+        {
+          "texto": "Cuando el RTO es muy bajo y los backups son altamente fiables",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos factores favorecen al Restore."
+        },
+        {
+          "texto": "Cuando el dwell time es mayor que la antigüedad del backup, hay automatización IaC y se trata de APT/rootkit",
+          "correcta": true,
+          "explicacion": "¡Correcto! En esos escenarios, el Rebuild ofrece máxima garantía de ausencia de compromiso residual y aprovecha la reproducibilidad del IaC."
+        },
+        {
+          "texto": "Cuando el incidente es un ransomware que solo cifra datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. En ransomware data-only el Restore desde backup pre-incidente verificado suele ser apropiado."
+        },
+        {
+          "texto": "Cuando no hay documentación de configuración",
+          "correcta": false,
+          "explicacion": "Incorrecto. La falta de documentación dificulta el Rebuild, no lo favorece."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja típica del enfoque de 'Restore' frente a 'Rebuild'?",
+      "respuestas": [
+        {
+          "texto": "Tiempo de recuperación más alto",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Restore generalmente tiene un RTO menor; esa es justamente su ventaja principal."
+        },
+        {
+          "texto": "Riesgo de restaurar persistencia del atacante si el backup no es suficientemente antiguo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el backup elegido es posterior al EPCD, el Restore puede reintroducir backdoors, webshells y otros mecanismos de persistencia."
+        },
+        {
+          "texto": "Imposibilidad de aplicar hardening",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hardening puede aplicarse tras un Restore, aunque es más natural durante un Rebuild."
+        },
+        {
+          "texto": "Requiere obligatoriamente IaC",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Restore no requiere IaC; el que lo requiere idealmente es el Rebuild."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dos componentes intervienen en un snapshot consistente de máquina virtual?",
+      "respuestas": [
+        {
+          "texto": "El usuario administrador y el sistema de auditoría",
+          "correcta": false,
+          "explicacion": "Incorrecto. La consistencia del snapshot es un proceso técnico entre infraestructura y SO huésped."
+        },
+        {
+          "texto": "El hipervisor y los Guest Tools de la VM (VSS en Windows, fsfreeze en Linux)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El I/O Quiescing requiere coordinación entre el hipervisor y los Guest Tools, que invocan VSS o fsfreeze para detener la E/S y permitir un snapshot coherente."
+        },
+        {
+          "texto": "El SIEM y el firewall perimetral",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos componentes no participan en la creación del snapshot."
+        },
+        {
+          "texto": "El sistema de backup y el orquestador de contenedores",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son los componentes técnicos que aseguran la consistencia del snapshot de VM."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué afirmación sobre los snapshots es CORRECTA?",
+      "respuestas": [
+        {
+          "texto": "Los snapshots son backups completos y pueden sustituir a la estrategia de backup",
+          "correcta": false,
+          "explicacion": "Incorrecto. El material es muy explícito: los snapshots NO son backups y no deben sustituir a la estrategia de backup."
+        },
+        {
+          "texto": "Los snapshots no son backups; protegen frente a errores lógicos pero no contra fallos del datastore subyacente",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los snapshots son útiles para rollback rápido, pero dependen del almacenamiento subyacente y pueden ser eliminados por un atacante con acceso al hipervisor."
+        },
+        {
+          "texto": "Las cadenas largas de snapshots mejoran el rendimiento de la VM",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: las cadenas largas degradan el rendimiento y pueden corromperse si falla el datastore."
+        },
+        {
+          "texto": "Un atacante con acceso al hipervisor no puede afectar a los snapshots",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el atacante escala privilegios al hipervisor, lo primero que intentará será purgar los snapshots."
+        }
+      ]
+    },
+    {
+      "pregunta": "En entornos Kubernetes, ¿qué tipo de elemento debe gestionarse específicamente para snapshots porque NO se reconstruye desde la imagen?",
+      "respuestas": [
+        {
+          "texto": "Los Pods, ya que contienen toda la lógica de aplicación",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los Pods son efímeros y se reconstruyen desde sus imágenes."
+        },
+        {
+          "texto": "Los volúmenes persistentes (PersistentVolumeClaim), mediante VolumeSnapshot del CSI",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los datos persistentes en volúmenes requieren gestión específica vía VolumeSnapshot del CSI; los contenedores en sí son efímeros y reconstruibles desde la imagen."
+        },
+        {
+          "texto": "Los Services, porque son la representación de red estable",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los Services son objetos declarativos definidos en YAML; no requieren snapshots de datos."
+        },
+        {
+          "texto": "Los ConfigMaps, ya que contienen el estado de configuración",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ConfigMaps deben gestionarse vía control de versiones, pero no son el caso típico de snapshot persistente que requiere CSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principio fundamental de la Infraestructura como Código (IaC) aplicada a respuesta a incidentes?",
+      "respuestas": [
+        {
+          "texto": "Si el rebuild puede ejecutarse en menos de 30 minutos desde código verificado, el rebuild se convierte en la opción por defecto ante compromiso profundo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuando la infraestructura está definida en código versionado y el despliegue es rápido, el rebuild deja de ser un proceso lento y se convierte en la opción más segura por defecto."
+        },
+        {
+          "texto": "El IaC sustituye a los backups tradicionales por completo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El IaC reconstruye la infraestructura, pero los datos persistentes siguen requiriendo backups."
+        },
+        {
+          "texto": "El IaC garantiza por sí solo la ausencia de vulnerabilidades",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el código IaC despliega versiones obsoletas, reproducirá las mismas vulnerabilidades."
+        },
+        {
+          "texto": "El IaC solo es útil en entornos cloud, no on-premises",
+          "correcta": false,
+          "explicacion": "Incorrecto. El IaC se aplica tanto a cloud como a on-premises (Ansible, Terraform con providers específicos, etc.)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramientas pertenecen a la capa de 'Configuración (config management)' del ecosistema IaC?",
+      "respuestas": [
+        {
+          "texto": "Terraform, Pulumi, AWS CloudFormation",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas herramientas pertenecen a la capa de Infraestructura (provisioning)."
+        },
+        {
+          "texto": "Ansible, Chef, Puppet, SaltStack",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son las herramientas clásicas de gestión de configuración (config management) en el ecosistema IaC."
+        },
+        {
+          "texto": "Helm, Kustomize, ArgoCD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas herramientas pertenecen a la capa de orquestación de contenedores."
+        },
+        {
+          "texto": "Packer, Dockerfile, Buildah",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas son herramientas para construir imágenes base (golden images)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo deben rotarse los secretos durante un proceso de reconstrucción?",
+      "respuestas": [
+        {
+          "texto": "Una vez el sistema esté en producción, en una ventana de mantenimiento posterior",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto deja una ventana en la que el atacante puede reutilizar credenciales antiguas."
+        },
+        {
+          "texto": "ANTES de reintegrar el sistema, no después",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un aspecto crítico: las credenciales antiguas, posiblemente en manos del atacante, deben invalidarse antes de que el sistema vuelva a estar accesible."
+        },
+        {
+          "texto": "Solo si se detecta nueva actividad sospechosa",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rotación es preventiva y obligatoria, no reactiva."
+        },
+        {
+          "texto": "Solo las contraseñas de usuario, nunca las claves de servicio",
+          "correcta": false,
+          "explicacion": "Incorrecto. Todas las credenciales que estuvieron en el ámbito del sistema comprometido deben rotarse: claves API, certificados, secretos de servicio, etc."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de la jerarquía de priorización de servicios, ¿qué se debe recuperar PRIMERO?",
+      "respuestas": [
+        {
+          "texto": "Los servicios de negocio críticos (ERP, CRM, plataformas de producción)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos pertenecen al Nivel 3 y dependen de los niveles inferiores."
+        },
+        {
+          "texto": "La infraestructura fundacional: directorio/autenticación, DNS interno, NTP, PKI, gestión de red",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Nivel 1 (infraestructura fundacional) es el primero a recuperar porque todo lo demás depende de servicios como AD/LDAP, DNS, NTP y PKI."
+        },
+        {
+          "texto": "Los sistemas de backup y monitorización",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos son Nivel 2 (plataformas base), aunque también muy prioritarios."
+        },
+        {
+          "texto": "Las intranets y portales internos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pertenecen al Nivel 4 (servicios de negocio estándar)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la sincronización temporal (NTP) es crítica en la priorización de recuperación?",
+      "respuestas": [
+        {
+          "texto": "Porque sin ella los usuarios no pueden hacer login",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque puede afectar a algunos protocolos como Kerberos, no es la única razón."
+        },
+        {
+          "texto": "Porque es esencial para la consistencia de logs y la validez de certificados y tokens",
+          "correcta": true,
+          "explicacion": "¡Correcto! NTP es crítico para correlación de logs (forense), validez de tokens y certificados (que tienen ventanas de tiempo válido) y para evitar problemas de autenticación temporales."
+        },
+        {
+          "texto": "Porque mejora el rendimiento de las bases de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTP no influye directamente en el rendimiento de las BBDD."
+        },
+        {
+          "texto": "Porque permite la migración de máquinas virtuales en caliente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La migración en caliente (vMotion, Live Migration) requiere NTP, pero no es la razón principal de su criticidad en recuperación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué problema describe el efecto cascada en la recuperación sin un mapa de dependencias?",
+      "respuestas": [
+        {
+          "texto": "Que los servicios fallan al intentar recuperarse porque dependencias subyacentes (BBDD, autenticación, DNS) aún no están operativas",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin mapa de dependencias, la recuperación se convierte en ensayo y error: un servicio falla porque su BBDD no está, que falla porque la autenticación no está, etc., multiplicando el tiempo de recuperación."
+        },
+        {
+          "texto": "Que los usuarios reciben demasiadas notificaciones simultáneamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. El efecto cascada se refiere al fallo técnico encadenado, no a notificaciones."
+        },
+        {
+          "texto": "Que el SIEM se sobrecarga con eventos durante la recuperación",
+          "correcta": false,
+          "explicacion": "Incorrecto. La sobrecarga del SIEM es un fenómeno separado del efecto cascada de dependencias."
+        },
+        {
+          "texto": "Que se duplican las restauraciones por error humano",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duplicación de tareas no es lo que define el efecto cascada en este contexto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia una dependencia 'hard' de una dependencia 'soft' en un mapa de servicios?",
+      "respuestas": [
+        {
+          "texto": "Hard usa hardware físico, soft usa virtualización",
+          "correcta": false,
+          "explicacion": "Incorrecto. La distinción no se refiere al tipo de hardware."
+        },
+        {
+          "texto": "Hard significa que el servicio NO funciona sin esa dependencia (blocking); soft significa que funciona en modo degradado",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las hard dependencies son bloqueantes: sin ellas el servicio no opera. Las soft dependencies permiten funcionamiento degradado y son útiles para priorizar recuperación."
+        },
+        {
+          "texto": "Hard es síncrona, soft es asíncrona",
+          "correcta": false,
+          "explicacion": "Incorrecto. La sincronía no define la dureza de la dependencia."
+        },
+        {
+          "texto": "Hard es interna, soft es externa",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una dependencia externa puede ser hard (p.ej., un servicio de pagos), y una interna puede ser soft."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Dónde debe estar disponible el mapa de dependencias durante un incidente?",
+      "respuestas": [
+        {
+          "texto": "Únicamente en el wiki interno de la organización",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el wiki está alojado en sistemas comprometidos, el mapa puede ser inaccesible justo cuando se necesita."
+        },
+        {
+          "texto": "Offline o en un sistema independiente del que puede estar comprometido",
+          "correcta": true,
+          "explicacion": "¡Correcto! El mapa debe estar accesible incluso si la infraestructura principal está caída o comprometida. Esta es una condición clave del procedimiento."
+        },
+        {
+          "texto": "Solo en formato impreso para evitar manipulación",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque tener una copia impresa puede ser útil, no es el requisito principal y dificulta su actualización."
+        },
+        {
+          "texto": "En el mismo SIEM que el resto de información operativa",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el SIEM forma parte del entorno comprometido o caído, el mapa no estará disponible."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una de las 'reglas de oro' de la recuperación de servicios es:",
+      "respuestas": [
+        {
+          "texto": "Restaurar siempre desde el backup más reciente para minimizar pérdida de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es exactamente lo contrario: el backup más reciente es el más sospechoso."
+        },
+        {
+          "texto": "Rotar credenciales ANTES de reintegrar el sistema en red",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una de las reglas de oro: un sistema restaurado con credenciales comprometidas puede ser reinfectado en minutos."
+        },
+        {
+          "texto": "Declarar la normalidad en cuanto el servicio responda a peticiones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es justamente el indicador de éxito incorrecto."
+        },
+        {
+          "texto": "Evitar el rebuild siempre que sea posible para reducir tiempos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El rebuild es la opción más segura cuando hay IaC disponible."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué afirmación sobre validación de integridad y confianza es correcta?",
+      "respuestas": [
+        {
+          "texto": "Es un trámite final que puede omitirse si la dirección presiona por la vuelta a producción",
+          "correcta": false,
+          "explicacion": "Incorrecto. El material es claro: NO es un trámite final, sino el proceso que separa la recuperación real de una falsa sensación de seguridad."
+        },
+        {
+          "texto": "Debe ser sistemática, documentada y verificable por terceros",
+          "correcta": true,
+          "explicacion": "¡Correcto! La validación debe cumplir estas tres propiedades: ser sistemática (proceso definido), documentada (evidencia trazable) y verificable por terceros (no depender de la palabra de un solo equipo)."
+        },
+        {
+          "texto": "Solo aplica a sistemas de producción, no a entornos de staging",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación es esencial precisamente antes de promover de staging a producción."
+        },
+        {
+          "texto": "Sustituye al hardening y al escaneo de vulnerabilidades",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación incluye estos elementos como componentes, no los sustituye."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la propiedad fundamental de un hash criptográfico en el contexto de validación de integridad?",
+      "respuestas": [
+        {
+          "texto": "Cifra el contenido del fichero para que no pueda leerse",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash NO es cifrado: produce un resumen, pero no oculta el contenido original."
+        },
+        {
+          "texto": "Cualquier modificación, aunque sea de un solo bit, produce un hash completamente diferente",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esa propiedad (efecto avalancha) permite detectar alteraciones sin comparar el contenido completo, comparando solo el resumen criptográfico."
+        },
+        {
+          "texto": "Permite recuperar el contenido del fichero a partir del hash",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes son funciones de un solo sentido: no se puede recuperar el contenido original."
+        },
+        {
+          "texto": "Garantiza que el fichero no ha sido leído por terceros",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash detecta modificaciones, no lecturas; eso requeriría auditoría de accesos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué añade una firma digital sobre un simple hash?",
+      "respuestas": [
+        {
+          "texto": "Velocidad de cálculo",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma digital es más lenta que un hash, pero aporta seguridad adicional."
+        },
+        {
+          "texto": "Autenticación: certifica además quién generó el fichero (fabricante, CA, repositorio oficial)",
+          "correcta": true,
+          "explicacion": "¡Correcto! La firma digital combina hash con criptografía asimétrica (RSA, ECDSA, Ed25519) para certificar tanto integridad como origen del fichero."
+        },
+        {
+          "texto": "Reducción del tamaño del fichero",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una firma digital no comprime el fichero."
+        },
+        {
+          "texto": "Cifrado del contenido",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma digital no cifra el contenido del fichero."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la salida de 'rpm --verify', ¿qué código indica el cambio MÁS CRÍTICO desde el punto de vista de integridad?",
+      "respuestas": [
+        {
+          "texto": "T (fecha de modificación cambiada)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una fecha modificada puede deberse a operaciones legítimas y no implica cambio de contenido."
+        },
+        {
+          "texto": "5 (hash MD5/SHA diferente, indicador clave de modificación)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El código '5' indica que el hash criptográfico no coincide, lo que es el indicador clave de modificación del contenido del fichero."
+        },
+        {
+          "texto": "G (grupo cambiado)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque relevante, un cambio de grupo es menos crítico que una modificación del contenido del fichero."
+        },
+        {
+          "texto": "U (propietario cambiado)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es relevante para investigar, pero no es el indicador clave de modificación de contenido."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué fuentes son confiables para construir una base de datos de hashes de referencia ANTERIOR al incidente?",
+      "respuestas": [
+        {
+          "texto": "Hashes calculados sobre el sistema comprometido tras la detección",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el sistema está comprometido, los hashes pueden corresponder a binarios alterados; no sirven como referencia."
+        },
+        {
+          "texto": "Backups pre-incidente verificados, repositorios oficiales, golden images, sistemas gemelos no afectados y NSRL del NIST",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son las cinco fuentes confiables que cita el material. La NSRL (National Software Reference Library) del NIST contiene hashes de software legítimo conocido."
+        },
+        {
+          "texto": "Solo los hashes publicados en foros y comunidades de IT",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las fuentes no oficiales o comunitarias no son confiables como única base de hashes de referencia."
+        },
+        {
+          "texto": "Los hashes calculados por el atacante en sus comunicaciones interceptadas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto carece de sentido: un atacante no proporciona hashes de referencia confiables."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas FIM en seguridad?",
+      "respuestas": [
+        {
+          "texto": "Forensic Incident Management",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la expansión correcta del acrónimo en este contexto."
+        },
+        {
+          "texto": "File Integrity Monitoring (monitorización de integridad de ficheros)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las herramientas FIM (como AIDE y Tripwire) automatizan la verificación continua de integridad creando una base de datos de referencia y alertando sobre cambios."
+        },
+        {
+          "texto": "Firewall Integration Module",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un módulo de firewall."
+        },
+        {
+          "texto": "Federal Information Management",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde a este acrónimo en el contexto técnico tratado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es AIDE?",
+      "respuestas": [
+        {
+          "texto": "Una herramienta comercial de Tenable para escaneo de vulnerabilidades",
+          "correcta": false,
+          "explicacion": "Incorrecto. AIDE no es una herramienta de Tenable ni se centra en escaneo de vulnerabilidades."
+        },
+        {
+          "texto": "Advanced Intrusion Detection Environment, herramienta FIM de código abierto para Linux",
+          "correcta": true,
+          "explicacion": "¡Correcto! AIDE es la herramienta FIM más utilizada en entornos Linux, que construye una base de datos de referencia con múltiples atributos para verificar cambios."
+        },
+        {
+          "texto": "Un servicio de Active Directory para autenticación distribuida",
+          "correcta": false,
+          "explicacion": "Incorrecto. AIDE no es un componente de Active Directory."
+        },
+        {
+          "texto": "Un protocolo de cifrado simétrico",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un algoritmo ni protocolo criptográfico."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la salida de AIDE, el prefijo 'C' (mayúscula) indica:",
+      "respuestas": [
+        {
+          "texto": "Que el fichero ha sido creado nuevo",
+          "correcta": false,
+          "explicacion": "Incorrecto. La creación de un nuevo fichero se indica con '+'."
+        },
+        {
+          "texto": "Hash SHA diferente: el cambio más crítico, el contenido del fichero ha sido modificado",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 'C' mayúscula indica un hash SHA diferente, que es el indicador más crítico de modificación del contenido del fichero."
+        },
+        {
+          "texto": "Cambio de capacidades (capabilities)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las capacidades modificadas se indican con 'P' en el contexto de rpm; en AIDE el código de hash diferente es 'C'."
+        },
+        {
+          "texto": "Que el fichero está cifrado",
+          "correcta": false,
+          "explicacion": "Incorrecto. AIDE no marca el cifrado del fichero con un prefijo específico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué debe firmarse o protegerse la base de datos de AIDE/Tripwire fuera del sistema?",
+      "respuestas": [
+        {
+          "texto": "Para reducir el espacio en disco utilizado",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma o exportación no busca ahorrar espacio."
+        },
+        {
+          "texto": "Porque si el atacante compromete el sistema podría manipular la propia base de datos para ocultar sus modificaciones",
+          "correcta": true,
+          "explicacion": "¡Correcto! La base de datos de referencia debe estar protegida contra manipulación. Si el atacante puede modificarla, la verificación posterior no detectará sus cambios."
+        },
+        {
+          "texto": "Porque el formato es propietario y requiere licencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. AIDE es GPLv2 y no requiere licencia comercial."
+        },
+        {
+          "texto": "Para mejorar el rendimiento de las verificaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma o exportación no mejora el rendimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta tiene capacidades nativas de FIM para contenedores y Kubernetes basándose en syscalls?",
+      "respuestas": [
+        {
+          "texto": "AIDE",
+          "correcta": false,
+          "explicacion": "Incorrecto. AIDE es para servidores Linux tradicionales, no específicamente para contenedores."
+        },
+        {
+          "texto": "Tripwire OSS",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tripwire OSS también es FIM tradicional basado en agentes."
+        },
+        {
+          "texto": "Falco",
+          "correcta": true,
+          "explicacion": "¡Correcto! Falco es la herramienta FIM nativa para contenedores y Kubernetes que se basa en monitorización de syscalls, permitiendo definir reglas como detectar escrituras en directorios de binarios."
+        },
+        {
+          "texto": "Lynis",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lynis es una herramienta de auditoría de hardening para sistemas Unix/Linux, no FIM basada en syscalls para contenedores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el escaneo de vulnerabilidades post-recuperación debe ser MÁS exhaustivo que el rutinario?",
+      "respuestas": [
+        {
+          "texto": "Porque el sistema podría estar parcialmente degradado, los parches pueden tener dependencias problemáticas, y el atacante puede haber dejado configuraciones que faciliten la re-entrada",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tras un incidente confluyen varios factores que aumentan el riesgo: degradación del sistema, posibles regresiones por parches, configuraciones residuales del atacante y credenciales potencialmente persistentes."
+        },
+        {
+          "texto": "Por requerimientos legales que obligan a mayor escaneo cada año",
+          "correcta": false,
+          "explicacion": "Incorrecto. La razón no es legal, sino técnica y de control de riesgo residual."
+        },
+        {
+          "texto": "Para justificar la inversión en herramientas comerciales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La razón es de gestión de riesgo, no de justificación de inversión."
+        },
+        {
+          "texto": "Porque las herramientas necesitan recalibrarse tras un incidente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación del escaneo exhaustivo es la elevada incertidumbre tras el incidente, no aspectos de calibración."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta es Greenbone Vulnerability Manager (GVM)?",
+      "respuestas": [
+        {
+          "texto": "Una herramienta de hardening para Windows",
+          "correcta": false,
+          "explicacion": "Incorrecto. GVM es multiplataforma y se centra en escaneo de vulnerabilidades, no en hardening."
+        },
+        {
+          "texto": "El framework de gestión de vulnerabilidades evolucionado a partir de OpenVAS",
+          "correcta": true,
+          "explicacion": "¡Correcto! GVM es la evolución de OpenVAS, ampliamente usado para escaneo de vulnerabilidades en entornos profesionales y forenses (común en Kali/Debian)."
+        },
+        {
+          "texto": "Un sistema de detección de intrusos basado en red",
+          "correcta": false,
+          "explicacion": "Incorrecto. GVM no es un IDS/NDR; es un escáner de vulnerabilidades."
+        },
+        {
+          "texto": "Un firewall de aplicaciones web",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un WAF."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es OBLIGATORIO verificar específicamente el CVE explotado en el incidente original?",
+      "respuestas": [
+        {
+          "texto": "Porque convierte la recuperación en una oportunidad de repetición del ataque si el vector original sigue presente",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si la vulnerabilidad explotada no se ha corregido, el atacante puede repetir el ataque, incluso con mayor rapidez al conocer ya el entorno."
+        },
+        {
+          "texto": "Porque la regulación obliga a citar todos los CVEs en el informe final",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la documentación es importante, la verificación es por seguridad, no por mero cumplimiento."
+        },
+        {
+          "texto": "Porque las herramientas no detectan otros CVEs hasta que el principal esté resuelto",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los escáneres detectan múltiples CVEs simultáneamente."
+        },
+        {
+          "texto": "Porque cada CVE tiene un parche único que solo se aplica si se valida individualmente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Algunos parches cubren varios CVEs y la lógica de aplicación es general."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una vulnerabilidad encontrada está relacionada con el vector del incidente original pero su CVSS es Medio, ¿cómo debe tratarse?",
+      "respuestas": [
+        {
+          "texto": "Como Media: registrar en plan de remediación con plazo de 90 días",
+          "correcta": false,
+          "explicacion": "Incorrecto. El árbol de decisión indica un tratamiento más estricto cuando hay relación con el vector original."
+        },
+        {
+          "texto": "Tratamiento automático como CRÍTICA, independientemente del CVSS",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cualquier vulnerabilidad relacionada con el vector del incidente original se eleva automáticamente a tratamiento crítico, sin importar su puntuación CVSS."
+        },
+        {
+          "texto": "Como Baja, ya que el incidente ya se cerró",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cierre del incidente no degrada la criticidad de las vulnerabilidades del vector original."
+        },
+        {
+          "texto": "Se ignora si ya está documentada en el informe forense",
+          "correcta": false,
+          "explicacion": "Incorrecto. La documentación no exime de la corrección técnica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué marco español incluye medidas técnicas de configuración como referencia para el hardening?",
+      "respuestas": [
+        {
+          "texto": "RGPD (Reglamento General de Protección de Datos)",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es de privacidad/protección de datos, no un marco técnico de hardening."
+        },
+        {
+          "texto": "ENS (Esquema Nacional de Seguridad)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS es el marco legal español que incluye medidas técnicas de configuración, junto con CIS Benchmarks, DISA STIGs y NIST SP 800-123 como referencias internacionales citadas."
+        },
+        {
+          "texto": "ISO 9001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 9001 es de gestión de calidad, no de hardening de sistemas."
+        },
+        {
+          "texto": "PCI DSS",
+          "correcta": false,
+          "explicacion": "Incorrecto. PCI DSS es estándar internacional para tarjetas de pago, no español."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre los perfiles L1 y L2 de los CIS Benchmarks?",
+      "respuestas": [
+        {
+          "texto": "L1 es para Linux, L2 es para Windows",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia no es por sistema operativo; los benchmarks son específicos por sistema operativo y aplicación."
+        },
+        {
+          "texto": "L1 es básico/producción; L2 es alto/seguridad máxima",
+          "correcta": true,
+          "explicacion": "¡Correcto! L1 (básico) está pensado para entornos de producción donde no se compromete la usabilidad; L2 (alto) aplica restricciones adicionales para entornos donde la seguridad máxima es prioritaria."
+        },
+        {
+          "texto": "L1 es gratuito y L2 es de pago",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia no es de licenciamiento."
+        },
+        {
+          "texto": "L1 incluye solo configuración y L2 incluye instalación",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos perfiles cubren configuración; la diferencia es el grado de exigencia de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve OpenSCAP?",
+      "respuestas": [
+        {
+          "texto": "Para escanear puertos abiertos en la red",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso correspondería a herramientas como Nmap."
+        },
+        {
+          "texto": "Para auditoría automatizada de configuración del sistema contra perfiles SCAP (CIS, STIG, etc.) y generación de scripts de remediación",
+          "correcta": true,
+          "explicacion": "¡Correcto! OpenSCAP permite evaluar el sistema contra perfiles estandarizados (como CIS L2), generar informes y, opcionalmente, scripts de remediación bash o Ansible."
+        },
+        {
+          "texto": "Para gestión centralizada de credenciales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La gestión de credenciales corresponde a herramientas como HashiCorp Vault o AWS Secrets Manager."
+        },
+        {
+          "texto": "Para realizar escaneo dinámico de aplicaciones web (DAST)",
+          "correcta": false,
+          "explicacion": "Incorrecto. OpenSCAP no es un DAST; eso correspondería a herramientas como ZAP o Burp."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una de las verificaciones obligatorias de hardening tras la recuperación es:",
+      "respuestas": [
+        {
+          "texto": "Comprobar que existen cuentas con UID 0 distintas de root, ya que aumentan la flexibilidad administrativa",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: las cuentas con UID 0 distintas de root son sospechosas y deben investigarse."
+        },
+        {
+          "texto": "Verificar que no existen ficheros SUID/SGID inesperados, cuentas con UID 0 distintas de root, ni claves SSH no autorizadas",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son comprobaciones clásicas de hardening post-recuperación que detectan persistencia, escalada de privilegios y accesos no autorizados."
+        },
+        {
+          "texto": "Habilitar todos los servicios para diagnóstico exhaustivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hardening exige minimizar servicios, no habilitarlos todos."
+        },
+        {
+          "texto": "Permitir login de root vía SSH para facilitar la auditoría",
+          "correcta": false,
+          "explicacion": "Incorrecto. PermitRootLogin debe estar deshabilitado como buena práctica de hardening."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la recuperación de una base de datos no garantiza por sí sola la consistencia de los datos?",
+      "respuestas": [
+        {
+          "texto": "Porque las transacciones pueden haber quedado a medias, los índices pueden estar corruptos o los datos pueden haber sido manipulados de forma coherente pero fraudulenta",
+          "correcta": true,
+          "explicacion": "¡Correcto! La restauración técnica devuelve la base operativa, pero no detecta automáticamente transacciones inconsistentes, corrupción de índices ni manipulaciones internamente coherentes."
+        },
+        {
+          "texto": "Porque las bases de datos modernas siempre se restauran corruptas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una afirmación absoluta que no se sostiene."
+        },
+        {
+          "texto": "Porque los backups solo guardan datos pero no esquema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los backups normales incluyen tanto datos como esquema."
+        },
+        {
+          "texto": "Porque tras restaurar siempre hay que reescribir todos los registros manualmente",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es necesario reescribir manualmente los registros; existen mecanismos de verificación automatizada."
+        }
+      ]
+    },
+    {
+      "pregunta": "En PostgreSQL, ¿qué consulta es útil para detectar índices potencialmente corruptos tras una recuperación?",
+      "respuestas": [
+        {
+          "texto": "SELECT * FROM users WHERE active = true",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta consulta es de aplicación, no de verificación de índices."
+        },
+        {
+          "texto": "Una consulta sobre pg_indexes / pg_index filtrando por NOT pg_index.indisvalid",
+          "correcta": true,
+          "explicacion": "¡Correcto! Filtrar por índices no válidos (indisvalid = false) revela índices que pueden estar corruptos o cuya construcción se interrumpió, indicando posible corrupción tras la recuperación."
+        },
+        {
+          "texto": "VACUUM FULL TABLE *",
+          "correcta": false,
+          "explicacion": "Incorrecto. VACUUM FULL es una operación de mantenimiento, no detecta corrupción de índices."
+        },
+        {
+          "texto": "DROP DATABASE production",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar la base de datos no es una verificación; es una acción destructiva."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica permite detectar manipulación intencionada de registros si se ha implementado correctamente la protección de integridad?",
+      "respuestas": [
+        {
+          "texto": "Comparar el hash almacenado de cada registro crítico con el hash calculado a partir de sus campos",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si la organización almacena un hash criptográfico calculado en la inserción (data_hash), recalcularlo y compararlo permite detectar registros manipulados a posteriori."
+        },
+        {
+          "texto": "Eliminar todos los registros y empezar de cero",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto es destructivo y no es una técnica de detección."
+        },
+        {
+          "texto": "Aumentar el límite de transacciones por segundo",
+          "correcta": false,
+          "explicacion": "Incorrecto. La capacidad de transacciones no detecta manipulación."
+        },
+        {
+          "texto": "Cambiar a una base de datos NoSQL",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tipo de base de datos no es un mecanismo de detección."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una inconsistencia lógica como 'updated_at < created_at' en un registro puede indicar:",
+      "respuestas": [
+        {
+          "texto": "Funcionamiento normal de la aplicación tras la restauración",
+          "correcta": false,
+          "explicacion": "Incorrecto. Que un registro se haya 'modificado antes de crearse' no es funcionamiento normal."
+        },
+        {
+          "texto": "Posible manipulación de datos durante el incidente, ya que es una inconsistencia temporal lógicamente imposible",
+          "correcta": true,
+          "explicacion": "¡Correcto! Este tipo de anomalía temporal es imposible bajo funcionamiento normal y sugiere intervención manual o manipulación maliciosa de timestamps."
+        },
+        {
+          "texto": "Un fallo del NTP sin más implicaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque NTP puede causar inconsistencias de segundos, una incoherencia que invierta la lógica created/updated apunta a manipulación."
+        },
+        {
+          "texto": "Que la base de datos necesita un VACUUM",
+          "correcta": false,
+          "explicacion": "Incorrecto. VACUUM es de mantenimiento de almacenamiento; no afecta a la lógica temporal de los registros."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los 'happy paths' en el contexto de smoke tests post-recuperación?",
+      "respuestas": [
+        {
+          "texto": "Tests que prueban únicamente errores y casos extremos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los happy paths se centran en flujos sin errores, no en casos extremos."
+        },
+        {
+          "texto": "Los flujos de negocio críticos que generan más valor o impactan a más usuarios cuando funcionan correctamente",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los smoke tests deben cubrir los happy paths críticos: los flujos esperados de uso normal de funcionalidades clave, asegurando que el sistema no está fundamentalmente roto."
+        },
+        {
+          "texto": "Pruebas de carga máxima del sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las pruebas de carga corresponden a stress testing, no a smoke tests."
+        },
+        {
+          "texto": "Tests automáticos que se ejecutan solo en producción",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los smoke tests pueden ejecutarse en staging y producción; el entorno no los define."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según los principios del smoke test post-recuperación, ¿en cuánto tiempo debería ejecutarse?",
+      "respuestas": [
+        {
+          "texto": "Más de 60 minutos para asegurar exhaustividad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sería contraproducente: retrasaría la vuelta a producción o se omitiría bajo presión."
+        },
+        {
+          "texto": "Menos de 10-15 minutos, para evitar retrasos o que se omita bajo presión",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los smoke tests deben ser ejecutables rápidamente; si tardan demasiado pierden su utilidad práctica en una gestión de incidentes bajo presión."
+        },
+        {
+          "texto": "Indefinido, hasta que pase el 100% de tests funcionales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los smoke tests no son la batería completa de QA, sino una validación rápida de funcionalidades críticas."
+        },
+        {
+          "texto": "Exactamente 24 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. 24 horas es excesivo y no se ajusta al objetivo del smoke testing."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los cuatro niveles de health check, en orden creciente de profundidad?",
+      "respuestas": [
+        {
+          "texto": "Liveness → Readiness → Funcional → End-to-end",
+          "correcta": true,
+          "explicacion": "¡Correcto! Liveness (¿el proceso vive?), Readiness (¿está listo para tráfico?), Funcional (¿responden las funcionalidades críticas?) y End-to-end (¿el flujo de negocio completo funciona?)."
+        },
+        {
+          "texto": "Ping → DNS → HTTP → SSH",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son protocolos, no niveles de health check."
+        },
+        {
+          "texto": "Básico → Medio → Avanzado → Premium",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa nomenclatura no se utiliza en el material."
+        },
+        {
+          "texto": "Sintáctico → Semántico → Pragmático → Funcional",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa categorización corresponde a otros campos, no a health checks."
+        }
+      ]
+    },
+    {
+      "pregunta": "En Kubernetes, ¿qué probe se utiliza para evitar enviar tráfico a un pod hasta que esté listo para recibirlo?",
+      "respuestas": [
+        {
+          "texto": "livenessProbe",
+          "correcta": false,
+          "explicacion": "Incorrecto. La livenessProbe sirve para reiniciar el contenedor si falla, no para controlar el envío de tráfico."
+        },
+        {
+          "texto": "readinessProbe",
+          "correcta": true,
+          "explicacion": "¡Correcto! La readinessProbe controla cuándo un pod está listo para recibir tráfico; mientras falla, Kubernetes no enruta peticiones a ese pod."
+        },
+        {
+          "texto": "startupProbe",
+          "correcta": false,
+          "explicacion": "Incorrecto. La startupProbe gestiona aplicaciones con arranque lento; no es la encargada de gestionar el envío de tráfico estándar."
+        },
+        {
+          "texto": "networkProbe",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe un networkProbe estándar en Kubernetes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué utilidad tiene verificar la huella digital (fingerprint) del certificado TLS en un health check de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Detectar si el certificado ha sido sustituido por uno fraudulento durante el incidente",
+          "correcta": true,
+          "explicacion": "¡Correcto! Comparando el fingerprint actual con el del certificado legítimo documentado se puede detectar si un atacante reemplazó el certificado, posibilitando un MitM."
+        },
+        {
+          "texto": "Mejorar el rendimiento del handshake TLS",
+          "correcta": false,
+          "explicacion": "Incorrecto. La verificación de fingerprint no afecta al rendimiento del handshake."
+        },
+        {
+          "texto": "Determinar la versión exacta de OpenSSL del servidor",
+          "correcta": false,
+          "explicacion": "Incorrecto. El fingerprint es del certificado, no de la versión de OpenSSL."
+        },
+        {
+          "texto": "Verificar la cuota de tráfico utilizada",
+          "correcta": false,
+          "explicacion": "Incorrecto. El fingerprint no tiene relación con la cuota de tráfico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué cabecera HTTP de seguridad se valida en un smoke test típico?",
+      "respuestas": [
+        {
+          "texto": "X-Powered-By para confirmar la versión del framework",
+          "correcta": false,
+          "explicacion": "Incorrecto. X-Powered-By revela información del backend y suele eliminarse por seguridad, no validarse."
+        },
+        {
+          "texto": "Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options y Content-Security-Policy",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son las cabeceras de seguridad clave validadas en el smoke test del material: HSTS, anti-MIME-sniffing, anti-clickjacking y CSP."
+        },
+        {
+          "texto": "User-Agent y Accept-Language",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son cabeceras de petición del cliente, no de seguridad del servidor."
+        },
+        {
+          "texto": "Last-Modified y ETag",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son cabeceras de caché, no de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe verificar el smoke test sobre un endpoint protegido con autenticación?",
+      "respuestas": [
+        {
+          "texto": "Que devuelve un código 200 OK incluso sin token",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si devuelve 200 sin token, el control de acceso está roto."
+        },
+        {
+          "texto": "Que rechaza el acceso sin autenticación con un código 401 o 403",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un endpoint protegido debe responder 401 (no autenticado) o 403 (prohibido) cuando se accede sin credenciales válidas. Si responde 200, hay un fallo grave de control de acceso."
+        },
+        {
+          "texto": "Que devuelve siempre 500 Internal Server Error",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un 500 indica un error interno, no es la respuesta esperada para acceso no autenticado."
+        },
+        {
+          "texto": "Que solo es accesible desde la red interna por defecto",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la segmentación de red es deseable, eso no es lo que valida un smoke test del control de acceso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué debe contener el informe final de un smoke test post-recuperación?",
+      "respuestas": [
+        {
+          "texto": "Solo una marca de aprobación verbal del equipo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una aprobación verbal sin evidencia documental no es trazable ni auditable."
+        },
+        {
+          "texto": "Un veredicto claro (APTO/NO APTO) con ratio de tests pasados, evidencia documentada y criterios de éxito/fallo",
+          "correcta": true,
+          "explicacion": "¡Correcto! El smoke test debe generar un informe con criterios de éxito/fallo claros, ratio de pruebas y veredicto formal, que se incluye en el expediente del incidente."
+        },
+        {
+          "texto": "Únicamente capturas de pantalla de la aplicación funcionando",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las capturas son insuficientes y no estructuradas para servir como evidencia formal."
+        },
+        {
+          "texto": "Una lista de bugs futuros a desarrollar",
+          "correcta": false,
+          "explicacion": "Incorrecto. La lista de bugs corresponde a un backlog, no al informe de validación post-recuperación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la utilidad de integrar los smoke tests en un pipeline CI/CD de recuperación?",
+      "respuestas": [
+        {
+          "texto": "Reducir el coste de licencias de las herramientas de QA",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es de control y trazabilidad, no de coste."
+        },
+        {
+          "texto": "Automatizar la validación (AIDE, escaneo, smoke tests, validación de BBDD) y publicar resultados como artefactos auditables",
+          "correcta": true,
+          "explicacion": "¡Correcto! Integrar la validación en el pipeline asegura que cada paso (FIM, escaneo, smoke tests, integridad de BBDD) se ejecuta de forma reproducible y deja artefactos archivables como evidencia."
+        },
+        {
+          "texto": "Permitir a desarrolladores desplegar sin aprobación de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los pipelines de recuperación incluyen aprobaciones manuales (when: manual) precisamente para mantener el gobierno de seguridad."
+        },
+        {
+          "texto": "Eliminar la necesidad de un CISO durante la vuelta a producción",
+          "correcta": false,
+          "explicacion": "Incorrecto. La automatización no sustituye la responsabilidad formal del CISO en la declaración de normalidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el error MÁS frecuente y costoso en la gestión de la recuperación post-incidente?",
+      "respuestas": [
+        {
+          "texto": "Asumir que 'sistema operativo' equivale a 'sistema confiable'",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el punto crítico de partida del apartado de validación: un sistema que arranca, responde a pings y ejecuta servicios puede estar simultáneamente comprometido con rootkits, sirviendo datos manipulados o exfiltrando información."
+        },
+        {
+          "texto": "Aplicar demasiados parches a la vez",
+          "correcta": false,
+          "explicacion": "Incorrecto. La aplicación de parches es deseable; el riesgo principal no proviene de exceso de parcheo."
+        },
+        {
+          "texto": "Documentar excesivamente el proceso de recuperación",
+          "correcta": false,
+          "explicacion": "Incorrecto. La documentación es una buena práctica obligatoria, no un error."
+        },
+        {
+          "texto": "Realizar smoke tests antes del despliegue",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una buena práctica obligatoria, no un error."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el OBJETIVO último de la validación de integridad y confianza?",
+      "respuestas": [
+        {
+          "texto": "Cumplir con la normativa para evitar sanciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque puede haber implicaciones regulatorias, el objetivo último es técnico y de gestión de riesgo."
+        },
+        {
+          "texto": "Separar la recuperación real de una falsa sensación de seguridad, garantizando que el sistema es seguro, íntegro y confiable",
+          "correcta": true,
+          "explicacion": "¡Correcto! La validación es lo que distingue una recuperación real (sistema seguro, íntegro y confiable verificablemente) de una aparente (sistema que solo responde pero podría seguir comprometido)."
+        },
+        {
+          "texto": "Reducir los costes operativos de IT",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reducción de costes no es el objetivo de la validación."
+        },
+        {
+          "texto": "Justificar la inversión en herramientas de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación es un fin en sí misma desde la gestión del riesgo, no una justificación presupuestaria."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras superar el estado 'Validado', ¿qué condición se requiere para avanzar al estado 'En producción normalizada'?",
+      "respuestas": [
+        {
+          "texto": "Que el equipo técnico de operaciones lo apruebe internamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La aprobación del equipo técnico solo no es suficiente; se requiere validación formal del equipo de seguridad y declaración del CISO."
+        },
+        {
+          "texto": "Reintegración gradual y controlada con monitorización reforzada y un periodo de observación, culminando con declaración formal del CISO con respaldo del propietario del servicio",
+          "correcta": true,
+          "explicacion": "¡Correcto! El paso al estado de producción normalizada requiere reintegración gradual, monitorización reforzada (SIEM/EDR/IDS), periodo de observación (≥72h) y declaración formal por la autoridad de seguridad."
+        },
+        {
+          "texto": "Eliminar todos los logs históricos para empezar de cero",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs son evidencia y no deben eliminarse; deben protegerse como parte de la cadena de custodia."
+        },
+        {
+          "texto": "Reutilizar las credenciales originales para mantener compatibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las credenciales deben rotarse; reutilizarlas iría en contra de las reglas de oro de la recuperación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué afirmación captura mejor la esencia del proceso de recuperación tras un incidente?",
+      "respuestas": [
+        {
+          "texto": "La recuperación termina cuando el servicio responde a peticiones",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es justamente la trampa: responder ≠ estar recuperado."
+        },
+        {
+          "texto": "La recuperación termina cuando se ha validado la integridad del sistema, se ha declarado formalmente la normalidad y se ha documentado todo el proceso",
+          "correcta": true,
+          "explicacion": "¡Correcto! La recuperación no termina cuando el servicio vuelve, sino cuando se valida la integridad, se rotan credenciales, se aplica hardening, se observa el sistema en producción y se declara formalmente la normalidad con la documentación correspondiente."
+        },
+        {
+          "texto": "La recuperación nunca termina, es un proceso continuo sin cierre",
+          "correcta": false,
+          "explicacion": "Incorrecto. La recuperación tiene un cierre formal: la declaración de vuelta a la normalidad por el CISO."
+        },
+        {
+          "texto": "La recuperación termina al aplicar el primer parche disponible",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplicar un parche es solo una de las múltiples acciones del proceso global."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la jerarquía de procedimientos documentados, ¿cuál es el propósito de un SOP (Standard Operating Procedure)?",
+      "respuestas": [
+        {
+          "texto": "Indicar qué comandos o acciones exactas debe ejecutar un sistema automatizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el propósito de un Runbook (guión de ejecución técnica)."
+        },
+        {
+          "texto": "Establecer el marco normativo y organizativo del proceso completo a nivel directivo o de gestión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SOP se sitúa en el nivel más alto de abstracción, definiendo qué debe hacerse y por qué, abarcando el proceso completo de gestión."
+        },
+        {
+          "texto": "Definir el flujo de decisiones específico para un tipo de incidente a nivel de analista SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe la función de un Playbook o manual de respuesta a incidentes."
+        },
+        {
+          "texto": "Realizar la orquestación automatizada de las herramientas del SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función de una plataforma SOAR, no de un documento SOP."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de las características de un procedimiento técnico eficaz, ¿qué exige el criterio de 'Precisión técnica'?",
+      "respuestas": [
+        {
+          "texto": "Que cada acción ejecutada se vincule a un timestamp y un responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta es la definición de 'Trazabilidad'."
+        },
+        {
+          "texto": "Que los resultados sean siempre iguales independientemente del analista que los ejecute.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este concepto se refiere a la 'Reproducibilidad'."
+        },
+        {
+          "texto": "Que las entradas, condiciones y acciones estén diseñadas para ser ejecutadas por un motor SOAR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se refiere a la 'Automatización potencial'."
+        },
+        {
+          "texto": "Que cada paso sea inequívoco, proporcionando comandos exactos o rutas específicas en las consolas, en lugar de instrucciones genéricas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En lugar de decir 'aislar sistema', la precisión técnica exige indicar comandos exactos como 'ejecutar netsh interface set interface...' o las acciones específicas en la consola del EDR."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la estructura estándar de un procedimiento de respuesta, ¿qué información debe detallarse en la sección 'Condiciones de activación'?",
+      "respuestas": [
+        {
+          "texto": "Las evidencias y hashes que se deben preservar tras el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la sección 'Evidencias a preservar'."
+        },
+        {
+          "texto": "Los sistemas, roles y permisos requeridos para ejecutar la respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa información pertenece a la sección 'Alcance y precondiciones'."
+        },
+        {
+          "texto": "Alertas, umbrales e IoCs disparadores que inician el procedimiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta sección define exactamente qué eventos o indicadores motivan que el analista empiece a ejecutar el playbook."
+        },
+        {
+          "texto": "El identificador, versión, propietario y fecha de revisión del documento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos metadatos van en la 'Identificación del procedimiento'."
+        }
+      ]
+    },
+    {
+      "pregunta": "Respecto a la redacción del 'corazón' de un playbook (Acciones técnicas paso a paso), ¿cuál es un error común en implementaciones reales?",
+      "respuestas": [
+        {
+          "texto": "Utilizar el imperativo directo y la segunda persona.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la manera correcta y recomendada de redactarlo."
+        },
+        {
+          "texto": "Describir acciones en pasado o en forma impersonal, como 'se revisarán los logs'.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El temario advierte que un playbook operativo debe dar órdenes directas e inequívocas ('Accede a la consola', 'filtra por host_ip...'), no usar lenguaje pasivo o teórico."
+        },
+        {
+          "texto": "Incluir comandos exactos de PowerShell o bash.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Incluir comandos exactos es una excelente práctica de precisión técnica."
+        },
+        {
+          "texto": "Exigir que se documente el resultado en un ticket de referencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Registrar las acciones es fundamental para la trazabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "A la hora de modelar flujos de actuación antes de escribir el playbook, ¿para qué se utilizan principalmente los 'Árboles de acciones'?",
+      "respuestas": [
+        {
+          "texto": "Para identificar si una alerta es un falso positivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para la fase de triage inicial se suelen usar los Diagramas de decisión."
+        },
+        {
+          "texto": "Para traducir una técnica maliciosa de MITRE ATT&CK en un informe final.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tienen esa función documental final."
+        },
+        {
+          "texto": "Para representar visualmente estructuras secuenciales con bifurcaciones condicionales del propio playbook.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son el modelo visual del flujo de ejecución del playbook, ayudando al equipo a mapear todos los caminos posibles antes de escribirlos en texto."
+        },
+        {
+          "texto": "Para gestionar el control de versiones de los documentos en Git.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El versionado es una cuestión de repositorios y gobernanza documental, no de modelado de flujo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el temario, ¿qué rol juega la herramienta EDR en un procedimiento de respuesta a incidentes bien integrado?",
+      "respuestas": [
+        {
+          "texto": "Es el punto de entrada habitual que correlaciona logs de firewalls y servidores web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función central del SIEM."
+        },
+        {
+          "texto": "Se encarga de la orquestación, automatización y ejecución de runbooks.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función del SOAR."
+        },
+        {
+          "texto": "Proporciona visibilidad en el host, permite aislamiento de red y telemetría de procesos (Live response/hunt).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El EDR (como CrowdStrike o SentinelOne) es fundamental en incidentes de endpoint para extraer artefactos y aislar el equipo de la red."
+        },
+        {
+          "texto": "Sirve para preservar imágenes forenses de discos duros físicamente en el laboratorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque algunos EDR pueden aislar memoria, las herramientas forenses especializadas (FTK Imager, KAPE) lideran la adquisición profunda."
+        }
+      ]
+    },
+    {
+      "pregunta": "En las recomendaciones sobre herramientas forenses al ejecutar un playbook, se indica que se debe seguir un orden concreto para la adquisición. ¿Cuál es?",
+      "respuestas": [
+        {
+          "texto": "Network first (primero la red).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el aislamiento de red es rápido, en recolección forense hay otro principio prioritario."
+        },
+        {
+          "texto": "Volatile first (primero lo volátil).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se debe recoger primero la evidencia más perecedera (como la memoria RAM y procesos activos) antes de que el sistema se apague o cambie de estado."
+        },
+        {
+          "texto": "Disk first (primero el disco duro).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El disco duro es no volátil y retiene la información tras un apagado, por lo que se recoge después."
+        },
+        {
+          "texto": "Log first (primero los registros del SIEM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs del SIEM ya están centralizados y seguros, lo urgente es lo volátil en la máquina afectada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al clasificar incidentes corporativos, ¿qué técnica característica diferencia a un ataque de 'Ransomware moderno' de uno tradicional?",
+      "respuestas": [
+        {
+          "texto": "El uso exclusivo de macros en archivos de Excel.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque usen macros como entrada, no es su característica definitoria moderna."
+        },
+        {
+          "texto": "La doble extorsión: exfiltración previa de datos sensibles antes del cifrado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Robando los datos antes de cifrar, el atacante puede extorsionar a la víctima con publicar la información confidencial si no paga, maximizando la presión."
+        },
+        {
+          "texto": "La incapacidad para hacer movimiento lateral por la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al revés, el ransomware moderno abusa del movimiento lateral para cifrar la mayor cantidad posible de sistemas."
+        },
+        {
+          "texto": "El ataque directo mediante fuerza bruta a cuentas de Active Directory sin cifrar archivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si no cifra archivos o extorsiona por ellos, no es ransomware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de evasión o compromiso inicial está fuertemente asociada al 'Compromiso de cuentas' en entornos corporativos modernos?",
+      "respuestas": [
+        {
+          "texto": "Bypass de MFA mediante adversary-in-the-middle (AiTM) o fatiga de notificaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El temario destaca estas técnicas avanzadas donde los atacantes roban tokens de sesión o agotan al usuario enviando notificaciones push continuas."
+        },
+        {
+          "texto": "Ataques de denegación de servicio de aplicación (DDoS L7).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son ataques de red orientados a tumbar disponibilidad, no a robar credenciales."
+        },
+        {
+          "texto": "Path traversal para leer ficheros del sistema operativo web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta técnica pertenece a la categoría 'Explotación de vulnerabilidades'."
+        },
+        {
+          "texto": "BGP Hijacking.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ataque a nivel de infraestructura de enrutamiento global (red)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante una investigación, se detecta tráfico HTTPS hacia dominios controlados por un atacante y el uso anómalo de túneles DNS. ¿A qué tipo de incidente corresponden habitualmente estas técnicas?",
+      "respuestas": [
+        {
+          "texto": "Webshells.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las webshells proveen acceso remoto sobre servidores web comprometidos, pero el DNS tunneling es primordialmente para extracción sigilosa."
+        },
+        {
+          "texto": "Exfiltración de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La transferencia no autorizada hacia el exterior suele utilizar túneles DNS o conexiones HTTPS ofuscadas para sacar datos sin que el firewall lo alerte inmediatamente."
+        },
+        {
+          "texto": "DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DDoS volumétrico satura la red con tráfico masivo (L3/L4), no exfiltra de forma encubierta."
+        },
+        {
+          "texto": "SQL Injection.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SQLi es una explotación de vulnerabilidad contra bases de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la taxonomía de incidentes, ¿cómo se clasifica el aprovechamiento de un '0-day' o un fallo de software para inyectar código en un servidor expuesto?",
+      "respuestas": [
+        {
+          "texto": "Movimiento lateral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El movimiento lateral ocurre tras el compromiso, para moverse por la red interna."
+        },
+        {
+          "texto": "Explotación de vulnerabilidades.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Involucra el uso activo de fallos (CVEs, 0-days, RCE) en el código o la configuración del software."
+        },
+        {
+          "texto": "Ataques de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ataques de red (MitM, DDoS) se centran en los protocolos de comunicación y ancho de banda, no en la explotación de la aplicación misma."
+        },
+        {
+          "texto": "Amenaza interna (Insider threat).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un insider abusa de accesos legítimos que ya posee; un 0-day es la ruptura de los controles desde fuera o dentro abusando de un bug."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica la herramienta comúnmente utilizada para la técnica de 'Movimiento Lateral' que aprovecha funcionalidades legítimas de Windows (Living off the land):",
+      "respuestas": [
+        {
+          "texto": "Burp Suite.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Burp Suite es una herramienta para auditoría de aplicaciones web, no una utilidad nativa para movimiento lateral."
+        },
+        {
+          "texto": "PsExec / WMI.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Windows Management Instrumentation (WMI) y PsExec permiten a los administradores (y a los atacantes con credenciales) ejecutar comandos de forma remota en otros equipos de la red."
+        },
+        {
+          "texto": "Wireshark.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un analizador de paquetes de red pasivo."
+        },
+        {
+          "texto": "Nmap.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se utiliza para el descubrimiento de puertos y servicios, en fases de reconocimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al priorizar el desarrollo de procedimientos en el SOC, ¿qué fuentes se recomiendan para evaluar el criterio de 'Frecuencia histórica'?",
+      "respuestas": [
+        {
+          "texto": "Informes de marketing de los fabricantes de EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suelen estar sesgados; se prefieren fuentes neutras y globales."
+        },
+        {
+          "texto": "ENISA Threat Landscape, Verizon DBIR y el ticketing interno del SOC.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Informes consolidados de la industria (ENISA, Verizon) y el histórico real de tickets de la propia empresa dan una visión realista de qué incidentes ocurren más."
+        },
+        {
+          "texto": "Únicamente las encuestas a los empleados de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las encuestas no proveen datos estadísticos fiables sobre ciberataques técnicos."
+        },
+        {
+          "texto": "Las vulnerabilidades reportadas en foros anónimos de la dark web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden aportar inteligencia táctica, pero no una estadística fiable de frecuencia histórica corporativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el mapeo de incidentes con controles técnicos, ¿qué función principal tiene un sistema NDR (Network Detection and Response) en la investigación?",
+      "respuestas": [
+        {
+          "texto": "Detectar anomalías de comportamiento en el tráfico de red interno.",
+          "correcta": true,
+          "explicacion": "¡Correcto! A diferencia del firewall perimetral, el NDR inspecciona el tráfico este-oeste (interno) buscando desviaciones y movimientos laterales."
+        },
+        {
+          "texto": "Realizar volcados de memoria RAM de forma remota.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa capacidad corresponde al EDR y herramientas de endpoint forenses."
+        },
+        {
+          "texto": "Gestión centralizada de identidades y rotación de contraseñas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo realiza un IAM / PAM."
+        },
+        {
+          "texto": "Filtrar consultas a bases de datos relacionales en la DMZ.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para las bases de datos y ataques web se usa un WAF o un DAM (Database Activity Monitoring)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de los controles de Endpoint (Endpoint Security Controls), ¿para qué se utiliza la herramienta FIM (File Integrity Monitoring)?",
+      "respuestas": [
+        {
+          "texto": "Para bloquear IPs maliciosas a nivel de host.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace el host-based firewall."
+        },
+        {
+          "texto": "Para detectar malware conocido mediante bases de firmas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la labor tradicional de un Antivirus (AV/EPP)."
+        },
+        {
+          "texto": "Para detectar cambios no autorizados en ficheros críticos del sistema operativo o aplicaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El FIM alerta si un atacante modifica configuraciones, binarios del sistema o añade webshells al directorio web comparando los hashes del disco."
+        },
+        {
+          "texto": "Para analizar los procesos en ejecución inyectados en memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a memory forensics y capacidades avanzadas de EDR."
+        }
+      ]
+    },
+    {
+      "pregunta": "El 'Principio de cobertura cruzada' en el diseño de una arquitectura de respuesta establece que:",
+      "respuestas": [
+        {
+          "texto": "Todos los controles deben ser del mismo fabricante para asegurar compatibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La homogeneidad total puede generar puntos ciegos si ese fabricante falla."
+        },
+        {
+          "texto": "Se deben cifrar tanto los datos en reposo como en tránsito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un principio de protección de datos, no el principio de cobertura cruzada en controles de detección."
+        },
+        {
+          "texto": "Al menos dos tipos de control independientes deben ser capaces de detectar y contener cada categoría de incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si falla el control perimetral (ej. firewall), un control interno (ej. EDR o IAM) debe ser capaz de saltar y frenar el ataque."
+        },
+        {
+          "texto": "Los incidentes de P0 siempre son responsabilidad de equipos externos (MSSP).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad operativa depende del modelo de la empresa, no de un principio de cobertura de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa proporcionada en el temario, ¿qué dos incidentes están clasificados como Prioridad P0 y exigen un tiempo máximo de contención de 15 a 30 minutos?",
+      "respuestas": [
+        {
+          "texto": "Ataque de red (DDoS) y Acceso no autorizado (fuerza bruta).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos están calificados como P2, con tiempos más holgados (hasta 4 horas)."
+        },
+        {
+          "texto": "Explotación de vulnerabilidades y Webshells.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son P1, con tiempos de respuesta en torno a 1-2 horas."
+        },
+        {
+          "texto": "Ransomware, Movimiento lateral y Exfiltración de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos incidentes tienen un impacto crítico e inmediato en el negocio, catalogados como P0 y requiriendo acciones de contención en ventanas sub-30 minutos, idealmente automatizadas."
+        },
+        {
+          "texto": "Insider Threat y SPAM masivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el insider threat puede ser grave, no es la triada principal que menciona la matriz estricta de P0."
+        }
+      ]
+    },
+    {
+      "pregunta": "Respecto a la automatización mediante SOAR en la gestión de incidentes P0 (como el ransomware), el documento especifica que:",
+      "respuestas": [
+        {
+          "texto": "La intervención manual humana debe ser siempre el primer y único método de respuesta para evitar aislar equipos útiles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Depender de humanos para aislar un P0 genera una latencia inaceptable para el negocio."
+        },
+        {
+          "texto": "Los procedimientos manuales son el 'fallback' (respaldo) ante fallo del SOAR, no el modo principal de operación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para cumplir SLAs de contención < 15 minutos en un Ransomware, la plataforma SOAR debe orquestar los bloqueos inmediatos de forma automática."
+        },
+        {
+          "texto": "Solo se automatiza la redacción del reporte a la dirección general.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se deben automatizar aislamientos de endpoint, suspensiones de cuentas, etc."
+        },
+        {
+          "texto": "El SOAR debe solicitar autorización a la Policía antes de actuar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SOAR es una herramienta interna, no requiere conectarse con fuerzas del estado para contener una IP."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja aporta mapear los incidentes (ej. Compromiso de cuentas) con la matriz MITRE ATT&CK (ej. T1078 Valid Accounts)?",
+      "respuestas": [
+        {
+          "texto": "Permite clasificar los incidentes para enviar automáticamente la denuncia judicial al formato de la Interpol.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE no tiene propósitos judiciales directos."
+        },
+        {
+          "texto": "Asegura el cumplimiento total con la directiva NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS2 exige reporte y resiliencia, pero mapear con MITRE no otorga 'cumplimiento total' automático."
+        },
+        {
+          "texto": "Facilita la búsqueda de IoCs asociados, la creación de reglas de detección y obtener inteligencia de los grupos APT conocidos que usan esas técnicas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al identificar la técnica estandarizada, el equipo puede buscar defensas pre-escritas por la comunidad para ese TTP concreto."
+        },
+        {
+          "texto": "Modifica el cifrado de las contraseñas del Active Directory por métodos más seguros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un marco de conocimiento, no un software activo que fortifique sistemas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la clasificación de técnicas representativas (ID de MITRE), la técnica 'T1486 Data Encrypted for Impact' es la firma táctica central de:",
+      "respuestas": [
+        {
+          "texto": "Ataques DDoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DDoS inunda conexiones (Network Denial of Service), no cifra datos."
+        },
+        {
+          "texto": "Ransomware.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cifrado de datos para generar un impacto y extorsionar es la definición táctica exacta del Ransomware en el marco ATT&CK."
+        },
+        {
+          "texto": "Exfiltración sigilosa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La exfiltración copia y saca los datos, pero no los cifra para destruir el acceso interno del usuario."
+        },
+        {
+          "texto": "Compromiso de cuentas mediante Credential Stuffing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son técnicas de acceso inicial, no de impacto final por cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia un Playbook de la fase de 'Gestión de decisiones' puramente directiva?",
+      "respuestas": [
+        {
+          "texto": "El playbook es creado por los abogados y la gestión de decisiones la hace el SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El playbook lo crea ingeniería de seguridad, no los abogados."
+        },
+        {
+          "texto": "El playbook detalla el 'qué' técnico y el flujo de pasos ejecutables por el SOC, mientras que la gestión directiva se enfoca en comunicar riesgos y cumplir la ley.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El playbook es el brazo táctico de la operación, enfocado en contener y erradicar, separado de las decisiones de negocio/crisis."
+        },
+        {
+          "texto": "El playbook sólo aplica a incidentes físicos (robo de portátiles) y la dirección a ciberataques.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los playbooks de IR cubren ataques digitales principalmente."
+        },
+        {
+          "texto": "Ambos términos son sinónimos absolutos y pueden intercambiarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario distingue fuertemente entre la gestión técnica y la de decisiones estratégicas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un procedimiento dice 'se revisarán los logs de firewall para localizar la intrusión', ¿qué pilar de diseño de Playbooks está incumpliendo?",
+      "respuestas": [
+        {
+          "texto": "Automatización potencial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque dificulta la automatización, el error raíz es de redacción."
+        },
+        {
+          "texto": "Precisión técnica y reproducibilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una instrucción ambigua ('se revisarán' vs 'revisa la tabla X con el query Y'), lo que impedirá que distintos analistas hagan exactamente el mismo análisis."
+        },
+        {
+          "texto": "Gestión de crisis reputacional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con la prensa o clientes."
+        },
+        {
+          "texto": "Alineación con MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Podría cumplir con MITRE, pero sigue estando mal redactado procedimentalmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la matriz de controles de identidad, la herramienta 'UEBA' (User and Entity Behavior Analytics) tiene como función principal en la respuesta a incidentes:",
+      "respuestas": [
+        {
+          "texto": "Bloquear masivamente direcciones IP de países sancionados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es trabajo de reglas de Geoblocking en el Firewall perimetral."
+        },
+        {
+          "texto": "Detectar comportamientos anómalos de los usuarios basados en desviaciones de su actividad habitual (baseline).",
+          "correcta": true,
+          "explicacion": "¡Correcto! UEBA levanta alertas si un usuario de contabilidad de repente descarga 50GB de código fuente a las 3 de la mañana, indicando un posible compromiso de cuenta."
+        },
+        {
+          "texto": "Forzar la rotación del doble factor de autenticación cada 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rotación o gestión de MFA recae en el IdP o sistema IAM, no en UEBA que es un sistema analítico."
+        },
+        {
+          "texto": "Auditar la ejecución de comandos PowerShell en los servidores de bases de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es labor del EDR o Sysmon."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la contención de un incidente categorizado como 'Webshell' (Prioridad P1), ¿cuál de las siguientes acciones es una respuesta adecuada descrita en el temario?",
+      "respuestas": [
+        {
+          "texto": "Apagar todos los servicios cloud de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Medida desproporcionada que rompe la continuidad."
+        },
+        {
+          "texto": "Ignorar la webshell hasta que se disponga de un parche del fabricante del S.O.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dejar una webshell activa permite el acceso remoto continuo del atacante."
+        },
+        {
+          "texto": "Aislamiento del servidor, localizar y preservar la webshell, y analizar access.log/error.log para identificar el vector de subida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta es la secuencia procedimental documentada para aislar la amenaza y entender por dónde logró entrar el código malicioso."
+        },
+        {
+          "texto": "Desconectar la cuenta del CEO del Active Directory.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una webshell es un archivo malicioso en el servidor web; suspender al CEO no remedia esta vulnerabilidad específica."
+        }
+      ]
+    },
+    {
+      "pregunta": "El concepto 'Virtual Patching' (Parcheo Virtual) se utiliza frecuentemente durante la respuesta a incidentes de Explotación de vulnerabilidades. ¿En qué herramienta primaria suele implementarse?",
+      "respuestas": [
+        {
+          "texto": "En el EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El EDR no parchea vulnerabilidades de aplicaciones web de forma primaria."
+        },
+        {
+          "texto": "En el sistema de gestión de identidades (IAM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. IAM maneja accesos y cuentas, no explotas a nivel web o de software."
+        },
+        {
+          "texto": "En el WAF (Web Application Firewall) o IPS.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se crea una regla específica que inspecciona el tráfico de red y bloquea el payload malicioso antes de que alcance al servidor vulnerable."
+        },
+        {
+          "texto": "Directamente modificando el código fuente en producción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Modificar el código fuente es 'parcheo real' o remediación, no un parche virtual perimetral."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega la herramienta 'BloodHound' cuando el equipo de respuesta SOC L2/L3 atiende un incidente de Movimiento Lateral?",
+      "respuestas": [
+        {
+          "texto": "Captura paquetes de red puros en formato PCAP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace Wireshark, Zeek o tcpdump."
+        },
+        {
+          "texto": "Realiza un análisis forense de la memoria RAM infectada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es labor de Volatility o herramientas similares."
+        },
+        {
+          "texto": "Mapea y visualiza las relaciones de privilegios y rutas de ataque dentro del Active Directory.",
+          "correcta": true,
+          "explicacion": "¡Correcto! BloodHound ayuda a la defensa a comprender qué cuentas tienen privilegios excesivos y cómo el atacante puede 'saltar' por la red usando teoría de grafos."
+        },
+        {
+          "texto": "Elimina automáticamente las webshells de servidores Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene función de limpieza de ficheros."
+        }
+      ]
+    },
+    {
+      "pregunta": "La priorización de procedimientos en el SOC pondera si el incidente requiere una 'Reacción inmediata'. Si un incidente la exige de forma absoluta (P0), ¿qué condiciona sobre el procedimiento operativo?",
+      "respuestas": [
+        {
+          "texto": "Que debe requerir obligatoriamente la firma del comité legal antes de cada paso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso anularía la velocidad necesaria para la reacción inmediata."
+        },
+        {
+          "texto": "Que debe ser ejecutable de forma autónoma (o altamente automatizada vía SOAR) sin aprobación jerárquica previa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los P0 (como un Ransomware) tienen ventanas temporales diminutas; si el analista necesita permiso directivo para aislar un servidor, el ataque cifrará la red."
+        },
+        {
+          "texto": "Que el incidente se notifique a la prensa en los primeros 10 minutos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación externa se maneja por crisis, y requiere validaciones profundas, nunca se improvisa rápido."
+        },
+        {
+          "texto": "Que solo puede ser resuelto por una empresa externa proveedora del SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El equipo interno debe tener capacidad de reacción en primera instancia."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de incidentes, si un analista necesita herramientas para correlacionar hashes y dominios C2 maliciosos con bases de datos externas de inteligencia, ¿a qué familia de plataformas recurrirá?",
+      "respuestas": [
+        {
+          "texto": "MDM (Mobile Device Management).",
+          "correcta": false,
+          "explicacion": "Incorrecto. MDM se usa para administrar políticas de móviles y tablets corporativos."
+        },
+        {
+          "texto": "Threat Intelligence (ej. MISP, VirusTotal, OpenCTI).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas plataformas permiten el enriquecimiento buscando si ese dominio o hash ya es conocido como malicioso por la comunidad global de seguridad."
+        },
+        {
+          "texto": "DLP (Data Loss Prevention).",
+          "correcta": false,
+          "explicacion": "Incorrecto. DLP protege contra la fuga de documentos y datos estructurados internos, no provee inteligencia de amenazas globales de forma primaria."
+        },
+        {
+          "texto": "GPO (Group Policy Object).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las GPOs administran configuraciones en Windows, no consultan reputación de IPs o malware."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si en la evaluación de una alerta, la rama del diagrama de decisión pregunta: '¿El sistema está en producción crítica o tiene datos sensibles?' y la respuesta es 'NO', seguido de 'No hay movimiento lateral', ¿qué severidad se asume típicamente?",
+      "respuestas": [
+        {
+          "texto": "Severidad CRÍTICA - P1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Falta el componente de criticidad o expansión del atacante."
+        },
+        {
+          "texto": "Prioridad P0 absoluta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo si involucra ransomware, sistemas críticos o exfiltraciones."
+        },
+        {
+          "texto": "Severidad BAJA o MEDIA.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Según el diagrama de triage inicial del temario, si los IoCs están confirmados pero no afectan producción crítica ni evidencian avance por la red, se catalogan de severidad inferior a P1."
+        },
+        {
+          "texto": "Se desestima automáticamente como Falso Positivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Que sea baja severidad no significa que sea un error de la herramienta (FP); debe investigarse, aunque sin la urgencia de P1."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué se hace referencia en la ingeniería de procedimientos con 'Registro en ticket de referencia' durante el paso a paso de las acciones técnicas?",
+      "respuestas": [
+        {
+          "texto": "A la obligación de mantener un audit trail (rastro de auditoría) dejando constancia escrita de los pasos que el analista va completando en el sistema ITSM (Ticketing).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el pilar de Trazabilidad: cada acción (ej. bloquear IP) debe quedar sellada en el ticket para justificación técnica o legal posterior."
+        },
+        {
+          "texto": "A la compra de una licencia temporal para el software EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene que ver con transacciones o 'tickets' de compra/soporte comercial."
+        },
+        {
+          "texto": "A la eliminación de registros Windows antiguos para hacer espacio en el disco duro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar registros va contra toda práctica forense."
+        },
+        {
+          "texto": "A imprimir físicamente en papel todas las alertas de la semana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se registra en un ITSM digital, centralizado e inmutable."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica cuál de las siguientes opciones describe mejor la técnica de 'Credential Stuffing':",
+      "respuestas": [
+        {
+          "texto": "Adivinar la contraseña mediante diccionarios combinando nombres de familiares del objetivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un ataque de fuerza bruta por diccionario."
+        },
+        {
+          "texto": "Interceptar el tráfico WiFi en una cafetería para robar la cookie de sesión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un ataque Man-in-the-Middle o Sniffing."
+        },
+        {
+          "texto": "Utilizar listas masivas de pares usuario/contraseña filtradas de otros sitios web vulnerados para probar suerte de forma automatizada en portales corporativos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aprovecha que muchos usuarios reciclan su misma contraseña en docenas de servicios distintos."
+        },
+        {
+          "texto": "Extraer los tickets Kerberos de la memoria de los controladores de dominio (LSASS dump).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Pass-the-Ticket o dump de LSASS, ocurre ya dentro de la red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro del ciclo de Extorsión, ¿cómo opera un atacante que amenaza a una empresa con sufrir daños reputacionales si no paga, independientemente de que la empresa recupere los datos por su cuenta?",
+      "respuestas": [
+        {
+          "texto": "Usa Ransomware de cifrado simple.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si la empresa restaura los backups, el atacante de cifrado simple pierde su moneda de cambio."
+        },
+        {
+          "texto": "Abusa de Vulnerabilidades de día cero (0-day) en bucle infinito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El 0-day es la forma de entrar, no el mecanismo final de extorsión."
+        },
+        {
+          "texto": "Mediante la Exfiltración previa de datos sensibles (Double Extortion).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El atacante ha extraído los datos; aunque la empresa restaure copias de seguridad de sus servidores, el atacante los chantajea con publicar documentos privados o confidenciales de clientes."
+        },
+        {
+          "texto": "Activando webshells durmientes cada 3 meses.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un método de persistencia, pero no constituye la técnica de extorsión en sí misma."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa de incidentes, si un analista necesita bloquear el canal Command and Control (C2) hacia el exterior en un incidente de Ransomware activo, ¿qué herramienta primaria utilizará?",
+      "respuestas": [
+        {
+          "texto": "EDR y NGFW (Next-Generation Firewall).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El EDR aísla el equipo host y el NGFW bloquea las IPs/Dominios del C2 en el perímetro de salida de la red."
+        },
+        {
+          "texto": "DLP y CASB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son herramientas utilizadas para frenar fugas de información, no orientadas al bloqueo de red de botnets o ransomware primario."
+        },
+        {
+          "texto": "Identity Provider (IAM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. IAM revoca accesos de usuarios, no controla flujos de tráfico a dominios remotos."
+        },
+        {
+          "texto": "Backups offline.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los backups restauran datos, no bloquean comunicaciones activas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la contención de 'Ataques de red (DDoS)', el temario sugiere el uso de Anti-DDoS (ISP / scrubbing centers). ¿Cuál es la finalidad de estos servicios?",
+      "respuestas": [
+        {
+          "texto": "Identificar el nombre real del hacker responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La atribución de atacantes (DDoS suelen ser botnets) no es el propósito de un scrubbing center."
+        },
+        {
+          "texto": "Instalar parches de seguridad en los servidores web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería labor de gestión de parches (Tenable, WSUS), no de la defensa de red."
+        },
+        {
+          "texto": "Absorber el tráfico malicioso masivo (volumétrico) y limpiar/filtrar el caudal permitiendo que el tráfico legítimo llegue a la infraestructura corporativa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Servicios como Cloudflare o anti-DDoS en el ISP actúan de 'paraguas' antes de que el ataque sature la tubería de internet de la propia empresa."
+        },
+        {
+          "texto": "Cifrar todo el tráfico interno en un túnel de capa 2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería una tecnología VPN."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la creación de un diagrama de flujo para decidir si un servidor ha sido comprometido por una Webshell, una comprobación típica del analista sobre los registros 'access.log' sería revisar:",
+      "respuestas": [
+        {
+          "texto": "Si existen peticiones de recursos que resulten en la exfiltración masiva de datos en ficheros PDF legítimos de la web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque posible en exfiltración, la webshell no se detecta principalmente descargando PDFs públicos."
+        },
+        {
+          "texto": "Accesos de puertos RDP (3389) desde internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RDP no se refleja en los logs del servidor web (access.log de Apache/Nginx)."
+        },
+        {
+          "texto": "Respuestas HTTP 200 OK en páginas raras (ej. image_upload.php) seguidas de comandos ejecutados en parámetros extraños y User-Agents anómalos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las webshells se camuflan en subidas de ficheros aparentemente lícitas y luego reciben comandos vía GET/POST que se reflejan en el access.log."
+        },
+        {
+          "texto": "Fallos repetidos de contraseñas de cuentas de correo de Outlook.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos errores se auditan en los logs de Exchange / Microsoft 365, no en el log del servidor web de la aplicación afectada."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1755 @@
+{
+  "tema": "Ciberseguridad - Ingeniería de Procedimientos y Clasificación Operativa",
+  "preguntas": [
+    {
+      "pregunta": "Según la jerarquía de procedimientos documentados, ¿cuál es el propósito de un SOP (Standard Operating Procedure)?",
+      "respuestas": [
+        {
+          "texto": "Indicar qué comandos o acciones exactas debe ejecutar un sistema automatizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el propósito de un Runbook (guión de ejecución técnica)."
+        },
+        {
+          "texto": "Establecer el marco normativo y organizativo del proceso completo a nivel directivo o de gestión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SOP se sitúa en el nivel más alto de abstracción, definiendo qué debe hacerse y por qué, abarcando el proceso completo de gestión."
+        },
+        {
+          "texto": "Definir el flujo de decisiones específico para un tipo de incidente a nivel de analista SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe la función de un Playbook o manual de respuesta a incidentes."
+        },
+        {
+          "texto": "Realizar la orquestación automatizada de las herramientas del SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función de una plataforma SOAR, no de un documento SOP."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de las características de un procedimiento técnico eficaz, ¿qué exige el criterio de 'Precisión técnica'?",
+      "respuestas": [
+        {
+          "texto": "Que cada acción ejecutada se vincule a un timestamp y un responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta es la definición de 'Trazabilidad'."
+        },
+        {
+          "texto": "Que los resultados sean siempre iguales independientemente del analista que los ejecute.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este concepto se refiere a la 'Reproducibilidad'."
+        },
+        {
+          "texto": "Que las entradas, condiciones y acciones estén diseñadas para ser ejecutadas por un motor SOAR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se refiere a la 'Automatización potencial'."
+        },
+        {
+          "texto": "Que cada paso sea inequívoco, proporcionando comandos exactos o rutas específicas en las consolas, en lugar de instrucciones genéricas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En lugar de decir 'aislar sistema', la precisión técnica exige indicar comandos exactos como 'ejecutar netsh interface set interface...' o las acciones específicas en la consola del EDR."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la estructura estándar de un procedimiento de respuesta, ¿qué información debe detallarse en la sección 'Condiciones de activación'?",
+      "respuestas": [
+        {
+          "texto": "Las evidencias y hashes que se deben preservar tras el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la sección 'Evidencias a preservar'."
+        },
+        {
+          "texto": "Los sistemas, roles y permisos requeridos para ejecutar la respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa información pertenece a la sección 'Alcance y precondiciones'."
+        },
+        {
+          "texto": "Alertas, umbrales e IoCs disparadores que inician el procedimiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta sección define exactamente qué eventos o indicadores motivan que el analista empiece a ejecutar el playbook."
+        },
+        {
+          "texto": "El identificador, versión, propietario y fecha de revisión del documento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos metadatos van en la 'Identificación del procedimiento'."
+        }
+      ]
+    },
+    {
+      "pregunta": "Respecto a la redacción del 'corazón' de un playbook (Acciones técnicas paso a paso), ¿cuál es un error común en implementaciones reales?",
+      "respuestas": [
+        {
+          "texto": "Utilizar el imperativo directo y la segunda persona.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la manera correcta y recomendada de redactarlo."
+        },
+        {
+          "texto": "Describir acciones en pasado o en forma impersonal, como 'se revisarán los logs'.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El temario advierte que un playbook operativo debe dar órdenes directas e inequívocas ('Accede a la consola', 'filtra por host_ip...'), no usar lenguaje pasivo o teórico."
+        },
+        {
+          "texto": "Incluir comandos exactos de PowerShell o bash.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Incluir comandos exactos es una excelente práctica de precisión técnica."
+        },
+        {
+          "texto": "Exigir que se documente el resultado en un ticket de referencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Registrar las acciones es fundamental para la trazabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "A la hora de modelar flujos de actuación antes de escribir el playbook, ¿para qué se utilizan principalmente los 'Árboles de acciones'?",
+      "respuestas": [
+        {
+          "texto": "Para identificar si una alerta es un falso positivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para la fase de triage inicial se suelen usar los Diagramas de decisión."
+        },
+        {
+          "texto": "Para traducir una técnica maliciosa de MITRE ATT&CK en un informe final.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tienen esa función documental final."
+        },
+        {
+          "texto": "Para representar visualmente estructuras secuenciales con bifurcaciones condicionales del propio playbook.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son el modelo visual del flujo de ejecución del playbook, ayudando al equipo a mapear todos los caminos posibles antes de escribirlos en texto."
+        },
+        {
+          "texto": "Para gestionar el control de versiones de los documentos en Git.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El versionado es una cuestión de repositorios y gobernanza documental, no de modelado de flujo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el temario, ¿qué rol juega la herramienta EDR en un procedimiento de respuesta a incidentes bien integrado?",
+      "respuestas": [
+        {
+          "texto": "Es el punto de entrada habitual que correlaciona logs de firewalls y servidores web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función central del SIEM."
+        },
+        {
+          "texto": "Se encarga de la orquestación, automatización y ejecución de runbooks.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la función del SOAR."
+        },
+        {
+          "texto": "Proporciona visibilidad en el host, permite aislamiento de red y telemetría de procesos (Live response/hunt).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El EDR (como CrowdStrike o SentinelOne) es fundamental en incidentes de endpoint para extraer artefactos y aislar el equipo de la red."
+        },
+        {
+          "texto": "Sirve para preservar imágenes forenses de discos duros físicamente en el laboratorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque algunos EDR pueden aislar memoria, las herramientas forenses especializadas (FTK Imager, KAPE) lideran la adquisición profunda."
+        }
+      ]
+    },
+    {
+      "pregunta": "En las recomendaciones sobre herramientas forenses al ejecutar un playbook, se indica que se debe seguir un orden concreto para la adquisición. ¿Cuál es?",
+      "respuestas": [
+        {
+          "texto": "Network first (primero la red).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el aislamiento de red es rápido, en recolección forense hay otro principio prioritario."
+        },
+        {
+          "texto": "Volatile first (primero lo volátil).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se debe recoger primero la evidencia más perecedera (como la memoria RAM y procesos activos) antes de que el sistema se apague o cambie de estado."
+        },
+        {
+          "texto": "Disk first (primero el disco duro).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El disco duro es no volátil y retiene la información tras un apagado, por lo que se recoge después."
+        },
+        {
+          "texto": "Log first (primero los registros del SIEM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs del SIEM ya están centralizados y seguros, lo urgente es lo volátil en la máquina afectada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al clasificar incidentes corporativos, ¿qué técnica característica diferencia a un ataque de 'Ransomware moderno' de uno tradicional?",
+      "respuestas": [
+        {
+          "texto": "El uso exclusivo de macros en archivos de Excel.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque usen macros como entrada, no es su característica definitoria moderna."
+        },
+        {
+          "texto": "La doble extorsión: exfiltración previa de datos sensibles antes del cifrado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Robando los datos antes de cifrar, el atacante puede extorsionar a la víctima con publicar la información confidencial si no paga, maximizando la presión."
+        },
+        {
+          "texto": "La incapacidad para hacer movimiento lateral por la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al revés, el ransomware moderno abusa del movimiento lateral para cifrar la mayor cantidad posible de sistemas."
+        },
+        {
+          "texto": "El ataque directo mediante fuerza bruta a cuentas de Active Directory sin cifrar archivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si no cifra archivos o extorsiona por ellos, no es ransomware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de evasión o compromiso inicial está fuertemente asociada al 'Compromiso de cuentas' en entornos corporativos modernos?",
+      "respuestas": [
+        {
+          "texto": "Bypass de MFA mediante adversary-in-the-middle (AiTM) o fatiga de notificaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El temario destaca estas técnicas avanzadas donde los atacantes roban tokens de sesión o agotan al usuario enviando notificaciones push continuas."
+        },
+        {
+          "texto": "Ataques de denegación de servicio de aplicación (DDoS L7).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son ataques de red orientados a tumbar disponibilidad, no a robar credenciales."
+        },
+        {
+          "texto": "Path traversal para leer ficheros del sistema operativo web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta técnica pertenece a la categoría 'Explotación de vulnerabilidades'."
+        },
+        {
+          "texto": "BGP Hijacking.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ataque a nivel de infraestructura de enrutamiento global (red)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante una investigación, se detecta tráfico HTTPS hacia dominios controlados por un atacante y el uso anómalo de túneles DNS. ¿A qué tipo de incidente corresponden habitualmente estas técnicas?",
+      "respuestas": [
+        {
+          "texto": "Webshells.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las webshells proveen acceso remoto sobre servidores web comprometidos, pero el DNS tunneling es primordialmente para extracción sigilosa."
+        },
+        {
+          "texto": "Exfiltración de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La transferencia no autorizada hacia el exterior suele utilizar túneles DNS o conexiones HTTPS ofuscadas para sacar datos sin que el firewall lo alerte inmediatamente."
+        },
+        {
+          "texto": "DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DDoS volumétrico satura la red con tráfico masivo (L3/L4), no exfiltra de forma encubierta."
+        },
+        {
+          "texto": "SQL Injection.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SQLi es una explotación de vulnerabilidad contra bases de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la taxonomía de incidentes, ¿cómo se clasifica el aprovechamiento de un '0-day' o un fallo de software para inyectar código en un servidor expuesto?",
+      "respuestas": [
+        {
+          "texto": "Movimiento lateral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El movimiento lateral ocurre tras el compromiso, para moverse por la red interna."
+        },
+        {
+          "texto": "Explotación de vulnerabilidades.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Involucra el uso activo de fallos (CVEs, 0-days, RCE) en el código o la configuración del software."
+        },
+        {
+          "texto": "Ataques de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ataques de red (MitM, DDoS) se centran en los protocolos de comunicación y ancho de banda, no en la explotación de la aplicación misma."
+        },
+        {
+          "texto": "Amenaza interna (Insider threat).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un insider abusa de accesos legítimos que ya posee; un 0-day es la ruptura de los controles desde fuera o dentro abusando de un bug."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica la herramienta comúnmente utilizada para la técnica de 'Movimiento Lateral' que aprovecha funcionalidades legítimas de Windows (Living off the land):",
+      "respuestas": [
+        {
+          "texto": "Burp Suite.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Burp Suite es una herramienta para auditoría de aplicaciones web, no una utilidad nativa para movimiento lateral."
+        },
+        {
+          "texto": "PsExec / WMI.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Windows Management Instrumentation (WMI) y PsExec permiten a los administradores (y a los atacantes con credenciales) ejecutar comandos de forma remota en otros equipos de la red."
+        },
+        {
+          "texto": "Wireshark.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un analizador de paquetes de red pasivo."
+        },
+        {
+          "texto": "Nmap.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se utiliza para el descubrimiento de puertos y servicios, en fases de reconocimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al priorizar el desarrollo de procedimientos en el SOC, ¿qué fuentes se recomiendan para evaluar el criterio de 'Frecuencia histórica'?",
+      "respuestas": [
+        {
+          "texto": "Informes de marketing de los fabricantes de EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suelen estar sesgados; se prefieren fuentes neutras y globales."
+        },
+        {
+          "texto": "ENISA Threat Landscape, Verizon DBIR y el ticketing interno del SOC.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Informes consolidados de la industria (ENISA, Verizon) y el histórico real de tickets de la propia empresa dan una visión realista de qué incidentes ocurren más."
+        },
+        {
+          "texto": "Únicamente las encuestas a los empleados de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las encuestas no proveen datos estadísticos fiables sobre ciberataques técnicos."
+        },
+        {
+          "texto": "Las vulnerabilidades reportadas en foros anónimos de la dark web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden aportar inteligencia táctica, pero no una estadística fiable de frecuencia histórica corporativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el mapeo de incidentes con controles técnicos, ¿qué función principal tiene un sistema NDR (Network Detection and Response) en la investigación?",
+      "respuestas": [
+        {
+          "texto": "Detectar anomalías de comportamiento en el tráfico de red interno.",
+          "correcta": true,
+          "explicacion": "¡Correcto! A diferencia del firewall perimetral, el NDR inspecciona el tráfico este-oeste (interno) buscando desviaciones y movimientos laterales."
+        },
+        {
+          "texto": "Realizar volcados de memoria RAM de forma remota.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa capacidad corresponde al EDR y herramientas de endpoint forenses."
+        },
+        {
+          "texto": "Gestión centralizada de identidades y rotación de contraseñas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo realiza un IAM / PAM."
+        },
+        {
+          "texto": "Filtrar consultas a bases de datos relacionales en la DMZ.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para las bases de datos y ataques web se usa un WAF o un DAM (Database Activity Monitoring)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de los controles de Endpoint (Endpoint Security Controls), ¿para qué se utiliza la herramienta FIM (File Integrity Monitoring)?",
+      "respuestas": [
+        {
+          "texto": "Para bloquear IPs maliciosas a nivel de host.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace el host-based firewall."
+        },
+        {
+          "texto": "Para detectar malware conocido mediante bases de firmas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la labor tradicional de un Antivirus (AV/EPP)."
+        },
+        {
+          "texto": "Para detectar cambios no autorizados en ficheros críticos del sistema operativo o aplicaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El FIM alerta si un atacante modifica configuraciones, binarios del sistema o añade webshells al directorio web comparando los hashes del disco."
+        },
+        {
+          "texto": "Para analizar los procesos en ejecución inyectados en memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a memory forensics y capacidades avanzadas de EDR."
+        }
+      ]
+    },
+    {
+      "pregunta": "El 'Principio de cobertura cruzada' en el diseño de una arquitectura de respuesta establece que:",
+      "respuestas": [
+        {
+          "texto": "Todos los controles deben ser del mismo fabricante para asegurar compatibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La homogeneidad total puede generar puntos ciegos si ese fabricante falla."
+        },
+        {
+          "texto": "Se deben cifrar tanto los datos en reposo como en tránsito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un principio de protección de datos, no el principio de cobertura cruzada en controles de detección."
+        },
+        {
+          "texto": "Al menos dos tipos de control independientes deben ser capaces de detectar y contener cada categoría de incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si falla el control perimetral (ej. firewall), un control interno (ej. EDR o IAM) debe ser capaz de saltar y frenar el ataque."
+        },
+        {
+          "texto": "Los incidentes de P0 siempre son responsabilidad de equipos externos (MSSP).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad operativa depende del modelo de la empresa, no de un principio de cobertura de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa proporcionada en el temario, ¿qué dos incidentes están clasificados como Prioridad P0 y exigen un tiempo máximo de contención de 15 a 30 minutos?",
+      "respuestas": [
+        {
+          "texto": "Ataque de red (DDoS) y Acceso no autorizado (fuerza bruta).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estos están calificados como P2, con tiempos más holgados (hasta 4 horas)."
+        },
+        {
+          "texto": "Explotación de vulnerabilidades y Webshells.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son P1, con tiempos de respuesta en torno a 1-2 horas."
+        },
+        {
+          "texto": "Ransomware, Movimiento lateral y Exfiltración de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos incidentes tienen un impacto crítico e inmediato en el negocio, catalogados como P0 y requiriendo acciones de contención en ventanas sub-30 minutos, idealmente automatizadas."
+        },
+        {
+          "texto": "Insider Threat y SPAM masivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el insider threat puede ser grave, no es la triada principal que menciona la matriz estricta de P0."
+        }
+      ]
+    },
+    {
+      "pregunta": "Respecto a la automatización mediante SOAR en la gestión de incidentes P0 (como el ransomware), el documento especifica que:",
+      "respuestas": [
+        {
+          "texto": "La intervención manual humana debe ser siempre el primer y único método de respuesta para evitar aislar equipos útiles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Depender de humanos para aislar un P0 genera una latencia inaceptable para el negocio."
+        },
+        {
+          "texto": "Los procedimientos manuales son el 'fallback' (respaldo) ante fallo del SOAR, no el modo principal de operación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para cumplir SLAs de contención < 15 minutos en un Ransomware, la plataforma SOAR debe orquestar los bloqueos inmediatos de forma automática."
+        },
+        {
+          "texto": "Solo se automatiza la redacción del reporte a la dirección general.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se deben automatizar aislamientos de endpoint, suspensiones de cuentas, etc."
+        },
+        {
+          "texto": "El SOAR debe solicitar autorización a la Policía antes de actuar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SOAR es una herramienta interna, no requiere conectarse con fuerzas del estado para contener una IP."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja aporta mapear los incidentes (ej. Compromiso de cuentas) con la matriz MITRE ATT&CK (ej. T1078 Valid Accounts)?",
+      "respuestas": [
+        {
+          "texto": "Permite clasificar los incidentes para enviar automáticamente la denuncia judicial al formato de la Interpol.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE no tiene propósitos judiciales directos."
+        },
+        {
+          "texto": "Asegura el cumplimiento total con la directiva NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS2 exige reporte y resiliencia, pero mapear con MITRE no otorga 'cumplimiento total' automático."
+        },
+        {
+          "texto": "Facilita la búsqueda de IoCs asociados, la creación de reglas de detección y obtener inteligencia de los grupos APT conocidos que usan esas técnicas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al identificar la técnica estandarizada, el equipo puede buscar defensas pre-escritas por la comunidad para ese TTP concreto."
+        },
+        {
+          "texto": "Modifica el cifrado de las contraseñas del Active Directory por métodos más seguros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un marco de conocimiento, no un software activo que fortifique sistemas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la clasificación de técnicas representativas (ID de MITRE), la técnica 'T1486 Data Encrypted for Impact' es la firma táctica central de:",
+      "respuestas": [
+        {
+          "texto": "Ataques DDoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DDoS inunda conexiones (Network Denial of Service), no cifra datos."
+        },
+        {
+          "texto": "Ransomware.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cifrado de datos para generar un impacto y extorsionar es la definición táctica exacta del Ransomware en el marco ATT&CK."
+        },
+        {
+          "texto": "Exfiltración sigilosa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La exfiltración copia y saca los datos, pero no los cifra para destruir el acceso interno del usuario."
+        },
+        {
+          "texto": "Compromiso de cuentas mediante Credential Stuffing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son técnicas de acceso inicial, no de impacto final por cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia un Playbook de la fase de 'Gestión de decisiones' puramente directiva?",
+      "respuestas": [
+        {
+          "texto": "El playbook es creado por los abogados y la gestión de decisiones la hace el SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El playbook lo crea ingeniería de seguridad, no los abogados."
+        },
+        {
+          "texto": "El playbook detalla el 'qué' técnico y el flujo de pasos ejecutables por el SOC, mientras que la gestión directiva se enfoca en comunicar riesgos y cumplir la ley.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El playbook es el brazo táctico de la operación, enfocado en contener y erradicar, separado de las decisiones de negocio/crisis."
+        },
+        {
+          "texto": "El playbook sólo aplica a incidentes físicos (robo de portátiles) y la dirección a ciberataques.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los playbooks de IR cubren ataques digitales principalmente."
+        },
+        {
+          "texto": "Ambos términos son sinónimos absolutos y pueden intercambiarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario distingue fuertemente entre la gestión técnica y la de decisiones estratégicas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un procedimiento dice 'se revisarán los logs de firewall para localizar la intrusión', ¿qué pilar de diseño de Playbooks está incumpliendo?",
+      "respuestas": [
+        {
+          "texto": "Automatización potencial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque dificulta la automatización, el error raíz es de redacción."
+        },
+        {
+          "texto": "Precisión técnica y reproducibilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una instrucción ambigua ('se revisarán' vs 'revisa la tabla X con el query Y'), lo que impedirá que distintos analistas hagan exactamente el mismo análisis."
+        },
+        {
+          "texto": "Gestión de crisis reputacional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con la prensa o clientes."
+        },
+        {
+          "texto": "Alineación con MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Podría cumplir con MITRE, pero sigue estando mal redactado procedimentalmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la matriz de controles de identidad, la herramienta 'UEBA' (User and Entity Behavior Analytics) tiene como función principal en la respuesta a incidentes:",
+      "respuestas": [
+        {
+          "texto": "Bloquear masivamente direcciones IP de países sancionados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es trabajo de reglas de Geoblocking en el Firewall perimetral."
+        },
+        {
+          "texto": "Detectar comportamientos anómalos de los usuarios basados en desviaciones de su actividad habitual (baseline).",
+          "correcta": true,
+          "explicacion": "¡Correcto! UEBA levanta alertas si un usuario de contabilidad de repente descarga 50GB de código fuente a las 3 de la mañana, indicando un posible compromiso de cuenta."
+        },
+        {
+          "texto": "Forzar la rotación del doble factor de autenticación cada 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rotación o gestión de MFA recae en el IdP o sistema IAM, no en UEBA que es un sistema analítico."
+        },
+        {
+          "texto": "Auditar la ejecución de comandos PowerShell en los servidores de bases de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es labor del EDR o Sysmon."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la contención de un incidente categorizado como 'Webshell' (Prioridad P1), ¿cuál de las siguientes acciones es una respuesta adecuada descrita en el temario?",
+      "respuestas": [
+        {
+          "texto": "Apagar todos los servicios cloud de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Medida desproporcionada que rompe la continuidad."
+        },
+        {
+          "texto": "Ignorar la webshell hasta que se disponga de un parche del fabricante del S.O.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dejar una webshell activa permite el acceso remoto continuo del atacante."
+        },
+        {
+          "texto": "Aislamiento del servidor, localizar y preservar la webshell, y analizar access.log/error.log para identificar el vector de subida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta es la secuencia procedimental documentada para aislar la amenaza y entender por dónde logró entrar el código malicioso."
+        },
+        {
+          "texto": "Desconectar la cuenta del CEO del Active Directory.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una webshell es un archivo malicioso en el servidor web; suspender al CEO no remedia esta vulnerabilidad específica."
+        }
+      ]
+    },
+    {
+      "pregunta": "El concepto 'Virtual Patching' (Parcheo Virtual) se utiliza frecuentemente durante la respuesta a incidentes de Explotación de vulnerabilidades. ¿En qué herramienta primaria suele implementarse?",
+      "respuestas": [
+        {
+          "texto": "En el EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El EDR no parchea vulnerabilidades de aplicaciones web de forma primaria."
+        },
+        {
+          "texto": "En el sistema de gestión de identidades (IAM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. IAM maneja accesos y cuentas, no explotas a nivel web o de software."
+        },
+        {
+          "texto": "En el WAF (Web Application Firewall) o IPS.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se crea una regla específica que inspecciona el tráfico de red y bloquea el payload malicioso antes de que alcance al servidor vulnerable."
+        },
+        {
+          "texto": "Directamente modificando el código fuente en producción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Modificar el código fuente es 'parcheo real' o remediación, no un parche virtual perimetral."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega la herramienta 'BloodHound' cuando el equipo de respuesta SOC L2/L3 atiende un incidente de Movimiento Lateral?",
+      "respuestas": [
+        {
+          "texto": "Captura paquetes de red puros en formato PCAP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace Wireshark, Zeek o tcpdump."
+        },
+        {
+          "texto": "Realiza un análisis forense de la memoria RAM infectada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es labor de Volatility o herramientas similares."
+        },
+        {
+          "texto": "Mapea y visualiza las relaciones de privilegios y rutas de ataque dentro del Active Directory.",
+          "correcta": true,
+          "explicacion": "¡Correcto! BloodHound ayuda a la defensa a comprender qué cuentas tienen privilegios excesivos y cómo el atacante puede 'saltar' por la red usando teoría de grafos."
+        },
+        {
+          "texto": "Elimina automáticamente las webshells de servidores Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene función de limpieza de ficheros."
+        }
+      ]
+    },
+    {
+      "pregunta": "La priorización de procedimientos en el SOC pondera si el incidente requiere una 'Reacción inmediata'. Si un incidente la exige de forma absoluta (P0), ¿qué condiciona sobre el procedimiento operativo?",
+      "respuestas": [
+        {
+          "texto": "Que debe requerir obligatoriamente la firma del comité legal antes de cada paso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso anularía la velocidad necesaria para la reacción inmediata."
+        },
+        {
+          "texto": "Que debe ser ejecutable de forma autónoma (o altamente automatizada vía SOAR) sin aprobación jerárquica previa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los P0 (como un Ransomware) tienen ventanas temporales diminutas; si el analista necesita permiso directivo para aislar un servidor, el ataque cifrará la red."
+        },
+        {
+          "texto": "Que el incidente se notifique a la prensa en los primeros 10 minutos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación externa se maneja por crisis, y requiere validaciones profundas, nunca se improvisa rápido."
+        },
+        {
+          "texto": "Que solo puede ser resuelto por una empresa externa proveedora del SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El equipo interno debe tener capacidad de reacción en primera instancia."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de incidentes, si un analista necesita herramientas para correlacionar hashes y dominios C2 maliciosos con bases de datos externas de inteligencia, ¿a qué familia de plataformas recurrirá?",
+      "respuestas": [
+        {
+          "texto": "MDM (Mobile Device Management).",
+          "correcta": false,
+          "explicacion": "Incorrecto. MDM se usa para administrar políticas de móviles y tablets corporativos."
+        },
+        {
+          "texto": "Threat Intelligence (ej. MISP, VirusTotal, OpenCTI).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas plataformas permiten el enriquecimiento buscando si ese dominio o hash ya es conocido como malicioso por la comunidad global de seguridad."
+        },
+        {
+          "texto": "DLP (Data Loss Prevention).",
+          "correcta": false,
+          "explicacion": "Incorrecto. DLP protege contra la fuga de documentos y datos estructurados internos, no provee inteligencia de amenazas globales de forma primaria."
+        },
+        {
+          "texto": "GPO (Group Policy Object).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las GPOs administran configuraciones en Windows, no consultan reputación de IPs o malware."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si en la evaluación de una alerta, la rama del diagrama de decisión pregunta: '¿El sistema está en producción crítica o tiene datos sensibles?' y la respuesta es 'NO', seguido de 'No hay movimiento lateral', ¿qué severidad se asume típicamente?",
+      "respuestas": [
+        {
+          "texto": "Severidad CRÍTICA - P1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Falta el componente de criticidad o expansión del atacante."
+        },
+        {
+          "texto": "Prioridad P0 absoluta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo si involucra ransomware, sistemas críticos o exfiltraciones."
+        },
+        {
+          "texto": "Severidad BAJA o MEDIA.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Según el diagrama de triage inicial del temario, si los IoCs están confirmados pero no afectan producción crítica ni evidencian avance por la red, se catalogan de severidad inferior a P1."
+        },
+        {
+          "texto": "Se desestima automáticamente como Falso Positivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Que sea baja severidad no significa que sea un error de la herramienta (FP); debe investigarse, aunque sin la urgencia de P1."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué se hace referencia en la ingeniería de procedimientos con 'Registro en ticket de referencia' durante el paso a paso de las acciones técnicas?",
+      "respuestas": [
+        {
+          "texto": "A la obligación de mantener un audit trail (rastro de auditoría) dejando constancia escrita de los pasos que el analista va completando en el sistema ITSM (Ticketing).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el pilar de Trazabilidad: cada acción (ej. bloquear IP) debe quedar sellada en el ticket para justificación técnica o legal posterior."
+        },
+        {
+          "texto": "A la compra de una licencia temporal para el software EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene que ver con transacciones o 'tickets' de compra/soporte comercial."
+        },
+        {
+          "texto": "A la eliminación de registros Windows antiguos para hacer espacio en el disco duro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar registros va contra toda práctica forense."
+        },
+        {
+          "texto": "A imprimir físicamente en papel todas las alertas de la semana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se registra en un ITSM digital, centralizado e inmutable."
+        }
+      ]
+    },
+    {
+      "pregunta": "Identifica cuál de las siguientes opciones describe mejor la técnica de 'Credential Stuffing':",
+      "respuestas": [
+        {
+          "texto": "Adivinar la contraseña mediante diccionarios combinando nombres de familiares del objetivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un ataque de fuerza bruta por diccionario."
+        },
+        {
+          "texto": "Interceptar el tráfico WiFi en una cafetería para robar la cookie de sesión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un ataque Man-in-the-Middle o Sniffing."
+        },
+        {
+          "texto": "Utilizar listas masivas de pares usuario/contraseña filtradas de otros sitios web vulnerados para probar suerte de forma automatizada en portales corporativos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aprovecha que muchos usuarios reciclan su misma contraseña en docenas de servicios distintos."
+        },
+        {
+          "texto": "Extraer los tickets Kerberos de la memoria de los controladores de dominio (LSASS dump).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Pass-the-Ticket o dump de LSASS, ocurre ya dentro de la red."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro del ciclo de Extorsión, ¿cómo opera un atacante que amenaza a una empresa con sufrir daños reputacionales si no paga, independientemente de que la empresa recupere los datos por su cuenta?",
+      "respuestas": [
+        {
+          "texto": "Usa Ransomware de cifrado simple.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si la empresa restaura los backups, el atacante de cifrado simple pierde su moneda de cambio."
+        },
+        {
+          "texto": "Abusa de Vulnerabilidades de día cero (0-day) en bucle infinito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El 0-day es la forma de entrar, no el mecanismo final de extorsión."
+        },
+        {
+          "texto": "Mediante la Exfiltración previa de datos sensibles (Double Extortion).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El atacante ha extraído los datos; aunque la empresa restaure copias de seguridad de sus servidores, el atacante los chantajea con publicar documentos privados o confidenciales de clientes."
+        },
+        {
+          "texto": "Activando webshells durmientes cada 3 meses.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un método de persistencia, pero no constituye la técnica de extorsión en sí misma."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la Matriz Operativa de incidentes, si un analista necesita bloquear el canal Command and Control (C2) hacia el exterior en un incidente de Ransomware activo, ¿qué herramienta primaria utilizará?",
+      "respuestas": [
+        {
+          "texto": "EDR y NGFW (Next-Generation Firewall).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El EDR aísla el equipo host y el NGFW bloquea las IPs/Dominios del C2 en el perímetro de salida de la red."
+        },
+        {
+          "texto": "DLP y CASB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son herramientas utilizadas para frenar fugas de información, no orientadas al bloqueo de red de botnets o ransomware primario."
+        },
+        {
+          "texto": "Identity Provider (IAM).",
+          "correcta": false,
+          "explicacion": "Incorrecto. IAM revoca accesos de usuarios, no controla flujos de tráfico a dominios remotos."
+        },
+        {
+          "texto": "Backups offline.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los backups restauran datos, no bloquean comunicaciones activas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la contención de 'Ataques de red (DDoS)', el temario sugiere el uso de Anti-DDoS (ISP / scrubbing centers). ¿Cuál es la finalidad de estos servicios?",
+      "respuestas": [
+        {
+          "texto": "Identificar el nombre real del hacker responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La atribución de atacantes (DDoS suelen ser botnets) no es el propósito de un scrubbing center."
+        },
+        {
+          "texto": "Instalar parches de seguridad en los servidores web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería labor de gestión de parches (Tenable, WSUS), no de la defensa de red."
+        },
+        {
+          "texto": "Absorber el tráfico malicioso masivo (volumétrico) y limpiar/filtrar el caudal permitiendo que el tráfico legítimo llegue a la infraestructura corporativa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Servicios como Cloudflare o anti-DDoS en el ISP actúan de 'paraguas' antes de que el ataque sature la tubería de internet de la propia empresa."
+        },
+        {
+          "texto": "Cifrar todo el tráfico interno en un túnel de capa 2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería una tecnología VPN."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la creación de un diagrama de flujo para decidir si un servidor ha sido comprometido por una Webshell, una comprobación típica del analista sobre los registros 'access.log' sería revisar:",
+      "respuestas": [
+        {
+          "texto": "Si existen peticiones de recursos que resulten en la exfiltración masiva de datos en ficheros PDF legítimos de la web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque posible en exfiltración, la webshell no se detecta principalmente descargando PDFs públicos."
+        },
+        {
+          "texto": "Accesos de puertos RDP (3389) desde internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RDP no se refleja en los logs del servidor web (access.log de Apache/Nginx)."
+        },
+        {
+          "texto": "Respuestas HTTP 200 OK en páginas raras (ej. image_upload.php) seguidas de comandos ejecutados en parámetros extraños y User-Agents anómalos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las webshells se camuflan en subidas de ficheros aparentemente lícitas y luego reciben comandos vía GET/POST que se reflejan en el access.log."
+        },
+        {
+          "texto": "Fallos repetidos de contraseñas de cuentas de correo de Outlook.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos errores se auditan en los logs de Exchange / Microsoft 365, no en el log del servidor web de la aplicación afectada."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el modelo de 4 niveles de escalado interno, ¿cuál es el tiempo de actuación máximo recomendado para que el Nivel 1 (SOC) complete el triaje y decida el escalado?",
+      "respuestas": [
+        {
+          "texto": "1 a 2 horas, para asegurar que no haya falsos positivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esperar tanto tiempo en el Nivel 1 retrasa la respuesta y entra en la categoría de escalado tardío."
+        },
+        {
+          "texto": "15-30 minutos desde la detección del evento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Nivel 1 debe ser ágil; su función no es resolver incidentes complejos, sino detectar, clasificar, contener inicialmente y decidir el escalado en menos de media hora."
+        },
+        {
+          "texto": "24 horas, coincidiendo con el límite de alerta temprana de la NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El plazo legal de la NIS2 aplica a la organización para notificar a reguladores, no al tiempo de triaje del Nivel 1."
+        },
+        {
+          "texto": "No hay límite de tiempo, depende de la complejidad del malware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si es complejo, debe escalar inmediatamente por falta de capacidades."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al hablar de escalado interno, ¿por qué el temario recalca que el escalado NO es una 'delegación de responsabilidad'?",
+      "respuestas": [
+        {
+          "texto": "Porque el nivel que escala pierde toda visibilidad del incidente para no interferir.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al contrario, el nivel que escala mantiene visibilidad y puede ser requerido para soporte."
+        },
+        {
+          "texto": "Porque escalar implica transferir el ticket a un nivel con mayor capacidad, pero el nivel origen sigue brindando soporte y contexto, y no se desentiende del caso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Escalar es pedir refuerzo y transferir la gestión activa, pero el equipo inicial retiene contexto y da soporte, no es un 'lavado de manos'."
+        },
+        {
+          "texto": "Porque legalmente solo el CISO puede ser el responsable final (Accountable).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el CISO es Accountable, la frase hace referencia a la operativa de escalado entre niveles técnicos."
+        },
+        {
+          "texto": "Porque el ticket siempre debe cerrarlo quien lo abrió.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ticket lo cierra quien resuelve o post-procesa el incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un analista de Nivel 1 identifica un tipo de malware que no está cubierto por ningún playbook existente, ¿bajo qué criterio debe escalar el incidente?",
+      "respuestas": [
+        {
+          "texto": "Falta de capacidades operativas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuando el nivel actual no dispone de las herramientas, conocimientos o playbooks para continuar, debe escalar por falta de capacidades."
+        },
+        {
+          "texto": "Severidad basada en scoring alto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Puede ser un malware de bajo impacto, pero al no saber cómo proceder, se escala por capacidad, no por score."
+        },
+        {
+          "texto": "Necesidad de decisiones estratégicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las decisiones estratégicas involucran a Negocio/CISO, no a una limitación técnica inicial."
+        },
+        {
+          "texto": "Afectación regulatoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Desconocer un malware no implica automáticamente que haya una brecha notificable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un indicador claro de que un equipo está sufriendo el anti-patrón de 'Escalado Prematuro'?",
+      "respuestas": [
+        {
+          "texto": "Incidentes que permanecen en Nivel 1 más del tiempo estipulado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un indicador de Escalado Tardío."
+        },
+        {
+          "texto": "Alta tasa de incidentes escalados que se resuelven en Nivel 2 usando las mismas herramientas y acciones disponibles en Nivel 1.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el Nivel 2 lo resuelve sin capacidades extras, significa que el Nivel 1 escaló por ansiedad o falta de confianza antes de agotar sus opciones."
+        },
+        {
+          "texto": "Brecha significativa entre el tiempo de detección real y la creación del ticket.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso indica un problema de detección o monitorización."
+        },
+        {
+          "texto": "Involucrar a la alta dirección en todos los falsos positivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es un error, el anti-patrón de escalado prematuro técnico se mide generalmente entre N1 y N2."
+        }
+      ]
+    },
+    {
+      "pregunta": "Ante un escalado externo a un proveedor MSSP, ¿qué error logístico crítico se debe evitar durante el transcurso de un incidente activo?",
+      "respuestas": [
+        {
+          "texto": "Asumir capacidades no contratadas y tener que concederles accesos técnicos en pleno incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El MSSP debe tener todo el alcance y accesos pre-configurados. Improvisar accesos durante la crisis retrasa la respuesta e introduce riesgos."
+        },
+        {
+          "texto": "Notificarles del incidente en los primeros 15 minutos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Notificarles rápidamente es lo correcto si son el SOC primario."
+        },
+        {
+          "texto": "Compartir la lista completa de IoCs detectados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compartir IoCs con el MSSP es necesario para que ajusten las defensas."
+        },
+        {
+          "texto": "Verificar la confidencialidad de los datos compartidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es una obligación continua."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el Reglamento DORA, aplicable al sector financiero, ¿cuál es el plazo de notificación de la alerta inicial ante un incidente TIC grave?",
+      "respuestas": [
+        {
+          "texto": "72 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el plazo general para notificar brechas al RGPD o el informe intermedio en DORA."
+        },
+        {
+          "texto": "24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el plazo de alerta temprana bajo la Directiva NIS2."
+        },
+        {
+          "texto": "4 horas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! DORA establece un plazo ultracorto de 4 horas para la alerta inicial a las autoridades supervisoras financieras."
+        },
+        {
+          "texto": "Inmediato (0 horas).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La notificación inmediata suele aplicar a estándares como PCI DSS, pero DORA fija 4 horas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué riesgo operativo fundamental se asume al denunciar un incidente ante las Fuerzas y Cuerpos de Seguridad (FFCCSS) en las fases iniciales?",
+      "respuestas": [
+        {
+          "texto": "Que el incidente sea publicado inmediatamente en el BOE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las investigaciones policiales tienen secreto de sumario, no se publican."
+        },
+        {
+          "texto": "Que la empresa reciba una multa automática de Interior.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las fuerzas de seguridad investigan el delito, no sancionan a las víctimas."
+        },
+        {
+          "texto": "Ceder parcialmente el control de la investigación, lo que puede interferir con la continuidad operativa si requieren acceso o requisan sistemas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La policía sigue sus propios tiempos y protocolos forenses, lo que puede chocar con la necesidad de la empresa de restaurar el servicio rápidamente."
+        },
+        {
+          "texto": "Que el ataque se intensifique por represalias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un riesgo directo operativo de la propia denuncia policial."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para intercambiar información técnica y sensible con un CERT oficial (ej. INCIBE-CERT), ¿qué mecanismo seguro de comunicación se recomienda explícitamente?",
+      "respuestas": [
+        {
+          "texto": "Aplicaciones de mensajería como Telegram o WhatsApp.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son aptas para el envío de detalles técnicos forenses o institucionales."
+        },
+        {
+          "texto": "Correo electrónico estándar para agilizar la entrega.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El correo en claro expone la información técnica a intercepciones."
+        },
+        {
+          "texto": "Correo electrónico cifrado utilizando las claves PGP/GPG que estos organismos publican.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos organismos publican claves públicas PGP para garantizar que el canal mantenga la confidencialidad y autenticidad del envío."
+        },
+        {
+          "texto": "Carpetas públicas en la nube con ofuscación de nombres.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un método inseguro y no cumple con los estándares institucionales."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la matriz de control de información compartida con entidades externas, ¿qué información NO debe compartirse 'Nunca' con los medios de comunicación?",
+      "respuestas": [
+        {
+          "texto": "Indicadores técnicos (IoCs), detalles de sistemas comprometidos y el origen del ataque (hipótesis).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compartir IoCs o hipótesis técnicas con la prensa expone defensas, alerta al atacante y puede derivar en desinformación."
+        },
+        {
+          "texto": "Que se ha producido un incidente cibernético.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ocultar la existencia del incidente suele ser imposible y contraproducente a nivel comunicativo."
+        },
+        {
+          "texto": "Si los servicios volverán a estar operativos pronto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dar estimaciones de servicio a clientes y medios es parte de la gestión de crisis."
+        },
+        {
+          "texto": "El número de teléfono de atención al cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Facilitar contacto a los afectados es obligatorio y buena práctica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de un playbook de escalado automatizado, ¿cuál es el propósito de configurar un 'Fallback Automático' (ruta de emergencia)?",
+      "respuestas": [
+        {
+          "texto": "Restaurar los servidores afectados desde la nube si fallan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En este contexto hablamos de flujos de escalado personal/organizativo, no de redundancia de servidores."
+        },
+        {
+          "texto": "Escalar automáticamente al siguiente nivel o al responsable de guardia si el analista receptor no confirma el escalado en el tiempo establecido.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El fallback asegura que un incidente crítico no quede en 'el limbo' simplemente porque alguien no vio la notificación."
+        },
+        {
+          "texto": "Cerrar el ticket de incidente si nadie lo atiende en 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería una negligencia grave de seguridad."
+        },
+        {
+          "texto": "Enviar una alerta general a toda la plantilla de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El fallback escala jerárquicamente, no notifica indiscriminadamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la integración SIEM-Ticketing, ¿qué funcionalidad previene el 'gap de responsabilidad' en el que nadie sabe si un escalado ha sido atendido?",
+      "respuestas": [
+        {
+          "texto": "La degradación del ticket a un score menor tras 1 hora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ignorar un ticket no hace que baje su severidad."
+        },
+        {
+          "texto": "El cierre automático de comentarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso cortaría la colaboración técnica."
+        },
+        {
+          "texto": "La doble notificación: confirmación al que escala y alerta al que recibe, además de requerir un 'ACK' (acuse de recibo) trazable en el sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Exigir una confirmación bidireccional garantiza que el receptor asume la responsabilidad del caso formalmente."
+        },
+        {
+          "texto": "Llamar por teléfono sin registrarlo en el sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El teléfono es útil pero rompe la trazabilidad y auditoría si no se registra."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el ciclo de vida del incidente, ¿qué caracteriza al estado 'IN DECISION'?",
+      "respuestas": [
+        {
+          "texto": "Que el ticket está resuelto pero el SOC está decidiendo si envía el informe final.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si estuviera resuelto, sería estado RESOLVED."
+        },
+        {
+          "texto": "Que el incidente se encuentra deliberándose y a la espera de una decisión estratégica o técnica de alto nivel (ej. CISO/Comité) que no puede tomarse automáticamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un estado de pausa activa donde se requiere autoridad. Tiempos elevados en este estado indican burocracia o falta de playbooks de decisión claros."
+        },
+        {
+          "texto": "Que el SIEM está procesando los logs para decidir la severidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El procesamiento del SIEM ocurre en milisegundos durante la alerta, antes de estar en fase de decisión manual."
+        },
+        {
+          "texto": "Que el ataque ha sido contenido por el SOAR automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo movería hacia estados de erradicación o RESOLVED."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué implica el subestado 'Awaiting External' en la gestión de tickets de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Que el atacante sigue operando desde el exterior.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un estado de alerta o contención activa, no de espera ('Awaiting')."
+        },
+        {
+          "texto": "Que la resolución depende de una acción bloqueante de una entidad externa (proveedor cloud, AEPD, policía) y requiere seguimiento activo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El equipo técnico está en pausa esperando un trámite de un tercero, por lo que debe monitorizarse para evitar estancamientos."
+        },
+        {
+          "texto": "Que el incidente se ha enviado al gabinete de prensa externo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El gabinete de prensa gestiona la comunicación, no frena la resolución técnica del ticket."
+        },
+        {
+          "texto": "Que se está esperando un parche del fabricante de antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Podría aplicar, pero 'Awaiting External' suele reflejar trámites operativos mayores (ej. desbloqueo de un tenant Cloud)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un ticket de incidente NO debe cerrarse definitivamente (RESOLVED - CLOSED) hasta que...",
+      "respuestas": [
+        {
+          "texto": "El equipo haya sido formateado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La limpieza es solo la erradicación."
+        },
+        {
+          "texto": "El cliente confirme que puede acceder a sus datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la recuperación del servicio, pero falta un paso interno de gestión."
+        },
+        {
+          "texto": "Se haya completado el análisis post-incidente, documentando las lecciones aprendidas (lessons learned) y las acciones de mejora.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cerrar el ticket sin registrar qué falló y cómo mejorar es una oportunidad de aprendizaje organizativo perdida."
+        },
+        {
+          "texto": "Pasen al menos 30 días desde el ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay un tiempo de espera pasivo obligatorio; se cierra al completar el flujo forense y documental."
+        }
+      ]
+    },
+    {
+      "pregunta": "El modelo de estados contempla transiciones no lineales, ¿qué ocurre si un incidente marcado como 'RESOLVED' sufre una reinfección por nueva evidencia?",
+      "respuestas": [
+        {
+          "texto": "Se borra el ticket antiguo y se crea uno nuevo desde cero sin relacionarlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Perdería todo el contexto y evidencias previas."
+        },
+        {
+          "texto": "El ticket retrocede al estado 'OPEN' (reapertura) justificando el motivo, requiriendo un nuevo escalado desde el principio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ciclo de vida permite retroceder estados si la realidad técnica demuestra que la amenaza no estaba totalmente erradicada."
+        },
+        {
+          "texto": "Se ignora y se trata como un problema de mantenimiento de TI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una reinfección es un fallo grave de erradicación de ciberseguridad."
+        },
+        {
+          "texto": "El ticket pasa al estado 'IN DECISION' de manera permanente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Quedará en decisión si requiere escalar, pero su estado global retrocede a requerir acciones técnicas activas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al integrar a 'Legal' en la gestión del incidente, ¿qué aspecto es crucial mantener respecto a las comunicaciones con los asesores para evitar exposición en juicios?",
+      "respuestas": [
+        {
+          "texto": "Enviar en copia oculta al regulador todos los mensajes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso violaría la defensa jurídica de la empresa."
+        },
+        {
+          "texto": "Proteger y documentar el 'privilegio abogado-cliente' estableciendo un canal directo con el asesor legal sin pasar por múltiples niveles jerárquicos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En muchos sistemas, estas comunicaciones están protegidas; si se diseminan libremente por la empresa, pueden perder ese privilegio de confidencialidad."
+        },
+        {
+          "texto": "Borrar todos los correos enviados a Legal una vez acabe el ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Destruir correspondencia vulnera la trazabilidad y la retención de pruebas."
+        },
+        {
+          "texto": "Legal no debe enterarse del incidente hasta que el SOC finalice su informe.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Legal debe involucrarse de inmediato ante sospecha de brechas (plazo 72h RGPD)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Existe una tensión clásica cuando Comunicación quiere publicar un mensaje para calmar a los clientes, pero el equipo técnico considera que el contenido es inexacto. ¿Cómo se resuelve según el protocolo de integración?",
+      "respuestas": [
+        {
+          "texto": "Comunicación tiene la autoridad final y publica lo que considere mejor para el marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Publicar mentiras destruye la credibilidad y acarrea problemas legales posteriores."
+        },
+        {
+          "texto": "El equipo técnico lanza un tweet paralelo desmintiendo al departamento de Comunicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Rompe totalmente la gobernanza y la imagen de unidad."
+        },
+        {
+          "texto": "Validación técnica obligatoria antes de publicar, aplicando el principio de 'veracidad calibrada' y un proceso de revisión exprés pactado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Solo se debe comunicar lo que se sabe con certeza, diferenciando lo que está en investigación; el equipo técnico veta afirmaciones demostrablemente falsas."
+        },
+        {
+          "texto": "No se emite ningún mensaje público hasta que pasen 6 meses.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El silencio mediático prolongado genera más desconfianza y crisis de reputación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el rol del Departamento de Cumplimiento (Compliance) durante la fase activa de un incidente?",
+      "respuestas": [
+        {
+          "texto": "Hacer las copias forenses de los discos duros afectados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa labor pertenece a los técnicos forenses (CSIRT)."
+        },
+        {
+          "texto": "Negociar el pago en criptomonedas con los atacantes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. De existir negociación, se maneja en el Comité de Crisis, pero no es labor de Compliance."
+        },
+        {
+          "texto": "Verificar que las acciones técnicas de respuesta de emergencia (ej. accesos especiales) no generen incumplimientos secundarios de normativas auditadas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compliance asegura que al intentar arreglar el desastre, no se violen las políticas de control de accesos o retención de datos que regulan a la empresa."
+        },
+        {
+          "texto": "Configurar las reglas de bloqueo en el Firewall perimetral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tarea puramente operativa del SOC/NOC."
+        }
+      ]
+    },
+    {
+      "pregunta": "Conceptual y operativamente, ¿cuál es la diferencia central entre Gestión de Incidentes y Gestión de Crisis?",
+      "respuestas": [
+        {
+          "texto": "La Gestión de Incidentes la aprueba la prensa, y la de Crisis la aprueba la policía.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Relación carente de sentido."
+        },
+        {
+          "texto": "El Incidente es de enfoque técnico-operativo (contener y remediar), mientras que la Crisis es de enfoque estratégico-organizativo (proteger continuidad y reputación).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El incidente es apagar el fuego informático; la crisis es asegurar que la empresa sobreviva al impacto mediático y económico del fuego."
+        },
+        {
+          "texto": "No hay diferencia, son sinónimos utilizados en la norma ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario especifica que tratarlos como sinónimos es un error organizativo grave."
+        },
+        {
+          "texto": "La Crisis se resuelve en horas y el Incidente requiere meses de investigación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los horizontes temporales suelen ser a la inversa: Incidentes (horas/días), Crisis (semanas/meses)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro del Comité de Crisis, ¿cuál es el comportamiento esperado del CISO o responsable técnico?",
+      "respuestas": [
+        {
+          "texto": "Imponer sus decisiones técnicas por encima de la dirección porque es el que sabe de informática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CISO asesora, la dirección asume el riesgo de negocio."
+        },
+        {
+          "texto": "Actuar como decisor estratégico final en temas financieros y de RRHH.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CISO no decide sobre la caja o el personal global."
+        },
+        {
+          "texto": "Actuar como proveedor de información, presentar opciones técnicas en lenguaje de negocio y acatar las decisiones del Comité, incluso si difieren de la técnica óptima.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Comité puede decidir no apagar un servidor vulnerable para salvar el negocio ese día. El CISO informa del riesgo, pero respeta la decisión ejecutiva."
+        },
+        {
+          "texto": "Desconectar los equipos de la junta directiva para protegerlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Acción no relacionada con su rol en la junta."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la gestión de incidentes con áreas no técnicas, hay un conflicto frecuente: El equipo forense necesita los sistemas intactos para recabar pruebas legales, pero Negocio los necesita formateados para restaurar el servicio. ¿Quién y cómo resuelve esto?",
+      "respuestas": [
+        {
+          "texto": "El analista del SOC tirando una moneda al aire.",
+          "correcta": false,
+          "explicacion": "Incorrecto."
+        },
+        {
+          "texto": "El proveedor del software antivirus borrando el malware automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el AV lo borra, el forense pierde evidencia; esto no resuelve el dilema corporativo."
+        },
+        {
+          "texto": "El Comité de Crisis toma una decisión documentada evaluando el riesgo legal (perder el juicio) frente al operativo (pérdida económica por inactividad).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Este es el clásico Trade-off (Disponibilidad vs Preservación), que escala al órgano directivo para que asuma el peso de qué se sacrifica."
+        },
+        {
+          "texto": "Se externaliza la decisión a la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los reguladores exigen cumplimiento, no deciden cómo la empresa gestiona sus servidores internos caídos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un equipo de respuesta cree desde el primer minuto que el ataque es de tipo Phishing. A partir de ahí, solo prestan atención a las evidencias de correo electrónico y desestiman alertas del EDR que indican un compromiso por RDP remoto. ¿Qué sesgo están sufriendo?",
+      "respuestas": [
+        {
+          "texto": "Escalation of Commitment.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque persisten, el núcleo es la negación de información contradictoria a una hipótesis."
+        },
+        {
+          "texto": "Confirmation Bias (Sesgo de Confirmación).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tendencia a buscar e interpretar solo la información que confirma la creencia previa, ignorando o infravalorando evidencias contradictorias (el RDP)."
+        },
+        {
+          "texto": "Availability Heuristic.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es basarse en el evento más reciente en memoria (ej. 'ayer leímos de phishing en las noticias')."
+        },
+        {
+          "texto": "Groupthink.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque pueda darse en grupo, la ceguera informacional selectiva es el sesgo de confirmación."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para mitigar la 'Escalada de Compromiso' (Sunk Cost Fallacy) donde un equipo invierte horas en una estrategia de contención que no funciona, el temario recomienda:",
+      "respuestas": [
+        {
+          "texto": "Fijar Puntos de Revisión Estructurados (Decision Gates) previos con criterios claros de qué indica que la estrategia fracasó, para forzar un cambio de rumbo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Establecer un límite ('si en 2 horas no está aislado, cambiamos de plan') evita hundirse infinitamente en una solución fallida justificando el tiempo ya invertido."
+        },
+        {
+          "texto": "Aumentar al doble el equipo técnico que aplica la solución errónea.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aumentar recursos a una estrategia fallida es el núcleo de la escalada de compromiso."
+        },
+        {
+          "texto": "Comprar herramientas nuevas durante el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición tecnológica no se improvisa en vivo."
+        },
+        {
+          "texto": "Obligar al responsable de la mala decisión a terminarla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto profundiza el sesgo y el miedo a admitir el error."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de mitigación de sesgos consiste en designar a un miembro del equipo para que argumente activamente en contra de la hipótesis principal de trabajo?",
+      "respuestas": [
+        {
+          "texto": "Designación de 'Devil's advocate' (Abogado del diablo) o 'Red Team de hipótesis'.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Fomenta el pensamiento crítico y rompe consensos prematuros (Groupthink) y sesgos de confirmación."
+        },
+        {
+          "texto": "Brainstorming abierto no documentado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Carece de la rigidez para falsar hipótesis en crisis."
+        },
+        {
+          "texto": "Análisis Causa Raíz post-mortem.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RCA se hace una vez contenido el incidente, no durante la crisis activa."
+        },
+        {
+          "texto": "SLA Tracking automático.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso mide tiempo, no calidad cognitiva de decisiones."
+        }
+      ]
+    },
+    {
+      "pregunta": "Los estudios de psicología cognitiva citados en el temario afirman que tras 24 horas sin dormir, el rendimiento de un analista de ciberseguridad es equivalente a:",
+      "respuestas": [
+        {
+          "texto": "Un rendimiento excelente derivado del estado de adrenalina.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adrenalina se agota y el fallo es inminente."
+        },
+        {
+          "texto": "Tener una tasa de alcohol en sangre del 0.10%, superior al límite legal para conducir.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La privación del sueño merma las capacidades analíticas, genera errores reversibles, reduce el reconocimiento de patrones y la paciencia."
+        },
+        {
+          "texto": "Una reducción del 5% de su velocidad de tecleo, sin impacto analítico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El impacto es profundamente analítico y cognitivo, no solo motriz."
+        },
+        {
+          "texto": "Un estado óptimo para aplicar la técnica RPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RPD (Recognition-Primed Decision) depende de un cerebro descansado para simular mentalmente patrones."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante el protocolo de Handover (traspaso de turno) en incidentes prolongados, ¿cuál es una práctica exigida para la fase post-handover?",
+      "respuestas": [
+        {
+          "texto": "Que el líder saliente apague su dispositivo corporativo obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque deba descansar, se requiere que esté localizable ante emergencias."
+        },
+        {
+          "texto": "Que el líder saliente (outgoing lead) permanezca localizable durante las primeras horas del nuevo turno mediante un canal documentado para consultas urgentes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es posible que el nuevo turno encuentre vacíos de información o dudas graves que solo el analista previo puede resolver con rapidez."
+        },
+        {
+          "texto": "Que ambos líderes escriban un reporte a la junta directiva conjuntamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El objetivo del traspaso es liberar al saliente, no atarle a tareas burocráticas lentas."
+        },
+        {
+          "texto": "Que el nuevo turno ignore la documentación previa para tener una 'perspectiva fresca'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso destruiría el seguimiento del incidente y causaría trabajo duplicado."
+        }
+      ]
+    },
+    {
+      "pregunta": "El modelo NDM y RPD (Recognition-Primed Decision) expone que los expertos en incidentes, bajo alta presión, no evalúan exhaustivamente todas las alternativas. En lugar de eso:",
+      "respuestas": [
+        {
+          "texto": "Toman la primera decisión que les propone el software de IA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modelo evalúa la mente humana, no IA."
+        },
+        {
+          "texto": "Reconocen patrones similares a experiencias previas, simulan mentalmente la primera acción plausible y la ejecutan si creen que funcionará.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La experiencia permite 'ver' la solución de inmediato basada en situaciones pasadas (RPD), sin perder tiempo haciendo tablas de pros y contras durante el fuego."
+        },
+        {
+          "texto": "Aplican aleatoriamente comandos hasta que el ataque cesa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería un comportamiento amateur ('trial and error'), no el de un experto."
+        },
+        {
+          "texto": "Delegan toda la responsabilidad a los analistas de Nivel 1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La toma de decisión recae en ellos mismos, usando sus atajos heurísticos entrenados."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la preparación cognitiva ante decisiones bajo presión, ¿qué técnica se recomienda aplicar ANTES de un incidente previsible (ej. una migración crítica)?",
+      "respuestas": [
+        {
+          "texto": "El análisis Post-mortem.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Como su nombre indica, se hace después de que el evento ha ocurrido."
+        },
+        {
+          "texto": "El Pre-mortem analysis: imaginar que ha fallado estrepitosamente y razonar retrospectivamente qué lo causó.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Visualizar el fracaso ayuda al equipo a identificar puntos ciegos y estar preparados para reconocer patrones de error tempranos."
+        },
+        {
+          "texto": "La técnica del 'Awaiting External'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un estado de un ticket."
+        },
+        {
+          "texto": "La activación prematura del RTO (Recovery Time Objective).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RTO es una métrica de impacto, no un ejercicio mental de prevención."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué efecto directo tiene en el equipo un líder (Incident Commander) que reconoce explícitamente la incertidumbre ('no sabemos aún qué vector ha usado, pero estamos en ello')?",
+      "respuestas": [
+        {
+          "texto": "Genera pánico incontrolable y dimisiones en el SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ocultar la realidad es lo que genera ansiedad y pánico cuando sale a la luz."
+        },
+        {
+          "texto": "Genera confianza en el equipo y evita el peligro de establecer falsas certezas (anclaje).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un líder que admite lo desconocido normaliza que la falta de información es parte del proceso, promoviendo un análisis objetivo en lugar de precipitarse a inventar respuestas."
+        },
+        {
+          "texto": "Incurre en responsabilidad penal directa por negligencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La incertidumbre es un hecho técnico, no un delito."
+        },
+        {
+          "texto": "Obliga a la activación del 'Fallback' automático del sistema SOAR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SOAR no se dispara por un estado emocional del líder, sino por triggers procedimentales de red o logs."
+        }
+      ]
+    },
+    {
+      "pregunta": "Desde la perspectiva de la gestión de la fatiga, se afirma que: 'La resistencia a rotar de puesto en un incidente crítico es, en sí misma...'",
+      "respuestas": [
+        {
+          "texto": "...una prueba de lealtad absoluta a la empresa que debe ser premiada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la 'cultura del heroísmo' que el temario advierte como altamente destructiva a largo plazo."
+        },
+        {
+          "texto": "...un requisito del contrato para analistas Nivel 3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Legalmente no se exige trabajar extenuado violando descansos."
+        },
+        {
+          "texto": "...un síntoma de fatiga y pérdida de juicio racional del analista.'",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuando un técnico se niega a descansar ('solo 5 minutos más, ya lo tengo'), su cerebro fatigado ha perdido la perspectiva de su propia ineficacia. El líder debe obligarle a rotar."
+        },
+        {
+          "texto": "...una táctica válida para ahorrar costes de horas extra.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los errores que cometa por cansancio costarán millones frente a un pequeño ahorro en horas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué utilidad tiene la aplicación del framework MITRE ATT&CK durante la fase ACTIVA del flujo decisional de un incidente?",
+      "respuestas": [
+        {
+          "texto": "Se usa exclusivamente para el reporte post-mortem final a las autoridades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es vital en el post-mortem, su valor táctico en vivo es enorme."
+        },
+        {
+          "texto": "Permite inferir las técnicas probables que usará el atacante en fases siguientes gracias a las relaciones de co-ocurrencia estadísticamente elevadas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el analista identifica la técnica T1059, ATT&CK le sugiere que el atacante podría intentar T1055 a continuación, permitiendo anticiparse y montar bloqueos proactivos."
+        },
+        {
+          "texto": "Sirve para calcular automáticamente la cuantía del rescate a pagar en caso de ransomware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE es una taxonomía técnica de adversarios, no una calculadora financiera criminal."
+        },
+        {
+          "texto": "Reemplaza al EDR como herramienta de contención de endpoint.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE es una base de conocimiento (framework), no un software que actúe en las máquinas locales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la lógica del 'Kill Chain Decision Mapping', ¿cuál es la implicación decisional cuando el atacante está en la fase de 'Reconocimiento' o 'Armamento'?",
+      "respuestas": [
+        {
+          "texto": "Desconexión inmediata de sistemas de producción, notificación regulatoria y preservación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta agresividad extrema corresponde a la última fase (Acciones sobre objetivos)."
+        },
+        {
+          "texto": "El impacto actual es bajo; la decisión se centra en reforzar la detección sin interrumpir operaciones, ya que el coste de inacción en ese punto es bajo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Durante el escaneo externo o el empaquetado del malware, el atacante no ha penetrado. Se debe vigilar y preparar defensas sin causar un 'apocalipsis' interno infundado."
+        },
+        {
+          "texto": "El trade-off debe ser siempre apagar el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar defensas perimetrales facilita el ataque."
+        },
+        {
+          "texto": "Notificar a los medios de comunicación y a la policía automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un simple escaneo de puertos (reconocimiento) ocurre miles de veces al día; no se notifica al nivel estratégico ni a la prensa."
+        }
+      ]
+    },
+    {
+      "pregunta": "La distinción entre 'decisiones reversibles' e 'irreversibles' en el contexto del Time-boxing de decisiones durante un ataque implica que:",
+      "respuestas": [
+        {
+          "texto": "Las irreversibles se deben tomar en 5 segundos o ignorarlas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rapidez temeraria es enemiga de las decisiones irreversibles."
+        },
+        {
+          "texto": "Para las reversibles se puede decidir rápido, ejecutar y observar el resultado; para las irreversibles hay que dedicar más tiempo al análisis e involucrar a más personas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si un bloqueo de IP (reversible) falla, se quita. Si se formatea un servidor o se envía un email masivo a la prensa (irreversibles), no hay vuelta atrás y requieren más escrutinio."
+        },
+        {
+          "texto": "Todas las decisiones técnicas son reversibles, y todas las legales irreversibles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existen decisiones técnicas irreversibles (ej. borrar evidencias, corromper base de datos restaurando un backup roto)."
+        },
+        {
+          "texto": "Ninguna decisión debe tomarse sin la unanimidad de todos los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un consenso unánime paralizaría operativamente a la empresa."
+        }
+      ]
+    },
+    {
+      "pregunta": "Ante un dilema provocado por el 'Trade-off' de la tríada CIA (Confidencialidad, Integridad, Disponibilidad), si se decide aplicar el Patrón de 'Prioridad a la Confidencialidad', ¿en qué tipo de organizaciones suele aplicar?",
+      "respuestas": [
+        {
+          "texto": "Hospitales de emergencia en planta de soporte vital.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ahí prevalece la Disponibilidad (que las máquinas funcionen para mantener vidas)."
+        },
+        {
+          "texto": "Redes eléctricas nacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Igual que en los hospitales, se prioriza que haya luz (Disponibilidad)."
+        },
+        {
+          "texto": "Sector financiero o firmas legales bajo exigencias del RGPD o DORA, donde la exfiltración de datos puede tener consecuencias más graves que la caída temporal del servicio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un banco asume que es mejor parar un servidor unas horas (sacrificar Disponibilidad) antes que dejar que los datos de las cuentas se filtren a internet (proteger Confidencialidad)."
+        },
+        {
+          "texto": "Sistemas de Control Industrial de una fábrica embotelladora (SCADA).",
+          "correcta": false,
+          "explicacion": "Incorrecto. En esos entornos suele predominar la Integridad o Disponibilidad, no primordialmente el secreto de la información."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece el principio de proporcionalidad respecto a cuándo se debe convocar a la Alta Dirección o al Comité de Crisis?",
+      "respuestas": [
+        {
+          "texto": "Que el CEO debe participar en la mitigación técnica en la consola EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un directivo, no un operario de consola de seguridad."
+        },
+        {
+          "texto": "Que la activación innecesaria del Comité de Crisis genera fatiga decisional y erosiona la credibilidad del proceso, por lo que su implicación debe ser proporcional al impacto real o potencial.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Escalar todo al CEO como si el mundo se acabase (efecto 'Pedro y el lobo') causa que la dirección deje de prestar atención a las alertas genuinas."
+        },
+        {
+          "texto": "Que se debe asignar exactamente la misma cantidad de analistas al equipo de red que al equipo forense.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La proporcionalidad trata de evitar saturar a la dirección, no del reparto milimétrico de operarios."
+        },
+        {
+          "texto": "Que si el ataque dura 1 hora, la reunión debe durar 1 hora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una correlación errónea del concepto de proporcionalidad en este contexto."
+        }
+      ]
+    }
+  ]
+}

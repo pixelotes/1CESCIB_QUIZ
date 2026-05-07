@@ -1,0 +1,1356 @@
+{
+  "tema": "RA3 - Recopilación, almacenamiento y análisis de evidencias (nivel avanzado)",
+  "preguntas": [
+    {
+      "pregunta": "Estás respondiendo a un incidente en un servidor con LUKS activo y Secure Boot. El equipo está encendido y el volumen montado. Decides hacer adquisición en caliente. ¿Qué riesgo PARTICULAR debes anticipar respecto a la imagen resultante?",
+      "respuestas": [
+        {
+          "texto": "Que dc3dd no podrá calcular hashes sobre dispositivos cifrados en uso",
+          "correcta": false,
+          "explicacion": "Incorrecto. dc3dd opera sobre el dispositivo de bloque que se le pase: si lees /dev/mapper/cryptroot obtienes texto claro, si lees /dev/sda obtienes el cifrado. El hashing funciona en ambos casos."
+        },
+        {
+          "texto": "Que la imagen del volumen descifrado no será verificable en frío sin las claves o headers LUKS",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si imageas el dispositivo mapeado (descifrado) obtienes datos en claro pero sin los headers LUKS originales no es comparable contra el cifrado original. Hay que documentar qué se imagea y preservar también los headers."
+        },
+        {
+          "texto": "Que Secure Boot bloqueará la inserción del USB con las herramientas forenses",
+          "correcta": false,
+          "explicacion": "Incorrecto. Secure Boot valida el cargador de arranque, no afecta a la conexión de USBs ni a la ejecución de binarios en un sistema ya arrancado."
+        },
+        {
+          "texto": "Que LUKS añade un nonce variable al hash que invalida la repetibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. LUKS no altera los hashes calculados sobre los datos: cifra los bloques pero el contenido leído por la herramienta es determinista en cada momento."
+        }
+      ]
+    },
+    {
+      "pregunta": "Sobre la misma máquina viva, ejecutas `dd if=/dev/sda of=/mnt/usb/imagen.dd` y al volver a calcular el hash al final, este NO coincide con un hash parcial calculado a mitad de la operación. ¿Cuál es la explicación más probable?",
+      "respuestas": [
+        {
+          "texto": "Que dd no puede usarse para adquisición forense por no ser determinista",
+          "correcta": false,
+          "explicacion": "Incorrecto. dd sí se usa (y dc3dd es su derivado forense); el problema no es la herramienta sino imagear un dispositivo en uso."
+        },
+        {
+          "texto": "Que el sistema sigue escribiendo en el disco durante la adquisición y los bloques cambian entre lecturas",
+          "correcta": true,
+          "explicacion": "¡Correcto! En adquisición caliente sin write-blocker, el SO sigue escribiendo (logs, swap, journals). Los bloques modificados durante la copia generan un hash distinto. Por eso se prefieren snapshots o LVM freeze cuando es posible."
+        },
+        {
+          "texto": "Que el USB de destino tiene errores de paridad ECC",
+          "correcta": false,
+          "explicacion": "Incorrecto. Errores ECC del USB causarían fallos de escritura visibles, no diferencias de hash entre lecturas del origen."
+        },
+        {
+          "texto": "Que SHA-256 sufre colisiones esperables en imágenes grandes",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 no tiene colisiones prácticas conocidas; este razonamiento es técnicamente erróneo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tu primer responder ha capturado RAM con LiME en formato 'lime' y guarda el archivo en un USB exFAT. Volatility 3 falla al cargarla. ¿Cuál es la causa más plausible?",
+      "respuestas": [
+        {
+          "texto": "Volatility 3 no soporta el formato 'lime' nativo, requiere convertirlo a raw o usar el formato 'padded'",
+          "correcta": true,
+          "explicacion": "¡Correcto! Volatility 3 esperaba inicialmente formato raw/padded; LiME en formato 'lime' tiene cabeceras propias y a menudo requiere conversión o el plugin adecuado. Es un fallo operativo clásico."
+        },
+        {
+          "texto": "exFAT trunca archivos mayores de 4 GB y la imagen se ha cortado",
+          "correcta": false,
+          "explicacion": "Incorrecto. exFAT soporta archivos mayores de 4 GB; quien tiene ese límite es FAT32. El razonamiento confunde sistemas de archivos."
+        },
+        {
+          "texto": "Falta el perfil del kernel; Volatility 3 ya no usa perfiles, los detecta automáticamente con symbol tables",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es cierto que Volatility 3 no usa los profiles tradicionales (sí Vol2), eso no causa un fallo de carga, sino problemas posteriores de symbol resolution."
+        },
+        {
+          "texto": "LiME cifra la imagen por defecto con AES-128 desde la versión 1.9",
+          "correcta": false,
+          "explicacion": "Incorrecto. LiME no cifra imágenes por defecto; se invoca con parámetros de formato (raw, padded, lime) y opcionalmente compresión."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una organización exige que toda evidencia digital lleve sello temporal RFC 3161 emitido por una TSA cualificada eIDAS. ¿Qué propiedad técnica clave debes entregar al servicio TSA, y qué te devuelve?",
+      "respuestas": [
+        {
+          "texto": "Le envías el archivo completo y te devuelve un certificado X.509 con el hash incrustado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Por privacidad y eficiencia nunca se envía el archivo: se envía solo el hash. Y lo que se devuelve es un TimeStampToken, no un certificado X.509 nuevo."
+        },
+        {
+          "texto": "Le envías el hash del archivo y te devuelve un TimeStampToken firmado con marca temporal atómica",
+          "correcta": true,
+          "explicacion": "¡Correcto! RFC 3161 funciona enviando solo el hash a la TSA, que firma un TimeStampToken con la fecha/hora exacta. La TSA nunca ve el contenido."
+        },
+        {
+          "texto": "Le envías la huella biométrica del analista y te devuelve un identificador único",
+          "correcta": false,
+          "explicacion": "Incorrecto. RFC 3161 no involucra biometría; es un protocolo de sellado temporal sobre hashes."
+        },
+        {
+          "texto": "Le envías el archivo cifrado con la clave pública de la TSA y te devuelve la firma",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se cifra ni se envía el archivo. RFC 3161 trabaja sobre el hash precisamente para no exponer datos a la TSA."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un análisis post-mortem de RAM con Volatility, encuentras un proceso 'svchost.exe' con PID padre que NO existe en la lista de procesos activos. Esto indica:",
+      "respuestas": [
+        {
+          "texto": "Un error del plugin pslist; debes confiar en pstree que reconstruye la jerarquía",
+          "correcta": false,
+          "explicacion": "Incorrecto. pstree usa los mismos campos. Un PPID huérfano no es un fallo del plugin: es información real de la estructura EPROCESS."
+        },
+        {
+          "texto": "Que el proceso padre terminó (legítimo en muchos casos) o fue ocultado mediante DKOM/process hollowing",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un PPID huérfano puede ser benigno (el padre terminó, ej. servicios.exe lanzando hijos) o malicioso (DKOM unlinking, hollowing). Hay que correlacionar con psxview, malfind y handles."
+        },
+        {
+          "texto": "Que Windows reasigna PIDs dinámicamente y el padre cambió de identificador",
+          "correcta": false,
+          "explicacion": "Incorrecto. Windows no reasigna PIDs a procesos vivos. Una vez asignado, el PID no cambia hasta que el proceso muere."
+        },
+        {
+          "texto": "Que el sistema estaba en hibernación al hacer la captura y faltan estructuras",
+          "correcta": false,
+          "explicacion": "Incorrecto. La hibernación produce un hiberfil.sys analizable, pero no genera PPIDs huérfanos artificiosamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Comparas dos volcados de memoria del mismo host tomados con 5 minutos de diferencia. Las direcciones virtuales de los procesos del kernel son idénticas. ¿Qué deduces?",
+      "respuestas": [
+        {
+          "texto": "Que el host tiene ASLR deshabilitado o KASLR roto, lo que es un IOC fuerte",
+          "correcta": true,
+          "explicacion": "¡Correcto! KASLR debería re-aleatorizar las bases del kernel entre arranques (no entre capturas del mismo arranque). Sin embargo, igualdad inesperada de offsets puede indicar exploits que filtraron ASLR; en general, conviene investigar la postura de mitigaciones."
+        },
+        {
+          "texto": "Que la captura es íntegra: idéntica memoria implica idéntico estado",
+          "correcta": false,
+          "explicacion": "Incorrecto. El estado de RAM cambia constantemente; idénticas direcciones virtuales en distintas capturas no implican estado idéntico."
+        },
+        {
+          "texto": "Que Volatility está mostrando datos cacheados del primer análisis",
+          "correcta": false,
+          "explicacion": "Incorrecto. Volatility no cachea entre análisis de imágenes distintas; lee cada imagen de cero."
+        },
+        {
+          "texto": "Que el atacante usó RAMScrambler para ofuscar la memoria",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'RAMScrambler' no es una herramienta reconocida; es un distractor. La explicación correcta involucra ASLR/KASLR."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un sistema Linux comprometido tiene un proceso `[kworker/u8:2]` (con corchetes, propio de procesos kernel) que abre un socket TCP saliente. ¿Qué debes sospechar inmediatamente?",
+      "respuestas": [
+        {
+          "texto": "Es comportamiento normal de los workers del kernel",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los kworker reales gestionan colas de trabajo del kernel y no abren sockets de red salientes hacia internet."
+        },
+        {
+          "texto": "Un rootkit de userland disfrazando el nombre del proceso para imitar un kthread legítimo",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una técnica clásica: un proceso de userland se renombra con corchetes via prctl(PR_SET_NAME) para hacerse pasar por kernel thread. Los kthreads reales no abren sockets así."
+        },
+        {
+          "texto": "Una optimización de systemd para sockets no privilegiados",
+          "correcta": false,
+          "explicacion": "Incorrecto. systemd no renombra procesos como kthreads; los servicios systemd tienen sus propios nombres."
+        },
+        {
+          "texto": "Tráfico legítimo de eBPF compilado en kernel",
+          "correcta": false,
+          "explicacion": "Incorrecto. eBPF se ejecuta en kernel context pero no aparece como proceso independiente con sockets abiertos en `ps`."
+        }
+      ]
+    },
+    {
+      "pregunta": "Estás comparando MAC times de un archivo Linux: atime es ANTERIOR a mtime. ¿Es físicamente posible y qué puede significar?",
+      "respuestas": [
+        {
+          "texto": "Imposible: mtime siempre es <= atime por definición POSIX",
+          "correcta": false,
+          "explicacion": "Incorrecto. POSIX no impone esa relación. atime y mtime evolucionan independientemente."
+        },
+        {
+          "texto": "Posible y normal si se ha modificado el archivo (mtime) pero no leído desde entonces, o con la opción noatime/relatime",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si escribes un archivo y nadie lo lee, mtime > atime. Además, montajes con `noatime` o `relatime` pueden no actualizar atime salvo condiciones específicas, generando configuraciones inesperadas."
+        },
+        {
+          "texto": "Posible solo si el inodo ha sido manipulado con `touch -d` por un atacante",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque un atacante pueda manipularlos con touch, la situación atime<mtime también ocurre legítimamente."
+        },
+        {
+          "texto": "Imposible salvo con sistemas de archivos exóticos como Btrfs o ZFS",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cualquier FS que respete POSIX (ext4, xfs, etc.) puede mostrar atime<mtime sin nada exótico."
+        }
+      ]
+    },
+    {
+      "pregunta": "Sobre Windows, ¿qué artefacto te permite saber que un USB con NSerie='AABBCC123' fue conectado al equipo INCLUSO si el atacante borró las claves USBSTOR del registro tras el evento?",
+      "respuestas": [
+        {
+          "texto": "El archivo SetupAPI.dev.log",
+          "correcta": true,
+          "explicacion": "¡Correcto! SetupAPI.dev.log (en C:\\Windows\\INF\\) registra la instalación de drivers y conexión de dispositivos PnP, incluyendo USBs. Es difícil de borrar sin atraer atención y a menudo sobrevive a la limpieza del registro."
+        },
+        {
+          "texto": "El hive SAM",
+          "correcta": false,
+          "explicacion": "Incorrecto. SAM contiene cuentas locales y hashes de contraseñas, no eventos de conexión USB."
+        },
+        {
+          "texto": "El Prefetch del proceso explorer.exe",
+          "correcta": false,
+          "explicacion": "Incorrecto. Prefetch registra ejecución de binarios, no conexiones de hardware."
+        },
+        {
+          "texto": "El Master File Table del volumen C:",
+          "correcta": false,
+          "explicacion": "Incorrecto. La MFT contiene metadatos de archivos en NTFS, no eventos del subsistema PnP."
+        }
+      ]
+    },
+    {
+      "pregunta": "En un caso de exfiltración por DNS, ¿qué patrón en los logs DNS es el INDICADOR MÁS FUERTE de tunneling?",
+      "respuestas": [
+        {
+          "texto": "Consultas TXT y NULL de gran longitud a un dominio con baja reputación y alta entropía en los subdominios",
+          "correcta": true,
+          "explicacion": "¡Correcto! DNS tunneling se caracteriza por subdominios largos de alta entropía (datos codificados base32/64), tipos de registro inusuales (TXT, NULL) y dominios recién registrados. Es la huella canónica."
+        },
+        {
+          "texto": "Consultas A repetidas a google.com cada pocos segundos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es tráfico web normal de muchas aplicaciones; no es indicador de tunneling."
+        },
+        {
+          "texto": "Consultas PTR (DNS reverso) frecuentes desde múltiples hosts",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las consultas PTR son normales en logging y SIEM, no son tunneling per se."
+        },
+        {
+          "texto": "Consultas MX a dominios de proveedores de correo conocidos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las consultas MX son rutina del correo electrónico saliente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Como First Responder, llegas a una sala con 3 servidores encendidos: uno con BitLocker, otro con LUKS, y un tercero sin cifrado. Tienes solo tiempo para volcar RAM de UNO. ¿Cuál priorizas?",
+      "respuestas": [
+        {
+          "texto": "El servidor sin cifrado, porque su disco será analizable después y la RAM aporta menos valor relativo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo el razonamiento opuesto al correcto: en los cifrados, la RAM contiene las claves y artefactos que se perderán al apagar."
+        },
+        {
+          "texto": "Cualquiera de los cifrados, porque la RAM contiene las claves de cifrado que se perderán al apagar",
+          "correcta": true,
+          "explicacion": "¡Correcto! En sistemas con FDE encendidos, la RAM contiene las claves maestras desbloqueadas. Si apagas sin volcar, los discos quedan cifrados sin posibilidad de recuperar las claves de la propia RAM."
+        },
+        {
+          "texto": "El servidor con LUKS, porque BitLocker es recuperable vía Active Directory",
+          "correcta": false,
+          "explicacion": "Incorrecto. La recuperabilidad vía AD asume que se ha aplicado esa política y que tienes tiempo para gestionarla; no es una garantía. Y entre dos cifrados, sin más contexto, ninguno tiene prioridad inherente sobre el otro."
+        },
+        {
+          "texto": "El servidor con BitLocker, porque LUKS guarda las claves cifradas en disco con PBKDF2",
+          "correcta": false,
+          "explicacion": "Incorrecto. PBKDF2 protege la clave maestra solo cuando el sistema está apagado/locked; con el volumen abierto, la clave está descifrada en RAM. La situación es análoga en ambos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un atacante usa 'process hollowing' para inyectar código en un proceso legítimo. ¿Qué evidencia es la MÁS FIABLE para detectarlo en un volcado de RAM?",
+      "respuestas": [
+        {
+          "texto": "Comparar el ImageBaseAddress del proceso con el ImagePathName en disco; si el código en memoria difiere del binario en disco, hay hollowing",
+          "correcta": true,
+          "explicacion": "¡Correcto! En process hollowing el atacante reemplaza la sección .text del proceso víctima manteniendo la cabecera. Comparar el código en memoria contra el binario en disco (plugin malfind, ldrmodules, dlllist) revela la discrepancia."
+        },
+        {
+          "texto": "Verificar si el proceso tiene más de 100 hilos activos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El número de hilos no es indicativo de hollowing; muchos procesos legítimos tienen muchos hilos."
+        },
+        {
+          "texto": "Buscar el string 'HOLLOW' en la memoria del proceso",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal marcador. Es un distractor obvio."
+        },
+        {
+          "texto": "Comprobar que el PPID coincide con services.exe",
+          "correcta": false,
+          "explicacion": "Incorrecto. La relación con services.exe no es un indicador específico de hollowing; muchos procesos legítimos descienden de él."
+        }
+      ]
+    },
+    {
+      "pregunta": "Sobre cadena de custodia, ¿qué afirmación es TÉCNICAMENTE INCORRECTA?",
+      "respuestas": [
+        {
+          "texto": "Los hashes en la cadena deben recalcularse periódicamente en almacenes de larga duración para detectar bit rot",
+          "correcta": false,
+          "explicacion": "Esta afirmación SÍ es correcta: el rehashing programado es buena práctica, no es lo que buscamos."
+        },
+        {
+          "texto": "Si una transferencia entre dos custodios omite firma del receptor pero hay vídeo, la cadena se considera reforzada",
+          "correcta": true,
+          "explicacion": "¡Correcto, esta es la INCORRECTA! La cadena de custodia exige firma de ambas partes. Un vídeo puede ser apoyo, pero no sustituye la atestación firmada del receptor; sin ella la cadena tiene una ruptura formal."
+        },
+        {
+          "texto": "Los timestamps deben registrarse en UTC para evitar ambigüedades de zona horaria",
+          "correcta": false,
+          "explicacion": "Esta afirmación SÍ es correcta: usar UTC es buena práctica universal."
+        },
+        {
+          "texto": "El identificador del caso debe vincular tanto al contenedor físico como a la imagen lógica",
+          "correcta": false,
+          "explicacion": "Esta afirmación SÍ es correcta: la doble vinculación es esencial."
+        }
+      ]
+    },
+    {
+      "pregunta": "Has detectado un posible caso de timestomping (manipulación de MAC times). ¿Qué fuente cruzada de NTFS es CRÍTICA para confirmar la manipulación porque normalmente NO es modificada por las herramientas de timestomping clásicas?",
+      "respuestas": [
+        {
+          "texto": "El atributo $STANDARD_INFORMATION del archivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. $STANDARD_INFORMATION es PRECISAMENTE el atributo que las herramientas como timestomp.exe modifican fácilmente. Es justo el que no es fiable."
+        },
+        {
+          "texto": "El atributo $FILE_NAME del archivo, que solo se actualiza al renombrar/mover",
+          "correcta": true,
+          "explicacion": "¡Correcto! $FILE_NAME tiene sus propios timestamps que solo cambian al crear/renombrar/mover archivos y, salvo herramientas avanzadas, no son alterados por el timestomping clásico. Comparar SI vs FN es el método estándar para detectarlo."
+        },
+        {
+          "texto": "El registro de eventos de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los Security Event Logs pueden auditar cambios de archivos si está configurado, pero no son la fuente NTFS específica para detectar timestomping."
+        },
+        {
+          "texto": "El archivo pagefile.sys",
+          "correcta": false,
+          "explicacion": "Incorrecto. pagefile.sys puede contener fragmentos útiles para análisis, pero no es la fuente canónica para validar timestamps de archivos concretos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tu organización usa S3 Object Lock con `Compliance Mode` y retención de 5 años. Tras 6 meses, descubres que un objeto contiene datos personales sensibles que NO deberían estar (incumplimiento RGPD). ¿Qué puedes hacer?",
+      "respuestas": [
+        {
+          "texto": "Eliminarlo invocando la cuenta root de AWS, que tiene privilegios para sobrescribir Object Lock",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compliance Mode bloquea incluso a la cuenta root: no puede borrarse ni acortarse la retención por NADIE durante el periodo. Es justamente su característica diferencial vs Governance Mode."
+        },
+        {
+          "texto": "Cambiar a Governance Mode con privilegio s3:BypassGovernanceRetention y eliminarlo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una vez en Compliance Mode no se puede degradar a Governance. La transición no es retroactiva."
+        },
+        {
+          "texto": "Aceptar que el objeto permanecerá hasta el fin de la retención y documentar el conflicto entre WORM y RGPD para legal",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la realidad operativa: Compliance Mode crea un conflicto real entre inmutabilidad legal/forense y derecho al olvido del RGPD. Por eso la decisión de qué entra en Compliance Mode debe ser muy meditada."
+        },
+        {
+          "texto": "Cifrar el objeto con una clave nueva y descartar la antigua, dejándolo inutilizable (crypto-shredding)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Object Lock impide sobrescribir el objeto, así que no puedes recifrarlo. El crypto-shredding requeriría haberlo cifrado con una clave externa antes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Comparas dos imágenes E01 del mismo disco tomadas con 1 hora de diferencia (sistema apagado entre ambas adquisiciones). Los hashes difieren. ¿Cuál es la causa MÁS PROBABLE?",
+      "respuestas": [
+        {
+          "texto": "El disco es un SSD y el firmware ha realizado wear leveling/garbage collection en background",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aunque el sistema esté apagado, conectar el SSD a un imager puede activar firmware (incluso en modo lectura) que realiza housekeeping interno, alterando bloques físicos. Por eso se prefiere usar write-blockers certificados y, aun así, documentar."
+        },
+        {
+          "texto": "EnCase añade metadatos cambiantes al formato E01 entre adquisiciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash que se compara debe ser el del contenido bit-stream, no del archivo E01 envolvente. EnCase calcula y registra el hash de los datos."
+        },
+        {
+          "texto": "Las imágenes E01 incluyen timestamps que cambian su hash",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash forense de E01 se calcula sobre los datos del disco origen, no sobre el contenedor; los timestamps del E01 son metadatos del archivo, no del hash interno."
+        },
+        {
+          "texto": "Las herramientas de adquisición cifran cada copia con una clave aleatoria",
+          "correcta": false,
+          "explicacion": "Incorrecto. La adquisición forense estándar no cifra automáticamente; el cifrado es una decisión operativa posterior, no inherente al imaging."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el orden de volatilidad del RFC 3227, ¿cuál es la decisión TÉCNICAMENTE más debatible y por qué?",
+      "respuestas": [
+        {
+          "texto": "Adquirir el contenido de la RAM antes que las tablas ARP, porque la RAM ya contiene las tablas ARP cacheadas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La RAM contiene mucho más que ARP, y el orden RFC pone tablas ARP antes precisamente porque son rápidamente sobrescritas en estructuras pequeñas."
+        },
+        {
+          "texto": "Adquirir la RAM antes de las conexiones de red, porque el propio acto de inspeccionar conexiones modifica la RAM",
+          "correcta": true,
+          "explicacion": "¡Correcto! Hay debate real: muchos autores argumentan que ejecutar `netstat` o `ss` para inspeccionar conexiones modifica la propia RAM (carga librerías, crea procesos), por lo que conviene volcar RAM primero. El RFC 3227 simplifica este matiz."
+        },
+        {
+          "texto": "Adquirir logs remotos antes que los locales porque los locales pueden estar manipulados",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RFC pone los locales antes simplemente por su volatilidad; la fiabilidad no entra en el orden, sino en el análisis posterior."
+        },
+        {
+          "texto": "Adquirir disco duro antes que swap, porque el swap se borra al apagar",
+          "correcta": false,
+          "explicacion": "Incorrecto. El swap está en disco y se preserva igual que el resto al imagear el dispositivo de bloque completo; no es una decisión separada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Detectas que un proceso 'lsass.exe' tiene en su memoria credenciales en texto claro. ¿Qué debes evaluar PRIMERO antes de declararlo IOC?",
+      "respuestas": [
+        {
+          "texto": "Si el sistema tiene WDigest habilitado, lo cual hace que lsass guarde credenciales en claro de forma legítima en versiones antiguas",
+          "correcta": true,
+          "explicacion": "¡Correcto! WDigest (habilitado por defecto en versiones de Windows pre-2012R2 con KB2871997) guardaba credenciales reversibles en lsass.exe. La presencia de credenciales en claro en lsass puede ser comportamiento legítimo del SO, no un IOC."
+        },
+        {
+          "texto": "Si Mimikatz dejó su firma en disco, ya que sin firma no hay ataque",
+          "correcta": false,
+          "explicacion": "Incorrecto. Mimikatz puede ejecutarse fileless desde memoria sin dejar binario en disco. La ausencia de firma no descarta el ataque."
+        },
+        {
+          "texto": "Si el proceso lsass.exe está firmado por Microsoft, lo cual descartaría manipulación",
+          "correcta": false,
+          "explicacion": "Incorrecto. lsass.exe siempre está firmado por Microsoft (es un binario del SO). Eso no descarta que su contenido en memoria haya sido leído por otra herramienta."
+        },
+        {
+          "texto": "Si la caja contiene Credential Guard, ya que en ese caso lsass es inalcanzable",
+          "correcta": false,
+          "explicacion": "Incorrecto. Credential Guard sí protege LSASS aislándolo en VTL1, pero la pregunta es interpretar credenciales en claro YA observadas, no si son extraíbles."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras un compromiso, encuentras que `/var/log/auth.log` está intacto pero `/var/log/wtmp` muestra una sesión SSH que no aparece en auth.log. ¿Qué hipótesis trabajas?",
+      "respuestas": [
+        {
+          "texto": "El atacante editó wtmp con `utmpdump`/`wtmpdump` pero olvidó alterar auth.log de forma coherente, o viceversa: editó auth.log y no wtmp",
+          "correcta": true,
+          "explicacion": "¡Correcto! La inconsistencia entre wtmp (formato binario, accesible con last/utmpdump) y auth.log (texto) es un IOC clásico. El atacante suele alterar uno pero no ambos coherentemente. La validación cruzada los detecta."
+        },
+        {
+          "texto": "El servicio rsyslog cayó durante esa sesión, perdiéndose en auth.log pero no en wtmp que escribe directamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque posible, rsyslog rara vez cae en sistemas estables; la hipótesis de manipulación es más probable y debe investigarse antes."
+        },
+        {
+          "texto": "Es comportamiento normal: wtmp registra logins de TTY y auth.log solo registra autenticaciones SSH",
+          "correcta": false,
+          "explicacion": "Incorrecto. auth.log SÍ registra autenticaciones SSH; el `sshd` escribe en él. Una sesión SSH debería aparecer en ambos."
+        },
+        {
+          "texto": "PAM no estaba configurado para registrar SSH, lo cual es habitual en distros minimalistas",
+          "correcta": false,
+          "explicacion": "Incorrecto. PAM y sshd registran por defecto en distros mainstream; sería una configuración no estándar y muy sospechosa de por sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "Analizando una imagen Memory de Windows con Volatility, el plugin `cmdline` muestra que `powershell.exe` se lanzó con argumentos cifrados Base64. Ya has descodificado el Base64 y obtienes nuevamente código ofuscado. ¿Cuál es el siguiente paso TÉCNICAMENTE correcto?",
+      "respuestas": [
+        {
+          "texto": "Asumir que es código benigno ofuscado por compatibilidad con sistemas legacy",
+          "correcta": false,
+          "explicacion": "Incorrecto. PowerShell ofuscado lanzado vía Base64 desde la línea de comandos es un patrón típico de malware (Empire, PowerSploit, etc.), no compatibilidad legacy."
+        },
+        {
+          "texto": "Buscar el ScriptBlock correspondiente en los logs PowerShell (Event ID 4104) que descifran/desofuscan el bloque ejecutado",
+          "correcta": true,
+          "explicacion": "¡Correcto! El logging de ScriptBlock (Event ID 4104) registra los bloques DESPUÉS de ser deserializados pero antes de ejecutarse, mostrando el código real. Es la fuente canónica para análisis de PowerShell ofuscado."
+        },
+        {
+          "texto": "Ejecutar el código en la propia máquina para ver qué hace (análisis dinámico in-situ)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ejecutar malware en el sistema víctima es una violación grave del análisis forense; en todo caso se hace en sandbox aislado."
+        },
+        {
+          "texto": "Pasar el código por `xxd` para ver si tiene firma de packer UPX",
+          "correcta": false,
+          "explicacion": "Incorrecto. UPX es un packer de PE binarios, no de scripts PowerShell. La técnica no aplica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Sobre análisis de tráfico cifrado TLS 1.3, ¿qué afirmación es TÉCNICAMENTE CORRECTA respecto a SNI?",
+      "respuestas": [
+        {
+          "texto": "TLS 1.3 cifra completamente el SNI por defecto, impidiendo cualquier análisis del dominio destino",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS 1.3 NO cifra SNI por defecto. Lo que cifra es la negociación de extensiones; ECH (Encrypted Client Hello) sí cifra SNI pero requiere despliegue específico."
+        },
+        {
+          "texto": "El SNI viaja en claro en el ClientHello, salvo que se use ECH (Encrypted Client Hello), por lo que es analizable forensemente",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SNI permanece en claro en el ClientHello en TLS 1.3 estándar. Solo ECH (con su DNS HTTPS RR) lo cifra. Esto significa que el dominio sigue siendo visible para análisis."
+        },
+        {
+          "texto": "TLS 1.3 elimina por completo el SNI; los servidores deben deducir el host por la IP",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS 1.3 mantiene SNI; sin él fallaría el virtual hosting moderno. Solo ECH lo cifra."
+        },
+        {
+          "texto": "El SNI siempre es analizable porque TLS 1.3 obliga a publicarlo en certificados públicos",
+          "correcta": false,
+          "explicacion": "Incorrecto. SNI no se publica en certificados; es una extensión del handshake que el cliente envía para indicar a qué dominio se conecta."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una organización usa Suricata como IDS y Zeek paralelamente. ¿Cuál es la sinergia técnica que justifica usar AMBOS, en lugar de uno solo?",
+      "respuestas": [
+        {
+          "texto": "Suricata ofrece detección por firmas/reglas (IPS-like, alta señal) y Zeek ofrece logging contextual de protocolos (alta visibilidad histórica)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tienen filosofías distintas: Suricata es signature-based (alerta sobre patrones conocidos), Zeek es protocol-aware logger (genera registros estructurados de cada conexión). Usados juntos, alertas + contexto."
+        },
+        {
+          "texto": "Suricata detecta tráfico cifrado y Zeek tráfico en claro",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos analizan tanto tráfico cifrado como en claro, con limitaciones similares ante TLS."
+        },
+        {
+          "texto": "Suricata trabaja en capa 7 y Zeek en capa 3-4",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos trabajan multinivel; Zeek es especialmente fuerte en capa 7 (HTTP, DNS, SSL, FTP, SMB...)."
+        },
+        {
+          "texto": "Suricata es para entornos cloud y Zeek para on-premise",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos se despliegan en cloud y on-premise; la diferencia está en su modelo de detección."
+        }
+      ]
+    },
+    {
+      "pregunta": "Configuras una zona forense con air-gap completo. Sin embargo, transfieres muestras vía USB. ¿Qué riesgo CONOCIDO hace que el air-gap NO sea absoluto en este escenario?",
+      "respuestas": [
+        {
+          "texto": "El malware tipo BadUSB que reprograma el firmware del controlador HID del USB para inyectar comandos",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ataques como BadUSB modifican el firmware USB para que el dispositivo se haga pasar por teclado o tarjeta de red, ejecutando comandos en el host receptor. El air-gap se rompe vía hardware."
+        },
+        {
+          "texto": "Los puertos USB emiten señales electromagnéticas detectables a 50 metros",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque existen ataques TEMPEST y side-channel, no es 'el riesgo del USB'; ese es físico, distinto del problema BadUSB."
+        },
+        {
+          "texto": "USB 3.0 contiene una interfaz Wi-Fi oculta especificada por el USB-IF",
+          "correcta": false,
+          "explicacion": "Incorrecto. USB-IF no especifica Wi-Fi en el conector USB. Es una afirmación falsa."
+        },
+        {
+          "texto": "Los USBs forenses cifrados violan el air-gap por requerir conexión a la nube para validar la clave",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los USBs forenses cifrados se desbloquean localmente con PIN/password, no requieren cloud."
+        }
+      ]
+    },
+    {
+      "pregunta": "Estás revisando la línea temporal de un compromiso. Ves que un archivo malicioso tiene MFT $SI Created = 2024-03-01 y MFT $FN Created = 2024-03-15. ¿Qué interpretación es la MÁS COHERENTE?",
+      "respuestas": [
+        {
+          "texto": "El archivo se creó originalmente en marzo (FN) y se le aplicó timestomping para hacerlo parecer anterior (SI)",
+          "correcta": true,
+          "explicacion": "¡Correcto! $FILE_NAME es más resistente al timestomping; si $FN > $SI, suele indicar que el atacante alteró $SI hacia atrás. La fecha de FN refleja la creación real."
+        },
+        {
+          "texto": "Es comportamiento normal: $FN se actualiza cuando se renombra el archivo y $SI permanece",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cuando se renombra, $FN se actualiza pero $SI no se modifica para atrás artificiosamente. La diferencia tan amplia (15 días) es sospechosa."
+        },
+        {
+          "texto": "El sistema sufrió un cambio de zona horaria el 1 de marzo que altera $SI",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los cambios de zona horaria no rebobinan timestamps; los almacenan en formato fijo (FILETIME) y la zona aplica al mostrarlos."
+        },
+        {
+          "texto": "El antivirus puso el archivo en cuarentena y al restaurarlo se modificó $SI",
+          "correcta": false,
+          "explicacion": "Incorrecto. La restauración desde cuarentena suele actualizar $SI hacia ADELANTE, no hacia atrás. Y $FN sería el actualizado."
+        }
+      ]
+    },
+    {
+      "pregunta": "Adquieres en caliente un servidor Windows con BitLocker activo. Un perito contrario impugna alegando que las herramientas alteraron el sistema. ¿Cuál es la defensa MÁS sólida según ISO/IEC 27037 y 27041?",
+      "respuestas": [
+        {
+          "texto": "Que las herramientas estaban firmadas digitalmente, lo que prueba que sus efectos sobre el sistema son íntegros",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma demuestra que el binario no se modificó tras compilarse, pero no que sus efectos sobre el sistema vivo sean aceptables forensemente."
+        },
+        {
+          "texto": "Que el principio de minimización de alteración asume cambios inevitables, y la idoneidad del método (27041) más la documentación cumplen el estándar pericial",
+          "correcta": true,
+          "explicacion": "¡Correcto! En sistemas vivos no existe la 'adquisición cero-cambios'. La defensa pericial exige método validado (27041) y documentación de cada cambio inducido, justificado por proporcionalidad."
+        },
+        {
+          "texto": "Que MD5 y SHA-1 calculados antes y después demuestran inequívocamente que no hubo alteración del sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. MD5 y SHA-1 están criptográficamente rotos para uso pericial; además, los hashes prueban integridad del fichero de imagen, no que el sistema vivo no fuera tocado."
+        },
+        {
+          "texto": "Que ISO/IEC 27037 prohíbe expresamente impugnar adquisiciones en caliente cuando hay cifrado activo",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 no prohíbe impugnaciones; es una norma técnica, no procesal. La defensa se sostiene con metodología, no con la norma como escudo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Sospechas que un servidor Linux tiene un rootkit que hookea syscalls del kernel. Vas a adquirir RAM. ¿Por qué LiME es preferible a /dev/mem o /proc/kcore?",
+      "respuestas": [
+        {
+          "texto": "Porque LiME firma criptográficamente cada página de memoria al volcarla, mientras que /dev/mem solo firma el bloque global al final",
+          "correcta": false,
+          "explicacion": "Incorrecto. LiME no firma páginas individualmente; produce un volcado raw cuyo hash global se calcula al final."
+        },
+        {
+          "texto": "Porque /dev/mem y /proc/kcore están desactivados por defecto en kernels modernos por CONFIG_STRICT_DEVMEM",
+          "correcta": false,
+          "explicacion": "Parcialmente cierto, pero no es la razón clave frente a un rootkit. Hay un motivo más fuerte."
+        },
+        {
+          "texto": "Porque LiME se carga como módulo del kernel y accede a la memoria física directamente, evitando la capa de syscalls que el rootkit puede hookear",
+          "correcta": true,
+          "explicacion": "¡Correcto! Como el rootkit hookea syscalls, leer la RAM por interfaces de userspace pasaría por su filtro. LiME, en kernel-space, accede directo a la memoria física por debajo del rootkit."
+        },
+        {
+          "texto": "Porque LiME garantiza adquisición atómica congelando todos los procesos durante el volcado, eliminando completamente el smear de memoria",
+          "correcta": false,
+          "explicacion": "Incorrecto. LiME NO ofrece adquisición atómica perfecta: los procesos siguen ejecutándose durante el volcado, generando smear."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras volcar 64 GB de RAM con LiME, observas que Volatility muestra inconsistencias entre pslist (lista enlazada) y psscan (búsqueda por firmas). ¿Cuál es la interpretación MÁS probable?",
+      "respuestas": [
+        {
+          "texto": "Volatility usa un perfil de kernel incorrecto; debes regenerarlo con dwarfdump",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el perfil fuera incorrecto, ambos plugins fallarían. Que pslist y psscan difieran es coherente y diagnóstico."
+        },
+        {
+          "texto": "Hay procesos ocultos por DKOM (Direct Kernel Object Manipulation) que un rootkit ha desenlazado de la lista activa pero siguen presentes en memoria",
+          "correcta": true,
+          "explicacion": "¡Correcto! pslist recorre la lista doblemente enlazada (manipulable por DKOM) y psscan busca firmas en memoria. La diferencia es el indicador clásico de DKOM rootkit."
+        },
+        {
+          "texto": "Es el efecto esperado del 'smear' de memoria por procesos que terminaron durante el volcado",
+          "correcta": false,
+          "explicacion": "Incorrecto. El smear genera estructuras corruptas, pero no el patrón sistemático de 'visible en psscan pero no en pslist'."
+        },
+        {
+          "texto": "Es normal en sistemas multi-core: pslist solo ve la cola del CPU0 y psscan ve todas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La distinción no tiene relación con multi-core ni con colas de scheduling por CPU. Afirmación inventada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Diseñas el repositorio forense. El CISO exige separación de funciones: el analista lee pero no modifica, IT gestiona almacenamiento sin acceso al contenido. ¿Qué arquitectura cumple ESTRICTAMENTE este principio?",
+      "respuestas": [
+        {
+          "texto": "RBAC con cifrado AES-256 cuyas claves están en un HSM gestionado por DFIR/DPO, y rol de IT con permisos de almacenamiento pero sin claves",
+          "correcta": true,
+          "explicacion": "¡Correcto! La separación real exige que IT no tenga acceso al contenido. RBAC + cifrado + claves en HSM bajo control DFIR/DPO desacopla 'control del soporte' de 'control del contenido'."
+        },
+        {
+          "texto": "RBAC con cifrado AES-256, claves almacenadas junto a las evidencias para garantizar disponibilidad inmediata, complementado con WORM",
+          "correcta": false,
+          "explicacion": "Incorrecto. Almacenar las claves junto a las evidencias viola la regla de oro: si ambos están en el mismo medio, comprometer el medio compromete todo."
+        },
+        {
+          "texto": "Cifrado AES-256 con clave compartida entre IT, DFIR y DPO siguiendo Shamir's Secret Sharing 2-de-3",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque SSS es válido, dar a IT cualquier participación en la clave rompe la separación funcional."
+        },
+        {
+          "texto": "WORM puro sin cifrado: la inmutabilidad por sí misma garantiza la separación porque nadie puede modificar el contenido",
+          "correcta": false,
+          "explicacion": "Incorrecto. WORM impide modificación pero no impide LECTURA. IT podría leer evidencia sensible. Hace falta cifrado además del WORM."
+        }
+      ]
+    },
+    {
+      "pregunta": "Ves múltiples entradas de 'sudo session opened for user root by user1' en auth.log a las 03:14, pero 'last' no muestra sesiones interactivas de user1 en esa franja, y su bash_history está vacío. ¿Qué hipótesis es la MÁS coherente?",
+      "respuestas": [
+        {
+          "texto": "user1 ha ejecutado sudo desde una sesión SSH no interactiva o programada vía cron, y ha redirigido HISTFILE para evitar dejar rastro",
+          "correcta": true,
+          "explicacion": "¡Correcto! 'last' lee /var/log/wtmp (sesiones interactivas). sudo desde sesiones no interactivas no aparece en wtmp pero sí en auth.log. Sumado a HISTFILE manipulado, es el patrón clásico."
+        },
+        {
+          "texto": "auth.log ha sido manipulado para insertar entradas falsas que culpen a user1",
+          "correcta": false,
+          "explicacion": "Incorrecto. Saltar a 'manipulación de logs' como primera hipótesis es sesgo de confirmación. Hay explicaciones técnicas legítimas más simples."
+        },
+        {
+          "texto": "El servidor tiene desincronización horaria entre auth.log y wtmp que hace aparecer las sesiones en franjas distintas",
+          "correcta": false,
+          "explicacion": "Incorrecto. auth.log y wtmp comparten reloj porque los escribe el mismo sistema. La desincronización sería entre sistemas distintos."
+        },
+        {
+          "texto": "El comando 'last' está afectado por un rootkit en userspace (LD_PRELOAD) que filtra las sesiones de user1",
+          "correcta": false,
+          "explicacion": "Posible pero menos probable. Antes de asumir rootkit hay explicaciones más simples; la hipótesis del rootkit requiere evidencia adicional."
+        }
+      ]
+    },
+    {
+      "pregunta": "Capturas tráfico con tcpdump en un nodo Kubernetes pero solo recoges ~30% del tráfico esperado del pod víctima. ¿Cuál es la causa MÁS probable?",
+      "respuestas": [
+        {
+          "texto": "tcpdump no soporta capturas en kernels con BPF moderno; debes usar dumpcap con ring buffer",
+          "correcta": false,
+          "explicacion": "Incorrecto. tcpdump usa libpcap que sí soporta BPF moderno; dumpcap es la utilidad CLI de Wireshark, no resuelve este problema."
+        },
+        {
+          "texto": "El tráfico pod-a-pod atraviesa el CNI (Calico, Cilium) y no pasa por la interfaz física donde capturas; debes capturar en la veth del pod o en cali*/cilium*",
+          "correcta": true,
+          "explicacion": "¡Correcto! En K8s, el tráfico pod-a-pod del mismo nodo nunca toca la NIC física: va por interfaces virtuales (veth) y bridges del CNI. Hay que capturar en la veth o interfaces específicas del CNI."
+        },
+        {
+          "texto": "kube-proxy descarta paquetes que no tienen sesión TCP previamente establecida en conntrack",
+          "correcta": false,
+          "explicacion": "Incorrecto. kube-proxy hace SNAT/DNAT pero no descarta paquetes selectivamente al 30%. La cifra es coherente con tráfico por interfaces virtuales no monitorizadas."
+        },
+        {
+          "texto": "Es comportamiento esperado: tcpdump pierde paquetes en interfaces de contenedores debido al cgroup namespace isolation",
+          "correcta": false,
+          "explicacion": "Incorrecto. cgroups gestionan recursos, no aíslan tráfico — eso lo hacen los network namespaces. tcpdump funciona en namespaces si se ejecuta en el correcto."
+        }
+      ]
+    },
+    {
+      "pregunta": "Atacante ha exfiltrado vía DNS tunneling. Tienes logs de Zeek (dns.log y conn.log) pero no PCAP. ¿Qué patrón de análisis identifica el tunneling con MAYOR fiabilidad?",
+      "respuestas": [
+        {
+          "texto": "Buscar respuestas DNS con TTL inusualmente bajo (menor a 60s) hacia el dominio sospechoso",
+          "correcta": false,
+          "explicacion": "Incorrecto. TTL bajo es sugestivo de fast-flux pero no diagnóstico de tunneling. CDNs legítimos usan TTL bajo. Indicador débil aislado."
+        },
+        {
+          "texto": "Correlacionar entropía de los subdominios consultados, longitud media de las queries y volumen de queries por unidad de tiempo hacia el mismo dominio padre",
+          "correcta": true,
+          "explicacion": "¡Correcto! El DNS tunneling produce subdominios largos con alta entropía (datos codificados en base32/64), volumen elevado y patrón temporal característico. La combinación de los tres es la firma robusta."
+        },
+        {
+          "texto": "Filtrar conn.log por conexiones a puerto 53/UDP que excedan 10 KB en payload acumulado durante 5 minutos",
+          "correcta": false,
+          "explicacion": "Incorrecto. conn.log no granula a nivel de payload por query DNS; agrega flujos. El umbral arbitrario tampoco es indicador específico."
+        },
+        {
+          "texto": "Identificar respuestas DNS con registros TXT de más de 255 caracteres, ya que es el límite RFC para tunneling",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DNS tunneling moderno usa principalmente subdominios codificados, no solo TXT. Indicador parcial y obsoleto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una imagen de RAM Windows, malfind reporta múltiples regiones VAD con permisos PAGE_EXECUTE_READWRITE pero sin firma MZ en explorer.exe. ¿Qué interpretación es CORRECTA?",
+      "respuestas": [
+        {
+          "texto": "La ausencia de firma MZ descarta inyección PE clásica; es probablemente shellcode o un PE con headers borrados tras carga reflectiva",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cobalt Strike y similares usan reflective loading y suelen sobrescribir headers MZ/PE para evadir detección. Regiones RWX sin MZ son la firma típica."
+        },
+        {
+          "texto": "La ausencia de firma MZ indica que malfind ha tenido un falso positivo y las regiones son benignas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo al contrario: regiones RWX en VAD son anómalas en procesos legítimos. Que falte MZ refuerza la sospecha."
+        },
+        {
+          "texto": "explorer.exe nunca tiene regiones RWX legítimas; cualquier hallazgo de malfind confirma inyección",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque RWX en explorer.exe es muy sospechoso, hay falsos positivos (.NET JIT, algunos shells). 'Confirma' es demasiado fuerte."
+        },
+        {
+          "texto": "PAGE_EXECUTE_READWRITE solo aparece en kernel-space; verlo en VAD de userspace indica corrupción de la imagen",
+          "correcta": false,
+          "explicacion": "Incorrecto. PAGE_EXECUTE_READWRITE es perfectamente legal en userspace (VirtualAlloc lo asigna) y es justo lo que pide un loader malicioso."
+        }
+      ]
+    },
+    {
+      "pregunta": "Recibes un SSD NVMe con SED OPAL 2.0 y necesitas su imagen forense bit-stream. ¿Qué decisión técnica es la CORRECTA?",
+      "respuestas": [
+        {
+          "texto": "Clonar con dc3dd directamente; la imagen capturará el contenido cifrado y se descifrará en laboratorio con la clave maestra del controlador",
+          "correcta": false,
+          "explicacion": "Incorrecto. La DEK del SED no es directamente accesible. Si el sistema estaba desbloqueado, el clonado a través del controlador devuelve datos en claro, no cifrados."
+        },
+        {
+          "texto": "Si el SED está desbloqueado (sistema en uso), clonar a través del controlador devuelve datos descifrados; documentar el estado y considerar extraer la DEK si el firmware lo permite",
+          "correcta": true,
+          "explicacion": "¡Correcto! En SED OPAL, el cifrado es transparente cuando el drive está desbloqueado: el controlador descifra al vuelo. Clonar entrega datos en claro. Documentar el estado de bloqueo es crítico."
+        },
+        {
+          "texto": "Los SED no se pueden clonar forensemente porque OPAL 2.0 detecta lecturas masivas y bloquea el dispositivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. OPAL 2.0 no incluye 'detección de lectura masiva'. Gestiona cifrado y autenticación, no anti-forensia activa."
+        },
+        {
+          "texto": "Hay que apagar el equipo y arrancar con CAINE para forzar al SED a entregar la clave maestra de fábrica",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe una 'clave maestra de fábrica' accesible tras provisioning. Apagar puede ser destructivo: si el SED está en uso se bloqueará."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el RFC 3227, recolectar la 'tabla de procesos' antes que la RAM completa puede parecer contraintuitivo (los procesos ya están en RAM). ¿Cuál es la justificación correcta?",
+      "respuestas": [
+        {
+          "texto": "Porque la tabla de procesos cambia con frecuencia muy alta y volcar la RAM lleva minutos durante los cuales pueden nacer y morir procesos relevantes",
+          "correcta": true,
+          "explicacion": "¡Correcto! La granularidad temporal importa. Volcar 64 GB puede tomar 5-15 minutos; capturar primero la tabla 'congela' un snapshot puntual antes del volcado largo."
+        },
+        {
+          "texto": "Porque la RAM está cifrada por el SO mientras los procesos están vivos (Intel TME), y la tabla de procesos no",
+          "correcta": false,
+          "explicacion": "Incorrecto. La RAM en uso no está cifrada por el SO de forma general; TME/SME no son universales. Afirmación inventada."
+        },
+        {
+          "texto": "Porque la tabla de procesos vive en una página de memoria protegida que no se incluye en los volcados estándar",
+          "correcta": false,
+          "explicacion": "Incorrecto. La tabla de procesos sí se captura en volcados completos. Por eso Volatility puede analizarla."
+        },
+        {
+          "texto": "Porque el RFC 3227 prioriza datos textuales sobre binarios, y la salida de ps es texto",
+          "correcta": false,
+          "explicacion": "Incorrecto. RFC 3227 prioriza por VOLATILIDAD, no por formato. La salida de ps es solo una forma de capturar la tabla."
+        }
+      ]
+    },
+    {
+      "pregunta": "Implementas S3 Object Lock en modo Compliance con retención de 7 años. Tu CTO pregunta qué pasa si llega una solicitud RGPD de borrado antes del plazo. ¿Cuál es la respuesta CORRECTA?",
+      "respuestas": [
+        {
+          "texto": "Cambiar el modo a Governance y eliminar el objeto; al volver a Compliance las nuevas evidencias quedan protegidas",
+          "correcta": false,
+          "explicacion": "Incorrecto. AWS no permite degradar de Compliance a Governance. Compliance es irreversible por diseño."
+        },
+        {
+          "texto": "Ni siquiera el root account de AWS puede eliminar el objeto antes de la retención; eso es la garantía pericial del modo y exige planificación previa entre WORM y RGPD",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compliance es irrevocable hasta vencimiento. Genera tensión con el 'derecho al olvido' (RGPD art. 17). La solución suele ser cifrado + crypto-shredding, planificada al diseñar el repositorio."
+        },
+        {
+          "texto": "S3 Object Lock acepta una API privilegiada con MFA del root para eliminar bajo orden judicial",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal API en modo Compliance. AWS lo documenta explícitamente: la inmutabilidad es absoluta hasta vencimiento."
+        },
+        {
+          "texto": "Se puede sobrescribir el objeto creando una nueva versión, lo que efectivamente lo elimina del flujo activo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las versiones antiguas protegidas por Object Lock siguen siendo accesibles e inmutables. No es eliminación efectiva."
+        }
+      ]
+    },
+    {
+      "pregunta": "Calculas SHA-256 de una imagen al adquirirla. Seis meses después, al verificar, el hash es DIFERENTE. La cinta LTO con WORM tiene integridad garantizada por el fabricante. ¿Cuál es la PRIMERA hipótesis a investigar?",
+      "respuestas": [
+        {
+          "texto": "Bit rot del medio: incluso medios WORM pueden sufrir corrupción silenciosa, por eso se programan rehash periódicos",
+          "correcta": true,
+          "explicacion": "¡Correcto! WORM previene escrituras intencionadas pero NO bit rot (degradación física). Un solo bit alterado cambia el hash completo. Por eso el rehash periódico detecta corrupción antes de invalidar la evidencia."
+        },
+        {
+          "texto": "SHA-256 ha sido roto por avances criptanalíticos en estos 6 meses, generando colisiones",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 sigue siendo seguro. Aunque lo fuera, las colisiones permiten encontrar dos archivos con el mismo hash, no que el hash de un archivo cambie por sí solo."
+        },
+        {
+          "texto": "El sistema de archivos (ZFS/Btrfs) ha actualizado timestamps internos del fichero, alterando el hash",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 se calcula sobre el contenido del archivo, no sobre sus metadatos del FS."
+        },
+        {
+          "texto": "La herramienta (sha256sum vs CertUtil) usa una variante distinta del algoritmo en cada SO",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 es un estándar determinístico: cualquier implementación correcta produce el mismo hash."
+        }
+      ]
+    },
+    {
+      "pregunta": "Adquieres en caliente un servidor afectado por ransomware para preservar las claves en RAM. Tras volcar la RAM y antes de clonar el disco, el ransomware completa el cifrado y el sistema se reinicia. ¿Qué error metodológico cometiste?",
+      "respuestas": [
+        {
+          "texto": "Ninguno: la adquisición en caliente es siempre la opción correcta en sistemas con cifrado activo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay un fallo claro: no aislar la red ni suspender el proceso malicioso antes de adquirir. La proporcionalidad incluye contener daño activo durante la adquisición."
+        },
+        {
+          "texto": "Aislar el sistema de red y, si se identificó el proceso del ransomware, suspenderlo (SIGSTOP, no SIGKILL) antes de la adquisición de RAM",
+          "correcta": true,
+          "explicacion": "¡Correcto! Suspender preserva el estado del proceso en RAM (incluida la clave) sin que continúe cifrando. Aislar la red corta C2 y disparadores. Adquirir mientras el daño avanza viola la proporcionalidad."
+        },
+        {
+          "texto": "Se debió arrancar con un Linux Live USB para detener el ransomware y luego clonar el disco",
+          "correcta": false,
+          "explicacion": "Incorrecto. Arrancar Live USB exige apagar, perdiendo la RAM (donde está la clave). La alternativa correcta es contener manteniendo el sistema vivo."
+        },
+        {
+          "texto": "Se debió clonar el disco PRIMERO y la RAM después; el orden de volatilidad solo aplica a sistemas no comprometidos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Invertir el orden de volatilidad no es la solución; perderías RAM antes de capturarla."
+        }
+      ]
+    },
+    {
+      "pregunta": "Analizas un PCAP de 50 GB y cualquier consulta en Wireshark tarda decenas de minutos. ¿Cuál es la estrategia técnicamente más eficiente?",
+      "respuestas": [
+        {
+          "texto": "Convertir el PCAP a pcapng comprimido para reducir tamaño",
+          "correcta": false,
+          "explicacion": "Incorrecto. Comprimir reduce tamaño en disco pero al analizar hay que descomprimir, sin ganar velocidad. Pcapng tampoco es comprimido por defecto."
+        },
+        {
+          "texto": "Procesar con Zeek para generar logs de transacciones (conn.log, http.log, dns.log) e indexar en Elasticsearch/Splunk; volver al PCAP solo para flujos sospechosos",
+          "correcta": true,
+          "explicacion": "¡Correcto! Zeek transforma el PCAP en logs estructurados consultables a velocidad de índice. Identificas flujos sospechosos en segundos y solo extraes los segmentos PCAP relevantes con tshark/editcap."
+        },
+        {
+          "texto": "Dividir el PCAP en fragmentos de 1 GB con editcap y analizar en paralelo con tshark",
+          "correcta": false,
+          "explicacion": "Parcialmente útil pero no óptimo: paralelizar mejora algo, pero seguirás haciendo búsquedas lineales sin índice. La aproximación correcta es transformar a estructura indexable."
+        },
+        {
+          "texto": "Aplicar filtros BPF nativos directamente al PCAP con tcpdump para ganar rendimiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. BPF es más eficiente que display filters de Wireshark, pero seguirás haciendo lecturas lineales del fichero. No resuelve el problema de escala."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un binario tiene SHA-256 único en VirusTotal, SSDEEP con similitud baja a familias conocidas, e IMPHASH idéntico a 47 muestras de Lazarus. ¿Qué interpretación es la MÁS rigurosa?",
+      "respuestas": [
+        {
+          "texto": "El binario es certeramente Lazarus: IMPHASH idéntico es prueba concluyente de autoría",
+          "correcta": false,
+          "explicacion": "Incorrecto. IMPHASH idéntico es indicador FUERTE pero no concluyente. Otro grupo puede usar el mismo compilador con orden similar de imports."
+        },
+        {
+          "texto": "Probable variante de Lazarus o derivado: SSDEEP bajo indica modificación significativa, pero IMPHASH idéntico sugiere reuso de la estructura de imports (mismo loader/builder o código compartido)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Combinación rigurosa: SSDEEP bajo = poco parecido global; IMPHASH idéntico = mismas funciones importadas en el mismo orden. Indica reuso de loader/builder, sin afirmar autoría tajantemente."
+        },
+        {
+          "texto": "Las tres firmas son contradictorias entre sí, no se puede concluir nada hasta hacer ingeniería inversa completa",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSDEEP mide similitud global, IMPHASH mide estructura de imports. Que difieran es informativo, no contradictorio."
+        },
+        {
+          "texto": "El SHA-256 único indica que es un 0day y debe descartarse cualquier atribución a familias conocidas",
+          "correcta": false,
+          "explicacion": "Incorrecto. SHA-256 único solo significa que esa muestra exacta no se ha visto antes; no implica 0day ni descarta atribución."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un atacante ejecutó comandos como root en un servidor Linux pero su persistencia no aparece en /etc/systemd/system/, /etc/cron.* ni en bashrc/profile. ¿Qué mecanismo MENOS COMÚN deberías investigar?",
+      "respuestas": [
+        {
+          "texto": "Modificación del comando 'ls' del sistema con un alias en /etc/profile.d/",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aliases en /etc/profile.d/ son pista válida pero relativamente común y se cubren en revisión inicial."
+        },
+        {
+          "texto": "Hooks de paquetes en /etc/apt/apt.conf.d/ (DPkg::Pre-Install-Pkgs) o programas eBPF cargados como autoarranque kernel",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mecanismos avanzados: hooks de APT/yum se ejecutan en cualquier instalación con privilegios root; eBPF puede mantener persistencia kernel-side casi invisible. Vectores que solo se revisan en investigaciones profundas."
+        },
+        {
+          "texto": "Tareas en /var/spool/anacron/ que se ejecutan al inicio del sistema",
+          "correcta": false,
+          "explicacion": "Parcialmente válido pero anacron es una variante de cron y se incluye normalmente en la revisión estándar."
+        },
+        {
+          "texto": "Modificación del /etc/hostname para activar persistencia al cambiar el nombre del equipo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cambiar /etc/hostname no proporciona persistencia ni ejecución de código."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un perito impugna tu cadena de custodia porque entre las 14:32 y 14:35 no hay registro de quién custodió el dispositivo. Tu trazabilidad muestra '14:32 Recolectado por A' y '14:35 Depositado en caja fuerte por A'. ¿Cómo defiendes la integridad?",
+      "respuestas": [
+        {
+          "texto": "Apelando al principio de presunción de buena fe pericial: el analista no tenía motivos para alterar la evidencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 'presunción de buena fe' no es defensa pericial sólida: la cadena de custodia existe precisamente para no depender de la confianza."
+        },
+        {
+          "texto": "Demostrando con cámaras de videovigilancia y/o logs de control de accesos que el dispositivo permaneció con el mismo analista en zona controlada esos 3 minutos",
+          "correcta": true,
+          "explicacion": "¡Correcto! 3 minutos de tránsito son aceptables si se justifican: posesión continua del activo en zona controlada, evidenciable con CCTV o badges. La trazabilidad incluye corroboración externa."
+        },
+        {
+          "texto": "Argumentando que el hash SHA-256 al recolectar y al depositar coincide, lo que demuestra que no hubo manipulación",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash demuestra integridad del CONTENIDO, pero no resuelve el problema de procedimiento (quién, cuándo, cómo)."
+        },
+        {
+          "texto": "Argumentando que la ISO/IEC 27037 establece un margen de tolerancia de 5 minutos entre eventos de custodia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 no establece tal margen numérico. Afirmación inventada que un perito experto refutaría inmediatamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Diseñas un sistema de auditoría para un organismo NIS2. Quieres garantizar que ni un administrador comprometido pueda alterar registros históricos sin que se detecte. ¿Qué arquitectura es la MÁS apropiada?",
+      "respuestas": [
+        {
+          "texto": "Logs firmados digitalmente con el certificado del SIEM, en S3 con SSE-KMS y rotación trimestral de claves",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma del SIEM con su propio certificado no protege si el SIEM (o quien lo administra) está comprometido. Es 'el zorro custodiando el gallinero'."
+        },
+        {
+          "texto": "Encadenamiento criptográfico tipo blockchain: cada registro incluye el hash del anterior, de modo que alterar cualquier evento histórico invalida toda la cadena posterior",
+          "correcta": true,
+          "explicacion": "¡Correcto! El hash chaining (estilo Merkle/blockchain) es la propiedad de tamper-evidence: alterar un registro rompe todos los siguientes. Detecta alteraciones aunque el atacante tenga privilegios de admin sobre el log."
+        },
+        {
+          "texto": "Cifrado AES-256-GCM con clave única para todo el repositorio, custodiada en HSM con políticas multifactor",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado protege confidencialidad e integridad puntual de cada bloque, pero no detecta inserción/borrado de registros completos."
+        },
+        {
+          "texto": "Almacenamiento WORM con replicación geográfica y firmas RSA-4096 por cada evento individual",
+          "correcta": false,
+          "explicacion": "Parcialmente útil pero incompleto: WORM evita modificación pero no detecta inserción/borrado al inicio del proceso si la firma usa una clave que también puede comprometerse."
+        }
+      ]
+    },
+    {
+      "pregunta": "Volatility 3 muestra cmdline 'svchost.exe -k netsvcs' para un proceso, pero pslist indica que el proceso padre es explorer.exe. ¿Qué interpretación es CORRECTA?",
+      "respuestas": [
+        {
+          "texto": "Es comportamiento normal: explorer.exe puede lanzar svchost.exe cuando se ejecutan tareas administrativas con UAC elevado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo que un atacante quiere que pienses. svchost.exe se lanza por services.exe, NUNCA por explorer.exe en condiciones normales."
+        },
+        {
+          "texto": "Indicador fuerte de process hollowing o doppelgänging: un proceso ha sido creado por explorer.exe pero su PEB se ha modificado para suplantar svchost.exe",
+          "correcta": true,
+          "explicacion": "¡Correcto! Process hollowing/doppelgänging crean un proceso desde un padre arbitrario y modifican el PEB para que se 'identifique' como svchost. Discrepancia padre-hijo + cmdline svchost = firma clásica."
+        },
+        {
+          "texto": "Falso positivo: el cmdline se obtiene del PEB que puede corromperse durante el volcado",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PEB puede tener inconsistencias por smear, pero un cmdline coherente como 'svchost.exe -k netsvcs' no es corrupción aleatoria; es una cadena estructurada."
+        },
+        {
+          "texto": "Es resultado del modo 'Connected User Experience' de Windows 10, que enmascara los procesos padre por privacidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal característica de 'enmascarar procesos padre'. Afirmación inventada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de estas afirmaciones cumple con el principio de PRECISIÓN ATÓMICA en un informe pericial?",
+      "respuestas": [
+        {
+          "texto": "'El atacante utilizó técnicas avanzadas de ingeniería social para obtener credenciales privilegiadas y comprometer la infraestructura crítica'",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Técnicas avanzadas', 'privilegiadas' y 'crítica' son adjetivos calificativos sin soporte fáctico. Precisión atómica exige hechos verificables."
+        },
+        {
+          "texto": "'A las 09:14:23 UTC del 12/04/2026, la cuenta usuario1@empresa.com autenticó vía OWA desde la IP 198.51.100.42. El email rrhh-urgente.html (SHA-256: a3f...) fue abierto a las 09:11:08'",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada elemento es verificable: timestamp UTC exacto, identidad concreta, IP, hash del archivo, log fuente. Sin adjetivos ni interpretaciones."
+        },
+        {
+          "texto": "'El compromiso parece haberse iniciado el 12 de abril aproximadamente, mediante un email malicioso que el usuario abrió de manera imprudente'",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Aproximadamente', 'parece', 'malicioso', 'imprudente' son juicios de valor o expresiones imprecisas."
+        },
+        {
+          "texto": "'Se ha confirmado un ataque de phishing exitoso que comprometió las defensas de la empresa el 12/04/2026'",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Exitoso' y 'comprometió las defensas' son interpretaciones, no hechos. Las calificaciones van en la sección de conclusiones."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un atacante dejó un binario en /tmp/payload que se ejecutaba periódicamente. Tras la respuesta, /tmp se ha vaciado por reinicio. ¿Qué combinación de artefactos te permite DEMOSTRAR que el binario se ejecutó?",
+      "respuestas": [
+        {
+          "texto": "Logs de auditd con regla sobre /tmp/* y entradas en .bash_history del atacante",
+          "correcta": false,
+          "explicacion": "Incorrecto. .bash_history puede haberse manipulado, y auditd solo registra si estaba configurado previamente. Combinación frágil."
+        },
+        {
+          "texto": "Entradas en /var/log/auth.log que muestren el sudo del binario, y el contenido de /tmp recuperado con extundelete",
+          "correcta": false,
+          "explicacion": "Incorrecto. auth.log solo registra sudo si se invocó con sudo. extundelete es para ext3/ext4 y poco fiable; además se pide demostrar ejecución, no recuperar el binario."
+        },
+        {
+          "texto": "Inodos con MAC times sobre /tmp recuperables por timeline forense, /proc/[pid] capturado en RAM si el proceso seguía vivo, y eventos de execve en auditd si estaba auditado",
+          "correcta": true,
+          "explicacion": "¡Correcto! Multinivel: timeline del FS (MAC times de inodos liberados), volcado de RAM previo (con /proc del proceso), y logs de execve si auditd estaba configurado. Robustez por correlación."
+        },
+        {
+          "texto": "Logs del kernel en dmesg que registran cada ejecución de binarios en /tmp por defecto",
+          "correcta": false,
+          "explicacion": "Incorrecto. dmesg NO registra ejecución de binarios userspace por defecto. Eso requiere auditd o sysmon-for-linux."
+        }
+      ]
+    },
+    {
+      "pregunta": "Atacante comprometió una EC2 en AWS y pivotó a la red corporativa vía VPN. ¿Qué fuentes DEBEN correlacionarse para reconstruir la timeline completa?",
+      "respuestas": [
+        {
+          "texto": "CloudTrail para acciones IAM/API, VPC Flow Logs para tráfico EC2, logs de la VPN para sesiones inbound, y logs on-premise (FW, AD), todos sincronizados a UTC con NTS",
+          "correcta": true,
+          "explicacion": "¡Correcto! La reconstrucción cross-domain exige fuentes complementarias: CloudTrail (acciones IAM), VPC Flow (movimiento lateral en AWS), logs VPN (cruce del perímetro), logs on-prem (actividad post-pivote). Sincronización UTC-NTS es crítica."
+        },
+        {
+          "texto": "Solo CloudTrail y los logs locales de la EC2 comprometida; el resto es información secundaria",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin VPC Flow no ves tráfico lateral, sin logs VPN no rastreas el cruce, sin logs on-prem no ves la actividad post-pivote."
+        },
+        {
+          "texto": "Los snapshots EBS de la EC2 son la fuente principal; el resto se reconstruye del análisis del disco",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los snapshots EBS muestran estado del disco pero no el tráfico cross-environment ni las acciones IAM."
+        },
+        {
+          "texto": "Los logs de la VPN son suficientes ya que todos los pivotes pasaron por allí",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VPN solo registra establecimiento y duración de sesión, no las acciones realizadas en cualquier extremo."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un contenedor Docker en producción está minando criptomoneda. SRE quiere matarlo inmediatamente. ¿Cuál es la SECUENCIA correcta para preservar evidencia respetando la proporcionalidad?",
+      "respuestas": [
+        {
+          "texto": "docker pause → docker commit a imagen forense → docker export del filesystem → volcado RAM del host filtrado por cgroup → docker stop al final",
+          "correcta": true,
+          "explicacion": "¡Correcto! pause congela el proceso (SIGSTOP) sin matarlo, preservando estado en RAM. commit + export capturan estado del FS. RAM del host filtrada por cgroup captura el contexto. Solo entonces stop."
+        },
+        {
+          "texto": "docker kill --signal=SIGSTOP, después docker save de la imagen original, y reiniciar en sandbox para análisis",
+          "correcta": false,
+          "explicacion": "Incorrecto. docker save guarda la IMAGEN BASE, no el estado actual del contenedor con las modificaciones del atacante. Y reiniciar en sandbox altera estado."
+        },
+        {
+          "texto": "docker kill inmediato, docker logs para revisar lo ocurrido, restaurar desde imagen original",
+          "correcta": false,
+          "explicacion": "Incorrecto. docker kill destruye el contenedor y con él RAM, conexiones activas, archivos en /tmp. Pierdes evidencia volátil."
+        },
+        {
+          "texto": "Aislar la red con iptables, esperar a que el contenedor termine por timeout, recoger logs",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los contenedores no terminan 'por timeout' salvo configuración explícita. Y aislar red no preserva la RAM del proceso."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un junior afirma: 'No puede ser ataque interno porque el firewall muestra la conexión proviniendo de la IP externa 198.51.100.42'. ¿Qué error de razonamiento comete?",
+      "respuestas": [
+        {
+          "texto": "Sesgo de confirmación: ha decidido que es ataque externo y solo busca evidencias que lo confirmen",
+          "correcta": false,
+          "explicacion": "Parcialmente. Hay sesgo, pero el error técnico específico es más concreto: confiar en una sola capa de evidencia sin pivotar."
+        },
+        {
+          "texto": "Confiar en una única fuente sin pivotaje: la IP externa puede ser un proxy/VPN/Tor usado por un insider; hace falta correlacionar identidad (logon), endpoint y comportamiento",
+          "correcta": true,
+          "explicacion": "¡Correcto! El firewall ve capa 3/4 pero no identidad. Un insider puede conectarse a su propia VPN para que la conexión 'venga de fuera'. La verdad emerge correlacionando red + identidad + endpoint."
+        },
+        {
+          "texto": "Sobreajuste de evidencias: interpreta una IP genérica como prueba concluyente",
+          "correcta": false,
+          "explicacion": "Cercano pero no exacto. El sobreajuste es forzar evidencia débil en narrativa compleja. Aquí el problema es no pivotar entre capas."
+        },
+        {
+          "texto": "Síndrome del botón mágico: depende del firewall como única herramienta sin saber interpretarla manualmente",
+          "correcta": false,
+          "explicacion": "Incorrecto. El síndrome del botón mágico es depender de herramientas automáticas para INTERPRETAR. Aquí el junior sí está interpretando; el error es no buscar más fuentes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Observas conexiones HTTPS al dominio 'api.legitimate-cdn.com' cada 47 segundos exactos, con payloads de tamaño constante (~340 bytes). El certificado TLS es válido. ¿Qué hipótesis es la MÁS rigurosa?",
+      "respuestas": [
+        {
+          "texto": "Tráfico legítimo: certificado válido + dominio legítimo descartan C2; probablemente sea telemetría",
+          "correcta": false,
+          "explicacion": "Incorrecto. Certificado válido NO descarta C2: los actores modernos usan dominios comprometidos, certificados Let's Encrypt o domain fronting."
+        },
+        {
+          "texto": "Posible beaconing C2 con domain fronting o servicio cloud confiable: la regularidad (47s) y el tamaño fijo son IOCs comportamentales que persisten aunque no se descifre TLS",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cifrado TLS oculta CONTENIDO pero no METADATOS. Periodicidad exacta, tamaños constantes y asimetría in/out son firmas comportamentales de C2 robustas."
+        },
+        {
+          "texto": "Falso positivo: HTTPS legítimo nunca tiene payloads de tamaño fijo, debe ser un fallo del decodificador",
+          "correcta": false,
+          "explicacion": "Incorrecto. HTTPS legítimo puede tener payloads variables o constantes según la app. No hay 'fallo del decodificador'."
+        },
+        {
+          "texto": "Es DNS tunneling sobre HTTPS (DoH): el tamaño constante delata queries DNS encapsuladas",
+          "correcta": false,
+          "explicacion": "Incorrecto. DoH para tunneling tendría más variabilidad por las queries diversas. El patrón descrito encaja mejor con beaconing C2 estándar."
+        }
+      ]
+    },
+    {
+      "pregunta": "Comparas dos binarios con SSDEEP y obtienes una similitud del 12%. ¿Qué interpretación es la MÁS rigurosa?",
+      "respuestas": [
+        {
+          "texto": "12% es bajo pero no nulo; podría indicar compartición mínima de código (librería estática común) y no significa relación entre familias",
+          "correcta": true,
+          "explicacion": "¡Correcto! SSDEEP por debajo de ~30% suele atribuirse a coincidencias triviales (mismo compilador, librerías estáticas, mismo packer). No es evidencia de pertenencia a la misma familia."
+        },
+        {
+          "texto": "12% confirma que ambos binarios pertenecen a la misma campaña pero con generaciones distintas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Atribuir 'misma campaña' con 12% es sobreinterpretación. Habría falsos positivos masivos."
+        },
+        {
+          "texto": "Cualquier valor mayor que 0% en SSDEEP es indicador definitivo de relación",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSDEEP genera coincidencias bajas espurias por bloques comunes (cabeceras PE, runtimes). Tomar cualquier valor positivo como definitivo genera ruido inmanejable."
+        },
+        {
+          "texto": "12% indica que el segundo binario es una versión empacada del primero",
+          "correcta": false,
+          "explicacion": "Incorrecto. El packing suele reducir SSDEEP a ~0%, no al 12%. La afirmación es inventada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tu laboratorio usa NTP simple (sin NTS). Un perito contrario podría argumentar:",
+      "respuestas": [
+        {
+          "texto": "Que NTP es inadmisible en cualquier procedimiento forense según ISO/IEC 27037",
+          "correcta": false,
+          "explicacion": "Incorrecto. La 27037 no establece tal prohibición. Afirmación inventada."
+        },
+        {
+          "texto": "Que NTP es vulnerable a MITM y time-shifting que podrían haber alterado los timestamps de las evidencias, generando duda razonable sobre la integridad temporal",
+          "correcta": true,
+          "explicacion": "¡Correcto! NTP no autentica el origen del tiempo. En un juicio basta con introducir 'duda razonable': el perito no necesita demostrar que ocurrió, solo que pudo haber ocurrido. NTS (RFC 8915) cierra esa puerta."
+        },
+        {
+          "texto": "Que NTP solo es preciso a nivel de minutos, insuficiente para correlación forense",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTP alcanza precisión de milisegundos en redes corporativas y submilisegundos en redes locales."
+        },
+        {
+          "texto": "Que NTP requiere conexión a Internet y no puede usarse en redes air-gapped",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTP funciona perfectamente con servidores locales (incluido GPS Stratum 1 on-prem) sin Internet."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras detectar tráfico C2 en NetFlow, debes decidir el siguiente artefacto a analizar. ¿Cuál es la SECUENCIA óptima de pivotaje?",
+      "respuestas": [
+        {
+          "texto": "Red → Endpoint (logs del host fuente) → Proceso (RAM/Sysmon) → Binario (en disco/RAM): cerramos del 'qué tráfico' al 'qué código exacto lo generó'",
+          "correcta": true,
+          "explicacion": "¡Correcto! El pivotaje cierra el embudo: NetFlow muestra qué host pero no qué proceso → logs del host (Sysmon EID 3 / auditd network) → identificar PID → volcado RAM/disco para el binario."
+        },
+        {
+          "texto": "Red → Firewall perimetral → SIEM → Logs del IDS: pivotamos entre fuentes de red para validar el patrón",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso no es pivotaje real, es validación cruzada en la misma capa. Pivotaje exige saltar entre tipos de evidencia."
+        },
+        {
+          "texto": "Red → Análisis de RAM completo → Reverse engineering del binario → Logs perimetrales: empezamos por lo más volátil",
+          "correcta": false,
+          "explicacion": "Parcial: empezar por lo volátil es correcto en adquisición, pero pivotar implica usar lo que ya tienes para identificar lo siguiente. Saltarse a RAM completa pierde la trazabilidad de qué proceso buscar."
+        },
+        {
+          "texto": "Red → DNS interno → CloudTrail → Snapshots EBS: priorizamos las fuentes con mayor retención",
+          "correcta": false,
+          "explicacion": "Incorrecto. La retención es secundaria al pivotaje. Mezclar elementos cloud sin contexto sugiere ausencia de criterio metodológico."
+        }
+      ]
+    },
+    {
+      "pregunta": "Capturas RAM en un servidor crítico y tarda 18 minutos para 128 GB. A los 12 minutos, un proceso sospechoso aparece y desaparece en menos de 30 segundos. ¿Qué problema técnico plantea?",
+      "respuestas": [
+        {
+          "texto": "Smear: el proceso vivió y murió dentro de la ventana de adquisición; mitigación: complementar con telemetría continua (Sysmon, auditd, EDR) que tenga ventana más fina",
+          "correcta": true,
+          "explicacion": "¡Correcto! El smear es la incoherencia entre páginas volcadas en momentos distintos. Si un proceso vivió 30s y el volcado tomó 18min, sus páginas pueden estar parcial o totalmente sobrescritas. La RAM por sí sola no captura eventos efímeros con ese gap."
+        },
+        {
+          "texto": "El proceso era un señuelo del atacante; mitigación: ignorarlo y centrarse en procesos persistentes",
+          "correcta": false,
+          "explicacion": "Incorrecto. Procesos cortos no son automáticamente 'señuelos': pueden ser droppers, escaladas de privilegios o exfiltración rápida. Ignorarlos es un error."
+        },
+        {
+          "texto": "WinPmem/LiME no garantizan adquisición coherente; mitigación: reiniciar el volcado desde cero",
+          "correcta": false,
+          "explicacion": "Incorrecto. Reiniciar destruye lo capturado. La adquisición coherente al 100% en sistema vivo es imposible — siempre hay smear."
+        },
+        {
+          "texto": "El proceso no quedará en la imagen; mitigación: aumentar el tamaño de página del kernel para que las estructuras EPROCESS persistan más tiempo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cambiar tamaños de página del kernel en producción es inválido y peligroso, y no resolvería el problema."
+        }
+      ]
+    },
+    {
+      "pregunta": "Encuentras un binario en RAM con IMPHASH conocido de Lazarus, strings ofuscadas que FLOSS desofusca a 'C:\\Windows\\System32\\evil.dll', y un mutex 'Global\\LazarusMtx_2024'. ¿Cuál es la conclusión MÁS rigurosa?",
+      "respuestas": [
+        {
+          "texto": "Es definitivamente Lazarus: tres IOCs coincidentes constituyen prueba concluyente de autoría",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tres IOCs son indicador fuerte pero no concluyente. Otros actores pueden imitar firmas conocidas (false flag) o reusar código público."
+        },
+        {
+          "texto": "Compatible con Lazarus o con un actor que reusa/imita su toolkit; reportar con confianza media-alta y citar los tres IOCs como sustento, sin afirmar autoría tajante",
+          "correcta": true,
+          "explicacion": "¡Correcto! Atribución rigurosa: 'compatible con' o 'consistente con' es el lenguaje pericial correcto. Tres IOCs alineados elevan confianza pero no convierten correlación en causalidad."
+        },
+        {
+          "texto": "Es un false flag: cuando hay tres IOCs tan claros, suele ser un atacante distinto plantando pistas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La hipótesis del false flag requiere evidencia adicional, no se asume por defecto. Es sobreajuste hacia la dirección contraria."
+        },
+        {
+          "texto": "Los IOCs son contradictorios: un mutex con nombre tan obvio descarta a un actor sofisticado como Lazarus",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los actores APT no siempre son sigilosos en todos los detalles; muchos mutex de familias APT conocidas son explícitos. No es contradictorio."
+        }
+      ]
+    }
+  ]
+}
+ 

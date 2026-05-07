@@ -1,0 +1,1755 @@
+{
+  "tema": "Ciberseguridad - Investigación e Intercambio de Información",
+  "preguntas": [
+    {
+      "pregunta": "Según el modelo NIST SP 800-61, ¿en qué se basa principalmente la priorización de un incidente?",
+      "respuestas": [
+        {
+          "texto": "En la dependencia crítica dentro del mercado único europeo y la infraestructura crítica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este es el enfoque sistémico de ENISA, no del modelo NIST."
+        },
+        {
+          "texto": "En el impacto funcional, el impacto informativo y la recuperabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El modelo NIST (estándar de facto) centra la priorización en la fase de Detección y Análisis basándose en estos tres factores clave."
+        },
+        {
+          "texto": "En la matriz de capacidades de los servicios de inteligencia de amenazas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La matriz de capacidades destaca en el marco de FIRST (CSIRT Framework)."
+        },
+        {
+          "texto": "Únicamente en el número de registros o datos personales afectados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque es un factor importante para el cumplimiento legal, el NIST define específicamente el impacto funcional, informativo y recuperabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la investigación de incidentes, ¿qué es el 'Dwell Time'?",
+      "respuestas": [
+        {
+          "texto": "El desfase temporal (offset) que debe corregirse al normalizar los logs a la zona horaria UTC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El offset temporal se refiere a la 'Time Normalization', no al Dwell Time."
+        },
+        {
+          "texto": "El tiempo de respuesta máximo establecido en un SLA (Acuerdo de Nivel de Servicio).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los SLAs definen tiempos de respuesta o mitigación con proveedores, no el concepto de Dwell Time en investigación."
+        },
+        {
+          "texto": "El tiempo que el atacante ha permanecido en la red sin ser detectado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un indicador crítico; un dwell time alto suele indicar un fallo sistémico en la monitorización y mayor probabilidad de compromiso de múltiples activos."
+        },
+        {
+          "texto": "El tiempo estimado que tardará la organización en recuperar el servicio crítico (RTO).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RTO (Recovery Time Objective) es un concepto de continuidad de negocio, distinto al tiempo de permanencia del atacante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué tipo de sesgo cognitivo nos referimos si en una investigación le damos un peso excesivo a la primera pieza de información recibida (por ejemplo, una alerta de Ransomware)?",
+      "respuestas": [
+        {
+          "texto": "Sesgo de confirmación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sesgo de confirmación es buscar o interpretar información que solo confirme nuestras creencias previas, no necesariamente la primera recibida."
+        },
+        {
+          "texto": "Sesgo de disponibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sesgo de disponibilidad ocurre cuando valoramos más la información reciente o impactante ('como hubo phishing ayer, esto es phishing')."
+        },
+        {
+          "texto": "Anclaje.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El anclaje ocurre cuando nos fijamos en la primera información. Podríamos ignorar, por ejemplo, que el ransomware es solo una cortina de humo para exfiltrar datos."
+        },
+        {
+          "texto": "Hipótesis de descarte.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La hipótesis de descarte (o nula) es una técnica consciente para probar que una teoría es falsa y evitar sesgos, no es un sesgo en sí misma."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la evaluación del impacto de un incidente, ¿a qué hace referencia el concepto de 'Radio de Explosión' (Blast Radius)?",
+      "respuestas": [
+        {
+          "texto": "A la cartografía de sistemas tanto afectados como potencialmente afectados por compartir red, credenciales o haber tenido contacto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El 'Blast Radius' ayuda a determinar el alcance real, incluyendo sistemas potencialmente afectados que podrían permitir persistencia o movimiento lateral."
+        },
+        {
+          "texto": "Exclusivamente al daño físico causado por un ciberataque a infraestructuras críticas (OT/ICS).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque aplica a OT, el concepto en investigación se usa para medir la exposición técnica de sistemas en cualquier red corporativa."
+        },
+        {
+          "texto": "A la cantidad de datos que han sido exfiltrados hacia un servidor C2 externo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cantidad de datos exfiltrados se considera parte del impacto en la confidencialidad, no define el concepto de radio de explosión."
+        },
+        {
+          "texto": "Al nivel de severidad asignado por el equipo legal al informar a la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un concepto técnico utilizado en la determinación del alcance real, no una métrica de clasificación legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de la causa raíz (RCA), ¿cuál es la diferencia principal entre un 'Trigger' (evento detonante) y una 'Condición habilitadora'?",
+      "respuestas": [
+        {
+          "texto": "El trigger es el fallo del software, mientras que la condición habilitadora es el fallo del hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia no se basa en software vs hardware, sino en la acción inmediata vs el entorno que permite que dicha acción tenga éxito."
+        },
+        {
+          "texto": "El trigger es la chispa (ej. hacer clic en phishing), y la condición habilitadora es la debilidad que permite el daño (ej. falta de segmentación).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Confundir ambos lleva a soluciones temporales. El trigger inicia la cadena, pero las condiciones habilitadoras son las vulnerabilidades subyacentes."
+        },
+        {
+          "texto": "El trigger se busca mediante diagramas de Ishikawa y la condición habilitadora se busca mediante los 5 porqués.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas herramientas de RCA (Ishikawa y 5 Porqués) sirven para descubrir tanto causas inmediatas como causas raíz subyacentes."
+        },
+        {
+          "texto": "Son exactamente lo mismo; el término 'trigger' se usa en el análisis técnico y 'condición habilitadora' en la investigación organizativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen significados distintos y fundamentales; abordar solo el trigger no soluciona la causa raíz del incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué indica el nivel de certeza 'Plausible' en las conclusiones de un informe de investigación de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Que es un hecho irrefutable respaldado por logs forenses o volcados de memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa definición corresponde al nivel de certeza 'Confirmadas'."
+        },
+        {
+          "texto": "Que la información ha sido totalmente destruida (anti-forense) y hay lagunas infranqueables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa situación se define en el informe como un 'Área de incertidumbre'."
+        },
+        {
+          "texto": "Que existe una alta probabilidad lógica respaldada por una correlación temporal de eventos clara, aunque sin rastro directo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta definición corresponde al nivel de certeza 'Probables'."
+        },
+        {
+          "texto": "Que la hipótesis es consistente con el modus operandi conocido (TTPs) del atacante, aunque no haya evidencia directa en el sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una conclusión 'Plausible' se basa en la inteligencia de amenazas y el comportamiento típico del actor, supliendo la falta de evidencia técnica directa."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la normativa DORA, que regula la resiliencia operativa digital en el sector financiero, ¿cuál es el plazo para la notificación de 'alerta temprana' ante un incidente TIC grave?",
+      "respuestas": [
+        {
+          "texto": "72 horas tras tener constancia del incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las 72 horas son el plazo para la notificación a la AEPD según el GDPR (si hay datos personales), o para el informe intermedio de DORA, no para la alerta temprana."
+        },
+        {
+          "texto": "24 horas (o antes del fin de la jornada laboral) tras tener constancia del incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! DORA y NIS2 han endurecido los plazos de reporte. Se exige una alerta temprana en 24 horas, incluso antes de conocer la causa raíz."
+        },
+        {
+          "texto": "1 mes, momento en el que se entrega el informe final completo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 1 mes es el plazo habitual para entregar el Informe Final, no la alerta temprana."
+        },
+        {
+          "texto": "No hay un plazo definido, se debe notificar 'sin dilación indebida' una vez se resuelva el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DORA establece plazos de horas muy estrictos para la alerta temprana y los informes intermedios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué estándar internacional basado en JSON se utiliza comúnmente para describir ciberamenazas y automatizar el intercambio de inteligencia (IOCs, TTPs, Threat Actors)?",
+      "respuestas": [
+        {
+          "texto": "TAXII",
+          "correcta": false,
+          "explicacion": "Incorrecto. TAXII es el protocolo de transporte diseñado para mover la información, no el lenguaje de descripción en sí."
+        },
+        {
+          "texto": "ISO/IEC 27035",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta ISO es la norma de referencia para la gestión de incidentes de seguridad (procesos y operaciones), no un lenguaje de intercambio de inteligencia."
+        },
+        {
+          "texto": "STIX (Structured Threat Information Expression)",
+          "correcta": true,
+          "explicacion": "¡Correcto! STIX es el lenguaje estandarizado que permite estructurar la información (objetos de dominio y relación) de forma que las máquinas puedan procesarla (SIEM, EDR)."
+        },
+        {
+          "texto": "RFC 2350",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RFC 2350 define las expectativas y políticas públicas que debe publicar un CSIRT para interactuar con otros, no es un formato JSON de inteligencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante la gestión de un incidente crítico, ¿qué regla básica debe aplicarse a la comunicación interna con el equipo directivo (Capa Estratégica)?",
+      "respuestas": [
+        {
+          "texto": "No debe informarse a la dirección hasta que el incidente esté totalmente erradicado para no generar alarmas innecesarias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El escalado tardío a la dirección es un error grave, ya que retrasa decisiones críticas de negocio, legales o de relaciones públicas."
+        },
+        {
+          "texto": "Deben recibir resúmenes ejecutivos breves (ej. SITREP) orientados al impacto en el negocio, evitando informes técnicos exhaustivos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Enviar información técnica excesiva a la capa estratégica genera parálisis decisional. La comunicación debe enfocarse en el impacto y la toma de decisiones."
+        },
+        {
+          "texto": "Deben ser incluidos en los mismos canales operativos de chat (War Room virtual) de los analistas para observar la respuesta en tiempo real.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Mezclar la comunicación técnica operativa con la directiva genera ruido y confusión. Se deben separar los canales según la capa."
+        },
+        {
+          "texto": "Deben ser los encargados de recolectar los Indicadores de Compromiso (IoCs) para enviarlos a los proveedores externos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es una tarea de la capa operativa (CSIRT/SOC), no de la dirección estratégica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si al compartir un informe de un ataque se sustituye 'empresa-victima.com' por un valor como 'TARGET-A' almacenado en una tabla de mapeo secreta, ¿qué técnica de protección se está aplicando?",
+      "respuestas": [
+        {
+          "texto": "Anonimización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La anonimización debe ser un proceso irreversible. Al existir una tabla de mapeo, los datos pueden reidentificarse."
+        },
+        {
+          "texto": "Cifrado en tránsito (TLS).",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS protege los datos mientras viajan por la red, pero no transforma los identificadores dentro del propio documento."
+        },
+        {
+          "texto": "Pseudonimización mediante tokenización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La tokenización reemplaza valores sensibles por tokens aleatorios. Es un tipo de pseudonimización porque es reversible si se posee la tabla de mapeo segura."
+        },
+        {
+          "texto": "Perturbación de datos (Data Perturbation).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La perturbación introduce ruido estadístico en valores numéricos, no sustituye cadenas de texto enteras por tokens."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre si una organización decide comunicar libremente información técnica (IoCs y TTPs) de un incidente activo que ha sido etiquetada por un CERT como 'TLP: RED'?",
+      "respuestas": [
+        {
+          "texto": "Estaría violando el protocolo, ya que TLP: RED indica que la información no puede redistribuirse más allá de los participantes directos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El nivel Rojo exige estricta confidencialidad. Compartirla puede alertar a los atacantes, exponer vulnerabilidades 0-day o romper acuerdos de confianza."
+        },
+        {
+          "texto": "Sería una práctica recomendada (Clear Disclosure) para ayudar rápidamente a toda la comunidad de ciberseguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El nivel adecuado para compartir libremente con la comunidad o el público es TLP: GREEN o TLP: CLEAR, nunca TLP: RED."
+        },
+        {
+          "texto": "Solo es aceptable si la organización elimina los metadatos y aplica cifrado AES-256 a la transmisión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLP rige el permiso de redistribución semántica, independientemente de los controles técnicos de seguridad aplicados en la transmisión."
+        },
+        {
+          "texto": "Se enfrentará a sanciones directas bajo la directiva NIS2, ya que el TLP es una ley europea de obligado cumplimiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLP es un estándar voluntario de la comunidad (establecido por FIRST), no una ley; aunque ignorarlo destruye la confianza con los interlocutores."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la protección de información sensible antes de un intercambio, ¿por qué es crítico eliminar los metadatos de los ficheros adjuntos (como PDFs o archivos Word)?",
+      "respuestas": [
+        {
+          "texto": "Porque los metadatos impiden que la información pueda ser ingestada automáticamente por plataformas como MISP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Plataformas como MISP pueden manejar archivos con metadatos; el problema es de seguridad, no técnico."
+        },
+        {
+          "texto": "Porque pueden contener información no intencionada, como nombres de usuarios locales, software interno o rutas del equipo analista.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los metadatos de los archivos pueden filtrar de manera accidental información arquitectónica o identidades corporativas al exterior, facilitando ataques dirigidos."
+        },
+        {
+          "texto": "Porque aumentan significativamente el tamaño del fichero, lo que puede causar bloqueos en el protocolo TAXII.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El peso de los metadatos suele ser ínfimo en KB y no afecta al rendimiento de los protocolos de intercambio."
+        },
+        {
+          "texto": "Porque la presencia de metadatos invalida la legalidad de la evidencia según la Ley de Enjuiciamiento Criminal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En un entorno forense penal, los metadatos originales son valiosos; pero al compartir externamente, se deben eliminar para proteger la identidad de la víctima."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta analítica permite categorizar posibles causas en dimensiones como Personas, Procesos, Tecnología y Entorno, ayudando a visualizar de forma no lineal los factores de un incidente?",
+      "respuestas": [
+        {
+          "texto": "El marco MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE ATT&CK mapea tácticas y técnicas del atacante, no clasifica las vulnerabilidades o fallas organizativas subyacentes."
+        },
+        {
+          "texto": "El análisis Cyber Kill Chain.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Kill Chain es un modelo lineal (progreso del ataque) y no está diseñado para categorizar fallas de la organización."
+        },
+        {
+          "texto": "El Diagrama de Ishikawa (Espina de Pescado).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El diagrama de Ishikawa es la herramienta visual que desglosa un incidente en esas ramas principales, facilitando el análisis estructurado de las causas."
+        },
+        {
+          "texto": "El formato de reporte SITREP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SITREP es un reporte de estado periódico utilizado para la comunicación de un incidente, no una herramienta de análisis de causas (RCA)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para prevenir filtraciones accidentales al exterior al gestionar un incidente, ¿qué control técnico es muy efectivo para el correo electrónico corporativo?",
+      "respuestas": [
+        {
+          "texto": "Implementar un cifrado simétrico usando la misma contraseña para toda la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El uso de contraseñas compartidas simétricas es una pésima práctica de seguridad y no previene errores de destinatario."
+        },
+        {
+          "texto": "Habilitar la autenticación multifactor (MFA) obligatoria para el receptor del correo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El MFA evita el acceso no autorizado a la cuenta, pero no impide que el remitente envíe un correo por error a la dirección equivocada."
+        },
+        {
+          "texto": "Configurar herramientas de DLP y establecer un retardo configurable (undo send) de 30-60 segundos en correos salientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Data Loss Prevention detecta información sensible, y el retraso de envío (undo send) permite a los analistas cancelar un envío accidental al percatarse del error."
+        },
+        {
+          "texto": "Deshabilitar totalmente la posibilidad de adjuntar documentos en PDF o Word.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta medida paralizaría las operaciones normales de comunicación técnica; se requiere control, no prohibición absoluta."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de la tipología de validación cruzada en una investigación, ¿qué implica el 'Análisis de patrones'?",
+      "respuestas": [
+        {
+          "texto": "Contrastar si los eventos registrados por el EDR coinciden temporalmente con los registrados en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se denomina 'Consistencia temporal' o 'Corroboración entre fuentes', pero no análisis de patrones."
+        },
+        {
+          "texto": "Buscar identificar comportamientos recurrentes o anomalías en múltiples equipos que puedan indicar una campaña coordinada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El análisis de patrones conecta evidencias dispersas que se repiten (ej. muchos ordenadores contactando al mismo dominio) para construir una hipótesis sólida."
+        },
+        {
+          "texto": "Clasificar la evidencia encontrada como directa o circunstancial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso forma parte del proceso de 'Calificación' de la evidencia, no del análisis de patrones de comportamiento."
+        },
+        {
+          "texto": "Determinar si la actividad en red es normal dentro del horario laboral estándar de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la validación basada en el 'Contexto operacional'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia principalmente la atribución técnica de la atribución estratégica en la investigación de un incidente?",
+      "respuestas": [
+        {
+          "texto": "La atribución técnica busca identificar a las personas concretas, mientras que la estratégica busca la dirección IP del atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al contrario en cuanto al enfoque de red; la técnica busca IPs y herramientas."
+        },
+        {
+          "texto": "La técnica se centra en el 'cómo' y el 'qué' usando evidencias digitales, y la estratégica en el 'por qué' y 'quién' usando contexto geopolítico y OSINT.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La atribución técnica analiza TTPs e IoCs, mientras que la estratégica infiere motivaciones y responsables finales apoyándose en inteligencia y geopolítica."
+        },
+        {
+          "texto": "La atribución técnica es una inferencia probabilística y la estratégica se basa en hechos irrefutables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Según el temario, la atribución técnica debe limitarse a los hechos, mientras que la atribución estratégica es una inferencia probabilística."
+        },
+        {
+          "texto": "No tienen diferencias operativas; son términos intercambiables en el modelo MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen enfoques, evidencias y objetivos completamente distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro de los límites de la atribución, ¿qué se considera una 'negligencia profesional' por riesgo de sobreinterpretación?",
+      "respuestas": [
+        {
+          "texto": "Identificar el uso de herramientas legítimas como PowerShell en un ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Identificar el uso de PowerShell (LotL) es un hecho técnico válido."
+        },
+        {
+          "texto": "Afirmar categóricamente la identidad de un atacante basándose solo en el uso de herramientas públicas como Mimikatz o Metasploit.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las herramientas públicas son usadas por multitud de actores; basar una atribución de identidad exclusivamente en ellas es una sobreinterpretación riesgosa."
+        },
+        {
+          "texto": "Mapear un artefacto malicioso al marco Cyber Kill Chain en lugar de MITRE ATT&CK.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Usar un marco u otro depende del enfoque, no es una negligencia de atribución."
+        },
+        {
+          "texto": "Delegar la atribución estratégica a organismos de inteligencia gubernamentales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Colaborar con organismos que tienen inteligencia de señales es una práctica recomendada."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la matriz de riesgos post-incidente, ¿cómo se interpreta la 'Probabilidad' al calcular el Riesgo (Probabilidad x Impacto)?",
+      "respuestas": [
+        {
+          "texto": "Es la probabilidad de que el incidente inicial ocurriera, basándose en registros históricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Como el evento ya ha ocurrido, la probabilidad histórica no es el foco del análisis post-incidente."
+        },
+        {
+          "texto": "Es la probabilidad de que la organización reciba una sanción legal o multa por parte del regulador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es solo uno de los múltiples impactos posibles (legal/financiero), no la definición del eje de probabilidad."
+        },
+        {
+          "texto": "Es la probabilidad de que las consecuencias se agraven (ej. pase de espionaje a ransomware) o el incidente se repita.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En una matriz post-incidente, la probabilidad mide el riesgo residual, de reinfección o de escalada del incidente ya detectado."
+        },
+        {
+          "texto": "Es la métrica que determina si se debe realizar la notificación en 24 horas o en 72 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los plazos de notificación los define la regulación (DORA, NIS2, RGPD), no esta matriz directamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja principal aporta el 'Análisis Sistémico' frente a técnicas como los 5 Porqués en la investigación de ciberseguridad?",
+      "respuestas": [
+        {
+          "texto": "Se centra en encontrar a un individuo culpable basándose en los registros de recursos humanos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ninguna metodología seria de investigación técnica busca culpabilizar individuos, sino corregir procesos sistémicos."
+        },
+        {
+          "texto": "Permite clasificar los incidentes en sectores regulados por la directiva NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis sistémico no es una herramienta de clasificación regulatoria."
+        },
+        {
+          "texto": "Es un enfoque lineal que resuelve incidentes simples en menos pasos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un enfoque holístico (no lineal) diseñado específicamente para sistemas y entornos complejos."
+        },
+        {
+          "texto": "Busca entender patrones, interdependencias y fallos emergentes invisibles al estudiar los componentes de forma aislada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El análisis sistémico entiende que el sistema es superior a la suma de sus partes y busca fallos que surgen de la interacción entre componentes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el temario, ¿cuál es el objetivo principal del intercambio de información a nivel 'Interno' (ej. SOC / CSIRT)?",
+      "respuestas": [
+        {
+          "texto": "Alertar a la comunidad y prevenir ataques similares en el mismo sector industrial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el objetivo principal del intercambio externo (ej. ISACs)."
+        },
+        {
+          "texto": "Erradicar el incidente y recuperar la continuidad del negocio mediante operatividad técnica inmediata.",
+          "correcta": true,
+          "explicacion": "¡Correcto! A nivel interno, el foco es compartir logs, volcados e información específica de la infraestructura para resolver la crisis de forma ágil."
+        },
+        {
+          "texto": "Cumplir con la obligación regulatoria de reportar a la AEPD en menos de 72 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso forma parte de la comunicación formal con organismos oficiales, no del flujo operativo interno."
+        },
+        {
+          "texto": "Publicar comunicados de prensa para minimizar el impacto en el mercado bursátil.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa tarea corresponde al intercambio/comunicación pública coordinada por el nivel estratégico y legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "En los modelos de coordinación de intercambio de información, ¿qué caracteriza a la Cooperación Público-Privada (PPP)?",
+      "respuestas": [
+        {
+          "texto": "El intercambio de amenazas específicas exclusivas del sector salud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El intercambio de nicho en un sector determinado (ej. salud) se da en los CERT/CSIRT sectoriales o ISACs."
+        },
+        {
+          "texto": "La limitación a una relación de confianza directa y cerrada entre una empresa y su proveedor Cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la definición de Coordinación Bilateral."
+        },
+        {
+          "texto": "Alianzas donde el Estado aporta inteligencia de señales y las empresas privadas aportan visibilidad sobre el terreno comercial.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En este modelo se combinan las capacidades de inteligencia exclusivas del Estado con la inmensa telemetría del sector privado."
+        },
+        {
+          "texto": "La obligación de publicar todas las vulnerabilidades de la empresa en foros de OSINT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La PPP no exige la publicación abierta, sino una colaboración estratégica regulada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué fue crítico el intercambio de información en el incidente de ransomware WannaCry en 2017?",
+      "respuestas": [
+        {
+          "texto": "Porque permitió identificar rápidamente la identidad geopolítica de los atacantes para sancionarlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la atribución se hizo después, lo crítico en 2017 para detener el ataque fue un mecanismo técnico."
+        },
+        {
+          "texto": "Porque investigadores independientes compartieron el descubrimiento de un 'Kill Switch' (dominio) que detuvo la propagación global.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no se hubiera compartido ese hallazgo técnico, la infección habría continuado devastando infraestructuras globales."
+        },
+        {
+          "texto": "Porque las aseguradoras cibernéticas obligaron a las empresas a revelar sus debilidades en la gestión de parches.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El caso de éxito de WannaCry fue la colaboración técnica sobre el malware, no temas de aseguradoras."
+        },
+        {
+          "texto": "Porque el INCIBE-CERT emitió una multa a todas las organizaciones que no habían reportado el ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El reporte obligatorio no detuvo a WannaCry; fue la mitigación técnica compartida a nivel internacional."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si durante un incidente se descubre una brecha de datos personales, ¿quién tiene la responsabilidad principal de gestionar la comunicación con la autoridad de control (AEPD)?",
+      "respuestas": [
+        {
+          "texto": "El CISO (Chief Information Security Officer).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CISO lidera la estrategia técnica de respuesta, pero la comunicación regulatoria de privacidad tiene otro responsable."
+        },
+        {
+          "texto": "El DPO (Delegado de Protección de Datos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El DPO es el responsable legal y procedimental para interactuar con la AEPD en caso de afectación de datos personales."
+        },
+        {
+          "texto": "El Responsable de Sistemas TI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su responsabilidad es aportar datos técnicos objetivos para la erradicación del incidente."
+        },
+        {
+          "texto": "El Responsable de Servicio afectado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su rol es evaluar el impacto en el negocio y la continuidad operativa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el propósito fundamental del estándar RFC 2350 en el ecosistema de respuesta a incidentes?",
+      "respuestas": [
+        {
+          "texto": "Establecer las métricas de cifrado obligatorio (TLS 1.3) para el correo corporativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RFC 2350 no trata sobre los requisitos técnicos de cifrado a nivel de transporte."
+        },
+        {
+          "texto": "Definir un formato en JSON para estructurar objetos de inteligencia de amenazas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. STIX es el estándar basado en JSON para inteligencia de amenazas."
+        },
+        {
+          "texto": "Definir qué información debe publicar un CSIRT (como claves PGP y políticas) para que otras entidades sepan cómo interactuar con él.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RFC 2350 fija las expectativas formales para el intercambio y comunicación entre equipos de respuesta (CSIRT)."
+        },
+        {
+          "texto": "Imponer un límite de 24 horas para reportar ciberataques críticos al gobierno.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos plazos derivan de regulaciones como NIS2 o DORA, no del estándar RFC 2350."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es MISP (Malware Information Sharing Platform) dentro de la arquitectura de intercambio de inteligencia?",
+      "respuestas": [
+        {
+          "texto": "Una plataforma de código abierto y estándar de facto para almacenar, compartir y correlacionar Indicadores de Compromiso (IoCs).",
+          "correcta": true,
+          "explicacion": "¡Correcto! MISP utiliza formatos como STIX y modelos de Taxonomías para categorizar e intercambiar amenazas entre la comunidad de ciberseguridad."
+        },
+        {
+          "texto": "Un protocolo de transporte a nivel de red diseñado para reemplazar a HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MISP es una plataforma de software a nivel de aplicación (TIP), no un protocolo de transporte de red."
+        },
+        {
+          "texto": "Una herramienta forense utilizada para realizar volcados de memoria RAM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para volcados de memoria se usan herramientas como Volatility, MISP es para inteligencia de amenazas compartida."
+        },
+        {
+          "texto": "Un esquema de certificación legal emitido por ENISA para operadores críticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MISP no es un certificado de cumplimiento, sino una plataforma de intercambio de inteligencia técnica."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si existe sospecha fundada de que un proveedor es el origen del incidente (compromiso de la cadena de suministro), ¿cómo debe gestionarse la comunicación con él?",
+      "respuestas": [
+        {
+          "texto": "Se le debe enviar el reporte técnico forense completo para que solucione la vulnerabilidad lo antes posible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compartir todo el alcance podría alertar a atacantes persistentes en el proveedor o permitir la destrucción de evidencias."
+        },
+        {
+          "texto": "Con extrema cautela, notificándole solo la información estrictamente necesaria para la remediación sin revelar el alcance total de la investigación interna.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esto se hace para mitigar el riesgo de que el atacante (posicionado en el proveedor) borre huellas al enterarse de cuánto sabe la víctima."
+        },
+        {
+          "texto": "Se debe interrumpir cualquier tipo de comunicación con él hasta que la policía finalice su investigación oficial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La interrupción total de la comunicación bloquearía las acciones de remediación y continuidad del negocio."
+        },
+        {
+          "texto": "Debe solicitarse al proveedor las credenciales de administración global para auditar sus sistemas remotamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Legal y operativamente, una organización cliente no puede exigir accesos administrativos sobre la infraestructura matriz de un proveedor."
+        }
+      ]
+    },
+    {
+      "pregunta": "A la hora de valorar la notificación de un incidente a los clientes afectados, ¿qué criterio es un indicador para NO realizar una notificación inmediata?",
+      "respuestas": [
+        {
+          "texto": "Que el volumen de registros afectados sea excesivamente grande y cause pánico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si hay un gran número de afectados y alto riesgo, la obligación de notificar aumenta, no disminuye."
+        },
+        {
+          "texto": "Que los datos comprometidos incluyan información financiera o de salud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos sensibles, como los financieros o médicos, casi siempre requieren notificación rápida por representar un riesgo alto."
+        },
+        {
+          "texto": "Que el incidente esté totalmente contenido y no haya evidencia de explotación o acceso a los datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no hay riesgo real para los derechos de los afectados y los datos no se han comprometido de facto, la notificación pública inmediata puede no ser requerida u omitirse estratégicamente."
+        },
+        {
+          "texto": "Que se active el Artículo 34 del RGPD por obligación legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La activación del Art. 34 del RGPD justamente OBLIGA a notificar a los interesados."
+        }
+      ]
+    },
+    {
+      "pregunta": "En incidentes de severidad Alta o Crítica, ¿qué rol asume el 'Incident Commander' (IC)?",
+      "respuestas": [
+        {
+          "texto": "Es un consultor jurídico externo que asume toda la responsabilidad legal ante los reguladores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El IC es un rol de gestión operativa y táctica del incidente, no exclusivamente un puesto legal externo."
+        },
+        {
+          "texto": "Actúa como punto único de autoridad técnica y portavoz exclusivo hacia la dirección y organismos externos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El IC unifica la toma de decisiones, autoriza la incorporación de equipos y evita el caos o la multiplicidad de mensajes durante la crisis."
+        },
+        {
+          "texto": "Es el analista de SOC (Nivel 1) encargado de realizar el triaje inicial en la plataforma SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El nivel 1 escala al nivel táctico, donde se designa al Incident Commander debido a la complejidad del evento."
+        },
+        {
+          "texto": "Es el representante del cuerpo policial (FCSE) que requisa los equipos comprometidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El IC es un coordinador interno (o delegado por la organización) responsable de manejar la respuesta al incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el establecimiento de canales seguros durante una brecha, ¿por qué se considera un error crítico usar aplicaciones como WhatsApp para gestionar un incidente?",
+      "respuestas": [
+        {
+          "texto": "Porque la aplicación carece de cifrado de extremo a extremo para los mensajes de texto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WhatsApp sí posee cifrado E2E, el riesgo reside en otras debilidades organizativas."
+        },
+        {
+          "texto": "Porque introduce riesgos inaceptables de pérdida de trazabilidad y confidencialidad en un canal informal no auditado corporativamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Usar grupos personales sin gobierno corporativo hace imposible la auditoría posterior, mezcla capas estratégicas y operativas, y dificulta la preservación de evidencias (control de logs)."
+        },
+        {
+          "texto": "Porque su protocolo de red satura los anchos de banda necesarios para realizar volcados de memoria remotos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consumo de red de una app de mensajería es irrelevante; el riesgo es procedimental y de control de la información."
+        },
+        {
+          "texto": "Porque es obligatorio por ley usar plataformas certificadas exclusivamente por el esquema ENS Alto para cualquier incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el ENS rige sobre ciertos organismos, la prohibición del uso de apps personales se debe a mejores prácticas de gestión de incidentes, aplicables a todo tipo de entidades."
+        }
+      ]
+    },
+    {
+      "pregunta": "Siguiendo un esquema de control de versiones documental para incidentes, ¿qué representa el cambio de un informe a la versión 'v2.0'?",
+      "respuestas": [
+        {
+          "texto": "La actualización de un dato menor, como añadir un nuevo Hash MD5 a la lista de indicadores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un cambio menor de ese tipo se reflejaría en el versionado secundario (ej. v1.1, v1.x)."
+        },
+        {
+          "texto": "El primer registro del incidente o borrador inicial no verificado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El borrador inicial sin confirmar suele etiquetarse como v0.1."
+        },
+        {
+          "texto": "Un cambio sustancial en la comprensión del incidente, como un nuevo vector descubierto o un cambio significativo de alcance.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los saltos de versión mayor (v1.0 a v2.0) implican una modificación crítica en la narrativa técnica, como por ejemplo descubrir que el atacante llevaba meses en la red."
+        },
+        {
+          "texto": "La versión final del informe post-incidente, validada por la asesoría jurídica y que cierra el caso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta suele denominarse explícitamente 'vFinal' y sella la conclusión del evento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia existe entre una 'Actualización de estado' (SITREP) y un 'Flash Report' o alerta de cambio significativo?",
+      "respuestas": [
+        {
+          "texto": "El SITREP es una comunicación no programada de urgencia, y el Flash Report se envía de manera rutinaria al finalizar el día.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es exactamente al revés."
+        },
+        {
+          "texto": "El SITREP solo incluye evidencias directas, mientras que el Flash Report incluye hipótesis de descarte.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden incluir hipótesis, la diferencia radica en la periodicidad y la urgencia que requieren."
+        },
+        {
+          "texto": "El SITREP es un informe periódico programado que no exige acción inmediata, mientras que el Flash Report se emite ante un cambio crítico que demanda decisiones urgentes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El SITREP mantiene informados a los equipos de forma rutinaria; el Flash Report se reserva para sorpresas mayores en el incidente, como la detección de exfiltración de datos en curso."
+        },
+        {
+          "texto": "El SITREP está destinado exclusivamente a la prensa y el Flash Report es únicamente de uso interno para el SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ninguno de los dos formatos está orientado directamente a la prensa; ambos son herramientas del protocolo de comunicación interno de gestión de crisis."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para asegurar el cifrado en tránsito en un intercambio de información (canales seguros), ¿qué configuración de protocolo recomienda el temario?",
+      "respuestas": [
+        {
+          "texto": "Utilizar SSLv3 siempre que sea posible por su compatibilidad con sistemas legados (legacy).",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSLv3 se considera totalmente obsoleto y el temario recomienda explícitamente su deshabilitación."
+        },
+        {
+          "texto": "Usar TLS 1.0 o TLS 1.1 como versiones mínimas recomendadas para asegurar interoperabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS 1.0 y 1.1 también deben estar deshabilitados por problemas de seguridad conocidos."
+        },
+        {
+          "texto": "Utilizar TLS 1.2 como versión mínima, priorizando TLS 1.3 y suites de cifrado con Perfect Forward Secrecy (PFS).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son las recomendaciones estándar del temario para evitar ataques Man-in-the-Middle y asegurar las comunicaciones del incidente."
+        },
+        {
+          "texto": "Deshabilitar la verificación de certificados para agilizar el intercambio entre el analista y las plataformas MISP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario advierte enfáticamente: 'Nunca deshabilitar la verificación de certificados en producción'."
+        }
+      ]
+    },
+    {
+      "pregunta": "A la hora de proteger la información de las víctimas en un informe técnico, ¿por qué el 'hash criptográfico con salt' se considera una técnica de Pseudonimización y no de Anonimización?",
+      "respuestas": [
+        {
+          "texto": "Porque introduce un ruido estadístico aleatorio que modifica los valores numéricos temporalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa técnica se llama Data Perturbation (Perturbación), no hash criptográfico."
+        },
+        {
+          "texto": "Porque los datos resultantes son totalmente irrecuperables y eliminan cualquier dependencia estadística con el origen.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si fuera totalmente irrecuperable y sin posibilidad de vínculo, hablaríamos de anonimización real."
+        },
+        {
+          "texto": "Porque elimina los campos identificativos por completo del documento, suprimiendo la información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la técnica de Supresión (Anonimización), no el uso de algoritmos de hashing."
+        },
+        {
+          "texto": "Porque aunque transforma los datos, el proceso podría ser reversible o reidentificable si un atacante conoce el algoritmo y la 'sal' (salt) utilizada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La pseudonimización retiene la posibilidad de reidentificación bajo ciertas condiciones (tener el secreto criptográfico o la tabla de mapeo), y legalmente (RGPD) se siguen considerando datos personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al compartir informes técnicos con comunidades externas (CSIRTs), ¿qué información supone un 'Riesgo Alto' porque podría proporcionar 'Inteligencia Táctica' a los propios atacantes?",
+      "respuestas": [
+        {
+          "texto": "Compartir la ubicación del atacante si el servidor Command and Control está en el extranjero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compartir dominios o IPs (IoCs) de infraestructura atacante es precisamente el objetivo de estas comunidades."
+        },
+        {
+          "texto": "Compartir nombres específicos de productos de seguridad propios (EDR, Firewall), topología interna o capacidades de monitorización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta información permitiría a un adversario que intercepte el reporte diseñar técnicas de evasión específicas para sortear las defensas de la víctima en futuros ataques."
+        },
+        {
+          "texto": "Compartir hashes MD5 o SHA-256 asociados exclusivamente a correos electrónicos de phishing genéricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto es información estándar compartible y ayuda a bloquear las campañas."
+        },
+        {
+          "texto": "Sustituir los nombres reales de los servidores comprometidos por etiquetas pseudonimizadas como 'HOST-A'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es una medida de mitigación muy recomendable, no un riesgo de inteligencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "Desde el punto de vista legal en España, ¿qué implicación puede tener compartir información confidencial del ataque si esta pertenece a otra organización competidora o revela ventajas comerciales?",
+      "respuestas": [
+        {
+          "texto": "Infringir las normativas de cifrado dictadas en el Esquema Nacional de Seguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS dictamina cómo se deben proteger los sistemas públicos o asociados, pero la confidencialidad empresarial en este contexto depende de otra ley."
+        },
+        {
+          "texto": "Incurrir en una violación de la Ley 1/2019 de Secretos Empresariales, que protege la información empresarial y propiedad intelectual.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el intercambio carece del protocolo 'need-to-know' o no cuenta con la protección legal adecuada, exponer procesos, diseños o secretos industriales de la compañía (o terceros) tiene graves consecuencias legales."
+        },
+        {
+          "texto": "Activar el Artículo 33 del RGPD para que la empresa competidora reciba una indemnización automática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD se ocupa de datos personales de personas físicas, no del espionaje corporativo comercial."
+        },
+        {
+          "texto": "Desencadenar la ejecución inmediata del Plan de Protección Específico (PPE) por la Ley PIC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Ley PIC es para salvaguardar infraestructuras críticas del estado, no regula puramente los secretos comerciales privados entre empresas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué estándar internacional de gestión de incidentes propone un flujo altamente estructurado en las fases de Identificación, Evaluación e Investigación?",
+      "respuestas": [
+        {
+          "texto": "FIRST (CSIRT Framework)",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modelo FIRST se centra en una matriz de capacidades y servicios como análisis de artefactos e inteligencia de amenazas[cite: 33, 34, 35]."
+        },
+        {
+          "texto": "ISO/IEC 27035",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el estándar internacional ISO/IEC 27035 el que está estructurado en 1. Identificación, 2. Evaluación y 3. Investigación[cite: 39, 40, 41, 42, 43]."
+        },
+        {
+          "texto": "NIST SP 800-61",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modelo NIST se enfoca en fases como la Detección y Análisis, con evaluación de veracidad y priorización de impacto[cite: 25, 26, 27]."
+        },
+        {
+          "texto": "Modelo de buenas prácticas de ENISA",
+          "correcta": false,
+          "explicacion": "Incorrecto. ENISA pone el foco en el enfoque sistémico y la colaboración dentro del mercado único europeo[cite: 30, 31, 32]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al investigar una posible 'Amenaza interna' (Insider Threat), ¿cuál suele ser el reto principal y el foco del análisis?",
+      "respuestas": [
+        {
+          "texto": "El foco es la persistencia en los equipos; el reto es el uso de herramientas anti-forenses para borrar huellas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas son características propias de investigaciones de intrusiones externas (APT, Ransomware)[cite: 47, 48, 49]."
+        },
+        {
+          "texto": "El foco es la fuga de datos salientes (túneles DNS); el reto es identificar qué archivos exactos se filtraron.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se corresponde con investigaciones enfocadas puramente en la exfiltración de información[cite: 56, 57, 58]."
+        },
+        {
+          "texto": "El foco es el análisis de comportamiento (UBA) y registros; el reto es que el atacante posee permisos legítimos en el sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En las amenazas internas (Insider Threat) el atacante actúa desde un rol legítimo, requiriendo monitorizar desviaciones en su comportamiento habitual[cite: 50, 51, 52]."
+        },
+        {
+          "texto": "El foco es la trazabilidad financiera; el reto es la velocidad en la que el dinero se mueve entre jurisdicciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es característico de las investigaciones de fraude digital, como ataques BEC[cite: 53, 54, 55]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es uno de los mayores desafíos al investigar incidentes en entornos Cloud o híbridos?",
+      "respuestas": [
+        {
+          "texto": "La falta total de protocolos de red cifrados que protejan la comunicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los entornos cloud usan fuertemente el cifrado; el problema en la nube suele ser de configuración y visibilidad, no falta de cifrado[cite: 63, 64]."
+        },
+        {
+          "texto": "Que dependemos exclusivamente de analizar el malware que reside en la memoria RAM de servidores físicos propios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En cloud hay pérdida de control del hardware, haciendo el análisis físico de RAM poco habitual[cite: 64]."
+        },
+        {
+          "texto": "La pérdida de control sobre el hardware, lo que hace que dependamos de la telemetría (CloudTrail, logs) que el proveedor nos facilite.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al no tener el servidor físicamente, la investigación gira en torno a los logs de control, configuraciones de buckets y permisos IAM provistos[cite: 62, 63, 64]."
+        },
+        {
+          "texto": "Que el modelo Diamond Model no funciona para clasificar capacidades de atacantes alojados en la nube.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Diamond Model puede aplicarse en entornos cloud para mapear la infraestructura y capacidades del adversario[cite: 102, 103]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para la atribución y comprensión de la infraestructura del atacante, ¿qué modelo de referencia se centra en estudiar las relaciones entre 'Adversario, Infraestructura, Capacidad y Víctima'?",
+      "respuestas": [
+        {
+          "texto": "Cyber Kill Chain",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Cyber Kill Chain de Lockheed Martin es útil para entender la progresión lineal 'paso a paso' del ataque, no relaciones entre esos 4 ejes[cite: 96, 97, 98]."
+        },
+        {
+          "texto": "Diamond Model",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Diamond Model analiza esos cuatro vértices y es extremadamente útil para entender la infraestructura del adversario (como IPs o C2) y para la atribución[cite: 102, 103]."
+        },
+        {
+          "texto": "MITRE ATT&CK",
+          "correcta": false,
+          "explicacion": "Incorrecto. MITRE es la matriz estándar para categorizar tácticas y técnicas (TTPs), pero no se enfoca principalmente en este rombo de cuatro ejes[cite: 99, 100]."
+        },
+        {
+          "texto": "Matriz de Ishikawa",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ishikawa es un diagrama causa-efecto (espina de pescado) para análisis de causa raíz, no un framework de inteligencia de atacantes[cite: 328, 329, 330]."
+        }
+      ]
+    },
+    {
+      "pregunta": "En una investigación multi-sistema y multi-región, ¿qué 'Regla de oro' se debe seguir respecto a la línea temporal para evitar la invalidación de una teoría?",
+      "respuestas": [
+        {
+          "texto": "Se deben transformar todos los logs a la hora local de la sede central de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Convertir a una zona horaria local genera confusión entre investigadores de distintas partes del mundo[cite: 107, 108]."
+        },
+        {
+          "texto": "Toda la investigación debe normalizarse a UTC, documentando el desfase u offset de cada fuente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La normalización a UTC (Time Normalization) es el pilar de la cronología para sincronizar eventos de forma inequívoca en sistemas de distintas regiones[cite: 107, 108, 109]."
+        },
+        {
+          "texto": "Hay que ignorar los huecos temporales en los que no existan logs de más de 2 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El temario aclara que los huecos (gaps) suelen ser tan informativos como los propios datos, ya que podrían indicar borrado o apagados intencionales[cite: 112, 113, 114]."
+        },
+        {
+          "texto": "El Dwell Time debe calcularse usando únicamente la hora del primer inicio de sesión del usuario afectado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Dwell time mide el tiempo desde el compromiso inicial no detectado, y normalizar fechas requiere una política general de huso horario[cite: 115]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la 'Hipótesis de descarte' o 'Hipótesis Nula' en la metodología de una investigación técnica?",
+      "respuestas": [
+        {
+          "texto": "Es la explicación más probable basada en la evidencia preliminar para resolver rápido el caso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta es la definición de 'Hipótesis primaria'[cite: 124]."
+        },
+        {
+          "texto": "Es el esfuerzo consciente por buscar evidencias que contradigan nuestra hipótesis primaria y probar que es falsa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En el método científico, si no puedes refutar la hipótesis nula, significa que tu hipótesis primaria no es lo suficientemente sólida[cite: 129, 130, 131]."
+        },
+        {
+          "texto": "Es la tendencia del analista a ignorar pistas de origen externo en favor de evidencias internas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto se referiría más bien a un sesgo cognitivo, pero la Hipótesis Nula es una técnica formal, no un error mental[cite: 129, 132]."
+        },
+        {
+          "texto": "Es la documentación final enviada al comité indicando que la investigación se ha estancado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un mecanismo de validación dentro del análisis y formulación de hipótesis[cite: 129, 130]."
+        }
+      ]
+    },
+    {
+      "pregunta": "De acuerdo con la calificación de las evidencias, ¿qué tipo de indicadores son una dirección IP atacante o un nombre genérico de archivo como 'svchost.exe'?",
+      "respuestas": [
+        {
+          "texto": "Evidencias directas irrefutables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una IP por sí sola requiere deducciones y raramente prueba un ataque irrefutable, categorizándose más hacia la evidencia circunstancial y debilidad[cite: 169, 178]."
+        },
+        {
+          "texto": "Indicadores fuertes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los indicadores fuertes son específicos y difíciles de falsificar, como un hash de un malware customizado[cite: 177]."
+        },
+        {
+          "texto": "Indicadores débiles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son considerados débiles porque son comunes, fácilmente alterables por el atacante, o de uso legítimo habitual[cite: 178]."
+        },
+        {
+          "texto": "Artefactos organizativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son artefactos técnicos, no organizativos[cite: 178]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al medir los daños derivados de un incidente de ciberseguridad, ¿cómo se diferencia el 'impacto técnico' del 'impacto organizativo'?",
+      "respuestas": [
+        {
+          "texto": "El impacto organizativo mide bases de datos modificadas y el técnico mide las multas del regulador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las bases de datos alteradas entran dentro del impacto técnico (Integridad), y las multas en organizativo[cite: 238, 239, 240]."
+        },
+        {
+          "texto": "Un servidor caído representa un impacto técnico, mientras que la imposibilidad de facturar a clientes debido a eso es un impacto organizativo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El impacto organizativo es la traducción de los 'bits' caídos en consecuencias críticas de negocio y operativas[cite: 240, 241]."
+        },
+        {
+          "texto": "El técnico se enfoca en el Riesgo Reputacional y el organizativo en la disponibilidad del servicio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La disponibilidad es técnica; la reputación es organizativa. Está invertido[cite: 238, 246]."
+        },
+        {
+          "texto": "No hay diferencia en investigación forense, ambos se agrupan en el Dwell Time.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Deben separarse para presentar correctamente los informes a gerencia y técnicos respectivamente[cite: 237, 239]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué mecanismo se recomienda para garantizar el 'blindaje' y defensa de una investigación ante una auditoría externa?",
+      "respuestas": [
+        {
+          "texto": "Mantener al equipo directivo (Capa Estratégica) apartado del proceso documental.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto incumple el procedimiento de comunicación, pero no asegura el rigor técnico frente a una auditoría[cite: 571]."
+        },
+        {
+          "texto": "Eliminar todos los logs de EDR para simplificar los informes ejecutivos finales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar datos va en contra del principio de preservación de evidencia y arruinaría una auditoría[cite: 572, 573]."
+        },
+        {
+          "texto": "La Matriz Evidencia-Hallazgo-Conclusión, que permite a cada deducción final ser trazada hasta la evidencia en bruto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta trazabilidad demuestra que las conclusiones no son opiniones, sino derivaciones lógicas demostrables que soportan escrutinio legal o auditoría[cite: 564, 565, 566, 567]."
+        },
+        {
+          "texto": "Limitar todas las investigaciones al uso exclusivo del Diagrama de Ishikawa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ishikawa ayuda al análisis RCA, pero el blindaje documental probatorio se logra mediante trazabilidad (cadena de custodia, justificación y repetibilidad)[cite: 328, 571, 572]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la priorización basada en riesgo, ¿cómo se clasificaría la recomendación de 'Deshabilitar cuentas comprometidas' tras un ataque?",
+      "respuestas": [
+        {
+          "texto": "Iniciativa a largo plazo (Estratégico).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El largo plazo implica transformación de arquitectura[cite: 616]."
+        },
+        {
+          "texto": "Medida Estructural (1-6 meses).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las estructurales requieren presupuesto y planificación, como renovar un EDR[cite: 616]."
+        },
+        {
+          "texto": "Recomendación Organizativa a nivel de gobierno.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Deshabilitar una cuenta es una medida altamente operativa técnica[cite: 616]."
+        },
+        {
+          "texto": "Quick Win (Inmediato de 1-4 semanas).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una acción de muy bajo coste de implementación y alto impacto inmediato para cerrar la vulnerabilidad o persistencia[cite: 616]."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de TLP (Traffic Light Protocol), ¿qué significa clasificar un documento como 'TLP: GREEN'?",
+      "respuestas": [
+        {
+          "texto": "Información pública sin restricciones que puede divulgarse masivamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la definición de TLP: CLEAR o Blanco[cite: 663, 1282]."
+        },
+        {
+          "texto": "No se permite ningún tipo de redistribución, ni siquiera internamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a TLP: AMBER+STRICT o RED[cite: 1282]."
+        },
+        {
+          "texto": "Información que puede redistribuirse dentro de una comunidad de ciberseguridad, pero no publicarse abiertamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El nivel verde permite compartir con socios, clientes y el ecosistema sectorial, sin que la información llegue libremente a internet u OSINT[cite: 663, 1282]."
+        },
+        {
+          "texto": "Información crítica que incluye claves criptográficas expuestas y no puede enviarse ni a organismos gubernamentales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos datos serían TLP: RED[cite: 663, 1282]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los ISACs (Information Sharing and Analysis Centers) dentro del ecosistema de gobernanza cibernética?",
+      "respuestas": [
+        {
+          "texto": "Son normativas que obligan legalmente a la publicación de ataques a datos de tarjetas bancarias en redes abiertas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas normativas de reporte estarían ligadas al PCI DSS o legislaciones locales, pero los ISAC no son leyes, son entidades[cite: 681, 758, 759]."
+        },
+        {
+          "texto": "Comunidades y centros de análisis donde diferentes actores de un mismo sector intercambian inteligencia y prácticas basadas en la reciprocidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un ejemplo son los ES-ISAC en España impulsados por INCIBE, o FS-ISAC para el mundo financiero, aportando beneficio a toda la industria específica[cite: 681, 682, 683, 684, 685]."
+        },
+        {
+          "texto": "Herramientas de software utilizadas para realizar copias forenses Bit-a-Bit validadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ISACs son organizaciones colaborativas de personas/empresas, no piezas de software forense[cite: 681]."
+        },
+        {
+          "texto": "Departamentos legales internos encargados únicamente de verificar el nivel de cumplimiento del GDPR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los departamentos legales (Legal/Compliance) son funciones internas; los ISAC son consorcios externos[cite: 681, 718]."
+        }
+      ]
+    },
+    {
+      "pregunta": "A nivel regulatorio en España, ¿qué obliga la Ley de Protección de Infraestructuras Críticas (PIC) a los operadores designados ante un ciberincidente?",
+      "respuestas": [
+        {
+          "texto": "Cerrar inmediatamente las operaciones físicas de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ley exige reporte y control, no la paralización obligada de la infraestructura, ya que su objetivo es la continuidad[cite: 748, 749]."
+        },
+        {
+          "texto": "Realizar interlocución directa con la AEPD incluso si no hay afectación de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. A la AEPD se acude cuando el RGPD se incumple o hay brecha de datos personales, la PIC interlocuta con el CNPIC/CERT[cite: 749, 1001]."
+        },
+        {
+          "texto": "Mantener actualizados y aplicar el Plan de Seguridad del Operador (PSO) y el Plan de Protección Específico (PPE).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos planes son la obligación fundamental frente al Centro Nacional para la Protección de las Infraestructuras Críticas (CNPIC)[cite: 747, 748, 749, 750]."
+        },
+        {
+          "texto": "Divulgar a través del BOE los diagramas de arquitectura de red afectados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las infraestructuras críticas se manejan bajo estricto secreto para no comprometer la seguridad nacional; la publicación abierta está prohibida[cite: 748, 749]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según la 'Pirámide del Dolor', ¿por qué compartir un Hash de un malware aporta menos valor a largo plazo que compartir los TTPs (Tácticas, Técnicas y Procedimientos)?",
+      "respuestas": [
+        {
+          "texto": "Porque los Hashes solo pueden intercambiarse mediante plataformas costosas, mientras que los TTPs circulan libremente por correo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden compartirse por herramientas open-source como MISP[cite: 814, 822]."
+        },
+        {
+          "texto": "Porque los Hashes, aunque precisos, son extremadamente fáciles y baratos de cambiar para un atacante recompilando su código.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Basta con añadir un byte en blanco para que el MD5 o SHA256 cambie completamente, mientras que modificar un modus operandi (TTPs) es costoso y complejo para el grupo hacker[cite: 816, 820, 821]."
+        },
+        {
+          "texto": "Porque el formato STIX no admite objetos tipo Hash en su esquema de modelado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. STIX sí permite la ingesta de Indicadores de Compromiso incluyendo IPs y hashes de ficheros[cite: 827, 828, 852]."
+        },
+        {
+          "texto": "Porque los Hashes son considerados evidencia circunstancial débil frente a un juez.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un hash malicioso encontrado puede ser una evidencia fuerte o directa de compromiso, pero en ciberinteligencia tiene baja durabilidad[cite: 177, 816]."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la jerarquía de las comunicaciones internas durante un incidente, ¿qué perfil pertenece a la capa 'Táctica' y cuál es su objetivo principal?",
+      "respuestas": [
+        {
+          "texto": "El Analista de SOC, su objetivo es compartir IOCs operativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El analista pertenece a la capa Operativa[cite: 946]."
+        },
+        {
+          "texto": "El CEO, su objetivo es gestionar las implicaciones legales mediáticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CEO y el comité de dirección representan la capa Estratégica[cite: 949]."
+        },
+        {
+          "texto": "El CISO o responsable de sistemas, que toma decisiones coordinadas sobre contención, continuidad de servicio y asignación de recursos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los mandos medios forman la capa Táctica de la crisis para conectar la visión técnica del SOC con los objetivos de negocio de la dirección[cite: 946]."
+        },
+        {
+          "texto": "El equipo forense externo, enfocado en el cumplimiento de la ley de telecomunicaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los equipos externos se incorporan según sea necesario al nivel Operativo o Estratégico, pero el CISO es quien gestiona intrínsecamente la capa táctica[cite: 946, 1098]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al organizar canales de crisis seguros 'Out-Of-Band', ¿qué medida de seguridad esencial hay que cumplir para una línea telefónica dedicada OOB?",
+      "respuestas": [
+        {
+          "texto": "Verificar la identidad del interlocutor usando un código preestablecido o mecanismo equivalente, dado el riesgo de suplantación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Como un atacante podría llamar al War Room simulando ser un directivo para obtener estado del incidente, verificar la identidad de antemano es vital[cite: 1086]."
+        },
+        {
+          "texto": "Debe estar alojada físicamente en el mismo rack de los servidores atacados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Todo canal OOB debe estar desligado e independiente de la infraestructura comprometida por diseño[cite: 1077]."
+        },
+        {
+          "texto": "Únicamente el CEO debe tener acceso a ella.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suele destinarse a comunicaciones urgentes de alto nivel o la activación táctica del CSIRT, no limitada a 1 persona[cite: 1086]."
+        },
+        {
+          "texto": "Intercambiar claves PGP previamente al establecimiento de voz.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PGP es para correo electrónico cifrado (S/MIME), no para telefonía de voz normal[cite: 1086]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué criterio técnico objetivo, evaluado en las dimensiones de escalado, indica que un incidente debe elevarse a un nivel superior en la cadena de mando por su 'Extensión'?",
+      "respuestas": [
+        {
+          "texto": "La recepción de una denuncia o requerimiento de la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto provocaría escalado bajo la dimensión de 'Obligación legal/regulatoria', no de extensión técnica de la amenaza[cite: 1061]."
+        },
+        {
+          "texto": "Caída del portal web de la empresa por un apagón en el proveedor ISP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sería un incidente de disponibilidad o impacto de negocio severo, pero la extensión de la amenaza maliciosa no es el criterio aquí[cite: 1061]."
+        },
+        {
+          "texto": "Identificar que el atacante ha realizado un Movimiento Lateral exitoso (ej. Pass-The-Hash) comprometiendo múltiples endpoints distintos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El descubrimiento de movimiento lateral hacia múltiples sistemas dispara el nivel de severidad ya que el equipo operativo de nivel 1 suele requerir apoyo táctico para aislar redes[cite: 1061]."
+        },
+        {
+          "texto": "Que el analista del SOC agote su horario laboral de guardia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería un cambio de turno, no un escalado organizativo por incremento de severidad de la crisis[cite: 1061, 1064]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Durante una brecha, compartir detalles sobre 'Vulnerabilidades no parcheadas en sistemas propios' (0-days activos) se considera un riesgo elevado. ¿Qué protocolo se recomienda seguir?",
+      "respuestas": [
+        {
+          "texto": "Deben enviarse automáticamente y en abierto al ISAC sectorial para que nadie más caiga en el ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Publicarlo en abierto pondrá a todos bajo ataque; la mitigación técnica en abierto sin parche incrementa el daño[cite: 1177]."
+        },
+        {
+          "texto": "Aplicar el principio de 'Responsible Disclosure' si procede y evaluar el riesgo de revelar esta información prematuramente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compartir detalles de debilidades que aún no tienen solución debe hacerse bajo estrictos canales cerrados y programas de divulgación responsable[cite: 1177, 1178, 1408]."
+        },
+        {
+          "texto": "Añadirlas en el mensaje inicial a clientes (Art 34 RGPD) justificando el hackeo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación a usuarios debe orientarse a las acciones de protección del afectado, no a detalles técnicos sobre vulnerabilidades de software del responsable[cite: 1038, 1040, 1177]."
+        },
+        {
+          "texto": "Subir la vulnerabilidad como una regla YARA al repositorio público de VirusTotal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Exponer información táctica propia en repositorios OSINT públicos es considerado sobreexposición peligrosa[cite: 1454, 1455]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para controlar la distribución de la información una vez que abandona nuestro perímetro hacia entidades de confianza, ¿qué solución técnica previene su salida no autorizada?",
+      "respuestas": [
+        {
+          "texto": "Añadir firmas digitales a través de hash con sal (salt) a todos los metadatos de usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El hash con sal es pseudonimización, no impide que la información como archivos PDF sea filtrada masivamente desde el equipo final[cite: 1289, 1342]."
+        },
+        {
+          "texto": "Implementar un Data Loss Prevention (DLP) y herramientas de gestión de derechos (DRM/IRM).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los DLP detectan contenido y bloquean su envío al exterior, y herramientas como Azure Information Protection (IRM) aplican cifrado que viaja con el documento, evitando aperturas o reenvíos no autorizados[cite: 1288, 1289, 1290, 1291]."
+        },
+        {
+          "texto": "Normalizar los indicadores de compromiso (IoC) al protocolo HTTP nativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El protocolo para IoC es TAXII/STIX, y HTTP plano es inseguro. En todo caso, la normalización no frena la fuga de datos por sí sola[cite: 827, 829]."
+        },
+        {
+          "texto": "Apoyarse únicamente en el etiquetado semántico del TLP para impedir envíos no autorizados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLP es una etiqueta de confianza humana (un acuerdo semántico), y no implementa un bloqueo técnico per se, se requieren sistemas DLP/DRM para la ejecución técnica[cite: 1288, 1289]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué técnica de anonimización aplicamos si en lugar de informar de la IP exacta de una víctima '192.168.10.45' indicamos que el ataque ocurrió en la 'Subred: 192.168.10.0/24'?",
+      "respuestas": [
+        {
+          "texto": "Supresión",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supresión consiste en eliminar completamente el campo, por ejemplo indicando '[IP SUPRIMIDA]'[cite: 1313, 1314]."
+        },
+        {
+          "texto": "Data Perturbation",
+          "correcta": false,
+          "explicacion": "Incorrecto. La perturbación introduciría ruido o un desfase estadístico en la cifra, no un escalado conceptual de redes jerárquicas[cite: 1328, 1329]."
+        },
+        {
+          "texto": "Generalización",
+          "correcta": true,
+          "explicacion": "¡Correcto! La generalización consiste en sustituir un valor altamente específico (como una fecha con minutos/segundos o una IP de host) por una categoría más amplia, preservando utilidad general pero restando detalle[cite: 1319, 1320, 1321, 1322]."
+        },
+        {
+          "texto": "Cifrado determinístico",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado modificaría la IP a un token hexadecimal cifrado sin sentido lógico o de subred obvio para un humano[cite: 1366, 1367]."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la tipología de investigaciones, ¿cuál es el foco principal y el reto al investigar un 'Fraude digital' como el Business Email Compromise (BEC)?",
+      "respuestas": [
+        {
+          "texto": "El foco es la fuga de datos (DLP) y el reto es identificar qué datos exactos salieron.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este foco corresponde a la investigación de exfiltración de información[cite: 56, 57, 58]."
+        },
+        {
+          "texto": "El foco es el movimiento lateral y el reto es que los adversarios borran sus huellas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas son las características de investigar una intrusión externa como una APT o Ransomware[cite: 47, 48, 49]."
+        },
+        {
+          "texto": "El foco es la trazabilidad financiera y la suplantación de identidad; el reto es la velocidad de movimiento del capital y las jurisdicciones internacionales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En los fraudes digitales (como el BEC), el dinero se mueve muy rápido a través de distintas fronteras, lo que complica enormemente la recuperación y la investigación legal[cite: 53, 54, 55]."
+        },
+        {
+          "texto": "El foco son las anomalías en el login y el uso indebido de MFA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la investigación por compromiso de identidad[cite: 59, 60]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué concepto describe el proceso de agrupar eventos aparentemente aislados para identificar un patrón lógico durante la reconstrucción de un incidente?",
+      "respuestas": [
+        {
+          "texto": "Reducción de ruido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reducción de ruido consiste en descartar falsos positivos mediante el análisis de contexto, no en agrupar eventos[cite: 84]."
+        },
+        {
+          "texto": "Correlación de alertas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La correlación busca 'el hilo que conecta varias agujas', como vincular un fallo de login, seguido de un éxito desde una IP inusual y la creación de un servicio[cite: 81, 82, 83]."
+        },
+        {
+          "texto": "Modelado del ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modelado (como MITRE o Kill Chain) estandariza el lenguaje de la amenaza, pero la agrupación técnica de los logs es la correlación[cite: 94, 95]."
+        },
+        {
+          "texto": "Determinación del Paciente Cero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Paciente Cero es la identificación del punto de entrada inicial, pero no es el proceso general de agrupar eventos[cite: 85, 86]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un analista de ciberseguridad cree firmemente que un ataque es de origen ruso, y por ello solo busca caracteres en cirílico ignorando que el servidor C2 está en Singapur, ¿qué tipo de sesgo está sufriendo?",
+      "respuestas": [
+        {
+          "texto": "Anclaje.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El anclaje se basa en darle demasiado peso a la primera pieza de información recibida, independientemente de creencias previas[cite: 136]."
+        },
+        {
+          "texto": "Sesgo de confirmación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la tendencia a buscar, interpretar y recordar únicamente la información que confirma nuestras creencias o hipótesis previas[cite: 134, 135]."
+        },
+        {
+          "texto": "Sesgo de disponibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sesgo de disponibilidad ocurre cuando valoramos más la información que tenemos más reciente o es más impactante[cite: 138]."
+        },
+        {
+          "texto": "Sesgo de validación cruzada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación cruzada no es un sesgo, sino precisamente la técnica metodológica para evitarlos y corroborar fuentes[cite: 141]."
+        }
+      ]
+    },
+    {
+      "pregunta": "De acuerdo con el análisis causal, si identificamos que un incidente ocurrió por un 'Bucket de S3 abierto al público' (causa técnica), ¿cuál sería su posible raíz organizativa sugerida?",
+      "respuestas": [
+        {
+          "texto": "Incumplimiento del principio de 'mínimo privilegio' por comodidad operativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa sería la raíz de fallos de procesos como tener un usuario con privilegios de Admin local[cite: 509]."
+        },
+        {
+          "texto": "Falta de presupuesto para un SOC 24/7.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa sería la raíz si la deficiencia fuera que el atacante estuvo 3 meses sin ser detectado (falta de monitorización)[cite: 510]."
+        },
+        {
+          "texto": "Falta de auditoría de cumplimiento (Compliance) o de formación técnica en configuración de nube.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un error de configuración básico suele derivarse de la ausencia de revisiones de cumplimiento o falta de conocimientos del equipo de despliegue[cite: 509]."
+        },
+        {
+          "texto": "Falta de una política formal de rotación de credenciales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un bucket S3 abierto al público es un fallo de configuración de permisos a nivel de recurso, no directamente un problema de rotar contraseñas antiguas[cite: 509]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Tras erradicar a un atacante de la red, ¿cómo se denomina a la probabilidad de que exista una puerta trasera (backdoor) no detectada o que se hayan filtrado credenciales aún no rotadas?",
+      "respuestas": [
+        {
+          "texto": "Riesgo de reinfección.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El riesgo de reinfección se da cuando no se ha identificado el vector de entrada y el atacante vuelve por el mismo agujero[cite: 251, 252]."
+        },
+        {
+          "texto": "Riesgo de escalada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La escalada es la posibilidad de que el atacante acelere sus objetivos al verse detectado pero aún no contenido[cite: 253]."
+        },
+        {
+          "texto": "Riesgo residual.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el riesgo que permanece en el ecosistema tras identificar la amenaza y ejecutar las acciones de remediación primarias[cite: 249, 250]."
+        },
+        {
+          "texto": "Dwell Time.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Dwell Time es el tiempo de permanencia silenciosa del atacante, no el riesgo que queda tras su salida[cite: 115]."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el lenguaje STIX, ¿qué son los Objetos de Dominio (SDOs - STIX Domain Objects)?",
+      "respuestas": [
+        {
+          "texto": "Son los objetos que definen las conexiones lógicas entre diferentes entidades, como 'usa' o 'explota'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas relaciones son definidas por los SROs (STIX Relationship Objects)[cite: 858, 859, 860]."
+        },
+        {
+          "texto": "Son entidades concretas relacionadas con las amenazas, como Indicadores de Compromiso (IOCs), Malware, Vulnerabilidades o Actores de Amenaza.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los SDOs son las piezas fundamentales de información concreta que STIX utiliza para estructurar la inteligencia[cite: 850, 851, 852, 853, 854]."
+        },
+        {
+          "texto": "Son los protocolos de red utilizados para transportar la inteligencia de un SOC a otro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El protocolo de transporte para los mensajes de STIX es TAXII[cite: 829, 904]."
+        },
+        {
+          "texto": "Son las clasificaciones normativas que dividen la información en TLP Red, Amber y Green.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque STIX soporta etiquetado TLP, los SDOs no son las etiquetas, sino los componentes que describen la amenaza[cite: 850, 851]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es 'VERIS' en el ámbito del intercambio y gestión de la información de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Un protocolo de cifrado extremo a extremo para mensajería instantánea en War Rooms.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para mensajería segura se usan protocolos como Signal Protocol[cite: 1205]."
+        },
+        {
+          "texto": "Un esquema métrico y vocabulario estandarizado para describir y registrar incidentes de seguridad de forma común.",
+          "correcta": true,
+          "explicacion": "¡Correcto! VERIS (Vocabulary for Event Recording and Incident Sharing) normaliza la información para evitar ambigüedades, y es muy usado en informes globales como el DBIR de Verizon[cite: 832, 834]."
+        },
+        {
+          "texto": "Una plataforma open-source de orquestación (SOAR) para respuesta automatizada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Plataformas open-source de orquestación u enriquecimiento serían Cortex XSOAR o IntelMQ, no VERIS[cite: 834, 1251, 1254]."
+        },
+        {
+          "texto": "La autoridad supervisora financiera para entidades bancarias bajo la norma DORA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VERIS es una taxonomía técnica, no una entidad reguladora[cite: 834]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según los principios de comunicación con proveedores durante un incidente, ¿qué restricción clave debe aplicarse a la información que se les comparte?",
+      "respuestas": [
+        {
+          "texto": "Debe aplicarse el principio de máxima transparencia para que puedan ayudar con todo su equipo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una transparencia total expone innecesariamente a la organización."
+        },
+        {
+          "texto": "Principio de mínima información: compartir exclusivamente lo que el proveedor necesita para realizar su contribución.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No se debe proporcionar información sobre otros sistemas, clientes o ámbitos no relacionados con su servicio específico (Need-to-know)[cite: 983, 984]."
+        },
+        {
+          "texto": "Deben recibir siempre copias de las comunicaciones con las Fuerzas y Cuerpos de Seguridad del Estado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esta información pertenece a canales legales y de capa directiva, de acceso altamente restringido[cite: 983, 1179]."
+        },
+        {
+          "texto": "Ninguna, la firma previa de un NDA exime de la necesidad de filtrar los datos técnicos que se le envían.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El NDA protege legalmente, pero la minimización de datos es un principio técnico y de cumplimiento (RGPD) constante[cite: 981, 982, 983]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Bajo la normativa RGPD, si tras descubrir una brecha de datos personales transcurren las 72 horas legales y la organización aún no dispone de la información completa del impacto, ¿qué debe hacer?",
+      "respuestas": [
+        {
+          "texto": "Retrasar el envío hasta tener el informe final completo validado por el CISO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Incumplir el límite de 72 horas para esperar un informe completo conlleva infracción del reglamento[cite: 1015, 1023]."
+        },
+        {
+          "texto": "Cancelar la notificación y categorizarla como una 'Alerta temprana' bajo la norma NIS2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD y la NIS2 son obligaciones paralelas; no se puede sustituir una notificación de privacidad por una de ciberseguridad industrial[cite: 1015, 1016]."
+        },
+        {
+          "texto": "Realizar una notificación parcial en plazo e ir completándola por fases, documentando el motivo del retraso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD permite la notificación por fases o progresiva cuando no es posible aportar todos los detalles en las 72 horas iniciales[cite: 1023]."
+        },
+        {
+          "texto": "Publicar un comunicado general en la web corporativa como sustitutivo de la notificación al regulador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La notificación a la AEPD es un procedimiento formal e independiente de la posible notificación a usuarios o prensa[cite: 1015]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para prevenir accesos permanentes no supervisados a la información sensible de un incidente, ¿en qué consiste la técnica de acceso 'Just-in-Time' (JIT)?",
+      "respuestas": [
+        {
+          "texto": "En conceder acceso temporal a los documentos, el cual expira y se revoca automáticamente tras una ventana de tiempo definida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El acceso JIT reduce la superficie de exposición asegurando que los analistas tengan los privilegios de visualización solo por las horas (ej. 8 horas) que requiere su investigación activa[cite: 1265, 1266, 1269, 1270]."
+        },
+        {
+          "texto": "En enviar correos cifrados únicamente cuando un organismo oficial los solicita formalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. JIT se refiere al modelo de control de acceso interno/externo a plataformas o directorios, no al envío reactivo de emails[cite: 1265, 1266]."
+        },
+        {
+          "texto": "En segmentar los documentos por niveles de TLP según el rol del analista.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es 'Segmentación por roles', que es un concepto complementario, pero no la definición de JIT temporal[cite: 1263]."
+        },
+        {
+          "texto": "En descargar copias de seguridad de la nube en tiempo real (justo a tiempo) antes de que actúe el ransomware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. JIT en este contexto habla de Control de Accesos (Identity & Access Management), no de gestión de backups[cite: 1265, 1266]."
+        }
+      ]
+    },
+    {
+      "pregunta": "A la hora de anonimizar un informe de incidente para su intercambio externo, ¿qué técnica se utiliza si cambiamos el texto 'cuenta de juan.garcia@empresa.es' por '[IP SUPRIMIDA]' o se elimina completamente?",
+      "respuestas": [
+        {
+          "texto": "Perturbación estadística (Data Perturbation).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La perturbación altera valores numéricos manteniendo la distribución, no borra texto[cite: 1328, 1329]."
+        },
+        {
+          "texto": "Generalización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La generalización sustituye por categorías más amplias, no elimina el dato por completo[cite: 1319, 1320]."
+        },
+        {
+          "texto": "Tokenización de Mapeo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si se sustituye por '[IP SUPRIMIDA]', es un borrado, no la sustitución por un identificador tipo TARGET-A[cite: 1363, 1364]."
+        },
+        {
+          "texto": "Supresión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La supresión es la técnica de anonimización más sencilla y consiste en la eliminación completa de los campos identificativos, aunque reduce la utilidad analítica del dato[cite: 1313, 1314]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué característica de almacenamiento deben tener los sistemas de recolección de Logs de Acceso (Audit logs) para asegurar su integridad ante investigadores forenses o reguladores?",
+      "respuestas": [
+        {
+          "texto": "Ser de acceso libre para todo el equipo operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs de acceso deben aplicar separación de privilegios para evitar que quien accede a los datos borre su propio rastro[cite: 1300]."
+        },
+        {
+          "texto": "Estar almacenados en memorias volátiles como la RAM para no dejar rastro físico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs deben guardarse a largo plazo (ej. 1 año por NIS2) y en sistemas de retención permanente[cite: 1302]."
+        },
+        {
+          "texto": "Implementar inmutabilidad, preferentemente en sistemas WORM (Write Once Read Many) o con firma criptográfica.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La inmutabilidad garantiza que un atacante (o un Insider) no pueda modificar ni borrar los registros históricos de acceso para encubrir la fuga[cite: 1298, 1299]."
+        },
+        {
+          "texto": "Almacenarse en formatos tipo JSON y no en bases de datos relacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El formato del archivo (JSON vs SQL) no define su integridad ni su inmutabilidad criptográfica[cite: 1299]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Para autenticar a los interlocutores humanos que acceden a plataformas críticas de intercambio (como MISP), ¿qué método de Autenticación Multifactor (MFA) se recomienda por ser 'inmune al phishing'?",
+      "respuestas": [
+        {
+          "texto": "Las notificaciones Push (ej. Microsoft Authenticator).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las notificaciones Push son altamente vulnerables a ataques de fatiga (MFA fatigue) por parte del atacante[cite: 1241]."
+        },
+        {
+          "texto": "El uso de SMS OTP (One-Time Password).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los SMS son los menos seguros y son susceptibles a ataques de duplicado de SIM (SIM Swapping)[cite: 1242]."
+        },
+        {
+          "texto": "Las aplicaciones TOTP como Google Authenticator o Authy.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque son seguras, solo resisten phishing pasivo. El usuario puede engañarse y escribir el código en una web falsa (AiTM)[cite: 1240]."
+        },
+        {
+          "texto": "Las llaves de seguridad hardware (estándar FIDO2/WebAuthn), como YubiKey.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el nivel de mayor seguridad, ya que la llave valida el dominio exacto por hardware, neutralizando los ataques de phishing o suplantación[cite: 1238, 1239]."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja ofrece aplicar la 'Pseudonimización mediante Cifrado Determinístico' sobre un informe de incidentes, frente a otras técnicas?",
+      "respuestas": [
+        {
+          "texto": "Elimina la información por completo para que ningún organismo internacional pueda exigirla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado determinístico transforma pero mantiene el rastro para poder revertirse internamente, no la elimina[cite: 1366, 1367]."
+        },
+        {
+          "texto": "Permite que la misma entrada produzca siempre el mismo seudónimo, posibilitando a los analistas correlacionar eventos sin exponer el valor original.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al usar una clave secreta (ej. AES-SIV), la misma IP maliciosa siempre generará el mismo hash o texto cifrado, lo que permite buscar patrones y seguimiento de campañas entre víctimas sin violar su privacidad[cite: 1366, 1367]."
+        },
+        {
+          "texto": "Transforma los datos de tal manera que el RGPD deja de considerarlos 'datos personales'.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Según el temario, los datos pseudonimizados siguen siendo considerados datos personales bajo el RGPD, ya que el proceso es teóricamente reversible[cite: 1339]."
+        },
+        {
+          "texto": "Modifica la cronología del ataque para engañar a los atacantes en sus escaneos OSINT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Alterar la cronología (time-stamps) destruiría el valor analítico de la inteligencia compartida; la pseudonimización se centra en identificadores[cite: 1338]."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el temario, ¿cuál de las siguientes plataformas es de tipo 'open-source', y está especializada en la automatización y establecimiento de 'pipelines de procesamiento' (filtrado, transformación y enriquecimiento) antes de compartir feeds de inteligencia?",
+      "respuestas": [
+        {
+          "texto": "Cortex XSOAR",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cortex XSOAR es una plataforma empresarial avanzada, no típicamente descrita como la herramienta open-source principal para pipelines de feeds en el temario (sino IntelMQ)[cite: 1253, 1254]."
+        },
+        {
+          "texto": "JIRA ServiceDesk",
+          "correcta": false,
+          "explicacion": "Incorrecto. JIRA es un sistema de ticketing de uso genérico, no una plataforma especializada en orquestar inteligencia de amenazas (CTI)[cite: 1131]."
+        },
+        {
+          "texto": "IntelMQ",
+          "correcta": true,
+          "explicacion": "¡Correcto! IntelMQ es una plataforma open-source modular enfocada precisamente en automatizar y transformar los feeds de inteligencia antes de distribuirlos[cite: 1250, 1251, 1252]."
+        },
+        {
+          "texto": "VirusTotal",
+          "correcta": false,
+          "explicacion": "Incorrecto. VirusTotal es una plataforma de análisis público (OSINT y Sandbox) de archivos y URLs, no una herramienta para crear pipelines de orquestación privados de la organización[cite: 1454, 1455]."
+        }
+      ]
+    }
+  ]
+}
