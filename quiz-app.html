@@ -116,6 +116,32 @@
             display: none;
         }
 
+        .upload-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .upload-options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .upload-options input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
         .tema-info {
             background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
             padding: 1.5rem;
@@ -513,8 +539,13 @@
                 <input type="file" id="fileInput" accept=".json">
             </div>
 
+            <div class="upload-options">
+                <label><input type="checkbox" id="shuffleQuestionsCheck" checked> Aleatorizar orden de preguntas</label>
+                <label><input type="checkbox" id="shuffleAnswersCheck" checked> Aleatorizar orden de respuestas</label>
+            </div>
+
             <div
-                style="margin-top: 2rem; padding: 1.5rem; background: rgba(78, 205, 196, 0.1); border-radius: 12px; border-left: 4px solid var(--secondary);">
+                style="padding: 1.5rem; background: rgba(78, 205, 196, 0.1); border-radius: 12px; border-left: 4px solid var(--secondary);">
                 <h4 style="font-family: 'Poppins', sans-serif; margin-bottom: 1rem; color: var(--text);">📝 Formato del
                     JSON:</h4>
                 <pre
@@ -575,6 +606,7 @@
 
     <script>
         let quizData = null;
+        let originalQuizData = null;
         let currentQuestion = 0;
         let userAnswers = [];
         let showingExplanations = false;
@@ -588,6 +620,8 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const restartBtn = document.getElementById('restartBtn');
+        const shuffleQuestionsCheck = document.getElementById('shuffleQuestionsCheck');
+        const shuffleAnswersCheck = document.getElementById('shuffleAnswersCheck');
 
         // Eventos de carga de archivo
         uploadZone.addEventListener('click', () => fileInput.click());
@@ -615,12 +649,10 @@
             const reader = new FileReader();
             reader.onload = (e) => {
                 try {
-                    quizData = JSON.parse(e.target.result);
-                    if (validateQuizData(quizData)) {
-                        // Randomizar respuestas de cada pregunta
-                        quizData.preguntas.forEach(p => {
-                            shuffleArray(p.respuestas);
-                        });
+                    const parsed = JSON.parse(e.target.result);
+                    if (validateQuizData(parsed)) {
+                        originalQuizData = parsed;
+                        prepareQuizData();
                         startQuiz();
                     } else {
                         alert('El formato del JSON no es válido. Por favor revisa la estructura.');
@@ -630,6 +662,18 @@
                 }
             };
             reader.readAsText(file);
+        }
+
+        // Reconstruye quizData a partir del JSON original aplicando las
+        // aleatorizaciones marcadas. Se llama al cargar y al reintentar.
+        function prepareQuizData() {
+            quizData = structuredClone(originalQuizData);
+            if (shuffleQuestionsCheck.checked) {
+                shuffleArray(quizData.preguntas);
+            }
+            if (shuffleAnswersCheck.checked) {
+                quizData.preguntas.forEach(p => shuffleArray(p.respuestas));
+            }
         }
 
         // Función para mezclar un array (Fisher-Yates)
@@ -846,6 +890,7 @@
         // Reiniciar
         restartBtn.addEventListener('click', () => {
             if (confirm('¿Quieres reintentar el quiz o cargar un nuevo archivo?')) {
+                prepareQuizData();
                 startQuiz();
             } else {
                 location.reload();
