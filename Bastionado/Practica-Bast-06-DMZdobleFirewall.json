@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 6: DMZ con doble firewall (sandwich)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la ventaja principal de usar dos firewalls de distinto fabricante en una arquitectura DMZ sandwich?",
+      "respuestas": [
+        {
+          "texto": "Defensa en profundidad por diversidad: una vulnerabilidad 0-day en uno no afecta al otro al tener código base, SO y ciclo de parches distintos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El atacante necesita conocer y explotar dos sistemas diferentes para llegar a la red interna, multiplicando coste y tiempo del ataque."
+        },
+        {
+          "texto": "Reduce el coste total de licencias al combinar dos productos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dos productos suelen aumentar coste y complejidad, no reducirlos."
+        },
+        {
+          "texto": "Permite usar un único administrador con la mitad de formación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: exige formación duplicada en dos productos."
+        },
+        {
+          "texto": "Hace innecesaria la DMZ.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La DMZ es precisamente la zona protegida por ambos firewalls."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre una DMZ con un firewall (three-legged) y una DMZ con dos firewalls (back-to-back)?",
+      "respuestas": [
+        {
+          "texto": "Three-legged tiene un solo equipo con tres interfaces (WAN, DMZ, LAN); back-to-back tiene dos firewalls en serie con la DMZ entre ambos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Three-legged es más barato y simple; back-to-back es más caro pero exige comprometer dos sistemas distintos."
+        },
+        {
+          "texto": "Three-legged es para empresas grandes y back-to-back para PYMES.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al revés: back-to-back se usa típicamente en entornos de mayor exigencia de seguridad."
+        },
+        {
+          "texto": "Three-legged solo soporta IPv6 y back-to-back solo IPv4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos soportan IPv4 e IPv6."
+        },
+        {
+          "texto": "Back-to-back es más rápido por usar solo un firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Back-to-back usa dos firewalls; no es \"un solo firewall\"."
+        }
+      ]
+    },
+    {
+      "pregunta": "En esta arquitectura, ¿qué rol cumplen el Frontend y el Backend?",
+      "respuestas": [
+        {
+          "texto": "Frontend (pfSense) controla qué entra desde Internet a la DMZ; Backend (MikroTik) controla qué pasa de la DMZ a la red interna.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El frontend da la cara al exterior; el backend protege lo realmente sensible (red interna, datos)."
+        },
+        {
+          "texto": "Frontend solo cifra HTTPS, Backend solo cifra SSH.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son firewalls; el cifrado es función del propio servicio, no del firewall."
+        },
+        {
+          "texto": "Frontend y Backend son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son roles claramente diferenciados en la arquitectura sandwich."
+        },
+        {
+          "texto": "Frontend hace de DNS, Backend de servidor web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son firewalls, no servicios DNS/web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es masquerade (SNAT) y cuándo se aplica en esta práctica?",
+      "respuestas": [
+        {
+          "texto": "Es Source NAT: el firewall reescribe la IP origen de los paquetes salientes con su IP en la interfaz de salida; aquí MikroTik enmascara la red IT cuando sale hacia el frontend.",
+          "correcta": true,
+          "explicacion": "¡Correcto! pfSense solo ve tráfico de la IP del MikroTik, no de los clientes individuales."
+        },
+        {
+          "texto": "Es cifrado AES-256 aplicado al origen.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Masquerade no cifra; reescribe direcciones."
+        },
+        {
+          "texto": "Es la asignación dinámica de IPs por DHCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Masquerade y DHCP son funciones distintas."
+        },
+        {
+          "texto": "Es bloquear todo tráfico saliente por defecto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Masquerade traduce, no bloquea."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué chains tiene el firewall de MikroTik (RouterOS) y para qué se usa cada una?",
+      "respuestas": [
+        {
+          "texto": "input (tráfico al propio MikroTik), forward (tráfico enrutado entre interfaces) y output (tráfico originado por el MikroTik).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la organización clásica de chains; forward es donde se ponen la mayoría de reglas inter-zona."
+        },
+        {
+          "texto": "Solo una chain global llamada \"all\".",
+          "correcta": false,
+          "explicacion": "Incorrecto. RouterOS organiza el firewall en chains específicas por flujo."
+        },
+        {
+          "texto": "input, dmz y wan; no existe forward.",
+          "correcta": false,
+          "explicacion": "Incorrecto. dmz/wan son interfaces, no chains."
+        },
+        {
+          "texto": "frontend, backend y middle.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos no son nombres de chains de RouterOS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un certificado autofirmado y cuándo es aceptable usarlo?",
+      "respuestas": [
+        {
+          "texto": "Un par clave/certificado generado localmente sin CA pública; aceptable en entornos internos pero no en producción cara al público.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cifra el canal pero el cliente avisa de \"no confiable\"; en producción se usa una CA propia o pública (Let's Encrypt)."
+        },
+        {
+          "texto": "Un certificado emitido por una CA pública gratuita como Let's Encrypt.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Let's Encrypt firma certificados; autofirmado significa sin CA."
+        },
+        {
+          "texto": "Un certificado que no puede caducar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los autofirmados también caducan."
+        },
+        {
+          "texto": "Un certificado que solo funciona con TLS 1.0.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El autofirmado funciona con cualquier versión TLS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la regla \"anti-lockout\" de pfSense se desactiva una vez configurada la regla explícita en la VLAN de gestión?",
+      "respuestas": [
+        {
+          "texto": "Para que el panel webConfigurator solo sea accesible desde el equipo admin, evitando que toda la LAN tenga acceso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Anti-lockout deja el panel abierto a toda la LAN; al sustituirlo por una regla específica, se restringe al admin."
+        },
+        {
+          "texto": "Porque consume demasiada CPU del firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una cuestión de rendimiento."
+        },
+        {
+          "texto": "Porque solo funciona con HTTP, no con HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Anti-lockout funciona con ambos; la motivación es restringir el acceso."
+        },
+        {
+          "texto": "Porque genera demasiados logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una cuestión de logs."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se publica un servicio mediante port-forward en lugar de exponer directamente el servidor a Internet?",
+      "respuestas": [
+        {
+          "texto": "Porque el servidor vive en una subred privada inalcanzable desde Internet; el port-forward solo redirige los puertos concretos necesarios, reduciendo la superficie de ataque.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Además permite logging y rate-limiting centralizados, WAF/IDS por delante y cambiar el servidor sin tocar DNS público."
+        },
+        {
+          "texto": "Porque no se pueden asignar IPs públicas a servidores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Técnicamente sí se pueden, pero la práctica recomienda port-forward por seguridad."
+        },
+        {
+          "texto": "Porque IPv4 no soporta servidores en redes privadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. IPv4 soporta perfectamente servidores en RFC1918 detrás de NAT/port-forward."
+        },
+        {
+          "texto": "Porque el port-forward cifra automáticamente el tráfico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Port-forward no cifra; el cifrado lo aporta TLS si el servicio lo soporta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Es buena idea bloquear ICMP totalmente entre zonas?",
+      "respuestas": [
+        {
+          "texto": "No. Bloquear echo-request entre zonas no autorizadas es razonable, pero bloquear ICMP del todo rompe diagnóstico, traceroute y Path MTU Discovery.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Path MTU Discovery necesita ICMP \"Fragmentation needed\"; bloquearlo del todo puede colgar conexiones TCP grandes."
+        },
+        {
+          "texto": "Sí, siempre. Bloquear todo ICMP no tiene consecuencias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bloquear todo ICMP puede romper PMTUD y diagnósticos."
+        },
+        {
+          "texto": "No es relevante; ICMP no se filtra en ningún firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ICMP sí se filtra; es una capa más del firewall."
+        },
+        {
+          "texto": "Solo se bloquea ICMP en redes Wi-Fi.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La decisión de filtrar ICMP no depende del medio físico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué errores típicos detectados en la P1 se corrigen al pasar a la arquitectura de doble firewall?",
+      "respuestas": [
+        {
+          "texto": "Punto único de fallo, servicios sin TLS sustituidos por HTTPS/SSH/SFTP, acceso administrativo restringido a la VLAN de gestión, Telnet sustituido por SSHv2.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La nueva arquitectura combina diversidad de fabricantes con cifrado en todos los servicios y reglas más estrictas."
+        },
+        {
+          "texto": "El uso de IPv4 sustituido por IPv6.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el principal cambio entre P1 y P2."
+        },
+        {
+          "texto": "Eliminación total de los puertos abiertos en la WAN.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Algunos puertos siguen abiertos para publicar servicios; lo que cambia es el control."
+        },
+        {
+          "texto": "Eliminación de DHCP en toda la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DHCP sigue siendo necesario; lo que cambia es la arquitectura de firewalls."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 12: Cifrado con BitLocker",
+  "preguntas": [
+    {
+      "pregunta": "¿De qué tipo de ataque protege exactamente BitLocker?",
+      "respuestas": [
+        {
+          "texto": "De la extracción física del disco o del arranque con un USB live que monte el disco al margen del Windows instalado: sin la clave, los datos en disco son ilegibles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! BitLocker cierra el escenario de datos en reposo; no protege contra ataques en uso ni contra atacantes con credenciales válidas."
+        },
+        {
+          "texto": "Contra ataques de phishing por correo electrónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Phishing requiere otras defensas (filtrado de correo, MFA, formación)."
+        },
+        {
+          "texto": "Contra ransomware en ejecución.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker no impide que un ransomware cifre datos sobre un volumen ya desbloqueado."
+        },
+        {
+          "texto": "Contra DDoS dirigidos al sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker no protege disponibilidad de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se dice que el cifrado de disco no protege un sistema en uso?",
+      "respuestas": [
+        {
+          "texto": "Porque protege datos en reposo, no en uso: cuando el equipo está encendido y el usuario tiene sesión iniciada, el SO tiene la clave en memoria y los datos se descifran al vuelo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso se complementa con bloqueo de pantalla, suspensión rápida e hibernación en escenarios sensibles."
+        },
+        {
+          "texto": "Porque BitLocker solo cifra ficheros .docx.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker cifra el volumen entero, no ficheros concretos."
+        },
+        {
+          "texto": "Porque el cifrado se desactiva al iniciar sesión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado sigue activo; lo que ocurre es que la clave está en memoria y los datos se descifran al vuelo."
+        },
+        {
+          "texto": "Porque BitLocker solo funciona en modo recovery.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker funciona durante el uso normal del sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre cifrar el volumen del sistema y un volumen de datos en BitLocker?",
+      "respuestas": [
+        {
+          "texto": "El volumen del sistema necesita descifrarse antes de que Windows arranque (apoyado en TPM, con o sin PIN); los volúmenes de datos se montan tras el login y basta con que el usuario aporte una contraseña, sin TPM.",
+          "correcta": true,
+          "explicacion": "¡Correcto! TPM no interviene en volúmenes de datos porque no hay estado de arranque que sellar contra él."
+        },
+        {
+          "texto": "No hay diferencia técnica; son el mismo proceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia clave es cuándo y cómo se obtiene la clave."
+        },
+        {
+          "texto": "Solo se puede cifrar el volumen del sistema en Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker cifra ambos tipos de volumen."
+        },
+        {
+          "texto": "Los volúmenes de datos siempre exigen TPM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al revés: los volúmenes de datos no usan TPM."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la clave de recuperación de BitLocker y por qué es tan importante?",
+      "respuestas": [
+        {
+          "texto": "Una secuencia larga (48 dígitos) que actúa como vía de emergencia cuando los protectores normales fallan (olvido de PIN, cambio de TPM, actualización de firmware, traslado del disco).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin clave de recuperación, los datos pueden perderse irreversiblemente; es la red de seguridad imprescindible."
+        },
+        {
+          "texto": "La contraseña que se usa para iniciar sesión en Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contraseña de Windows es distinta de la clave de recuperación BitLocker."
+        },
+        {
+          "texto": "Una clave que se genera automáticamente cada arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave de recuperación es fija para cada volumen, no rotativa por arranque."
+        },
+        {
+          "texto": "Una contraseña temporal válida solo durante 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave de recuperación no expira por tiempo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Dónde se debe guardar la clave de recuperación y dónde NO?",
+      "respuestas": [
+        {
+          "texto": "Se custodia en Active Directory / Entra ID / MBAM / Intune en entornos corporativos, o en la cuenta Microsoft en doméstico; NUNCA en el propio disco cifrado, en el escritorio, ni pegada al equipo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La clave y el equipo no deben viajar juntos."
+        },
+        {
+          "texto": "En un post-it pegado a la pantalla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la peor práctica posible."
+        },
+        {
+          "texto": "Únicamente en el propio disco cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo donde no es accesible cuando se necesita."
+        },
+        {
+          "texto": "En una papelera reciclable del despacho.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente; práctica inaceptable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre cifrar todo el volumen y cifrar solo el espacio usado, y cuándo es mejor cada uno?",
+      "respuestas": [
+        {
+          "texto": "Cifrar todo es más lento pero garantiza que restos de datos previamente borrados también queden cifrados; cifrar solo el espacio usado es mucho más rápido y seguro sobre un disco recién creado/formateado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Disco nuevo → opción rápida; disco que ha tenido datos sensibles → completa."
+        },
+        {
+          "texto": "Cifrar solo el espacio usado es siempre menos seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En un disco nuevo, las dos opciones son equivalentes en seguridad."
+        },
+        {
+          "texto": "Las dos opciones tardan lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cifrar todo tarda órdenes de magnitud más."
+        },
+        {
+          "texto": "Cifrar todo el volumen no existe; BitLocker solo cifra ficheros marcados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker cifra volumen completo; los ficheros marcados son cosa de EFS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué BitLocker no está en Windows Home y qué alternativas tiene un usuario doméstico?",
+      "respuestas": [
+        {
+          "texto": "Es decisión comercial de Microsoft: se reserva a Pro/Enterprise/Education. Alternativas: Device Encryption (subconjunto de BitLocker disponible en Home si cumple requisitos), actualizar a Pro, o VeraCrypt.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Device Encryption es la opción más sencilla en Home; VeraCrypt es el plan B sin depender de la edición."
+        },
+        {
+          "texto": "Porque Windows Home no soporta cifrado en absoluto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Home sí soporta Device Encryption en muchos equipos."
+        },
+        {
+          "texto": "Porque Microsoft está obligado por ley a no incluirlo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay obligación legal; es decisión comercial."
+        },
+        {
+          "texto": "Porque los equipos con Home no tienen TPM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Muchos equipos con Home sí tienen TPM."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se considera que un disco cifrado con BitLocker es \"opaco\" para herramientas externas?",
+      "respuestas": [
+        {
+          "texto": "Porque al conectarlo a otro sistema o arrancar con live USB, las herramientas habituales no encuentran un sistema de ficheros legible; ven el volumen marcado como BitLocker y no pueden listar ni acceder sin contraseña o clave de recuperación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Existen herramientas específicas (dislocker en Linux) pero requieren la contraseña/clave igual; fuerza bruta es inviable con contraseña razonable."
+        },
+        {
+          "texto": "Porque sigue siendo legible como un disco normal con software gratuito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es justo la propiedad opuesta a \"opaco\"."
+        },
+        {
+          "texto": "Porque borra automáticamente los datos al conectarlo a otro sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker no borra datos; los hace inaccesibles sin clave."
+        },
+        {
+          "texto": "Porque genera ruido eléctrico que dañaría el otro equipo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante hacer copia de seguridad de la clave de recuperación ANTES de iniciar el cifrado?",
+      "respuestas": [
+        {
+          "texto": "Porque el cifrado puede salir mal y, aunque salga bien, pueden ocurrir cambios legítimos posteriores (actualización de firmware, cambio de placa) que dejen al usuario fuera del disco; sin clave, los datos se pierden.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si en ese momento no existe la clave, los datos están perdidos sin remedio."
+        },
+        {
+          "texto": "Porque la clave caduca a los 30 días.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave no caduca automáticamente."
+        },
+        {
+          "texto": "Porque BitLocker no permite generar la clave después.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí permite generarla, pero hay que tenerla custodiada antes de que algo falle."
+        },
+        {
+          "texto": "Porque la ley exige imprimirla antes de cifrar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal obligación legal; es buena práctica de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación tiene el cifrado de disco con UEFI/Secure Boot/GRUB en la cadena de defensa?",
+      "respuestas": [
+        {
+          "texto": "UEFI, Secure Boot y GRUB protegen la integridad del arranque (que el código previo al SO no se manipule); BitLocker/LUKS protegen la confidencialidad de los datos asumiendo que el arranque puede fallar. Solo combinados constituyen un bastionado serio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada capa cubre lo que las otras no: integridad del arranque + confidencialidad de los datos."
+        },
+        {
+          "texto": "Son sinónimos; todos hacen lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Atacan capas distintas y son complementarios."
+        },
+        {
+          "texto": "BitLocker sustituye a Secure Boot.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son complementarios, no sustitutos."
+        },
+        {
+          "texto": "GRUB sustituye al cifrado del disco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB es el gestor de arranque; no cifra el disco."
+        }
+      ]
+    }
+  ]
+}

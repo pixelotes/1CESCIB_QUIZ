@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 5: pfSense como firewall perimetral",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la función principal de una DMZ en una arquitectura con pfSense?",
+      "respuestas": [
+        {
+          "texto": "Aislar los servidores accesibles desde Internet para que, si caen, el atacante no llegue directamente a la LAN interna.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La DMZ es una subred intermedia entre WAN y LAN que limita el daño de un compromiso de un servicio expuesto."
+        },
+        {
+          "texto": "Acelerar el tráfico hacia los servidores internos mediante caché.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La DMZ no es una caché; es un aislamiento de seguridad."
+        },
+        {
+          "texto": "Sustituir al firewall perimetral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La DMZ es una zona separada por el firewall, no un sustituto del firewall."
+        },
+        {
+          "texto": "Encriptar todo el tráfico saliente de la LAN.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La DMZ no se relaciona con el cifrado del tráfico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa el principio \"first match wins\" en las reglas de firewall de pfSense?",
+      "respuestas": [
+        {
+          "texto": "Las reglas se evalúan en orden y gana la primera que coincide; el resto ya no se evalúa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso las reglas específicas (permitir al admin) deben ir antes que las generales (bloquear al resto)."
+        },
+        {
+          "texto": "Solo se aplica la regla con el ID más bajo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El criterio es el orden de evaluación, no el ID."
+        },
+        {
+          "texto": "Se aplican todas las reglas simultáneamente y la más restrictiva gana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. pfSense no acumula reglas; aplica la primera coincidente."
+        },
+        {
+          "texto": "El usuario debe confirmar manualmente cada regla aplicada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El filtrado es automático sin confirmación humana por paquete."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué se usa el port forwarding (NAT) en pfSense?",
+      "respuestas": [
+        {
+          "texto": "Para publicar un servicio interno redirigiendo un puerto de la WAN hacia una IP de la DMZ.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El servidor mantiene su IP privada y solo el puerto concreto necesario queda expuesto al exterior."
+        },
+        {
+          "texto": "Para cifrar el tráfico entre LAN y DMZ.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NAT no cifra; reescribe direcciones/puertos."
+        },
+        {
+          "texto": "Para evitar que el firewall registre logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NAT no inhibe el logging."
+        },
+        {
+          "texto": "Para asignar IPs públicas a los hosts internos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El port forwarding no asigna IPs públicas; reenvía puertos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué Telnet, FTP, POP3 y HTTP se consideran protocolos inseguros y deben sustituirse?",
+      "respuestas": [
+        {
+          "texto": "Porque transmiten credenciales y comandos en texto claro; cualquiera en el medio puede capturarlos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se sustituyen por SSH (22), SFTP/FTPS, POP3S (995)/IMAPS y HTTPS (443), que cifran el canal con TLS."
+        },
+        {
+          "texto": "Porque consumen demasiado ancho de banda comparado con sus alternativas seguras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es la seguridad, no el ancho de banda."
+        },
+        {
+          "texto": "Porque ya no funcionan en sistemas operativos modernos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Siguen funcionando; lo que cambia es la recomendación."
+        },
+        {
+          "texto": "Porque están prohibidos por norma ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 exige proteger las credenciales; cumplirlo implica reemplazarlos, pero no los prohíbe específicamente por nombre."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si capturas tráfico con Wireshark y quieres extraer las credenciales transmitidas en una sesión Telnet, ¿qué función específica utilizas?",
+      "respuestas": [
+        {
+          "texto": "Follow TCP Stream sobre la conversación, para reconstruir lo tecleado carácter a carácter.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Telnet transmite carácter a carácter; Follow TCP Stream reconstruye la sesión completa de forma legible."
+        },
+        {
+          "texto": "Decode As HTTPS para descifrar el tráfico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Telnet no es TLS; no hay nada que descifrar."
+        },
+        {
+          "texto": "Filtro tcp.checksum_bad para ver paquetes corruptos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso filtra checksums incorrectos; nada que ver con extraer credenciales."
+        },
+        {
+          "texto": "Activar el módulo \"telnet-decrypt\" de Wireshark.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal módulo; Telnet va en claro y no necesita descifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la VLAN de gestión debe ir aparte de la VLAN de datos?",
+      "respuestas": [
+        {
+          "texto": "Para que las interfaces administrativas de switches, APs, firewalls e impresoras no sean alcanzables desde la red de usuarios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aunque un usuario obtenga credenciales válidas, sin ruta a la IP de gestión no las puede usar."
+        },
+        {
+          "texto": "Porque las VLANs de datos no soportan SNMP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SNMP funciona en cualquier VLAN; lo que se busca es aislamiento."
+        },
+        {
+          "texto": "Porque solo en la VLAN de gestión funcionan los certificados TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS funciona en cualquier VLAN."
+        },
+        {
+          "texto": "Porque la VLAN de datos siempre tiene mayor MTU.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El MTU es independiente del propósito de la VLAN."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventajas tiene usar pfSense frente a un router doméstico para una pyme?",
+      "respuestas": [
+        {
+          "texto": "Reglas granulares, VLANs nativas, VPN site-to-site y road-warrior, IDS/IPS con Suricata, alta disponibilidad CARP, logs estructurados y comunidad activa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! pfSense es un firewall profesional sobre FreeBSD; un router doméstico solo aporta NAT básico."
+        },
+        {
+          "texto": "Es más barato porque viene preinstalado en todos los routers domésticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. pfSense se instala aparte; no viene en routers domésticos."
+        },
+        {
+          "texto": "Tiene una interfaz idéntica a Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. pfSense corre sobre FreeBSD y tiene su propia UI web."
+        },
+        {
+          "texto": "Permite emitir señales 5G sin licencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. pfSense no es un equipo 5G; es un firewall."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué errores típicos pueden detectarse al analizar un pcap durante un análisis forense de red?",
+      "respuestas": [
+        {
+          "texto": "Servicios sin cifrado (Telnet/FTP/POP3/HTTP), credenciales reutilizadas, sudo sin restricciones, falta de fail2ban o MFA, banners legales ausentes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esos hallazgos son típicos en una captura: revelan malas configuraciones de seguridad básicas."
+        },
+        {
+          "texto": "Únicamente la velocidad del enlace en megabits por segundo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no es un error de seguridad detectable en pcap."
+        },
+        {
+          "texto": "El número de empleados conectados en cada VLAN.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un dato organizativo, no un error detectable."
+        },
+        {
+          "texto": "Solo los hashes SHA-256 de cada paquete capturado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes no revelan errores de configuración por sí solos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una reserva estática de DHCP y para qué se usa?",
+      "respuestas": [
+        {
+          "texto": "Asignar siempre la misma IP a un host concreto identificándolo por su MAC, dentro de un DHCP dinámico, útil para hosts críticos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Combina lo mejor del dinamismo del DHCP con la predictibilidad necesaria para servidores o impresoras."
+        },
+        {
+          "texto": "Reservar el 100% del pool DHCP para administradores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se reserva el pool; se reserva una IP concreta a una MAC concreta."
+        },
+        {
+          "texto": "Convertir el DHCP en estático para todos los hosts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo afecta a los hosts con reserva; el resto sigue obteniendo IPs dinámicas."
+        },
+        {
+          "texto": "Bloquear el DHCP a los hosts sin reserva.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reserva no bloquea a los demás; solo fija la IP del host reservado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta usarías para analizar conversaciones HTTP/FTP/POP capturadas en un pcap?",
+      "respuestas": [
+        {
+          "texto": "Wireshark, con filtros por protocolo (http, ftp, pop) y Follow TCP Stream para reconstruir conversaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Wireshark es el analizador estándar para forense de red; sus filtros y la función Follow Stream son imprescindibles."
+        },
+        {
+          "texto": "nmap.",
+          "correcta": false,
+          "explicacion": "Incorrecto. nmap es un escáner de red, no un analizador de pcap."
+        },
+        {
+          "texto": "tcpdump sin filtros, simplemente leyendo el archivo a pelo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. tcpdump puede leer pcaps, pero Wireshark es más adecuado para análisis interactivo y reconstrucción de sesiones."
+        },
+        {
+          "texto": "El Visor de Eventos de Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Visor de Eventos lee logs de Windows, no archivos pcap."
+        }
+      ]
+    }
+  ]
+}

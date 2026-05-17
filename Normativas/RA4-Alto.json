@@ -1,0 +1,1005 @@
+{
+  "tema": "UD4 - Legislación de protección de datos (Nivel difícil)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál era el ámbito de aplicación material de la LORTAD (1992)?",
+      "respuestas": [
+        {
+          "texto": "Todos los ficheros, automatizados y no automatizados",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LORTAD se limitaba a los ficheros automatizados; los no automatizados se incorporaron con la LOPD de 1999."
+        },
+        {
+          "texto": "Únicamente los ficheros automatizados",
+          "correcta": true,
+          "explicacion": "Correcto. La LORTAD reguló solo el tratamiento automatizado de datos; los ficheros en papel se incorporaron con la LOPD."
+        },
+        {
+          "texto": "Solo los ficheros públicos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LORTAD aplicaba a ficheros públicos y privados, siempre que fueran automatizados."
+        },
+        {
+          "texto": "Solo los ficheros de las administraciones públicas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cubría tanto sector público como privado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué Real Decreto desarrolló reglamentariamente la LOPD de 1999 introduciendo los niveles de medidas de seguridad?",
+      "respuestas": [
+        {
+          "texto": "RD 994/1999",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RD 994/1999 desarrollaba la LORTAD; quedó sustituido por el RD 1720/2007."
+        },
+        {
+          "texto": "RD 1720/2007",
+          "correcta": true,
+          "explicacion": "Correcto. El RD 1720/2007 fue el Reglamento de desarrollo de la LOPD y estableció medidas técnicas y organizativas en tres niveles."
+        },
+        {
+          "texto": "RD 3/2010",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RD 3/2010 regula el Esquema Nacional de Seguridad."
+        },
+        {
+          "texto": "RD 311/2022",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RD 311/2022 actualiza el ENS, no es reglamento de la LOPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es una categoría especial de datos según el art. 9 del RGPD?",
+      "respuestas": [
+        {
+          "texto": "Datos genéticos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos genéticos SÍ son categoría especial introducida por el RGPD."
+        },
+        {
+          "texto": "Datos relativos a condenas e infracciones penales",
+          "correcta": true,
+          "explicacion": "Correcto. Los datos sobre condenas e infracciones penales tienen una protección reforzada propia (art. 10 RGPD), pero NO forman parte de las categorías especiales del art. 9."
+        },
+        {
+          "texto": "Datos biométricos para identificar de forma unívoca a una persona",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos biométricos cuando se usan para identificar de forma unívoca SÍ son categoría especial."
+        },
+        {
+          "texto": "Opiniones políticas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las opiniones políticas SÍ son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa de 80 empleados que trata datos de salud de sus clientes de manera regular. ¿Está obligada a llevar el Registro de Actividades del Tratamiento?",
+      "respuestas": [
+        {
+          "texto": "No, porque tiene menos de 250 empleados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque tenga menos de 250 trabajadores, el tratamiento de categorías especiales activa la obligación."
+        },
+        {
+          "texto": "Sí, porque trata categorías especiales de datos de forma no ocasional",
+          "correcta": true,
+          "explicacion": "Correcto. La exención de menos de 250 trabajadores decae cuando hay riesgo, el tratamiento no es ocasional o se tratan categorías especiales o datos penales."
+        },
+        {
+          "texto": "Solo si supera los 250 empleados",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral de 250 no aplica si se dan los supuestos del art. 30.5 RGPD."
+        },
+        {
+          "texto": "Solo si los datos provienen de menores",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación es independiente de que los interesados sean menores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la cuantía máxima general de las sanciones administrativas previstas en el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Hasta 600.000 euros",
+          "correcta": false,
+          "explicacion": "Incorrecto. Era el orden de magnitud de la LOPD anterior, no del RGPD."
+        },
+        {
+          "texto": "Hasta 5 millones de euros o el 1% del volumen de negocio",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cifras son mayores."
+        },
+        {
+          "texto": "Hasta 20 millones de euros o el 4% del volumen de negocio anual mundial, la cifra mayor",
+          "correcta": true,
+          "explicacion": "Correcto. Para las infracciones más graves el RGPD prevé hasta 20M€ o el 4% de la facturación mundial anual, la mayor de ambas."
+        },
+        {
+          "texto": "Hasta 50 millones de euros o el 10% del volumen de negocio",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas cifras corresponden a otras normativas (DSA, por ejemplo), no al RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia el derecho al olvido del derecho a la limitación del tratamiento?",
+      "respuestas": [
+        {
+          "texto": "Son sinónimos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son derechos distintos con efectos diferentes."
+        },
+        {
+          "texto": "El derecho al olvido implica la supresión de los datos; la limitación restringe su tratamiento sin eliminarlos",
+          "correcta": true,
+          "explicacion": "Correcto. El derecho al olvido conlleva borrar; la limitación congela el tratamiento (los datos permanecen pero no se procesan)."
+        },
+        {
+          "texto": "El derecho al olvido aplica solo a menores; la limitación a adultos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican con independencia de la edad."
+        },
+        {
+          "texto": "El derecho al olvido es de la LOPDGDD y la limitación del RGPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos están recogidos en el RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un formulario web tiene una casilla previamente marcada que dice \"acepto recibir comunicaciones comerciales\". Bajo el RGPD, este consentimiento es:",
+      "respuestas": [
+        {
+          "texto": "Válido si el usuario no la desmarca",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento tácito por casilla premarcada no es válido."
+        },
+        {
+          "texto": "No válido, porque es un consentimiento tácito y el RGPD exige consentimiento expreso",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD invalida expresamente las casillas previamente marcadas: el consentimiento debe ser una manifestación activa."
+        },
+        {
+          "texto": "Válido siempre que se informe al usuario",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información es necesaria pero no convierte en válido un consentimiento tácito."
+        },
+        {
+          "texto": "Válido si los datos no son sensibles",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validez del consentimiento no depende de la naturaleza del dato; en cualquier caso, debe ser expreso."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un servicio de limpieza de oficinas accede a estancias donde hay documentación en papel con datos personales. En términos del RGPD, este proveedor es:",
+      "respuestas": [
+        {
+          "texto": "Responsable del tratamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. No decide los fines ni medios del tratamiento."
+        },
+        {
+          "texto": "Encargado del tratamiento",
+          "correcta": true,
+          "explicacion": "Correcto. Aunque su finalidad principal sea la limpieza, accede a datos por cuenta del responsable y debe firmar contrato de encargo."
+        },
+        {
+          "texto": "Cesionario",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se le ceden los datos; solo accede incidentalmente."
+        },
+        {
+          "texto": "Tercero ajeno al tratamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. Al acceder a los datos, debe regularse la relación como encargo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifica una dirección IP cuando puede identificar al usuario?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. La IP, cuando permite identificar al usuario, se considera dato identificativo (al igual que el nombre de usuario o el correo)."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. El control de presencia se refiere a fichaje laboral."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La IP no es categoría especial por sí misma."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. La IP no es información comercial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría la voz cuando se trata como dato biométrico (identificación por voz)?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cuando la voz se procesa para identificar de forma unívoca, entra en categoría especial."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Como dato biométrico, no es simple característica personal."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": true,
+          "explicacion": "Correcto. La voz, cuando se trata mediante técnicas biométricas para identificar a la persona, es dato biométrico y, por tanto, categoría especial."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La voz puede usarse en control de presencia, pero su naturaleza es biométrica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría la firma electrónica?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. La firma electrónica, al igual que la firma manuscrita, es un dato identificativo."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma no es una característica personal en sentido estricto."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma electrónica no es categoría especial."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma electrónica no es un dato de control de presencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican los datos de geolocalización?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. La geolocalización, al permitir identificar y seguir a una persona, suele clasificarse como dato identificativo."
+        },
+        {
+          "texto": "Circunstancias familiares y sociales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La geolocalización no es una circunstancia familiar/social."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una característica personal."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La geolocalización no es categoría especial por sí misma, aunque pueda revelar datos sensibles."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifica la lengua materna?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La lengua materna no identifica a la persona."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": true,
+          "explicacion": "Correcto. La lengua materna se considera una característica personal del interesado."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es categoría especial."
+        },
+        {
+          "texto": "Académicos y profesionales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un dato académico ni profesional."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifica el origen étnico o racial?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque suene a característica, tiene una protección reforzada."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": true,
+          "explicacion": "Correcto. El origen étnico o racial es una de las categorías especiales del art. 9 RGPD."
+        },
+        {
+          "texto": "Circunstancias familiares y sociales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una circunstancia social en el sentido de la clasificación."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un dato identificativo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifica un permiso de residencia o trabajo?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la nacionalidad es característica personal, los permisos son documentos administrativos."
+        },
+        {
+          "texto": "Judiciales y administrativos",
+          "correcta": true,
+          "explicacion": "Correcto. Permisos de residencia, licencias y autorizaciones son datos judiciales y administrativos."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es propiamente identificativo en la clasificación AEPD, sino administrativo."
+        },
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El permiso de trabajo no es un detalle de empleo, es un dato administrativo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican las creaciones artísticas, literarias, científicas o técnicas?",
+      "respuestas": [
+        {
+          "texto": "Académicos y profesionales",
+          "correcta": true,
+          "explicacion": "Correcto. Las creaciones artísticas, literarias o científicas se asocian a la categoría académica y profesional del titular."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las creaciones no son una característica personal."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información comercial recoge actividades empresariales, no creaciones."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican las características antropométricas (altura, peso, marcas físicas) cuando no se usan biométricamente?",
+      "respuestas": [
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo serían categoría especial si se procesan biométricamente para identificar."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": true,
+          "explicacion": "Correcto. Altura, peso o marcas físicas son características personales cuando no se procesan biométricamente para identificación unívoca."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son identificativos en sentido estricto."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. No están relacionados con el control horario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifica el motivo de ausencia del trabajo?",
+      "respuestas": [
+        {
+          "texto": "De control de presencia",
+          "correcta": true,
+          "explicacion": "Correcto. El motivo de ausencia se asocia al control de presencia laboral junto con las marcas de entrada/salida y los identificadores de fichaje."
+        },
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Detalles de empleo se refiere a profesión, puesto o categoría."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una característica personal."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el motivo pueda revelar datos de salud (que sí serían categoría especial), el dato en sí pertenece al control de presencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican los datos no económicos de nómina (departamento, categoría, número de registro de personal)?",
+      "respuestas": [
+        {
+          "texto": "Económicos, financieros y de seguros",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los datos económicos de nómina (ingresos, retenciones, etc.)."
+        },
+        {
+          "texto": "Detalles de empleo",
+          "correcta": true,
+          "explicacion": "Correcto. Departamento, categoría profesional, puesto y similares son detalles de empleo."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No identifican a la persona directamente."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. No están vinculados al fichaje."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían los datos de tráfico de red de telecomunicaciones?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. Datos de navegación, IPs y tráfico de telecomunicaciones que puedan identificar al usuario entran en la categoría de identificativos."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tienen relación con el fichaje."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es información comercial."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son características personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican las inscripciones en foros, clubes o asociaciones?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": true,
+          "explicacion": "Correcto. Aficiones, gustos, preferencias e inscripciones en clubes son características personales del interesado."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. Información comercial son actividades empresariales del interesado."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No identifican directamente a la persona."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son categoría especial, aunque pertenecer a un sindicato o partido sí lo sería."
+        }
+      ]
+    },
+    {
+      "pregunta": "Bajo el RGPD, ¿qué se entiende por consentimiento \"inequívoco\"?",
+      "respuestas": [
+        {
+          "texto": "Que el interesado lo otorgue por escrito ante notario",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se requiere intervención notarial."
+        },
+        {
+          "texto": "Que conste mediante una manifestación clara y afirmativa del interesado",
+          "correcta": true,
+          "explicacion": "Correcto. Inequívoco implica que no quepa duda razonable de que el interesado consintió; debe haber una acción afirmativa."
+        },
+        {
+          "texto": "Que el silencio o la inacción se consideren consentimiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería justamente consentimiento tácito, expresamente prohibido."
+        },
+        {
+          "texto": "Que sea verbal",
+          "correcta": false,
+          "explicacion": "Incorrecto. La forma verbal no asegura el carácter inequívoco."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué supuesto el RGPD exige consentimiento expreso o explícito reforzado, y no basta el consentimiento inequívoco general?",
+      "respuestas": [
+        {
+          "texto": "En cualquier tratamiento con fines comerciales",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento general inequívoco es suficiente para fines comerciales legítimos informados."
+        },
+        {
+          "texto": "Cuando el tratamiento incluya categorías especiales de datos o haya transferencia internacional sin garantías",
+          "correcta": true,
+          "explicacion": "Correcto. Para datos sensibles, transferencias internacionales sin garantías o decisiones basadas en perfilado, el RGPD exige consentimiento explícito reforzado."
+        },
+        {
+          "texto": "Cuando el responsable sea una administración pública",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las AAPP suelen tratar datos por habilitación legal, no por consentimiento."
+        },
+        {
+          "texto": "Únicamente en menores de 18 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. La especialidad de los menores no exige por sí sola consentimiento explícito reforzado, sino verificación de la edad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo NO es necesario notificar una brecha de seguridad a la autoridad de control?",
+      "respuestas": [
+        {
+          "texto": "Cuando la brecha afecte a menos de 100 personas",
+          "correcta": false,
+          "explicacion": "Incorrecto. El criterio no es cuantitativo."
+        },
+        {
+          "texto": "Cuando sea improbable que la brecha constituya un riesgo para los derechos y libertades de las personas físicas",
+          "correcta": true,
+          "explicacion": "Correcto. El art. 33 RGPD exime de notificar cuando la brecha no suponga un riesgo razonable para los derechos y libertades."
+        },
+        {
+          "texto": "Cuando hayan pasado más de 72 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pasadas las 72 horas igualmente hay que notificar, justificando la demora."
+        },
+        {
+          "texto": "Cuando los datos estén cifrados",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser un atenuante, pero no exime automáticamente de la notificación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes supuestos NO obliga a realizar una Evaluación de Impacto en Protección de Datos (EIPD)?",
+      "respuestas": [
+        {
+          "texto": "Tratamiento a gran escala de categorías especiales de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ obliga a realizar EIPD."
+        },
+        {
+          "texto": "Observación sistemática a gran escala de zona de acceso público (videovigilancia masiva)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ obliga a realizar EIPD."
+        },
+        {
+          "texto": "Tratamiento ocasional de los datos de empleados para gestión de nóminas",
+          "correcta": true,
+          "explicacion": "Correcto. La gestión ordinaria de nóminas no entraña por sí misma alto riesgo y no requiere EIPD."
+        },
+        {
+          "texto": "Decisiones automatizadas con efectos jurídicos significativos basadas en perfilado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ obliga a realizar EIPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una EIPD arroja un nivel de riesgo residual no aceptable y el responsable no puede reducirlo, ¿qué debe hacer?",
+      "respuestas": [
+        {
+          "texto": "Notificar a los interesados y continuar con el tratamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. No basta con informar a los interesados si el riesgo es inaceptable."
+        },
+        {
+          "texto": "Realizar una consulta previa a la autoridad de control",
+          "correcta": true,
+          "explicacion": "Correcto. El art. 36 RGPD obliga a consultar a la autoridad de control cuando una EIPD arroje riesgo alto no mitigable."
+        },
+        {
+          "texto": "Solicitar la certificación de la AEPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La certificación es voluntaria y no resuelve esta situación."
+        },
+        {
+          "texto": "Cesar el tratamiento sin más trámite",
+          "correcta": false,
+          "explicacion": "Incorrecto. La consulta previa es el mecanismo previsto, no el cese automático."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué Título de la LOPDGDD regula los derechos digitales y aporta novedades como el derecho a la desconexión digital?",
+      "respuestas": [
+        {
+          "texto": "Título I",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Título I regula disposiciones generales."
+        },
+        {
+          "texto": "Título V",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Título V regula el régimen sancionador en parte."
+        },
+        {
+          "texto": "Título X",
+          "correcta": true,
+          "explicacion": "Correcto. El Título X de la LOPDGDD recoge los derechos digitales: desconexión digital, derecho al olvido en redes sociales, neutralidad de Internet, etc."
+        },
+        {
+          "texto": "Título XII",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD no llega al Título XII."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el ámbito territorial de aplicación del RGPD respecto a empresas establecidas fuera de la UE?",
+      "respuestas": [
+        {
+          "texto": "No aplica a empresas fuera de la UE",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD tiene aplicación extraterritorial."
+        },
+        {
+          "texto": "Aplica si tratan datos de interesados ubicados en la UE para ofrecerles bienes/servicios o monitorizar su comportamiento",
+          "correcta": true,
+          "explicacion": "Correcto. El art. 3 RGPD extiende la aplicación a responsables fuera de la UE cuando tratan datos de interesados en la UE en esos supuestos."
+        },
+        {
+          "texto": "Aplica únicamente si la empresa tiene filial física en la UE",
+          "correcta": false,
+          "explicacion": "Incorrecto. La filial física no es requisito."
+        },
+        {
+          "texto": "Aplica solo si el responsable lo acepta voluntariamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La aplicación es obligatoria por imperativo legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué funciones NO corresponden al DPO según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Informar y asesorar al responsable o encargado sobre obligaciones en protección de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. SÍ es función del DPO."
+        },
+        {
+          "texto": "Supervisar el cumplimiento de la normativa y políticas internas",
+          "correcta": false,
+          "explicacion": "Incorrecto. SÍ es función del DPO."
+        },
+        {
+          "texto": "Tomar decisiones sobre los fines y medios del tratamiento",
+          "correcta": true,
+          "explicacion": "Correcto. El DPO asesora y supervisa pero NO decide sobre los fines y medios del tratamiento; eso corresponde al responsable. Mezclar ambas funciones es un conflicto de interés."
+        },
+        {
+          "texto": "Actuar como punto de contacto con la autoridad de control",
+          "correcta": false,
+          "explicacion": "Incorrecto. SÍ es función del DPO."
+        }
+      ]
+    },
+    {
+      "pregunta": "El principio de exactitud establece que los datos personales:",
+      "respuestas": [
+        {
+          "texto": "Han de ser exactos y, si fuera necesario, actualizados",
+          "correcta": true,
+          "explicacion": "Correcto. El principio de exactitud obliga a mantener los datos correctos y actualizados, suprimiendo o rectificando los inexactos sin dilación."
+        },
+        {
+          "texto": "Solo se pueden recoger una vez y nunca modificar",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esto sería incompatible con el derecho de rectificación y con la propia exactitud."
+        },
+        {
+          "texto": "Deben coincidir literalmente con los datos del Registro Civil",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal exigencia."
+        },
+        {
+          "texto": "Han de ser firmados digitalmente por el interesado",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma digital no es requisito del principio de exactitud."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia esencial entre responsable y encargado del tratamiento?",
+      "respuestas": [
+        {
+          "texto": "El responsable trata datos por cuenta del encargado",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo al revés."
+        },
+        {
+          "texto": "El responsable decide fines y medios del tratamiento; el encargado trata los datos por cuenta del responsable",
+          "correcta": true,
+          "explicacion": "Correcto. El responsable es quien determina los fines y medios; el encargado solo procesa por instrucciones del responsable, mediando contrato."
+        },
+        {
+          "texto": "Ambos son sinónimos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son figuras jurídicamente distintas con obligaciones diferentes."
+        },
+        {
+          "texto": "El responsable es siempre persona física y el encargado siempre jurídica",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cualquiera de ambas figuras puede ser persona física o jurídica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué supuesto NO está recogido entre los que justifican el ejercicio del derecho al olvido?",
+      "respuestas": [
+        {
+          "texto": "Que los datos ya no sean necesarios para la finalidad inicial",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ justifica el derecho al olvido."
+        },
+        {
+          "texto": "Que se haya revocado el consentimiento y no exista otra base jurídica",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ justifica el derecho al olvido."
+        },
+        {
+          "texto": "Que el interesado considere los datos poco favorecedores para su reputación",
+          "correcta": true,
+          "explicacion": "Correcto. La mera percepción reputacional no justifica el derecho al olvido; deben concurrir los supuestos del art. 17 RGPD (datos innecesarios, consentimiento revocado, tratamiento ilícito, etc.)."
+        },
+        {
+          "texto": "Que los datos se hayan tratado de manera ilícita",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este supuesto SÍ justifica el derecho al olvido."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la seudonimización y a qué principio del RGPD contribuye especialmente?",
+      "respuestas": [
+        {
+          "texto": "La eliminación completa de los datos personales; contribuye al derecho al olvido",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería anonimización, no seudonimización."
+        },
+        {
+          "texto": "La sustitución de identificadores por valores que impiden vincular los datos a una persona sin información adicional; contribuye a privacy by design y a la seguridad",
+          "correcta": true,
+          "explicacion": "Correcto. La seudonimización sustituye identificadores directos por alias o claves; es ejemplo de privacy by design y medida de seguridad."
+        },
+        {
+          "texto": "El cifrado de los datos en tránsito; contribuye a la confidencialidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque relacionado, el cifrado y la seudonimización son técnicas distintas."
+        },
+        {
+          "texto": "La firma digital de los datos; contribuye a la integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma digital tampoco es seudonimización."
+        }
+      ]
+    },
+    {
+      "pregunta": "El consentimiento expreso bajo el RGPD debe cumplir, entre otros requisitos, que:",
+      "respuestas": [
+        {
+          "texto": "No puede revocarse una vez otorgado",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento es revocable en cualquier momento (art. 7.3 RGPD)."
+        },
+        {
+          "texto": "Tiene carácter revocable en cualquier momento y no puede estar subordinado a la prestación del servicio",
+          "correcta": true,
+          "explicacion": "Correcto. El consentimiento es libremente revocable y no se puede condicionar la prestación de un servicio a otorgarlo si no es necesario para ese servicio."
+        },
+        {
+          "texto": "Solo es válido si se otorga por escrito en papel",
+          "correcta": false,
+          "explicacion": "Incorrecto. Puede ser por medios electrónicos siempre que sea inequívoco."
+        },
+        {
+          "texto": "Es válido durante un máximo de 5 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay plazo máximo legal universal; depende de la finalidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un responsable recibe la revocación del consentimiento por parte de un interesado, ¿qué ocurre con los tratamientos ya realizados antes de la revocación?",
+      "respuestas": [
+        {
+          "texto": "Quedan automáticamente anulados con efecto retroactivo",
+          "correcta": false,
+          "explicacion": "Incorrecto. La revocación no es retroactiva."
+        },
+        {
+          "texto": "Siguen siendo lícitos los tratamientos realizados antes de la revocación; debe cesar a partir de ese momento",
+          "correcta": true,
+          "explicacion": "Correcto. La revocación solo tiene efecto hacia el futuro; los tratamientos previos consentidos son lícitos."
+        },
+        {
+          "texto": "Deben suprimirse todos los datos en 72 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. La revocación no genera plazo automático de 72 horas (ese plazo es para brechas)."
+        },
+        {
+          "texto": "El responsable debe indemnizar al interesado por los tratamientos previos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No procede indemnización por tratamientos lícitos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué supuesto puede ser una transferencia internacional de datos según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Enviar datos de un empleado de la oficina de Madrid a la oficina de Barcelona",
+          "correcta": false,
+          "explicacion": "Incorrecto. Madrid y Barcelona están dentro del territorio nacional y de la UE; no es transferencia internacional."
+        },
+        {
+          "texto": "Comunicar datos a una organización ubicada en un Estado fuera de la UE/EEE",
+          "correcta": true,
+          "explicacion": "Correcto. La transferencia internacional implica enviar datos a un responsable o encargado situado fuera de la UE/EEE."
+        },
+        {
+          "texto": "Cualquier acceso a datos desde una IP extranjera",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un acceso puntual desde fuera no constituye necesariamente transferencia internacional formal."
+        },
+        {
+          "texto": "Únicamente enviar datos a empresas estadounidenses",
+          "correcta": false,
+          "explicacion": "Incorrecto. EE.UU. es solo uno de los muchos terceros países posibles."
+        }
+      ]
+    },
+    {
+      "pregunta": "Bajo la antigua LOPD de 1999, ¿qué obligación existía respecto a los ficheros con datos personales?",
+      "respuestas": [
+        {
+          "texto": "Notificarlos a la AEPD para su inscripción en el Registro General de Protección de Datos",
+          "correcta": true,
+          "explicacion": "Correcto. La LOPD obligaba a notificar e inscribir los ficheros, registro que cualquier ciudadano podía consultar."
+        },
+        {
+          "texto": "Mantener un Registro de Actividades del Tratamiento interno",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RAT lo introduce el RGPD; bajo la LOPD existía la inscripción de ficheros."
+        },
+        {
+          "texto": "Realizar una EIPD para cada fichero",
+          "correcta": false,
+          "explicacion": "Incorrecto. La EIPD es una figura del RGPD."
+        },
+        {
+          "texto": "Designar un Delegado de Protección de Datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO se introduce con el RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué innovación principal aporta el RGPD respecto al enfoque de cumplimiento de la LOPD anterior?",
+      "respuestas": [
+        {
+          "texto": "Establece un listado cerrado de medidas técnicas obligatorias",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD precisamente elimina el listado cerrado."
+        },
+        {
+          "texto": "Pasa de un enfoque normativo basado en checklists a un enfoque basado en riesgo y responsabilidad proactiva",
+          "correcta": true,
+          "explicacion": "Correcto. Las dos grandes innovaciones son el principio de responsabilidad proactiva (accountability) y el enfoque basado en riesgo."
+        },
+        {
+          "texto": "Centraliza todas las decisiones en la AEPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD descentraliza y responsabiliza al propio responsable del tratamiento."
+        },
+        {
+          "texto": "Obliga a inscribir todos los ficheros en un registro europeo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD elimina la obligación de inscribir ficheros en cualquier registro público."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes datos NO se considera categoría especial bajo el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Afiliación sindical",
+          "correcta": false,
+          "explicacion": "Incorrecto. La afiliación sindical SÍ es categoría especial."
+        },
+        {
+          "texto": "Convicciones religiosas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las convicciones religiosas o filosóficas SÍ son categoría especial."
+        },
+        {
+          "texto": "Nivel de ingresos",
+          "correcta": true,
+          "explicacion": "Correcto. El nivel de ingresos NO es categoría especial; es un dato económico/financiero, sometido al régimen general."
+        },
+        {
+          "texto": "Datos relativos a la salud",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos de salud SÍ son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "El derecho a la portabilidad introducido por el RGPD permite recibir los datos en un formato:",
+      "respuestas": [
+        {
+          "texto": "Cualquier formato, a elección del responsable",
+          "correcta": false,
+          "explicacion": "Incorrecto. El responsable no puede elegir libremente un formato ininteligible."
+        },
+        {
+          "texto": "Estructurado, de uso común y de lectura mecánica (por ejemplo CSV)",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD exige formato estructurado, de uso común y lectura mecánica, citando ejemplos como CSV o JSON."
+        },
+        {
+          "texto": "Exclusivamente PDF",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PDF no garantiza la lectura mecánica."
+        },
+        {
+          "texto": "Únicamente en papel impreso",
+          "correcta": false,
+          "explicacion": "Incorrecto. La portabilidad exige formato electrónico interoperable."
+        }
+      ]
+    }
+  ]
+}

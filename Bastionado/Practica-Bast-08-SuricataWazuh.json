@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 8: Suricata (NIDS/IPS) + Wazuh (SIEM)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué diferencia hay entre IDS e IPS?",
+      "respuestas": [
+        {
+          "texto": "El IDS detecta patrones de ataque y alerta, pero no bloquea; el IPS además actúa (descarta paquete, corta conexión, bloquea IP).",
+          "correcta": true,
+          "explicacion": "¡Correcto! IDS = pasivo (alerta), IPS = activo (bloquea)."
+        },
+        {
+          "texto": "El IDS solo funciona en HTTPS y el IPS en HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos analizan cualquier protocolo según las reglas."
+        },
+        {
+          "texto": "El IDS es hardware y el IPS es software.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden ser cualquiera de los dos formatos."
+        },
+        {
+          "texto": "El IPS sustituye al firewall por completo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son complementarios; el IPS no sustituye al firewall."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre NIDS y HIDS?",
+      "respuestas": [
+        {
+          "texto": "NIDS analiza tráfico de red en un punto estratégico; HIDS corre en cada host y analiza logs, integridad de ficheros, procesos y llamadas al sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son complementarios: NIDS ve qué entra y sale, HIDS ve qué pasa dentro de cada máquina."
+        },
+        {
+          "texto": "NIDS es comercial y HIDS es open source.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos existen en versiones comerciales y libres."
+        },
+        {
+          "texto": "NIDS solo aplica a IPv4 y HIDS a IPv6.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son agnósticos al protocolo de red."
+        },
+        {
+          "texto": "Son sinónimos sin diferencia operativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIDS y HIDS operan en planos distintos (red vs host)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja tiene Suricata frente a Snort?",
+      "respuestas": [
+        {
+          "texto": "Es nativamente multihilo (escala en hardware moderno), soporta inspección por protocolo más rica y produce logs JSON (eve.json) listos para SIEM.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Snort sigue siendo referente y muchas reglas son intercambiables; Suricata escala mejor en CPU multinúcleo."
+        },
+        {
+          "texto": "Es más antiguo y por eso más probado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Snort es más antiguo; Suricata es la opción moderna."
+        },
+        {
+          "texto": "Suricata es propietario y Snort es libre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son open source."
+        },
+        {
+          "texto": "Suricata no necesita reglas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suricata sí necesita reglas; las usa igual que Snort."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres tipos de detección existen en un IDS y cómo se combinan en la práctica?",
+      "respuestas": [
+        {
+          "texto": "Basada en firmas (patrones conocidos), basada en anomalías (desviaciones del baseline) y basada en políticas/reputación (listas negras/IPs maliciosas).",
+          "correcta": true,
+          "explicacion": "¡Correcto! En la práctica, Suricata combina firmas (ETOpen, GPLv2) con reglas personalizadas y listas de reputación."
+        },
+        {
+          "texto": "Manual, automática y mixta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa clasificación no corresponde a tipos de detección IDS."
+        },
+        {
+          "texto": "Activa, pasiva y mixta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe modos IDS/IPS, no tipos de detección."
+        },
+        {
+          "texto": "Online, offline e híbrida.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la clasificación estándar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las reglas Emerging Threats (ETOpen)?",
+      "respuestas": [
+        {
+          "texto": "Conjunto de reglas comunitarias para Suricata/Snort mantenido por Proofpoint y la comunidad; cubre malware, exploits, escaneos, C2, abusos de protocolo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! ETOpen es la versión gratuita; ETPro es comercial con reglas adicionales y actualizaciones más frecuentes."
+        },
+        {
+          "texto": "Un protocolo de cifrado para sustituir TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ETOpen no es un protocolo; es un conjunto de reglas IDS."
+        },
+        {
+          "texto": "Una herramienta de captura de paquetes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una herramienta de captura."
+        },
+        {
+          "texto": "Un firewall de capa 7.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ETOpen son reglas para IDS, no un WAF."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SIEM y qué problema resuelve?",
+      "respuestas": [
+        {
+          "texto": "Centraliza logs de toda la organización, los normaliza, correlaciona y permite buscar/alertar/reportar sobre ellos; resuelve que sin SIEM las pistas de un ataque están dispersas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin SIEM, los logs aislados rara vez se miran; el SIEM da contexto y correlación."
+        },
+        {
+          "texto": "Un firewall de aplicación HTTP/HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es un WAF, no un SIEM."
+        },
+        {
+          "texto": "Una base de datos relacional para configuración.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un SIEM no es una BD relacional al uso, aunque almacene eventos."
+        },
+        {
+          "texto": "Un sistema antivirus centralizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El antivirus protege endpoints; el SIEM correlaciona eventos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es Wazuh y qué combina?",
+      "respuestas": [
+        {
+          "texto": "Plataforma open-source que combina HIDS/EDR (agentes en endpoints, FIM, SCA, vulnerabilidades) y SIEM (ingesta y correlación de logs); construida sobre OpenSearch.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Wazuh es gratuito y self-hosted, accesible para organizaciones que no pueden permitirse Splunk, QRadar o Sentinel."
+        },
+        {
+          "texto": "Un firewall L3 de código cerrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Wazuh no es un firewall; es HIDS+SIEM open source."
+        },
+        {
+          "texto": "Únicamente un escáner de vulnerabilidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Escanear es una de sus funciones, no la única."
+        },
+        {
+          "texto": "Un servidor de actualizaciones de Microsoft.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es WSUS, no Wazuh."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres formas hay típicamente de hacer llegar logs a un SIEM como Wazuh?",
+      "respuestas": [
+        {
+          "texto": "Agente propio del SIEM en el origen, syslog (UDP/TCP 514, con o sin TLS) y lectura remota de ficheros compartidos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada método tiene ventajas: agente = rico (FIM/SCA), syslog = universal, ficheros = común en cloud."
+        },
+        {
+          "texto": "Únicamente correo electrónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El correo no es un método estándar de envío de logs a un SIEM."
+        },
+        {
+          "texto": "FTP plano y nada más.",
+          "correcta": false,
+          "explicacion": "Incorrecto. FTP no es la vía estándar; hay agente, syslog y ficheros."
+        },
+        {
+          "texto": "Carga manual desde USB físico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. USB físico no es un método operativo de envío continuo de logs."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué limitación tiene un NIDS frente al tráfico cifrado (HTTPS, SSH)?",
+      "respuestas": [
+        {
+          "texto": "No puede inspeccionar el contenido; solo ve metadatos (IPs, puertos, tamaños, certificado TLS, SNI, patrones de tiempo).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para inspeccionar contenido cifrado hace falta terminar el TLS (proxy/WAF) o complementar con HIDS/WAF en el servidor."
+        },
+        {
+          "texto": "Solo puede ver tráfico cifrado, no el plano.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: ve el plano y le falta visibilidad sobre el cifrado."
+        },
+        {
+          "texto": "El cifrado no afecta a los NIDS modernos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí afecta significativamente; es una limitación reconocida."
+        },
+        {
+          "texto": "Solo afecta a Suricata, no a Snort.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a ambos por igual."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un falso positivo en un IDS y por qué es un problema serio?",
+      "respuestas": [
+        {
+          "texto": "Una alerta sin ataque real; el problema no es solo el ruido, sino que demasiados llevan a fatiga de alertas y los analistas terminan ignorando también las verdaderas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La métrica clave es la relación señal/ruido; afinar reglas y umbrales es tan importante como añadir detecciones."
+        },
+        {
+          "texto": "Una alerta que se dispara por un atacante real; no es problemático.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un verdadero positivo, no un falso positivo."
+        },
+        {
+          "texto": "Una alerta que no se registra en los logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las alertas se registran; el problema es de calidad, no de logging."
+        },
+        {
+          "texto": "Una alerta solo visible para el atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las alertas son internas; los falsos positivos son ruido para los defensores."
+        }
+      ]
+    }
+  ]
+}

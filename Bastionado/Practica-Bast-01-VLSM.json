@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 1: VLSM (Subnetting con máscara variable)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué ventaja principal aporta VLSM frente a FLSM al diseñar el direccionamiento de una red con subredes de tamaños muy distintos?",
+      "respuestas": [
+        {
+          "texto": "Permite que cada subred use la máscara mínima que cubre sus necesidades, minimizando el desperdicio de IPs.",
+          "correcta": true,
+          "explicacion": "¡Correcto! VLSM ajusta el tamaño de cada subred al número real de hosts, mientras que FLSM impone subredes uniformes y desperdicia direcciones en los segmentos pequeños."
+        },
+        {
+          "texto": "Garantiza automáticamente el aislamiento entre subredes sin necesidad de firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El aislamiento depende de la segmentación L2/L3 y de reglas de filtrado, no del esquema de subnetting."
+        },
+        {
+          "texto": "Permite usar IPs públicas para todos los hosts internos sin coste adicional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VLSM no asigna IPs públicas; trabaja sobre cualquier bloque privado o público asignado."
+        },
+        {
+          "texto": "Sustituye la necesidad de tener una tabla de enrutamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El enrutamiento sigue siendo necesario; VLSM solo optimiza el tamaño de cada subred."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué en VLSM hay que asignar primero las subredes más grandes y después las pequeñas?",
+      "respuestas": [
+        {
+          "texto": "Porque cada subred debe alinearse a un múltiplo de su propio tamaño, y empezar por las pequeñas puede dejar huecos donde no encaje una grande.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El alineamiento exige que el inicio de cada bloque sea múltiplo de su tamaño. Asignar primero las grandes garantiza que encajen sin fragmentación."
+        },
+        {
+          "texto": "Porque las subredes grandes consumen más ancho de banda y necesitan prioridad de QoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VLSM es un esquema de direccionamiento, no de calidad de servicio."
+        },
+        {
+          "texto": "Porque las subredes pequeñas no soportan tráfico broadcast.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Todas las subredes IP tienen su propio broadcast; el tamaño no lo cambia."
+        },
+        {
+          "texto": "Porque IPv4 obliga a asignar las subredes en orden descendente por norma.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una obligación del estándar IPv4; es una técnica para garantizar alineamiento de bloques."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si una subred necesita alojar 35 hosts, ¿qué máscara CIDR es la mínima adecuada teniendo en cuenta IPs reservadas (red, broadcast, gateway, switch)?",
+      "respuestas": [
+        {
+          "texto": "/26 (64 direcciones, 62 utilizables).",
+          "correcta": true,
+          "explicacion": "¡Correcto! 35 hosts + 4 reservadas = 39; el bloque potencia de 2 mínimo es 64 (/26), con 62 IPs utilizables."
+        },
+        {
+          "texto": "/27 (32 direcciones).",
+          "correcta": false,
+          "explicacion": "Incorrecto. /27 solo ofrece 30 IPs utilizables, insuficientes para 35 hosts."
+        },
+        {
+          "texto": "/24 (256 direcciones).",
+          "correcta": false,
+          "explicacion": "Incorrecto. /24 cabe, pero no es la máscara mínima; desperdicia más de 200 IPs."
+        },
+        {
+          "texto": "/28 (16 direcciones).",
+          "correcta": false,
+          "explicacion": "Incorrecto. /28 solo tiene 14 IPs utilizables, muy por debajo de 35."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda evitar el rango 192.168.x.x en un laboratorio montado en GNS3 sobre un equipo doméstico?",
+      "respuestas": [
+        {
+          "texto": "Por probable conflicto con la red doméstica del host físico, que suele usar el mismo rango.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el laboratorio reusa el rango doméstico habrá choques de enrutamiento entre la red real y la virtual."
+        },
+        {
+          "texto": "Porque 192.168.0.0/16 está reservado para tráfico de gestión SNMP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 192.168.0.0/16 es un rango privado RFC1918 de uso general, no exclusivo de SNMP."
+        },
+        {
+          "texto": "Porque GNS3 no soporta el rango 192.168.x.x.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GNS3 soporta cualquier rango IP; la limitación es práctica, no técnica."
+        },
+        {
+          "texto": "Porque ese rango es ya enrutable en Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 192.168.0.0/16 es privado (RFC1918) y no se enruta en Internet."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuántas direcciones se consideran reservadas en cada subred dentro del diseño de la práctica VLSM del hospital?",
+      "respuestas": [
+        {
+          "texto": "4: red, broadcast, gateway y gestión del switch.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El diseño reserva la dirección de red, la de broadcast, la del gateway (router) y la de gestión del switch."
+        },
+        {
+          "texto": "2: solo red y broadcast.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El mínimo técnico son 2, pero el diseño práctico aquí reserva 4."
+        },
+        {
+          "texto": "6: red, broadcast, gateway, switch, DHCP y DNS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DHCP y DNS no tienen IPs específicas reservadas por subred en este diseño."
+        },
+        {
+          "texto": "Ninguna; todas las IPs son asignables a hosts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En IPv4 siempre se reservan al menos la dirección de red y la de broadcast."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta CLI sirve para verificar rápidamente la información de una subred (red, broadcast, hostmin/max, máscara) a partir de su notación CIDR?",
+      "respuestas": [
+        {
+          "texto": "ipcalc.",
+          "correcta": true,
+          "explicacion": "¡Correcto! ipcalc dada una red en CIDR devuelve dirección de red, broadcast, hostmin/max, máscara decimal y wildcard."
+        },
+        {
+          "texto": "tcpdump.",
+          "correcta": false,
+          "explicacion": "Incorrecto. tcpdump captura tráfico de red; no calcula subredes."
+        },
+        {
+          "texto": "nmap.",
+          "correcta": false,
+          "explicacion": "Incorrecto. nmap escanea hosts y puertos; no es una herramienta de cálculo CIDR."
+        },
+        {
+          "texto": "iptables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. iptables es un firewall de Linux, no una calculadora de subredes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué importa reservar una IP para el switch en cada subred en este diseño?",
+      "respuestas": [
+        {
+          "texto": "Para poder gestionarlo remotamente (SSH, SNMP) sin conectarse físicamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La IP de gestión del switch permite administrarlo en banda desde la red sin acceso físico al armario."
+        },
+        {
+          "texto": "Porque sin IP el switch no puede reenviar tramas de capa 2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un switch puro L2 funciona sin IP; la IP solo sirve para gestión."
+        },
+        {
+          "texto": "Para que el switch actúe como gateway por defecto de la subred.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El gateway lo hace el router, no el switch L2."
+        },
+        {
+          "texto": "Para acelerar el aprendizaje de MACs en su tabla CAM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El aprendizaje de MACs en la CAM es independiente de tener IP de gestión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el direccionamiento es la base para aplicar políticas de seguridad como firewalls, ACLs o segmentación por VLAN?",
+      "respuestas": [
+        {
+          "texto": "Porque firewalls, ACLs y políticas se aplican por rangos IP; un mal direccionamiento desperdicia IPs o mezcla entornos que deberían estar aislados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las reglas de seguridad se expresan en términos de subredes; un diseño confuso impide políticas claras y auditables."
+        },
+        {
+          "texto": "Porque los firewalls solo funcionan si todos los hosts comparten la misma subred.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los firewalls precisamente actúan entre subredes distintas."
+        },
+        {
+          "texto": "Porque las ACLs ignoran las direcciones IP y trabajan solo con MAC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las ACLs típicas operan en L3/L4 (IP/puerto)."
+        },
+        {
+          "texto": "Porque sin un mismo plan de direccionamiento, las VLAN no pueden crearse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las VLAN existen a nivel 2 e independientemente del esquema IP, aunque conviene alinearlas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué utilidad tiene segmentar una red más allá del simple ahorro de IPs?",
+      "respuestas": [
+        {
+          "texto": "Limitar dominios de broadcast, aislar tráfico sensible y facilitar la aplicación de políticas y auditoría por segmento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La segmentación es defensa en profundidad: reduce el alcance de ataques L2, permite ACLs por subred y facilita el troubleshooting."
+        },
+        {
+          "texto": "Únicamente reducir el coste de las licencias del SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las licencias del SIEM no dependen de la segmentación de IPs."
+        },
+        {
+          "texto": "Forzar el uso de IPv6 en todos los hosts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La segmentación es independiente del uso de IPv4 o IPv6."
+        },
+        {
+          "texto": "Eliminar la necesidad de servidores DHCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Segmentar no elimina DHCP; al contrario, cada subred suele tener su propio pool."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una subred de 8 equipos en el diseño VLSM utiliza el bloque /28 (16 IPs). ¿Por qué no se usa un /29 (8 IPs)?",
+      "respuestas": [
+        {
+          "texto": "Porque hay que reservar 4 IPs (red, broadcast, gateway, switch); 8 hosts + 4 = 12, que no cabe en 8 IPs.",
+          "correcta": true,
+          "explicacion": "¡Correcto! /29 solo tiene 6 IPs utilizables tras descontar las reservadas; insuficiente para 8 hosts."
+        },
+        {
+          "texto": "Porque /29 está reservado por IANA para uso futuro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. /29 es una máscara válida y de uso común."
+        },
+        {
+          "texto": "Porque /28 es más rápido de enrutar que /29.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad de enrutamiento no depende del tamaño de la máscara dentro del rango habitual."
+        },
+        {
+          "texto": "Porque los switches no soportan máscaras menores de /28.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los switches operan en L2; las máscaras IP no las gestiona el switch."
+        }
+      ]
+    }
+  ]
+}

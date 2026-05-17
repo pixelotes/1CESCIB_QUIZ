@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 13: LUKS + Dropbear (Ubuntu Server cifrado)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es LUKS y qué relación tiene con BitLocker?",
+      "respuestas": [
+        {
+          "texto": "LUKS (Linux Unified Key Setup) es el estándar de cifrado de disco completo de Linux; cumple el mismo papel conceptual que BitLocker en Windows, con la diferencia de que tradicionalmente usa passphrase tecleada al arrancar en lugar de TPM.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Versiones modernas también admiten TPM o desbloqueo en red; ambos contemplan varias \"ranuras de clave\"."
+        },
+        {
+          "texto": "LUKS es un cliente FTP seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LUKS no es un cliente de red; es cifrado de disco."
+        },
+        {
+          "texto": "LUKS es un sistema de logs de Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es syslog/journald, no LUKS."
+        },
+        {
+          "texto": "LUKS es un firewall de host para Ubuntu.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall de host es UFW/iptables/nftables, no LUKS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué en Ubuntu el cifrado del disco se configura durante la instalación y no después?",
+      "respuestas": [
+        {
+          "texto": "Porque LUKS reescribe la cabecera del disco creando un contenedor cifrado; aplicarlo a un sistema ya instalado exige copiar todos los datos, formatear y restaurarlos, idealmente desde un live USB. Hacerlo en el instalador es trivial y limpio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El instalador particiona, crea LUKS, monta LVM dentro y formatea, todo en frío sin datos que migrar."
+        },
+        {
+          "texto": "Porque LUKS no admite instalación post-OS por ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay obstáculo legal; es técnico y operativo."
+        },
+        {
+          "texto": "Porque Ubuntu solo soporta cifrado en versiones LTS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ubuntu soporta cifrado en cualquier versión moderna."
+        },
+        {
+          "texto": "Porque cifrar después rompe el bootloader.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No \"rompe\" el bootloader; es engorroso pero técnicamente posible."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el directorio /boot se queda sin cifrar en un sistema con LUKS?",
+      "respuestas": [
+        {
+          "texto": "Porque alguien tiene que cargar el código que descifra el disco, y ese código (kernel + initramfs) no puede vivir dentro del propio disco que aún no se ha descifrado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! /boot queda fuera del contenedor cifrado; su integridad se protege con Secure Boot."
+        },
+        {
+          "texto": "Porque /boot contiene datos no sensibles que no merece la pena cifrar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La razón es técnica (cómo arrancar), no de valor del contenido."
+        },
+        {
+          "texto": "Porque LUKS no soporta sistemas de ficheros pequeños.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LUKS funciona con cualquier tamaño; el motivo es el problema circular del arranque."
+        },
+        {
+          "texto": "Porque /boot está en un disco distinto siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. /boot suele ser una partición del mismo disco."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué problema concreto resuelve Dropbear-initramfs?",
+      "respuestas": [
+        {
+          "texto": "Permite teclear la passphrase de LUKS por SSH en un servidor headless (sin teclado físico) cuando arranca, embebiendo un SSH ligero dentro del initramfs.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin él, un servidor en CPD se queda colgado en el prompt de LUKS tras cualquier reinicio."
+        },
+        {
+          "texto": "Cifra el disco con un algoritmo distinto a AES.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dropbear no cifra discos; es un SSH ligero."
+        },
+        {
+          "texto": "Acelera el arranque de Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Su propósito es permitir el desbloqueo remoto, no acelerar."
+        },
+        {
+          "texto": "Sustituye a GRUB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Dropbear vive dentro del initramfs, GRUB sigue siendo el gestor de arranque."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué Dropbear se configura en un puerto distinto del 22, y no es eso \"seguridad por oscuridad\"?",
+      "respuestas": [
+        {
+          "texto": "Por sí solo no es seguridad real (un escaneo lo encuentra), pero reduce drásticamente el ruido de bots automatizados; sumado a clave pública, sin contraseñas, sin reenvíos y comando forzado, sí es una capa más.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La defensa real viene de la combinación de medidas; el cambio de puerto es complemento."
+        },
+        {
+          "texto": "Es la única medida necesaria; nada más hace falta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Por sí solo no aporta seguridad real."
+        },
+        {
+          "texto": "Porque el puerto 22 no soporta SSH ligero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El puerto 22 es el estándar SSH; soporta cualquier implementación SSH."
+        },
+        {
+          "texto": "Porque el puerto 22 está reservado para HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HTTPS es el 443; el 22 es SSH."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la clave SSH de Dropbear se restringe a ejecutar solo el comando de desbloqueo?",
+      "respuestas": [
+        {
+          "texto": "Por defensa en profundidad sobre la propia clave: aunque alguien afloje la configuración o haya un bug, la clave SSH lleva grabado un comando forzado y solo puede ejecutar el desbloqueo, no abrir shell.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Incluso si la clave se filtra, lo peor que el atacante puede hacer es desbloquear un disco al que se conecte, no entrar al servidor."
+        },
+        {
+          "texto": "Porque Dropbear solo soporta una clave por servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Soporta varias claves; la restricción se aplica a la clave concreta."
+        },
+        {
+          "texto": "Porque las claves SSH solo pueden ejecutar un comando por diseño.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una restricción opcional, no un límite del protocolo SSH."
+        },
+        {
+          "texto": "Porque sin restricción el servidor SSH no arrancaría.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin restricción el servidor arrancaría igual; la restricción es por seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja tiene poner LVM dentro de LUKS y no al revés?",
+      "respuestas": [
+        {
+          "texto": "Con una sola passphrase se abre el contenedor LUKS al arrancar, y dentro se pueden tener tantos volúmenes lógicos como se quieran, redimensionables sin volver a cifrar nada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si fuera al revés, habría que introducir una passphrase por cada volumen y cualquier cambio sería más costoso."
+        },
+        {
+          "texto": "LVM dentro de LUKS es la única configuración soportada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Técnicamente se puede al revés, pero es peor operativamente."
+        },
+        {
+          "texto": "Permite usar varios discos físicos sin RAID.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LVM puede agrupar discos, pero esa no es la ventaja del orden."
+        },
+        {
+          "texto": "Acelera el cifrado por hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El orden no afecta a la aceleración hardware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué tiene sentido separar la raíz del sistema y /home en volúmenes distintos?",
+      "respuestas": [
+        {
+          "texto": "Aislamiento de daño, endurecimiento por opciones de montaje (noexec, nodev en /home), cuotas por usuario y políticas de backup distintas para datos vs sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si la raíz se corrompe, los datos del usuario sobreviven; las opciones de montaje pueden ser más restrictivas en /home."
+        },
+        {
+          "texto": "Únicamente para que el directorio del usuario sea más rápido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no es el motivo principal."
+        },
+        {
+          "texto": "Para poder usar dos kernels distintos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La separación raíz/home no se relaciona con kernels."
+        },
+        {
+          "texto": "Para evitar que LVM funcione mal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LVM funciona igual con o sin separación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se parecen y se diferencian el arranque de un Linux con LUKS y un Windows con BitLocker?",
+      "respuestas": [
+        {
+          "texto": "Se parecen en que parte del arranque vive sin cifrar (EFI/boot, kernel/initramfs). Se diferencian en quién aporta la clave: en Windows lo habitual es el TPM (con o sin PIN); en Linux la passphrase del usuario.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En Linux moderno también existen integraciones con TPM, pero no son el camino por defecto."
+        },
+        {
+          "texto": "Son completamente idénticos en ambos sistemas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Difieren en filosofía y mecanismos de aporte de clave."
+        },
+        {
+          "texto": "Linux cifra el SO entero, Windows no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos cifran volúmenes enteros; lo no cifrado en ambos es el arranque inicial."
+        },
+        {
+          "texto": "Windows no usa cifrado en absoluto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Windows sí usa BitLocker para cifrado de volumen."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué quiere decir \"servidor headless\" y por qué es un problema con disco cifrado?",
+      "respuestas": [
+        {
+          "texto": "Servidor sin teclado, ratón ni monitor, administrado solo por red. Con cifrado de disco completo, tras un reinicio se queda colgado esperando passphrase antes de que la red del SO esté disponible; SSH normal aún no responde.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Dropbear en el initramfs resuelve esto: levanta un SSH alternativo durante esa fase."
+        },
+        {
+          "texto": "Un servidor con dos cabezas (CPU dual).",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Headless\" significa sin periféricos de E/S, no doble CPU."
+        },
+        {
+          "texto": "Un servidor sin sistema operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí tiene SO; lo que no tiene son periféricos físicos."
+        },
+        {
+          "texto": "Un servidor que no soporta cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí soporta cifrado; el problema es el desbloqueo remoto."
+        }
+      ]
+    }
+  ]
+}

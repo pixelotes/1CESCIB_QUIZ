@@ -1,0 +1,930 @@
+{
+  "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Medio)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la norma certificable de la familia ISO/IEC 27000?",
+      "respuestas": [
+        {
+          "texto": "ISO 27000",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27000 contiene definiciones y términos del SGSI, pero no es certificable."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ISO 27001 establece los requisitos del SGSI y es la única norma certificable de la familia."
+        },
+        {
+          "texto": "ISO 27002",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27002 contiene objetivos de control y evaluaciones recomendables, es una guía no certificable."
+        },
+        {
+          "texto": "ISO 27005",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27005 trata sobre la gestión de riesgos en la seguridad de la información, no es certificable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas SGSI?",
+      "respuestas": [
+        {
+          "texto": "Sistema General de Seguridad Informática",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el término correcto en seguridad de la información."
+        },
+        {
+          "texto": "Sistema de Gestión de Seguridad de la Información",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un SGSI es un conjunto de políticas, procedimientos, recursos y actividades para proteger los activos de información esenciales."
+        },
+        {
+          "texto": "Servicio de Gestión de Seguridad Interna",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un término utilizado en la normativa de seguridad."
+        },
+        {
+          "texto": "Sistema Global de Seguridad e Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de SGSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ciclo se utiliza para la implantación de un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Ciclo de Shewhart",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque Shewhart inspiró a Deming, el ciclo se conoce por Deming en el contexto de SGSI."
+        },
+        {
+          "texto": "Ciclo de Deming (PDCA)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se aplica el modelo Plan-Do-Check-Act (PDCA), también conocido como espiral de mejora continua."
+        },
+        {
+          "texto": "Ciclo OODA",
+          "correcta": false,
+          "explicacion": "Incorrecto. OODA (Observe-Orient-Decide-Act) es un modelo militar, no de gestión de SGSI."
+        },
+        {
+          "texto": "Ciclo SDLC",
+          "correcta": false,
+          "explicacion": "Incorrecto. SDLC es el ciclo de vida del desarrollo de software, no aplica al SGSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa el acrónimo PDCA del ciclo de Deming?",
+      "respuestas": [
+        {
+          "texto": "Plan, Develop, Check, Audit",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Develop' y 'Audit' no forman parte del ciclo PDCA original."
+        },
+        {
+          "texto": "Plan, Do, Check, Act",
+          "correcta": true,
+          "explicacion": "¡Correcto! Planificar, Ejecutar, Verificar y Actuar son las cuatro fases del ciclo de mejora continua."
+        },
+        {
+          "texto": "Prepare, Deploy, Control, Adjust",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura estándar del ciclo de Deming."
+        },
+        {
+          "texto": "Predict, Detect, Contain, Analyze",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suena a fases de respuesta a incidentes, no al ciclo PDCA."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma internacional regula los Sistemas de Gestión de la Continuidad de Negocio?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 regula el SGSI, no la continuidad de negocio."
+        },
+        {
+          "texto": "ISO 9001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 9001 trata sobre sistemas de gestión de calidad."
+        },
+        {
+          "texto": "ISO 22301",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ISO 22301 establece los requisitos para implementar un Sistema de Gestión de la Continuidad de Negocio (BCMS)."
+        },
+        {
+          "texto": "ISO 14001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 14001 trata sobre la gestión ambiental."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué ámbito se aplica el Esquema Nacional de Seguridad (ENS) en España?",
+      "respuestas": [
+        {
+          "texto": "Únicamente a la Administración General del Estado",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS aplica a toda la Administración Pública, no solo a la AGE."
+        },
+        {
+          "texto": "A toda la Administración Pública Española (estatal, autonómica y local)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS aplica a la AGE, las CC.AA., entidades locales y las entidades de derecho público vinculadas o dependientes."
+        },
+        {
+          "texto": "Solo a empresas privadas que trabajan con la administración",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las empresas privadas pueden adoptarlo voluntariamente, pero su ámbito de aplicación obligatorio es el sector público."
+        },
+        {
+          "texto": "A las infraestructuras críticas exclusivamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las infraestructuras críticas están reguladas por la Ley PIC, no por el ENS específicamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dimensiones de seguridad utiliza el ENS para valorar los sistemas de información?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad, Integridad y Disponibilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son las tres clásicas, pero el ENS añade dos más."
+        },
+        {
+          "texto": "Confidencialidad, Integridad, Disponibilidad, Trazabilidad y Autenticidad",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS añade Trazabilidad [T] y Autenticidad [A] a la tríada clásica CIA, totalizando 5 dimensiones."
+        },
+        {
+          "texto": "Privacidad, Seguridad, Disponibilidad y Resiliencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con las dimensiones definidas en el ENS."
+        },
+        {
+          "texto": "Identificación, Autenticación, Autorización y Auditoría",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son las 'AAAA' del control de acceso, no las dimensiones del ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué categorías de sistema de información establece el ENS?",
+      "respuestas": [
+        {
+          "texto": "Crítica, Importante, Normal",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con la nomenclatura del ENS."
+        },
+        {
+          "texto": "Básica, Media y Alta",
+          "correcta": true,
+          "explicacion": "¡Correcto! La categoría se determina por el valor más alto de las cinco dimensiones: ALTA si alguna es alta, MEDIA si alguna es media, BÁSICA si todas son bajas."
+        },
+        {
+          "texto": "Nivel 1, Nivel 2, Nivel 3 y Nivel 4",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS no usa una nomenclatura numérica para las categorías de sistema."
+        },
+        {
+          "texto": "Confidencial, Reservado, Público",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son niveles de clasificación de información, no categorías de sistemas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la dimensión de Trazabilidad en el ENS?",
+      "respuestas": [
+        {
+          "texto": "La capacidad de garantizar que los datos no han sido modificados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la Integridad."
+        },
+        {
+          "texto": "Que las actuaciones de una entidad pueden ser imputadas exclusivamente a dicha entidad",
+          "correcta": true,
+          "explicacion": "¡Correcto! La trazabilidad permite, por ejemplo, asegurar que un campo en una base de datos ha sido modificado por una persona en particular."
+        },
+        {
+          "texto": "Que el sistema esté siempre disponible",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la Disponibilidad."
+        },
+        {
+          "texto": "Que solo personal autorizado pueda acceder a los datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la Confidencialidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la dimensión de Autenticidad en el ENS?",
+      "respuestas": [
+        {
+          "texto": "Garantizar que la información esté siempre actualizada",
+          "correcta": false,
+          "explicacion": "Incorrecto. La autenticidad no se refiere a la frescura de la información."
+        },
+        {
+          "texto": "Que una entidad es quien dice ser o se garantiza la fuente de los datos",
+          "correcta": true,
+          "explicacion": "¡Correcto! La autenticidad valida la identidad del origen, ya sea de una persona, sistema o dato."
+        },
+        {
+          "texto": "La capacidad de recuperar el sistema tras un incidente",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la resiliencia o continuidad."
+        },
+        {
+          "texto": "Que la información se transmita por canales cifrados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es protección de la confidencialidad en tránsito."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la Directiva NIS?",
+      "respuestas": [
+        {
+          "texto": "Regular el comercio electrónico transfronterizo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El comercio electrónico se regula por otras directivas (e-commerce, PSD2…)."
+        },
+        {
+          "texto": "Garantizar un elevado nivel común de seguridad de las redes y sistemas de información en la UE",
+          "correcta": true,
+          "explicacion": "¡Correcto! La Directiva (UE) 2016/1148 busca armonizar las estrategias de ciberseguridad de los Estados Miembros."
+        },
+        {
+          "texto": "Establecer una autoridad europea única de protección de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace el RGPD a través del Comité Europeo de Protección de Datos."
+        },
+        {
+          "texto": "Regular los servicios financieros digitales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los servicios financieros tienen otras regulaciones como PSD2 o DORA."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de organización está EXENTA de la aplicación de la Directiva NIS?",
+      "respuestas": [
+        {
+          "texto": "Las empresas de servicios esenciales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las empresas de servicios esenciales son precisamente uno de los principales sujetos obligados."
+        },
+        {
+          "texto": "Los proveedores de servicios digitales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los proveedores de servicios digitales también están obligados por la NIS."
+        },
+        {
+          "texto": "Pequeñas empresas y microempresas (<50 trabajadores o <10M€ facturación)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las microempresas y pequeñas empresas con menos de 50 trabajadores o menos de 10 millones de euros de facturación están exceptuadas."
+        },
+        {
+          "texto": "Las administraciones públicas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las administraciones públicas no están exentas si prestan servicios esenciales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un CSIRT?",
+      "respuestas": [
+        {
+          "texto": "Consejo de Seguridad para Infraestructuras y Redes Telemáticas",
+          "correcta": false,
+          "explicacion": "Incorrecto. CSIRT no es ese acrónimo."
+        },
+        {
+          "texto": "Equipo de Respuesta a Incidentes de Seguridad Informática",
+          "correcta": true,
+          "explicacion": "¡Correcto! Computer Security Incident Response Team. La Directiva NIS exige que cada Estado miembro designe uno o varios CSIRT."
+        },
+        {
+          "texto": "Centro de Supervisión de Información y Riesgos Tecnológicos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde al acrónimo CSIRT."
+        },
+        {
+          "texto": "Comisión de Seguridad para la Industria y las Redes Telemáticas",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde al acrónimo CSIRT."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define la Ley PIC?",
+      "respuestas": [
+        {
+          "texto": "Protección de Infraestructuras Críticas",
+          "correcta": true,
+          "explicacion": "¡Correcto! La Ley PIC busca identificar e inventariar las infraestructuras que prestan servicios esenciales y proteger sus aspectos físicos y de TI."
+        },
+        {
+          "texto": "Protección de la Información Confidencial",
+          "correcta": false,
+          "explicacion": "Incorrecto. La protección de información confidencial se regula por otras normas como la LOPDGDD."
+        },
+        {
+          "texto": "Protección Integral de Ciudadanos",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de PIC."
+        },
+        {
+          "texto": "Plan Internacional de Ciberseguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. PIC no se refiere a un plan internacional."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativa europea regula la protección de datos personales?",
+      "respuestas": [
+        {
+          "texto": "PCI-DSS",
+          "correcta": false,
+          "explicacion": "Incorrecto. PCI-DSS regula la seguridad de tarjetas de pago, no la protección de datos personales."
+        },
+        {
+          "texto": "RGPD (Reglamento General de Protección de Datos)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD (GDPR en inglés) es la norma europea de referencia para el tratamiento de datos personales."
+        },
+        {
+          "texto": "Directiva NIS",
+          "correcta": false,
+          "explicacion": "Incorrecto. La NIS regula la seguridad de redes y sistemas, no la protección de datos personales."
+        },
+        {
+          "texto": "Directiva PSD2",
+          "correcta": false,
+          "explicacion": "Incorrecto. PSD2 regula servicios de pago, no datos personales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma española complementa al RGPD?",
+      "respuestas": [
+        {
+          "texto": "LOPDGDD",
+          "correcta": true,
+          "explicacion": "¡Correcto! La Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales (3/2018) adapta el RGPD al ordenamiento español."
+        },
+        {
+          "texto": "LSSI",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI regula los servicios de la sociedad de la información y el comercio electrónico."
+        },
+        {
+          "texto": "LPI",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LPI es la Ley de Propiedad Intelectual."
+        },
+        {
+          "texto": "LFE",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LFE es la Ley de Firma Electrónica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué estándar regula la seguridad en el procesamiento de tarjetas de crédito?",
+      "respuestas": [
+        {
+          "texto": "SWIFT",
+          "correcta": false,
+          "explicacion": "Incorrecto. SWIFT es un sistema de mensajería financiera interbancaria, no un estándar de seguridad de tarjetas."
+        },
+        {
+          "texto": "ISO 20022",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 20022 es un estándar de mensajería financiera."
+        },
+        {
+          "texto": "PCI-DSS",
+          "correcta": true,
+          "explicacion": "¡Correcto! Payment Card Industry Data Security Standard regula la protección de datos en transacciones con tarjetas de crédito."
+        },
+        {
+          "texto": "FATF",
+          "correcta": false,
+          "explicacion": "Incorrecto. FATF es el Grupo de Acción Financiera, dedicado a antiblanqueo, no a seguridad de tarjetas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las estrategias para la gestión de riesgos en un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Aceptar, Negar, Postponer, Ignorar",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son estrategias válidas de gestión de riesgo."
+        },
+        {
+          "texto": "Eliminar, Transferir, Asumir, Mitigar",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas son las cuatro estrategias clásicas de tratamiento del riesgo (también llamadas evitar, transferir, aceptar y reducir)."
+        },
+        {
+          "texto": "Prevenir, Detectar, Responder, Recuperar",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son las fases del ciclo de gestión de incidentes, no estrategias de tratamiento del riesgo."
+        },
+        {
+          "texto": "Identificar, Proteger, Detectar, Responder, Recuperar",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son las funciones del NIST Cybersecurity Framework."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un Plan de Recuperación ante Desastres (PRD)?",
+      "respuestas": [
+        {
+          "texto": "Un plan preventivo para evitar incidentes futuros",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PRD es reactivo, no preventivo."
+        },
+        {
+          "texto": "Un plan reactivo enfocado en recuperar la funcionalidad perdida tras una catástrofe",
+          "correcta": true,
+          "explicacion": "¡Correcto! El PRD se activa cuando se produce una catástrofe y se centra en recuperar funcionalidad, sin entrar en análisis de causa raíz."
+        },
+        {
+          "texto": "Una auditoría posterior al incidente",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría posterior es un análisis forense o lessons learned, no un PRD."
+        },
+        {
+          "texto": "Un plan de comunicación interna ante crisis",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación de crisis es parte del Plan de Crisis, no del PRD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un Plan de Contingencia TIC (PCTIC)?",
+      "respuestas": [
+        {
+          "texto": "Un plan de marketing para crisis tecnológicas",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con marketing."
+        },
+        {
+          "texto": "Un plan de continuidad específico para el ámbito TIC de la organización",
+          "correcta": true,
+          "explicacion": "¡Correcto! El PCTIC se centra en el ámbito tecnológico y forma parte del Plan de Continuidad de Negocio general."
+        },
+        {
+          "texto": "Un plan de inversión en tecnología",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un plan financiero sino operativo."
+        },
+        {
+          "texto": "Un plan de formación en tecnología",
+          "correcta": false,
+          "explicacion": "Incorrecto. La formación se incluye en otras partes del SGSI, no en el PCTIC."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el material, ¿qué es un activo en seguridad de la información?",
+      "respuestas": [
+        {
+          "texto": "Solo los servidores y equipos físicos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los activos incluyen mucho más que hardware: información, servicios, software, personas, instalaciones, etc."
+        },
+        {
+          "texto": "Cualquier recurso de la empresa necesario para desempeñar las actividades diarias",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un activo es cualquier recurso cuya no disponibilidad o deterioro supone un agravio o coste para la organización."
+        },
+        {
+          "texto": "Únicamente la información digital",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información es un tipo de activo, pero hay muchos más."
+        },
+        {
+          "texto": "Solo los recursos económicos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los activos de seguridad de la información no son los activos contables."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién aprueba la política de seguridad en el marco del ENS?",
+      "respuestas": [
+        {
+          "texto": "El Responsable de Seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Responsable de Seguridad la elabora y supervisa, pero no es quien la aprueba formalmente."
+        },
+        {
+          "texto": "El Comité de Seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Comité de Seguridad la revisa, pero la aprobación final corresponde al órgano superior."
+        },
+        {
+          "texto": "El titular del órgano superior correspondiente",
+          "correcta": true,
+          "explicacion": "¡Correcto! La política debe ser formal y aprobada por el titular del órgano superior, es decir, el responsable directo de la acción de gobierno (central, autonómico o local)."
+        },
+        {
+          "texto": "El CCN-CERT",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CCN-CERT publica guías y asiste, pero no aprueba políticas internas de cada organismo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de auditoría sobre el ENS realiza el Responsable de Seguridad?",
+      "respuestas": [
+        {
+          "texto": "Auditoría externa",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría externa la realiza un auditor externo cualificado."
+        },
+        {
+          "texto": "Autoevaluación",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las autoevaluaciones son llevadas a cabo por el Responsable de Seguridad como uno de los métodos para verificar las medidas implantadas."
+        },
+        {
+          "texto": "Auditoría judicial",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe un tipo de auditoría 'judicial' como método de validación del ENS."
+        },
+        {
+          "texto": "Inspección administrativa",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inspección administrativa la realiza la autoridad competente, no el responsable interno."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué documento es el elemento principal del Plan de Continuidad de Negocio?",
+      "respuestas": [
+        {
+          "texto": "Las instrucciones técnicas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las instrucciones técnicas son la base operativa, pero no el documento principal."
+        },
+        {
+          "texto": "El Plan de Crisis",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Plan de Crisis es el elemento principal; su objetivo es anticiparse a posibles situaciones y evitar decisiones improvisadas."
+        },
+        {
+          "texto": "El Plan Operativo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los planes operativos se ejecutan tras determinar la crisis, pero el Plan de Crisis va por encima."
+        },
+        {
+          "texto": "La política de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La política de seguridad es el documento marco del SGSI, no del PCN específicamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa MTD en el contexto del Plan de Continuidad de Negocio?",
+      "respuestas": [
+        {
+          "texto": "Mean Time to Detection (Tiempo medio de detección)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque MTD también puede referirse a Mean Time to Detection, en PCN se refiere a otro concepto."
+        },
+        {
+          "texto": "Maximum Tolerable Downtime (Tiempo máximo tolerable de caída)",
+          "correcta": true,
+          "explicacion": "¡Correcto! El MTD es el tiempo máximo que una organización puede estar con un servicio caído antes de que el impacto sea inaceptable."
+        },
+        {
+          "texto": "Minimum Time to Deploy (Tiempo mínimo de despliegue)",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de MTD en continuidad de negocio."
+        },
+        {
+          "texto": "Maximum Threshold Defense (Umbral máximo de defensa)",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un término reconocido en continuidad de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma ISO contiene definiciones y términos de la familia de seguridad de la información?",
+      "respuestas": [
+        {
+          "texto": "ISO 27000",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ISO 27000 establece la terminología común y definiciones utilizadas en toda la familia 27000."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 establece los requisitos del SGSI."
+        },
+        {
+          "texto": "ISO 27003",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27003 es el manual para implementar un SGSI."
+        },
+        {
+          "texto": "ISO 27004",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27004 trata sobre técnicas de medidas y métricas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma ISO contiene los objetivos de control y evaluaciones recomendables del SGSI?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 contiene los requisitos del SGSI, no los controles detallados."
+        },
+        {
+          "texto": "ISO 27002",
+          "correcta": true,
+          "explicacion": "¡Correcto! ISO 27002 es la guía de buenas prácticas con los objetivos de control que pueden implementarse en el marco de la 27001."
+        },
+        {
+          "texto": "ISO 27005",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27005 trata sobre gestión de riesgos."
+        },
+        {
+          "texto": "ISO 27003",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27003 es el manual de implementación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma ISO se centra en la gestión de riesgos en seguridad de la información?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 contempla la gestión de riesgos pero no es su única dedicación."
+        },
+        {
+          "texto": "ISO 31000",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 31000 es la norma general de gestión de riesgos, pero en la familia 27000 hay una específica para seguridad de la información."
+        },
+        {
+          "texto": "ISO 27005",
+          "correcta": true,
+          "explicacion": "¡Correcto! ISO 27005 está dedicada específicamente a la gestión de riesgos en seguridad de la información."
+        },
+        {
+          "texto": "ISO 22301",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 22301 es para continuidad de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué niveles se utilizan para valorar las dimensiones de seguridad en el ENS?",
+      "respuestas": [
+        {
+          "texto": "Crítico, Importante, Normal",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura del ENS."
+        },
+        {
+          "texto": "Bajo, Medio y Alto",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada una de las cinco dimensiones (C, I, D, T, A) se valora en tres niveles: bajo, medio o alto."
+        },
+        {
+          "texto": "Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los cinco niveles existen pero corresponden a la madurez (L0-L5), no a la valoración de dimensiones."
+        },
+        {
+          "texto": "Verde, Amarillo, Rojo",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura usada por el ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién ejecuta los Planes de Apoyo Operativo (PAO) dentro del marco de la Ley PIC?",
+      "respuestas": [
+        {
+          "texto": "El operador crítico",
+          "correcta": false,
+          "explicacion": "Incorrecto. El operador crítico ejecuta el PSO y el PPE."
+        },
+        {
+          "texto": "Las Fuerzas y Cuerpos de Seguridad del Estado",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los PAO son llevados a cabo por las FCSE para apoyar la protección de las infraestructuras críticas."
+        },
+        {
+          "texto": "El CNPIC directamente",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CNPIC coordina y supervisa, pero la ejecución operativa corresponde a las FCSE."
+        },
+        {
+          "texto": "Cada Comunidad Autónoma",
+          "correcta": false,
+          "explicacion": "Incorrecto. El alcance es nacional y corresponde a las fuerzas de seguridad del Estado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el CNPIC?",
+      "respuestas": [
+        {
+          "texto": "El Comité Nacional de Política de Información y Comunicaciones",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado correcto."
+        },
+        {
+          "texto": "El Centro Nacional para la Protección de las Infraestructuras Críticas",
+          "correcta": true,
+          "explicacion": "¡Correcto! El CNPIC coordina y supervisa las actividades en materia de Protección de Infraestructuras Críticas y determina la criticidad de las infraestructuras estratégicas."
+        },
+        {
+          "texto": "La Comisión Nacional de Protección Industrial Cibernética",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese organismo no existe con ese nombre."
+        },
+        {
+          "texto": "El Consejo Nacional de Privacidad e Información Confidencial",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con CNPIC."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de análisis identifica qué activos de infraestructura necesita un activo de la capa de negocio?",
+      "respuestas": [
+        {
+          "texto": "Down-to-up",
+          "correcta": false,
+          "explicacion": "Incorrecto. Down-to-up parte de la infraestructura y mira hacia arriba el impacto."
+        },
+        {
+          "texto": "Up-to-down",
+          "correcta": true,
+          "explicacion": "¡Correcto! Up-to-down parte de un activo de negocio y desciende hasta los activos de infraestructura que necesita."
+        },
+        {
+          "texto": "Side-to-side",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una metodología reconocida."
+        },
+        {
+          "texto": "End-to-end",
+          "correcta": false,
+          "explicacion": "Incorrecto. End-to-end es un término genérico, no la metodología específica de análisis de dependencias."
+        }
+      ]
+    },
+    {
+      "pregunta": "Si un sistema tiene una dimensión valorada como MEDIA y el resto como BAJA, ¿qué categoría se asigna al sistema en el ENS?",
+      "respuestas": [
+        {
+          "texto": "BÁSICA",
+          "correcta": false,
+          "explicacion": "Incorrecto. BÁSICA requiere que ninguna dimensión sea MEDIA ni ALTA."
+        },
+        {
+          "texto": "MEDIA",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si alguna dimensión es MEDIA y ninguna es ALTA, la categoría del sistema es MEDIA."
+        },
+        {
+          "texto": "ALTA",
+          "correcta": false,
+          "explicacion": "Incorrecto. ALTA solo se asigna si alguna dimensión es ALTA."
+        },
+        {
+          "texto": "MUY BAJA",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'MUY BAJA' no existe como categoría en el ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres grupos de medidas de seguridad recoge el Anexo II del ENS 2022?",
+      "respuestas": [
+        {
+          "texto": "Preventivas, Detectivas y Correctivas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es una clasificación general de controles, no la del Anexo II del ENS."
+        },
+        {
+          "texto": "Marco organizativo, Marco operacional y Medidas de protección",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las medidas del Anexo II del ENS 2022 se dividen en [org] Marco organizativo, [op] Marco operacional y [mp] Medidas de protección."
+        },
+        {
+          "texto": "Físicas, Lógicas y Administrativas",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la clasificación clásica de controles, pero no la del ENS."
+        },
+        {
+          "texto": "Estratégicas, Tácticas y Operativas",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con la estructura del Anexo II del ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por 'continuidad de negocio'?",
+      "respuestas": [
+        {
+          "texto": "Mantener la rentabilidad económica de forma sostenida",
+          "correcta": false,
+          "explicacion": "Incorrecto. La continuidad de negocio se enfoca en la operación tras incidentes, no en la rentabilidad."
+        },
+        {
+          "texto": "La capacidad de mantener la actividad ante la materialización de una amenaza interna o externa",
+          "correcta": true,
+          "explicacion": "¡Correcto! La continuidad de negocio asegura que la organización pueda seguir operando aun cuando se materialice una amenaza."
+        },
+        {
+          "texto": "El crecimiento sostenido del negocio en el tiempo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es planificación estratégica, no continuidad de negocio."
+        },
+        {
+          "texto": "La capacidad de innovación constante",
+          "correcta": false,
+          "explicacion": "Incorrecto. La innovación no es continuidad de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué actividades se realizan típicamente en la fase 'Do' (Ejecutar) del ciclo PDCA aplicado al SGSI?",
+      "respuestas": [
+        {
+          "texto": "Identificar y valorar los riesgos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es parte de la fase 'Plan'."
+        },
+        {
+          "texto": "Implementar controles técnicos, procedimientos y formación al personal",
+          "correcta": true,
+          "explicacion": "¡Correcto! La fase 'Do' incluye implementar controles, elaborar procedimientos y formar/concienciar al personal."
+        },
+        {
+          "texto": "Evaluar la eficacia de los controles ya implantados",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la fase 'Check'."
+        },
+        {
+          "texto": "Aplicar mejoras y correcciones al sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la fase 'Act'."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué información debe figurar en el inventario de activos según el material?",
+      "respuestas": [
+        {
+          "texto": "Solo el coste de adquisición y la fecha de compra",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos datos son útiles, pero no son los esenciales para el inventario de activos del SGSI."
+        },
+        {
+          "texto": "Código único, descripción, ubicación y responsable/propietario",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para cada activo hay que identificar al menos un código único, su descripción, su ubicación y el responsable o propietario."
+        },
+        {
+          "texto": "Únicamente el nombre del fabricante y el modelo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos datos son insuficientes para un inventario de SGSI."
+        },
+        {
+          "texto": "Solo el valor monetario del activo",
+          "correcta": false,
+          "explicacion": "Incorrecto. El valor económico es relevante pero no es lo único requerido."
+        }
+      ]
+    }
+  ]
+}

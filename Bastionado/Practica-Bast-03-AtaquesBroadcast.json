@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 3: Mitigación de ataques en dominio broadcast (L2)",
+  "preguntas": [
+    {
+      "pregunta": "¿En qué consiste un ataque de ARP Poisoning (MitM)?",
+      "respuestas": [
+        {
+          "texto": "El atacante envía respuestas ARP falsificadas asociando su MAC con la IP del gateway para interceptar el tráfico de la víctima.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La víctima actualiza su tabla ARP con la MAC del atacante y empieza a enviarle todo el tráfico dirigido al gateway."
+        },
+        {
+          "texto": "El atacante cifra el tráfico ARP con AES-128.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ARP no se cifra; el ataque consiste en falsificar respuestas."
+        },
+        {
+          "texto": "El atacante envía broadcasts UDP para agotar el ancho de banda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describiría un DoS volumétrico, no ARP Poisoning."
+        },
+        {
+          "texto": "El atacante modifica la tabla CAM del switch desde el SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La CAM se modifica indirectamente con MAC flooding, no con ARP Poisoning."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre cuando se satura la tabla CAM de un switch mediante MAC flooding?",
+      "respuestas": [
+        {
+          "texto": "El switch entra en modo fail-open y se comporta como un hub, reenviando todo el tráfico por todos los puertos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al saturar la CAM, el switch deja de aprender y se comporta como hub, rompiendo confidencialidad."
+        },
+        {
+          "texto": "El switch bloquea automáticamente todos los puertos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El comportamiento por defecto es fail-open, no fail-close, salvo configuración explícita."
+        },
+        {
+          "texto": "El switch envía un correo de alerta al administrador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un switch L2 básico no envía correos por sí mismo."
+        },
+        {
+          "texto": "El switch se reinicia automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La saturación no provoca reinicio automático en condiciones normales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque de DHCP Starvation?",
+      "respuestas": [
+        {
+          "texto": "El atacante envía miles de DHCP Discover con MACs falsificadas para agotar el pool de IPs del servidor DHCP legítimo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al consumir todas las IPs, los clientes legítimos no pueden obtener dirección; suele combinarse con un DHCP Rogue."
+        },
+        {
+          "texto": "El atacante apaga físicamente el servidor DHCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ataque es lógico, no físico."
+        },
+        {
+          "texto": "El atacante envía paquetes IPv6 para sustituir al servidor DHCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. IPv6 usa SLAAC/DHCPv6, distinto del flujo descrito."
+        },
+        {
+          "texto": "El atacante cifra el tráfico DHCP para impedir su análisis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DHCP no se cifra; el ataque consiste en agotar el pool."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué mitigación específica ofrece la función Port Security frente a MAC flooding?",
+      "respuestas": [
+        {
+          "texto": "Limita el número de MACs distintas que un puerto puede aprender; al detectar más MACs de las permitidas apaga el puerto (violation shutdown).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Con maximum 1 y violation shutdown, la segunda MAC distinta dispara el err-disabled del puerto, cortando el ataque."
+        },
+        {
+          "texto": "Cifra automáticamente el tráfico entre los puertos del switch.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Port-security no cifra; controla cuántas MACs admite un puerto."
+        },
+        {
+          "texto": "Bloquea cualquier petición DHCP entrante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo hace DHCP Snooping en puertos untrusted."
+        },
+        {
+          "texto": "Convierte el switch en un router L3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Port-security es una función L2; no cambia el papel del switch."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace la función \"switchport protected\" (port isolation)?",
+      "respuestas": [
+        {
+          "texto": "Marca un puerto como protegido para que no se comunique en L2 con otros puertos protegidos del mismo switch, solo con los no protegidos (típicamente el trunk al router).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Impide la comunicación L2 directa entre puertos protegidos, mitigando ARP Poisoning entre compañeros de VLAN."
+        },
+        {
+          "texto": "Cifra el tráfico de ese puerto con TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se trata de cifrado; es aislamiento L2."
+        },
+        {
+          "texto": "Hace que el puerto solo acepte tráfico HTTP/HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. switchport protected actúa en L2; no filtra por protocolo L7."
+        },
+        {
+          "texto": "Aumenta la velocidad del puerto a 10 Gbps.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con la velocidad del enlace."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es DHCP Snooping y para qué sirve?",
+      "respuestas": [
+        {
+          "texto": "Una función del switch que marca puertos como trusted o untrusted y bloquea respuestas DHCP procedentes de puertos no confiables, mitigando DHCP Rogue.",
+          "correcta": true,
+          "explicacion": "¡Correcto! DHCP Snooping permite que solo el puerto donde está el DHCP legítimo emita respuestas; los demás puertos no pueden suplantarlo."
+        },
+        {
+          "texto": "Una herramienta para escanear hosts vulnerables en la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una función defensiva del switch, no una herramienta de escaneo."
+        },
+        {
+          "texto": "Un protocolo para acelerar la asignación de IPs por DHCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una optimización; es una protección de seguridad."
+        },
+        {
+          "texto": "Una función para registrar todos los logs del SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DHCP Snooping puede generar logs, pero su propósito es el bloqueo, no el logging."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace Dynamic ARP Inspection (DAI)?",
+      "respuestas": [
+        {
+          "texto": "Usa la base de datos de DHCP Snooping para validar que cada par IP/MAC en los ARP es legítimo, descartando ARP envenenados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! DAI es una defensa más fina que switchport protected contra ARP Poisoning, validando dinámicamente las correspondencias IP↔MAC."
+        },
+        {
+          "texto": "Inspecciona el contenido de las páginas HTTP en busca de XSS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DAI actúa en capa 2 sobre ARP, no en capa 7."
+        },
+        {
+          "texto": "Cifra el tráfico ARP con curva elíptica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ARP no se cifra; DAI valida correspondencias, no cifra."
+        },
+        {
+          "texto": "Reescribe la tabla CAM dinámicamente en función del tráfico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DAI no reescribe la CAM; valida ARP frente al binding DHCP Snooping."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el modo de violación \"shutdown\" se prefiere a \"restrict\" o \"protect\" en entornos sensibles como un hospital?",
+      "respuestas": [
+        {
+          "texto": "Porque es el más visible y obliga al técnico a investigar antes de reactivar el puerto, garantizando alarma y respuesta humana.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Shutdown deja el puerto en err-disabled y exige intervención manual: ideal cuando se quiere asegurar que el incidente no pase desapercibido."
+        },
+        {
+          "texto": "Porque consume menos memoria que las otras opciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia no es de consumo, sino de visibilidad y respuesta."
+        },
+        {
+          "texto": "Porque solo shutdown funciona con switches modernos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las tres opciones son compatibles con switches gestionables modernos."
+        },
+        {
+          "texto": "Porque shutdown evita la necesidad de tener un SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Shutdown no sustituye al SIEM; complementa la respuesta inmediata."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué un atacante con acceso a una boca de switch es un riesgo importante incluso si la red está bien segmentada por VLAN?",
+      "respuestas": [
+        {
+          "texto": "Porque desde una boca access en la misma VLAN puede comprometer todo lo que hay en ese dominio de broadcast con ataques L2 como ARP Poisoning, MAC Flooding o DHCP Starvation.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La segmentación VLAN aísla entre segmentos, pero dentro de un mismo segmento los ataques L2 siguen siendo viables si los puertos no están bastionados."
+        },
+        {
+          "texto": "Porque puede saltar inmediatamente a todas las VLAN sin ningún esfuerzo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Saltar entre VLAN exige técnicas específicas (VLAN hopping); no es automático."
+        },
+        {
+          "texto": "Porque las VLAN no aíslan tráfico de broadcast.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las VLAN sí aíslan el broadcast entre segmentos; el riesgo es dentro del segmento."
+        },
+        {
+          "texto": "Porque el firewall L3 ve todo el tráfico L2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: el firewall L3 no ve los ataques que ocurren en L2."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace la opción \"sticky\" en Port Security?",
+      "respuestas": [
+        {
+          "texto": "Aprende automáticamente la primera MAC vista en el puerto y la fija en la configuración, sobreviviendo a reinicios si se guarda la config.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sticky combina la comodidad del aprendizaje dinámico con la persistencia de una asignación estática, escalando bien en empresas."
+        },
+        {
+          "texto": "Pega físicamente las MACs aprendidas a una etiqueta del puerto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sticky no es una acción física, sino lógica."
+        },
+        {
+          "texto": "Permite que el puerto acepte cualquier MAC sin restricciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sticky restringe a la MAC aprendida, no abre el puerto."
+        },
+        {
+          "texto": "Activa el aprendizaje automático en todos los puertos del switch.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sticky es por puerto, no global."
+        }
+      ]
+    }
+  ]
+}

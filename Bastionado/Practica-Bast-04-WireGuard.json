@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 4: VPN Site-to-Site con WireGuard",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué ventaja principal tiene WireGuard frente a OpenVPN o IPsec?",
+      "respuestas": [
+        {
+          "texto": "Base de código pequeña (~4.000 líneas), suite criptográfica fija y moderna, integración en el kernel Linux y rendimiento más alto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! WireGuard se diseñó para ser auditable, rápido y simple, sin opciones inseguras configurables."
+        },
+        {
+          "texto": "Es el único protocolo que soporta TLS 1.3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard no usa TLS; usa una suite propia (ChaCha20, Curve25519, etc.)."
+        },
+        {
+          "texto": "Solo funciona sobre fibra óptica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard funciona sobre cualquier medio físico."
+        },
+        {
+          "texto": "Permite atravesar firewalls que solo dejan pasar TCP/443.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa capacidad de TCP/443 es una ventaja de OpenVPN, no de WireGuard (que va sobre UDP)."
+        }
+      ]
+    },
+    {
+      "pregunta": "En WireGuard, ¿qué función tiene la lista \"allowed-ips\" de un peer?",
+      "respuestas": [
+        {
+          "texto": "Doble función: enrutamiento de salida (paquetes destino entran al túnel correspondiente) y filtrado de entrada (cryptokey routing, descarta paquetes cuyo origen no esté en la lista).",
+          "correcta": true,
+          "explicacion": "¡Correcto! allowed-ips actúa como tabla de ruteo y como ACL criptográfica simultáneamente."
+        },
+        {
+          "texto": "Es solo informativa y no afecta al tráfico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. allowed-ips determina qué tráfico entra y sale del peer."
+        },
+        {
+          "texto": "Solo controla qué IPs reciben respuesta ICMP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. allowed-ips se aplica a todo el tráfico del peer, no solo a ICMP."
+        },
+        {
+          "texto": "Cifra individualmente cada IP listada con una clave distinta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave del peer es única; allowed-ips solo define el alcance del peer."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué WireGuard atraviesa NAT \"sin esfuerzo\"?",
+      "respuestas": [
+        {
+          "texto": "Porque usa un único puerto UDP y soporta persistent keepalive para mantener viva la sesión a través del NAT.",
+          "correcta": true,
+          "explicacion": "¡Correcto! UDP simple + keepalive evita que el NAT cierre la \"conexión\" lógica por inactividad."
+        },
+        {
+          "texto": "Porque usa TCP/443 que ningún NAT puede bloquear.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard usa UDP, no TCP/443."
+        },
+        {
+          "texto": "Porque negocia con el NAT mediante UPnP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard no depende de UPnP."
+        },
+        {
+          "texto": "Porque emite paquetes ICMP de descubrimiento cada segundo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El keepalive es UDP, no ICMP, y no es cada segundo por defecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda filtrar en AMBOS extremos del túnel y no solo en uno?",
+      "respuestas": [
+        {
+          "texto": "Para evitar punto único de fallo: si una regla en un extremo falla, el otro extremo sigue bloqueando lo no autorizado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa en profundidad: ambos extremos limitan el daño de un error de configuración en cualquiera de ellos."
+        },
+        {
+          "texto": "Porque WireGuard no soporta filtrado en un solo extremo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Técnicamente se puede filtrar en uno solo, pero no es buena práctica."
+        },
+        {
+          "texto": "Para duplicar el ancho de banda disponible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Filtrar dos veces no aumenta el ancho de banda."
+        },
+        {
+          "texto": "Para que el cifrado WireGuard tenga validez legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validez legal no depende del filtrado bilateral."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una DMZ y qué tipo de servicios se ubican en ella?",
+      "respuestas": [
+        {
+          "texto": "Una subred separada donde se colocan los servicios accesibles desde el exterior; si uno se compromete, el atacante queda confinado allí sin acceso a la red interna.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La DMZ aísla los servicios expuestos: web, correo, DNS público, proxy inverso, VPN, etc."
+        },
+        {
+          "texto": "Una subred donde se ubican las bases de datos críticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las BBDD críticas deben estar en la red interna, NO en la DMZ."
+        },
+        {
+          "texto": "La red interna donde trabajan los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la LAN/IT; la DMZ es una zona distinta y aislada."
+        },
+        {
+          "texto": "La red Wi-Fi para invitados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Wi-Fi de invitados puede estar en su propia VLAN, pero no es la definición de DMZ."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo se utiliza un túnel WireGuard de tipo Site-to-Site frente a Road-Warrior?",
+      "respuestas": [
+        {
+          "texto": "Site-to-Site conecta dos redes enteras a través de los routers de cada sede; los equipos finales no necesitan saber que existe la VPN. Road-warrior conecta un usuario individual.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Site-to-Site funciona a nivel de gateway; road-warrior cliente-a-sitio funciona a nivel de endpoint."
+        },
+        {
+          "texto": "Site-to-Site solo cifra IPv6, road-warrior solo IPv4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos soportan IPv4 e IPv6."
+        },
+        {
+          "texto": "Site-to-Site requiere licencias de pago, road-warrior es gratuito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard es libre en ambos modos."
+        },
+        {
+          "texto": "Road-warrior solo se puede montar con OpenVPN.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard soporta perfectamente road-warrior."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué garantiza WireGuard y qué NO garantiza?",
+      "respuestas": [
+        {
+          "texto": "Garantiza confidencialidad, integridad y autenticación del canal. No garantiza que lo que viaja por el túnel sea legítimo: para eso están las reglas de firewall encima.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La VPN protege el canal, pero el contenido sigue necesitando filtrado por reglas explícitas."
+        },
+        {
+          "texto": "Garantiza también que ningún proceso interno tenga malware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VPN no inspecciona el tráfico ni detecta malware; eso requiere IDS/IPS o EDR."
+        },
+        {
+          "texto": "Garantiza disponibilidad incluso si el ISP cae.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard depende de la conectividad subyacente; un fallo del ISP rompe el túnel."
+        },
+        {
+          "texto": "Garantiza el bloqueo automático de DDoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard no bloquea DDoS; eso es función de otras capas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se prefiere una VPN sobre Internet a una línea dedicada (MPLS, fibra punto a punto) para conectar dos sedes?",
+      "respuestas": [
+        {
+          "texto": "Porque es mucho más barata, flexible y se monta en horas aprovechando la conexión existente, con cifrado y autenticación garantizados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La VPN es flexible y económica; la línea dedicada es más rápida y predecible pero cara y rígida."
+        },
+        {
+          "texto": "Porque las líneas dedicadas no soportan IPv4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las líneas dedicadas soportan IPv4/IPv6 sin problema."
+        },
+        {
+          "texto": "Porque las VPN son inmunes a la pérdida de paquetes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las VPN viven sobre Internet, sujetas a pérdida y latencia."
+        },
+        {
+          "texto": "Porque las líneas dedicadas siempre son inseguras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las líneas dedicadas son privadas; la diferencia clave es coste y flexibilidad, no seguridad básica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué suite criptográfica fija usa WireGuard?",
+      "respuestas": [
+        {
+          "texto": "ChaCha20 para cifrado, Curve25519 para intercambio de claves, BLAKE2s y Poly1305 para hash y autenticación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta suite es moderna, rápida en software, y no permite \"downgrade\" a algoritmos débiles."
+        },
+        {
+          "texto": "DES para cifrado y MD5 para hash.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DES y MD5 están obsoletos y nunca formaron parte de WireGuard."
+        },
+        {
+          "texto": "RSA-1024 con SHA-1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard usa Curve25519 y BLAKE2s, no RSA-1024/SHA-1."
+        },
+        {
+          "texto": "AES-128 en modo CBC con HMAC-MD5.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La suite WireGuard es ChaCha20-Poly1305, no AES-CBC con HMAC-MD5."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se elige una /30 para la subred del túnel WireGuard punto a punto?",
+      "respuestas": [
+        {
+          "texto": "Porque solo necesita dos hosts (.1 y .2), no se desperdician IPs y queda claro que es un enlace punto a punto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una /30 ofrece exactamente las 2 IPs utilizables que necesita el túnel sin sobredimensionar."
+        },
+        {
+          "texto": "Porque WireGuard exige obligatoriamente /30.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WireGuard acepta cualquier máscara; /30 es elección de diseño."
+        },
+        {
+          "texto": "Porque /30 es la única máscara que soporta NAT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NAT funciona con cualquier máscara."
+        },
+        {
+          "texto": "Porque /30 cifra el tráfico más rápido que otras máscaras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La máscara no afecta a la velocidad del cifrado."
+        }
+      ]
+    }
+  ]
+}

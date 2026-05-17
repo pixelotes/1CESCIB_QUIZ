@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 15: Estrategia de copias de seguridad (backup)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué son RPO y RTO?",
+      "respuestas": [
+        {
+          "texto": "RPO (Recovery Point Objective) = cantidad máxima de datos que se acepta perder, medida en tiempo (determina la frecuencia de copias). RTO (Recovery Time Objective) = tiempo máximo aceptable para restaurar el servicio (determina la arquitectura).",
+          "correcta": true,
+          "explicacion": "¡Correcto! RPO mira al pasado (\"hasta cuándo puedo perder datos\") y RTO al futuro (\"cuánto tardo en volver\")."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son métricas distintas y complementarias."
+        },
+        {
+          "texto": "RPO es el coste y RTO el ancho de banda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son métricas de tiempo, no de coste ni de red."
+        },
+        {
+          "texto": "RPO mide horas y RTO mide bytes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos se miden en tiempo, no en bytes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la regla 3-2-1 de copias de seguridad?",
+      "respuestas": [
+        {
+          "texto": "3 copias de los datos, en 2 soportes distintos, con 1 copia fuera del sitio (off-site).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el estándar mínimo: garantiza supervivencia frente a fallos de hardware o desastres locales."
+        },
+        {
+          "texto": "3 administradores, 2 SIEMs, 1 firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es la regla de copias, no de personal/equipos."
+        },
+        {
+          "texto": "3 días de retención, 2 semanas, 1 mes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La regla 3-2-1 se refiere a número de copias, soportes y ubicaciones."
+        },
+        {
+          "texto": "3 firewalls, 2 IDS, 1 WAF.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una regla sobre arquitectura defensiva, sino sobre copias."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué añade la regla 3-2-1-1-0 y por qué se ha vuelto necesaria?",
+      "respuestas": [
+        {
+          "texto": "Añade 1 copia inmutable u offline (air-gap) y 0 errores en la verificación; necesaria por el ransomware moderno que busca y cifra repositorios de copias accesibles por red antes de cifrar los datos productivos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La copia inmutable/offline y la verificación obligatoria son lo realmente nuevo."
+        },
+        {
+          "texto": "Añade copias en redes sociales para difusión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente; los backups no se hacen en redes sociales."
+        },
+        {
+          "texto": "Solo añade un día más de retención.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los dígitos no se refieren a días."
+        },
+        {
+          "texto": "Reduce a 1 copia y 0 soportes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La regla extiende, no reduce."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre copia completa, incremental, diferencial y synthetic full?",
+      "respuestas": [
+        {
+          "texto": "Completa = imagen íntegra; incremental = solo bloques cambiados desde la copia anterior; diferencial = cambios desde la última completa; synthetic full = full reconstruida en el repositorio sin releer el origen.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada una tiene su trade-off entre tiempo de copia, restauración y espacio."
+        },
+        {
+          "texto": "Todas son sinónimos del mismo proceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tipos distintos con trade-offs distintos."
+        },
+        {
+          "texto": "La diferencial es la más rápida de restaurar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La completa es la más rápida de restaurar; la diferencial necesita full + último diferencial."
+        },
+        {
+          "texto": "La incremental ocupa más espacio que la completa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La incremental es la más eficiente en espacio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el esquema GFS (Grandfather-Father-Son)?",
+      "respuestas": [
+        {
+          "texto": "Un esquema de retención por niveles (diaria, semanal, mensual, anual) que combina granularidad reciente con cobertura histórica sin disparar el almacenamiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! GFS permite recuperar el día anterior y, a la vez, conservar un fin de mes de hace 12 meses."
+        },
+        {
+          "texto": "Un protocolo de cifrado de copias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GFS no es un protocolo de cifrado."
+        },
+        {
+          "texto": "Un tipo de hipervisor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GFS no es un hipervisor."
+        },
+        {
+          "texto": "Un sistema de ficheros de Google.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GFS aquí se refiere al esquema de retención, no al Google File System."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se utiliza un repositorio Linux endurecido en lugar de uno Windows para los backups en una organización?",
+      "respuestas": [
+        {
+          "texto": "Para no depender del mismo dominio que se protege: si un atacante consigue control sobre Active Directory, no puede tocar respaldos cuyo stack y credenciales son completamente distintos (heterogeneidad).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ransomware suele ser específico de plataforma; un stack heterogéneo limita el daño."
+        },
+        {
+          "texto": "Porque Linux es siempre más barato.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El coste no es la motivación principal."
+        },
+        {
+          "texto": "Porque Windows no soporta XFS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es la heterogeneidad, no el sistema de ficheros."
+        },
+        {
+          "texto": "Porque Veeam solo se instala en Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Veeam funciona en ambos; la elección de Linux es por aislamiento del dominio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué cuatro capas de protección frente a ransomware se proponen en la práctica?",
+      "respuestas": [
+        {
+          "texto": "Inmutabilidad (XFS flag o S3 Object Lock), air-gap real (cintas LTO en bóveda), heterogeneidad de stack y detección temprana (anomalías en ratio de cambio/entropía).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Solo la combinación de estas capas resiste un ransomware que comprometa el dominio."
+        },
+        {
+          "texto": "Antivirus, firewall, VPN y MFA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son defensas generales; las cuatro capas específicas de copia son las indicadas."
+        },
+        {
+          "texto": "Cifrado, hashing, firma y NTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son medidas auxiliares, no las cuatro capas específicas de copia anti-ransomware."
+        },
+        {
+          "texto": "Únicamente cintas LTO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cintas son solo una de las cuatro capas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué replicar en un segundo centro de datos?",
+      "respuestas": [
+        {
+          "texto": "Para satisfacer el \"1\" off-site de la regla; ante un incendio, fallo eléctrico catastrófico o ataque dirigido al CPD primario, la copia replicada permite failover en minutos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La replicación off-site es la base de la continuidad ante desastres locales."
+        },
+        {
+          "texto": "Para reducir el coste eléctrico del CPD primario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Replicar añade coste, no lo reduce."
+        },
+        {
+          "texto": "Para acelerar el tráfico HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un CDN, no un CPD secundario."
+        },
+        {
+          "texto": "Para evitar pagar licencias de hipervisor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La replicación no exime de licencias."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué las cintas LTO siguen teniendo sentido si el disco es más rápido?",
+      "respuestas": [
+        {
+          "texto": "Porque son la única defensa absoluta tipo air-gap: una vez expulsadas y guardadas en bóveda externa son físicamente inalcanzables desde la red, sobreviviendo a ransomware sofisticado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La velocidad importa menos que la garantía de aislamiento físico real."
+        },
+        {
+          "texto": "Porque las cintas son más rápidas que cualquier disco SSD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cintas son mucho más lentas; su valor es otro."
+        },
+        {
+          "texto": "Porque tienen mayor capacidad que cualquier disco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La capacidad por unidad es alta pero no necesariamente mayor que la de disco moderno."
+        },
+        {
+          "texto": "Porque las cintas son inmunes al fuego.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cintas también se dañan con fuego; el air-gap es lo que aporta valor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normativas se aplican típicamente al backup en el sector sanitario público?",
+      "respuestas": [
+        {
+          "texto": "RGPD art. 9 y 32 + LOPDGDD, ENS RD 311/2022 nivel Alto (mp.info.6, op.cont.*, op.exp.10), NIS2, Ley 41/2002 (mínimo 5 años de documentación clínica), ISO/IEC 27001:2022 (A.5.30, A.8.13, A.8.14) e ISO 27799.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Datos sanitarios son categoría especial RGPD; ENS Alto aplica al sector público, NIS2 a entidades esenciales."
+        },
+        {
+          "texto": "Solo se aplica el RGPD; el resto es opcional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay un marco normativo amplio que aplica simultáneamente."
+        },
+        {
+          "texto": "Únicamente ISO 9001 (calidad).",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 9001 es de calidad; en sanidad aplican normas de seguridad y protección de datos."
+        },
+        {
+          "texto": "Ninguna; el sector sanitario no tiene normativa específica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sanidad es uno de los sectores más regulados."
+        }
+      ]
+    }
+  ]
+}

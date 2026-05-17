@@ -1,0 +1,1005 @@
+{
+  "tema": "UD4 - Legislación de protección de datos (Nivel medio)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué artículo de la Constitución Española de 1978 establece la base del derecho a la protección de datos?",
+      "respuestas": [
+        {
+          "texto": "Artículo 14",
+          "correcta": false,
+          "explicacion": "Incorrecto. El artículo 14 recoge el principio de igualdad ante la ley."
+        },
+        {
+          "texto": "Artículo 18.4",
+          "correcta": true,
+          "explicacion": "Correcto. El artículo 18.4 CE establece que la ley limitará el uso de la informática para garantizar la intimidad personal y el pleno ejercicio de los derechos de los ciudadanos."
+        },
+        {
+          "texto": "Artículo 20",
+          "correcta": false,
+          "explicacion": "Incorrecto. El artículo 20 regula la libertad de expresión y el derecho a la información."
+        },
+        {
+          "texto": "Artículo 24",
+          "correcta": false,
+          "explicacion": "Incorrecto. El artículo 24 regula el derecho a la tutela judicial efectiva."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué siglas corresponden a la primera ley española de protección de datos, aprobada en 1992?",
+      "respuestas": [
+        {
+          "texto": "LOPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD es de 1999 y derogó a la LORTAD."
+        },
+        {
+          "texto": "LORTAD",
+          "correcta": true,
+          "explicacion": "Correcto. La LORTAD (Ley Orgánica 5/1992 de Regulación del Tratamiento Automatizado de los Datos de Carácter Personal) fue la primera norma española de protección de datos."
+        },
+        {
+          "texto": "LOPDGDD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD es de 2018 y adapta el RGPD al ordenamiento español."
+        },
+        {
+          "texto": "LSSI-CE",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI-CE regula los servicios de la sociedad de la información y el comercio electrónico, no la protección de datos en sentido estricto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué año entró en vigor el RGPD y comenzó a aplicarse de forma plena en toda la UE?",
+      "respuestas": [
+        {
+          "texto": "2016",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD se publicó en 2016, pero su aplicación plena se aplazó dos años."
+        },
+        {
+          "texto": "2017",
+          "correcta": false,
+          "explicacion": "Incorrecto. En 2017 las organizaciones estaban en periodo de adaptación."
+        },
+        {
+          "texto": "2018",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD se publicó en 2016 pero fue de aplicación plena a partir del 25 de mayo de 2018."
+        },
+        {
+          "texto": "2019",
+          "correcta": false,
+          "explicacion": "Incorrecto. En 2019 el RGPD ya llevaba un año en aplicación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma española de 2018 adapta el RGPD al ordenamiento jurídico interno?",
+      "respuestas": [
+        {
+          "texto": "LOPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD de 1999 fue precisamente la norma derogada por la LOPDGDD."
+        },
+        {
+          "texto": "LOPDGDD",
+          "correcta": true,
+          "explicacion": "Correcto. La Ley Orgánica 3/2018 de Protección de Datos Personales y Garantía de los Derechos Digitales adapta el RGPD a España."
+        },
+        {
+          "texto": "LORTAD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LORTAD es de 1992 y fue derogada por la LOPD."
+        },
+        {
+          "texto": "LSSI-CE",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI-CE regula los servicios de la sociedad de la información."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué organismo se creó con la LORTAD en 1992?",
+      "respuestas": [
+        {
+          "texto": "INCIBE",
+          "correcta": false,
+          "explicacion": "Incorrecto. INCIBE es el Instituto Nacional de Ciberseguridad, creado mucho después y con otro ámbito."
+        },
+        {
+          "texto": "CCN-CERT",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CCN-CERT es el equipo de respuesta del Centro Criptológico Nacional, no es la autoridad de protección de datos."
+        },
+        {
+          "texto": "AEPD",
+          "correcta": true,
+          "explicacion": "Correcto. La Agencia Española de Protección de Datos se crea con la LORTAD como autoridad de control independiente."
+        },
+        {
+          "texto": "Comité Europeo de Protección de Datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Este comité se crea con el RGPD a nivel europeo, no con la LORTAD."
+        }
+      ]
+    },
+    {
+      "pregunta": "Los derechos ARCO se corresponden con:",
+      "respuestas": [
+        {
+          "texto": "Acceso, Rectificación, Cancelación y Oposición",
+          "correcta": true,
+          "explicacion": "Correcto. Son los cuatro derechos clásicos consolidados desde la LORTAD."
+        },
+        {
+          "texto": "Acceso, Reclamación, Consentimiento y Oposición",
+          "correcta": false,
+          "explicacion": "Incorrecto. Reclamación y consentimiento no son derechos ARCO."
+        },
+        {
+          "texto": "Auditoría, Rectificación, Control y Olvido",
+          "correcta": false,
+          "explicacion": "Incorrecto. El olvido es un derecho nuevo del RGPD, no forma parte de los ARCO."
+        },
+        {
+          "texto": "Acceso, Rectificación, Confidencialidad y Olvido",
+          "correcta": false,
+          "explicacion": "Incorrecto. Confidencialidad y olvido no son derechos ARCO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué nuevo derecho introducido por el RGPD permite al interesado solicitar la supresión de sus datos?",
+      "respuestas": [
+        {
+          "texto": "Derecho a la portabilidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La portabilidad permite recibir los datos en formato estructurado, no suprimirlos."
+        },
+        {
+          "texto": "Derecho a la limitación del tratamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. La limitación restringe el uso de los datos, pero no los elimina."
+        },
+        {
+          "texto": "Derecho al olvido",
+          "correcta": true,
+          "explicacion": "Correcto. El derecho al olvido permite al interesado solicitar la supresión de sus datos en supuestos como revocación del consentimiento o fines ya cumplidos."
+        },
+        {
+          "texto": "Derecho de oposición",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho de oposición ya existía en los ARCO y no implica supresión necesariamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué derecho del RGPD permite al interesado recibir sus datos en un formato estructurado, de uso común y de lectura mecánica?",
+      "respuestas": [
+        {
+          "texto": "Derecho de acceso",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho de acceso permite conocer qué datos se tratan, no necesariamente recibirlos en formato estructurado."
+        },
+        {
+          "texto": "Derecho a la portabilidad",
+          "correcta": true,
+          "explicacion": "Correcto. La portabilidad permite recibir los datos en formato estructurado, por ejemplo en CSV, para trasladarlos a otro responsable."
+        },
+        {
+          "texto": "Derecho de rectificación",
+          "correcta": false,
+          "explicacion": "Incorrecto. La rectificación permite corregir datos inexactos."
+        },
+        {
+          "texto": "Derecho al olvido",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho al olvido permite la supresión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el plazo máximo para notificar una brecha de seguridad a la autoridad de control bajo el RGPD?",
+      "respuestas": [
+        {
+          "texto": "24 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. El plazo es algo más amplio."
+        },
+        {
+          "texto": "48 horas",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD fija un plazo distinto."
+        },
+        {
+          "texto": "72 horas",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD establece un plazo máximo de 72 horas desde que se tenga constancia de la brecha, salvo que se considere improbable que constituya un riesgo."
+        },
+        {
+          "texto": "7 días",
+          "correcta": false,
+          "explicacion": "Incorrecto. 72 horas es el plazo máximo, no una semana."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué edad mínima fija la LOPDGDD en España para que un menor pueda otorgar el consentimiento al tratamiento de sus datos?",
+      "respuestas": [
+        {
+          "texto": "13 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. 13 años es el mínimo permitido por el RGPD a los Estados miembros, pero España fijó otra edad."
+        },
+        {
+          "texto": "14 años",
+          "correcta": true,
+          "explicacion": "Correcto. La LOPDGDD establece la edad mínima en 14 años, aprovechando el margen que el RGPD permite a los Estados."
+        },
+        {
+          "texto": "16 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. 16 años es la edad por defecto que fija el RGPD, no la elegida por España."
+        },
+        {
+          "texto": "18 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es necesario alcanzar la mayoría de edad para consentir el tratamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué siglas designan a la figura del Delegado de Protección de Datos?",
+      "respuestas": [
+        {
+          "texto": "DPD o DPO",
+          "correcta": true,
+          "explicacion": "Correcto. Delegado de Protección de Datos (DPD) o Data Protection Officer (DPO) son equivalentes."
+        },
+        {
+          "texto": "CPO",
+          "correcta": false,
+          "explicacion": "Incorrecto. CPO suele referirse a Chief Privacy Officer, una figura corporativa pero distinta a la del DPO/DPD del RGPD."
+        },
+        {
+          "texto": "CISO",
+          "correcta": false,
+          "explicacion": "Incorrecto. CISO es el Chief Information Security Officer, relacionado con seguridad de la información, no protección de datos."
+        },
+        {
+          "texto": "DPA",
+          "correcta": false,
+          "explicacion": "Incorrecto. DPA suele referirse a Data Processing Agreement (contrato de encargo de tratamiento)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se llama la herramienta de la AEPD para documentar el Registro de Actividades del Tratamiento de pymes y autónomos?",
+      "respuestas": [
+        {
+          "texto": "Gestiona",
+          "correcta": false,
+          "explicacion": "Incorrecto. Gestiona es la herramienta para la Evaluación de Impacto."
+        },
+        {
+          "texto": "Facilita RGPD",
+          "correcta": true,
+          "explicacion": "Correcto. Facilita RGPD ayuda a pequeñas empresas y autónomos a generar la documentación de cumplimiento básica."
+        },
+        {
+          "texto": "Comunica-Brecha RGPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Comunica-Brecha sirve para valorar si una brecha de seguridad debe notificarse."
+        },
+        {
+          "texto": "Evalúa Riesgo RGPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. Evalúa Riesgo está orientada a la evaluación de impacto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría el DNI?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. El DNI, NIE o pasaporte son datos identificativos por excelencia."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Características personales recoge cosas como estado civil o sexo."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DNI no es un dato especialmente protegido."
+        },
+        {
+          "texto": "Judiciales y administrativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DNI no es un dato judicial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían los datos relativos a la salud?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos de salud tienen una categoría especial reforzada."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": true,
+          "explicacion": "Correcto. Los datos de salud son una de las categorías especiales del RGPD, junto a los genéticos y biométricos."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos de salud no son identificativos."
+        },
+        {
+          "texto": "Económicos, financieros y de seguros",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque puedan tener implicaciones en seguros, son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría el estado civil?",
+      "respuestas": [
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El estado civil no identifica directamente a la persona."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": true,
+          "explicacion": "Correcto. Estado civil, datos de familia, sexo, fecha de nacimiento, etc. son características personales."
+        },
+        {
+          "texto": "Circunstancias familiares y sociales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa categoría incluye más bien alojamiento, vivienda o situación familiar."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. El estado civil no es categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría el certificado de antecedentes penales?",
+      "respuestas": [
+        {
+          "texto": "Judiciales y administrativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque suene cercano, los antecedentes penales tienen su propia categoría diferenciada."
+        },
+        {
+          "texto": "Relativos a condenas e infracciones penales",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD distingue específicamente los datos relativos a condenas e infracciones penales."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el certificado identifique a la persona, su contenido lo coloca en otra categoría."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos sobre condenas tienen categoría propia, distinta de las categorías especiales del art. 9."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasifican los ingresos, rentas y deducciones impositivas?",
+      "respuestas": [
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. Información comercial se refiere a actividades, negocios o licencias."
+        },
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Detalles de empleo recoge profesión o puesto, no cifras económicas."
+        },
+        {
+          "texto": "Económicos, financieros y de seguros",
+          "correcta": true,
+          "explicacion": "Correcto. Ingresos, rentas, créditos, retenciones e inversiones son datos económicos, financieros y de seguros."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Características personales no incluye datos económicos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían las titulaciones académicas?",
+      "respuestas": [
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Detalles de empleo recoge profesión y puesto, pero no la formación reglada."
+        },
+        {
+          "texto": "Académicos y profesionales",
+          "correcta": true,
+          "explicacion": "Correcto. Titulaciones, formación e historial de estudiante son datos académicos y profesionales."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las titulaciones no son una característica personal."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. Información comercial es para actividades empresariales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían la fecha y hora de entrada y salida del trabajo?",
+      "respuestas": [
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Detalles de empleo recoge profesión y puesto, no los registros de jornada."
+        },
+        {
+          "texto": "De control de presencia",
+          "correcta": true,
+          "explicacion": "Correcto. Las marcas horarias y los identificadores asociados al fichaje constituyen datos de control de presencia."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las marcas horarias no identifican a la persona por sí solas."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son datos personales en ese sentido."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de consentimiento exige el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Tácito",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento tácito (casillas premarcadas) no es válido bajo el RGPD."
+        },
+        {
+          "texto": "Presunto",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento presunto, deducido de las acciones del interesado, no es válido."
+        },
+        {
+          "texto": "Expreso, libre, específico, informado e inequívoco",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD exige un consentimiento expreso, libre, específico, informado e inequívoco."
+        },
+        {
+          "texto": "Verbal, siempre que haya testigos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La forma verbal con testigos no es la exigencia del RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio implica aplicar medidas técnicas y organizativas desde la concepción del proyecto?",
+      "respuestas": [
+        {
+          "texto": "Privacidad por defecto (Privacy by Default)",
+          "correcta": false,
+          "explicacion": "Incorrecto. Por defecto se refiere a que solo se traten los datos estrictamente necesarios, no a la fase de diseño."
+        },
+        {
+          "texto": "Privacidad desde el diseño (Privacy by Design)",
+          "correcta": true,
+          "explicacion": "Correcto. Privacy by Design exige tener en cuenta la protección de datos desde el momento de la concepción del tratamiento."
+        },
+        {
+          "texto": "Responsabilidad proactiva",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad proactiva es más amplia y se refiere a demostrar el cumplimiento."
+        },
+        {
+          "texto": "Minimización de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La minimización se refiere a recoger solo los datos necesarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué obligación del RGPD sustituye a la notificación de ficheros que existía en la LOPD?",
+      "respuestas": [
+        {
+          "texto": "La Evaluación de Impacto en Protección de Datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La EIPD es otra obligación distinta, aplicable a tratamientos de alto riesgo."
+        },
+        {
+          "texto": "El Registro de Actividades del Tratamiento (RAT)",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD elimina la inscripción de ficheros en la AEPD y la sustituye por el RAT interno del responsable."
+        },
+        {
+          "texto": "La designación de DPO",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO es una figura nueva, pero no sustituye a la notificación de ficheros."
+        },
+        {
+          "texto": "La notificación de brechas de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La notificación de brechas también es nueva, pero no sustituye a la inscripción de ficheros."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué directiva europea fue derogada con la entrada en aplicación del RGPD?",
+      "respuestas": [
+        {
+          "texto": "Directiva 95/46/CE",
+          "correcta": true,
+          "explicacion": "Correcto. La Directiva 95/46/CE armonizaba la legislación de protección de datos de los Estados miembros y fue derogada por el RGPD."
+        },
+        {
+          "texto": "Directiva 2002/58/CE (ePrivacy)",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Directiva ePrivacy regula las comunicaciones electrónicas y sigue vigente."
+        },
+        {
+          "texto": "Directiva NIS",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Directiva NIS se refiere a seguridad de redes y sistemas."
+        },
+        {
+          "texto": "Directiva 2016/680",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Directiva 2016/680 regula el tratamiento de datos por autoridades policiales y judiciales y sigue vigente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué siglas corresponden a la Evaluación de Impacto en Protección de Datos?",
+      "respuestas": [
+        {
+          "texto": "RAT",
+          "correcta": false,
+          "explicacion": "Incorrecto. RAT es el Registro de Actividades del Tratamiento."
+        },
+        {
+          "texto": "EIPD",
+          "correcta": true,
+          "explicacion": "Correcto. EIPD: procedimiento dirigido a conocer el nivel de riesgo del tratamiento para los derechos y libertades de los interesados."
+        },
+        {
+          "texto": "PIA",
+          "correcta": false,
+          "explicacion": "Incorrecto. PIA (Privacy Impact Assessment) es el término anglosajón equivalente, pero las siglas oficiales en español son EIPD."
+        },
+        {
+          "texto": "DPIA",
+          "correcta": false,
+          "explicacion": "Incorrecto. DPIA es la denominación en inglés (Data Protection Impact Assessment); la denominación oficial en castellano del RGPD es EIPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "El Registro de Actividades del Tratamiento es obligatorio, con carácter general, para organizaciones a partir de:",
+      "respuestas": [
+        {
+          "texto": "50 trabajadores",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral es mayor."
+        },
+        {
+          "texto": "100 trabajadores",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral es mayor."
+        },
+        {
+          "texto": "250 trabajadores",
+          "correcta": true,
+          "explicacion": "Correcto. Por debajo de 250 trabajadores se está exento, salvo que el tratamiento no sea ocasional, suponga riesgo o incluya categorías especiales."
+        },
+        {
+          "texto": "500 trabajadores",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral está fijado en 250."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un dato biométrico es:",
+      "respuestas": [
+        {
+          "texto": "Cualquier dato que identifique a la persona",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la definición genérica de dato personal, no de dato biométrico."
+        },
+        {
+          "texto": "Un dato personal obtenido a partir de un tratamiento técnico específico sobre características físicas, fisiológicas o conductuales",
+          "correcta": true,
+          "explicacion": "Correcto. Esta es la definición del RGPD y los sitúa entre las categorías especiales."
+        },
+        {
+          "texto": "Únicamente la huella dactilar o el iris",
+          "correcta": false,
+          "explicacion": "Incorrecto. La huella o el iris son ejemplos, pero la categoría es más amplia."
+        },
+        {
+          "texto": "Datos relacionados con la salud",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos de salud y los biométricos son categorías especiales distintas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio de protección de datos exige que los datos sean adecuados, pertinentes y limitados a lo necesario?",
+      "respuestas": [
+        {
+          "texto": "Principio de exactitud",
+          "correcta": false,
+          "explicacion": "Incorrecto. Exactitud se refiere a que los datos sean correctos y actualizados."
+        },
+        {
+          "texto": "Principio de minimización de datos",
+          "correcta": true,
+          "explicacion": "Correcto. La minimización limita el tratamiento a los datos estrictamente necesarios para la finalidad."
+        },
+        {
+          "texto": "Principio de limitación de la finalidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Limitación de la finalidad se refiere a recoger los datos para fines explícitos, no a la cantidad."
+        },
+        {
+          "texto": "Principio de integridad y seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Integridad y seguridad se refiere a las garantías frente a accesos no autorizados."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían las opiniones políticas?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las opiniones políticas tienen una protección reforzada."
+        },
+        {
+          "texto": "Categorías especiales",
+          "correcta": true,
+          "explicacion": "Correcto. Opiniones políticas, ideología, afiliación sindical, religión, origen étnico/racial y orientación sexual son categorías especiales del art. 9 RGPD."
+        },
+        {
+          "texto": "Circunstancias familiares y sociales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las opiniones políticas no son una circunstancia social en este sentido."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con información comercial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo es obligatoria la designación de un Delegado de Protección de Datos (DPO)?",
+      "respuestas": [
+        {
+          "texto": "Solo en empresas privadas con más de 250 trabajadores",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral de 250 se refiere al RAT, no al DPO."
+        },
+        {
+          "texto": "Cuando el tratamiento lo lleva a cabo una autoridad pública, requiere observación habitual y sistemática a gran escala o trata categorías especiales",
+          "correcta": true,
+          "explicacion": "Correcto. Estos son los tres supuestos generales del art. 37 RGPD."
+        },
+        {
+          "texto": "Cuando se realicen transferencias internacionales de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las transferencias internacionales requieren otras garantías, no necesariamente DPO."
+        },
+        {
+          "texto": "Únicamente cuando lo solicita la AEPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación nace del propio RGPD, no de una solicitud de la autoridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de medidas de seguridad concretas exige el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Un catálogo cerrado de medidas técnicas obligatorias",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD precisamente abandona el enfoque de catálogo cerrado."
+        },
+        {
+          "texto": "Las medidas adecuadas en función del nivel de riesgo y el estado de la tecnología",
+          "correcta": true,
+          "explicacion": "Correcto. El RGPD adopta un enfoque basado en riesgo: el responsable decide qué medidas aplicar según el tratamiento."
+        },
+        {
+          "texto": "Las medidas de seguridad del Esquema Nacional de Seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS aplica a Administraciones Públicas; el RGPD no remite a él."
+        },
+        {
+          "texto": "Las medidas de la ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27001 es voluntaria; el RGPD no la impone."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué texto legal de 2007 desarrolló el reglamento de la LOPD e introdujo niveles de seguridad básico, medio y alto?",
+      "respuestas": [
+        {
+          "texto": "Real Decreto 1720/2007",
+          "correcta": true,
+          "explicacion": "Correcto. El RD 1720/2007 fue el reglamento de desarrollo de la LOPD y estableció los tres niveles de medidas de seguridad."
+        },
+        {
+          "texto": "Real Decreto 3/2010",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RD 3/2010 regula el Esquema Nacional de Seguridad, no el reglamento LOPD."
+        },
+        {
+          "texto": "Ley 34/2002",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Ley 34/2002 es la LSSI-CE."
+        },
+        {
+          "texto": "Reglamento UE 2016/679",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el RGPD, de 2016 y europeo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio obliga al responsable a no solo cumplir la normativa, sino también a poder demostrar dicho cumplimiento?",
+      "respuestas": [
+        {
+          "texto": "Principio de licitud",
+          "correcta": false,
+          "explicacion": "Incorrecto. La licitud se refiere a que el tratamiento se base en una causa legítima."
+        },
+        {
+          "texto": "Principio de responsabilidad proactiva (accountability)",
+          "correcta": true,
+          "explicacion": "Correcto. La accountability es una de las grandes innovaciones del RGPD: hay que poder demostrar el cumplimiento."
+        },
+        {
+          "texto": "Principio de transparencia",
+          "correcta": false,
+          "explicacion": "Incorrecto. La transparencia se refiere a informar al interesado, no a demostrar cumplimiento."
+        },
+        {
+          "texto": "Principio de minimización",
+          "correcta": false,
+          "explicacion": "Incorrecto. La minimización se refiere al volumen de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "El consentimiento de un menor en España, según la LOPDGDD, se puede otorgar a partir de:",
+      "respuestas": [
+        {
+          "texto": "12 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. La edad fijada por la LOPDGDD es mayor."
+        },
+        {
+          "texto": "14 años",
+          "correcta": true,
+          "explicacion": "Correcto. La LOPDGDD fija el consentimiento de menores a partir de los 14 años."
+        },
+        {
+          "texto": "16 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. 16 años es la edad por defecto del RGPD, pero España la rebajó."
+        },
+        {
+          "texto": "18 años",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se requiere mayoría de edad."
+        }
+      ]
+    },
+    {
+      "pregunta": "Las herramientas Facilita RGPD, Evalúa Riesgo RGPD y Comunica-Brecha RGPD son ofrecidas por:",
+      "respuestas": [
+        {
+          "texto": "INCIBE",
+          "correcta": false,
+          "explicacion": "Incorrecto. INCIBE ofrece otros servicios, pero estas herramientas son de la autoridad de control de protección de datos."
+        },
+        {
+          "texto": "La AEPD (Agencia Española de Protección de Datos)",
+          "correcta": true,
+          "explicacion": "Correcto. Las tres herramientas están disponibles en aepd.es/guias-y-herramientas/herramientas."
+        },
+        {
+          "texto": "El CCN-CERT",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CCN-CERT trabaja en seguridad de las AAPP, no en herramientas RGPD para pymes."
+        },
+        {
+          "texto": "ENISA",
+          "correcta": false,
+          "explicacion": "Incorrecto. ENISA es la agencia europea de ciberseguridad, no es quien publica estas herramientas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué figura es necesaria cuando se contrata a un proveedor externo que accede a datos personales para prestar un servicio?",
+      "respuestas": [
+        {
+          "texto": "Es un nuevo responsable del tratamiento",
+          "correcta": false,
+          "explicacion": "Incorrecto. El proveedor no decide los fines del tratamiento, así que no es responsable."
+        },
+        {
+          "texto": "Es un encargado del tratamiento",
+          "correcta": true,
+          "explicacion": "Correcto. El encargado del tratamiento es quien procesa datos por cuenta del responsable (gestoría, hosting, soporte, etc.)."
+        },
+        {
+          "texto": "Es un Delegado de Protección de Datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO es una figura interna o subcontratada con función de supervisión, no de tratamiento externo."
+        },
+        {
+          "texto": "Es un cesionario",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cesión implica transferencia de datos a otro responsable, no encargo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la finalidad principal de la EIPD?",
+      "respuestas": [
+        {
+          "texto": "Notificar las brechas de seguridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las brechas tienen un procedimiento de notificación separado."
+        },
+        {
+          "texto": "Conocer el nivel de riesgo que un tratamiento supone para los derechos y libertades de los interesados",
+          "correcta": true,
+          "explicacion": "Correcto. La EIPD es un análisis previo de riesgo obligatorio en tratamientos de alto riesgo."
+        },
+        {
+          "texto": "Inscribir el fichero en la AEPD",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inscripción de ficheros fue eliminada por el RGPD."
+        },
+        {
+          "texto": "Designar el DPO",
+          "correcta": false,
+          "explicacion": "Incorrecto. La designación del DPO obedece a otros criterios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificaría una dirección postal?",
+      "respuestas": [
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. La dirección no es una característica de la persona en sentido estricto."
+        },
+        {
+          "texto": "Identificativos",
+          "correcta": true,
+          "explicacion": "Correcto. Nombre, DNI, dirección postal, teléfono, correo, firma, imagen son datos identificativos."
+        },
+        {
+          "texto": "Circunstancias familiares y sociales",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las circunstancias familiares se refieren a alojamiento, vivienda o situación familiar, no al dato de dirección por sí solo."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información comercial recoge actividades empresariales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría se clasificarían las actividades, negocios y licencias comerciales de una persona?",
+      "respuestas": [
+        {
+          "texto": "Económicos, financieros y de seguros",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos económicos/financieros son ingresos, rentas, deducciones, etc."
+        },
+        {
+          "texto": "Detalles de empleo",
+          "correcta": false,
+          "explicacion": "Incorrecto. Detalles de empleo recoge profesión, puesto o categoría profesional."
+        },
+        {
+          "texto": "Información comercial",
+          "correcta": true,
+          "explicacion": "Correcto. Actividades, negocios, licencias comerciales y datos similares constituyen información comercial."
+        },
+        {
+          "texto": "Características personales",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son una característica personal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es un principio de protección de datos del RGPD?",
+      "respuestas": [
+        {
+          "texto": "Minimización de datos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La minimización SÍ es un principio del RGPD."
+        },
+        {
+          "texto": "Limitación de la finalidad",
+          "correcta": false,
+          "explicacion": "Incorrecto. La limitación de la finalidad SÍ es un principio del RGPD."
+        },
+        {
+          "texto": "Maximización del valor del dato",
+          "correcta": true,
+          "explicacion": "Correcto. La maximización del valor del dato NO es un principio del RGPD. Es lo contrario: el principio aplicable es la minimización."
+        },
+        {
+          "texto": "Exactitud",
+          "correcta": false,
+          "explicacion": "Incorrecto. La exactitud SÍ es un principio del RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa la \"privacidad por defecto\" (Privacy by Default)?",
+      "respuestas": [
+        {
+          "texto": "Que el responsable solo trate por defecto los datos personales estrictamente necesarios para cada finalidad",
+          "correcta": true,
+          "explicacion": "Correcto. Privacy by Default exige que las opciones por defecto sean las más protectoras y limitadas."
+        },
+        {
+          "texto": "Que la protección de datos esté incluida desde el diseño del sistema",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la definición de Privacy by Design, no by Default."
+        },
+        {
+          "texto": "Que se cifren todos los datos personales por defecto",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es una medida posible, pero no es la definición de privacy by default."
+        },
+        {
+          "texto": "Que la AEPD revise por defecto los tratamientos",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD no revisa por defecto cada tratamiento."
+        }
+      ]
+    }
+  ]
+}

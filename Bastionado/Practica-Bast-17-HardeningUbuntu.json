@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 17: Hardening de Ubuntu Server",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué diferencia hay entre DAC y MAC en control de acceso en Linux?",
+      "respuestas": [
+        {
+          "texto": "DAC (Discretionary Access Control) son los permisos rwx clásicos de Unix; un proceso root puede tocar cualquier cosa. MAC (Mandatory Access Control) aplica una política obligatoria por encima: aunque el proceso sea root, solo hace lo que la política le permite. AppArmor y SELinux son MAC.",
+          "correcta": true,
+          "explicacion": "¡Correcto! MAC protege al sistema del propio proceso, incluso cuando ese proceso es root."
+        },
+        {
+          "texto": "DAC es para servidores y MAC para escritorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican a cualquier tipo de equipo."
+        },
+        {
+          "texto": "DAC se programa en C y MAC en Python.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se distinguen por lenguaje de implementación."
+        },
+        {
+          "texto": "Son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son modelos de control de acceso muy distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es Lynis y qué reporta?",
+      "respuestas": [
+        {
+          "texto": "Herramienta open source de auditoría de seguridad para Linux/Unix/macOS de CISOfy: ejecuta cientos de tests y devuelve warnings, suggestions y un Hardening Index (0-100).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Hardening Index sirve como KPI para comparar antes/después de aplicar medidas."
+        },
+        {
+          "texto": "Un firewall de host.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es UFW/nftables/iptables, no Lynis."
+        },
+        {
+          "texto": "Un sistema antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lynis no es antivirus."
+        },
+        {
+          "texto": "Un gestor de paquetes alternativo a apt.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lynis es una herramienta de auditoría, no de gestión de paquetes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es umask y por qué bajarlo de 022 a 027?",
+      "respuestas": [
+        {
+          "texto": "Es la máscara de permisos por defecto al crear ficheros. Con 022 nacen legibles por todos (rw-r--r--); con 027 los \"otros\" no tienen ningún permiso (rw-r-----), reduciendo exposición accidental.",
+          "correcta": true,
+          "explicacion": "¡Correcto! umask aplica al crear nuevos ficheros; es una medida sencilla y eficaz."
+        },
+        {
+          "texto": "Es un protocolo de cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. umask son permisos, no cifrado."
+        },
+        {
+          "texto": "Es el nombre del firewall de Ubuntu.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall por defecto es UFW; umask es la máscara de permisos."
+        },
+        {
+          "texto": "Es una variable que define el idioma del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El idioma se define con LANG/LC_*, no con umask."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es PAM y qué aporta pam_pwquality?",
+      "respuestas": [
+        {
+          "texto": "PAM (Pluggable Authentication Modules) es el framework modular de autenticación de Linux; pam_pwquality añade reglas de calidad de contraseña (longitud, mayúsculas, dígitos, símbolos, no repeticiones), bloqueando contraseñas débiles antes de guardarse.",
+          "correcta": true,
+          "explicacion": "¡Correcto! PAM permite componer la autenticación; pam_pwquality endurece la política de contraseñas."
+        },
+        {
+          "texto": "PAM es un antivirus y pam_pwquality un firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin relación con el concepto real."
+        },
+        {
+          "texto": "PAM es un gestor de paquetes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es apt/dnf; PAM es autenticación."
+        },
+        {
+          "texto": "PAM es un protocolo de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PAM es un framework local de autenticación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué deshabilitar el módulo USB storage en un servidor de producción?",
+      "respuestas": [
+        {
+          "texto": "Para evitar exfiltración de datos por USB y para impedir que un atacante con acceso físico monte un dispositivo malicioso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un servidor de producción no necesita que nadie pinche un pendrive."
+        },
+        {
+          "texto": "Para acelerar el arranque del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El módulo USB no impacta significativamente al arranque."
+        },
+        {
+          "texto": "Porque USB no funciona en Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. USB funciona perfectamente; se deshabilita por seguridad en servidores."
+        },
+        {
+          "texto": "Para reducir el consumo eléctrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ahorro eléctrico es despreciable; el motivo es de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve un banner legal en /etc/issue?",
+      "respuestas": [
+        {
+          "texto": "Es el aviso que se muestra antes del login (consola y SSH); avisa de que el acceso no autorizado está prohibido, registrado y puede acarrear consecuencias legales. En muchos países es requisito previo para poder perseguir judicialmente un acceso no autorizado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No está pensado para disuadir atacantes; está para dejar constancia formal con valor probatorio."
+        },
+        {
+          "texto": "Es estético, sin función real.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tiene función legal real."
+        },
+        {
+          "texto": "Es para promocionar la imagen corporativa de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El banner es de aviso legal, no de marketing."
+        },
+        {
+          "texto": "Sirve para iniciar sesión sin contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es AppArmor y en qué se diferencia de los permisos UNIX clásicos?",
+      "respuestas": [
+        {
+          "texto": "Sistema MAC integrado en el kernel de Linux que aplica perfiles limitando lo que puede hacer un binario (ficheros, capabilities, red). Los permisos UNIX protegen al sistema del usuario; AppArmor protege al sistema del propio proceso, incluso cuando corre como root.",
+          "correcta": true,
+          "explicacion": "¡Correcto! AppArmor es la respuesta de Ubuntu/Debian a SELinux (Red Hat)."
+        },
+        {
+          "texto": "Es un antivirus comercial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor es MAC, no antivirus."
+        },
+        {
+          "texto": "Es un escáner de vulnerabilidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Lynis u OpenVAS; AppArmor es MAC."
+        },
+        {
+          "texto": "Es un firewall L4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor confina procesos, no filtra red."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué modos tiene AppArmor?",
+      "respuestas": [
+        {
+          "texto": "Enforce (aplica y bloquea), Complain/audit (no bloquea, solo registra qué habría bloqueado, útil para construir perfiles) y Disabled (perfil existe pero no se aplica).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Complain es esencial para crear/depurar perfiles sin romper servicios; enforce es el modo de producción."
+        },
+        {
+          "texto": "Solo modo \"on\" y modo \"off\".",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor tiene tres modos distintos."
+        },
+        {
+          "texto": "Diurno, nocturno y festivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los modos AppArmor no son temporales."
+        },
+        {
+          "texto": "Administrativo, usuario y root.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay modos por rol; hay por nivel de aplicación de la política."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace fail2ban?",
+      "respuestas": [
+        {
+          "texto": "Lee logs (SSH, Apache, etc.) y banea automáticamente IPs con muchos intentos fallidos; defensa anti-fuerza bruta básica pero efectiva.",
+          "correcta": true,
+          "explicacion": "¡Correcto! fail2ban es complemento típico de SSH y servicios expuestos."
+        },
+        {
+          "texto": "Es un firewall hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. fail2ban es software que actúa sobre logs."
+        },
+        {
+          "texto": "Es un sistema antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es antivirus."
+        },
+        {
+          "texto": "Es un gestor de actualizaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. fail2ban no actualiza paquetes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Si Apache ya está parcheado y bien configurado, qué aporta confinarlo con AppArmor?",
+      "respuestas": [
+        {
+          "texto": "Defensa en profundidad: la configuración de Apache asume que se comporta correctamente; AppArmor protege contra el caso en que se equivoca o es comprometido, impidiéndole leer ficheros fuera del perfil aunque consiga RCE como root.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es \"cinturón de seguridad para cuando el airbag falla\"."
+        },
+        {
+          "texto": "Nada; si Apache está parcheado, AppArmor es redundante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor añade una capa frente a vulnerabilidades futuras o fallos de configuración."
+        },
+        {
+          "texto": "Acelera el servidor web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor no acelera; añade verificación, no rendimiento."
+        },
+        {
+          "texto": "Cambia el puerto por defecto de Apache.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AppArmor no cambia puertos; confina accesos a recursos."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 10: UEFI, Secure Boot, TPM y arranque medido",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la diferencia entre Measured Boot y Trusted Boot?",
+      "respuestas": [
+        {
+          "texto": "Measured Boot mide (hashea) y registra en los PCRs del TPM, pero no bloquea. Trusted Boot verifica firmas y sí bloquea si algo no está firmado correctamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Resumen: Measured Boot es forense; Trusted Boot es policía."
+        },
+        {
+          "texto": "Measured Boot y Trusted Boot son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hacen cosas distintas y son complementarias."
+        },
+        {
+          "texto": "Measured Boot bloquea y Trusted Boot solo registra.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo al revés."
+        },
+        {
+          "texto": "Ambos cifran el disco antes del arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado lo hace BitLocker/LUKS, no estos mecanismos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los PCR del TPM?",
+      "respuestas": [
+        {
+          "texto": "Platform Configuration Registers: registros internos del TPM donde se almacenan medidas acumuladas (hashes) de los componentes cargados durante el arranque, no sobrescribibles, solo extendibles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los PCRs son la base del arranque medido y permiten sellar secretos a un estado conocido del sistema."
+        },
+        {
+          "texto": "Puertos de Comunicación Rápida.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PCR significa Platform Configuration Registers."
+        },
+        {
+          "texto": "Particiones de Cifrado Reservado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde a esa nomenclatura."
+        },
+        {
+          "texto": "Programas Criptográficos Residuales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor inventado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué BitLocker con \"solo TPM\" es vulnerable a ataques físicos y qué aporta añadir un PIN?",
+      "respuestas": [
+        {
+          "texto": "Con solo TPM la clave se libera automáticamente al verificar el arranque; el PIN añade un segundo factor (\"algo que sabes\") que cierra el ataque físico básico.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin PIN, cualquiera con acceso físico enciende y empieza a atacar Windows directamente."
+        },
+        {
+          "texto": "Solo TPM no es vulnerable a nada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es vulnerable a cold boot y ataques físicos directos."
+        },
+        {
+          "texto": "El PIN sustituye al TPM por completo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PIN se añade al TPM, no lo sustituye."
+        },
+        {
+          "texto": "El PIN cifra el disco con AES-512.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado lo hace BitLocker con XTS-AES; el PIN solo es un factor adicional."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué protege Credential Guard y por qué necesita VBS?",
+      "respuestas": [
+        {
+          "texto": "Aísla LSA y los secretos de autenticación (hashes NTLM, tickets Kerberos) en una VM segura gestionada por el hipervisor, mitigando Pass-the-Hash y Pass-the-Ticket; necesita VBS porque ese aislamiento se logra con virtualización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin VT-x/AMD-V y Secure Boot no hay garantía de integridad del hipervisor; el modelo se cae."
+        },
+        {
+          "texto": "Protege el escritorio del usuario de cambios visuales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Credential Guard no tiene relación con la apariencia."
+        },
+        {
+          "texto": "Almacena las credenciales en texto plano para fácil acceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: aísla y protege las credenciales."
+        },
+        {
+          "texto": "Bloquea cualquier intento de autenticación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Credential Guard no bloquea logins legítimos; protege los secretos almacenados."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta HVCI (Hypervisor-Protected Code Integrity)?",
+      "respuestas": [
+        {
+          "texto": "El hipervisor verifica que todo código en modo kernel esté firmado antes de cargarlo; bloquea drivers no firmados o revocados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! HVCI eleva la integridad del kernel; los drivers no firmados son rechazados."
+        },
+        {
+          "texto": "Cifra el contenido del disco con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es BitLocker, no HVCI."
+        },
+        {
+          "texto": "Acelera el arranque del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HVCI puede impactar ligeramente el rendimiento, no acelerarlo."
+        },
+        {
+          "texto": "Detecta automáticamente malware en navegadores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HVCI protege el modo kernel, no inspecciona navegadores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué motivos prácticos hay para separar el sistema (C:) y los datos (D:) en particiones distintas?",
+      "respuestas": [
+        {
+          "texto": "ACLs y auditoría diferenciadas, resiliencia (llenar D: no tira C:), restauración independiente del sistema y reducción de exposición cruzada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cuatro motivos prácticos: ACLs, resiliencia, restauración y exposición."
+        },
+        {
+          "texto": "Únicamente reducir el coste del disco duro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La separación no afecta al coste del hardware."
+        },
+        {
+          "texto": "Forzar el uso de cifrado en una de las particiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La separación no obliga a cifrar; ambas pueden o no cifrarse."
+        },
+        {
+          "texto": "Permitir arranques duales de varios sistemas operativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es otra finalidad distinta; aquí se trata de datos vs sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se pierde al usar BIOS legacy + MBR en lugar de UEFI + GPT?",
+      "respuestas": [
+        {
+          "texto": "Secure Boot, discos mayores de 2 TB, más de 4 particiones primarias, Measured Boot moderno, BitLocker sellado al estado del arranque vía TPM/PCR y la redundancia GPT.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Toda la cadena de confianza moderna depende de UEFI."
+        },
+        {
+          "texto": "Únicamente la interfaz gráfica del setup.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es solo cosmético; lo importante son las garantías criptográficas."
+        },
+        {
+          "texto": "El soporte de Wi-Fi en el firmware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Wi-Fi pertenece al SO, no a esta distinción."
+        },
+        {
+          "texto": "La capacidad de instalar Windows 10.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Windows 10 también se instala sobre BIOS legacy."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué se usa el Modo Seguro de Windows y qué carga (y qué no)?",
+      "respuestas": [
+        {
+          "texto": "Para diagnóstico, eliminación de malware y reversión de drivers. Carga solo el kernel, servicios esenciales y drivers genéricos imprescindibles. No carga drivers de terceros, servicios opcionales ni software de arranque automático.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Existen variantes (con red, con símbolo del sistema) según el diagnóstico necesario."
+        },
+        {
+          "texto": "Para acelerar el arranque del sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modo seguro arranca más despacio porque diagnostica; no es modo turbo."
+        },
+        {
+          "texto": "Para cifrar el disco antes de arrancar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es BitLocker, no el modo seguro."
+        },
+        {
+          "texto": "Para instalar nuevas aplicaciones desde la Microsoft Store.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El modo seguro es para mantenimiento/diagnóstico, no para instalar apps."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ofrece VBS (Virtualization-Based Security)?",
+      "respuestas": [
+        {
+          "texto": "Usa las extensiones de virtualización del procesador (VT-x/AMD-V) para ejecutar servicios críticos en un entorno aislado del SO; sobre VBS se montan Credential Guard y HVCI.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Requiere CPU con virtualización + Secure Boot; en VMs exige virtualización anidada en el host."
+        },
+        {
+          "texto": "Un sistema para virtualizar discos USB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VBS no virtualiza USB; aísla servicios críticos del SO."
+        },
+        {
+          "texto": "Un acelerador gráfico para Windows Server.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VBS no es un acelerador gráfico."
+        },
+        {
+          "texto": "El antivirus integrado en Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Microsoft Defender, no VBS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Dónde se debe custodiar la clave de recuperación de BitLocker en un entorno corporativo?",
+      "respuestas": [
+        {
+          "texto": "En un repositorio centralizado controlado por IT: típicamente Active Directory (msFVE-RecoveryInformation), Microsoft Entra ID o MBAM/Intune; nunca en el propio equipo ni junto a él.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La clave debe estar accesible al helpdesk pero fuera del alcance de quien tenga acceso físico al equipo cifrado."
+        },
+        {
+          "texto": "Impresa en un papel pegado al monitor del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es la peor práctica posible: regalar la clave al ladrón."
+        },
+        {
+          "texto": "En el escritorio del propio equipo cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si el equipo no arranca, la clave es inaccesible."
+        },
+        {
+          "texto": "En un canal de Telegram público.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Canales públicos no son medios de custodia adecuados."
+        }
+      ]
+    }
+  ]
+}

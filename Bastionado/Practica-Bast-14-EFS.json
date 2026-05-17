@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 14: Cifrado con EFS (Encrypting File System)",
+  "preguntas": [
+    {
+      "pregunta": "¿En qué se diferencia EFS conceptualmente de BitLocker o LUKS?",
+      "respuestas": [
+        {
+          "texto": "EFS cifra ficheros o carpetas individuales ligando la clave al perfil del usuario; BitLocker/LUKS cifran volúmenes enteros. EFS protege entre usuarios del mismo equipo; BitLocker/LUKS protegen contra extracción física del disco.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son respuestas a modelos de amenaza distintos, no productos que compitan."
+        },
+        {
+          "texto": "EFS es para Linux y BitLocker para Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS es de Windows; LUKS es el análogo de Linux para cifrado de volumen, no para EFS."
+        },
+        {
+          "texto": "EFS solo funciona en Windows Server.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS funciona en ediciones profesionales de Windows cliente y servidor."
+        },
+        {
+          "texto": "Son sinónimos exactos del mismo concepto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Atacan modelos de amenaza distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué problema concreto intenta resolver EFS que el cifrado de volumen no resuelve?",
+      "respuestas": [
+        {
+          "texto": "El de los equipos multiusuario: cuando dos personas comparten un Windows con cuentas distintas, BitLocker no las separa; EFS añade una capa criptográfica que ni siquiera el administrador local puede saltar sin el certificado correcto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El modelo es \"este usuario frente a los demás del mismo equipo\", incluyendo al administrador."
+        },
+        {
+          "texto": "El de proteger contra robo físico del portátil.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso lo cubre BitLocker, no EFS."
+        },
+        {
+          "texto": "El de cifrar el tráfico de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS es cifrado en disco, no de red."
+        },
+        {
+          "texto": "El de proteger contra ransomware en ejecución.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS no protege contra malware con privilegios suficientes ya ejecutándose."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo funciona EFS a alto nivel?",
+      "respuestas": [
+        {
+          "texto": "Genera una clave para el contenido y la envuelve con el certificado del usuario (en su almacén personal); al abrir, recupera la clave envuelta, la desenvuelve con la clave privada del perfil y descifra al vuelo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La clave la guarda el perfil del usuario, no un servicio centralizado del SO."
+        },
+        {
+          "texto": "Cifra todos los ficheros con la contraseña del usuario directamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS usa certificado X.509 con clave privada/pública, no la contraseña en sí."
+        },
+        {
+          "texto": "Cifra todo el disco con una clave única para todos los usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS es por fichero/carpeta y por usuario, no por disco."
+        },
+        {
+          "texto": "Almacena la clave en un servidor remoto obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave reside en el perfil local del usuario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el DRA (Agente de Recuperación de Datos) y por qué es crítico configurarlo antes de cifrar nada?",
+      "respuestas": [
+        {
+          "texto": "Un certificado adicional asociado al administrador o cuenta de recuperación, declarado como agente autorizado por política. Solo cubre ficheros cifrados DESPUÉS de su alta; configurarlo antes evita perder los ficheros si un usuario se va.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin DRA previo, los ficheros antiguos quedan sin red de seguridad."
+        },
+        {
+          "texto": "Es una herramienta de copias de seguridad automáticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DRA no son backups; es un certificado que actúa como segundo principal autorizado."
+        },
+        {
+          "texto": "Un servicio que sincroniza ficheros con OneDrive.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DRA no es sincronización; es recuperación criptográfica."
+        },
+        {
+          "texto": "Un módulo de antivirus integrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con antivirus."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se dice que BitLocker es más seguro que EFS si se trata de proteger los datos de un equipo en general?",
+      "respuestas": [
+        {
+          "texto": "Por dos motivos: alcance (BitLocker cifra TODO el volumen incluyendo paginación, hibernación y temporales; EFS solo ficheros marcados) y vinculación de clave (BitLocker al TPM, EFS al perfil del usuario).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para el escenario típico de robo, BitLocker cubre todo y EFS solo una parte vulnerable a rastros en swap/temp."
+        },
+        {
+          "texto": "Porque EFS no cifra realmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS sí cifra; sus limitaciones son de alcance y rastros."
+        },
+        {
+          "texto": "Porque BitLocker requiere menos hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker requiere TPM; EFS no necesita TPM."
+        },
+        {
+          "texto": "Porque BitLocker es gratuito y EFS de pago.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos vienen con ediciones Pro/Enterprise."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué EFS \"filtra\" información a través de ficheros temporales, paginación e hibernación?",
+      "respuestas": [
+        {
+          "texto": "Porque EFS cifra solo los ficheros marcados, pero el SO escribe constantemente en paginación, hibernación, temporales y thumbnails, donde pueden quedar fragmentos del contenido en claro.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La única forma de cerrar ese hueco es cifrando también el volumen completo (BitLocker)."
+        },
+        {
+          "texto": "Porque EFS envía datos a Microsoft por telemetría.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS no envía datos a Microsoft; el problema son los rastros locales."
+        },
+        {
+          "texto": "Porque EFS comparte la clave automáticamente con otros usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS no comparte claves de forma automática."
+        },
+        {
+          "texto": "Porque EFS no soporta NTFS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS está integrado precisamente en NTFS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Pueden combinarse EFS y BitLocker? ¿Tiene sentido hacerlo?",
+      "respuestas": [
+        {
+          "texto": "Sí, es la configuración recomendada en entornos profesionales: BitLocker como base general del volumen, EFS sobre carpetas especialmente sensibles para aislar usuarios internos, y DRA corporativo previo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cubren modelos de amenaza distintos: BitLocker = robo físico; EFS = aislamiento entre usuarios."
+        },
+        {
+          "texto": "No, son incompatibles entre sí.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son perfectamente combinables y complementarios."
+        },
+        {
+          "texto": "Sí, pero solo en Windows Home.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos requieren ediciones Pro/Enterprise/Education."
+        },
+        {
+          "texto": "Sí, pero entonces BitLocker pierde toda su utilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos suman; ninguno pierde utilidad al combinarse."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ocurre cuando se borra una cuenta de usuario que tenía ficheros cifrados con EFS?",
+      "respuestas": [
+        {
+          "texto": "Depende: si había DRA configurado antes, los ficheros son recuperables por el agente; si no, y nadie había exportado el certificado del usuario, los ficheros quedan inaccesibles de forma definitiva.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La clave privada vivía en el perfil borrado; sin DRA o copia de certificado, los datos se pierden."
+        },
+        {
+          "texto": "Los ficheros se descifran automáticamente para el administrador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El admin no puede acceder por defecto; necesita DRA o certificado del usuario."
+        },
+        {
+          "texto": "Los ficheros se transfieren automáticamente a otro usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EFS no transfiere ficheros automáticamente."
+        },
+        {
+          "texto": "Los ficheros siguen siendo accesibles para cualquier nuevo usuario con el mismo nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un usuario nuevo tendría un perfil distinto con claves distintas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el equivalente de EFS en Linux y por qué la respuesta no es tan limpia como entre BitLocker y LUKS?",
+      "respuestas": [
+        {
+          "texto": "No hay un equivalente único; existen eCryptfs y fscrypt (este último integrado en ext4/f2fs), pero no vienen activos por defecto y el modelo Unix de permisos ya resuelve mucho de lo que EFS aborda en Windows.",
+          "correcta": true,
+          "explicacion": "¡Correcto! EFS es \"muy windowsiano\": resuelve un problema cultural concreto de equipos compartidos con NTFS."
+        },
+        {
+          "texto": "El equivalente exacto se llama EFS-Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal componente con ese nombre."
+        },
+        {
+          "texto": "Es LUKS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LUKS es cifrado de volumen, no por fichero/carpeta."
+        },
+        {
+          "texto": "Linux no soporta ningún cifrado por fichero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí soporta (eCryptfs, fscrypt); simplemente no es la opción por defecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres mecanismos de cifrado se han visto y cómo se complementan entre sí?",
+      "respuestas": [
+        {
+          "texto": "Cifrado de volumen (BitLocker/LUKS) contra extracción física; cifrado del volumen del sistema sellado al arranque (TPM/Dropbear) para resolver el desbloqueo; EFS para aislar ficheros entre usuarios del mismo equipo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada uno cierra un modelo de amenaza distinto; un bastionado serio combina los tres."
+        },
+        {
+          "texto": "Los tres son redundantes y basta con uno cualquiera.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cada uno cubre lo que los otros no."
+        },
+        {
+          "texto": "Solo BitLocker es realmente necesario; los demás son optativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker no aísla usuarios entre sí; EFS sí."
+        },
+        {
+          "texto": "Solo aplican en entornos militares.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son aplicables a cualquier entorno con datos sensibles."
+        }
+      ]
+    }
+  ]
+}

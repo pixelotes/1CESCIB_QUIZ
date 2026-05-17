@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 2: Segmentación con VLANs (MikroTik + Cisco)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué define un puerto trunk frente a un puerto access en un switch gestionable?",
+      "respuestas": [
+        {
+          "texto": "El trunk transporta tráfico etiquetado 802.1Q de varias VLAN; el access lleva una sola VLAN sin etiqueta.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Trunk = multi-VLAN etiquetada (entre equipos de red); access = mono-VLAN sin etiqueta (hacia el endpoint)."
+        },
+        {
+          "texto": "El trunk solo soporta tráfico cifrado y el access tráfico en claro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ni trunk ni access cifran el tráfico; el cifrado es una capa superior."
+        },
+        {
+          "texto": "El trunk es solo para fibra óptica y el access para cobre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El medio físico no determina si un puerto es trunk o access."
+        },
+        {
+          "texto": "El access es L3 y el trunk es L2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son configuraciones de un puerto L2; no son niveles OSI distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se recomienda cambiar la VLAN nativa por defecto y no usar la VLAN 1 para tráfico real?",
+      "respuestas": [
+        {
+          "texto": "Para mitigar ataques de VLAN hopping (double tagging) que abusan de la VLAN nativa por defecto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El double tagging explota el hecho de que el primer tag se elimina si coincide con la VLAN nativa, permitiendo saltar a otra VLAN."
+        },
+        {
+          "texto": "Porque la VLAN 1 tiene un límite de 100 hosts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VLAN 1 no tiene un límite específico de 100 hosts."
+        },
+        {
+          "texto": "Porque Cisco cobra licencia adicional por usar la VLAN 1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VLAN 1 no tiene licencia adicional; es la VLAN por defecto."
+        },
+        {
+          "texto": "Porque la VLAN 1 no soporta etiquetado 802.1Q.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VLAN 1 soporta 802.1Q como cualquier otra; el problema es que se usa por defecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la práctica, ¿por qué se aísla totalmente la VLAN de CCTV (cámaras IP) del resto de la red?",
+      "respuestas": [
+        {
+          "texto": "Porque las cámaras IP suelen tener firmware vulnerable y son objetivo habitual de botnets (Mirai); aislarlas evita que sirvan de pivote.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las cámaras IP son sistemas embebidos con poca higiene de seguridad, blancos de botnets que las usan para pivotar a otras redes."
+        },
+        {
+          "texto": "Porque las cámaras consumen mucho ancho de banda y degradarían la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consumo de ancho de banda no es la motivación principal del aislamiento de seguridad."
+        },
+        {
+          "texto": "Porque las cámaras solo pueden funcionar en redes con IPv6.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cámaras IP funcionan típicamente con IPv4."
+        },
+        {
+          "texto": "Porque ningún switch soporta tráfico de vídeo en VLANs etiquetadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los switches soportan tráfico de vídeo en cualquier VLAN."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la técnica \"router-on-a-stick\" en una topología con VLANs?",
+      "respuestas": [
+        {
+          "texto": "Usar un único enlace físico hacia el router que transporta varias VLAN como sub-interfaces lógicas, cada una con su IP de gateway.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Router-on-a-stick concentra el inter-VLAN routing en un router por un solo trunk, ahorrando cableado y puertos."
+        },
+        {
+          "texto": "Conectar un router a cada switch con cables individuales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe una topología tradicional sin VLAN, no router-on-a-stick."
+        },
+        {
+          "texto": "Configurar dos routers en alta disponibilidad con VRRP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VRRP es alta disponibilidad de gateway; nada que ver con la técnica router-on-a-stick."
+        },
+        {
+          "texto": "Usar exclusivamente switches L3 sin necesidad de router.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería un L3 switching, distinto de router-on-a-stick."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué el modelo \"default deny\" (regla drop final en forward) se considera el correcto en seguridad?",
+      "respuestas": [
+        {
+          "texto": "Porque solo se permite lo autorizado explícitamente; lo no contemplado queda bloqueado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El default deny minimiza la superficie de ataque y obliga a documentar y razonar cada excepción."
+        },
+        {
+          "texto": "Porque acelera el reenvío de tráfico legítimo al saltarse comprobaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Default deny no acelera; aplica filtrado por excepción explícita."
+        },
+        {
+          "texto": "Porque elimina la necesidad de mantener logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs siguen siendo esenciales con default deny."
+        },
+        {
+          "texto": "Porque permite que cualquier nuevo servicio funcione sin tocar el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo al contrario: con default deny cada nuevo servicio exige una regla explícita."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué función cumple la regla \"accept established,related\" colocada al inicio del firewall?",
+      "respuestas": [
+        {
+          "texto": "Permite las respuestas al tráfico ya iniciado desde dentro, sin necesidad de reglas inversas explícitas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una regla típica de firewall stateful que acelera y simplifica el manejo del tráfico de retorno legítimo."
+        },
+        {
+          "texto": "Cifra automáticamente el tráfico de retorno con TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall no cifra; aplica políticas de paso o descarte."
+        },
+        {
+          "texto": "Bloquea por defecto todo el tráfico entrante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: permite el retorno de conexiones ya establecidas."
+        },
+        {
+          "texto": "Genera alertas para auditoría por cada paquete establecido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No genera alertas; solo permite tráfico ya autorizado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una VLAN de gestión y por qué se mantiene separada del tráfico de usuarios?",
+      "respuestas": [
+        {
+          "texto": "Una VLAN dedicada al acceso administrativo de equipos de red, aislada del tráfico de usuarios para que un atacante en la VLAN de usuarios no pueda alcanzar las IPs de gestión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Separar plano de control y plano de datos es clave: un usuario malicioso no debe siquiera ver las IPs de gestión."
+        },
+        {
+          "texto": "Es la VLAN que distribuye DHCP a los usuarios finales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La VLAN de gestión típicamente usa IPs fijas y no DHCP."
+        },
+        {
+          "texto": "Es la VLAN nativa por defecto (VLAN 1) del fabricante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Conviene precisamente NO usar la VLAN 1 para gestión por seguridad."
+        },
+        {
+          "texto": "Es la VLAN que enruta todo el tráfico hacia Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El enrutamiento a Internet lo hace el router; la VLAN de gestión suele estar deshabilitada hacia Internet."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué telnet se acepta en un laboratorio pero debe sustituirse por SSH en producción?",
+      "respuestas": [
+        {
+          "texto": "Porque telnet transmite credenciales y comandos en texto claro; SSH cifra el canal y autentica al servidor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Telnet expone contraseñas a cualquier sniffer; SSH protege confidencialidad e integridad de la sesión."
+        },
+        {
+          "texto": "Porque telnet no es compatible con switches Cisco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cisco soporta telnet, aunque se desaconseja en producción."
+        },
+        {
+          "texto": "Porque SSH es más rápido en transmitir comandos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no es la diferencia clave; lo es la seguridad."
+        },
+        {
+          "texto": "Porque telnet consume más ancho de banda que SSH.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos protocolos son ligeros; no es una cuestión de ancho de banda."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se logra que los equipos finales no se vean entre sí ni dentro de su misma VLAN ni con otras VLANs?",
+      "respuestas": [
+        {
+          "texto": "Mediante reglas que solo permiten salida a Internet desde cada VLAN, no permiten tráfico inter-VLAN, y técnicas como port isolation/PVLAN dentro de la propia VLAN.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Combinando filtrado L3 inter-VLAN con aislamiento L2 dentro de la VLAN se reduce drásticamente el movimiento lateral."
+        },
+        {
+          "texto": "Cifrando todo el tráfico con WPA3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. WPA3 protege el medio inalámbrico; no aísla hosts cableados."
+        },
+        {
+          "texto": "Asignando a cada host una IP pública distinta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. IPs públicas no aíslan hosts entre sí; lo hace la segmentación."
+        },
+        {
+          "texto": "Desactivando el firewall del router para evitar conflictos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall es precisamente la pieza que impone el aislamiento; desactivarlo sería contraproducente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace la función \"masquerade\" (NAT srcnat) en el router MikroTik?",
+      "respuestas": [
+        {
+          "texto": "Traduce las IPs privadas internas a la IP pública del router para que las respuestas vuelvan correctamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una forma de Source NAT que reescribe la IP origen con la IP de la interfaz de salida del router."
+        },
+        {
+          "texto": "Cifra el tráfico saliente con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NAT no cifra; solo reescribe direcciones."
+        },
+        {
+          "texto": "Asigna IPs estáticas a los hosts internos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es función del DHCP/configuración local, no de NAT masquerade."
+        },
+        {
+          "texto": "Bloquea cualquier conexión iniciada desde Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NAT no bloquea por sí mismo; lo hace el firewall, aunque NAT añade dificultad de iniciar conexiones entrantes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 11: Protección del gestor de arranque GRUB",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué papel juega GRUB en el arranque de un sistema Linux?",
+      "respuestas": [
+        {
+          "texto": "Es el gestor de arranque que, una vez el firmware le cede el control, localiza el kernel, lo carga en memoria y lo arranca con los parámetros adecuados, presentando un menú si hay varios sistemas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! GRUB se ejecuta entre el firmware y el SO, con privilegios totales sobre el hardware antes del SO."
+        },
+        {
+          "texto": "Es el kernel de Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB es el gestor de arranque; el kernel es lo que GRUB carga."
+        },
+        {
+          "texto": "Es el sistema de ficheros raíz.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB no es un sistema de ficheros."
+        },
+        {
+          "texto": "Es el firmware UEFI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UEFI es anterior; GRUB se ejecuta después del firmware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo puede un atacante con acceso físico al teclado obtener una shell de root si GRUB no está protegido?",
+      "respuestas": [
+        {
+          "texto": "Pulsar 'e' sobre una entrada y añadir 'init=/bin/bash' a la línea del kernel, o entrar en Advanced options → recovery mode (Single User) que lanza una shell de root.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta técnica está catalogada en MITRE ATT&CK como T1542 (Pre-OS Boot)."
+        },
+        {
+          "texto": "Solo puede hacerlo si conoce la contraseña de root del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo eso es lo que evita; sin proteger GRUB se salta cualquier autenticación del SO."
+        },
+        {
+          "texto": "Necesita arrancar un USB live obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin proteger GRUB basta con el teclado del equipo."
+        },
+        {
+          "texto": "No es posible obtener root sin contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin proteger GRUB sí es posible y trivial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es PBKDF2 y por qué se usa en GRUB?",
+      "respuestas": [
+        {
+          "texto": "Password-Based Key Derivation Function 2: aplica sal aleatoria + miles de iteraciones de SHA-512 para hacer cada intento costoso, ralentizando fuerza bruta y bloqueando rainbow tables.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aunque alguien lea el fichero de configuración, romper el hash es computacionalmente caro."
+        },
+        {
+          "texto": "Un protocolo de cifrado simétrico para discos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PBKDF2 es derivación de claves, no cifrado simétrico de discos."
+        },
+        {
+          "texto": "Un algoritmo de compresión para particiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es compresión; es derivación de claves."
+        },
+        {
+          "texto": "Un protocolo de red para autenticación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es de red."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve el flag --unrestricted en GRUB?",
+      "respuestas": [
+        {
+          "texto": "Marca una entrada como \"arranque libre, edición protegida\": cualquiera puede arrancarla, pero pulsar 'e' o entrar a opciones avanzadas sigue requiriendo autenticación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Permite arranque automático sin password pero menú protegido (típico en servidores)."
+        },
+        {
+          "texto": "Elimina toda autenticación del menú GRUB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La autenticación sigue para editar, solo se libera el arranque."
+        },
+        {
+          "texto": "Permite arrancar cualquier SO sin firma.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es asunto de Secure Boot, no de --unrestricted."
+        },
+        {
+          "texto": "Bloquea totalmente el modo recovery.",
+          "correcta": false,
+          "explicacion": "Incorrecto. --unrestricted no bloquea recovery; libera el arranque."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué proteger root con contraseña aunque GRUB ya esté protegido?",
+      "respuestas": [
+        {
+          "texto": "Es defensa en profundidad: si alguien sortea GRUB y llega al modo recovery, la shell de root pedirá autenticación. Por defecto en Ubuntu root no tiene contraseña.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ubuntu usa sudo; sin asignar contraseña a root explícitamente, recovery da shell sin pedir nada."
+        },
+        {
+          "texto": "Porque GRUB no puede proteger las entradas del menú.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB sí protege las entradas; root password es capa adicional."
+        },
+        {
+          "texto": "Porque Ubuntu obliga a tener contraseña de root por defecto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: por defecto root no tiene contraseña."
+        },
+        {
+          "texto": "Porque la contraseña de root cifra el disco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contraseña de root no cifra; el cifrado es LUKS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué nunca se edita directamente /boot/grub/grub.cfg?",
+      "respuestas": [
+        {
+          "texto": "Porque es un fichero generado automáticamente por update-grub a partir de /etc/default/grub y /etc/grub.d/; cualquier cambio manual se pierde al regenerarlo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La regla es editar en /etc/ y luego ejecutar update-grub; grub.cfg es un artefacto compilado."
+        },
+        {
+          "texto": "Porque grub.cfg está cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No está cifrado; es texto plano legible."
+        },
+        {
+          "texto": "Porque solo el kernel puede leerlo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lo lee GRUB, no el kernel; cualquier usuario root puede leerlo."
+        },
+        {
+          "texto": "Porque editarlo activa el modo recovery automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No activa nada; simplemente sus cambios se sobrescriben al regenerar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué proteger GRUB con contraseña no es suficiente y hay que añadir medidas a nivel BIOS?",
+      "respuestas": [
+        {
+          "texto": "Porque un atacante puede insertar un USB live, arrancar desde ahí, montar el disco interno y leerlo/modificarlo al margen de GRUB.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para cerrar ese vector hay que actuar en firmware: contraseña Supervisor + restricción del orden de arranque al disco interno."
+        },
+        {
+          "texto": "Porque GRUB no soporta hash PBKDF2.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB sí soporta PBKDF2; el problema es el USB live, no el hash."
+        },
+        {
+          "texto": "Porque GRUB no puede ejecutarse sin BIOS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GRUB se ejecuta tras el firmware; el motivo es otro."
+        },
+        {
+          "texto": "Porque la contraseña de GRUB caduca a los 7 días.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La contraseña de GRUB no caduca automáticamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se aplican permisos chmod 400 a /boot/grub/grub.cfg?",
+      "respuestas": [
+        {
+          "texto": "Para impedir que un usuario sin privilegios lea el hash PBKDF2 del fichero y se lo lleve a otra máquina para hacer fuerza bruta sin presión de tiempo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por defecto grub.cfg es legible por cualquier usuario; chmod 400 limita la lectura a root."
+        },
+        {
+          "texto": "Para que el fichero sea ejecutable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 400 es solo lectura para root, no ejecución."
+        },
+        {
+          "texto": "Para acelerar el arranque del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El permiso no afecta a la velocidad."
+        },
+        {
+          "texto": "Para que update-grub funcione más rápido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. update-grub regenera el fichero como root; el permiso del fichero generado no afecta a esa generación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta la contraseña de Supervisor en BIOS al bastionado del arranque?",
+      "respuestas": [
+        {
+          "texto": "Bloquea la entrada al setup del firmware: sin ella nadie puede cambiar el orden de arranque, deshabilitar Secure Boot ni (en muchos fabricantes) flashear el firmware. Es la raíz de confianza del bastionado físico.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin la contraseña de Supervisor, todas las medidas superiores son derrotables."
+        },
+        {
+          "texto": "Cifra automáticamente el disco con BitLocker.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No cifra el disco; bloquea el acceso al setup."
+        },
+        {
+          "texto": "Habilita el arranque PXE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PXE se habilita/deshabilita en el setup; la contraseña protege el acceso."
+        },
+        {
+          "texto": "Sustituye a la contraseña del usuario en Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son contraseñas independientes con ámbitos distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por \"defensa en profundidad\" aplicada al arranque seguro?",
+      "respuestas": [
+        {
+          "texto": "Superponer varias capas de control independientes (contraseña BIOS, orden de arranque restringido, GRUB con hash, --unrestricted solo en entrada legítima, contraseña root, permisos 400 sobre grub.cfg) para que un atacante tenga que vencerlas todas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ninguna capa por sí sola basta; el conjunto convierte un ataque trivial en uno costoso y ruidoso."
+        },
+        {
+          "texto": "Usar exclusivamente Secure Boot sin otras medidas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una sola capa no es defensa en profundidad."
+        },
+        {
+          "texto": "Cifrar todo el disco con dos claves distintas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso no es defensa en profundidad; es solo cifrado doble en la misma capa."
+        },
+        {
+          "texto": "Tener dos administradores que verifiquen mutuamente sus cambios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es separación de funciones, no defensa en profundidad del arranque."
+        }
+      ]
+    }
+  ]
+}

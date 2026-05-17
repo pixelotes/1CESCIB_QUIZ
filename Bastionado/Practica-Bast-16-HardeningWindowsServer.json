@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 16: Hardening de Windows Server",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es el hardening (fortificación) de un sistema y qué incluye?",
+      "respuestas": [
+        {
+          "texto": "Conjunto de técnicas y configuraciones que reducen la superficie de ataque del SO: desactivar lo innecesario, restringir lo activo, mantener todo parcheado y añadir capas de detección.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una postura permanente, no un parche puntual."
+        },
+        {
+          "texto": "Únicamente instalar un antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El antivirus es una capa más; hardening es mucho más amplio."
+        },
+        {
+          "texto": "Cifrar todos los discos del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser parte; no define el hardening."
+        },
+        {
+          "texto": "Cambiar la contraseña del administrador cada día.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una medida específica; no es la definición de hardening."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un CVE?",
+      "respuestas": [
+        {
+          "texto": "Common Vulnerabilities and Exposures: identificador estándar y único para una vulnerabilidad pública conocida, formato CVE-AAAA-NNNNN, que permite a fabricantes y defensores hablar el mismo idioma.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada CVE identifica de forma unívoca una vulnerabilidad concreta."
+        },
+        {
+          "texto": "Un protocolo de cifrado simétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CVE no es un protocolo."
+        },
+        {
+          "texto": "Una herramienta de auditoría.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un sistema de identificadores, no una herramienta."
+        },
+        {
+          "texto": "Un certificado X.509.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un certificado digital, no un CVE."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre RCE y EoP?",
+      "respuestas": [
+        {
+          "texto": "RCE (Remote Code Execution): atacante ejecuta código sin tener cuenta previa (peor escenario). EoP (Elevation of Privilege): ya está dentro con privilegios bajos y sube a admin/SYSTEM.",
+          "correcta": true,
+          "explicacion": "¡Correcto! RCE es entrada inicial; EoP es movimiento vertical interno."
+        },
+        {
+          "texto": "Son sinónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tipos de vulnerabilidad distintos."
+        },
+        {
+          "texto": "RCE solo afecta a Linux y EoP solo a Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican a cualquier SO."
+        },
+        {
+          "texto": "RCE es offline y EoP online.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden ser ambos; no es la diferencia clave."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es Patch Tuesday?",
+      "respuestas": [
+        {
+          "texto": "El segundo martes de cada mes, cuando Microsoft publica su ciclo regular de actualizaciones de seguridad. La buena práctica es aplicar los críticos en los 15 días siguientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la cadencia conocida; los CVEs críticos suelen tener exploit público en cuestión de días."
+        },
+        {
+          "texto": "El primer martes del trimestre fiscal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es el segundo martes de cada mes, no del trimestre."
+        },
+        {
+          "texto": "El día que Microsoft retira soporte de Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los End-of-Support; Patch Tuesday es la cadencia mensual de parches."
+        },
+        {
+          "texto": "Un protocolo de actualización automática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Patch Tuesday es una cadencia, no un protocolo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué herramienta usarías para auditar las vulnerabilidades de un Windows y comparar con la base de Microsoft?",
+      "respuestas": [
+        {
+          "texto": "Windows Exploit Suggester - Next Generation (WES-NG): compara la salida de systeminfo con la base pública de CVEs y devuelve parches faltantes y exploits conocidos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! WES-NG es ligero, gratuito y útil para una foto inicial del estado."
+        },
+        {
+          "texto": "Wireshark.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Wireshark es analizador de red, no auditor de CVEs."
+        },
+        {
+          "texto": "fail2ban.",
+          "correcta": false,
+          "explicacion": "Incorrecto. fail2ban detecta fuerza bruta a partir de logs, no audita CVEs."
+        },
+        {
+          "texto": "BitLocker.",
+          "correcta": false,
+          "explicacion": "Incorrecto. BitLocker es cifrado de disco, no auditoría."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo distribuirías parches en una organización con muchos Windows?",
+      "respuestas": [
+        {
+          "texto": "Con WSUS (Windows Server Update Services) o equivalente: un servidor centralizado descarga las actualizaciones una vez y las distribuye a los clientes según política, controlado por GPO.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las máquinas se configuran por GPO para descargar e instalar automáticamente fuera del horario laboral."
+        },
+        {
+          "texto": "Dejando Windows Update en manual y confiando en cada usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Manual depende de la diligencia humana y acumula retrasos peligrosos."
+        },
+        {
+          "texto": "Enviando un USB con los parches a cada empleado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor; no es escalable ni controlable."
+        },
+        {
+          "texto": "Imprimiendo los parches en papel para cada PC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente; los parches son software."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es PrintNightmare y por qué se cita siempre?",
+      "respuestas": [
+        {
+          "texto": "Vulnerabilidad RCE en Print Spooler de Windows (CVE-2021-34527) que permitía ejecución remota como SYSTEM; es el ejemplo de libro de \"servicio activado por defecto que nadie usa pero todos exponen\".",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la justificación clásica de deshabilitar Print Spooler en servidores que no imprimen."
+        },
+        {
+          "texto": "Un virus famoso de los años 90.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una vulnerabilidad de 2021."
+        },
+        {
+          "texto": "Una herramienta de impresión legítima.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una vulnerabilidad de Print Spooler, no una herramienta."
+        },
+        {
+          "texto": "Un ataque DDoS contra impresoras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un RCE, no un DDoS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué configurar el firewall del propio servidor si ya hay firewall perimetral?",
+      "respuestas": [
+        {
+          "texto": "Defensa en profundidad: el perimetral protege del exterior pero no del movimiento lateral dentro de la LAN; el firewall de host limita comunicaciones también dentro del segmento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si un puesto de la LAN se infecta, sin firewall de host puede atacar libremente al resto."
+        },
+        {
+          "texto": "Es redundante e innecesario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es complementario, no redundante."
+        },
+        {
+          "texto": "Sustituye al perimetral por completo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No sustituye; complementa."
+        },
+        {
+          "texto": "Solo es para cumplir auditorías, sin valor técnico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tiene valor técnico real frente al movimiento lateral."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventajas tiene desplegar un agente de seguridad por GPO frente a instalación manual en 100 endpoints?",
+      "respuestas": [
+        {
+          "texto": "Cobertura total y auditable, tiempo plano (igual de rápido a 10 que a 1000 equipos), imposible saltárselo, trazabilidad en el log de eventos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al depender del arranque, todos los equipos del dominio reciben el agente sin intervención del usuario."
+        },
+        {
+          "texto": "Es más lento que la instalación manual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es más rápido y escala mejor."
+        },
+        {
+          "texto": "Requiere desplazarse físicamente a cada equipo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo que evita."
+        },
+        {
+          "texto": "Solo funciona con 10 endpoints.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Escala a miles de equipos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre un antivirus tradicional y un EDR?",
+      "respuestas": [
+        {
+          "texto": "El antivirus clásico detecta por firmas conocidas; el EDR monitoriza comportamiento en tiempo real (procesos, conexiones, ficheros), reconstruye la cadena del incidente y permite respuesta automática (aislar equipo, matar procesos, revertir cambios).",
+          "correcta": true,
+          "explicacion": "¡Correcto! EDR detecta amenazas desconocidas y ataques fileless, donde el antivirus tradicional es ciego."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EDR es una generación posterior con capacidades muy distintas."
+        },
+        {
+          "texto": "El EDR solo funciona en Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. EDR existe para Windows, Linux y macOS."
+        },
+        {
+          "texto": "El antivirus es más caro que el EDR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El EDR suele tener mayor coste por su mayor capacidad."
+        }
+      ]
+    }
+  ]
+}

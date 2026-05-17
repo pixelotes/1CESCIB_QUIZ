@@ -1,0 +1,13 @@
+.git
+.gitignore
+.github
+.vscode
+.idea
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+.DS_Store
+__pycache__
+*.pyc
+quizzes.json

@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 9: BIOS - Análisis y fortificación del firmware",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre BIOS y UEFI desde el punto de vista de la seguridad?",
+      "respuestas": [
+        {
+          "texto": "UEFI soporta verificación criptográfica del código en el arranque (Secure Boot), GPT, comunicación con TPM y arranque medido; la BIOS legacy no.",
+          "correcta": true,
+          "explicacion": "¡Correcto! UEFI es la base sobre la que se construye la cadena de confianza moderna."
+        },
+        {
+          "texto": "La BIOS tiene interfaz gráfica y UEFI no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al revés: UEFI ofrece interfaz gráfica; la BIOS legacy es texto."
+        },
+        {
+          "texto": "UEFI es para servidores y BIOS para PCs domésticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UEFI es el estándar moderno en cualquier tipo de equipo."
+        },
+        {
+          "texto": "BIOS soporta discos mayores de 2 TB y UEFI no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario; UEFI/GPT soporta discos grandes, BIOS/MBR está limitada a 2 TB."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es importante fortificar el firmware si el sistema operativo ya está protegido?",
+      "respuestas": [
+        {
+          "texto": "Porque el firmware se ejecuta antes que el SO y a nivel superior; un atacante que lo comprometa gana persistencia por debajo del SO y sobrevive a reinstalaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los antivirus/EDR clásicos no ven lo que pasa en el firmware; un bootkit puede manipular el arranque permanentemente."
+        },
+        {
+          "texto": "Porque el firmware consume mucha memoria RAM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firmware consume muy poca RAM; no es esa la motivación."
+        },
+        {
+          "texto": "Porque sin fortificar el firmware no se puede instalar Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Windows se instala incluso sin fortificación; la motivación es de seguridad."
+        },
+        {
+          "texto": "Porque el firmware cifra automáticamente todos los discos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado lo aplica BitLocker/LUKS, no el firmware por sí mismo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es Secure Boot y cómo funciona?",
+      "respuestas": [
+        {
+          "texto": "Mecanismo UEFI que verifica criptográficamente la firma de cada componente que se carga durante el arranque (bootloader, kernel, drivers boot-start) usando bases de claves PK, KEK, DB y DBX.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el binario no está firmado por una clave en DB (o está en DBX), no se ejecuta. Es lo que evita bootkits."
+        },
+        {
+          "texto": "Una contraseña que bloquea el arranque del equipo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la contraseña Power-On; Secure Boot es verificación criptográfica."
+        },
+        {
+          "texto": "Un escáner de virus que se ejecuta antes del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Secure Boot verifica firmas, no compara con base de firmas de virus."
+        },
+        {
+          "texto": "Un sistema para cifrar el disco antes del arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es BitLocker; Secure Boot verifica integridad del código de arranque."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el TPM y para qué sirve?",
+      "respuestas": [
+        {
+          "texto": "Un chip criptográfico (físico o fTPM) que almacena claves, ejecuta primitivas criptográficas de forma aislada, mantiene PCRs del arranque medido y sirve como anclaje para BitLocker/LUKS.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El TPM es la raíz de confianza hardware; sus claves nunca salen del chip."
+        },
+        {
+          "texto": "Una memoria RAM adicional para acelerar el arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TPM no es memoria del sistema; es un chip criptográfico independiente."
+        },
+        {
+          "texto": "Un disco SSD que protege el sector de arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TPM no es un disco; es un chip dedicado."
+        },
+        {
+          "texto": "Un módulo de red para arranque PXE seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TPM no se relaciona con la red ni con PXE."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el CSM y por qué se recomienda deshabilitarlo?",
+      "respuestas": [
+        {
+          "texto": "Compatibility Support Module: emula la BIOS para arrancar SO antiguos o cargar Option ROMs no firmadas; rompe la cadena de confianza al permitir ejecutar código legacy sin verificación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el SO y dispositivos soportan UEFI nativo, CSM debe estar Disabled y el modo en UEFI Only."
+        },
+        {
+          "texto": "Una memoria flash adicional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CSM es un módulo lógico de UEFI, no hardware."
+        },
+        {
+          "texto": "Un sistema de gestión centralizada de contraseñas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CSM no gestiona contraseñas."
+        },
+        {
+          "texto": "El antivirus integrado en UEFI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UEFI no incluye antivirus; CSM es un módulo de compatibilidad legacy."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres niveles de contraseña ofrece típicamente una BIOS y qué protege cada uno?",
+      "respuestas": [
+        {
+          "texto": "Supervisor (acceso al setup), Power-On (arranque del equipo) y HDD Password (acceso al disco a nivel hardware).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Lo recomendable es establecer las tres, distintas entre sí, con custodia centralizada."
+        },
+        {
+          "texto": "Root, user y guest.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso son usuarios típicos de SO Linux, no contraseñas de BIOS."
+        },
+        {
+          "texto": "Administrador, invitado y servicio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde a la nomenclatura típica de BIOS."
+        },
+        {
+          "texto": "Web, SSH y consola.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son protocolos de gestión remota, no contraseñas de BIOS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es Secure RollBack Prevention (SRP)?",
+      "respuestas": [
+        {
+          "texto": "Protección que impide instalar versiones de firmware anteriores a la actual, aunque estén firmadas, para bloquear ataques de downgrade a versiones vulnerables conocidas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin SRP, un atacante podría reinstalar firmware oficial pero viejo para explotar vulnerabilidades parcheadas."
+        },
+        {
+          "texto": "Un sistema que revierte automáticamente cambios sospechosos en el SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SRP es de firmware, no de SO."
+        },
+        {
+          "texto": "Una caché para acelerar el arranque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SRP no es una caché."
+        },
+        {
+          "texto": "Un protector de pantalla con cuenta atrás.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué desactivar el arranque por red (PXE/Network Stack) si no se usa?",
+      "respuestas": [
+        {
+          "texto": "Porque cualquier capacidad activa es superficie de ataque: la pila de red UEFI tiene su propio código con posibles vulnerabilidades; un atacante en el segmento podría suministrar una imagen PXE maliciosa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el equipo no necesita arrancar por red, Network Stack debe estar Disabled y la red eliminada de la lista de arranque."
+        },
+        {
+          "texto": "Porque PXE consume todo el ancho de banda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es de seguridad, no de ancho de banda."
+        },
+        {
+          "texto": "Porque la pila de red UEFI ralentiza el arranque del SO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El impacto en velocidad no es la motivación principal."
+        },
+        {
+          "texto": "Porque PXE solo soporta IPv4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PXE puede soportar IPv6 (en versiones modernas); no es la motivación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué categorías de ataque contra BIOS/UEFI identifica CCN-CERT?",
+      "respuestas": [
+        {
+          "texto": "Iniciados por el usuario (acceso físico), iniciados por software dañino (malware con privilegios que explota vulnerabilidades del firmware) y basados en red (cadena de suministro).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Implantes como LoJax, MoonBounce o BlackLotus son ejemplos del segundo tipo."
+        },
+        {
+          "texto": "Solo malware en formato ejecutable .exe.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los ataques de firmware no se limitan a .exe."
+        },
+        {
+          "texto": "Únicamente DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DDoS afecta a disponibilidad de servicios, no a firmware."
+        },
+        {
+          "texto": "Solo phishing por correo electrónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Phishing es otro vector distinto del ataque al firmware."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué ninguna fortificación técnica del firmware sustituye al control del acceso físico?",
+      "respuestas": [
+        {
+          "texto": "Con acceso físico prolongado un atacante puede extraer el chip de BIOS y reflashearlo en un programador externo (evil maid), conectarse al puerto de depuración o robar el equipo entero.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las medidas técnicas elevan coste y tiempo del ataque, pero asumen ausencia de acceso físico permanente."
+        },
+        {
+          "texto": "Porque el firmware no se puede actualizar nunca.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firmware sí se actualiza; la cuestión es la posibilidad de manipulación física."
+        },
+        {
+          "texto": "Porque las contraseñas siempre se olvidan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La gestión de contraseñas es un problema operativo distinto."
+        },
+        {
+          "texto": "Porque el firmware no soporta cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UEFI soporta firmas y verificación criptográfica; el problema es el ataque físico directo."
+        }
+      ]
+    }
+  ]
+}

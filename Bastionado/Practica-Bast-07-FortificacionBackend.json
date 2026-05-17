@@ -1,0 +1,255 @@
+{
+  "tema": "Bastionado - Práctica 7: Fortificación del Backend MikroTik + DoS/SYN flood + WAF",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es \"bastionar\" (hardening) un dispositivo de red?",
+      "respuestas": [
+        {
+          "texto": "Endurecer la configuración para minimizar la superficie de ataque: apagar lo innecesario, restringir lo necesario y aplicar configuración segura por defecto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Bastionar no es un parche puntual, es una postura permanente de configuración."
+        },
+        {
+          "texto": "Instalar un antivirus en el equipo de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los equipos de red no tienen antivirus al uso; bastionar es una práctica de configuración."
+        },
+        {
+          "texto": "Cifrar todo el almacenamiento del dispositivo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser parte del bastionado, pero no lo define."
+        },
+        {
+          "texto": "Reiniciar el dispositivo semanalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Reiniciar no reduce la superficie de ataque."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los CIS Controls y para qué sirven?",
+      "respuestas": [
+        {
+          "texto": "Un catálogo priorizado de controles de seguridad mantenido por el Center for Internet Security, ordenado por impacto, que sirve como hoja de ruta accionable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No es una norma certificable como ISO 27001; es una guía con controles concretos y priorizados."
+        },
+        {
+          "texto": "Una certificación obligatoria por la Unión Europea para todos los CISO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es obligatoria ni una certificación personal."
+        },
+        {
+          "texto": "Un protocolo de cifrado patentado por Cisco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CIS y Cisco son entidades distintas; CIS Controls no es un protocolo."
+        },
+        {
+          "texto": "Un sistema de gestión de incidentes propietario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CIS Controls es un catálogo de buenas prácticas, no un sistema de gestión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre un ataque DoS y un DDoS?",
+      "respuestas": [
+        {
+          "texto": "DoS proviene de una sola fuente; DDoS es distribuido desde muchas fuentes simultáneamente (botnet), lo que hace mucho más difícil bloquear simplemente \"la IP atacante\".",
+          "correcta": true,
+          "explicacion": "¡Correcto! DDoS exige normalmente servicios anti-DDoS upstream porque no se puede bloquear una sola IP."
+        },
+        {
+          "texto": "DoS afecta a servidores y DDoS a clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos atacan disponibilidad; la diferencia es la cantidad de fuentes."
+        },
+        {
+          "texto": "DoS es ilegal y DDoS no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son ilegales sin autorización."
+        },
+        {
+          "texto": "DoS solo funciona con TCP y DDoS solo con UDP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos pueden usar cualquier protocolo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo funciona un ataque SYN flood?",
+      "respuestas": [
+        {
+          "texto": "El atacante envía muchos SYN con IP origen falsificada sin responder al SYN-ACK; la tabla de conexiones semi-abiertas se llena y el servidor rechaza nuevas conexiones legítimas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mitigaciones: SYN cookies, rate-limiting de SYN, descartar SYN sospechosos en la tabla raw antes del tracking."
+        },
+        {
+          "texto": "El atacante envía paquetes HTTP GET masivos a la web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese sería un HTTP flood, no un SYN flood."
+        },
+        {
+          "texto": "El atacante cifra los SYN con AES para que el servidor no los entienda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SYN flood no cifra; explota el handshake TCP."
+        },
+        {
+          "texto": "El atacante envía paquetes a la dirección broadcast.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa técnica es un Smurf attack, no SYN flood."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué descartar tráfico de ataque masivo en la tabla raw de MikroTik en lugar de en filter?",
+      "respuestas": [
+        {
+          "texto": "Porque raw se ejecuta antes del connection tracking; descartar allí ahorra CPU y RAM del propio firewall, evitando que muera víctima del ataque.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada paquete que llega a filter consume tracking; en una inundación, eso tira al firewall."
+        },
+        {
+          "texto": "Porque raw permite cifrar el tráfico antes de descartarlo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. raw no cifra; descarta antes del tracking."
+        },
+        {
+          "texto": "Porque filter no soporta drops, solo accepts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. filter sí soporta drop; la cuestión es la eficiencia."
+        },
+        {
+          "texto": "Porque solo en raw se pueden registrar logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tanto raw como filter pueden registrar logs."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un WAF y en qué se diferencia de un firewall tradicional?",
+      "respuestas": [
+        {
+          "texto": "Un WAF inspecciona tráfico HTTP/HTTPS a nivel de aplicación (capa 7); un firewall tradicional filtra por IP/puerto/protocolo (capas 3-4) sin entender el contenido.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son complementarios: el firewall deja pasar el 443, el WAF examina qué viaja dentro."
+        },
+        {
+          "texto": "Un WAF sustituye al firewall perimetral; son el mismo concepto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son complementarios, no sustitutos."
+        },
+        {
+          "texto": "Un WAF solo bloquea ataques DoS volumétricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El WAF se centra en ataques específicos de aplicación web (SQLi, XSS, traversal)."
+        },
+        {
+          "texto": "Un WAF cifra todo el tráfico de la red interna.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El WAF inspecciona, no cifra."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es ModSecurity y cómo se complementa con OWASP CRS?",
+      "respuestas": [
+        {
+          "texto": "ModSecurity es el motor WAF (módulo para Apache/Nginx) y OWASP CRS es el conjunto de reglas mantenido por OWASP que detecta los ataques web comunes; juntos forman un WAF funcional.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin reglas, ModSecurity no hace nada útil; CRS las trae de fábrica con scoring y niveles de paranoia configurables."
+        },
+        {
+          "texto": "Son sinónimos; ambos hacen exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Uno es motor, el otro es el conjunto de reglas."
+        },
+        {
+          "texto": "ModSecurity es una base de datos y OWASP CRS es un IDE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ni uno ni otro son base de datos o IDE."
+        },
+        {
+          "texto": "OWASP CRS solo funciona con Apache, no con Nginx.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CRS funciona con ModSecurity en Apache, Nginx, IIS y Coraza."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipos de ataque web típicos detecta un WAF?",
+      "respuestas": [
+        {
+          "texto": "SQL injection, XSS, directory traversal, command injection, RFI/LFI, los típicos del OWASP Top 10.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son las familias de ataque de capa 7 más típicas en aplicaciones web."
+        },
+        {
+          "texto": "Únicamente DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DDoS volumétrico se mitiga con otras capas, no con WAF."
+        },
+        {
+          "texto": "Ataques de capa 2 como ARP Poisoning.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El WAF actúa en capa 7, no en L2."
+        },
+        {
+          "texto": "Únicamente fuerza bruta SSH.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSH no pasa por un WAF web; lo gestiona fail2ban u otros."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es OWASP y qué es el OWASP Top 10?",
+      "respuestas": [
+        {
+          "texto": "OWASP es una fundación sin ánimo de lucro centrada en seguridad de software; el Top 10 es su ranking de los diez riesgos más críticos en aplicaciones web.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Top 10 se actualiza cada pocos años y es referencia de facto para desarrolladores y auditores."
+        },
+        {
+          "texto": "Una empresa privada con sede en EEUU que vende WAFs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. OWASP es una fundación abierta, no una empresa privada de WAFs."
+        },
+        {
+          "texto": "Una norma ISO obligatoria desde 2020.",
+          "correcta": false,
+          "explicacion": "Incorrecto. OWASP no es una norma ISO."
+        },
+        {
+          "texto": "Un protocolo de cifrado de aplicaciones móviles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. OWASP es una fundación; no es un protocolo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué servicios típicos se deshabilitan en un MikroTik en producción y por qué?",
+      "respuestas": [
+        {
+          "texto": "Telnet, FTP, HTTP, Winbox sin TLS, MAC server / Winbox por MAC, bandwidth server, neighbor discovery (MNDP/CDP/LLDP); cada servicio activo es superficie de ataque.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si un servicio no aporta valor, debe estar apagado para reducir vectores de ataque."
+        },
+        {
+          "texto": "Solo Telnet; todo lo demás es obligatorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay varios servicios prescindibles, no solo Telnet."
+        },
+        {
+          "texto": "El propio firewall, para acelerar el reenvío.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El firewall NUNCA se deshabilita; es la base de la seguridad."
+        },
+        {
+          "texto": "DHCP, porque agota recursos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DHCP se mantiene; no es un servicio a eliminar por defecto."
+        }
+      ]
+    }
+  ]
+}

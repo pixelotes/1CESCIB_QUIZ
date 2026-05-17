@@ -1,0 +1,1755 @@
+{
+  "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2 (Revisión Aules)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cómo puede una mala gestión de evidencias provocar la \"escalada\" de un incidente?",
+      "respuestas": [
+        {
+          "texto": "Permitiendo que el atacante mantenga la persistencia y provoque una reinfección.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no se identifican y eliminan todos los mecanismos de persistencia, el atacante puede volver y agravar el incidente."
+        },
+        {
+          "texto": "Reduciendo el coste total de la respuesta para la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una mala gestión de evidencias suele incrementar el coste, no reducirlo."
+        },
+        {
+          "texto": "Acelerando la certificación ISO 27001 de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La gestión deficiente de evidencias compromete la certificación, no la acelera."
+        },
+        {
+          "texto": "Mejorando automáticamente la moral del equipo de IR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una mala gestión genera frustración y reproceso, no moral positiva."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué criterio se basa un profesional para priorizar el análisis de fuentes de evidencia?",
+      "respuestas": [
+        {
+          "texto": "En la volatilidad y el impacto de la evidencia.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Lo más volátil (RAM, conexiones) se captura primero; el impacto guía qué fuentes aportan más valor probatorio."
+        },
+        {
+          "texto": "En el orden alfabético de los hostnames implicados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El orden alfabético no es un criterio forense válido."
+        },
+        {
+          "texto": "En la antigüedad del hardware en uso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La antigüedad del hardware no determina la prioridad forense."
+        },
+        {
+          "texto": "En la marca del fabricante del firewall corporativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La marca del firewall no es criterio para priorizar fuentes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se detectan técnicamente los patrones de \"Beaconing\" en una captura de tráfico?",
+      "respuestas": [
+        {
+          "texto": "Mediante el análisis de la delta de tiempo entre paquetes (Inter-arrival time).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El beaconing presenta intervalos regulares; analizar deltas temporales revela la cadencia característica del C2."
+        },
+        {
+          "texto": "Calculando el hash MD5 del primer paquete capturado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un hash MD5 puntual no detecta patrones temporales."
+        },
+        {
+          "texto": "Revisando solo los puertos de origen menores a 1024.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los puertos bajos no son distintivos de beaconing; lo característico es el patrón temporal."
+        },
+        {
+          "texto": "Eliminando todos los paquetes UDP de la captura.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar UDP descartaría legítimas comunicaciones (DNS) y no resuelve la detección."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de información se espera encontrar en /var/log/syslog o /var/log/messages?",
+      "respuestas": [
+        {
+          "texto": "Mensajes del kernel, servicios y errores generales del sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! syslog/messages centralizan eventos genéricos del SO: kernel, daemons y errores."
+        },
+        {
+          "texto": "Únicamente las contraseñas en texto plano de los usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las contraseñas no se almacenan en syslog; eso sería una grave brecha de seguridad."
+        },
+        {
+          "texto": "Exclusivamente los correos electrónicos recibidos por el sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs de correo están en /var/log/mail.log o similares, no en syslog."
+        },
+        {
+          "texto": "Los registros de transacciones bancarias del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos datos no están en logs del sistema operativo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué resulta excelente el análisis de artefactos como Amcache o Shimcache?",
+      "respuestas": [
+        {
+          "texto": "Identificar la primera aparición de un ejecutable en el sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos artefactos de Windows registran metadatos sobre ejecutables observados, útiles para detectar binarios nuevos."
+        },
+        {
+          "texto": "Descifrar archivos cifrados por ransomware sin la clave.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Amcache/Shimcache no contienen claves de cifrado."
+        },
+        {
+          "texto": "Determinar la dirección IP pública del atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No registran información de red; son específicos de ejecución de binarios."
+        },
+        {
+          "texto": "Bloquear automáticamente los procesos sospechosos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son artefactos forenses pasivos, no bloquean nada."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el análisis de red, ¿por qué es relevante inspeccionar los User-Agents?",
+      "respuestas": [
+        {
+          "texto": "Para identificar herramientas de ataque o navegadores inusuales usados por malware.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Muchos toolkits dejan User-Agents característicos (curl, python-requests, BotNet específicos) detectables en logs HTTP."
+        },
+        {
+          "texto": "Para conocer el modelo exacto del procesador del atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El User-Agent no revela el modelo de CPU."
+        },
+        {
+          "texto": "Para descifrar el contenido cifrado de las conexiones TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El User-Agent no descifra TLS; va en cabecera HTTP."
+        },
+        {
+          "texto": "Para identificar la velocidad de internet del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El User-Agent no contiene información de ancho de banda."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué permite identificar el análisis del Import Hashing (IMPHASH)?",
+      "respuestas": [
+        {
+          "texto": "Malware con capacidades similares o del mismo autor según su tabla de importaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! IMPHASH agrupa binarios por su tabla de imports, ayudando a clusterizar familias y autores."
+        },
+        {
+          "texto": "El idioma original del código fuente del malware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. IMPHASH no revela el idioma del código; analiza imports PE."
+        },
+        {
+          "texto": "El precio de mercado del malware en foros clandestinos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. IMPHASH es un análisis técnico, no de mercado."
+        },
+        {
+          "texto": "La fecha de caducidad legal del binario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los binarios no tienen \"fecha de caducidad legal\"; IMPHASH es un hash estructural."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del análisis estático inicial de un binario?",
+      "respuestas": [
+        {
+          "texto": "Realizar un triage para descartar falsos positivos y buscar coincidencias en bases de inteligencia.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El triage estático es rápido y permite priorizar qué binarios merecen análisis dinámico más costoso."
+        },
+        {
+          "texto": "Ejecutar el binario en producción para observar su comportamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ejecutar en producción es justo lo contrario al análisis estático; además sería peligroso."
+        },
+        {
+          "texto": "Negociar con el atacante el pago del rescate.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La negociación no forma parte del análisis técnico de binarios."
+        },
+        {
+          "texto": "Aplicar parches al binario para usarlo en la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se parchan binarios maliciosos para uso interno; se analizan para detección y respuesta."
+        }
+      ]
+    },
+    {
+      "pregunta": "Al buscar persistencia en Linux, ¿qué directorios son críticos para revisar tareas programadas?",
+      "respuestas": [
+        {
+          "texto": "/etc/crontab y /var/spool/cron/crontabs/.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambos contienen tareas programadas (sistema y usuario), un mecanismo clásico de persistencia."
+        },
+        {
+          "texto": "/var/www/html y /usr/share/icons/.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos directorios contienen sitios web e iconos; no son la ubicación principal de tareas cron."
+        },
+        {
+          "texto": "/proc/sys/kernel y /dev/null.",
+          "correcta": false,
+          "explicacion": "Incorrecto. /proc es interfaz al kernel y /dev/null es el descarte; no almacenan cron jobs."
+        },
+        {
+          "texto": "/root/Desktop y /home/Music/.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son directorios de usuario o estructuras de escritorio, no de cron."
+        }
+      ]
+    },
+    {
+      "pregunta": "A pesar de ser volátil y manipulable, ¿qué principio forense ayuda a cumplir el análisis del Bash History?",
+      "respuestas": [
+        {
+          "texto": "Trazabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El bash_history aporta trazabilidad de comandos ejecutados, aunque deba interpretarse con cautela."
+        },
+        {
+          "texto": "Anonimato del usuario malicioso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El bash_history liga acciones al usuario, no las anonimiza."
+        },
+        {
+          "texto": "Cumplimiento del RGPD en exclusiva.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no es el principio forense buscado; la trazabilidad sí."
+        },
+        {
+          "texto": "Confidencialidad absoluta del análisis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La confidencialidad no es lo que aporta el bash_history; aporta trazabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué se considera negligente atribuir un ataque basándose únicamente en el uso de herramientas públicas (ej. Mimikatz)?",
+      "respuestas": [
+        {
+          "texto": "Debido a que su uso es común por múltiples actores y no identifica a un grupo específico.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mimikatz y similares las usan miles de actores; no permiten distinguir grupos por sí solas."
+        },
+        {
+          "texto": "Porque las herramientas públicas siempre dejan logs en español.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El idioma de los logs no es relevante para la atribución."
+        },
+        {
+          "texto": "Porque solo los actores estatales utilizan herramientas públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las herramientas públicas las usa cualquier perfil de atacante."
+        },
+        {
+          "texto": "Porque están protegidas por derechos de autor que impiden su análisis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las herramientas open-source se analizan libremente; la limitación no es legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué proceso permite agrupar eventos aislados para identificar un patrón de ataque?",
+      "respuestas": [
+        {
+          "texto": "Correlación de alertas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La correlación enlaza eventos heterogéneos y revela patrones que aisladamente pasarían inadvertidos."
+        },
+        {
+          "texto": "Deduplicación de logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La deduplicación elimina redundancia; no agrupa eventos heterogéneos en un patrón."
+        },
+        {
+          "texto": "Compresión de almacenamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La compresión es optimización de espacio, no análisis de patrones."
+        },
+        {
+          "texto": "Cifrado simétrico de los logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es un control de confidencialidad, no de correlación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué indica la presencia de \"gaps\" o silencios temporales en los logs durante una investigación?",
+      "respuestas": [
+        {
+          "texto": "Posibles acciones anti-forenses, borrado de huellas o actividad en canales no monitorizados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los huecos suelen ser indicio de borrado, manipulación o falta de cobertura de la telemetría."
+        },
+        {
+          "texto": "Una mejora del rendimiento del SIEM durante esa ventana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un silencio en los logs es problemático, no un signo de buen rendimiento."
+        },
+        {
+          "texto": "Un éxito automático de los controles preventivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay relación directa entre gaps y éxito de controles preventivos."
+        },
+        {
+          "texto": "Que el sistema estaba actualizado a la última versión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La presencia de gaps no garantiza ni indica el nivel de actualización."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el modelo Diamond, ¿qué eje ayuda a entender la infraestructura utilizada por el atacante?",
+      "respuestas": [
+        {
+          "texto": "Infraestructura.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El modelo Diamond tiene 4 vértices: Adversario, Capacidad, Infraestructura y Víctima."
+        },
+        {
+          "texto": "Adversario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Adversario es un vértice del modelo, pero describe al actor, no la infraestructura."
+        },
+        {
+          "texto": "Capacidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Capacidad se refiere a herramientas y técnicas, no a la infraestructura."
+        },
+        {
+          "texto": "Víctima.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Víctima describe al objetivo, no la infraestructura del atacante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué distingue fundamentalmente a la investigación de incidentes del análisis técnico forense?",
+      "respuestas": [
+        {
+          "texto": "La investigación utiliza un proceso hipotético-deductivo para explicar el \"por qué\", mientras que el análisis técnico se centra en el dato atómico.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Investigar construye la narrativa causal; el análisis técnico extrae y describe artefactos individuales."
+        },
+        {
+          "texto": "Ambos son sinónimos sin diferencias prácticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son disciplinas complementarias pero distintas."
+        },
+        {
+          "texto": "La investigación se realiza solo en cloud y la forense solo en endpoints.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas aplican en cualquier entorno; la diferencia no es de plataforma."
+        },
+        {
+          "texto": "La investigación es opcional y la forense es siempre obligatoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligatoriedad de cada una depende del marco regulatorio y el caso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se centra el análisis de Atribución Técnica?",
+      "respuestas": [
+        {
+          "texto": "En los métodos, herramientas y procedimientos técnicos (TTPs) empleados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La atribución técnica trabaja con TTPs e infraestructura observables, no con motivaciones políticas."
+        },
+        {
+          "texto": "En las motivaciones políticas o geopolíticas del adversario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso corresponde a la atribución estratégica, no técnica."
+        },
+        {
+          "texto": "En la situación financiera personal del atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis financiero no es objeto de la atribución técnica."
+        },
+        {
+          "texto": "En las decisiones diplomáticas tomadas por el Estado víctima.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas decisiones son consecuencia política, no análisis técnico."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el marco de FIRST, ¿qué servicio se encarga de identificar al adversario mediante fuentes externas?",
+      "respuestas": [
+        {
+          "texto": "Inteligencia de Amenazas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El servicio de Threat Intelligence (CTI) recopila y procesa fuentes externas para identificar y caracterizar adversarios."
+        },
+        {
+          "texto": "Gestión de Vulnerabilidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese servicio se enfoca en CVEs y parcheo, no en identificación del adversario."
+        },
+        {
+          "texto": "Soporte técnico de Nivel 1.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El soporte de Nivel 1 atiende usuarios, no realiza inteligencia de amenazas."
+        },
+        {
+          "texto": "Auditoría financiera interna.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría financiera no forma parte del marco de servicios FIRST."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es fundamental documentar las \"Áreas de incertidumbre\" en una investigación profesional?",
+      "respuestas": [
+        {
+          "texto": "Por integridad profesional y para evitar la invalidación del informe en auditorías.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Reconocer lo que no se sabe es honesto y refuerza la solidez del informe frente a revisiones externas."
+        },
+        {
+          "texto": "Para alargar artificialmente la duración del informe.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La documentación de incertidumbre se hace por rigor, no por extensión."
+        },
+        {
+          "texto": "Para evitar tener que tomar decisiones en el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Documentar incertidumbre no exime de decidir; las decisiones se toman con la mejor información disponible."
+        },
+        {
+          "texto": "Para transferir la responsabilidad legal a la aseguradora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La aseguradora actúa según contrato; la documentación interna no transfiere responsabilidad legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define a la \"Evidencia Directa\" en ciberseguridad?",
+      "respuestas": [
+        {
+          "texto": "Datos que prueban un hecho por sí mismos sin requerir inferencias adicionales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La evidencia directa demuestra el hecho sin necesidad de razonamientos intermedios."
+        },
+        {
+          "texto": "Datos que requieren múltiples inferencias para sostener una hipótesis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe la evidencia circunstancial o indiciaria, no la directa."
+        },
+        {
+          "texto": "Datos obtenidos exclusivamente del SIEM corporativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La fuente no define si una evidencia es directa o no; lo define su capacidad probatoria."
+        },
+        {
+          "texto": "Datos que solo aplican al sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La evidencia directa es un concepto transversal a cualquier sector."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del intercambio externo de información?",
+      "respuestas": [
+        {
+          "texto": "Obtener inteligencia y alertar a la comunidad para prevenir ataques.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compartir IoCs y TTPs eleva la defensa colectiva y permite anticiparse a campañas en curso."
+        },
+        {
+          "texto": "Reducir el coste anual de licencias de antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El intercambio externo no afecta directamente al licenciamiento."
+        },
+        {
+          "texto": "Cumplir formalmente con los términos de servicio de cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los TOS de cloud no exigen intercambio externo de inteligencia."
+        },
+        {
+          "texto": "Sustituir la necesidad del SOC interno por proveedores externos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El intercambio complementa al SOC, no lo sustituye."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la \"pirámide del dolor\", ¿qué tipo de información es la más valiosa pero más difícil de obtener?",
+      "respuestas": [
+        {
+          "texto": "Tácticas, Técnicas y Procedimientos (TTPs).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Detectar TTPs en la cima obliga al atacante a rediseñar su modus operandi, lo cual es muy costoso."
+        },
+        {
+          "texto": "Direcciones IP y dominios maliciosos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las IPs y dominios están en la base de la pirámide; son fácilmente intercambiables."
+        },
+        {
+          "texto": "Hashes MD5 de los binarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes están en la base de la pirámide; el atacante los cambia trivialmente."
+        },
+        {
+          "texto": "Direcciones de correo electrónico personales del atacante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa información, cuando existe, es atributiva pero no constituye el vértice de la pirámide del dolor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el ámbito principal de actuación del CCN-CERT?",
+      "respuestas": [
+        {
+          "texto": "Administraciones Públicas y operadores esenciales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El CCN-CERT es el CERT gubernamental español, con competencia sobre AAPP y operadores estratégicos."
+        },
+        {
+          "texto": "Únicamente PYMES con menos de 50 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. INCIBE-CERT atiende a ciudadanos y empresas; CCN-CERT al sector público y operadores esenciales."
+        },
+        {
+          "texto": "Exclusivamente plataformas de e-commerce internacionales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El e-commerce internacional no es ámbito específico del CCN-CERT."
+        },
+        {
+          "texto": "Únicamente la banca privada española.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sector financiero tiene sus propios reguladores y CSIRTs sectoriales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué responsabilidad específica tiene el CISO en la gestión de la notificación de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Liderar la estrategia de respuesta y decidir la escalada técnica.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El CISO orquesta la respuesta y decide cuándo y a quién escalar técnicamente."
+        },
+        {
+          "texto": "Redactar personalmente todas las notificaciones a clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La redacción puede delegarse a comunicación/legal; el CISO lidera la estrategia."
+        },
+        {
+          "texto": "Aprobar el presupuesto anual del departamento de marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El presupuesto de marketing no es competencia del CISO."
+        },
+        {
+          "texto": "Realizar el análisis forense de bajo nivel del sistema afectado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El análisis forense lo ejecuta el equipo DFIR; el CISO coordina."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un requisito mínimo de una comunicación interna formal durante un incidente?",
+      "respuestas": [
+        {
+          "texto": "Nivel de clasificación de la información e identificador único del incidente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La clasificación (TLP) y el ID único son imprescindibles para trazabilidad y control de difusión."
+        },
+        {
+          "texto": "Foto del responsable y firma autógrafa escaneada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La foto no es requisito; la firma digital sí puede aplicarse, pero no la autógrafa escaneada."
+        },
+        {
+          "texto": "Mención al equipo de fútbol favorito del CISO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente; no es un requisito de comunicación formal."
+        },
+        {
+          "texto": "Listado completo de empleados con sus salarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa información es sensible y no pertenece a una comunicación de incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué define el estándar RFC 2350?",
+      "respuestas": [
+        {
+          "texto": "Las expectativas y datos que debe publicar un CSIRT para facilitar la interacción externa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! RFC 2350 estandariza la \"ficha\" pública del CSIRT (alcance, servicios, contacto, PGP, etc.)."
+        },
+        {
+          "texto": "Las especificaciones técnicas del protocolo TLS 1.3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS 1.3 está definido en RFC 8446, no en RFC 2350."
+        },
+        {
+          "texto": "El formato obligatorio de las cabeceras SMTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cabeceras SMTP están definidas en RFC 5321/5322, no en RFC 2350."
+        },
+        {
+          "texto": "La política de retención de logs para el sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La retención sectorial la regulan normativas como DORA o PCI, no RFC 2350."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la gobernanza en el intercambio de información de incidentes?",
+      "respuestas": [
+        {
+          "texto": "Establecer el marco de toma de decisiones que rige el flujo de información exterior.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La gobernanza define quién decide qué se comparte, con quién, cuándo y bajo qué condiciones."
+        },
+        {
+          "texto": "Ejecutar técnicamente la ingesta automatizada de feeds.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la operación técnica, no la gobernanza."
+        },
+        {
+          "texto": "Programar las copias de seguridad de los sistemas SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las copias de seguridad son operación, no gobernanza del intercambio."
+        },
+        {
+          "texto": "Diseñar las reglas de correlación de eventos en el SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El diseño de reglas es ingeniería de detección, no gobernanza del intercambio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo debe presentarse el informe final detallado de un incidente bajo el marco de NIS2?",
+      "respuestas": [
+        {
+          "texto": "1 mes después de la notificación inicial.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIS2 marca 1 mes como plazo máximo para el informe final tras la notificación inicial."
+        },
+        {
+          "texto": "24 horas después de la notificación inicial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 24 horas es para la alerta temprana, no para el informe final."
+        },
+        {
+          "texto": "72 horas después de la notificación inicial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 72 horas corresponde a la notificación detallada intermedia, no al informe final."
+        },
+        {
+          "texto": "1 año después del cierre del incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS2 no contempla plazos tan largos; el informe final es a 1 mes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de enriquecimiento automático en la fase inicial de respuesta?",
+      "respuestas": [
+        {
+          "texto": "Consulta automática a bases de datos de reputación (VirusTotal, AlienVault) e información de inventario.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Consultar reputación e inventario añade contexto a los IoCs y acelera el triage."
+        },
+        {
+          "texto": "Enviar manualmente correos al CEO con el estado del incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa comunicación manual no es enriquecimiento automático."
+        },
+        {
+          "texto": "Reiniciar manualmente todos los servidores afectados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Reiniciar no es enriquecimiento de datos; es una acción de respuesta."
+        },
+        {
+          "texto": "Cifrar los logs antiguos del SIEM con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es un control de confidencialidad, no enriquecimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa que una tarea dentro de un procedimiento sea \"atómica\"?",
+      "respuestas": [
+        {
+          "texto": "Que es una acción única e indivisible con un resultado esperado concreto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una tarea atómica no se descompone más y produce un resultado verificable, esencial para automatización."
+        },
+        {
+          "texto": "Que requiere energía nuclear para ejecutarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente; el término es metafórico, no físico."
+        },
+        {
+          "texto": "Que sólo puede ser ejecutada por un equipo de varias personas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lo atómico se refiere a la indivisibilidad de la acción, no al número de ejecutores."
+        },
+        {
+          "texto": "Que se prolonga durante varios días sin interrupciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duración no define la atomicidad; lo define la indivisibilidad lógica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es crítico gestionar los playbooks como si fueran código fuente (versiones)?",
+      "respuestas": [
+        {
+          "texto": "Para garantizar que todo el SOC trabaja con la versión más actualizada y validada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El versionado evita que cada analista tenga su propia copia divergente y permite trazar cambios."
+        },
+        {
+          "texto": "Para reducir el coste de impresión del manual operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El versionado no busca ahorro en papel."
+        },
+        {
+          "texto": "Para impedir el acceso a los playbooks fuera de horario laboral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El versionado no controla el horario de acceso."
+        },
+        {
+          "texto": "Para que el playbook se ejecute automáticamente sin intervención humana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La automatización es independiente del versionado; son conceptos distintos."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de un procedimiento, ¿qué representa un Indicador de Compromiso (IOC)?",
+      "respuestas": [
+        {
+          "texto": "Una evidencia forense (como un hash de archivo) que indica que el sistema ha sido comprometido.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un IoC es un artefacto observable (hash, IP, dominio) que evidencia compromiso."
+        },
+        {
+          "texto": "Un objetivo de cumplimiento normativo trimestral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los objetivos de cumplimiento son KPIs/KRIs, no IoCs."
+        },
+        {
+          "texto": "Un indicador económico del coste del incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los IoCs no son métricas económicas."
+        },
+        {
+          "texto": "Un código de error generado por el sistema operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los códigos de error no son IoCs; aportan diagnóstico funcional, no evidencia de compromiso."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué paso es imprescindible para asegurar que la erradicación ha sido exitosa?",
+      "respuestas": [
+        {
+          "texto": "Verificar mediante herramientas de monitorización la ausencia de IoCs y actividad maliciosa recurrente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin verificación post-erradicación no hay garantía de que el adversario haya sido expulsado."
+        },
+        {
+          "texto": "Apagar los sistemas y olvidarse del incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar no verifica nada y deja sin servicio a la organización."
+        },
+        {
+          "texto": "Cambiar el nombre del dominio de Active Directory.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Renombrar el dominio no demuestra erradicación efectiva."
+        },
+        {
+          "texto": "Aumentar el ancho de banda de Internet contratado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ancho de banda no tiene relación con la verificación de erradicación."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el orden de volatilidad, ¿cuál de estos elementos debe capturarse en primer lugar?",
+      "respuestas": [
+        {
+          "texto": "Memoria RAM y conexiones de red activas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! RAM y conexiones activas son las más volátiles y se perderán al apagar; deben capturarse primero."
+        },
+        {
+          "texto": "Discos duros mecánicos del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El disco es persistente; se captura después de la evidencia volátil."
+        },
+        {
+          "texto": "Cintas de backup almacenadas en cámara acorazada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cintas son altamente persistentes; van al final del orden."
+        },
+        {
+          "texto": "Documentación impresa del CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El papel es persistente; no entra en el orden de volatilidad digital."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre contención y erradicación?",
+      "respuestas": [
+        {
+          "texto": "La contención limita el daño; la erradicación elimina la causa raíz y la persistencia.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Contener detiene la propagación; erradicar elimina al adversario y sus mecanismos de persistencia."
+        },
+        {
+          "texto": "Son sinónimos utilizados en distintas regiones lingüísticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son fases distintas y secuenciales del ciclo de respuesta."
+        },
+        {
+          "texto": "La contención requiere apagar el equipo, la erradicación no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El apagado es una acción concreta; la diferencia no se reduce a ella."
+        },
+        {
+          "texto": "La erradicación es opcional y solo aplica si el cliente lo solicita.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin erradicación, el atacante puede regresar; no es opcional en un IR adecuado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el fin último de aplicar disciplina de ingeniería a la respuesta a incidentes?",
+      "respuestas": [
+        {
+          "texto": "Lograr una respuesta repetible, auditable y escalable mediante la automatización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ingeniería de IR busca consistencia, trazabilidad y escala mediante automatización y versionado."
+        },
+        {
+          "texto": "Eliminar al equipo humano del proceso de respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La automatización complementa al equipo humano; no lo sustituye totalmente."
+        },
+        {
+          "texto": "Reducir la formación necesaria del personal a cero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La formación sigue siendo esencial; la ingeniería no la elimina."
+        },
+        {
+          "texto": "Suprimir cualquier control humano sobre los playbooks.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supervisión humana sigue siendo necesaria, especialmente para decisiones críticas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el modelo de madurez SOAR, ¿qué actividad caracteriza a los primeros 3 meses de implementación?",
+      "respuestas": [
+        {
+          "texto": "Enriquecimiento automático de datos sin realizar acciones de mitigación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al inicio el SOAR enriquece y observa; la automatización de acciones llega en fases posteriores con confianza."
+        },
+        {
+          "texto": "Aislamiento automático masivo de todos los endpoints.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aislar masivamente desde el inicio puede provocar disrupciones graves; se gana confianza progresivamente."
+        },
+        {
+          "texto": "Eliminación automática de todos los usuarios del directorio activo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una acción tan destructiva no se automatiza ni siquiera en fases avanzadas."
+        },
+        {
+          "texto": "Sustitución completa del equipo del SOC por bots.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SOAR complementa al equipo, nunca lo sustituye en bloque."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve tener una CMDB (Base de datos de gestión de configuración) integrada en el proceso de respuesta?",
+      "respuestas": [
+        {
+          "texto": "Para identificar rápidamente la criticidad y el propietario del activo afectado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Conocer criticidad y owner acelera priorización, notificación y contención adecuada."
+        },
+        {
+          "texto": "Para generar facturas automáticas para los clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La facturación no es función de la CMDB."
+        },
+        {
+          "texto": "Para almacenar el código fuente de las aplicaciones desarrolladas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El código fuente vive en repositorios Git, no en la CMDB."
+        },
+        {
+          "texto": "Para reemplazar al SIEM en la correlación de eventos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La CMDB complementa al SIEM con contexto; no lo sustituye."
+        }
+      ]
+    },
+    {
+      "pregunta": "En la clasificación de servicios orientada a resiliencia, ¿qué caracteriza a un servicio de \"Tier 0\"?",
+      "respuestas": [
+        {
+          "texto": "Su interrupción implica un daño inmediato y grave, siendo irrecuperable el negocio sin ellos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tier 0 = servicios vitales sin los cuales el negocio no puede subsistir."
+        },
+        {
+          "texto": "Son servicios opcionales que pueden interrumpirse sin impacto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa descripción correspondería a niveles bajos, no a Tier 0."
+        },
+        {
+          "texto": "Son servicios de marketing dirigidos a clientes potenciales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tier clasifica por criticidad, no por área funcional."
+        },
+        {
+          "texto": "Son los servicios menos prioritarios en la restauración.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son los más prioritarios; se restauran primero."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el concepto estratégico de \"Assume Breach Mindset\"?",
+      "respuestas": [
+        {
+          "texto": "Es una postura que asume que el atacante ya está dentro y prioriza la detección y el control del daño.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Partir de que el compromiso ya ha ocurrido cambia el enfoque: detectar y contener priman sobre prevenir."
+        },
+        {
+          "texto": "Asumir que la red es invulnerable y centrar el esfuerzo en marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario al concepto: la invulnerabilidad se considera ilusoria."
+        },
+        {
+          "texto": "Aceptar las pérdidas económicas sin investigar el incidente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es resignación, sino una postura proactiva de detección y respuesta."
+        },
+        {
+          "texto": "Externalizar toda la seguridad al proveedor cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Assume Breach no implica externalización; es una mentalidad de defensa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre un simulacro de tipo \"Tabletop\" y un \"Functional Exercise\"?",
+      "respuestas": [
+        {
+          "texto": "El Tabletop se basa en discusión teórica y el Functional activa procedimientos y herramientas reales en entornos controlados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tabletop es deliberativo; Functional ejecuta procedimientos y técnica en condiciones realistas."
+        },
+        {
+          "texto": "El Tabletop sólo aplica al sector financiero, el Functional al industrial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos tipos son aplicables a cualquier sector."
+        },
+        {
+          "texto": "Son el mismo ejercicio con distinto nombre comercial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son ejercicios distintos en metodología y profundidad."
+        },
+        {
+          "texto": "El Functional siempre debe celebrarse con presencia del CEO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La presencia del CEO no define el tipo de ejercicio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la microsegmentación en una arquitectura resiliente?",
+      "respuestas": [
+        {
+          "texto": "Limitar el radio de explosión (blast radius) de un compromiso del sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La microsegmentación crea barreras finas que confinan al atacante y dificultan el movimiento lateral."
+        },
+        {
+          "texto": "Eliminar la necesidad de cualquier control de seguridad adicional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La microsegmentación es una capa más, no sustituye a otros controles."
+        },
+        {
+          "texto": "Acelerar la velocidad de descarga de archivos en la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una técnica de rendimiento; es de aislamiento de seguridad."
+        },
+        {
+          "texto": "Reducir el coste de las licencias de antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación directa con el coste de licencias de antivirus."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la infraestructura inmutable en el contexto del bastionado orientado a la resiliencia?",
+      "respuestas": [
+        {
+          "texto": "Un paradigma donde los sistemas no se parchean, sino que se destruyen y recrean desde una imagen dorada validada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En la inmutabilidad no se modifican sistemas vivos; se sustituyen por instancias nuevas y limpias."
+        },
+        {
+          "texto": "Sistemas físicos atornillados al suelo del CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inmutabilidad es lógica, no física."
+        },
+        {
+          "texto": "Servidores con sistemas operativos imposibles de apagar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inmutabilidad no impide apagar; cambia el modelo de cambios y parcheo."
+        },
+        {
+          "texto": "Redes que prohíben cualquier tipo de tráfico saliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inmutabilidad no es una política de red; es un paradigma de gestión de sistemas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la regla de diseño fundamental para las políticas de seguridad en modo de servicio degradado?",
+      "respuestas": [
+        {
+          "texto": "Deben ser, como mínimo, tan restrictivas como en el modo normal de operación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En degradado se pueden reducir funcionalidades, pero nunca relajar la seguridad."
+        },
+        {
+          "texto": "Pueden suspenderse completamente para acelerar la recuperación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suspender la seguridad durante una crisis amplifica el daño."
+        },
+        {
+          "texto": "Deben definirse exclusivamente por el equipo de marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las políticas de seguridad las define el área de seguridad, no marketing."
+        },
+        {
+          "texto": "Sólo se aplican a usuarios externos, no a empleados internos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las políticas se aplican a todos los usuarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principio del \"mínimo impacto suficiente\" aplicado a las medidas de contención?",
+      "respuestas": [
+        {
+          "texto": "Preferir siempre la acción que logre la contención generando la menor disrupción operativa posible.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Entre acciones igualmente eficaces, se elige la menos disruptiva para el negocio."
+        },
+        {
+          "texto": "Aplicar siempre la medida más agresiva posible para garantizar el aislamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La medida más agresiva puede generar daño operativo innecesario."
+        },
+        {
+          "texto": "Retrasar la contención hasta tener evidencia forense completa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esperar agrava el daño; la contención no puede aplazarse indefinidamente."
+        },
+        {
+          "texto": "Externalizar todas las decisiones de contención a un proveedor cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad de contención no se externaliza completamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia a un Playbook de resiliencia estratégico de uno puramente operativo?",
+      "respuestas": [
+        {
+          "texto": "El estratégico guía la toma de decisiones de negocio y el operativo es una guía técnica paso a paso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estratégico = decisiones de negocio (BCP, comunicación); operativo = ejecución técnica concreta."
+        },
+        {
+          "texto": "El estratégico es más corto y se imprime en tarjetas de bolsillo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El formato no define la diferencia; lo que cambia es el nivel y el destinatario."
+        },
+        {
+          "texto": "El operativo solo aplica fuera del horario laboral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los playbooks operativos aplican siempre que se den las condiciones de activación."
+        },
+        {
+          "texto": "El estratégico se redacta exclusivamente en inglés técnico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El idioma no define el tipo de playbook."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia al aislamiento parcial del aislamiento total de un sistema durante un incidente?",
+      "respuestas": [
+        {
+          "texto": "El parcial mantiene los flujos estrictamente necesarios para el servicio; el total desconecta el sistema por completo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El parcial preserva conectividad mínima para operar; el total corta toda comunicación."
+        },
+        {
+          "texto": "El parcial sólo aplica a sistemas Linux y el total a sistemas Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas modalidades son agnósticas al sistema operativo."
+        },
+        {
+          "texto": "El aislamiento total es siempre más barato económicamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El total puede generar más impacto y coste operativo, no menos."
+        },
+        {
+          "texto": "El parcial elimina automáticamente al atacante del sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aislar no expulsa al atacante; lo contiene."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la utilidad estratégica de los \"canary tokens\" en escenarios de detección degradada?",
+      "respuestas": [
+        {
+          "texto": "Funcionan como alertas pasivas que notifican accesos no autorizados a través de canales externos e independientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los canary tokens son señuelos que disparan alertas cuando son tocados, útiles si el SIEM principal falla."
+        },
+        {
+          "texto": "Sirven para acelerar el rendimiento de la base de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los canary tokens son señuelos de detección, no de rendimiento."
+        },
+        {
+          "texto": "Bloquean automáticamente al atacante al ser pulsados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los canary tokens alertan pasivamente; no bloquean por sí solos."
+        },
+        {
+          "texto": "Son aves que se usan en CPDs para detectar gases tóxicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La metáfora se inspira en el canario minero, pero los tokens son artefactos digitales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja operativa ofrece disponer de suplentes con 'Autoridad Delegada Formal'?",
+      "respuestas": [
+        {
+          "texto": "Garantiza la continuidad de la toma de decisiones sin necesidad de improvisar autorizaciones cuando el titular no está.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los suplentes con autoridad formalizada evitan bloqueos cuando el titular no está disponible."
+        },
+        {
+          "texto": "Permite reducir el número total de empleados en el SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La suplencia refuerza la cadena de mando, no reduce plantilla."
+        },
+        {
+          "texto": "Elimina la necesidad de redactar playbooks operativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los playbooks siguen siendo necesarios independientemente de la suplencia."
+        },
+        {
+          "texto": "Reduce automáticamente los costes con la aseguradora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La suplencia no tiene un efecto directo en la prima del seguro."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el modelo OODA (Observar, Orientar, Decidir, Actuar), ¿cuál es la fase crítica que diferencia una respuesta reactiva de una adaptativa?",
+      "respuestas": [
+        {
+          "texto": "La Orientación, donde se filtran los datos observados a través de modelos mentales, experiencia y contexto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La Orientación es donde se interpreta lo observado; una mala interpretación lleva a decisiones erróneas."
+        },
+        {
+          "texto": "La Observación inicial de datos brutos sin filtrar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Observación recoge datos, pero la diferencia adaptativa surge en la Orientación."
+        },
+        {
+          "texto": "La Decisión tomada exclusivamente por el CEO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Decisión no depende del CEO de forma exclusiva; depende del nivel de autorización."
+        },
+        {
+          "texto": "La Actuación física sobre el hardware del CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Actuación es el resultado del bucle, no la fase diferencial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el rol específico del área de Compliance durante la fase de respuesta a un incidente?",
+      "respuestas": [
+        {
+          "texto": "Verificar que las acciones de respuesta no generen incumplimientos normativos secundarios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Compliance vigila que la respuesta no introduzca nuevos incumplimientos (RGPD, NIS2, sectoriales)."
+        },
+        {
+          "texto": "Programar las reglas de detección en el SIEM en tiempo real.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es función del equipo de ingeniería de detección."
+        },
+        {
+          "texto": "Ejecutar el análisis forense del disco afectado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El forense lo realiza el equipo DFIR, no Compliance."
+        },
+        {
+          "texto": "Sustituir al CISO en la toma de decisiones técnicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Compliance asesora regulatoriamente; no sustituye al CISO."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el marco RACI aplicado a la respuesta a incidentes, ¿cuál es la diferencia crítica entre 'Responsibility' y 'Accountability'?",
+      "respuestas": [
+        {
+          "texto": "La 'Responsibility' se refiere a la ejecución de la acción y puede delegarse; la 'Accountability' es la rendición de cuentas ante la organización y no es delegable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ejecutar puede delegarse, pero responder por el resultado final ante la organización no."
+        },
+        {
+          "texto": "Son sinónimos exactos sin diferencia operativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RACI distingue claramente entre ambos roles."
+        },
+        {
+          "texto": "Ambas son siempre asumidas por el mismo individuo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RACI separa precisamente quién ejecuta de quién rinde cuentas."
+        },
+        {
+          "texto": "La 'Accountability' siempre se delega en proveedores externos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La accountability no se delega en terceros; es organizativa interna."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué establece el 'Principio de proporcionalidad' en la implicación del nivel ejecutivo?",
+      "respuestas": [
+        {
+          "texto": "Que la intervención de la alta dirección debe ajustarse al impacto real o potencial para evitar la fatiga decisional.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Implicar a la dirección en todo evento generaría fatiga; debe activarse según el impacto real."
+        },
+        {
+          "texto": "Que la dirección debe participar en cada alerta del SOC sin excepción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario al principio de proporcionalidad."
+        },
+        {
+          "texto": "Que la dirección no debe enterarse de ningún incidente bajo ninguna circunstancia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Algunos incidentes exigen escalado ejecutivo; el principio gradúa, no aísla."
+        },
+        {
+          "texto": "Que las decisiones ejecutivas se tomen sin consultar al CISO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El CISO es asesor clave de la dirección en estos escenarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principio debe regir la comunicación externa de la organización durante un incidente con visibilidad pública?",
+      "respuestas": [
+        {
+          "texto": "Veracidad calibrada: comunicar lo que se sabe con certeza y distinguir claramente lo que aún está en investigación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Comunicar con honestidad y matizar las certezas preserva la confianza y evita rectificaciones posteriores."
+        },
+        {
+          "texto": "Negar el incidente públicamente hasta que esté cerrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Negar daña la confianza y puede contravenir obligaciones regulatorias de notificación."
+        },
+        {
+          "texto": "Compartir todos los detalles técnicos sin filtrar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Exponer detalles técnicos puede ayudar a otros atacantes y violar la confidencialidad."
+        },
+        {
+          "texto": "Comunicarse únicamente mediante memes en redes sociales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación de crisis exige canales formales y mensajes calibrados."
+        }
+      ]
+    },
+    {
+      "pregunta": "En el contexto de la gobernanza en respuesta a incidentes (IR), ¿cómo se aplica el concepto de RPO/RTO a la toma de decisiones?",
+      "respuestas": [
+        {
+          "texto": "Define el tiempo máximo que la organización puede tolerar sin que se adopte una decisión de un nivel determinado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al igual que en continuidad, RPO/RTO se trasladan al ámbito de la decisión: hay un límite operativo."
+        },
+        {
+          "texto": "Define el tiempo de retención de los logs en el SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La retención es otra métrica distinta de RPO/RTO."
+        },
+        {
+          "texto": "Define el coste por hora de licencia del SOAR.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RPO/RTO son métricas temporales de recuperación/decisión, no de coste."
+        },
+        {
+          "texto": "Define la edad mínima del personal que puede tomar decisiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RPO/RTO no se relacionan con la edad del personal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Dentro del marco Cynefin, ¿cómo debe abordarse la toma de decisiones cuando un incidente se sitúa en el dominio 'Complejo'?",
+      "respuestas": [
+        {
+          "texto": "Mediante un enfoque de 'Sondear-Percibir-Responder', ya que la relación causa-efecto solo es visible en retrospectiva.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En lo complejo no hay recetas; se experimenta de forma segura, se observa el resultado y se ajusta."
+        },
+        {
+          "texto": "Aplicando un manual rígido sin desviación posible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso correspondería al dominio 'Obvio', no al 'Complejo'."
+        },
+        {
+          "texto": "Pidiendo al CEO que decida por intuición personal exclusivamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cynefin propone sondear y observar, no decidir solo por intuición."
+        },
+        {
+          "texto": "Detener cualquier respuesta hasta que aparezcan certezas absolutas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. En lo complejo no se obtienen certezas absolutas; bloquear la respuesta agrava el incidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la propiedad fundamental de un backup 'inmutable' en una estrategia de recuperación segura?",
+      "respuestas": [
+        {
+          "texto": "No puede ser modificado ni eliminado durante un periodo definido, incluso por administradores con credenciales comprometidas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La inmutabilidad protege incluso frente a un administrador comprometido o malicioso."
+        },
+        {
+          "texto": "Es accesible solo en horario laboral diurno.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inmutabilidad no se relaciona con franjas horarias."
+        },
+        {
+          "texto": "Se puede sobrescribir libremente con credenciales del administrador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería justamente un backup mutable, no inmutable."
+        },
+        {
+          "texto": "Solo puede almacenarse en cintas magnéticas antiguas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La inmutabilidad se logra con varias tecnologías (Object Lock, WORM), no solo cinta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de validación se realiza mediante 'Smoke Tests' durante la puesta en producción controlada?",
+      "respuestas": [
+        {
+          "texto": "Verificación rápida de las funcionalidades críticas del negocio para confirmar que los componentes principales operan correctamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los smoke tests son pruebas mínimas pero suficientes para detectar fallos graves antes del despliegue total."
+        },
+        {
+          "texto": "Validación química del aire en el centro de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Smoke\" es metafórico; no hay pruebas químicas en este contexto."
+        },
+        {
+          "texto": "Pruebas de estrés a máxima carga durante varios días.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son pruebas de carga, no smoke tests."
+        },
+        {
+          "texto": "Auditoría completa de todas las líneas de código.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría completa de código es una revisión profunda distinta del smoke test."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se busca garantizar al realizar la validación de firmas Authenticode en ejecutables de Windows post-incidente?",
+      "respuestas": [
+        {
+          "texto": "Que el binario no ha sido alterado y que proviene de una fuente legítima y confiable identificada por su certificado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Authenticode aporta integridad y autenticidad mediante firma con certificado del editor."
+        },
+        {
+          "texto": "Que el binario funciona también en sistemas Linux y macOS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Authenticode es específico de Windows; no garantiza compatibilidad multiplataforma."
+        },
+        {
+          "texto": "Que el binario consume menos memoria RAM al ejecutarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Authenticode no afecta al consumo de memoria."
+        },
+        {
+          "texto": "Que el binario ha sido descargado por el usuario más reciente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Authenticode valida la firma del editor, no rastrea descargas de usuario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste la técnica de 'Aislamiento Progresivo' durante la recuperación de servicios?",
+      "respuestas": [
+        {
+          "texto": "En mantener el sistema en diferentes niveles de restricción de red, abriendo accesos solo a medida que supera validaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se abren accesos por fases tras validaciones, evitando reintroducir un sistema comprometido sin verificación."
+        },
+        {
+          "texto": "Apagar completamente todos los sistemas para siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar para siempre no es recuperación."
+        },
+        {
+          "texto": "Conectar inmediatamente todos los sistemas a Internet sin restricciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Conectar todo sin filtros expone los sistemas en recuperación a nuevo compromiso."
+        },
+        {
+          "texto": "Permitir tráfico saliente sin auditar mientras se filtra solo el entrante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El aislamiento progresivo controla ambos sentidos, no solo el entrante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ventaja aporta el uso de balanceadores de carga para implementar un 'Canary Release'?",
+      "respuestas": [
+        {
+          "texto": "Permiten realizar un enrutamiento ponderado para enviar solo un pequeño porcentaje de peticiones al nodo restaurado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El balanceador puede pesar el tráfico para validar el nodo nuevo con tráfico real limitado."
+        },
+        {
+          "texto": "Eliminan la necesidad de mantener servidores activos en producción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El balanceador distribuye tráfico, no elimina servidores."
+        },
+        {
+          "texto": "Cifran automáticamente todas las peticiones HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado HTTPS se gestiona aparte; no es función del enrutamiento ponderado."
+        },
+        {
+          "texto": "Reducen automáticamente el coste de licencias del SIEM.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tienen relación directa con las licencias del SIEM."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de una estrategia de 'Canary Release' en el contexto de una recuperación post-incidente?",
+      "respuestas": [
+        {
+          "texto": "Dirigir una pequeña fracción del tráfico real al servicio restaurado para detectar anomalías antes del despliegue total.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El canary release valida en producción con riesgo controlado, evitando un rollout big bang."
+        },
+        {
+          "texto": "Acelerar el despliegue eliminando las pruebas previas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: el canary añade una etapa de validación con tráfico real."
+        },
+        {
+          "texto": "Sustituir definitivamente al equipo de QA por automatismos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El canary no sustituye al QA; lo complementa con validación en producción."
+        },
+        {
+          "texto": "Eliminar la necesidad de cualquier monitorización posterior.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La monitorización es justamente lo que da valor al canary; sin ella no detecta anomalías."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el rol del CISO o responsable de seguridad en la fase final de transición a producción normalizada?",
+      "respuestas": [
+        {
+          "texto": "Revisar todas las evidencias de validación, logs de hipervigilancia e informes post-incidente para autorizar formalmente el fin del proceso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El CISO da el visto bueno formal a la vuelta a la normalidad tras revisar evidencia objetiva."
+        },
+        {
+          "texto": "Borrar todos los logs anteriores al incidente para empezar de cero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Borrar evidencia destruye trazabilidad y puede tener implicaciones legales."
+        },
+        {
+          "texto": "Anunciar el fin del incidente en redes sociales personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La comunicación pública la gestiona el área correspondiente bajo control corporativo."
+        },
+        {
+          "texto": "Reasignar al equipo de IR a tareas de soporte de helpdesk.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La reasignación no es la función de cierre del CISO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función de una 'Golden Image' o imagen dorada en el proceso de validación de integridad?",
+      "respuestas": [
+        {
+          "texto": "Servir como plantilla de referencia configurada y firmada en un entorno seguro para comparar con el sistema recuperado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La golden image es el patrón de oro: sistema firmado y validado contra el que se compara la recuperación."
+        },
+        {
+          "texto": "Es una imagen de marketing del producto corporativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una imagen comercial; es una plantilla técnica de sistema."
+        },
+        {
+          "texto": "Es el fondo de pantalla obligatorio en los equipos del SOC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con la decoración visual de los equipos."
+        },
+        {
+          "texto": "Es el logotipo oficial que aparece en los informes ejecutivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La golden image es técnica, no un activo gráfico corporativo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia Zeek (antes Bro) de tcpdump para la captura de red?",
+      "respuestas": [
+        {
+          "texto": "Genera logs de transacciones en lugar de capturar el payload completo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Zeek produce logs estructurados (conn.log, http.log, dns.log) con metadatos, no PCAP crudo."
+        },
+        {
+          "texto": "Solo soporta tráfico cifrado y descarta el resto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Zeek analiza todo el tráfico observable; no se limita al cifrado."
+        },
+        {
+          "texto": "Captura paquetes únicamente en interfaces Wi-Fi.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Zeek funciona en cualquier interfaz, igual que tcpdump."
+        },
+        {
+          "texto": "No requiere permisos de root para capturar tráfico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Capturar a nivel de interfaz suele requerir privilegios elevados."
+        }
+      ]
+    },
+    {
+      "pregunta": "Según el documento, ¿cuál es el error más común de los analistas junior ante un incidente?",
+      "respuestas": [
+        {
+          "texto": "Actuar por impulso sin trazar un plan de adquisición previo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La precipitación destruye evidencia volátil y compromete la integridad del análisis."
+        },
+        {
+          "texto": "Tomarse demasiado tiempo para documentar antes de actuar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Documentar antes de actuar suele ser una buena práctica, no un error."
+        },
+        {
+          "texto": "Aplicar de forma estricta los procedimientos definidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Seguir los procedimientos es deseable, no un error."
+        },
+        {
+          "texto": "Consultar con el equipo senior antes de tomar decisiones críticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Consultar es buena práctica, no un error de junior."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se define el principio forense de Reproducibilidad?",
+      "respuestas": [
+        {
+          "texto": "Que otro analista distinto con herramientas diferentes llegue a la misma conclusión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La reproducibilidad demuestra solidez del análisis: el resultado no depende del analista o de la herramienta."
+        },
+        {
+          "texto": "Que el análisis pueda repetirse muchas veces en el mismo equipo sin variación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso se acerca a repetibilidad, no a reproducibilidad (que exige independencia)."
+        },
+        {
+          "texto": "Que se utilice siempre el mismo proveedor de herramientas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: la reproducibilidad exige independencia de herramienta."
+        },
+        {
+          "texto": "Que el resultado sea publicado en redes sociales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La publicación pública no es parte del principio forense."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es una característica diferencial del estándar NIST SP 800-86 respecto a las normas ISO?",
+      "respuestas": [
+        {
+          "texto": "Se centra en usar técnicas forenses para troubleshooting y recuperación operativa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIST SP 800-86 aplica forensia con enfoque operativo (resolución y recuperación), no solo probatorio."
+        },
+        {
+          "texto": "Solo es aplicable en organizaciones del sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIST SP 800-86 es de aplicación general."
+        },
+        {
+          "texto": "Es exclusivamente un estándar para gestión de incidentes en cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SP 800-86 cubre forensia general en sistemas y redes, no se limita a cloud."
+        },
+        {
+          "texto": "Reemplaza por completo a la norma ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SP 800-86 es de forensia; ISO 27001 es un SGSI; no son sustituibles."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la limitación técnica de realizar una copia lógica en lugar de una imagen bit a bit?",
+      "respuestas": [
+        {
+          "texto": "Pierde datos borrados y el slack space del disco.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La copia lógica solo extrae archivos visibles; deja fuera datos borrados, slack space y unallocated."
+        },
+        {
+          "texto": "Tarda siempre más tiempo que una imagen bit a bit.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suele ser más rápida; lo que pierde es completitud forense."
+        },
+        {
+          "texto": "Solo puede ejecutarse en sistemas operativos Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Copias lógicas se realizan en cualquier sistema operativo."
+        },
+        {
+          "texto": "Requiere permisos físicos del fabricante del disco.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se necesitan permisos del fabricante para una copia lógica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué artefactos del Registro de Windows son fundamentales para determinar qué programas se ejecutaron y la persistencia del malware?",
+      "respuestas": [
+        {
+          "texto": "Shimcache, Amcache y Hives de software.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estos artefactos rastrean ejecución y configuración; son una mina de oro forense en Windows."
+        },
+        {
+          "texto": "Únicamente la papelera de reciclaje del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La papelera contiene archivos borrados, pero no registra ejecuciones ni persistencia."
+        },
+        {
+          "texto": "Los archivos temporales del navegador Internet Explorer.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aportan algo de navegación, pero no son los artefactos clave de ejecución/persistencia."
+        },
+        {
+          "texto": "El fondo de escritorio configurado por el usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El fondo no aporta valor forense relevante."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los logs del SIEM suelen tener mayor valor probatorio que los logs locales del servidor?",
+      "respuestas": [
+        {
+          "texto": "Porque residen en un dominio distinto y son difíciles de manipular por el atacante.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al estar fuera del sistema comprometido, los logs del SIEM no pueden ser borrados por el atacante local."
+        },
+        {
+          "texto": "Porque están escritos en un idioma que el atacante no entiende.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El idioma no es relevante para el valor probatorio."
+        },
+        {
+          "texto": "Porque los logs locales no existen en sistemas modernos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los logs locales sí existen; el SIEM los centraliza y protege."
+        },
+        {
+          "texto": "Porque el SIEM tiene certificación notarial automática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SIEM no es un notario; su valor procede de la separación de dominio y la trazabilidad."
+        }
+      ]
+    }
+  ]
+}
