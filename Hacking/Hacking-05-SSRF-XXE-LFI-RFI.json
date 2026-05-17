@@ -1,0 +1,555 @@
+{
+  "tema": "Hacking Ético - SSRF, XXE, LFI y RFI",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es SSRF y en qué se diferencia de otros ataques de inyección?",
+      "respuestas": [
+        {
+          "texto": "Server-Side Request Forgery: el atacante engaña al servidor para que haga peticiones a recursos elegidos por él (URLs internas, metadatos cloud, otros servicios). A diferencia de SQLi o XSS, no inyecta código sino que abusa de la capacidad del servidor de hacer peticiones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El servidor actúa como proxy involuntario del atacante."
+        },
+        {
+          "texto": "Es una variante de XSS dirigida al servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF no inyecta scripts; redirige peticiones del servidor."
+        },
+        {
+          "texto": "Es un ataque de denegación de servicio volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF puede causar DoS, pero su esencia es otra."
+        },
+        {
+          "texto": "Es un fallo del DNS del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF aprovecha la app, no un fallo de DNS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los endpoints de metadatos cloud (AWS, GCP, Azure) son un objetivo prioritario en SSRF?",
+      "respuestas": [
+        {
+          "texto": "Porque están en IPs internas (típicamente 169.254.169.254) accesibles solo desde la propia instancia; suelen entregar credenciales temporales del rol IAM/IMDS asociado, dando control sobre recursos cloud.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Caso famoso: Capital One 2019. La defensa moderna es IMDSv2 con token."
+        },
+        {
+          "texto": "Porque están en IPs públicas con DNS abierto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Están en una IP de enlace local, no pública."
+        },
+        {
+          "texto": "Porque están protegidos solo por contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La defensa por defecto es solo el aislamiento de red; sin token IMDSv2 son accesibles desde dentro."
+        },
+        {
+          "texto": "Porque son siempre accesibles desde Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son link-local; solo accesibles desde la propia instancia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de recursos internos puede alcanzar un atacante con SSRF?",
+      "respuestas": [
+        {
+          "texto": "Servicios internos sin autenticación que confían en el origen (Redis, Memcached, Elasticsearch, paneles internos), endpoints localhost, otros backends, metadatos cloud y a veces sistemas de ficheros locales (file://).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La superficie interna suele ser mucho mayor que la externa."
+        },
+        {
+          "texto": "Solo páginas públicas de Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF interesa precisamente por alcanzar lo no público."
+        },
+        {
+          "texto": "Únicamente el propio dominio externo de la aplicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso minimizaría drásticamente el peligro real."
+        },
+        {
+          "texto": "Solo la consola del navegador del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF actúa del lado servidor, no del navegador."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué una simple allowlist de dominios no basta como mitigación SSRF?",
+      "respuestas": [
+        {
+          "texto": "Porque el atacante puede usar técnicas de bypass: redirecciones HTTP (301/302) hacia destinos prohibidos, DNS rebinding (resolver inicialmente a IP pública y luego a interna), o subdominios controlados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La defensa robusta requiere también filtrar IPs internas y seguir redirecciones con control."
+        },
+        {
+          "texto": "Porque las allowlist consumen mucha memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es de bypass, no rendimiento."
+        },
+        {
+          "texto": "Porque solo funcionan con IPv4.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Funcionan con ambos protocolos; el problema son los bypasses."
+        },
+        {
+          "texto": "Porque expiran cada 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No expiran automáticamente; el problema es estructural."
+        }
+      ]
+    },
+    {
+      "pregunta": "Cita dos técnicas de bypass de filtros SSRF.",
+      "respuestas": [
+        {
+          "texto": "Usar la IP directa cuando se filtra solo el dominio; codificaciones de URL (hex, octal, IPv6 ::ffff:...); DNS rebinding; redirecciones HTTP; protocolos alternativos (file://, gopher://, dict://).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Hay muchas técnicas; los filtros simples son fácilmente eludibles."
+        },
+        {
+          "texto": "Solo cambiar el User-Agent.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El User-Agent no afecta al filtro SSRF típico."
+        },
+        {
+          "texto": "Activar VPN antes del ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. VPN no es una técnica de bypass SSRF."
+        },
+        {
+          "texto": "Pulsar F12 en el navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las DevTools no son técnica de bypass."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué medidas combinadas conforman una mitigación robusta frente a SSRF?",
+      "respuestas": [
+        {
+          "texto": "Allowlist de destinos por dominio Y por IP resuelta, prohibir IPs privadas/link-local/loopback, restringir protocolos a http/https, no seguir redirecciones automáticamente, segregar la red del servicio y proteger IMDS (IMDSv2 con token).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La defensa robusta exige múltiples capas, no una sola lista."
+        },
+        {
+          "texto": "Únicamente bloquear el puerto 22.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF no se trata del puerto 22; es de capa aplicación."
+        },
+        {
+          "texto": "Solo cifrar las peticiones con TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS protege en tránsito, no impide SSRF."
+        },
+        {
+          "texto": "Cambiar la versión de PHP al instalador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una cuestión de versión de PHP."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque XXE?",
+      "respuestas": [
+        {
+          "texto": "XML External Entity: un parser XML procesa entidades externas controladas por el atacante, lo que permite leer ficheros locales, hacer SSRF, DoS (Billion Laughs) y a veces ejecución remota de comandos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El abuso de DTD/entidades externas es la raíz del problema."
+        },
+        {
+          "texto": "Cifrar XML con AES.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XXE no es cifrado."
+        },
+        {
+          "texto": "Validar XML con un schema XSD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación XSD no es el ataque; es una defensa potencial."
+        },
+        {
+          "texto": "Un fallo de TLS al transportar XML.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XXE es del parser, no del transporte."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres tipos de ataques permite típicamente XXE?",
+      "respuestas": [
+        {
+          "texto": "Lectura de ficheros locales del servidor (file://), Server-Side Request Forgery (SSRF) hacia recursos internos, y denegación de servicio (Billion Laughs / expansión exponencial de entidades).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tres familias de impacto del mismo defecto."
+        },
+        {
+          "texto": "Únicamente DDoS volumétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XXE puede causar DoS local pero no es volumétrico."
+        },
+        {
+          "texto": "Solo lectura del DOM del cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XXE actúa del lado servidor."
+        },
+        {
+          "texto": "Solo modificación del fichero hosts.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El impacto es mucho más amplio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el ataque Billion Laughs y por qué es peligroso?",
+      "respuestas": [
+        {
+          "texto": "DoS basado en expansión exponencial de entidades XML anidadas: un documento pequeño se expande a gigabytes en memoria, agotando RAM/CPU del parser hasta tirar el servicio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un payload pequeño en bytes destruye memoria masivamente."
+        },
+        {
+          "texto": "Inunda el servidor con paquetes UDP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es ataque de red; es de parsing XML."
+        },
+        {
+          "texto": "Cifra los XML antes de procesarlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con cifrado."
+        },
+        {
+          "texto": "Sustituye XML por JSON.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ataque, no una sustitución de formato."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se relacionan XXE y SSRF?",
+      "respuestas": [
+        {
+          "texto": "XXE puede usarse como vector para SSRF: si las entidades externas pueden apuntar a URLs, el parser hace la petición desde el servidor, alcanzando recursos internos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! XXE puede ser \"puerta de entrada\" a SSRF en el mismo defecto."
+        },
+        {
+          "texto": "Son ataques completamente independientes sin relación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden encadenarse."
+        },
+        {
+          "texto": "XXE es el cifrado de SSRF.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene sentido técnico."
+        },
+        {
+          "texto": "SSRF necesita XXE para funcionar siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SSRF puede ocurrir en cualquier endpoint que haga peticiones."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal medida de mitigación frente a XXE?",
+      "respuestas": [
+        {
+          "texto": "Deshabilitar el procesamiento de entidades externas y DTDs en el parser XML; en muchos lenguajes basta con una flag de configuración (XMLConstants.FEATURE_SECURE_PROCESSING en Java, defusedxml en Python).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si el parser no resuelve entidades externas, XXE deja de ser explotable."
+        },
+        {
+          "texto": "Bloquear el puerto 80 en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bloquear el 80 rompería el servicio sin atajar XXE."
+        },
+        {
+          "texto": "Cifrar todos los XML con AES.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado no impide XXE; el parser sigue resolviendo entidades una vez descifrado."
+        },
+        {
+          "texto": "Reescribir la aplicación en otro lenguaje.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La mitigación es configurar correctamente el parser."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué XXE salió del Top 10 de OWASP en versiones recientes?",
+      "respuestas": [
+        {
+          "texto": "Porque los parsers modernos vienen con entidades externas deshabilitadas por defecto y muchos lenguajes han adoptado configuraciones seguras; XXE se ha fusionado en otras categorías (security misconfiguration).",
+          "correcta": true,
+          "explicacion": "¡Correcto! No ha desaparecido como riesgo, pero su prevalencia ha bajado."
+        },
+        {
+          "texto": "Porque ya no hay XML en uso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XML sigue siendo común en SOAP, configuración y feeds."
+        },
+        {
+          "texto": "Porque OWASP lo prohibió por ser muy peligroso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. OWASP no prohíbe vulnerabilidades; clasifica riesgos."
+        },
+        {
+          "texto": "Porque dejó de ser explotable totalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sigue siendo explotable en configuraciones inseguras."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es LFI (Local File Inclusion)?",
+      "respuestas": [
+        {
+          "texto": "Vulnerabilidad por la que un parámetro controlado por el usuario se usa para incluir un fichero del servidor, permitiendo leer ficheros sensibles (/etc/passwd, configs, código fuente) o, en algunos casos, ejecutar código.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es uno de los vectores clásicos de exfiltración y escalada en webs vulnerables."
+        },
+        {
+          "texto": "Un fallo del firewall local.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LFI es vulnerabilidad de aplicación, no firewall."
+        },
+        {
+          "texto": "Una técnica de cifrado de ficheros locales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LFI no es cifrado."
+        },
+        {
+          "texto": "Un protocolo de transferencia de archivos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un protocolo; es una clase de vulnerabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es path traversal y cómo se relaciona con LFI?",
+      "respuestas": [
+        {
+          "texto": "Path traversal es la técnica de usar ../ (o variantes codificadas) para salir del directorio esperado y acceder a otros. LFI suele aprovechar path traversal para alcanzar ficheros fuera del directorio web (/etc/passwd, .ssh/id_rsa).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Path traversal es la técnica; LFI es la categoría de vulnerabilidad que la explota."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Path traversal es la técnica; LFI es la vulnerabilidad."
+        },
+        {
+          "texto": "Path traversal solo aplica a Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier SO con sistema de ficheros jerárquico."
+        },
+        {
+          "texto": "LFI necesita SQLi previa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son vulnerabilidades independientes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el log poisoning y cómo escala una LFI a RCE?",
+      "respuestas": [
+        {
+          "texto": "Inyectar código (típicamente PHP) en un log accesible (User-Agent, headers, errores SSH) y luego incluir ese log vía LFI; al interpretarse como PHP, ejecuta el código del atacante en el servidor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una técnica clásica para convertir LFI en RCE en aplicaciones PHP."
+        },
+        {
+          "texto": "Borrar todos los logs para ocultar el ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es anti-forense; el log poisoning es lo contrario: contaminar logs."
+        },
+        {
+          "texto": "Cifrar los logs con una clave manipulada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con cifrado."
+        },
+        {
+          "texto": "Modificar la rotación de logs en logrotate.",
+          "correcta": false,
+          "explicacion": "Incorrecto. logrotate no es el vector; el log poisoning inyecta en el contenido."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los PHP wrappers (php://filter) y cómo se usan en LFI?",
+      "respuestas": [
+        {
+          "texto": "Protocolos virtuales propios de PHP que permiten leer/transformar ficheros (php://filter/convert.base64-encode/resource=...); usados en LFI permiten obtener el código fuente en base64, evitando que se interprete y entregándoselo al atacante.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Muy útil para leer ficheros PHP sin que se ejecuten en el servidor."
+        },
+        {
+          "texto": "Plugins de WordPress para mejorar el rendimiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Wrappers PHP son del propio lenguaje, no plugins de CMS."
+        },
+        {
+          "texto": "Versiones obsoletas de PHP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son versiones; son protocolos virtuales."
+        },
+        {
+          "texto": "Plantillas HTML compiladas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son plantillas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué medidas mitigan una LFI?",
+      "respuestas": [
+        {
+          "texto": "Allowlist de ficheros permitidos, validación estricta de la entrada, resolver con realpath() y comprobar prefijo, no usar la entrada directamente como path, y deshabilitar wrappers peligrosos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa en profundidad combinando validación, allowlist y endurecimiento del intérprete."
+        },
+        {
+          "texto": "Bloquear el puerto FTP en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. FTP no se relaciona con LFI."
+        },
+        {
+          "texto": "Cifrar todos los ficheros del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado no impide la inclusión arbitraria."
+        },
+        {
+          "texto": "Cambiar el nombre del servidor web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Renombrar el servidor no protege contra LFI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve realpath() en la mitigación de LFI?",
+      "respuestas": [
+        {
+          "texto": "Resuelve la ruta absoluta real (resolviendo ../, symlinks, etc.) permitiendo comprobar que la ruta final está dentro del directorio permitido; sin esto, ../ puede evadir un check sobre la ruta sin canonicalizar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es esencial combinarlo con allowlist por prefijo del directorio base."
+        },
+        {
+          "texto": "Cifra la ruta del fichero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es canonicalización."
+        },
+        {
+          "texto": "Bloquea el acceso a la ruta automáticamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. realpath() solo resuelve; bloquear es decisión posterior."
+        },
+        {
+          "texto": "Solo funciona en Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existe en PHP en cualquier SO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es RFI (Remote File Inclusion) y cuál es la diferencia con LFI?",
+      "respuestas": [
+        {
+          "texto": "RFI es la variante donde la aplicación carga un fichero desde una URL externa controlada por el atacante. LFI incluye ficheros que ya existen en el servidor; RFI permite traerse un payload nuevo desde fuera (ej. una web shell PHP).",
+          "correcta": true,
+          "explicacion": "¡Correcto! RFI suele dar RCE directo; LFI a veces necesita log poisoning para escalar."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. LFI incluye ficheros locales; RFI remotos."
+        },
+        {
+          "texto": "RFI solo aplica a JavaScript.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RFI es clásico de PHP con allow_url_include, no de JS."
+        },
+        {
+          "texto": "LFI requiere RFI previa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son vulnerabilidades independientes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué configuración de PHP previene RFI a nivel global?",
+      "respuestas": [
+        {
+          "texto": "Poner allow_url_include = Off en php.ini (idealmente también allow_url_fopen = Off si no se necesita); sin allow_url_include, include/require no pueden cargar URLs externas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una mitigación drástica y a nivel intérprete."
+        },
+        {
+          "texto": "Activar register_globals = On.",
+          "correcta": false,
+          "explicacion": "Incorrecto. register_globals es histórico y peligroso; activarlo es lo opuesto."
+        },
+        {
+          "texto": "Aumentar memory_limit a 1GB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La memoria no protege contra RFI."
+        },
+        {
+          "texto": "Activar magic_quotes_gpc.",
+          "correcta": false,
+          "explicacion": "Incorrecto. magic_quotes está obsoleto y nunca protegió contra RFI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta el endurecimiento del intérprete PHP (disable_functions, open_basedir)?",
+      "respuestas": [
+        {
+          "texto": "disable_functions desactiva funciones peligrosas (exec, system, eval) a nivel del intérprete; open_basedir restringe el acceso a un árbol de directorios concreto; ambas limitan lo que un atacante puede hacer aun con RCE.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa en profundidad a nivel del propio intérprete."
+        },
+        {
+          "texto": "Aceleran la ejecución del código PHP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son medidas de seguridad, no de rendimiento."
+        },
+        {
+          "texto": "Solo afectan al modo CLI de PHP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afectan a la configuración global del intérprete."
+        },
+        {
+          "texto": "Solo aplican a PHP 5.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Siguen existiendo en versiones modernas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es ModSecurity y qué papel juega como defensa adicional?",
+      "respuestas": [
+        {
+          "texto": "WAF (Web Application Firewall) que se integra como módulo de Apache/Nginx; con el OWASP Core Rule Set bloquea ataques web típicos (SQLi, XSS, LFI, RFI) antes de que lleguen a la aplicación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una capa intermedia útil pero no sustituye a corregir el código."
+        },
+        {
+          "texto": "Un antivirus para Linux.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ModSecurity es un WAF, no un antivirus."
+        },
+        {
+          "texto": "Una herramienta de gestión de actualizaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No actualiza paquetes; filtra peticiones HTTP."
+        },
+        {
+          "texto": "Un protocolo de cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ModSecurity no es protocolo de cifrado."
+        }
+      ]
+    }
+  ]
+}

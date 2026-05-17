@@ -1,7 +1,7 @@
 {
   "groups": [
     {
-      "name": "Bastionado",
+      "name": "Bastionado de Redes",
       "files": [
         {
           "name": "Practica-Bast-01-VLSM",
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "name": "Hacking",
+      "name": "Hacking Ético",
       "files": [
         {
           "name": "Hacking-01-OWASP-Defensas",
@@ -151,11 +151,29 @@
           "tema": "Hacking Ético - RCE, inyección de comandos y deserialización insegura",
           "count": 11,
           "path": "Hacking/Hacking-04-RCE-Deserializacion.json"
+        },
+        {
+          "name": "Hacking-05-SSRF-XXE-LFI-RFI",
+          "tema": "Hacking Ético - SSRF, XXE, LFI y RFI",
+          "count": 22,
+          "path": "Hacking/Hacking-05-SSRF-XXE-LFI-RFI.json"
+        },
+        {
+          "name": "Hacking-06-HTTP-Sesiones-APIs",
+          "tema": "Hacking Ético - HTTP, sesiones, cookies y APIs",
+          "count": 22,
+          "path": "Hacking/Hacking-06-HTTP-Sesiones-APIs.json"
+        },
+        {
+          "name": "Hacking-07-Auth-Logica-Errores",
+          "tema": "Hacking Ético - Autenticación, lógica de negocio, IDOR y manipulación de cliente",
+          "count": 24,
+          "path": "Hacking/Hacking-07-Auth-Logica-Errores.json"
         }
       ]
     },
     {
-      "name": "Incidentes",
+      "name": "Incidentes de Ciberseguridad",
       "files": [
         {
           "name": "Practica-EX1-1",
@@ -262,7 +280,7 @@
       ]
     },
     {
-      "name": "Normativas",
+      "name": "Normativas de Ciberseguridad",
       "files": [
         {
           "name": "RA1-Facil",

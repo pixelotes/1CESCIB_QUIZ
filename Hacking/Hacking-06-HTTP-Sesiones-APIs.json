@@ -1,0 +1,555 @@
+{
+  "tema": "Hacking Ético - HTTP, sesiones, cookies y APIs",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué significa que HTTP sea un protocolo sin estado?",
+      "respuestas": [
+        {
+          "texto": "Cada petición HTTP es independiente: el servidor no recuerda automáticamente nada de peticiones previas del mismo cliente. Para mantener \"estado\" (sesión, carrito) hace falta un mecanismo adicional como cookies o tokens.",
+          "correcta": true,
+          "explicacion": "¡Correcto! HTTP es stateless por diseño; las aplicaciones añaden el estado encima."
+        },
+        {
+          "texto": "Que no se puede usar para autenticar usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí se puede autenticar; lo hace usando cookies/tokens encima."
+        },
+        {
+          "texto": "Que cada conexión TCP transporta solo una petición.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HTTP/1.1 reutiliza conexiones (keep-alive) y HTTP/2 multiplexa; \"sin estado\" se refiere al servidor, no a la conexión."
+        },
+        {
+          "texto": "Que no soporta ningún tipo de cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HTTP soporta TLS (HTTPS); el concepto stateless es independiente del cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve un proxy HTTP y por qué actúa a la vez como cliente y servidor?",
+      "respuestas": [
+        {
+          "texto": "Intercepta peticiones del cliente real, las reenvía al servidor de destino y devuelve la respuesta. Actúa como servidor frente al cliente original y como cliente frente al servidor final. Útil para caché, filtrado, logging y testing (Burp Suite).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Burp Suite, ZAP o squid funcionan así."
+        },
+        {
+          "texto": "Solo cifra el tráfico, sin ninguna otra función.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser una función adicional; no es la esencia del proxy."
+        },
+        {
+          "texto": "Solo guarda copias de seguridad de cada respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Caché es una posible función, pero no toda su finalidad."
+        },
+        {
+          "texto": "Bloquea automáticamente todo el tráfico HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un proxy puede filtrar, pero no bloquea todo por defecto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué información transporta una petición HTTP en su cabecera?",
+      "respuestas": [
+        {
+          "texto": "Método (GET/POST/...), URL, versión HTTP, Host, User-Agent, Accept, Cookie, Authorization, Content-Type/Length, Referer y otras cabeceras según el caso; metadatos esenciales sobre quién, qué y cómo se pide.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La cabecera describe la petición; el cuerpo (si lo hay) lleva los datos."
+        },
+        {
+          "texto": "Solo el contenido binario de un fichero adjunto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El contenido del fichero va en el cuerpo, no en la cabecera."
+        },
+        {
+          "texto": "Únicamente la IP de origen y de destino.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las IPs son de la capa IP/TCP, no HTTP; HTTP transporta otra información de aplicación."
+        },
+        {
+          "texto": "La clave privada del usuario para descifrar TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La clave privada NUNCA se envía; eso destruiría la seguridad TLS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué se usan los rangos de códigos de estado HTTP 2xx, 3xx, 4xx y 5xx?",
+      "respuestas": [
+        {
+          "texto": "2xx = éxito (200 OK, 201 Created); 3xx = redirecciones (301, 302); 4xx = error del cliente (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found); 5xx = error del servidor (500, 502, 503).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una clasificación semántica esencial para clientes y administradores."
+        },
+        {
+          "texto": "Todos significan lo mismo; solo varía el número.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cada familia tiene un significado distinto."
+        },
+        {
+          "texto": "Son códigos de cifrado TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son códigos de estado HTTP, no de cifrado."
+        },
+        {
+          "texto": "Identifican el navegador del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El navegador se identifica con User-Agent."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué partes componen una URL típica?",
+      "respuestas": [
+        {
+          "texto": "Esquema (https://), autoridad (usuario:password@host:puerto), ruta (/path/recurso), query (?clave=valor&...) y fragmento (#ancla). No todas las partes están siempre presentes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta estructura permite localizar recursos en la web de forma unívoca."
+        },
+        {
+          "texto": "Solo el dominio y el puerto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La URL tiene más componentes que dominio+puerto."
+        },
+        {
+          "texto": "Únicamente la ruta del fichero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ruta es solo una parte."
+        },
+        {
+          "texto": "Esquema, contraseña y nada más.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay más componentes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta HTTP/2 frente a HTTP/1.1 en el intercambio de mensajes?",
+      "respuestas": [
+        {
+          "texto": "Multiplexado (varias peticiones/respuestas en la misma conexión sin bloqueo), compresión de cabeceras (HPACK), priorización de streams, server push y formato binario; reduce latencia y mejora rendimiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mantiene la semántica HTTP pero cambia el transporte para ser más eficiente."
+        },
+        {
+          "texto": "Es exactamente igual que HTTP/1.1 pero con otro nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay cambios profundos en el transporte."
+        },
+        {
+          "texto": "Solo cambia el puerto por defecto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El puerto puede ser el mismo; cambia el protocolo."
+        },
+        {
+          "texto": "Solo soporta GET, no POST.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Soporta todos los métodos HTTP."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una API REST y qué relación tiene con HTTP?",
+      "respuestas": [
+        {
+          "texto": "Estilo arquitectónico que expone recursos como URLs, usa los métodos HTTP (GET/POST/PUT/DELETE) para operar sobre ellos y suele intercambiar JSON; aprovecha la semántica nativa de HTTP en lugar de definir un protocolo nuevo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! REST se apoya en lo que HTTP ya ofrece."
+        },
+        {
+          "texto": "Una librería de JavaScript del lado cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. REST es un estilo de API, no una librería."
+        },
+        {
+          "texto": "Un protocolo distinto a HTTP que coexiste con él.",
+          "correcta": false,
+          "explicacion": "Incorrecto. REST se apoya en HTTP, no es independiente."
+        },
+        {
+          "texto": "Solo aplica a APIs públicas, no privadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier tipo de API."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una sesión web y por qué es necesaria sobre HTTP?",
+      "respuestas": [
+        {
+          "texto": "Mecanismo que asocia varias peticiones HTTP del mismo usuario para mantener estado (login, carrito, preferencias); necesario porque HTTP es stateless y cada petición es independiente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin sesión, cada petición tendría que reautenticarse desde cero."
+        },
+        {
+          "texto": "Una conexión TCP única que dura horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las conexiones TCP no duran lo que la sesión; pueden abrirse y cerrarse muchas."
+        },
+        {
+          "texto": "Un cifrado especial para HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es TLS; la sesión es otra cosa."
+        },
+        {
+          "texto": "Una herramienta de seguimiento de marketing.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El marketing usa cookies de tracking, pero \"sesión\" es un concepto técnico distinto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué un ID de sesión debe ser largo, aleatorio e impredecible?",
+      "respuestas": [
+        {
+          "texto": "Porque su predicción equivale a robar la sesión sin atacar nada: el atacante simplemente \"adivina\" el ID. Largo + aleatorio criptográfico hace inviable la enumeración.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es por esto que NUNCA se generan con timestamps o contadores."
+        },
+        {
+          "texto": "Para que sea más fácil de teclear por el usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El usuario no teclea IDs de sesión; los envía el navegador."
+        },
+        {
+          "texto": "Para que ocupe menos espacio en la BD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Largo y aleatorio ocupa MÁS, no menos; la motivación es seguridad."
+        },
+        {
+          "texto": "Porque lo exige el RGPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no especifica longitud de tokens."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué es mala práctica transportar el ID de sesión en la URL?",
+      "respuestas": [
+        {
+          "texto": "Porque la URL queda en historial del navegador, en logs del servidor, en logs de proxies intermedios y en cabeceras Referer enviadas al hacer clic; cualquier filtración del log expone sesiones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso el ID viaja en cookies con flags adecuadas, no en la URL."
+        },
+        {
+          "texto": "Porque la URL no soporta caracteres alfanuméricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La URL soporta perfectamente IDs alfanuméricos."
+        },
+        {
+          "texto": "Porque las URLs no se cachean.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: las URLs sí se cachean (otra razón más para no llevar IDs)."
+        },
+        {
+          "texto": "Porque el navegador siempre añade un sufijo aleatorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El navegador no añade sufijos automáticamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque de fijación de sesión?",
+      "respuestas": [
+        {
+          "texto": "El atacante consigue que la víctima use un ID de sesión que él conoce (por URL preparada, cookie inyectada, etc.) antes del login; al autenticarse la víctima, el atacante hereda la sesión válida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mitigación: regenerar el ID al hacer login, descartando el anterior."
+        },
+        {
+          "texto": "Imponer una sesión que dure indefinidamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Fijación\" significa fijar el ID, no la duración."
+        },
+        {
+          "texto": "Atornillar físicamente el servidor de sesiones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+        },
+        {
+          "texto": "Cifrar todas las sesiones con la misma clave.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es manipulación del ID."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre cookie persistente y cookie de sesión, y por qué importa?",
+      "respuestas": [
+        {
+          "texto": "Cookie de sesión: vive en memoria del navegador y desaparece al cerrarlo. Persistente: tiene fecha de caducidad y queda en disco. Importa porque persistentes con tokens sensibles aumentan la ventana de riesgo si se roba el equipo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para tokens de sesión sensibles, suele preferirse cookie de sesión sin caducidad."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tipos distintos según persistencia."
+        },
+        {
+          "texto": "Persistente significa cifrada y de sesión sin cifrar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado no es la diferencia; es la persistencia en disco."
+        },
+        {
+          "texto": "Solo el navegador Chrome distingue entre ambas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es estándar HTTP; todos los navegadores las distinguen."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué hace el atributo HttpOnly en una cookie y qué ataque mitiga?",
+      "respuestas": [
+        {
+          "texto": "Impide que la cookie sea accesible desde JavaScript (document.cookie); mitiga el robo de cookie de sesión vía XSS, porque aunque el atacante ejecute script, no puede leerla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es defensa de profundidad esencial cuando hay XSS."
+        },
+        {
+          "texto": "Cifra la cookie con AES.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No cifra; restringe acceso desde JS."
+        },
+        {
+          "texto": "Impide que la cookie viaje por HTTP plano.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es Secure, no HttpOnly."
+        },
+        {
+          "texto": "Bloquea el envío cross-site de la cookie.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es SameSite, no HttpOnly."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencias conceptuales hay entre SOAP y REST como estilos de API?",
+      "respuestas": [
+        {
+          "texto": "SOAP: protocolo basado en XML con estándares estrictos (WSDL, WS-Security), pensado para servicios empresariales; verbose y rígido. REST: estilo más ligero basado en HTTP/JSON, simple y flexible; estándar de facto en webs modernas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambos coexisten: SOAP en banca/sectores legacy, REST en la web moderna."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son estilos muy distintos."
+        },
+        {
+          "texto": "SOAP solo usa HTTP y REST solo TCP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos suelen usar HTTP."
+        },
+        {
+          "texto": "SOAP es más moderno que REST.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SOAP es anterior; REST es más moderno y ligero."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es GraphQL y en qué se diferencia de una API REST tradicional?",
+      "respuestas": [
+        {
+          "texto": "Lenguaje de consulta para APIs donde el cliente especifica exactamente qué campos quiere (en una sola petición); REST suele tener endpoints fijos que devuelven estructuras predefinidas, lo que puede llevar a over-fetching o múltiples peticiones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! GraphQL aporta flexibilidad pero añade complejidad de tipado y autorización por campo."
+        },
+        {
+          "texto": "Una base de datos NoSQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GraphQL es un lenguaje de consulta de APIs, no una BD."
+        },
+        {
+          "texto": "Un protocolo de transporte que sustituye a HTTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suele ejecutarse sobre HTTP."
+        },
+        {
+          "texto": "Una versión visual de SQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un lenguaje de consulta de APIs, no de BD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué las APIs son una superficie de ataque especialmente delicada?",
+      "respuestas": [
+        {
+          "texto": "Porque exponen lógica de negocio directamente, suelen tener menos defensas frontales (sin WAF/UI), pueden carecer de autenticación granular por endpoint, y a veces se documentan exhaustivamente o se exponen con autodescubrimiento (Swagger).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso OWASP mantiene un Top 10 específico para APIs."
+        },
+        {
+          "texto": "Porque siempre son públicas en Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Muchas APIs son internas; el problema es estructural."
+        },
+        {
+          "texto": "Porque no soportan TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí lo soportan."
+        },
+        {
+          "texto": "Porque solo se usan en aplicaciones móviles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Se usan en todo tipo de cliente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué riesgo tiene exponer documentación detallada de la API públicamente?",
+      "respuestas": [
+        {
+          "texto": "Da al atacante un mapa exhaustivo de endpoints, parámetros, tipos esperados y errores, acelerando enormemente el descubrimiento y la explotación; reduce la \"oscuridad\" como capa de defensa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso la documentación detallada debe limitarse a entornos autenticados o internos."
+        },
+        {
+          "texto": "Ralentiza la API.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La documentación pública no afecta al rendimiento."
+        },
+        {
+          "texto": "Aumenta el coste de las licencias.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una cuestión de licencias."
+        },
+        {
+          "texto": "Bloquea automáticamente las peticiones de Postman.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con Postman."
+        }
+      ]
+    },
+    {
+      "pregunta": "Cita varias buenas prácticas para proteger una API.",
+      "respuestas": [
+        {
+          "texto": "Forzar HTTPS con TLS moderno, autenticación robusta (OAuth2/OIDC, claves API rotables, MFA), autorización por endpoint/recurso, rate-limiting, validación estricta de entrada, paginación obligatoria, logging completo, versionado y documentación protegida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa en profundidad: identidad + autorización + límites + observabilidad."
+        },
+        {
+          "texto": "Solo cifrar con AES-128 las respuestas grandes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS ya cifra; aplicar cifrado solo a respuestas grandes es ad hoc."
+        },
+        {
+          "texto": "Bloquear cualquier petición que use el método POST.",
+          "correcta": false,
+          "explicacion": "Incorrecto. POST es legítimo en APIs."
+        },
+        {
+          "texto": "Permitir acceso anónimo siempre por simplicidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso anula la seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el fuzzing y para qué se usa en pruebas de penetración?",
+      "respuestas": [
+        {
+          "texto": "Técnica de prueba que envía entradas malformadas, aleatorias o muy específicas (mutadas) a una aplicación buscando crashes, errores reveladores o comportamientos inesperados; encuentra fallos que tests funcionales no detectan.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Herramientas: AFL, libFuzzer, wfuzz, ffuf, Burp Intruder."
+        },
+        {
+          "texto": "Es un protocolo de cifrado simétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es técnica de prueba."
+        },
+        {
+          "texto": "Es una herramienta de gestión de proyectos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una técnica de testing de seguridad."
+        },
+        {
+          "texto": "Es un tipo de DDoS contra APIs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Puede generar carga pero no es su finalidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre fuzzing y un test funcional tradicional?",
+      "respuestas": [
+        {
+          "texto": "El test funcional verifica que entradas válidas producen los resultados esperados; el fuzzing explora entradas no previstas para encontrar comportamientos no especificados que pueden ser vulnerabilidades.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Funcional = \"hace lo que debe\"; fuzzing = \"qué hace cuando no debe\"."
+        },
+        {
+          "texto": "Son la misma técnica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tienen propósitos distintos."
+        },
+        {
+          "texto": "El funcional es para web y el fuzzing para móvil.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican a cualquier plataforma."
+        },
+        {
+          "texto": "El fuzzing solo prueba con valores numéricos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El fuzzing usa todo tipo de entradas (texto, binario, malformado, codificado)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué aporta la firma de código a la seguridad del software?",
+      "respuestas": [
+        {
+          "texto": "Garantiza autenticidad (quién emitió el binario) e integridad (no ha sido alterado tras la firma); el SO o navegador puede verificarlo y advertir/bloquear binarios no firmados o con firma inválida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Combina hash + clave privada del editor; el verificador usa la clave pública."
+        },
+        {
+          "texto": "Cifra el código fuente para que no se pueda leer.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma no cifra; permite verificar autenticidad e integridad."
+        },
+        {
+          "texto": "Acelera la ejecución del binario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La firma no afecta al rendimiento."
+        },
+        {
+          "texto": "Sustituye al control de versiones (Git).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son cosas distintas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la integridad de subrecursos (SRI) en aplicaciones web?",
+      "respuestas": [
+        {
+          "texto": "Atributo HTML (integrity=\"sha384-...\") que permite que el navegador verifique mediante hash que un recurso externo (script, css cargado desde CDN) no ha sido modificado antes de ejecutarlo.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa contra CDNs comprometidos o ataques en la cadena de suministro del frontend."
+        },
+        {
+          "texto": "Una técnica de cifrado para recursos web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SRI verifica integridad por hash, no cifra."
+        },
+        {
+          "texto": "Un protocolo nuevo que sustituye a HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SRI complementa HTTPS, no lo sustituye."
+        },
+        {
+          "texto": "Un atributo de cookies similar a HttpOnly.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es de etiquetas script/link, no de cookies."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "tema": "Hacking Ético - Autenticación, lógica de negocio, IDOR y manipulación de cliente",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es un fallo de lógica de negocio?",
+      "respuestas": [
+        {
+          "texto": "Defecto en cómo la aplicación implementa las reglas del proceso de negocio, no en la tecnología. Permite acciones técnicamente válidas pero no permitidas por la lógica (ej. precios negativos, descuentos repetidos, saltarse pasos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es específico de cada aplicación; no hay reglas genéricas."
+        },
+        {
+          "texto": "Un error de sintaxis en el código.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un fallo de sintaxis es un bug; el de lógica es a otro nivel."
+        },
+        {
+          "texto": "Un fallo de red entre cliente y servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es de red; es de cómo se modelan las reglas del negocio."
+        },
+        {
+          "texto": "Una vulnerabilidad de cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con criptografía."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los escáneres automáticos no suelen detectar fallos de lógica de negocio?",
+      "respuestas": [
+        {
+          "texto": "Porque cada aplicación tiene sus propias reglas; los escáneres buscan patrones genéricos (firmas, payloads) y no entienden el contexto del negocio. Detectarlos exige conocer cómo \"debería\" funcionar la aplicación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso los hallazgos de lógica de negocio suelen requerir manual testing."
+        },
+        {
+          "texto": "Porque los escáneres no soportan HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí soportan; el motivo es de contexto, no de protocolo."
+        },
+        {
+          "texto": "Porque los escáneres están desactualizados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque estén al día, la lógica de negocio queda fuera de su alcance."
+        },
+        {
+          "texto": "Porque los escáneres solo funcionan en horario laboral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con horario."
+        }
+      ]
+    },
+    {
+      "pregunta": "Cita ejemplos típicos de fallos de lógica de negocio.",
+      "respuestas": [
+        {
+          "texto": "Saltarse autenticación por paso directo a una URL posterior; aplicar el mismo descuento varias veces; manipular el precio en el carrito antes de pagar; añadir cantidades negativas; ignorar límites de transferencia o de intentos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Todos son técnicamente válidos pero rompen reglas del negocio."
+        },
+        {
+          "texto": "Únicamente errores de tipografía en mensajes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso son errores de UX, no de lógica de negocio."
+        },
+        {
+          "texto": "Caídas físicas del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un incidente operativo."
+        },
+        {
+          "texto": "Lentitud de la base de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un problema de rendimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se mitigan los fallos de lógica de negocio?",
+      "respuestas": [
+        {
+          "texto": "Modelar y validar las reglas siempre en el servidor (nunca solo en cliente), pruebas manuales con casos de \"qué pasa si...\", análisis de los flujos críticos, separación de funciones y monitorización de patrones anómalos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La validación cliente puede ser UX-friendly pero no es seguridad."
+        },
+        {
+          "texto": "Solo validar en el cliente con JavaScript.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cliente es manipulable; nunca debe ser la única defensa."
+        },
+        {
+          "texto": "Bloquear el puerto 443 en producción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso rompería el sitio sin atajar la lógica."
+        },
+        {
+          "texto": "Aumentar la longitud de las contraseñas a 50 caracteres.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Buena práctica pero no mitiga fallos de lógica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre autenticación y autorización?",
+      "respuestas": [
+        {
+          "texto": "Autenticación verifica QUIÉN eres (login, contraseña, MFA); autorización determina QUÉ puedes hacer una vez identificado (permisos, roles, ACLs). Son fases consecutivas pero independientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Confundirlas conduce a fallos graves (controles de autenticación sin autorización efectiva)."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Resuelven preguntas distintas."
+        },
+        {
+          "texto": "La autenticación solo aplica a usuarios humanos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. También a servicios, APIs, dispositivos."
+        },
+        {
+          "texto": "La autorización ocurre antes del login.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La autorización requiere identificación previa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué un fallo de autorización puede ser tan grave como uno de autenticación?",
+      "respuestas": [
+        {
+          "texto": "Porque permite que un usuario legítimo acceda a recursos o realice acciones que no le corresponden (datos de otros, funciones de administración); el atacante ni siquiera necesita romper el login.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un usuario válido con permisos mal configurados puede exfiltrar todo lo que se supone protegido."
+        },
+        {
+          "texto": "Porque los fallos de autorización ralentizan la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con el rendimiento."
+        },
+        {
+          "texto": "Porque solo afectan a usuarios anónimos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier usuario autenticado o no."
+        },
+        {
+          "texto": "Porque rompen el cifrado TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son independientes del cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque de fuerza bruta sobre credenciales y cómo se mitiga?",
+      "respuestas": [
+        {
+          "texto": "Probar muchas combinaciones de usuario/contraseña sistemáticamente o desde listas (diccionarios). Se mitiga con rate-limiting, bloqueo tras N intentos, MFA, CAPTCHA, monitorización de patrones y contraseñas robustas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Defensa en capas: dificultar intentos + detectar patrones + segundo factor."
+        },
+        {
+          "texto": "Forzar físicamente la puerta del CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es físico; la fuerza bruta digital es probar combinaciones."
+        },
+        {
+          "texto": "Cifrar la contraseña con AES-128.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado no impide la fuerza bruta del login."
+        },
+        {
+          "texto": "Aumentar el ancho de banda contratado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Más ancho de banda facilita al atacante, no mitiga."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué dejar credenciales por defecto se considera una vulnerabilidad propia?",
+      "respuestas": [
+        {
+          "texto": "Porque los pares usuario/contraseña por defecto de fabricantes son públicos y los bots los prueban automáticamente; un sistema con admin/admin es de hecho un sistema sin autenticación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cambiar las credenciales por defecto es lo primero en cualquier despliegue."
+        },
+        {
+          "texto": "Porque consumen más memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un problema de recursos."
+        },
+        {
+          "texto": "Porque son demasiado largas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El problema es que son conocidas, no la longitud."
+        },
+        {
+          "texto": "Porque hacen el sistema más lento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no depende de la credencial."
+        }
+      ]
+    },
+    {
+      "pregunta": "Cita tres formas en que se puede comprometer un token de sesión.",
+      "respuestas": [
+        {
+          "texto": "Predicción (token débil), interceptación en tránsito (HTTP plano o MITM), robo vía XSS (sin HttpOnly), filtración por URL/logs/Referer, fijación de sesión, fuga por error verboso, persistencia en backup expuesto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada uno se mitiga con una contramedida distinta (TLS, HttpOnly, regeneración, etc.)."
+        },
+        {
+          "texto": "Solo apagando el servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Apagar el servidor invalida sesiones, no las compromete."
+        },
+        {
+          "texto": "Únicamente con acceso físico al CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay muchos vectores remotos."
+        },
+        {
+          "texto": "Solo con un ataque de DDoS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. DDoS no compromete tokens; ataca disponibilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una vulnerabilidad de redirección o reenvío no validado?",
+      "respuestas": [
+        {
+          "texto": "La aplicación toma un destino de redirección de un parámetro del usuario sin validar; el atacante crea un enlace al sitio legítimo que termina redirigiendo a su web (phishing creíble, descargas maliciosas, exfiltración).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mitigación: allowlist de destinos o redirecciones relativas dentro del propio dominio."
+        },
+        {
+          "texto": "Una caída del DNS del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con DNS."
+        },
+        {
+          "texto": "Un fallo del balanceador de carga.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es vulnerabilidad de aplicación."
+        },
+        {
+          "texto": "Una redirección HTTP 301 que dura mucho.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duración no es el problema; lo es el destino arbitrario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué las redirecciones no validadas son útiles en campañas de phishing?",
+      "respuestas": [
+        {
+          "texto": "Porque el enlace inicial pertenece al dominio legítimo (genera confianza, supera muchos filtros antiphishing), y luego salta al sitio del atacante; la URL en el email es 100% \"oficial\".",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso muchos filtros de email comprueban redirecciones más allá del primer salto."
+        },
+        {
+          "texto": "Porque solo funcionan en horarios nocturnos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con horarios."
+        },
+        {
+          "texto": "Porque aumentan la velocidad del navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No afectan al rendimiento."
+        },
+        {
+          "texto": "Porque solo funcionan con cookies.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las redirecciones son independientes de cookies."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es a grandes rasgos un ataque \"Golden Ticket\" en Kerberos?",
+      "respuestas": [
+        {
+          "texto": "El atacante obtiene la clave (hash NTLM) de la cuenta krbtgt en Active Directory y forja TGTs (Ticket Granting Tickets) válidos para cualquier usuario, ganando control total y persistente del dominio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Mitigación clave: rotar la contraseña de krbtgt dos veces seguidas."
+        },
+        {
+          "texto": "Un ticket dorado físico para acceder al CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ataque digital sobre Kerberos."
+        },
+        {
+          "texto": "Un código de descuento en software empresarial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+        },
+        {
+          "texto": "Un certificado X.509 emitido por Microsoft.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un certificado; es un ticket TGT forjado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la contaminación de parámetros HTTP (HPP)?",
+      "respuestas": [
+        {
+          "texto": "Enviar el mismo parámetro varias veces en una petición (?id=1&id=2); dependiendo de cómo el servidor combine los valores (primero, último, concatenado, lista), puede evadir filtros, WAFs o validaciones que solo miran el \"primer\" valor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada framework decide cómo manejar duplicados; las diferencias se explotan."
+        },
+        {
+          "texto": "Inyectar parámetros en el certificado TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con TLS."
+        },
+        {
+          "texto": "Modificar parámetros del kernel del sistema.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con kernel."
+        },
+        {
+          "texto": "Encriptar los parámetros para ocultarlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es duplicación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una referencia directa insegura a objetos (IDOR)?",
+      "respuestas": [
+        {
+          "texto": "La aplicación expone un identificador interno de un recurso (ID numérico, hash) sin verificar que el usuario tiene derecho a verlo; cambiando el ID en la URL/petición se accede a recursos de otros usuarios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es uno de los fallos más comunes de control de acceso."
+        },
+        {
+          "texto": "Una variable mal nombrada en el código fuente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es de naming; es de autorización."
+        },
+        {
+          "texto": "Una caché que sirve respuestas obsoletas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con caché."
+        },
+        {
+          "texto": "Una redirección HTTP mal formada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es redirección; es autorización rota."
+        }
+      ]
+    },
+    {
+      "pregunta": "Pon un ejemplo conceptual de IDOR.",
+      "respuestas": [
+        {
+          "texto": "Una URL como /factura?id=1234 que el usuario actual puede ver; cambiando a /factura?id=1235 obtiene la factura de OTRO usuario porque el backend no comprueba que el solicitante sea el dueño del recurso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El control debe ser por usuario, no solo por existencia del ID."
+        },
+        {
+          "texto": "Un ataque de fuerza bruta sobre contraseñas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Fuerza bruta es otra cosa."
+        },
+        {
+          "texto": "Inyectar SQL en un campo de búsqueda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es SQLi."
+        },
+        {
+          "texto": "Pulsar F12 para ver el código fuente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es inspeccionar el cliente, no IDOR."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué ocultar un identificador (security through obscurity) no protege frente a IDOR?",
+      "respuestas": [
+        {
+          "texto": "Porque los IDs aparecen en logs, historiales, capturas, otros usuarios, herramientas de proxy y fugas accidentales; ocultar el ID solo retrasa el descubrimiento, no impide el acceso si la autorización del backend falla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La defensa real es comprobar la autorización SIEMPRE en el servidor."
+        },
+        {
+          "texto": "Porque los IDs ocultos consumen más memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La memoria es irrelevante."
+        },
+        {
+          "texto": "Porque los hashes son siempre invertibles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los hashes criptográficos no son invertibles, pero eso no resuelve IDOR."
+        },
+        {
+          "texto": "Porque los IDs largos saturan los logs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es de autorización, no de logging."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la manipulación de campos ocultos de un formulario HTML?",
+      "respuestas": [
+        {
+          "texto": "Modificar valores de inputs type=\"hidden\" antes de enviar el formulario; aunque no se muestran al usuario, viajan al servidor con la petición y pueden alterar precios, IDs de usuario, descuentos, etc. si el servidor confía en ellos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Lo \"hidden\" lo es solo visualmente; cualquier proxy o DevTool los manipula trivialmente."
+        },
+        {
+          "texto": "Cifrar los campos para que el servidor los ignore.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es modificación."
+        },
+        {
+          "texto": "Solo aplica a formularios POST, no GET.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a ambos."
+        },
+        {
+          "texto": "Únicamente posible con acceso físico al equipo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cualquier usuario remoto puede manipular su propio cliente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué nunca se debe confiar en valores que vienen del cliente, incluso si son hidden o vienen de JS?",
+      "respuestas": [
+        {
+          "texto": "Porque el cliente está bajo control del usuario (legítimo o atacante): JS se puede modificar, hidden inputs se pueden cambiar, peticiones se pueden reescribir con un proxy. La autoridad sobre cualquier dato sensible debe estar en el servidor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Regla de oro: \"never trust the client\"."
+        },
+        {
+          "texto": "Porque el cliente es lento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no es el problema."
+        },
+        {
+          "texto": "Porque los datos del cliente expiran rápido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No expiran; pueden ser manipulados."
+        },
+        {
+          "texto": "Porque el cliente no envía datos en formato correcto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí envía formato correcto; el problema es que puede mentir."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la manipulación de cookies y por qué es peligrosa si la aplicación confía en ellas?",
+      "respuestas": [
+        {
+          "texto": "Modificar valores de cookies en el navegador (DevTools) o en tránsito; si la aplicación guarda en cookies datos sensibles como user_id, role=admin, prices, etc. y confía en ellos, el atacante cambia su rol o accede a datos ajenos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En cookies solo deben ir tokens opacos firmados/cifrados servidor; nunca valores semánticos editables."
+        },
+        {
+          "texto": "Las cookies son inmutables y no pueden modificarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cliente las controla; son trivialmente modificables."
+        },
+        {
+          "texto": "Solo afecta a Chrome.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cualquier navegador permite editar cookies."
+        },
+        {
+          "texto": "Solo aplica a sesiones expiradas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier cookie."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los comentarios en el código fuente HTML/JS se consideran un riesgo de seguridad?",
+      "respuestas": [
+        {
+          "texto": "Porque a veces contienen información sensible: TODOs con referencias a credenciales, rutas internas, lógica abandonada, descripciones de algoritmos. Cualquier usuario puede ver el código fuente con \"Ver código\" del navegador.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El frontend SIEMPRE es público; revisar y limpiar antes de producción es esencial."
+        },
+        {
+          "texto": "Porque ralentizan la carga de la página.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pesan poco; el problema es de información."
+        },
+        {
+          "texto": "Porque los comentarios no son válidos en HTML5.",
+          "correcta": false,
+          "explicacion": "Incorrecto. HTML5 soporta comentarios."
+        },
+        {
+          "texto": "Porque los navegadores los ejecutan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los navegadores no ejecutan comentarios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué peligro suponen los mensajes de error excesivamente detallados (verbose errors)?",
+      "respuestas": [
+        {
+          "texto": "Revelan información que ayuda a un atacante: motor de BD y versión, rutas absolutas, consultas SQL completas, stack traces, librerías y versiones. Acelera el reconocimiento previo a la explotación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En producción se devuelven errores genéricos; los detalles solo en logs internos."
+        },
+        {
+          "texto": "Ninguno; cuanta más información, mejor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cuanta más información, más fácil para el atacante."
+        },
+        {
+          "texto": "Solo aplica a aplicaciones móviles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier aplicación."
+        },
+        {
+          "texto": "Solo aplica si hay errores 500.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los errores 4xx también pueden ser verbosos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las credenciales codificadas (hardcoded) y por qué son una falla grave?",
+      "respuestas": [
+        {
+          "texto": "Contraseñas, claves API o tokens escritos directamente en el código fuente; quedan en el control de versiones, en builds y en backups; rotarlas es costoso y suelen acabar filtradas en repositorios públicos (caso típico de GitHub leaks).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las credenciales deben vivir en secret managers (Vault, AWS Secrets Manager) o variables de entorno controladas, no en código."
+        },
+        {
+          "texto": "Credenciales generadas dinámicamente por hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Hardcoded\" significa escritas en el código fuente."
+        },
+        {
+          "texto": "Credenciales cifradas con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una credencial cifrada en código sigue siendo accesible si la clave también está en el código."
+        },
+        {
+          "texto": "Únicamente afecta a aplicaciones C/C++.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a cualquier lenguaje."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una condición de carrera (race condition) y por qué se llama también TOCTOU?",
+      "respuestas": [
+        {
+          "texto": "Vulnerabilidad por la que el resultado depende del orden no determinista de operaciones concurrentes; TOCTOU = Time Of Check to Time Of Use: el atacante actúa entre la comprobación y el uso, alterando el estado entre ambos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La defensa es atomicidad: comprobar y actuar en una operación indivisible (locks, transacciones)."
+        },
+        {
+          "texto": "Una carrera entre dos servidores por servir la respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es competencia entre servidores; es un defecto de concurrencia."
+        },
+        {
+          "texto": "Un fallo de carrera del procesador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es hardware; es lógico."
+        },
+        {
+          "texto": "Una técnica de cifrado paralelo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "Pon un ejemplo conceptual de condición de carrera.",
+      "respuestas": [
+        {
+          "texto": "Un sistema de transferencias que comprueba saldo (paso 1), después efectúa la transferencia (paso 2); si dos peticiones simultáneas pasan el paso 1 antes de que cualquiera ejecute el paso 2, ambas pueden gastar el mismo saldo (\"transferir más de lo que se tiene\").",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el patrón clásico de TOCTOU en banca/inventario."
+        },
+        {
+          "texto": "Pulsar muchas veces el botón de descarga.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin concurrencia que altere estado entre check y use, no hay race."
+        },
+        {
+          "texto": "Inyectar SQL en el campo de búsqueda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es SQLi."
+        },
+        {
+          "texto": "Robar la cookie del navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es session hijacking."
+        }
+      ]
+    }
+  ]
+}
