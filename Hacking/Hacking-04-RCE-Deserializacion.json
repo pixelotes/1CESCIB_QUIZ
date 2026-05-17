@@ -1,0 +1,280 @@
+{
+  "tema": "Hacking Ético - RCE, inyección de comandos y deserialización insegura",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es una vulnerabilidad de RCE y por qué se considera de las más críticas?",
+      "respuestas": [
+        {
+          "texto": "Remote Code Execution: el atacante ejecuta código arbitrario en el servidor remoto. Es crítica porque elude prácticamente cualquier control de aplicación y permite tomar control del sistema con los privilegios del proceso vulnerable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Suele ser el peldaño que lleva a comprometer el host por completo."
+        },
+        {
+          "texto": "Es un fallo que solo afecta a la velocidad de respuesta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RCE es severísimo; nada que ver con rendimiento."
+        },
+        {
+          "texto": "Es un fallo del navegador del cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RCE ejecuta código en el servidor, no en el cliente (eso sería más bien drive-by)."
+        },
+        {
+          "texto": "Es un fallo solo en aplicaciones de escritorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RCE afecta a aplicaciones web, móviles, de escritorio y servicios."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las posibles consecuencias de un RCE explotado?",
+      "respuestas": [
+        {
+          "texto": "Lectura de ficheros sensibles, exfiltración de datos, modificación/borrado, instalación de backdoors, pivoting hacia la red interna, persistencia y a menudo escalada de privilegios hasta root/SYSTEM.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Una RCE bien explotada puede llevar al control total del servidor."
+        },
+        {
+          "texto": "Únicamente mostrar un mensaje en la página.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso minimizaría dramáticamente el impacto real."
+        },
+        {
+          "texto": "Reducir el ancho de banda disponible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RCE no es un ataque de degradación de red."
+        },
+        {
+          "texto": "Forzar al usuario a cambiar su contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. RCE no actúa sobre usuarios; actúa sobre el servidor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una lista blanca de comandos y cuándo se usa?",
+      "respuestas": [
+        {
+          "texto": "Lista cerrada de comandos u operaciones permitidas frente a entradas del usuario que se van a pasar a un intérprete; se usa cuando es inevitable llamar a un comando del sistema (ej. convertir formatos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no se puede evitar la llamada, restringir a un conjunto pequeño y conocido es la mejor defensa."
+        },
+        {
+          "texto": "Una lista de IPs prohibidas en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es una denylist de red, no allowlist de comandos."
+        },
+        {
+          "texto": "Una lista de URLs visitadas por el usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con historial de navegación."
+        },
+        {
+          "texto": "Una lista de antivirus aprobados por la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con software AV."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre eliminar funcionalidad y restringirla mediante allowlist?",
+      "respuestas": [
+        {
+          "texto": "Eliminar es la opción ideal cuando la función no es necesaria; restringir mediante allowlist se aplica cuando la función es imprescindible pero su entrada debe acotarse estrictamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no hace falta, mejor quitarla; si hace falta, acotarla al mínimo necesario."
+        },
+        {
+          "texto": "Son técnicas idénticas con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar implica quitar la función; restringir implica controlarla."
+        },
+        {
+          "texto": "Eliminar siempre es imposible en producción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar lo innecesario es una práctica habitual de bastionado."
+        },
+        {
+          "texto": "Restringir es menos seguro que eliminar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar es más seguro cuando es viable; restringir es la alternativa pragmática."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué deshabilitar funciones peligrosas a nivel del intérprete (no solo del código) aporta una capa adicional?",
+      "respuestas": [
+        {
+          "texto": "Porque si un atacante logra ejecutar código en el lenguaje del servidor (por inyección, deserialización, etc.), esas funciones (system, exec, eval) seguirán bloqueadas a nivel del intérprete, limitando lo que puede hacer.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En PHP es disable_functions; en Python sandboxes; en general, restringir las primitivas peligrosas."
+        },
+        {
+          "texto": "Porque mejora el rendimiento del intérprete.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La motivación es seguridad, no rendimiento."
+        },
+        {
+          "texto": "Porque facilita el debug del código.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es para depuración; es defensa en profundidad."
+        },
+        {
+          "texto": "Porque elimina la necesidad de validar entrada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validación sigue siendo imprescindible; esto es capa adicional."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la deserialización insegura?",
+      "respuestas": [
+        {
+          "texto": "Vulnerabilidad que aparece cuando una aplicación deserializa datos controlados por el usuario sin validarlos, permitiendo manipular el estado del objeto reconstruido y, en algunos lenguajes, ejecución de código a través de gadgets.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Casos famosos: Java/Spring, .NET BinaryFormatter, PHP unserialize, Python pickle."
+        },
+        {
+          "texto": "Un fallo de cifrado en el almacenamiento de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es procesamiento de datos serializados."
+        },
+        {
+          "texto": "Una pérdida de datos al desconectarse de la red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con la conectividad."
+        },
+        {
+          "texto": "Un fallo de la base de datos al guardar BLOBs.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un fallo de aplicación, no de almacenamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué impactos puede tener la deserialización insegura más allá del clásico cambio de variable?",
+      "respuestas": [
+        {
+          "texto": "Escalada de privilegios, denegación de servicio (objetos costosos en memoria), ejecución de código arbitrario mediante \"gadgets\" (cadenas de objetos cuya combinación dispara métodos peligrosos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los gadget chains pueden lograr RCE incluso sin un eval directo."
+        },
+        {
+          "texto": "Solo afecta a la estética del HTML.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con HTML."
+        },
+        {
+          "texto": "Únicamente ralentiza la base de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El impacto va mucho más allá."
+        },
+        {
+          "texto": "Solo modifica el favicon de la web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor evidente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los métodos mágicos como __wakeup() o __destruct() son relevantes en deserialización insegura (PHP)?",
+      "respuestas": [
+        {
+          "texto": "Porque PHP los ejecuta automáticamente al deserializar (__wakeup) o al destruir (__destruct) un objeto; un atacante puede construir cadenas de objetos cuyas funciones mágicas, al dispararse, conducen a ejecución de código.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son las bases de las cadenas POP (Property-Oriented Programming) en PHP."
+        },
+        {
+          "texto": "Porque son funciones que mejoran el rendimiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son hooks del ciclo de vida del objeto, no optimizaciones."
+        },
+        {
+          "texto": "Porque son específicas de Python, no de PHP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Estas son específicamente de PHP."
+        },
+        {
+          "texto": "Porque solo se llaman si el usuario las invoca explícitamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: se llaman automáticamente, lo que las hace peligrosas con datos no confiables."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué JSON se considera más seguro que serializar/deserializar objetos nativos?",
+      "respuestas": [
+        {
+          "texto": "Porque JSON solo representa datos (strings, números, listas, mapas, booleanos, null); no contiene información de tipo de clase ni dispara constructores/destructores al parsear, eliminando la posibilidad de gadgets.",
+          "correcta": true,
+          "explicacion": "¡Correcto! JSON es \"data-only\"; al parsearlo no se instancian objetos arbitrarios del lenguaje."
+        },
+        {
+          "texto": "Porque JSON viaja siempre cifrado por TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado depende del transporte; la seguridad de JSON viene de su naturaleza data-only."
+        },
+        {
+          "texto": "Porque JSON consume menos memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es la ausencia de tipos arbitrarios, no el tamaño."
+        },
+        {
+          "texto": "Porque JSON solo soporta strings cortas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. JSON soporta cualquier longitud; el motivo es estructural."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué papel juega la validación con allowlist de claves y tipos tras decodificar JSON?",
+      "respuestas": [
+        {
+          "texto": "Aunque JSON no instancia clases, los datos pueden seguir siendo maliciosos; validar que las claves esperadas existen, con los tipos correctos y dentro de rangos permitidos, evita confusión de tipos y entradas anómalas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! \"Data only\" no significa \"datos confiables\"; sigue siendo entrada del usuario."
+        },
+        {
+          "texto": "Ninguno; tras parsear JSON ya está todo seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. JSON parseado sigue siendo entrada no confiable y debe validarse."
+        },
+        {
+          "texto": "Solo aplica si el JSON está cifrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica siempre, cifrado o no."
+        },
+        {
+          "texto": "Solo aplica a APIs REST, no a JSON en general.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier uso de JSON como entrada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre inyección de comandos e inyección de código?",
+      "respuestas": [
+        {
+          "texto": "Inyección de comandos: entrada del usuario pasa a un intérprete del sistema (shell). Inyección de código: entrada se evalúa en un intérprete del lenguaje de la aplicación (eval en PHP/JS/Python).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambas dan RCE pero en niveles distintos (SO vs intérprete de aplicación)."
+        },
+        {
+          "texto": "Son lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Atacan capas distintas."
+        },
+        {
+          "texto": "La de código solo aplica a HTML.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica al intérprete del lenguaje servidor."
+        },
+        {
+          "texto": "La de comandos solo aplica a Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier SO con shell."
+        }
+      ]
+    }
+  ]
+}

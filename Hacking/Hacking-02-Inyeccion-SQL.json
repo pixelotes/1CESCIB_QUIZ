@@ -1,0 +1,380 @@
+{
+  "tema": "Hacking Ético - Inyección SQL y otras inyecciones",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es una inyección SQL y por qué ocurre?",
+      "respuestas": [
+        {
+          "texto": "Es un ataque en el que se inserta código SQL en la entrada del usuario que termina ejecutándose en la base de datos; ocurre cuando la aplicación construye consultas concatenando datos sin separar código de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La causa raíz es la mezcla entre código (estructura SQL) y datos (entrada del usuario)."
+        },
+        {
+          "texto": "Un ataque que explota fallos en el TCP/IP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SQLi vive en la capa de aplicación, no en TCP/IP."
+        },
+        {
+          "texto": "Un fallo del motor de base de datos que se corrige actualizándolo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SQLi es defecto en la aplicación, no del motor SQL en sí."
+        },
+        {
+          "texto": "Un cifrado débil de las contraseñas en la BD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un fallo criptográfico distinto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el bypass de autenticación mediante SQLi?",
+      "respuestas": [
+        {
+          "texto": "Se manipula el WHERE del login con una condición siempre cierta (típicamente ' OR '1'='1) para que la consulta devuelva filas aunque las credenciales sean falsas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El atacante entra sin conocer usuario ni contraseña."
+        },
+        {
+          "texto": "Robar la cookie de sesión del navegador del administrador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es XSS o session hijacking, no SQLi."
+        },
+        {
+          "texto": "Adivinar la contraseña mediante fuerza bruta sobre el formulario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es fuerza bruta, no SQLi."
+        },
+        {
+          "texto": "Aprovechar un fallo del navegador para inyectar JavaScript.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es XSS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque UNION-based y qué permite obtener?",
+      "respuestas": [
+        {
+          "texto": "Aprovecha el operador UNION para añadir una segunda consulta cuyo resultado se mezcla con el original; permite extraer datos de otras tablas (usuarios, contraseñas, esquemas, metadatos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Requiere que ambas consultas devuelvan el mismo número de columnas con tipos compatibles."
+        },
+        {
+          "texto": "Permite unir físicamente dos servidores SQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UNION es operador SQL, no infraestructura."
+        },
+        {
+          "texto": "Comprime la respuesta del servidor con un solo paquete.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UNION no comprime nada; combina resultados."
+        },
+        {
+          "texto": "Obliga al servidor a reiniciarse tras la consulta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. UNION no afecta al servicio del motor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal medida de mitigación frente a SQLi?",
+      "respuestas": [
+        {
+          "texto": "Usar consultas parametrizadas (prepared statements) para que los valores de entrada se traten siempre como datos y nunca como código SQL.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Complementariamente: validar entrada, mínimo privilegio en la BD y evitar errores verbosos."
+        },
+        {
+          "texto": "Bloquear el puerto 3306 en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SQLi viaja por el puerto web (80/443), no por el de la BD directamente."
+        },
+        {
+          "texto": "Cifrar el tráfico HTTP con TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS protege en tránsito; no impide SQLi."
+        },
+        {
+          "texto": "Cambiar la contraseña del usuario root de la BD cada semana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Buena práctica pero no mitiga SQLi por sí misma."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las consultas preparadas y por qué son seguras?",
+      "respuestas": [
+        {
+          "texto": "Consultas con marcadores de posición que se envían al motor antes de los datos; los valores se enlazan después como parámetros tipados, de modo que el motor ya tiene la estructura compilada y los datos no pueden alterarla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La estructura SQL y los datos viajan separados, eliminando la confusión código/dato."
+        },
+        {
+          "texto": "Son consultas que se ejecutan dos veces para verificar resultados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es duplicación; es separación entre estructura y datos."
+        },
+        {
+          "texto": "Son consultas cifradas con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es parametrización."
+        },
+        {
+          "texto": "Son consultas que ignoran cualquier entrada con comillas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No filtran comillas; tratan los valores como datos puros."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué almacenar contraseñas en texto plano agrava el impacto de una SQLi?",
+      "respuestas": [
+        {
+          "texto": "Porque si el atacante extrae la tabla de usuarios, dispone directamente de credenciales reutilizables; con hashing fuerte (bcrypt, argon2) y sal, una filtración solo entrega hashes que aún requieren fuerza bruta costosa.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Hashing + sal convierte una filtración crítica en una filtración manejable."
+        },
+        {
+          "texto": "Porque el cifrado simétrico ralentiza la respuesta del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es la usabilidad inmediata de las credenciales, no rendimiento."
+        },
+        {
+          "texto": "Porque la BD se corrompe al leer contraseñas planas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se corrompe; el problema es la exposición de las contraseñas."
+        },
+        {
+          "texto": "Porque el cifrado en texto plano ocupa más espacio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Texto plano es lo más compacto; el problema no es espacio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre SQLi en banda, fuera de banda y ciega?",
+      "respuestas": [
+        {
+          "texto": "En banda: la respuesta del ataque viaja por el mismo canal (ej. UNION). Fuera de banda: el resultado se exfiltra por otro canal (DNS, HTTP). Ciega: no hay respuesta directa visible; se infiere por booleanos o tiempos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta clasificación condiciona la técnica de explotación."
+        },
+        {
+          "texto": "Son sinónimos del mismo tipo de ataque.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son variantes distintas con métodos diferentes."
+        },
+        {
+          "texto": "Solo varían en el lenguaje SQL utilizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La diferencia está en el canal de respuesta, no en el dialecto SQL."
+        },
+        {
+          "texto": "La ciega solo aplica a SQL Server.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier motor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una SQLi ciega basada en booleanos?",
+      "respuestas": [
+        {
+          "texto": "El atacante envía consultas que provocan respuestas diferentes (página \"verdadera\" vs página \"falsa\") según el resultado de una condición; carácter a carácter va descubriendo datos sin verlos directamente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es lenta pero eficaz cuando el servidor no devuelve errores ni resultados directos."
+        },
+        {
+          "texto": "Un ataque que solo afecta a sistemas binarios de 32 bits.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con la arquitectura de CPU."
+        },
+        {
+          "texto": "Un ataque que solo extrae 1s y 0s del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos son texto/numéricos normales; la lógica es booleana."
+        },
+        {
+          "texto": "Un ataque que requiere acceso físico al servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un ataque remoto a la aplicación web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una SQLi ciega basada en retrasos de tiempo y cuándo se usa?",
+      "respuestas": [
+        {
+          "texto": "El atacante inyecta condiciones que provocan retrasos (sleep, waitfor) si son verdaderas; se mide el tiempo de respuesta. Se usa cuando ni la respuesta visible cambia ni hay errores explotables.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la última variante \"ciega\", aún más lenta pero útil cuando no hay otra señal."
+        },
+        {
+          "texto": "Solo funciona si el servidor está en una zona horaria distinta.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La zona horaria no afecta a esta técnica."
+        },
+        {
+          "texto": "Es una variante que se basa en NTP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NTP es protocolo de sincronización horaria, no se usa aquí."
+        },
+        {
+          "texto": "Requiere ataque DDoS previo para funcionar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No requiere DDoS; mide tiempos individuales de respuesta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la huella digital (fingerprinting) de la base de datos y para qué la realiza el atacante?",
+      "respuestas": [
+        {
+          "texto": "Identificar el motor concreto (MySQL, PostgreSQL, Oracle, MSSQL) y su versión a partir de mensajes de error, sintaxis específica o funciones propias; permite usar payloads adaptados al motor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada motor tiene funciones y sintaxis propias; conocer cuál es acelera enormemente el ataque."
+        },
+        {
+          "texto": "Verificar que la BD esté autenticada por hash.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene nada que ver con autenticación de hash."
+        },
+        {
+          "texto": "Identificar al administrador de la BD por su MAC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No identifica personas ni MACs."
+        },
+        {
+          "texto": "Cifrar todas las consultas con la huella del cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado; es identificación del motor."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las consultas apiladas (stacked queries) y qué condiciones necesitan?",
+      "respuestas": [
+        {
+          "texto": "Enviar múltiples sentencias SQL separadas por ; en una sola petición (ej. SELECT...; DROP TABLE...); necesitan que el driver/motor permita stacked queries (MSSQL y PostgreSQL sí; MySQL por defecto no en muchos drivers).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Permiten acciones destructivas o de escritura desde un punto de inyección de solo lectura."
+        },
+        {
+          "texto": "Son consultas que se almacenan en una pila en memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Apiladas\" se refiere a múltiples sentencias en una petición."
+        },
+        {
+          "texto": "Son consultas que ejecutan stored procedures siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No requieren stored procedures."
+        },
+        {
+          "texto": "Son consultas cifradas en capas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Nada que ver con cifrado."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué un procedimiento almacenado no es por sí solo protección contra SQLi?",
+      "respuestas": [
+        {
+          "texto": "Porque dentro del propio procedimiento puede haber concatenación dinámica de SQL con parámetros sin parametrizar (EXEC con string), reintroduciendo la vulnerabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Lo que protege es la parametrización, no el hecho de estar almacenado."
+        },
+        {
+          "texto": "Porque los stored procedures siempre son vulnerables.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Pueden ser seguros si están bien escritos; el problema es asumir que lo son por defecto."
+        },
+        {
+          "texto": "Porque solo funcionan con MySQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existen en la mayoría de motores."
+        },
+        {
+          "texto": "Porque consumen demasiada memoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es la posibilidad de SQL dinámico interno."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre inyección de comandos e inyección de código?",
+      "respuestas": [
+        {
+          "texto": "Inyección de comandos: la entrada se pasa a un intérprete del sistema operativo (shell). Inyección de código: la entrada se evalúa en un intérprete del lenguaje de la aplicación (eval en PHP/JS/Python).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambas dan ejecución de código, pero en niveles distintos."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tipos distintos según el intérprete que ejecuta."
+        },
+        {
+          "texto": "La de código solo afecta a Java.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier lenguaje con eval/exec dinámico."
+        },
+        {
+          "texto": "La de comandos solo se da en Windows.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existe en cualquier SO con shell."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la inyección HTML y en qué se diferencia de XSS?",
+      "respuestas": [
+        {
+          "texto": "Inyección HTML añade marcado HTML inerte (sin JavaScript) al contenido para alterar la apariencia o engañar al usuario; XSS además ejecuta script. HTMLi puede ser preludio o sustituto cuando los scripts se filtran.",
+          "correcta": true,
+          "explicacion": "¡Correcto! HTMLi puede engañar (phishing, defacement) sin necesidad de ejecutar JavaScript."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS implica ejecución de script; HTMLi no necesariamente."
+        },
+        {
+          "texto": "HTMLi solo funciona en HTML5.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Funciona en cualquier versión de HTML renderizada."
+        },
+        {
+          "texto": "HTMLi requiere SQLi previa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son independientes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la inyección LDAP?",
+      "respuestas": [
+        {
+          "texto": "Manipular una consulta LDAP (Lightweight Directory Access Protocol) mediante entrada no sanitizada para alterar la lógica de búsqueda/autenticación: saltarse logins, listar usuarios o escalar privilegios en el directorio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! LDAPi es común en aplicaciones que consultan Active Directory u OpenLDAP."
+        },
+        {
+          "texto": "Inyectar paquetes UDP en el servidor LDAP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es ataque de red sino de query LDAP."
+        },
+        {
+          "texto": "Cifrar las búsquedas LDAP con StartTLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. StartTLS es una mitigación, no un ataque."
+        },
+        {
+          "texto": "Es un fallo del propio protocolo LDAP, no de la aplicación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es defecto de la aplicación que construye la consulta."
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,108 @@
       "name": "Bastionado",
       "files": [
         {
+          "name": "Practica-Bast-01-VLSM",
+          "tema": "Bastionado - Práctica 1: VLSM (Subnetting con máscara variable)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-01-VLSM.json"
+        },
+        {
+          "name": "Practica-Bast-02-Segmentacion",
+          "tema": "Bastionado - Práctica 2: Segmentación con VLANs (MikroTik + Cisco)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-02-Segmentacion.json"
+        },
+        {
+          "name": "Practica-Bast-03-AtaquesBroadcast",
+          "tema": "Bastionado - Práctica 3: Mitigación de ataques en dominio broadcast (L2)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-03-AtaquesBroadcast.json"
+        },
+        {
+          "name": "Practica-Bast-04-WireGuard",
+          "tema": "Bastionado - Práctica 4: VPN Site-to-Site con WireGuard",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-04-WireGuard.json"
+        },
+        {
+          "name": "Practica-Bast-05-pfSense",
+          "tema": "Bastionado - Práctica 5: pfSense como firewall perimetral",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-05-pfSense.json"
+        },
+        {
+          "name": "Practica-Bast-06-DMZdobleFirewall",
+          "tema": "Bastionado - Práctica 6: DMZ con doble firewall (sandwich)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-06-DMZdobleFirewall.json"
+        },
+        {
+          "name": "Practica-Bast-07-FortificacionBackend",
+          "tema": "Bastionado - Práctica 7: Fortificación del Backend MikroTik + DoS/SYN flood + WAF",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-07-FortificacionBackend.json"
+        },
+        {
+          "name": "Practica-Bast-08-SuricataWazuh",
+          "tema": "Bastionado - Práctica 8: Suricata (NIDS/IPS) + Wazuh (SIEM)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-08-SuricataWazuh.json"
+        },
+        {
+          "name": "Practica-Bast-09-BIOS",
+          "tema": "Bastionado - Práctica 9: BIOS - Análisis y fortificación del firmware",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-09-BIOS.json"
+        },
+        {
+          "name": "Practica-Bast-10-UEFI",
+          "tema": "Bastionado - Práctica 10: UEFI, Secure Boot, TPM y arranque medido",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-10-UEFI.json"
+        },
+        {
+          "name": "Practica-Bast-11-GRUB",
+          "tema": "Bastionado - Práctica 11: Protección del gestor de arranque GRUB",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-11-GRUB.json"
+        },
+        {
+          "name": "Practica-Bast-12-BitLocker",
+          "tema": "Bastionado - Práctica 12: Cifrado con BitLocker",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-12-BitLocker.json"
+        },
+        {
+          "name": "Practica-Bast-13-LUKSDropbear",
+          "tema": "Bastionado - Práctica 13: LUKS + Dropbear (Ubuntu Server cifrado)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-13-LUKSDropbear.json"
+        },
+        {
+          "name": "Practica-Bast-14-EFS",
+          "tema": "Bastionado - Práctica 14: Cifrado con EFS (Encrypting File System)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-14-EFS.json"
+        },
+        {
+          "name": "Practica-Bast-15-Backup",
+          "tema": "Bastionado - Práctica 15: Estrategia de copias de seguridad (backup)",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-15-Backup.json"
+        },
+        {
+          "name": "Practica-Bast-16-HardeningWindowsServer",
+          "tema": "Bastionado - Práctica 16: Hardening de Windows Server",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-16-HardeningWindowsServer.json"
+        },
+        {
+          "name": "Practica-Bast-17-HardeningUbuntu",
+          "tema": "Bastionado - Práctica 17: Hardening de Ubuntu Server",
+          "count": 10,
+          "path": "Bastionado/Practica-Bast-17-HardeningUbuntu.json"
+        },
+        {
           "name": "RA1",
           "tema": "Cuestionario RA1: Bastionado de redes y sistemas",
           "count": 15,
@@ -20,6 +122,35 @@
           "tema": "Test tema3 del libro: Credenciales y PKI",
           "count": 10,
           "path": "Bastionado/RA3.json"
+        }
+      ]
+    },
+    {
+      "name": "Hacking",
+      "files": [
+        {
+          "name": "Hacking-01-OWASP-Defensas",
+          "tema": "Hacking Ético - OWASP Top 10 y defensas generales",
+          "count": 13,
+          "path": "Hacking/Hacking-01-OWASP-Defensas.json"
+        },
+        {
+          "name": "Hacking-02-Inyeccion-SQL",
+          "tema": "Hacking Ético - Inyección SQL y otras inyecciones",
+          "count": 15,
+          "path": "Hacking/Hacking-02-Inyeccion-SQL.json"
+        },
+        {
+          "name": "Hacking-03-XSS-CSRF-Clickjacking",
+          "tema": "Hacking Ético - XSS, CSRF y Clickjacking",
+          "count": 16,
+          "path": "Hacking/Hacking-03-XSS-CSRF-Clickjacking.json"
+        },
+        {
+          "name": "Hacking-04-RCE-Deserializacion",
+          "tema": "Hacking Ético - RCE, inyección de comandos y deserialización insegura",
+          "count": 11,
+          "path": "Hacking/Hacking-04-RCE-Deserializacion.json"
         }
       ]
     },
@@ -47,8 +178,14 @@
         {
           "name": "Practica-EX2-2",
           "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2 (Revisión Aules)",
-          "count": 15,
+          "count": 70,
           "path": "Incidentes/Practica-EX2-2.json"
+        },
+        {
+          "name": "Practica-EX2-3",
+          "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2 (Entrenamiento 2 Aules)",
+          "count": 70,
+          "path": "Incidentes/Practica-EX2-3.json"
         },
         {
           "name": "UD1-Parte1-Dificil",

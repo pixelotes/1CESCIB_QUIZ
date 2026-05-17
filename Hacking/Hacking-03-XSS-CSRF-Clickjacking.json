@@ -1,0 +1,405 @@
+{
+  "tema": "Hacking Ético - XSS, CSRF y Clickjacking",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es un ataque XSS?",
+      "respuestas": [
+        {
+          "texto": "Inyección de código JavaScript (u otro contenido activo) en una página que luego se ejecuta en el navegador de otros usuarios; aprovecha que la aplicación renderiza entrada del usuario sin sanitizarla.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El código viaja en la página y se ejecuta en el contexto de la víctima."
+        },
+        {
+          "texto": "Un ataque que inyecta SQL en formularios web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es SQLi, no XSS."
+        },
+        {
+          "texto": "Un ataque DDoS contra el servidor web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS no es ataque de disponibilidad sino de cliente."
+        },
+        {
+          "texto": "Un ataque que requiere acceso físico al servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS se ejecuta en el navegador del usuario; es remoto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los tres tipos de XSS y en qué se diferencian?",
+      "respuestas": [
+        {
+          "texto": "Reflejado (payload en la petición se devuelve en la respuesta, típico GET), Almacenado (payload se guarda en BD y afecta a todos los que lo visualicen) y DOM-based (la inyección ocurre íntegramente en el navegador al manipular el DOM con datos no confiables).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Almacenado es el más peligroso por su persistencia y alcance."
+        },
+        {
+          "texto": "Vertical, horizontal y diagonal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la clasificación correcta de XSS."
+        },
+        {
+          "texto": "Local, regional y global.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+        },
+        {
+          "texto": "Cliente, servidor y red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS siempre vive en cliente; lo que cambia es dónde se origina el payload."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué impacto puede tener un XSS sobre un usuario, más allá del clásico alert?",
+      "respuestas": [
+        {
+          "texto": "Robo de cookies de sesión, keylogging, redirección a phishing, ejecución de acciones en nombre de la víctima, despliegue de mineros o ransomware web.",
+          "correcta": true,
+          "explicacion": "¡Correcto! XSS es mucho más que un popup molesto; permite control casi total del cliente."
+        },
+        {
+          "texto": "Solo mostrar mensajes inocuos en pantalla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese es el clásico alert que se cita; en realidad el daño potencial es enorme."
+        },
+        {
+          "texto": "Únicamente cambiar el fondo de pantalla del navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El daño es mucho mayor."
+        },
+        {
+          "texto": "Apagar físicamente el equipo del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. XSS no controla el SO de la víctima directamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste la sanitización de entrada como mitigación de XSS?",
+      "respuestas": [
+        {
+          "texto": "Transformar los caracteres especiales para que el navegador los interprete como texto, no como código (ej. < → &lt;); idealmente en el momento de la salida (output encoding), según el contexto donde se inserte el dato.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El escape correcto depende del contexto (HTML, atributo, JS, URL, CSS)."
+        },
+        {
+          "texto": "Bloquear todas las peticiones HTTP que contengan la palabra \"script\".",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bloquear por palabras clave es trivialmente eludible y produce falsos positivos."
+        },
+        {
+          "texto": "Cifrar el contenido HTML con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado no impide XSS; el navegador descifraría y renderizaría igual."
+        },
+        {
+          "texto": "Eliminar toda la entrada del usuario antes de procesarla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eliminar todo rompería la funcionalidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre escapar caracteres y filtrar etiquetas HTML?",
+      "respuestas": [
+        {
+          "texto": "Escapar convierte caracteres en entidades inocuas y preserva el texto original; filtrar elimina o bloquea etiquetas concretas. Escapar es más seguro como defecto; filtrar solo se justifica cuando hay que permitir HTML controlado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para filtrar HTML controlado, apoyarse en librerías como DOMPurify o HTMLPurifier."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas distintas con trade-offs distintos."
+        },
+        {
+          "texto": "Escapar solo aplica a SQL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Escape se aplica a HTML, JS, SQL, URL, etc., según contexto."
+        },
+        {
+          "texto": "Filtrar etiquetas siempre es más seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Escapar suele ser más seguro y robusto que filtrar."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué cabeceras o políticas ayudan a mitigar XSS a nivel de navegador?",
+      "respuestas": [
+        {
+          "texto": "Content-Security-Policy (CSP) restringe qué scripts puede ejecutar la página y desde qué orígenes; combinada con HttpOnly en cookies (que evita su acceso desde JavaScript) reduce drásticamente el impacto incluso si un XSS se cuela.",
+          "correcta": true,
+          "explicacion": "¡Correcto! CSP es una capa imprescindible en aplicaciones modernas."
+        },
+        {
+          "texto": "Únicamente cabecera User-Agent.",
+          "correcta": false,
+          "explicacion": "Incorrecto. User-Agent no protege contra XSS."
+        },
+        {
+          "texto": "Solo TLS 1.3 sin más medidas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS protege en tránsito; no impide XSS."
+        },
+        {
+          "texto": "Cabecera Accept-Language.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene función de seguridad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un ataque CSRF y qué condiciones necesita?",
+      "respuestas": [
+        {
+          "texto": "Ataque que obliga al navegador de un usuario autenticado a enviar peticiones a una aplicación en su nombre sin que él lo sepa; necesita que la víctima esté autenticada y que la aplicación acepte la petición basándose solo en cookies.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aprovecha la confianza del navegador en cookies activas para realizar acciones no deseadas."
+        },
+        {
+          "texto": "Ejecutar código JavaScript en el navegador de la víctima.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es XSS, no CSRF."
+        },
+        {
+          "texto": "Inyectar SQL a través de un formulario web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es SQLi."
+        },
+        {
+          "texto": "Robar físicamente la cookie del navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CSRF no necesita robar la cookie; aprovecha que el navegador la envía automáticamente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia conceptual entre XSS y CSRF?",
+      "respuestas": [
+        {
+          "texto": "En XSS el atacante ejecuta código en el navegador de la víctima; en CSRF, el atacante hace que el navegador de la víctima envíe una petición HTTP a una aplicación donde está autenticada, sin ejecutar código atacante.",
+          "correcta": true,
+          "explicacion": "¡Correcto! XSS = ejecución; CSRF = inducción de acción autorizada."
+        },
+        {
+          "texto": "Son lo mismo con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son ataques distintos con vectores y mitigaciones distintas."
+        },
+        {
+          "texto": "XSS afecta solo a apps móviles, CSRF solo a web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos aplican a aplicaciones web (y CSRF también a APIs)."
+        },
+        {
+          "texto": "XSS necesita HTTPS y CSRF no.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos funcionan sobre cualquier transporte."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un token CSRF y cómo protege el formulario?",
+      "respuestas": [
+        {
+          "texto": "Un valor aleatorio único por sesión (o por petición) que el servidor incluye en el formulario y verifica al recibir la petición; un atacante externo no puede adivinarlo, así que la petición forjada no pasa la verificación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la mitigación clásica y más fiable contra CSRF."
+        },
+        {
+          "texto": "Un identificador público que se muestra en la URL.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si fuera público y predecible, no protegería."
+        },
+        {
+          "texto": "Una cookie de sesión normal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las cookies de sesión se envían automáticamente y son justo lo que CSRF aprovecha."
+        },
+        {
+          "texto": "Un código QR enviado al móvil del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es MFA, no token CSRF."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo ayuda el atributo SameSite de las cookies a mitigar CSRF?",
+      "respuestas": [
+        {
+          "texto": "Indica al navegador que no envíe la cookie en peticiones cross-site (Strict) o solo en navegación top-level (Lax), impidiendo que una página externa dispare peticiones autenticadas a otra.",
+          "correcta": true,
+          "explicacion": "¡Correcto! SameSite=Lax es el valor por defecto razonable en navegadores modernos."
+        },
+        {
+          "texto": "Cifra la cookie con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SameSite no cifra; controla el envío cross-site."
+        },
+        {
+          "texto": "Impide que la cookie se almacene en el cliente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí se almacena; lo que controla es cuándo se envía."
+        },
+        {
+          "texto": "Bloquea cualquier petición HTTP no GET.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SameSite controla el envío según origen, no según método."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los métodos GET no deberían usarse para acciones que modifican estado?",
+      "respuestas": [
+        {
+          "texto": "Porque GET es semánticamente \"seguro\" e idempotente: puede cachearse, prefetcharse o seguirse por enlaces sin intervención del usuario; usarlo para acciones permite que CSRF, prefetch del navegador o crawlers disparen modificaciones.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las acciones que cambian estado deben ir por POST/PUT/DELETE."
+        },
+        {
+          "texto": "Porque GET no soporta HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GET soporta HTTPS perfectamente."
+        },
+        {
+          "texto": "Porque GET es más lento que POST.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La velocidad no es la motivación."
+        },
+        {
+          "texto": "Porque GET no envía cookies.",
+          "correcta": false,
+          "explicacion": "Incorrecto. GET sí envía cookies; ese es precisamente parte del problema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué se diferencia el XSS basado en DOM de los otros tipos respecto al servidor?",
+      "respuestas": [
+        {
+          "texto": "En DOM-based la inyección y la ejecución ocurren íntegramente en el navegador: el servidor puede no ver nunca el payload, lo que dificulta la detección con WAFs y logs server-side.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso las defensas DOM-based suelen estar en el código JS del cliente."
+        },
+        {
+          "texto": "DOM-based requiere acceso físico al servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es completamente remoto en el navegador."
+        },
+        {
+          "texto": "DOM-based solo funciona en HTTP, no en HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Funciona en ambos."
+        },
+        {
+          "texto": "DOM-based necesita SQLi previa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son ataques independientes."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las técnicas de evasión de XSS y para qué se usan?",
+      "respuestas": [
+        {
+          "texto": "Técnicas para sortear filtros y WAFs: ofuscación de strings, codificación HTML/URL/Unicode, uso de mayúsculas/minúsculas, event handlers alternativos, comentarios HTML, vectores no estándar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Demuestran por qué la lista negra de palabras clave es siempre insuficiente."
+        },
+        {
+          "texto": "Técnicas para crear copias de seguridad del payload.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con backups."
+        },
+        {
+          "texto": "Técnicas para encriptar el XSS contra antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es cifrado contra AV; son variaciones del payload."
+        },
+        {
+          "texto": "Técnicas para acelerar la carga de la página.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tienen relación con rendimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué un filtro basado únicamente en lista negra de palabras clave es insuficiente contra XSS?",
+      "respuestas": [
+        {
+          "texto": "Porque existen incontables variantes y codificaciones (mayúsculas, entidades HTML, codificación URL, eventos alternativos, sintaxis no estándar) que evaden cualquier lista negra finita.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El default deny (output encoding contextual + CSP) es la única defensa fiable."
+        },
+        {
+          "texto": "Porque los filtros consumen mucha CPU.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es de cobertura, no de rendimiento."
+        },
+        {
+          "texto": "Porque los filtros no funcionan en HTTPS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Funcionan en cualquier transporte."
+        },
+        {
+          "texto": "Porque los filtros se aplican siempre tarde.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El timing no es el problema central; lo es la exhaustividad de la lista."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el clickjacking y por qué no es lo mismo que CSRF?",
+      "respuestas": [
+        {
+          "texto": "Engañar al usuario para que pulse en una página visible mientras realmente está pulsando en un iframe transparente superpuesto que contiene otra aplicación donde está autenticado; CSRF no necesita interacción engañosa con UI superpuesta.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Clickjacking explota el render visual y la interacción, no solo la petición HTTP."
+        },
+        {
+          "texto": "Son exactamente lo mismo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son distintos en mecanismo y mitigación."
+        },
+        {
+          "texto": "Clickjacking solo afecta a aplicaciones móviles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es propio del navegador web."
+        },
+        {
+          "texto": "Clickjacking necesita SQLi para funcionar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es independiente de SQLi."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se mitiga el clickjacking?",
+      "respuestas": [
+        {
+          "texto": "Con cabecera X-Frame-Options (DENY o SAMEORIGIN) o con la directiva CSP frame-ancestors, impidiendo que la aplicación se cargue dentro de iframes ajenos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambas opciones bloquean el embebido en orígenes no autorizados."
+        },
+        {
+          "texto": "Cifrando todo el tráfico con TLS 1.3.",
+          "correcta": false,
+          "explicacion": "Incorrecto. TLS no impide clickjacking."
+        },
+        {
+          "texto": "Bloqueando JavaScript en el navegador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Clickjacking funciona incluso sin JS; lo bloqueado debe ser el embebido en frame."
+        },
+        {
+          "texto": "Cambiando el puerto del servidor web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El puerto no protege contra clickjacking."
+        }
+      ]
+    }
+  ]
+}
