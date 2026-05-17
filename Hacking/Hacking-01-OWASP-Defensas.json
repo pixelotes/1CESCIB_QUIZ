@@ -1,0 +1,330 @@
+{
+  "tema": "Hacking Ético - OWASP Top 10 y defensas generales",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es el OWASP Top 10 y para qué sirve?",
+      "respuestas": [
+        {
+          "texto": "Un listado publicado periódicamente por OWASP con las diez categorías de riesgos de seguridad más críticas en aplicaciones web, usado como estándar de facto para priorizar esfuerzos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Top 10 es referencia obligada en desarrollo seguro, auditoría y formación."
+        },
+        {
+          "texto": "Un protocolo de cifrado mantenido por OWASP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. OWASP no mantiene un protocolo de cifrado; mantiene catálogos, guías y herramientas."
+        },
+        {
+          "texto": "Una herramienta automatizada para ejecutar pentests.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Top 10 es un listado/documento; ZAP sí es una herramienta de OWASP, pero no es \"el Top 10\"."
+        },
+        {
+          "texto": "Una certificación oficial requerida para auditores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una certificación profesional; es un documento de referencia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dos categorías nuevas se incorporan en el OWASP Top 10 2025?",
+      "respuestas": [
+        {
+          "texto": "Fallos en la cadena de suministro del software y Mishandling of Exceptional Conditions (manejo de condiciones excepcionales).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Reflejan los riesgos modernos: dependencias upstream comprometidas y manejo de errores/timeouts/sobrecargas."
+        },
+        {
+          "texto": "Phishing y robo físico de equipos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El Top 10 se centra en aplicaciones web; phishing y robo físico no son categorías propias."
+        },
+        {
+          "texto": "Ransomware y minería de criptomonedas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ransomware/cryptojacking son tipos de malware, no categorías del Top 10 web."
+        },
+        {
+          "texto": "DDoS volumétrico y SYN flood.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos ataques son de red, no de aplicación web."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el control de acceso roto y por qué encabeza el ranking del OWASP Top 10?",
+      "respuestas": [
+        {
+          "texto": "Ocurre cuando un usuario puede ver o ejecutar acciones que no le corresponden por su rol; encabeza la lista porque es la causa raíz de muchas filtraciones reales y suele combinarse con otras vulnerabilidades.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Romper la autorización es altamente impactante: facilita escalada y exfiltración."
+        },
+        {
+          "texto": "Solo afecta a equipos sin antivirus.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El control de acceso es de aplicación, no depende del antivirus."
+        },
+        {
+          "texto": "Es un fallo del firewall perimetral.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El control de acceso roto vive en la lógica de aplicación, no en el firewall."
+        },
+        {
+          "texto": "Solo aparece en aplicaciones móviles, no web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a cualquier aplicación con lógica de autorización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por fallos en la cadena de suministro del software?",
+      "respuestas": [
+        {
+          "texto": "Riesgos derivados de confiar en librerías, frameworks, imágenes de contenedor o herramientas de terceros que pueden estar comprometidos o ser vulnerables.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un componente upstream infectado afecta a todos los sistemas que lo consumen (caso SolarWinds, log4j)."
+        },
+        {
+          "texto": "Errores en la cadena de pago al fabricante del software.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una cuestión comercial; es de integridad de dependencias técnicas."
+        },
+        {
+          "texto": "Fallos en la cadena de entrega física de discos al CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El \"supply chain\" del software se refiere a dependencias digitales."
+        },
+        {
+          "texto": "Roturas físicas en el cableado de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es una incidencia de infraestructura, no supply chain de software."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre fallos criptográficos y fallos de integridad de datos según OWASP?",
+      "respuestas": [
+        {
+          "texto": "Los criptográficos afectan a la confidencialidad (cifrados débiles, mal uso, datos sin proteger); los de integridad afectan a la confianza en datos/actualizaciones (firmas no verificadas, deserialización insegura, CI/CD sin validación).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Uno protege \"qué no se vea\", otro \"qué no se altere o se inserte\"."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son categorías distintas con focos diferentes."
+        },
+        {
+          "texto": "Los de integridad solo afectan a hardware.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplican a software, firmas, datos."
+        },
+        {
+          "texto": "Los criptográficos solo aplican a TLS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Abarcan cifrado en reposo, en tránsito, hashing y gestión de claves."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué los fallos en registro y alertas se consideran una vulnerabilidad aunque no sean un ataque?",
+      "respuestas": [
+        {
+          "texto": "Porque sin logs ni alertas adecuadas los ataques pasan inadvertidos, dando al atacante tiempo para persistir y expandirse; amplifican enormemente el impacto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una vulnerabilidad de detección y respuesta: no causa la brecha, pero la prolonga."
+        },
+        {
+          "texto": "Porque los logs consumen demasiado almacenamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consumo es un problema operativo, no la motivación de OWASP."
+        },
+        {
+          "texto": "Porque ralentizan el rendimiento del servidor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El motivo es la falta de visibilidad y detección, no el rendimiento."
+        },
+        {
+          "texto": "Porque solo afectan a entornos cloud.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Afecta a cualquier entorno."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es una desconfiguración de seguridad (security misconfiguration)?",
+      "respuestas": [
+        {
+          "texto": "Dejar el sistema con opciones por defecto inseguras, servicios innecesarios habilitados o permisos demasiado abiertos: bucket S3 público, panel admin sin auth, errores que revelan rutas internas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es de los riesgos más extendidos: configuración descuidada o por defecto."
+        },
+        {
+          "texto": "Un error de programación en el código fuente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es un bug, no una desconfiguración (que afecta a parámetros operacionales)."
+        },
+        {
+          "texto": "Un fallo del proveedor cloud que afecta a todos los clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La desconfiguración es del propio cliente, no del proveedor."
+        },
+        {
+          "texto": "Únicamente puertos abiertos en el firewall.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es más amplio: cubre opciones del sistema, servicios y permisos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre validación y sanitización de entrada?",
+      "respuestas": [
+        {
+          "texto": "Validar es comprobar que la entrada cumple un formato/regla esperado (longitud, tipo, patrón) y rechazarla si no; sanitizar es transformarla para que sea inocua en el contexto donde se va a usar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Validar bloquea lo malo; sanitizar lo convierte en inofensivo (escapado, codificación)."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas complementarias pero distintas."
+        },
+        {
+          "texto": "La validación es para texto y la sanitización para números.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas se aplican a cualquier tipo de entrada según el caso."
+        },
+        {
+          "texto": "La sanitización elimina toda la entrada del usuario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sanitizar transforma; eliminar todo rompería la funcionalidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre una lista blanca (allowlist) y una lista negra (denylist), y por qué la blanca es preferible?",
+      "respuestas": [
+        {
+          "texto": "La allowlist define qué se permite (todo lo demás se rechaza); la denylist define qué se prohíbe (todo lo demás se permite). La blanca es más segura: hay infinitos casos maliciosos imposibles de enumerar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Default deny es la postura segura; default allow casi siempre se queda corta."
+        },
+        {
+          "texto": "Son sinónimos; el nombre depende del fabricante.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son enfoques opuestos."
+        },
+        {
+          "texto": "La denylist es más segura porque enumera amenazas conocidas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: enumerar amenazas siempre deja huecos."
+        },
+        {
+          "texto": "La allowlist solo aplica a IPs y la denylist a usuarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas se aplican a cualquier dimensión (IPs, MIME, comandos, usuarios)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la defensa en profundidad?",
+      "respuestas": [
+        {
+          "texto": "Superponer varias capas de control independientes (validación, autenticación, autorización, cifrado, monitorización) para que un fallo de una capa no comprometa todo el sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es uno de los principios fundamentales de seguridad."
+        },
+        {
+          "texto": "Una única defensa, lo más profunda posible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: muchas capas en lugar de una sola."
+        },
+        {
+          "texto": "Cifrar los datos con AES-512 obligatoriamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AES-512 ni siquiera es estándar; el cifrado es una capa, no todo el concepto."
+        },
+        {
+          "texto": "Defender solo el perímetro de red.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el modelo de \"fortaleza\", que se considera insuficiente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué nunca se debe confiar en la entrada del usuario, aunque venga de un cliente \"propio\"?",
+      "respuestas": [
+        {
+          "texto": "Porque cualquier cliente puede ser manipulado o reemplazado: un atacante puede usar proxies, scripts o herramientas como Burp Suite para enviar peticiones arbitrarias al servidor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La validación debe hacerse SIEMPRE en el servidor, nunca solo en cliente."
+        },
+        {
+          "texto": "Porque los clientes oficiales podrían tener bugs por descuido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El problema no es el bug; es la manipulación intencional del cliente."
+        },
+        {
+          "texto": "Porque los navegadores antiguos no validan correctamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El problema aplica incluso con navegadores modernos."
+        },
+        {
+          "texto": "Porque los usuarios reales nunca envían datos correctos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los usuarios reales suelen enviar datos válidos; el problema son los maliciosos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el principio de mínimo privilegio y cómo se relaciona con los ataques web?",
+      "respuestas": [
+        {
+          "texto": "Otorgar a cada usuario, proceso o componente solo los permisos estrictamente necesarios; reduce drásticamente el impacto de un compromiso (una SQLi con un usuario solo de lectura no permite borrar datos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la regla fundamental de seguridad operativa."
+        },
+        {
+          "texto": "Dar a todos los usuarios privilegios de administrador para simplicidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es lo contrario; multiplica el impacto de cualquier compromiso."
+        },
+        {
+          "texto": "Solo los administradores tienen privilegios, el resto ninguno.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El mínimo privilegio implica privilegios necesarios para la función, no \"ninguno\"."
+        },
+        {
+          "texto": "Limitar el número de empleados de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una decisión de RRHH; es de permisos técnicos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre vulnerabilidad, exploit y payload?",
+      "respuestas": [
+        {
+          "texto": "Vulnerabilidad: el defecto que permite el ataque. Exploit: el código/técnica que aprovecha la vulnerabilidad. Payload: la acción concreta que ejecuta el atacante tras explotar (shell inversa, robo de datos, persistencia).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tres conceptos distintos pero encadenados en cualquier ataque."
+        },
+        {
+          "texto": "Son sinónimos del mismo concepto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tres conceptos diferenciados."
+        },
+        {
+          "texto": "Payload es la vulnerabilidad y exploit el efecto final.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo al revés en la secuencia."
+        },
+        {
+          "texto": "Solo el exploit es relevante; los otros son secundarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los tres importan; la vulnerabilidad es la raíz, el payload es el daño."
+        }
+      ]
+    }
+  ]
+}

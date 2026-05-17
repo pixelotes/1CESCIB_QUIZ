@@ -1,17 +1,55 @@
 # QuizMaster
 
-Aplicación web sencilla para realizar tests de estudio interactivos mediante la carga de archivos de datos. Funciona localmente en el navegador y no requiere instalación ni conexión a internet.
+Aplicación web sencilla para realizar tests de estudio interactivos mediante la carga de archivos de datos. Funciona localmente en el navegador y no requiere conexión a internet (las fuentes y todo lo demás vienen empaquetados).
 
 ## Funcionamiento
 
 La aplicación permite cargar cuestionarios, responder preguntas con feedback inmediato y revisar los resultados finales.
 
-Para utilizarla:
+Tres formas de cargar un test:
 
-1. Abre el archivo `quiz-app.html` en tu navegador web.
-2. Carga un archivo de preguntas utilizando uno de estos dos métodos:
-   * **Arrastrar y soltar**: Arrastra el archivo .json dentro del recuadro punteado.
-   * **Selección manual**: Haz clic en el recuadro para abrir el explorador de archivos y selecciona el .json.
+* **Biblioteca incluida**: si abres la app servida por HTTP (ver Docker más abajo), aparece la sección "📚 Biblioteca" con todos los JSON del repo agrupados por carpeta. Click → carga.
+* **Arrastrar y soltar**: arrastra un `.json` dentro del recuadro punteado.
+* **Selección manual**: haz clic en el recuadro y elige un `.json` del explorador.
+
+> La biblioteca solo aparece cuando la app se sirve por HTTP. Si abres `quiz-app.html` directamente con doble clic (`file://`), los navegadores bloquean `fetch` a archivos locales y solo verás drag&drop / selección manual.
+
+## Despliegue airgapped con Docker (Raspberry Pi)
+
+La app está pensada para correr en una Raspberry sin acceso a internet. Todas las dependencias (fuentes incluidas) se sirven desde el contenedor.
+
+```bash
+docker compose up -d --build
+# abrir http://<ip-de-la-raspberry>:8080
+```
+
+El `Dockerfile` es multi-stage:
+
+1. `python:3-alpine` ejecuta [`build-manifest.py`](build-manifest.py) y genera `quizzes.json` con todos los tests detectados.
+2. `nginx:alpine` sirve los estáticos.
+
+Compatible con `linux/arm64` (Pi 3/4/5 con 64 bits) y `linux/amd64`.
+
+### Añadir o modificar tests
+
+1. Mete tu nuevo `.json` en una carpeta del repo (existente o nueva).
+2. `docker compose up -d --build` — el manifest se regenera automáticamente.
+
+Si quieres regenerar `quizzes.json` fuera de Docker (por ejemplo para abrir la app con `python3 -m http.server`):
+
+```bash
+python3 build-manifest.py
+```
+
+### Acceso desde fuera de la LAN
+
+El contenedor escucha solo en HTTP, sin auth. Opciones recomendadas (de menos a más esfuerzo):
+
+* **Tailscale** (más simple): instala Tailscale en la Pi y en tu portátil/móvil. Accede a `http://<tailscale-ip>:8080`. Cero apertura de puertos, cifrado punto a punto.
+* **Cloudflare Tunnel**: expón un subdominio HTTPS sin tocar el router. Añade Access Policy si quieres login.
+* **Reverse proxy con TLS** (Caddy / Traefik) + redirección de puerto en tu router. Más control, más superficie de ataque.
+
+> No expongas el puerto 8080 directamente al WAN sin TLS ni autenticación.
 
 ## Estructura del JSON
 

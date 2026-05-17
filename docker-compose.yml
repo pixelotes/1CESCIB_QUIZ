@@ -1,0 +1,16 @@
+services:
+  quizmaster:
+    build: .
+    image: quizmaster:local
+    container_name: quizmaster
+    restart: unless-stopped
+    ports:
+      # Cambia 8080 si ya lo usas. Si quieres exponerlo solo a la LAN/Tailscale
+      # añade la IP: "192.168.1.10:8080:80" o "100.x.x.x:8080:80".
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O-", "http://127.0.0.1/quizzes.json"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

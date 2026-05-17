@@ -1,0 +1,222 @@
+{
+  "groups": [
+    {
+      "name": "Bastionado",
+      "files": [
+        {
+          "name": "RA1",
+          "tema": "Cuestionario RA1: Bastionado de redes y sistemas",
+          "count": 15,
+          "path": "Bastionado/RA1.json"
+        },
+        {
+          "name": "RA2",
+          "tema": "Cuestionario RA2: Control de acceso y autenticación",
+          "count": 15,
+          "path": "Bastionado/RA2.json"
+        },
+        {
+          "name": "RA3",
+          "tema": "Test tema3 del libro: Credenciales y PKI",
+          "count": 10,
+          "path": "Bastionado/RA3.json"
+        }
+      ]
+    },
+    {
+      "name": "Incidentes",
+      "files": [
+        {
+          "name": "Practica-EX1-1",
+          "tema": "Incidents de ciberseguretat - Examen 1ª Evaluación",
+          "count": 60,
+          "path": "Incidentes/Practica-EX1-1.json"
+        },
+        {
+          "name": "Practica-EX1-2",
+          "tema": "Entrenamiento - Examen 1ª Evaluación",
+          "count": 60,
+          "path": "Incidentes/Practica-EX1-2.json"
+        },
+        {
+          "name": "Practica-EX2-1",
+          "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2",
+          "count": 165,
+          "path": "Incidentes/Practica-EX2-1.json"
+        },
+        {
+          "name": "Practica-EX2-2",
+          "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2 (Revisión Aules)",
+          "count": 15,
+          "path": "Incidentes/Practica-EX2-2.json"
+        },
+        {
+          "name": "UD1-Parte1-Dificil",
+          "tema": "Ciberseguridad Avanzada: Gestión, Normativa y Técnica (CCN-CERT / INCIBE)",
+          "count": 50,
+          "path": "Incidentes/UD1-Parte1-Dificil.json"
+        },
+        {
+          "name": "UD1-Parte1-Medio",
+          "tema": "Seguridad de la Información y Concienciación (Basado en documentación CCN-CERT e INCIBE)",
+          "count": 60,
+          "path": "Incidentes/UD1-Parte1-Medio.json"
+        },
+        {
+          "name": "UD1-Parte2-Dificil",
+          "tema": "Auditoría, PDSI, SGSI y Gestión de Riesgos (Nivel Avanzado)",
+          "count": 50,
+          "path": "Incidentes/UD1-Parte2-Dificil.json"
+        },
+        {
+          "name": "UD1-Parte2-Medio",
+          "tema": "Auditoría, PDSI, SGSI y Gestión de Riesgos",
+          "count": 50,
+          "path": "Incidentes/UD1-Parte2-Medio.json"
+        },
+        {
+          "name": "UD2-Dificil",
+          "tema": "Nivel Avanzado: Gestión de Incidentes, Arquitectura de Detección y Threat Intelligence",
+          "count": 50,
+          "path": "Incidentes/UD2-Dificil.json"
+        },
+        {
+          "name": "UD2-Medio",
+          "tema": "Gestión de Incidentes de Ciberseguridad, Monitorización y OSINT",
+          "count": 50,
+          "path": "Incidentes/UD2-Medio.json"
+        },
+        {
+          "name": "UD3-Parte1-Dificil",
+          "tema": "RA3 - Recopilación, almacenamiento y análisis de evidencias (nivel avanzado)",
+          "count": 54,
+          "path": "Incidentes/UD3-Parte1-Dificil.json"
+        },
+        {
+          "name": "UD3-Parte1-Medio",
+          "tema": "RA3 - Recopilación, almacenamiento y análisis de evidencias de ciberseguridad (parte 1)",
+          "count": 75,
+          "path": "Incidentes/UD3-Parte1-Medio.json"
+        },
+        {
+          "name": "UD3-Parte2-Medio",
+          "tema": "Ciberseguridad - Investigación e Intercambio de Información",
+          "count": 70,
+          "path": "Incidentes/UD3-Parte2-Medio.json"
+        },
+        {
+          "name": "UD4-Parte1-Medio",
+          "tema": "Ciberseguridad - Ingeniería y Clasificación Operativa",
+          "count": 60,
+          "path": "Incidentes/UD4-Parte1-Medio.json"
+        },
+        {
+          "name": "UD4-Parte3-Medio",
+          "tema": "Ciberseguridad - Ingeniería de Procedimientos y Clasificación Operativa",
+          "count": 70,
+          "path": "Incidentes/UD4-Parte3-Medio.json"
+        },
+        {
+          "name": "UD4-Parte4-Medio",
+          "tema": "RA4CE4 - Restablecimiento de servicios afectados por un incidente de ciberseguridad",
+          "count": 105,
+          "path": "Incidentes/UD4-Parte4-Medio.json"
+        }
+      ]
+    },
+    {
+      "name": "Normativas",
+      "files": [
+        {
+          "name": "RA1-Facil",
+          "tema": "Normativa de Ciberseguridad - UD1: Cumplimiento Normativo y Legal",
+          "count": 30,
+          "path": "Normativas/RA1-Facil.json"
+        },
+        {
+          "name": "RA1-Medio-Alto",
+          "tema": "Master Quiz: Cumplimiento Normativo y Diseño de Sistemas",
+          "count": 30,
+          "path": "Normativas/RA1-Medio-Alto.json"
+        },
+        {
+          "name": "RA1-Medio",
+          "tema": "Normativa de Ciberseguridad - Profundización en Cumplimiento y Ética",
+          "count": 30,
+          "path": "Normativas/RA1-Medio.json"
+        },
+        {
+          "name": "RA2-Facil",
+          "tema": "Normativa de Seguridad y Gestión de Riesgos (Tema 1)",
+          "count": 50,
+          "path": "Normativas/RA2-Facil.json"
+        },
+        {
+          "name": "RA2-Medio-Alto",
+          "tema": "Examen: Sistemas de Cumplimiento y Gestión de Riesgos",
+          "count": 30,
+          "path": "Normativas/RA2-Medio-Alto.json"
+        },
+        {
+          "name": "RA2-Medio",
+          "tema": "Normativa de Seguridad y Gestión de Riesgos - Conceptos Fundamentales",
+          "count": 50,
+          "path": "Normativas/RA2-Medio.json"
+        },
+        {
+          "name": "RA3-Facil",
+          "tema": "Tema 1: Normativa de Seguridad y Responsabilidad Penal",
+          "count": 25,
+          "path": "Normativas/RA3-Facil.json"
+        },
+        {
+          "name": "RA3-Medio-Alto",
+          "tema": "UD3 Responsabilidad penal y Compliance",
+          "count": 20,
+          "path": "Normativas/RA3-Medio-Alto.json"
+        },
+        {
+          "name": "RA3-Medio",
+          "tema": "Tema 1: Normativa de Seguridad y Responsabilidad Penal",
+          "count": 25,
+          "path": "Normativas/RA3-Medio.json"
+        },
+        {
+          "name": "RA4-Alto",
+          "tema": "UD4 - Legislación de protección de datos (Nivel difícil)",
+          "count": 40,
+          "path": "Normativas/RA4-Alto.json"
+        },
+        {
+          "name": "RA4-Medio",
+          "tema": "UD4 - Legislación de protección de datos (Nivel medio)",
+          "count": 40,
+          "path": "Normativas/RA4-Medio.json"
+        },
+        {
+          "name": "RA5-Alto",
+          "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Difícil)",
+          "count": 39,
+          "path": "Normativas/RA5-Alto.json"
+        },
+        {
+          "name": "RA5-Medio",
+          "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Medio)",
+          "count": 37,
+          "path": "Normativas/RA5-Medio.json"
+        }
+      ]
+    },
+    {
+      "name": "Otros",
+      "files": [
+        {
+          "name": "ejemplo-historia-espana",
+          "tema": "Historia de España - Transición Democrática",
+          "count": 5,
+          "path": "ejemplo-historia-espana.json"
+        }
+      ]
+    }
+  ]
+}
