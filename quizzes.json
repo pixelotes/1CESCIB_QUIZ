@@ -206,6 +206,12 @@
           "path": "Incidentes/Practica-EX2-3.json"
         },
         {
+          "name": "Practica-EX2-4",
+          "tema": "Gestión de Incidentes de Ciberseguridad - Práctica EX2 (Entrenamiento 3 Aules)",
+          "count": 70,
+          "path": "Incidentes/Practica-EX2-4.json"
+        },
+        {
           "name": "UD1-Parte1-Dificil",
           "tema": "Ciberseguridad Avanzada: Gestión, Normativa y Técnica (CCN-CERT / INCIBE)",
           "count": 50,

@@ -316,6 +316,35 @@
             transform: none !important;
         }
 
+        .modal-dialog {
+            background: var(--card-bg);
+            color: var(--text);
+            border: none;
+            border-radius: 24px;
+            padding: 2rem;
+            max-width: 480px;
+            width: calc(100% - 2rem);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .modal-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-dialog h3 {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .progress-bar {
             width: 100%;
             height: 12px;
@@ -713,6 +742,14 @@
         </div>
     </div>
 
+    <dialog id="restartModal" class="modal-dialog" aria-labelledby="restartModalTitle">
+        <h3 id="restartModalTitle">¿Quieres reintentar el quiz o cargar un nuevo archivo?</h3>
+        <div class="modal-actions">
+            <button id="restartModalRetry" class="btn btn-primary">🔄 Reintentar</button>
+            <button id="restartModalHome" class="btn btn-secondary">🏠 Volver a inicio</button>
+        </div>
+    </dialog>
+
     <script>
         let quizData = null;
         let originalQuizData = null;
@@ -997,13 +1034,23 @@
         }
 
         // Reiniciar
+        const restartModal = document.getElementById('restartModal');
+        const restartModalRetry = document.getElementById('restartModalRetry');
+        const restartModalHome = document.getElementById('restartModalHome');
+
         restartBtn.addEventListener('click', () => {
-            if (confirm('¿Quieres reintentar el quiz o cargar un nuevo archivo?')) {
-                prepareQuizData();
-                startQuiz();
-            } else {
-                location.reload();
-            }
+            restartModal.showModal();
+        });
+
+        restartModalRetry.addEventListener('click', () => {
+            restartModal.close();
+            prepareQuizData();
+            startQuiz();
+        });
+
+        restartModalHome.addEventListener('click', () => {
+            restartModal.close();
+            location.reload();
         });
 
         // Biblioteca: carga manifest de quizzes incluidos (sólo cuando se sirve por HTTP).
