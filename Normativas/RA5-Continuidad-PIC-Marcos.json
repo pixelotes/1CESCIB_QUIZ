@@ -10,19 +10,19 @@
           "explicacion": "¡Correcto! Por eso un hospital público español tiene que cumplir RGPD + LOPDGDD + ENS + Ley 41/2002 + NIS2 + posiblemente Ley PIC, todos a la vez."
         },
         {
-          "texto": "Únicamente el número de empleados.",
+          "texto": "Únicamente el número de empleados de la entidad, dado que las exigencias regulatorias se escalan en función del tamaño y las microempresas y pequeñas empresas suelen quedar fuera del ámbito de aplicación.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es uno de los factores, pero no el único determinante."
+          "explicacion": "Incorrecto. El número de empleados es un factor en algunos marcos (NIS, RAT del RGPD), pero no el único determinante."
         },
         {
-          "texto": "Solo el sector industrial concreto.",
+          "texto": "Solo el sector industrial concreto en el que opera la organización, dado que cada sector tiene su propia normativa específica (financiero, sanitario, energético) y la regulación intersectorial es residual.",
           "correcta": false,
-          "explicacion": "Incorrecto. El sector influye, pero hay muchos otros factores."
+          "explicacion": "Incorrecto. El sector influye fuertemente, pero hay normativas transversales (RGPD, ENS, NIS, ISO) que aplican independientemente del sector."
         },
         {
-          "texto": "Solo el país donde está la sede principal.",
+          "texto": "Solo el país donde está la sede principal de la organización, ya que cada Estado tiene su propia legislación nacional de ciberseguridad y la aplicación de otras normativas extraterritoriales es excepcional.",
           "correcta": false,
-          "explicacion": "Incorrecto. La localización es factor, pero no excluye los demás (tipo de info, organización, decisiones internas)."
+          "explicacion": "Incorrecto. La localización es factor, pero no excluye los demás; además hay normas extraterritoriales (RGPD, CCPA) que aplican a empresas con sede en otros países."
         }
       ]
     },
@@ -35,19 +35,19 @@
           "explicacion": "¡Correcto! Las normas no se solapan necesariamente bien; hay que cumplir todas las aplicables al mismo tiempo."
         },
         {
-          "texto": "Solo el RGPD.",
+          "texto": "Solo el RGPD, ya que como reglamento europeo es de aplicación directa en todos los Estados miembros y su alcance extraterritorial lo convierte en una norma de referencia global suficiente para cualquier tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aunque el RGPD aplica, no exime de las normas nacionales de otros países donde opera."
+          "explicacion": "Incorrecto. Aunque el RGPD aplica, no exime de cumplir las normas nacionales de los países latinoamericanos donde se opera."
         },
         {
-          "texto": "Solo la LOPDGDD por ser española.",
+          "texto": "Solo la LOPDGDD por tratarse de una empresa española, ya que la normativa nacional prevalece sobre cualquier otra y los clientes europeos y latinoamericanos quedan sujetos a la legislación del país de origen del responsable.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD aplica directamente y las normativas de los países donde opera también."
+          "explicacion": "Incorrecto. La LOPDGDD no agota la regulación; aplican también el RGPD y las normativas de los países donde se opera."
         },
         {
-          "texto": "Solo CCPA por afectar a algunos clientes californianos.",
+          "texto": "Solo el CCPA (California Consumer Privacy Act) por afectar a algunos clientes de origen californiano que podrían encontrarse de visita en territorio europeo o latinoamericano durante el tratamiento de sus datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. CCPA es de California; aquí se habla de Europa y Latinoamérica."
+          "explicacion": "Incorrecto. El CCPA es de California y aplica a empresas que tratan datos de californianos; aquí el escenario es Europa y Latinoamérica."
         }
       ]
     },
@@ -60,19 +60,19 @@
           "explicacion": "¡Correcto! Es un sistema de gestión, no una herramienta concreta; ISO 27001 lo certifica."
         },
         {
-          "texto": "Un software antivirus centralizado.",
+          "texto": "Un software antivirus centralizado con consola de gestión unificada, agentes desplegados en todos los endpoints corporativos y motor de detección basado en firmas, heurística y análisis de comportamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. El SGSI es un sistema de gestión, no un software."
+          "explicacion": "Incorrecto. El SGSI es un sistema de gestión organizativo, no una solución software de protección de endpoints."
         },
         {
-          "texto": "Un protocolo de cifrado para datos sensibles.",
+          "texto": "Un protocolo de cifrado para datos sensibles que combina algoritmos simétricos (AES-256) y asimétricos (RSA-4096) con derivación de claves mediante PBKDF2 y autenticación HMAC-SHA-512 para garantizar la integridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cifrado puede ser parte de los controles, pero no es el SGSI en sí."
+          "explicacion": "Incorrecto. El cifrado puede ser parte de los controles, pero el SGSI es un sistema de gestión, no un protocolo criptográfico."
         },
         {
-          "texto": "Una unidad del CCN dedicada a la administración pública.",
+          "texto": "Una unidad del Centro Criptológico Nacional dedicada exclusivamente a la administración pública española, encargada de emitir guías STIC y supervisar el cumplimiento del Esquema Nacional de Seguridad en todas las entidades.",
           "correcta": false,
-          "explicacion": "Incorrecto. El SGSI es una entidad organizativa, no un departamento gubernamental."
+          "explicacion": "Incorrecto. El SGSI es un concepto organizativo aplicable a cualquier entidad; no es un departamento del CCN."
         }
       ]
     },
@@ -85,19 +85,19 @@
           "explicacion": "¡Correcto! Las 4 fases son iterativas: planificar la mejora, ejecutarla, verificar resultados y actuar para corregir/mejorar."
         },
         {
-          "texto": "El modelo Waterfall (cascada) clásico.",
+          "texto": "El modelo Waterfall (cascada) clásico, con fases secuenciales no iterativas: requisitos, diseño, implementación, verificación y mantenimiento, sin posibilidad de volver atrás una vez completada cada etapa.",
           "correcta": false,
-          "explicacion": "Incorrecto. Waterfall es desarrollo de software, no SGSI."
+          "explicacion": "Incorrecto. Waterfall es un modelo de desarrollo de software, no de gestión de un SGSI; además es secuencial, no iterativo."
         },
         {
-          "texto": "El ciclo OODA (Observar, Orientar, Decidir, Actuar).",
+          "texto": "El ciclo OODA (Observar, Orientar, Decidir, Actuar) desarrollado por John Boyd para la toma de decisiones en combate aéreo, posteriormente adaptado al ámbito de la respuesta a incidentes de ciberseguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. OODA es de toma de decisiones militares; PDCA es el modelo SGSI."
+          "explicacion": "Incorrecto. OODA es de toma de decisiones militares y respuesta a incidentes; el modelo para SGSI es PDCA."
         },
         {
-          "texto": "El ciclo SCRUM con sprints de 2 semanas.",
+          "texto": "El ciclo SCRUM con sprints de duración fija (típicamente 2 o 4 semanas), backlog priorizado por el Product Owner, ceremonias de planificación, retrospectiva y demostraciones al final de cada iteración.",
           "correcta": false,
-          "explicacion": "Incorrecto. SCRUM es metodología ágil de desarrollo."
+          "explicacion": "Incorrecto. SCRUM es una metodología ágil de desarrollo de productos, no un modelo de gestión de SGSI."
         }
       ]
     },
@@ -110,19 +110,19 @@
           "explicacion": "¡Correcto! La 27001 es la certificable; las demás son guía."
         },
         {
-          "texto": "Solo existe la ISO 27001.",
+          "texto": "Solo existe la ISO 27001 dentro de la familia, que recoge en un único documento normativo todos los requisitos, controles, técnicas de medida y procedimientos para implantar y mantener un sistema de gestión completo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay toda una familia de normas en la serie 27000."
+          "explicacion": "Incorrecto. Hay toda una familia de normas en la serie 27000, cada una con un propósito específico."
         },
         {
-          "texto": "Todas son certificables individualmente.",
+          "texto": "Todas las normas de la familia 27000 son certificables individualmente, lo que permite a las organizaciones obtener certificaciones independientes en cada una de ellas según las áreas que decidan acreditar formalmente.",
           "correcta": false,
-          "explicacion": "Incorrecto. La certificable es la 27001; el resto son normas de apoyo."
+          "explicacion": "Incorrecto. La única certificable es la 27001; el resto son normas de apoyo o guía no certificables."
         },
         {
-          "texto": "Son normas españolas exclusivas.",
+          "texto": "Son normas exclusivamente españolas, desarrolladas por AENOR (actualmente UNE) para el mercado nacional, sin reconocimiento internacional ni equivalencia directa con marcos similares de otros países o regiones.",
           "correcta": false,
-          "explicacion": "Incorrecto. ISO/IEC son normas internacionales."
+          "explicacion": "Incorrecto. ISO/IEC son normas internacionales con reconocimiento global; AENOR/UNE las adopta como UNE-ISO/IEC."
         }
       ]
     },
@@ -135,19 +135,19 @@
           "explicacion": "¡Correcto! La distinción \"esenciales\" vs \"de soporte\" permite priorizar la protección hacia lo que realmente aporta valor al negocio."
         },
         {
-          "texto": "Únicamente los servidores físicos del CPD.",
+          "texto": "Únicamente los servidores físicos del centro de procesamiento de datos principal, ya que sin ellos los sistemas de información no pueden operar y su pérdida supondría la interrupción total de los servicios prestados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los servidores son activos de soporte, no esenciales."
+          "explicacion": "Incorrecto. Los servidores son activos de soporte, no esenciales; los esenciales son la información y los servicios al negocio."
         },
         {
-          "texto": "Solo el personal humano de la organización.",
+          "texto": "Solo el personal humano de la organización, considerado el activo más valioso por su conocimiento, experiencia y capacidad de adaptación ante incidentes que no estén previstos en los procedimientos establecidos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El personal es activo importante pero no es el único esencial."
+          "explicacion": "Incorrecto. El personal es activo importante de soporte, pero los esenciales son la información y los servicios."
         },
         {
-          "texto": "Los datos personales y nada más.",
+          "texto": "Exclusivamente los datos personales sometidos al RGPD, dado que su pérdida o filtración genera obligaciones regulatorias (notificación a la AEPD), sanciones administrativas y daño reputacional difícilmente reparable.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los datos personales son una parte de la información esencial, no la única."
+          "explicacion": "Incorrecto. Los datos personales son una parte de la información esencial, pero los esenciales incluyen toda la información crítica del negocio y los servicios."
         }
       ]
     },
@@ -160,19 +160,19 @@
           "explicacion": "¡Correcto! Ambos enfoques son complementarios: uno parte del valor de negocio, el otro del riesgo técnico."
         },
         {
-          "texto": "Solo \"top-down\" desde la dirección hacia los empleados.",
+          "texto": "Solo el enfoque \"top-down\" desde la dirección hacia los empleados operativos, donde la alta dirección define las prioridades y los niveles inferiores las implementan según el organigrama y la cadena de mando.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es estructura jerárquica organizativa, no análisis de dependencias de activos."
+          "explicacion": "Incorrecto. Eso es estructura jerárquica organizativa, no análisis de dependencias entre activos."
         },
         {
-          "texto": "Centralizado o descentralizado.",
+          "texto": "Análisis centralizado (un equipo único analiza todos los activos) o descentralizado (cada departamento analiza los suyos), siendo el primero más coherente y el segundo más eficiente en organizaciones grandes y complejas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa terminología no es la del análisis de dependencias."
+          "explicacion": "Incorrecto. Esa terminología describe cómo organizar el análisis, no la dirección del análisis de dependencias entre activos."
         },
         {
-          "texto": "Análisis técnico o legal.",
+          "texto": "Análisis técnico (centrado en hardware y software) o análisis legal (centrado en obligaciones regulatorias), realizándose el primero por el equipo de IT y el segundo por el departamento de cumplimiento normativo.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es la clasificación correcta."
+          "explicacion": "Incorrecto. Esa no es la clasificación de enfoques de análisis de dependencias; ambos enfoques (técnico y legal) deben combinarse."
         }
       ]
     },
@@ -185,19 +185,19 @@
           "explicacion": "¡Correcto! Son las 4 opciones clásicas; en cada riesgo concreto se elige la más adecuada o una combinación."
         },
         {
-          "texto": "Únicamente mitigar, siempre.",
+          "texto": "Únicamente mitigar el riesgo aplicando controles técnicos y organizativos hasta que el nivel de riesgo residual sea aceptable para la dirección, sin contemplar otras alternativas como la aceptación, transferencia o eliminación.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay 4 estrategias; la elección depende del análisis coste/beneficio."
+          "explicacion": "Incorrecto. Hay 4 estrategias; la elección depende del análisis coste/beneficio y del apetito de riesgo de la organización."
         },
         {
-          "texto": "Detectar, contener, erradicar y recuperar.",
+          "texto": "Detectar, contener, erradicar y recuperar, siguiendo las fases típicas del proceso de respuesta a incidentes definidas en marcos como NIST SP 800-61, que estructuran la actuación ante eventos de seguridad ya materializados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso son fases de respuesta a incidentes (NIST SP 800-61), no estrategias de gestión de riesgos."
+          "explicacion": "Incorrecto. Esas son fases de respuesta a incidentes (NIST SP 800-61), no estrategias de gestión preventiva del riesgo."
         },
         {
-          "texto": "Identificar, evaluar, documentar, archivar.",
+          "texto": "Identificar, evaluar, documentar y archivar los riesgos en un registro centralizado, dejando para fases posteriores la decisión sobre cómo tratarlos en función de la criticidad y de los recursos disponibles.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es la clasificación clásica de estrategias de tratamiento de riesgo."
+          "explicacion": "Incorrecto. Eso describe la fase de identificación y registro de riesgos, no las estrategias de tratamiento que vienen después."
         }
       ]
     },
@@ -210,19 +210,19 @@
           "explicacion": "¡Correcto! ISO 22301 describe los requisitos del SGCN/BCMS (Business Continuity Management System)."
         },
         {
-          "texto": "Es lo mismo que un SGSI; lo certifica ISO 27001.",
+          "texto": "Es exactamente lo mismo que un SGSI y se certifica también con ISO 27001, ya que ambos sistemas comparten la misma estructura, los mismos controles y los mismos requisitos generales de implantación y mantenimiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Continuidad de negocio y SGSI son distintos; SGCN es ISO 22301."
+          "explicacion": "Incorrecto. Continuidad de negocio y SGSI son sistemas distintos: SGSI = ISO 27001; SGCN = ISO 22301."
         },
         {
-          "texto": "La continuidad la certifica ISO 9001 (calidad).",
+          "texto": "Es un componente del sistema de gestión de calidad de la organización y por tanto se certifica mediante la norma ISO 9001, que abarca los procesos de mejora continua aplicables a cualquier área crítica del negocio.",
           "correcta": false,
-          "explicacion": "Incorrecto. ISO 9001 es calidad; ISO 22301 es continuidad."
+          "explicacion": "Incorrecto. ISO 9001 es calidad; la continuidad de negocio se certifica con ISO 22301 que es una norma específica."
         },
         {
-          "texto": "La certifica el RGPD.",
+          "texto": "Es una capacidad regulada por el Reglamento General de Protección de Datos (RGPD) en su artículo 32, que exige a los responsables del tratamiento garantizar la disponibilidad permanente de los datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD es protección de datos, no certificación de continuidad."
+          "explicacion": "Incorrecto. El RGPD menciona la resiliencia y la capacidad de restauración, pero la norma certificable de continuidad es ISO 22301."
         }
       ]
     },
@@ -235,17 +235,17 @@
           "explicacion": "¡Correcto! El PRD suele ser un componente del PCN; recuperación inmediata vs continuidad global."
         },
         {
-          "texto": "Son exactamente lo mismo con distinto nombre.",
+          "texto": "Son exactamente lo mismo con distinto nombre, dado que ambos planes persiguen el mismo objetivo de mantener la actividad de la organización ante incidentes y comparten estructura, fases y procedimientos de actuación.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son planes distintos con alcances diferentes."
+          "explicacion": "Incorrecto. Son planes distintos con alcances diferentes; el PRD es un subconjunto técnico del PCN global."
         },
         {
-          "texto": "El PRD es más amplio que el PCN.",
+          "texto": "El PRD es más amplio que el PCN, ya que abarca todos los aspectos de la organización (infraestructura, personas, logística, comunicaciones) mientras que el PCN se limita exclusivamente al ámbito TIC y a la recuperación tecnológica.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es al revés: el PCN abarca más."
+          "explicacion": "Incorrecto. Es justo al revés: el PCN abarca más perspectivas; el PRD es más específico y reactivo."
         },
         {
-          "texto": "El PRD solo se activa con desastres naturales.",
+          "texto": "El PRD solo se activa con desastres naturales (terremotos, inundaciones, incendios) mientras que el PCN aplica a cualquier tipo de incidente, dada la diferencia conceptual entre causa fortuita y causa humana en el origen del incidente.",
           "correcta": false,
           "explicacion": "Incorrecto. El PRD aplica a cualquier tipo de incidente que requiera recuperación, no solo desastres naturales."
         }
@@ -260,19 +260,19 @@
           "explicacion": "¡Correcto! El PCTIC es la parte tecnológica del PCN; convive con planes de infraestructura física, logística, etc."
         },
         {
-          "texto": "Un plan para cerrar la empresa definitivamente.",
+          "texto": "Un plan para cerrar definitivamente la actividad TIC de la empresa cuando el coste de mantenerla supera los beneficios, definiendo la migración ordenada de servicios a otros proveedores externos y el desmantelamiento del CPD.",
           "correcta": false,
-          "explicacion": "Incorrecto. La continuidad es lo contrario al cierre: busca mantener actividad."
+          "explicacion": "Incorrecto. La continuidad es lo contrario al cierre: busca mantener la actividad TIC, no terminarla."
         },
         {
-          "texto": "Un plan de marketing para lanzamientos TIC.",
+          "texto": "Un plan de marketing para lanzamientos de nuevos productos TIC al mercado, que define las estrategias de comunicación, los canales de venta y los recursos comerciales necesarios para alcanzar los objetivos de ventas.",
           "correcta": false,
-          "explicacion": "Incorrecto. PCTIC es continuidad, no marketing."
+          "explicacion": "Incorrecto. PCTIC es continuidad operativa, no plan de marketing comercial."
         },
         {
-          "texto": "Un plan para sustituir todo el hardware cada 5 años.",
+          "texto": "Un plan para sustituir todo el hardware del centro de procesamiento de datos cada cinco años con el fin de mantener el parque tecnológico actualizado y evitar la obsolescencia técnica que afecta a la operación.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es renovación tecnológica, no continuidad."
+          "explicacion": "Incorrecto. Eso es renovación tecnológica programada, no plan de continuidad ante incidentes."
         }
       ]
     },
@@ -285,19 +285,19 @@
           "explicacion": "¡Correcto! Estas 6 fases cubren todo el ciclo desde el diseño hasta la actualización del PCN."
         },
         {
-          "texto": "Solo dos fases: planificar y ejecutar.",
+          "texto": "Solo dos fases: planificar la respuesta ante incidentes y ejecutar lo planificado cuando se produzca uno, sin necesidad de fases intermedias de análisis, pruebas, formación o documentación específica de la estrategia.",
           "correcta": false,
-          "explicacion": "Incorrecto. El proceso es más amplio y estructurado."
+          "explicacion": "Incorrecto. El proceso de PCN es más amplio y estructurado, con fases intermedias críticas como análisis, pruebas y formación."
         },
         {
-          "texto": "Únicamente las del ciclo PDCA.",
+          "texto": "Únicamente las del ciclo PDCA (Plan, Do, Check, Act), aplicadas de forma análoga al SGSI sin diferenciar fases específicas propias de la continuidad de negocio como el análisis de impacto o la estrategia de continuidad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El PCN tiene fases propias diferenciadas, aunque comparte filosofía de mejora continua."
+          "explicacion": "Incorrecto. El PCN tiene fases propias diferenciadas, aunque comparte filosofía de mejora continua con PDCA."
         },
         {
-          "texto": "Solo dos fases: incidente y recuperación.",
+          "texto": "Solo dos fases: incidente y recuperación, considerándose innecesarias las fases previas de planificación y posteriores de pruebas, ya que la realidad operativa suele invalidar cualquier planificación anticipada al evento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay fases previas (planificación, análisis, estrategia) y posteriores (pruebas, formación)."
+          "explicacion": "Incorrecto. Sin fases previas de planificación y posteriores de pruebas, el PCN no funcionaría adecuadamente cuando se necesite."
         }
       ]
     },
@@ -310,19 +310,19 @@
           "explicacion": "¡Correcto! La improvisación durante una crisis multiplica errores; el Plan de Crisis aporta estructura para decidir bajo presión."
         },
         {
-          "texto": "Es un documento técnico exclusivo de IT.",
+          "texto": "Es un documento técnico exclusivo del departamento de IT con instrucciones para restaurar servidores, redes y bases de datos tras un incidente, sin implicar a otras áreas de negocio ni a la alta dirección de la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es transversal: implica a dirección, comunicación, legal, IT, RRHH, etc."
+          "explicacion": "Incorrecto. El Plan de Crisis es transversal: implica a dirección, comunicación, legal, IT, RRHH; no es solo IT."
         },
         {
-          "texto": "Es un documento de marketing para la prensa.",
+          "texto": "Es un documento de marketing y comunicación dirigido a la prensa, redes sociales y stakeholders externos, con mensajes preparados para minimizar el impacto reputacional ante cualquier tipo de crisis pública.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aunque la comunicación es parte, el Plan de Crisis es operativo, no de marketing."
+          "explicacion": "Incorrecto. La comunicación es PARTE del Plan de Crisis, pero el documento es mucho más amplio y operativo."
         },
         {
-          "texto": "Es la lista de teléfonos del equipo IT.",
+          "texto": "Es la lista de teléfonos del equipo de IT con los contactos de emergencia disponibles fuera de horario laboral, ordenados por orden jerárquico para la escalación de incidentes durante las horas no operativas habituales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa lista es un componente menor del plan; el Plan de Crisis es mucho más amplio."
+          "explicacion": "Incorrecto. Esa lista es un componente menor; el Plan de Crisis es mucho más amplio en alcance y contenido."
         }
       ]
     },
@@ -335,19 +335,19 @@
           "explicacion": "¡Correcto! MTD ≥ RTO. Si la recuperación supera el MTD, el negocio puede no sobrevivir al incidente."
         },
         {
-          "texto": "El número máximo de horas extra del equipo IT.",
+          "texto": "El número máximo de horas extraordinarias que el equipo de IT puede trabajar durante la gestión de un incidente, según la legislación laboral vigente y los acuerdos firmados con el comité de empresa de la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. No tiene relación con horas extra."
+          "explicacion": "Incorrecto. No tiene relación con la jornada laboral; es una métrica de tolerancia del negocio a la interrupción de servicio."
         },
         {
-          "texto": "El tiempo máximo de retención de backups.",
+          "texto": "El tiempo máximo de retención de las copias de seguridad antes de su destrucción definitiva, determinado por la política de retención de la organización en función de la criticidad de los datos y los requisitos legales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es la retención; el MTD es el de tolerancia a interrupción."
+          "explicacion": "Incorrecto. Eso es la política de retención de backups; el MTD es la tolerancia a interrupción del servicio."
         },
         {
-          "texto": "El tiempo total de un proyecto IT.",
+          "texto": "El tiempo total estimado para completar un proyecto IT desde su fase de planificación inicial hasta su puesta en producción definitiva, incluyendo todas las fases intermedias de desarrollo, pruebas y formación.",
           "correcta": false,
-          "explicacion": "Incorrecto. MTD se refiere a la tolerancia a caída de servicio."
+          "explicacion": "Incorrecto. Eso es la duración de un proyecto, no la tolerancia a interrupción definida en un PCN."
         }
       ]
     },
@@ -360,19 +360,19 @@
           "explicacion": "¡Correcto! NIS es la primera directiva europea horizontal sobre ciberseguridad."
         },
         {
-          "texto": "Una norma estadounidense sobre protección de datos.",
+          "texto": "Una norma estadounidense sobre protección de datos similar al RGPD europeo, aprobada en respuesta al creciente número de brechas de datos en grandes corporaciones tecnológicas con sede principal en Estados Unidos.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS es directiva europea, no estadounidense."
+          "explicacion": "Incorrecto. NIS es directiva europea, no estadounidense; las normativas USA equivalentes serían CCPA, HIPAA, etc."
         },
         {
-          "texto": "Un protocolo de red equivalente a TCP/IP.",
+          "texto": "Un protocolo de red equivalente a TCP/IP, desarrollado por el ETSI (European Telecommunications Standards Institute) para garantizar interoperabilidad y seguridad en las redes públicas europeas mediante cifrado integrado por defecto.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS no es un protocolo técnico."
+          "explicacion": "Incorrecto. NIS no es un protocolo técnico de red; es una directiva regulatoria sobre seguridad de redes y sistemas."
         },
         {
-          "texto": "Una herramienta de la AEPD para gestionar brechas.",
+          "texto": "Una herramienta software de la Agencia Española de Protección de Datos para que los responsables del tratamiento puedan reportar brechas de seguridad y obtener una evaluación automática sobre la obligación de notificarlas.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS es una directiva regulatoria, no una herramienta."
+          "explicacion": "Incorrecto. NIS es una directiva regulatoria; la herramienta de la AEPD que describes es \"Comunica-Brecha RGPD\"."
         }
       ]
     },
@@ -385,19 +385,19 @@
           "explicacion": "¡Correcto! Las directivas europeas necesitan transposición nacional; el RDL 12/2018 es la transposición clave de la NIS original."
         },
         {
-          "texto": "Por aplicación directa, sin transposición.",
+          "texto": "Por aplicación directa sin transposición nacional, dado que las directivas europeas son de aplicación inmediata en todos los Estados miembros desde su publicación en el Diario Oficial de la Unión Europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las directivas SIEMPRE necesitan transposición (a diferencia de los reglamentos como el RGPD)."
+          "explicacion": "Incorrecto. Las directivas SIEMPRE necesitan transposición (a diferencia de los reglamentos como el RGPD que sí son de aplicación directa)."
         },
         {
-          "texto": "Por una orden ministerial del Ministerio del Interior.",
+          "texto": "Por una orden ministerial del Ministerio del Interior, en su condición de departamento competente en materia de seguridad nacional y protección de infraestructuras críticas frente a las amenazas de ciberseguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. La transposición se hace por norma con rango legal (RDL/Ley)."
+          "explicacion": "Incorrecto. La transposición se hace por norma con rango legal (RDL/Ley), no por orden ministerial."
         },
         {
-          "texto": "Por la Constitución Española.",
+          "texto": "Mediante una modificación expresa de la Constitución Española en su artículo 18.4, ampliando la protección constitucional para incluir explícitamente la ciberseguridad de las redes y sistemas de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. La Constitución no transpone directivas."
+          "explicacion": "Incorrecto. La Constitución no se modifica para transponer directivas; la transposición se hace por normas inferiores."
         }
       ]
     },
@@ -410,19 +410,19 @@
           "explicacion": "¡Correcto! NIS2 además incorpora sectores como AAPP, servicios postales, gestión de residuos, etc."
         },
         {
-          "texto": "Únicamente a las empresas con sede en Bruselas.",
+          "texto": "Únicamente a las empresas con sede física en Bruselas (Bélgica), por ser la ubicación de las instituciones europeas y por tanto el ámbito de aplicación natural de las directivas europeas en materia de ciberseguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplica en toda la UE, no solo a Bélgica."
+          "explicacion": "Incorrecto. Aplica en toda la UE, no solo a Bélgica; la sede de las instituciones no determina el ámbito de aplicación."
         },
         {
-          "texto": "Solo a empresas con más de 1.000 empleados.",
+          "texto": "Solo a empresas con más de 1.000 empleados a nivel mundial, considerándose que las organizaciones de menor tamaño no representan un riesgo sistémico para la seguridad de las redes y sistemas de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS aplica por tipo de servicio prestado, no solo por tamaño."
+          "explicacion": "Incorrecto. NIS aplica por tipo de servicio prestado (esencial), no por umbral de 1.000 empleados."
         },
         {
-          "texto": "Únicamente a la administración pública.",
+          "texto": "Únicamente a la administración pública de los Estados miembros, ya que se considera que el sector privado tiene libertad para definir sus propias estrategias de ciberseguridad sin imposiciones regulatorias.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS aplica a entidades privadas que prestan servicios esenciales; NIS2 amplió a más sectores."
+          "explicacion": "Incorrecto. NIS afecta principalmente a entidades privadas que prestan servicios esenciales; NIS2 amplió a más sectores incluyendo AAPP."
         }
       ]
     },
@@ -435,19 +435,19 @@
           "explicacion": "¡Correcto! NIS2 mantiene la misma exención por tamaño, aunque amplía sectores."
         },
         {
-          "texto": "Únicamente las empresas familiares.",
+          "texto": "Únicamente las empresas familiares en las que más del 50% del capital pertenece a miembros de una misma familia, dada la dificultad operativa de implantar marcos formales de ciberseguridad en estas estructuras.",
           "correcta": false,
-          "explicacion": "Incorrecto. El criterio no es \"familiar\" sino por tamaño/facturación."
+          "explicacion": "Incorrecto. El criterio no es \"familiar\" sino por tamaño y facturación (umbrales objetivos)."
         },
         {
-          "texto": "Solo las cooperativas y mutualidades.",
+          "texto": "Solo las cooperativas y mutualidades de previsión social, dada la singularidad de su forma jurídica y la dificultad de aplicar marcos regulatorios pensados para empresas mercantiles tradicionales con capital privado.",
           "correcta": false,
-          "explicacion": "Incorrecto. La excepción es por tamaño, no por forma jurídica."
+          "explicacion": "Incorrecto. La excepción es por tamaño y volumen económico, no por forma jurídica."
         },
         {
-          "texto": "Ninguna; aplica a todas las empresas por igual.",
+          "texto": "Ninguna excepción; la Directiva NIS aplica por igual a todas las empresas que presten servicios esenciales independientemente de su tamaño, plantilla o cifra de negocios, dada la criticidad de los sectores cubiertos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Sí hay exención por tamaño."
+          "explicacion": "Incorrecto. Sí hay exención por tamaño (umbral PYME), aunque NIS2 ha endurecido los criterios para ciertos sectores muy críticos."
         }
       ]
     },
@@ -460,19 +460,19 @@
           "explicacion": "¡Correcto! En España: INCIBE-CERT, CCN-CERT y ESPDEF-CERT son los principales CSIRT."
         },
         {
-          "texto": "Solo un Director Nacional de Ciberseguridad.",
+          "texto": "Solo un Director Nacional de Ciberseguridad nombrado por el Consejo de Ministros, que centraliza todas las competencias en una única figura con plena autonomía sobre la estrategia nacional y la respuesta a incidentes.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS exige varias figuras complementarias."
+          "explicacion": "Incorrecto. NIS exige varias figuras complementarias: autoridades competentes, punto de contacto único y CSIRTs, no una sola persona."
         },
         {
-          "texto": "Solo un DPO nacional.",
+          "texto": "Solo un DPO nacional (Delegado de Protección de Datos a nivel estatal), que coordina la actuación de los DPOs sectoriales y centraliza la relación con las autoridades europeas en materia de protección de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO es figura del RGPD; NIS no exige un \"DPO nacional\"."
+          "explicacion": "Incorrecto. El DPO es figura del RGPD a nivel organizativo; NIS no exige un \"DPO nacional\" estatal."
         },
         {
-          "texto": "Solo un embajador en Bruselas.",
+          "texto": "Solo un embajador permanente en Bruselas dedicado exclusivamente a las cuestiones de ciberseguridad, encargado de mantener informadas a las autoridades nacionales sobre las directrices europeas en la materia.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay tal figura específica."
+          "explicacion": "Incorrecto. No existe esa figura específica; NIS exige autoridades operativas nacionales y CSIRTs."
         }
       ]
     },
@@ -485,19 +485,19 @@
           "explicacion": "¡Correcto! Su parada o destrucción tendría consecuencias graves para la sociedad."
         },
         {
-          "texto": "Cualquier infraestructura tecnológica de una empresa.",
+          "texto": "Cualquier infraestructura tecnológica de una empresa, ya sea un servidor, un router perimetral, una base de datos o un servicio cloud, considerada por la propia organización como imprescindible para su operación diaria.",
           "correcta": false,
-          "explicacion": "Incorrecto. \"Crítica\" tiene un sentido jurídico específico de servicio esencial para la sociedad."
+          "explicacion": "Incorrecto. \"Crítica\" tiene un sentido jurídico específico de servicio esencial para la SOCIEDAD, no solo para una empresa concreta."
         },
         {
-          "texto": "Únicamente las infraestructuras militares.",
+          "texto": "Únicamente las infraestructuras militares y de defensa del Estado, ya que son las únicas cuya destrucción tendría un impacto significativo en la seguridad nacional y en la capacidad de respuesta del país ante amenazas externas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Cubre energía, agua, salud, transporte, financiero, etc., además de seguridad."
+          "explicacion": "Incorrecto. La Ley PIC cubre múltiples sectores: energía, agua, salud, transporte, financiero, además de seguridad/defensa."
         },
         {
-          "texto": "Los centros comerciales de gran superficie.",
+          "texto": "Los centros comerciales de gran superficie y los principales nodos logísticos del comercio minorista nacional, dada la importancia económica del sector retail para el empleo, el consumo y la actividad económica del país.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los centros comerciales no son infraestructura crítica."
+          "explicacion": "Incorrecto. Los centros comerciales no son infraestructura crítica en sentido jurídico, aunque puedan tener impacto económico."
         }
       ]
     },
@@ -510,19 +510,19 @@
           "explicacion": "¡Correcto! De más general (PES) a más concreto (PPE), con apoyo policial (PAO)."
         },
         {
-          "texto": "Un único plan global llamado \"Plan PIC\".",
+          "texto": "Un único plan global llamado \"Plan PIC\" que cubre todas las infraestructuras críticas del país sin distinción de sectores ni de operadores, simplificando la coordinación nacional y reduciendo la documentación administrativa.",
           "correcta": false,
-          "explicacion": "Incorrecto. La estructura es jerárquica con varios niveles."
+          "explicacion": "Incorrecto. La estructura del PNPIC es jerárquica con varios niveles diferenciados (PES, PSO, PPE, PAO)."
         },
         {
-          "texto": "Plan A, Plan B y Plan C según urgencia.",
+          "texto": "Plan A, Plan B y Plan C según el grado de urgencia y la criticidad de la amenaza identificada, activándose progresivamente desde el menos crítico al más crítico en función de la evolución del incidente.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es la nomenclatura de la Ley PIC."
+          "explicacion": "Incorrecto. No es la nomenclatura de la Ley PIC; la jerarquía utiliza siglas técnicas (PES, PSO, PPE, PAO)."
         },
         {
-          "texto": "Solo el PSO obligatorio para cada operador.",
+          "texto": "Solo el PSO (Plan de Seguridad del Operador) es obligatorio para cada operador crítico, sin que sean necesarios planes superiores sectoriales ni inferiores por instalación específica al considerarse redundantes.",
           "correcta": false,
-          "explicacion": "Incorrecto. El PSO existe pero conviven con PES, PPE y PAO."
+          "explicacion": "Incorrecto. El PSO existe pero convive obligatoriamente con PES, PPE y PAO; cada uno tiene su función en la jerarquía."
         }
       ]
     },
@@ -535,19 +535,19 @@
           "explicacion": "¡Correcto! CNPIC depende del Ministerio del Interior y centraliza la coordinación nacional de protección de IICC."
         },
         {
-          "texto": "Es el equivalente español de la AEPD para infraestructuras.",
+          "texto": "Es el equivalente español de la Agencia Española de Protección de Datos (AEPD) pero especializado en infraestructuras críticas, con competencias para imponer sanciones administrativas a los operadores que incumplan sus obligaciones.",
           "correcta": false,
-          "explicacion": "Incorrecto. AEPD se ocupa de protección de datos; CNPIC de infraestructuras críticas."
+          "explicacion": "Incorrecto. AEPD se ocupa de protección de datos; CNPIC es de infraestructuras críticas y sus funciones son de coordinación, no sancionadoras como las de la AEPD."
         },
         {
-          "texto": "Es una empresa privada de ciberseguridad.",
+          "texto": "Es una empresa privada de ciberseguridad participada por el Estado español que presta servicios de auditoría, consultoría y respuesta a incidentes a los operadores de infraestructuras críticas mediante contratos comerciales.",
           "correcta": false,
-          "explicacion": "Incorrecto. CNPIC es organismo público bajo el Ministerio del Interior."
+          "explicacion": "Incorrecto. CNPIC es un organismo público dependiente del Ministerio del Interior, no una empresa privada."
         },
         {
-          "texto": "Es un sistema informático automatizado.",
+          "texto": "Es un sistema informático automatizado de detección de amenazas a infraestructuras críticas, desarrollado por el Centro Criptológico Nacional, que monitoriza en tiempo real el estado de seguridad de los operadores críticos.",
           "correcta": false,
-          "explicacion": "Incorrecto. CNPIC es una entidad organizativa, no un sistema."
+          "explicacion": "Incorrecto. CNPIC es una entidad organizativa con personal y funciones de coordinación, no un sistema técnico automatizado."
         }
       ]
     },
@@ -560,19 +560,19 @@
           "explicacion": "¡Correcto! Publicar las infraestructuras críticas y sus debilidades sería un mapa de objetivos para cualquier atacante."
         },
         {
-          "texto": "Carácter público, disponible en la web del Ministerio.",
+          "texto": "Carácter público y disponible en la web del Ministerio del Interior, accesible para cualquier ciudadano mediante una solicitud de información ordinaria, en cumplimiento del principio constitucional de transparencia de la actuación pública.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es información clasificada como secreta."
+          "explicacion": "Incorrecto. Es información clasificada como secreta por la Ley 9/1968 de Secretos Oficiales, dada su sensibilidad."
         },
         {
-          "texto": "Carácter abierto bajo Ley de Transparencia.",
+          "texto": "Carácter abierto bajo la Ley de Transparencia (Ley 19/2013), publicable previa anonimización de los datos de los operadores privados pero manteniendo visible la información sobre ubicación y servicios prestados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Está excluido de la Ley de Transparencia por razones de Seguridad Nacional."
+          "explicacion": "Incorrecto. Está expresamente excluido de la Ley de Transparencia por razones de Seguridad Nacional."
         },
         {
-          "texto": "Carácter comercial y vendible a terceros.",
+          "texto": "Carácter comercial y vendible a terceros, ya que muchos operadores privados de infraestructuras críticas están interesados en conocer la información de sus competidores para optimizar sus propias estrategias de protección.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es información comercializable."
+          "explicacion": "Incorrecto. No es información comercializable; tiene la máxima clasificación de seguridad nacional."
         }
       ]
     },
@@ -585,19 +585,19 @@
           "explicacion": "¡Correcto! Son los puntos de contacto formales entre operador crítico y la Autoridad. Cada operador debe nombrarlos."
         },
         {
-          "texto": "Únicamente el CISO de la organización.",
+          "texto": "Únicamente el CISO (Chief Information Security Officer) de la organización, que asume todas las funciones de seguridad incluyendo el contacto con la Autoridad competente, sin necesidad de figuras adicionales especializadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son dos figuras específicas distintas del CISO."
+          "explicacion": "Incorrecto. La Ley PIC exige dos figuras específicas distintas del CISO, con funciones de enlace estratégico y técnico-operativo separadas."
         },
         {
-          "texto": "El Director de Recursos Humanos y el Asesor Jurídico.",
+          "texto": "El Director de Recursos Humanos y el Asesor Jurídico de la organización, dada la naturaleza administrativa y legal de las comunicaciones que deben mantenerse con la Autoridad competente en materia de infraestructuras críticas.",
           "correcta": false,
-          "explicacion": "Incorrecto. La Ley PIC exige figuras de seguridad específicas, no genéricas."
+          "explicacion": "Incorrecto. La Ley PIC exige figuras de seguridad específicas con conocimientos técnicos, no genéricas de RRHH o Legal."
         },
         {
-          "texto": "El representante sindical y un consejero externo.",
+          "texto": "El representante sindical de los trabajadores afectados por las medidas de seguridad y un consejero externo independiente designado por el consejo de administración, en aras de garantizar el equilibrio entre intereses.",
           "correcta": false,
-          "explicacion": "Incorrecto. No son funciones de enlace PIC."
+          "explicacion": "Incorrecto. No son funciones de enlace previstas en la Ley PIC; las figuras exigidas son Responsable de Seguridad y Enlace + Delegado de Seguridad."
         }
       ]
     },
@@ -610,19 +610,19 @@
           "explicacion": "¡Correcto! Es un modelo de CSIRTs sectoriales que se coordinan entre sí y con la red europea."
         },
         {
-          "texto": "Solo existe CCN-CERT para todos los sectores.",
+          "texto": "Solo existe el CCN-CERT como CSIRT nacional para todos los sectores (público, privado, defensa, infraestructuras críticas y ciudadanía), centralizando la coordinación nacional sin necesidad de otros equipos especializados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay varios CSIRTs nacionales con ámbitos diferenciados."
+          "explicacion": "Incorrecto. Hay varios CSIRTs nacionales con ámbitos diferenciados (CCN-CERT, INCIBE-CERT, ESPDEF-CERT)."
         },
         {
-          "texto": "INCIBE-CERT solo se ocupa de ciudadanos, no de empresas.",
+          "texto": "INCIBE-CERT solo se ocupa de los ciudadanos particulares, no de las empresas, ya que las cuestiones empresariales están exclusivamente bajo competencia del CCN-CERT por el carácter más sensible de la información tratada.",
           "correcta": false,
-          "explicacion": "Incorrecto. INCIBE-CERT atiende ciudadanos Y empresas privadas."
+          "explicacion": "Incorrecto. INCIBE-CERT atiende tanto a ciudadanos como a empresas privadas y operadores de servicios esenciales no AAPP."
         },
         {
-          "texto": "ESPDEF-CERT atiende al sector privado en general.",
+          "texto": "ESPDEF-CERT atiende a cualquier empresa del sector privado en general, dada su disponibilidad operativa 24/7 y sus medios técnicos avanzados, complementando la labor del INCIBE-CERT en horario no laboral.",
           "correcta": false,
-          "explicacion": "Incorrecto. ESPDEF-CERT es de Defensa."
+          "explicacion": "Incorrecto. ESPDEF-CERT pertenece al Ministerio de Defensa y atiende a los sistemas del ámbito de la Defensa, no al sector privado general."
         }
       ]
     },
@@ -635,19 +635,19 @@
           "explicacion": "¡Correcto! En la práctica, las organizaciones diseñan un único sistema de gestión que atiende a varios marcos con el menor esfuerzo posible."
         },
         {
-          "texto": "Son incompatibles y solo se puede cumplir uno.",
+          "texto": "Son completamente incompatibles entre sí y solo se puede cumplir uno a la vez; la organización debe elegir cuál aplica según su sector predominante y renunciar al cumplimiento formal de los otros marcos regulatorios.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son compatibles y se cumplen simultáneamente."
+          "explicacion": "Incorrecto. Son perfectamente compatibles y se cumplen simultáneamente; muchas organizaciones tienen los cuatro marcos a la vez."
         },
         {
-          "texto": "El RGPD deroga a todos los demás.",
+          "texto": "El RGPD deroga a todos los demás marcos cuando son aplicables simultáneamente, dada la primacía del Derecho de la Unión Europea sobre las normativas nacionales (ENS) y sobre los estándares voluntarios internacionales (ISO).",
           "correcta": false,
-          "explicacion": "Incorrecto. Cada uno tiene un ámbito propio; no se derogan entre sí."
+          "explicacion": "Incorrecto. Cada marco tiene un ámbito propio diferenciado; no se derogan entre sí ni hay primacía absoluta de uno sobre otros."
         },
         {
-          "texto": "Solo la AEPD vigila el cumplimiento de los cuatro.",
+          "texto": "Solo la AEPD vigila el cumplimiento de los cuatro marcos (RGPD, ENS, ISO 27001 y NIS) por ser la autoridad de control independiente con mayor competencia transversal en materia de seguridad de la información en España.",
           "correcta": false,
-          "explicacion": "Incorrecto. AEPD vigila RGPD; otros marcos tienen otras autoridades (CCN para ENS, INCIBE/CCN para NIS, ENAC para ISO, etc.)."
+          "explicacion": "Incorrecto. AEPD vigila el RGPD; otros marcos tienen otras autoridades (CCN para ENS, INCIBE/CCN para NIS, ENAC para ISO, etc.)."
         }
       ]
     },
@@ -660,19 +660,19 @@
           "explicacion": "¡Correcto! Es figura obligatoria distinta del DPO del RGPD, aunque pueden coexistir y a veces coincidir."
         },
         {
-          "texto": "Lo elimina y deja la responsabilidad al CEO.",
+          "texto": "Lo elimina como figura obligatoria y deja toda la responsabilidad de seguridad de las redes y sistemas en manos del CEO o presidente de la organización, simplificando así la cadena de responsabilidad y rendición de cuentas.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS crea explícitamente esta figura, no la elimina."
+          "explicacion": "Incorrecto. NIS crea explícitamente esta figura con funciones claras; no la elimina."
         },
         {
-          "texto": "Lo convierte en figura voluntaria.",
+          "texto": "Lo convierte en una figura completamente voluntaria, sin obligaciones específicas, que la organización puede nombrar o no según su criterio sin que su ausencia tenga consecuencias regulatorias ni sancionadoras directas.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS lo hace obligatorio para los operadores afectados."
+          "explicacion": "Incorrecto. NIS lo hace obligatorio para los operadores afectados por la directiva; no es voluntario."
         },
         {
-          "texto": "Lo subordina jerárquicamente al DPO.",
+          "texto": "Lo subordina jerárquicamente al DPO (Delegado de Protección de Datos) creado por el RGPD, integrando ambas funciones bajo una misma cadena de mando para evitar duplicidades funcionales y simplificar el organigrama.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son figuras independientes con funciones distintas."
+          "explicacion": "Incorrecto. Son figuras independientes con funciones distintas: el DPO se ocupa de datos personales; el Responsable de Seguridad de NIS, de redes y sistemas."
         }
       ]
     },
@@ -685,19 +685,19 @@
           "explicacion": "¡Correcto! NIS2 además fija plazos concretos (24h alerta temprana, 72h notificación detallada, 1 mes informe final)."
         },
         {
-          "texto": "Una única notificación tras 30 días.",
+          "texto": "Una única notificación consolidada presentada al cabo de 30 días desde la constancia del incidente, con todos los detalles confirmados y verificados, sin notificaciones intermedias ni necesidad de alertas tempranas previas.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS exige notificación temprana y seguimiento, no esperar un mes."
+          "explicacion": "Incorrecto. NIS exige notificación temprana inicial y seguimiento posterior, no esperar 30 días para una única notificación."
         },
         {
-          "texto": "Solo se notifica si hay datos personales involucrados.",
+          "texto": "Solo es necesario notificar el incidente si afecta directamente a datos personales protegidos por el RGPD, ya que las notificaciones de NIS se canalizan a través del procedimiento previsto en el artículo 33 del Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. NIS notifica cualquier incidente significativo de servicios esenciales, no solo brechas de datos personales."
+          "explicacion": "Incorrecto. NIS exige notificar cualquier incidente significativo que afecte a servicios esenciales, no solo brechas de datos personales."
         },
         {
-          "texto": "Notificación voluntaria a discreción del operador.",
+          "texto": "Notificación voluntaria a discreción del operador, que decide libremente si comunica el incidente a la Autoridad competente, sin obligación regulatoria de hacerlo y sin consecuencias por su omisión total del reporte.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es obligatoria."
+          "explicacion": "Incorrecto. La notificación es obligatoria para los operadores afectados, no voluntaria; su omisión puede acarrear sanciones."
         }
       ]
     },
@@ -710,19 +710,19 @@
           "explicacion": "¡Correcto! El cumplimiento normativo en ciberseguridad es multi-marco; conviene integrarlo en un único sistema de gestión."
         },
         {
-          "texto": "Solo el RGPD y nada más.",
+          "texto": "Solo el Reglamento General de Protección de Datos (RGPD) y nada más, ya que su carácter de reglamento europeo de aplicación directa lo convierte en el marco regulatorio único aplicable a cualquier organización que trate datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Para servicios esenciales aplican varios marcos."
+          "explicacion": "Incorrecto. Para servicios esenciales aplican muchos marcos simultáneamente; el RGPD no agota la regulación."
         },
         {
-          "texto": "Solo la ISO 27001 voluntariamente.",
+          "texto": "Solo la norma internacional ISO 27001, certificada voluntariamente por la organización, que actúa como marco integrador de buenas prácticas suficiente para acreditar el cumplimiento normativo en cualquier sector regulado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay marcos obligatorios que no se pueden obviar."
+          "explicacion": "Incorrecto. ISO 27001 es voluntaria y no exime de cumplir marcos obligatorios como RGPD, NIS o Ley PIC."
         },
         {
-          "texto": "Únicamente la Ley PIC.",
+          "texto": "Únicamente la Ley PIC (Ley de Protección de Infraestructuras Críticas), por ser la norma más exigente y específica aplicable a operadores estratégicos, que absorbe las exigencias de los demás marcos regulatorios relevantes.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ley PIC es solo una pieza; aplican muchos otros marcos."
+          "explicacion": "Incorrecto. Ley PIC es solo una pieza del marco regulatorio; aplican simultáneamente RGPD, NIS, ENS y otros marcos sectoriales."
         }
       ]
     }

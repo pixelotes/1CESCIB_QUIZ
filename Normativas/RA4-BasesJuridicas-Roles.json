@@ -10,19 +10,19 @@
           "explicacion": "¡Correcto! Cualquier tratamiento legítimo de datos debe encajar en al menos una de estas seis bases jurídicas."
         },
         {
-          "texto": "Solo el consentimiento.",
+          "texto": "Solo una: el consentimiento del interesado, considerado por el RGPD como la única base jurídica plenamente válida y suficiente para legitimar cualquier tratamiento de datos personales por parte del responsable.",
           "correcta": false,
-          "explicacion": "Incorrecto. El consentimiento es UNA de las seis bases; no la única."
+          "explicacion": "Incorrecto. El consentimiento es UNA de las seis bases del art. 6; no la única, y a menudo no es la más adecuada."
         },
         {
-          "texto": "Tres: consentimiento, contrato y orden judicial.",
+          "texto": "Tres bases jurídicas fundamentales: consentimiento expreso del interesado, contrato suscrito por ambas partes y orden judicial dictada por la autoridad competente en cada caso concreto del tratamiento de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son seis y la \"orden judicial\" no es una base autónoma."
+          "explicacion": "Incorrecto. Son seis bases, y la \"orden judicial\" no es una base jurídica autónoma del art. 6 RGPD."
         },
         {
-          "texto": "Diez bases jurídicas distintas.",
+          "texto": "Diez bases jurídicas distintas reguladas en los artículos 6 a 10 del Reglamento, agrupadas según la naturaleza del dato tratado (común o categoría especial) y la finalidad perseguida por el responsable del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. El art. 6 RGPD recoge seis bases."
+          "explicacion": "Incorrecto. El art. 6 RGPD recoge seis bases jurídicas para datos comunes; el art. 9 regula categorías especiales pero como excepciones, no como bases nuevas."
         }
       ]
     },
@@ -35,19 +35,19 @@
           "explicacion": "¡Correcto! El tratamiento es imprescindible para cumplir el contrato de compraventa; no hace falta consentimiento separado."
         },
         {
-          "texto": "Consentimiento expreso obligatorio.",
+          "texto": "Consentimiento expreso obligatorio del interesado, manifestado mediante una casilla específicamente marcada en el formulario de pedido para autorizar el uso del domicilio postal con la finalidad concreta del envío del producto adquirido.",
           "correcta": false,
-          "explicacion": "Incorrecto. Pedir consentimiento adicional para un dato imprescindible del contrato es redundante e incorrecto."
+          "explicacion": "Incorrecto. Pedir consentimiento adicional para un dato imprescindible del contrato es redundante e incorrecto; la base es la ejecución del contrato."
         },
         {
-          "texto": "Interés vital del cliente.",
+          "texto": "Interés vital del cliente, considerando que la entrega del producto puede resultar esencial para la salud o el bienestar inmediato del interesado, especialmente en el caso de productos sanitarios o alimentos perecederos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El interés vital aplica a situaciones de vida o muerte (urgencias médicas)."
+          "explicacion": "Incorrecto. El interés vital aplica a situaciones de vida o muerte (urgencias médicas), no a un envío comercial normal."
         },
         {
-          "texto": "Obligación legal del comerciante.",
+          "texto": "Obligación legal del comerciante, derivada de las normas mercantiles que regulan la prestación de servicios postales y el envío de mercancías al consumidor final dentro del territorio nacional de la Unión Europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay una ley que obligue a enviar el producto; lo obliga el contrato suscrito."
+          "explicacion": "Incorrecto. No hay una ley que obligue específicamente al comerciante a enviar el producto; lo obliga el contrato suscrito con el cliente."
         }
       ]
     },
@@ -60,19 +60,19 @@
           "explicacion": "¡Correcto! La Ley General Tributaria obliga a conservar facturas; es una obligación legal del responsable."
         },
         {
-          "texto": "Consentimiento del cliente.",
+          "texto": "Consentimiento expreso del cliente recogido en el contrato inicial de prestación de servicios profesionales, mediante una cláusula específica que autoriza la conservación durante el periodo legalmente establecido por la normativa fiscal aplicable.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aunque el cliente no consienta, la ley obliga a conservar; el consentimiento aquí es irrelevante."
+          "explicacion": "Incorrecto. Aunque el cliente no consienta, la ley obliga a la asesoría a conservar; el consentimiento aquí es irrelevante."
         },
         {
-          "texto": "Interés legítimo del asesor.",
+          "texto": "Interés legítimo del asesor profesional para mantener una documentación contable completa, justificada por la necesidad de poder responder ante posibles reclamaciones administrativas o judiciales que puedan surgir tras la prestación del servicio.",
           "correcta": false,
-          "explicacion": "Incorrecto. Cuando hay obligación legal específica, prevalece como base; no hace falta justificar interés legítimo."
+          "explicacion": "Incorrecto. Cuando hay obligación legal específica (LGT), prevalece como base; no hace falta justificar interés legítimo."
         },
         {
-          "texto": "Ejecución de un contrato.",
+          "texto": "Ejecución de un contrato de prestación de servicios profesionales celebrado entre el asesor fiscal y el cliente para la elaboración de las declaraciones tributarias correspondientes a un determinado ejercicio fiscal del contribuyente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Una vez ejecutado el servicio, la conservación posterior se basa en obligación legal, no en el contrato."
+          "explicacion": "Incorrecto. Una vez ejecutado el servicio, la conservación posterior se basa en obligación legal (fiscal/mercantil), no en el contrato ya cumplido."
         }
       ]
     },
@@ -85,19 +85,19 @@
           "explicacion": "¡Correcto! Cuando hay riesgo para la vida o salud y el interesado no puede consentir, esta base ampara el tratamiento."
         },
         {
-          "texto": "Interés legítimo del hospital.",
+          "texto": "Interés legítimo del hospital en la prestación adecuada del servicio sanitario y en la protección de los profesionales sanitarios frente a posibles reclamaciones por mala praxis derivadas de no atender al paciente en situación crítica.",
           "correcta": false,
-          "explicacion": "Incorrecto. Existe una base específica más fuerte (interés vital) que aplica preferentemente."
+          "explicacion": "Incorrecto. Existe una base específica más fuerte (interés vital) que aplica preferentemente sobre el interés legítimo."
         },
         {
-          "texto": "Consentimiento informado retroactivo.",
+          "texto": "Consentimiento informado retroactivo solicitado al paciente o a sus familiares más cercanos una vez recuperada la consciencia, mediante la firma del formulario habitual de autorización al tratamiento de datos médicos del centro hospitalario.",
           "correcta": false,
-          "explicacion": "Incorrecto. El consentimiento informado se solicita después si es posible, pero la base jurídica inicial es el interés vital."
+          "explicacion": "Incorrecto. El consentimiento informado puede solicitarse a posteriori si es posible, pero la base jurídica inicial que ampara el tratamiento es el interés vital."
         },
         {
-          "texto": "Obligación legal del médico.",
+          "texto": "Obligación legal del personal médico de atender cualquier urgencia sanitaria que se presente en el centro hospitalario, conforme a la Ley General de Sanidad y a los códigos deontológicos profesionales aplicables.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aunque haya obligación de atender, la base específica para el dato es el interés vital."
+          "explicacion": "Incorrecto. Aunque haya obligación de atender, la base jurídica específica para el dato es el interés vital del interesado."
         }
       ]
     },
@@ -110,19 +110,19 @@
           "explicacion": "¡Correcto! El marketing directo a clientes existentes suele encajar en interés legítimo, pero con derecho de oposición claro."
         },
         {
-          "texto": "Obligación legal sin necesidad de informar.",
+          "texto": "Obligación legal del responsable derivada de la normativa mercantil y de defensa del consumidor, sin necesidad de informar al interesado ni de ofrecerle la posibilidad de oponerse al envío de comunicaciones comerciales recibidas.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay ley que obligue a hacer marketing; además siempre hay que informar."
+          "explicacion": "Incorrecto. No hay ley que obligue a hacer marketing; además, siempre hay obligación de informar y permitir oposición."
         },
         {
-          "texto": "Interés vital del cliente.",
+          "texto": "Interés vital del cliente, dado que la información sobre nuevos productos puede ser relevante para sus necesidades cotidianas y por tanto el responsable está justificado para enviar comunicaciones comerciales sin recabar consentimiento previo.",
           "correcta": false,
-          "explicacion": "Incorrecto. El marketing no es asunto de vida o muerte."
+          "explicacion": "Incorrecto. El interés vital aplica a situaciones de vida o muerte; el marketing no es asunto de vida o muerte."
         },
         {
-          "texto": "Ejecución de un contrato.",
+          "texto": "Ejecución de un contrato celebrado entre la empresa y el cliente para la prestación continuada de servicios comerciales, incluyendo la recepción periódica de información sobre productos similares disponibles en el catálogo del responsable.",
           "correcta": false,
-          "explicacion": "Incorrecto. La venta original ya ejecutó el contrato; marketing posterior no es parte del mismo."
+          "explicacion": "Incorrecto. La venta original ya ejecutó el contrato; marketing posterior no es parte de la ejecución contractual original."
         }
       ]
     },
@@ -135,19 +135,19 @@
           "explicacion": "¡Correcto! El interés público o ejercicio de poderes públicos cubre tratamientos por las AAPP en cumplimiento de sus funciones."
         },
         {
-          "texto": "Consentimiento de todos los votantes.",
+          "texto": "Consentimiento expreso de todos y cada uno de los electores empadronados en el municipio, recabado mediante un procedimiento administrativo formal con notificación individual y posibilidad de oposición al tratamiento por cada interesado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Sería inviable recabar el consentimiento de millones de electores; existe base específica de interés público."
+          "explicacion": "Incorrecto. Sería inviable y absurdo recabar el consentimiento de millones de electores; existe base específica de interés público para tratamientos por las AAPP."
         },
         {
-          "texto": "Interés legítimo del ayuntamiento.",
+          "texto": "Interés legítimo del ayuntamiento en garantizar el correcto desarrollo del proceso electoral, valorado tras una ponderación de los derechos e intereses de los electores afectados conforme a las exigencias del Reglamento General de Protección de Datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las AAPP no pueden invocar interés legítimo en el ejercicio de sus competencias públicas (art. 6.1.f in fine)."
+          "explicacion": "Incorrecto. Las AAPP NO pueden invocar interés legítimo en el ejercicio de sus funciones públicas (art. 6.1.f in fine)."
         },
         {
-          "texto": "Ejecución de un contrato electoral.",
+          "texto": "Ejecución de un contrato electoral celebrado entre el ayuntamiento y cada uno de los electores empadronados en el municipio, mediante el cual estos autorizan formalmente el uso de sus datos en los procesos electorales municipales y autonómicos.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay contrato entre el ayuntamiento y los electores."
+          "explicacion": "Incorrecto. No existe contrato entre el ayuntamiento y los electores; las relaciones administrativas no son contractuales."
         }
       ]
     },
@@ -160,19 +160,19 @@
           "explicacion": "¡Correcto! Las AAPP no pueden \"esconder\" tratamientos detrás de un genérico interés legítimo; necesitan base normativa específica."
         },
         {
-          "texto": "Ninguna; las AAPP pueden invocar interés legítimo libremente.",
+          "texto": "Ninguna restricción específica; las administraciones públicas pueden invocar el interés legítimo libremente como cualquier responsable del tratamiento del sector privado, siempre que ponderen adecuadamente los derechos de los interesados afectados.",
           "correcta": false,
-          "explicacion": "Incorrecto. El propio RGPD lo prohíbe expresamente."
+          "explicacion": "Incorrecto. El propio RGPD lo prohíbe expresamente para AAPP en ejercicio de sus funciones."
         },
         {
-          "texto": "Solo si pagan una tasa anual a la AEPD.",
+          "texto": "Solo pueden invocar interés legítimo si pagan previamente una tasa anual a la Agencia Española de Protección de Datos en concepto de supervisión reforzada sobre las actividades de tratamiento realizadas por administraciones públicas.",
           "correcta": false,
-          "explicacion": "Incorrecto. No existe tal tasa; la limitación es jurídica."
+          "explicacion": "Incorrecto. No existe tal tasa; la limitación es jurídica y absoluta para AAPP en ejercicio de sus funciones."
         },
         {
-          "texto": "Solo si los datos están cifrados con AES-256.",
+          "texto": "Solo pueden invocarlo si los datos personales tratados están cifrados con algoritmos de fortaleza criptográfica equivalente a AES-256, junto con la implantación de medidas técnicas reforzadas y la rotación periódica de las claves utilizadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. La limitación no depende de medidas técnicas."
+          "explicacion": "Incorrecto. La limitación no depende de medidas técnicas de cifrado; es una prohibición jurídica para AAPP en ejercicio de sus funciones."
         }
       ]
     },
@@ -185,19 +185,19 @@
           "explicacion": "¡Correcto! Sin esa obligación legal específica, recabar el DNI requeriría otra base."
         },
         {
-          "texto": "Únicamente consentimiento del cliente.",
+          "texto": "Únicamente consentimiento expreso del cliente recabado mediante firma de un formulario específico en el momento de la apertura de la cuenta, sin que existan obligaciones legales que justifiquen automáticamente el tratamiento de los datos identificativos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cliente no puede negarse: la ley obliga al banco a identificarle."
+          "explicacion": "Incorrecto. El cliente no puede negarse: la ley obliga al banco a identificarle; el consentimiento no es la base adecuada."
         },
         {
-          "texto": "Interés vital.",
+          "texto": "Interés vital del cliente, considerando que sin la apertura de la cuenta bancaria no podría disponer de los recursos económicos necesarios para hacer frente a sus necesidades vitales básicas en el día a día de su actividad personal y familiar.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay riesgo para la vida."
+          "explicacion": "Incorrecto. No hay riesgo para la vida del cliente; el interés vital aplica a situaciones de vida o muerte."
         },
         {
-          "texto": "Interés público.",
+          "texto": "Interés público derivado de la importancia estratégica del sistema financiero español y de la necesidad de garantizar la estabilidad económica del país mediante un control reforzado sobre las operaciones bancarias realizadas por los clientes.",
           "correcta": false,
-          "explicacion": "Incorrecto. El banco actúa por mandato legal, no por interés público propio."
+          "explicacion": "Incorrecto. El banco actúa por mandato legal específico (Ley 10/2010), no por interés público propio; la base es obligación legal."
         }
       ]
     },
@@ -210,19 +210,19 @@
           "explicacion": "¡Correcto! El responsable es quien decide el qué, para qué y cómo. Suele coincidir con la organización titular del tratamiento."
         },
         {
-          "texto": "Cualquier empleado que manipule datos personales.",
+          "texto": "Cualquier empleado de la organización que manipule datos personales en el desempeño de sus funciones laborales habituales, incluyendo a administrativos, comerciales, técnicos y personal de soporte que tenga acceso a sistemas de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los empleados actúan bajo la responsabilidad de la organización; ellos no son responsables."
+          "explicacion": "Incorrecto. Los empleados actúan bajo la responsabilidad de la organización; ellos no son responsables del tratamiento en sentido jurídico del RGPD."
         },
         {
-          "texto": "Únicamente el DPO de la organización.",
+          "texto": "Únicamente el Delegado de Protección de Datos (DPO) designado por la organización conforme al artículo 37 del RGPD, en su condición de figura especializada con conocimientos específicos en materia de protección de datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO supervisa y asesora; el responsable es la organización."
+          "explicacion": "Incorrecto. El DPO supervisa y asesora pero no decide; el responsable es la organización (responsable jurídico)."
         },
         {
-          "texto": "La AEPD en todos los casos.",
+          "texto": "La Agencia Española de Protección de Datos (AEPD) en todos los casos, en su condición de autoridad de control nacional con competencias generales sobre cualquier tratamiento de datos personales realizado en el territorio español.",
           "correcta": false,
-          "explicacion": "Incorrecto. La AEPD es autoridad de control, no responsable de tratamientos de terceros."
+          "explicacion": "Incorrecto. La AEPD es autoridad de control, no responsable de los tratamientos que realizan terceros."
         }
       ]
     },
@@ -235,19 +235,19 @@
           "explicacion": "¡Correcto! No decide fines ni medios; solo ejecuta lo que el responsable le encarga."
         },
         {
-          "texto": "El empleado que realiza el tratamiento dentro de la empresa.",
+          "texto": "El empleado interno de la organización que realiza materialmente el tratamiento de los datos personales en el desempeño de sus funciones laborales habituales, conforme a las instrucciones recibidas de su superior jerárquico directo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los empleados forman parte del responsable, no son encargados externos."
+          "explicacion": "Incorrecto. Los empleados forman parte del responsable; no son encargados externos en sentido jurídico del RGPD."
         },
         {
-          "texto": "El titular de los datos.",
+          "texto": "El titular de los datos personales tratados, es decir, la persona física a la que se refieren los datos identificativos, sus características personales o cualquier otra información personal procesada en los sistemas de la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ese es el \"interesado\", no el encargado."
+          "explicacion": "Incorrecto. Ese es el \"interesado\" (titular de los datos), no el encargado del tratamiento."
         },
         {
-          "texto": "Cualquier proveedor de la empresa, aunque no toque datos.",
+          "texto": "Cualquier proveedor de la empresa con el que mantenga una relación contractual de prestación de servicios o suministro de bienes, aunque dicho proveedor no acceda en ningún momento a datos personales de los interesados durante la ejecución del contrato.",
           "correcta": false,
-          "explicacion": "Incorrecto. Solo es encargado si trata datos personales por cuenta del responsable."
+          "explicacion": "Incorrecto. Solo es encargado quien trata datos personales por cuenta del responsable; los proveedores sin acceso a datos no son encargados."
         }
       ]
     },
@@ -260,19 +260,19 @@
           "explicacion": "¡Correcto! El contrato de encargado es OBLIGATORIO y debe contener cláusulas específicas del art. 28.3 RGPD."
         },
         {
-          "texto": "Basta con un acuerdo verbal entre las partes.",
+          "texto": "Basta con un acuerdo verbal entre las partes confirmado mediante un intercambio de correos electrónicos que documente las condiciones esenciales del tratamiento delegado, sin necesidad de formalización contractual escrita conforme a la normativa civil aplicable.",
           "correcta": false,
-          "explicacion": "Incorrecto. El art. 28 exige formalización escrita."
+          "explicacion": "Incorrecto. El art. 28 RGPD exige expresamente formalización por escrito; los acuerdos verbales no cumplen con la exigencia legal."
         },
         {
-          "texto": "Únicamente una notificación a la AEPD.",
+          "texto": "Únicamente una notificación administrativa a la Agencia Española de Protección de Datos informando del inicio de la relación de tratamiento delegado, junto con la identificación completa del encargado y la descripción detallada del servicio prestado.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay que notificar a la AEPD; basta el contrato bilateral."
+          "explicacion": "Incorrecto. No hay que notificar a la AEPD; basta el contrato bilateral entre responsable y encargado."
         },
         {
-          "texto": "No hay exigencia formal alguna.",
+          "texto": "No hay exigencia formal alguna prevista en el RGPD; la relación entre responsable y encargado queda sometida exclusivamente a las normas civiles y mercantiles generales aplicables a cualquier prestación de servicios entre partes contratantes privadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. El art. 28 es muy explícito sobre las exigencias del contrato."
+          "explicacion": "Incorrecto. El art. 28 es muy explícito sobre las exigencias formales y materiales del contrato de encargado del tratamiento."
         }
       ]
     },
@@ -285,19 +285,19 @@
           "explicacion": "¡Correcto! Necesitarán un contrato de encargado del tratamiento conforme al art. 28 RGPD."
         },
         {
-          "texto": "El proveedor cloud es el responsable porque almacena físicamente los datos.",
+          "texto": "El proveedor cloud es el responsable del tratamiento porque almacena físicamente los datos personales en sus instalaciones y dispone de los medios técnicos para acceder a ellos, mantenerlos disponibles y protegerlos frente a incidentes de seguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El que decide fines y medios es el responsable, no quien almacena."
+          "explicacion": "Incorrecto. El que decide fines y medios es el responsable, no quien almacena físicamente; el cloud es solo infraestructura técnica al servicio del cliente."
         },
         {
-          "texto": "Los empleados son responsables de sus propios datos.",
+          "texto": "Los empleados de la empresa son los responsables del tratamiento de sus propios datos personales, dado que son los titulares de la información tratada y por tanto les corresponde la última palabra sobre cómo se gestiona en los sistemas corporativos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los empleados son los interesados, no los responsables."
+          "explicacion": "Incorrecto. Los empleados son los interesados (titulares de los datos), no los responsables del tratamiento que realiza la empresa."
         },
         {
-          "texto": "Ambos son responsables solidarios automáticamente.",
+          "texto": "Ambas partes son corresponsables del tratamiento automáticamente desde la firma del contrato de prestación del servicio cloud, sin que sea necesaria una declaración expresa al respecto en las cláusulas del acuerdo entre las partes.",
           "correcta": false,
-          "explicacion": "Incorrecto. Solo serían corresponsables si decidieran conjuntamente fines y medios."
+          "explicacion": "Incorrecto. Solo serían corresponsables si decidieran CONJUNTAMENTE fines y medios; en este caso el proveedor solo ejecuta instrucciones."
         }
       ]
     },
@@ -310,19 +310,19 @@
           "explicacion": "¡Correcto! El art. 28.2 y 28.4 RGPD regulan estrictamente la subcontratación."
         },
         {
-          "texto": "No, está totalmente prohibido subcontratar.",
+          "texto": "No, la subcontratación está absolutamente prohibida en cualquier circunstancia por el RGPD, dado el carácter personalísimo de la relación de tratamiento delegado y la imposibilidad de garantizar la coherencia de las medidas técnicas y organizativas aplicadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Se permite, pero con autorización y replicando obligaciones."
+          "explicacion": "Incorrecto. La subcontratación se permite, pero con autorización del responsable y replicando obligaciones contractuales."
         },
         {
-          "texto": "Sí, libremente sin necesidad de comunicárselo al responsable.",
+          "texto": "Sí, libremente y sin necesidad de comunicárselo al responsable del tratamiento, dado que el encargado tiene plena autonomía para organizar su prestación de servicios mediante los recursos propios o subcontratados que considere oportunos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Necesita autorización del responsable."
+          "explicacion": "Incorrecto. Necesita autorización previa del responsable (específica o general); no puede subcontratar libremente."
         },
         {
-          "texto": "Sí, pero solo si el subencargado está en la misma UE.",
+          "texto": "Sí, pero solo si el subencargado tiene su sede social establecida en la Unión Europea o en el Espacio Económico Europeo, dada la mayor seguridad jurídica que ofrecen estos territorios en materia de protección de datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. La ubicación importa para transferencias internacionales, pero no es la condición principal."
+          "explicacion": "Incorrecto. La ubicación del subencargado importa para transferencias internacionales, pero no es la condición principal del art. 28."
         }
       ]
     },
@@ -335,19 +335,19 @@
           "explicacion": "¡Correcto! Ejemplo: una plataforma de pago y un comercio que comparten datos de transacción y deciden juntos qué hacer."
         },
         {
-          "texto": "El responsable y su encargado actuando coordinadamente.",
+          "texto": "El responsable del tratamiento y su encargado actuando coordinadamente en la prestación del servicio contratado, dada la estrecha relación de colaboración técnica y operativa que necesariamente se establece entre ambos para garantizar la calidad del resultado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Si uno decide y el otro ejecuta, son responsable y encargado, no corresponsables."
+          "explicacion": "Incorrecto. Si uno decide y el otro ejecuta siguiendo instrucciones, son responsable y encargado, no corresponsables (que deciden conjuntamente)."
         },
         {
-          "texto": "El responsable y el DPO juntos.",
+          "texto": "El responsable del tratamiento y el Delegado de Protección de Datos (DPO) actuando juntos en la gobernanza del tratamiento, dado que ambas figuras comparten la responsabilidad última sobre el cumplimiento del RGPD en la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO supervisa, no decide fines y medios."
+          "explicacion": "Incorrecto. El DPO supervisa pero no decide fines y medios; no es corresponsable."
         },
         {
-          "texto": "Dos empresas que comparten oficinas físicamente.",
+          "texto": "Dos empresas que comparten físicamente las mismas oficinas o instalaciones corporativas, dado que el uso compartido de recursos físicos implica necesariamente compartir también la responsabilidad jurídica sobre los datos personales tratados allí.",
           "correcta": false,
-          "explicacion": "Incorrecto. Compartir espacio no implica corresponsabilidad jurídica."
+          "explicacion": "Incorrecto. Compartir espacio físico no implica corresponsabilidad jurídica; lo que define la corresponsabilidad es decidir conjuntamente fines y medios del tratamiento."
         }
       ]
     },
@@ -360,19 +360,19 @@
           "explicacion": "¡Correcto! Cuando un encargado actúa fuera de instrucciones, asume el rol de responsable y todas las obligaciones que conlleva."
         },
         {
-          "texto": "Ninguna; los encargados son libres de monetizar datos.",
+          "texto": "Ninguna consecuencia jurídica relevante; los encargados del tratamiento son libres de monetizar los datos a los que tienen acceso técnico mediante la venta a terceros, dado el principio de libertad empresarial reconocido constitucionalmente en España.",
           "correcta": false,
-          "explicacion": "Incorrecto. Salirse de las instrucciones es infracción grave."
+          "explicacion": "Incorrecto. Salirse de las instrucciones del responsable es una infracción muy grave del RGPD con consecuencias jurídicas relevantes."
         },
         {
-          "texto": "Solo responde el responsable, nunca el encargado.",
+          "texto": "Solo responde el responsable del tratamiento original, nunca el encargado, dado que la legislación europea reconoce el principio de unidad de la responsabilidad en cabeza del titular del tratamiento delegado al servicio prestado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Cuando se excede, el encargado responde como si fuera responsable."
+          "explicacion": "Incorrecto. Cuando el encargado se excede de instrucciones, responde directamente como si fuera responsable del tratamiento ilícito."
         },
         {
-          "texto": "Solo se aplica una amonestación verbal.",
+          "texto": "Solo se aplica una amonestación verbal por parte de la Agencia Española de Protección de Datos, sin posibilidad de imponer multas ni de iniciar procedimientos sancionadores formales contra el proveedor cloud que ha actuado de forma irregular.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las sanciones pueden ser cuantiosas según el RGPD."
+          "explicacion": "Incorrecto. Las sanciones del RGPD pueden ser cuantiosas (hasta 20M€ o 4% del volumen de negocio); no se limitan a amonestaciones."
         }
       ]
     },
@@ -385,19 +385,19 @@
           "explicacion": "¡Correcto! El interesado es el TITULAR de los datos; tiene los derechos (ARCO+, olvido, portabilidad, etc.)."
         },
         {
-          "texto": "Cualquier persona interesada en conocer datos ajenos.",
+          "texto": "Cualquier persona, sea física o jurídica, que muestre interés por conocer los datos personales de terceros, ya sea por motivos comerciales, periodísticos, de investigación académica o de mera curiosidad personal sobre los datos de un sujeto concreto.",
           "correcta": false,
-          "explicacion": "Incorrecto. El término jurídico se refiere al titular, no a terceros curiosos."
+          "explicacion": "Incorrecto. El término jurídico se refiere al TITULAR de los datos, no a terceros que se \"interesen\" por ellos."
         },
         {
-          "texto": "El responsable del tratamiento.",
+          "texto": "El responsable del tratamiento que decide los fines y medios del procesamiento de los datos personales, en su condición de sujeto principal de las obligaciones impuestas por el Reglamento General de Protección de Datos europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. El responsable trata datos; el interesado es a quien pertenecen."
+          "explicacion": "Incorrecto. El responsable trata datos; el interesado es a quien pertenecen los datos (sujeto pasivo titular)."
         },
         {
-          "texto": "Cualquier persona jurídica que reciba comunicaciones.",
+          "texto": "Cualquier persona jurídica (empresa, asociación, fundación) que reciba comunicaciones comerciales o de otro tipo del responsable, dada la importancia económica de las relaciones comerciales B2B en el ámbito de aplicación del RGPD.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD solo protege a personas FÍSICAS; las personas jurídicas no son interesados."
+          "explicacion": "Incorrecto. El RGPD solo protege a personas FÍSICAS; las personas jurídicas no son interesados en el sentido del Reglamento."
         }
       ]
     },
@@ -410,19 +410,19 @@
           "explicacion": "¡Correcto! El correo \"info@empresa.com\" no es dato personal; \"juan.lopez@empresa.com\" sí lo es."
         },
         {
-          "texto": "Sí, las protege igual que a personas físicas.",
+          "texto": "Sí, las protege exactamente igual que a las personas físicas, dado el principio de equiparación de derechos fundamentales reconocido constitucionalmente a todas las personas físicas y jurídicas en el ordenamiento jurídico de la Unión Europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD se limita a personas físicas."
+          "explicacion": "Incorrecto. El RGPD se limita expresamente a personas físicas en su ámbito de aplicación material."
         },
         {
-          "texto": "Sí, pero solo si la empresa lo solicita expresamente.",
+          "texto": "Sí, pero solo si la empresa lo solicita expresamente mediante un procedimiento administrativo formal ante la Agencia Española de Protección de Datos, con la inscripción de la entidad en el correspondiente registro de protección reforzada.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las personas jurídicas no entran en el ámbito del RGPD."
+          "explicacion": "Incorrecto. Las personas jurídicas no entran en el ámbito del RGPD; no hay procedimiento de \"adhesión\" voluntaria."
         },
         {
-          "texto": "Solo en algunos países de la UE.",
+          "texto": "Solo se aplica la protección del RGPD a las personas jurídicas en algunos países de la Unión Europea según las particularidades del ordenamiento jurídico nacional de cada Estado miembro y las decisiones expresas adoptadas por su legislador interno.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD es uniforme: solo personas físicas."
+          "explicacion": "Incorrecto. El RGPD es uniforme en toda la UE: solo aplica a personas físicas, sin variación entre Estados miembros."
         }
       ]
     },
@@ -435,19 +435,19 @@
           "explicacion": "¡Correcto! Sus funciones están enumeradas en el art. 39 RGPD. Es figura de supervisión y enlace."
         },
         {
-          "texto": "Aprobar todos los tratamientos antes de iniciarlos.",
+          "texto": "Aprobar formalmente todos los tratamientos de datos personales antes de iniciarlos en la organización, dado que la última decisión sobre la licitud del tratamiento corresponde a la figura especializada en protección de datos por su cualificación técnica específica.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO asesora y supervisa, pero NO decide ni aprueba; la decisión es del responsable."
+          "explicacion": "Incorrecto. El DPO asesora y supervisa pero NO decide ni aprueba; la decisión es del responsable del tratamiento."
         },
         {
-          "texto": "Ejecutar técnicamente las copias de seguridad.",
+          "texto": "Ejecutar técnicamente las copias de seguridad de los datos personales tratados por la organización, junto con la gestión de las claves criptográficas y la rotación periódica de los algoritmos de cifrado utilizados para proteger la información personal.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es función operativa de IT, no del DPO."
+          "explicacion": "Incorrecto. Eso es función operativa de IT (responsables técnicos de sistemas), no del DPO."
         },
         {
-          "texto": "Imponer sanciones a los empleados que incumplan.",
+          "texto": "Imponer sanciones internas a los empleados que incumplan las políticas de protección de datos de la organización, mediante la incoación de procedimientos disciplinarios formales y la propuesta de medidas correctoras de carácter laboral aplicables al infractor.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO no sanciona; eso correspondería a RRHH y a la AEPD."
+          "explicacion": "Incorrecto. El DPO no sanciona; eso correspondería a RRHH (sanciones laborales) y, externamente, a la AEPD (sanciones administrativas)."
         }
       ]
     },
@@ -460,19 +460,19 @@
           "explicacion": "¡Correcto! Son los tres supuestos del art. 37 RGPD. La LOPDGDD añade otros sectores específicos."
         },
         {
-          "texto": "Siempre, en cualquier empresa que trate datos personales.",
+          "texto": "Siempre, en cualquier empresa o organización que trate datos personales con independencia de su tamaño, su sector o el volumen de tratamientos realizados, dado el carácter universal de la obligación de garantizar el cumplimiento del Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es universalmente obligatorio; depende del tipo de tratamiento."
+          "explicacion": "Incorrecto. No es universalmente obligatorio; el RGPD solo lo exige en supuestos específicos del art. 37."
         },
         {
-          "texto": "Solo en empresas de más de 1.000 empleados.",
+          "texto": "Solo en empresas con más de 1.000 empleados a tiempo completo, considerándose que las organizaciones de menor tamaño no generan riesgos suficientes para los interesados como para justificar la obligación de designar una figura especializada en protección de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD no fija un umbral por número de empleados."
+          "explicacion": "Incorrecto. El RGPD no fija un umbral por número de empleados para la obligación de designar DPO."
         },
         {
-          "texto": "Solo si lo solicita expresamente la AEPD.",
+          "texto": "Solo si lo solicita expresamente la Agencia Española de Protección de Datos mediante un requerimiento administrativo formal dirigido al responsable del tratamiento, tras la valoración del nivel de riesgo de los tratamientos realizados por la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. La obligación nace directamente del cumplimiento de los criterios del art. 37."
+          "explicacion": "Incorrecto. La obligación nace directamente del cumplimiento de los criterios del art. 37, no de un requerimiento previo de la AEPD."
         }
       ]
     },
@@ -485,19 +485,19 @@
           "explicacion": "¡Correcto! Lo que importa son las garantías de independencia y competencia, no la relación laboral."
         },
         {
-          "texto": "Sí, obligatoriamente debe ser empleado interno.",
+          "texto": "Sí, obligatoriamente debe ser un empleado interno de la organización con contrato laboral indefinido, dado que la dedicación a tiempo completo y la integración en la estructura organizativa son requisitos imprescindibles para garantizar la efectividad de su función.",
           "correcta": false,
-          "explicacion": "Incorrecto. Puede ser externo."
+          "explicacion": "Incorrecto. Puede ser externo (subcontratado); el RGPD admite explícitamente ambas modalidades."
         },
         {
-          "texto": "Sí, y debe ser siempre el CEO de la empresa.",
+          "texto": "Sí, y debe ser siempre el Director General o CEO de la organización, dado que la máxima responsabilidad en materia de protección de datos no puede recaer sobre figuras de inferior rango jerárquico que carecerían de autoridad suficiente para supervisar.",
           "correcta": false,
-          "explicacion": "Incorrecto. El CEO suele tener conflicto de intereses; no es lo adecuado."
+          "explicacion": "Incorrecto. El CEO suele tener conflicto de intereses (decide tratamientos); no es lo adecuado como DPO."
         },
         {
-          "texto": "No, debe ser obligatoriamente externo para garantizar independencia.",
+          "texto": "No, debe ser obligatoriamente externo y completamente ajeno a la organización para garantizar plena independencia funcional, sin que el RGPD admita en ningún caso la designación de un DPO interno como figura compatible con su estructura organizativa.",
           "correcta": false,
-          "explicacion": "Incorrecto. Puede ser interno si se garantiza su independencia."
+          "explicacion": "Incorrecto. Puede ser interno si se garantiza su independencia; el RGPD no exige que sea externo."
         }
       ]
     },
@@ -510,19 +510,19 @@
           "explicacion": "¡Correcto! Su independencia es esencial: si pudiera ser despedido por discrepar, su función carecería de valor."
         },
         {
-          "texto": "Debe firmar un contrato indefinido obligatoriamente.",
+          "texto": "Debe firmar un contrato laboral indefinido con la organización en el momento de su designación, dado que la estabilidad en el puesto de trabajo es el único mecanismo eficaz para garantizar el ejercicio independiente y profesional de sus funciones.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD no exige tipo de contrato concreto."
+          "explicacion": "Incorrecto. El RGPD no exige tipo de contrato concreto; lo que exige son garantías funcionales de independencia."
         },
         {
-          "texto": "Debe cobrar un salario igual al del CEO.",
+          "texto": "Debe cobrar un salario igual o superior al del Director General o CEO de la organización, dado que el reconocimiento económico equivalente al máximo nivel directivo es la única forma de garantizar la autoridad jerárquica necesaria para supervisar.",
           "correcta": false,
-          "explicacion": "Incorrecto. El nivel salarial no es exigencia del RGPD."
+          "explicacion": "Incorrecto. El nivel salarial no es exigencia del RGPD; la independencia se garantiza por otras vías funcionales."
         },
         {
-          "texto": "Debe ser auditado anualmente por la AEPD.",
+          "texto": "Debe ser auditado anualmente por la Agencia Española de Protección de Datos para verificar que está ejerciendo correctamente sus funciones, con publicación de los resultados en el Registro Público de Delegados de Protección de Datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. La AEPD no audita rutinariamente a los DPOs."
+          "explicacion": "Incorrecto. La AEPD no audita rutinariamente a los DPOs; tampoco existe ese registro público de auditorías."
         }
       ]
     },
@@ -535,19 +535,19 @@
           "explicacion": "¡Correcto! La AEPD ha sancionado nombramientos donde el DPO también era responsable operativo."
         },
         {
-          "texto": "Sí, siempre que el contrato lo permita.",
+          "texto": "Sí, siempre que el contrato laboral del trabajador permita expresamente la compatibilidad entre ambas funciones mediante una cláusula específica que recoja las salvaguardas necesarias para evitar conflictos de intereses entre los distintos cargos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El conflicto de intereses es inherente, no salvable por contrato."
+          "explicacion": "Incorrecto. El conflicto de intereses es estructural e inherente al cargo; no se salva por una cláusula contractual."
         },
         {
-          "texto": "Sí, es lo ideal para que conozca bien la organización.",
+          "texto": "Sí, y de hecho es lo ideal para que conozca bien la organización en profundidad y pueda integrar adecuadamente las exigencias de protección de datos en el funcionamiento operativo cotidiano de la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. Conocer la organización está bien, pero no debe decidir lo que después supervisa."
+          "explicacion": "Incorrecto. Conocer la organización está bien, pero el DPO no debe DECIDIR los tratamientos que luego ha de supervisar."
         },
         {
-          "texto": "Solo si lo autoriza la AEPD por escrito.",
+          "texto": "Solo si lo autoriza expresamente la Agencia Española de Protección de Datos por escrito tras valorar las particularidades del caso concreto y las salvaguardas implementadas por la organización para evitar conflictos efectivos entre las funciones acumuladas.",
           "correcta": false,
-          "explicacion": "Incorrecto. La AEPD no concede autorizaciones de este tipo."
+          "explicacion": "Incorrecto. La AEPD no concede autorizaciones individuales de este tipo; el conflicto de intereses se valora objetivamente."
         }
       ]
     },
@@ -560,19 +560,19 @@
           "explicacion": "¡Correcto! Cada Estado miembro debe tener al menos una autoridad de control independiente."
         },
         {
-          "texto": "Tratar los datos personales en nombre de los ciudadanos.",
+          "texto": "Tratar los datos personales en nombre de los ciudadanos cuando estos lo soliciten formalmente mediante un procedimiento administrativo, en aras de garantizar la prestación pública de servicios de tratamiento de datos a los interesados afectados.",
           "correcta": false,
-          "explicacion": "Incorrecto. La autoridad supervisa, no trata datos en lugar de los ciudadanos."
+          "explicacion": "Incorrecto. La autoridad supervisa y vigila; no trata datos personales en lugar de los ciudadanos."
         },
         {
-          "texto": "Aprobar previamente todos los tratamientos del país.",
+          "texto": "Aprobar previamente todos los tratamientos de datos personales que se realicen en el ámbito territorial de su competencia mediante un procedimiento administrativo formal con publicación en el boletín oficial correspondiente.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay aprobación previa generalizada; el RGPD eliminó la notificación previa."
+          "explicacion": "Incorrecto. No hay aprobación previa generalizada; el RGPD eliminó la notificación previa, sustituida por la accountability del responsable."
         },
         {
-          "texto": "Custodiar los datos sensibles de toda la población.",
+          "texto": "Custodiar centralizadamente los datos sensibles de toda la población española mediante un sistema informático único y seguro, en aras de garantizar la máxima protección de la información personal en un único punto controlado por la autoridad pública.",
           "correcta": false,
-          "explicacion": "Incorrecto. La autoridad no almacena datos de los ciudadanos."
+          "explicacion": "Incorrecto. La autoridad de control no almacena ni custodia datos personales de los ciudadanos; es órgano supervisor."
         }
       ]
     },
@@ -585,19 +585,19 @@
           "explicacion": "¡Correcto! Sustituyó al Grupo del Artículo 29 con el RGPD; emite directrices interpretativas vinculantes."
         },
         {
-          "texto": "El brazo ejecutivo de la Comisión Europea para sancionar a empresas.",
+          "texto": "El brazo ejecutivo de la Comisión Europea con competencia directa para sancionar a empresas privadas que incumplan el Reglamento General de Protección de Datos, mediante la imposición de multas administrativas en cualquier Estado miembro de la Unión.",
           "correcta": false,
-          "explicacion": "Incorrecto. No sanciona; coordina y emite directrices. Las sanciones las imponen las autoridades nacionales."
+          "explicacion": "Incorrecto. El EDPB no sanciona directamente; coordina y emite directrices interpretativas. Las sanciones las imponen las autoridades nacionales."
         },
         {
-          "texto": "Un comité formado por DPOs de grandes empresas.",
+          "texto": "Un comité de naturaleza privada formado por los Delegados de Protección de Datos (DPOs) de las grandes empresas tecnológicas europeas, encargado de proponer interpretaciones consensuadas del RGPD aplicables al sector privado de la Unión.",
           "correcta": false,
-          "explicacion": "Incorrecto. Está compuesto por autoridades de control, no por DPOs corporativos."
+          "explicacion": "Incorrecto. El EDPB está compuesto por autoridades de control públicas (AEPD y equivalentes), no por DPOs corporativos del sector privado."
         },
         {
-          "texto": "Solo aplica fuera de la UE.",
+          "texto": "Un organismo europeo cuyas competencias y decisiones solo aplican fuera del territorio de la Unión Europea, dada su función específica como interlocutor con autoridades de terceros países en materia de transferencias internacionales de datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es precisamente el órgano europeo dentro de la UE."
+          "explicacion": "Incorrecto. Es precisamente el órgano europeo cuya función principal es coordinar la aplicación interna del RGPD en la Unión Europea."
         }
       ]
     },
@@ -610,19 +610,19 @@
           "explicacion": "¡Correcto! Es la estructura típica: cliente = responsable, proveedor de servicios que toca datos = encargado. Contrato art. 28 obligatorio."
         },
         {
-          "texto": "Ambos son corresponsables porque comparten datos.",
+          "texto": "Ambas entidades son corresponsables del tratamiento desde el momento en que comparten los datos personales de los socios deportivos, dado que el simple acceso a la información implica necesariamente compartir la responsabilidad jurídica.",
           "correcta": false,
-          "explicacion": "Incorrecto. Compartir no equivale a corresponsabilidad; lo importante es quién decide fines/medios."
+          "explicacion": "Incorrecto. Compartir datos no equivale a corresponsabilidad; lo determinante es quién decide fines y medios del tratamiento (la asociación)."
         },
         {
-          "texto": "La asociación es encargada y la empresa de marketing responsable.",
+          "texto": "La asociación deportiva actúa como encargada del tratamiento y la empresa de email marketing como responsable, dada la mayor especialización técnica de esta última en el procesamiento masivo de comunicaciones comerciales con datos personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. La asociación es quien decide; ese es el responsable."
+          "explicacion": "Incorrecto. La asociación es quien DECIDE a quién enviar y qué (titular de los datos y de la decisión); ese es el responsable, no encargado."
         },
         {
-          "texto": "La empresa de marketing es interesada.",
+          "texto": "La empresa de email marketing es interesada en el sentido del RGPD, dado que recibe los datos personales de los socios para tratarlos en sus sistemas, lo que la convierte en titular de los datos durante el periodo de prestación del servicio contratado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los interesados son los socios, no la empresa."
+          "explicacion": "Incorrecto. Los interesados son los socios titulares de los datos; la empresa de email marketing es encargada, no interesada."
         }
       ]
     },
@@ -635,19 +635,19 @@
           "explicacion": "¡Correcto! La corresponsabilidad exige acuerdo formal y transparencia hacia los interesados."
         },
         {
-          "texto": "Ambas son encargadas del tratamiento.",
+          "texto": "Ambas empresas son encargadas del tratamiento de los datos de los usuarios de la aplicación, dada la naturaleza colaborativa de su relación contractual y la necesidad de garantizar la coordinación operativa entre ambos proveedores del servicio digital.",
           "correcta": false,
-          "explicacion": "Incorrecto. Si deciden conjuntamente fines y medios, son corresponsables, no encargadas."
+          "explicacion": "Incorrecto. Si deciden CONJUNTAMENTE fines y medios, son corresponsables (codeciden), no encargadas (que solo ejecutan instrucciones de un tercero)."
         },
         {
-          "texto": "Solo la empresa española responde ante la AEPD.",
+          "texto": "Solo la empresa española responde ante la Agencia Española de Protección de Datos por aplicación del principio de territorialidad estricto en la normativa española, quedando la empresa alemana sujeta exclusivamente a la autoridad alemana de control.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ambas son responsables; cada una puede ser exigible."
+          "explicacion": "Incorrecto. Ambas son corresponsables; cada una puede ser exigible jurídicamente y la cooperación entre autoridades es la regla en el RGPD."
         },
         {
-          "texto": "Solo aplica si la app se publica en Google Play.",
+          "texto": "La corresponsabilidad solo aplicaría si la app se publica en las plataformas oficiales Google Play o Apple Store, dado que la distribución por canales formales activa las obligaciones de transparencia conjunta hacia los usuarios finales.",
           "correcta": false,
-          "explicacion": "Incorrecto. La plataforma de distribución no determina la corresponsabilidad."
+          "explicacion": "Incorrecto. La plataforma de distribución no determina la corresponsabilidad; lo determinante es decidir conjuntamente fines y medios."
         }
       ]
     },
@@ -660,19 +660,19 @@
           "explicacion": "¡Correcto! El EDPB es claro: cada tratamiento debe usar la base jurídica MÁS adecuada; el consentimiento no se debe usar como \"comodín\"."
         },
         {
-          "texto": "Es correcto, el consentimiento siempre vale.",
+          "texto": "Es correcto en todos los casos, dado que el consentimiento del interesado siempre vale como base jurídica suficiente para legitimar cualquier tipo de tratamiento de datos personales realizado por el responsable en el ejercicio de su actividad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El consentimiento no es \"siempre vale\"; debe ser la base apropiada."
+          "explicacion": "Incorrecto. El consentimiento no es \"siempre vale\"; debe ser la base más apropiada según el contexto del tratamiento."
         },
         {
-          "texto": "Solo es válido si el interesado lo da por escrito ante notario.",
+          "texto": "Solo es válido si el interesado lo otorga por escrito en presencia notarial mediante una escritura pública específica, con la posterior inscripción del consentimiento en el Registro General de Protección de Datos de la Agencia Española.",
           "correcta": false,
-          "explicacion": "Incorrecto. La intervención notarial no se exige y no resuelve el problema de base inadecuada."
+          "explicacion": "Incorrecto. La intervención notarial no se exige y no resuelve el problema de fondo: la base jurídica inadecuada elegida."
         },
         {
-          "texto": "Es indiferente qué base se use mientras el interesado consienta.",
+          "texto": "Es indiferente qué base jurídica se elija mientras el interesado consienta el tratamiento, dado que el consentimiento del titular de los datos prevalece sobre cualquier otra consideración técnica o jurídica del responsable del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. La elección correcta de base jurídica es una obligación del responsable (accountability)."
+          "explicacion": "Incorrecto. La elección correcta de la base jurídica es una obligación del responsable (accountability); no es indiferente."
         }
       ]
     },
@@ -685,19 +685,19 @@
           "explicacion": "¡Correcto! Todo consentimiento RGPD debe ser inequívoco; el explícito añade un escalón superior de claridad."
         },
         {
-          "texto": "No hay diferencia; son sinónimos.",
+          "texto": "No existe diferencia jurídica entre ambos términos; son sinónimos absolutamente intercambiables que se utilizan indistintamente en el texto del Reglamento General de Protección de Datos según consideraciones de estilo redactor del legislador europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. El explícito tiene exigencias adicionales."
+          "explicacion": "Incorrecto. El explícito tiene exigencias adicionales y se reserva para tratamientos de mayor riesgo (categorías especiales, etc.)."
         },
         {
-          "texto": "El explícito solo aplica a menores de edad.",
+          "texto": "El consentimiento explícito solo aplica a los menores de edad que pretendan otorgar consentimiento al tratamiento de sus datos personales, mientras que el consentimiento ordinario es aplicable a cualquier interesado mayor de 14 años conforme a la LOPDGDD.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplica a categorías especiales, transferencias sin garantías y decisiones automatizadas, no solo a menores."
+          "explicacion": "Incorrecto. El consentimiento explícito aplica a categorías especiales, transferencias internacionales y decisiones automatizadas, no solo a menores."
         },
         {
-          "texto": "El explícito permite casillas premarcadas si están bien explicadas.",
+          "texto": "El consentimiento explícito permite el uso de casillas previamente marcadas en formularios online siempre que estén claramente identificadas y explicadas, dado que la transparencia compensa la pasividad inicial del usuario en el momento de aceptar.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las casillas premarcadas nunca constituyen consentimiento válido."
+          "explicacion": "Incorrecto. Las casillas premarcadas NUNCA constituyen consentimiento válido, ni ordinario ni explícito; deben ser acción afirmativa del interesado."
         }
       ]
     },
@@ -710,19 +710,19 @@
           "explicacion": "¡Correcto! El RGPD no \"persigue\" al empleado: la empresa responde frente a la AEPD."
         },
         {
-          "texto": "El empleado es encargado del tratamiento personal.",
+          "texto": "El empleado es encargado del tratamiento personal según el artículo 28 del RGPD, dada su intervención individual en el tratamiento de los datos personales perdidos, lo que le convierte en sujeto autónomo de las obligaciones de protección de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El encargado es una organización externa; los empleados forman parte del responsable."
+          "explicacion": "Incorrecto. El encargado del tratamiento es una organización externa que actúa por cuenta del responsable; los empleados forman parte del responsable, no son encargados."
         },
         {
-          "texto": "El empleado responde personalmente ante la AEPD con multas individuales.",
+          "texto": "El empleado responde personalmente ante la Agencia Española de Protección de Datos con multas administrativas individuales que pueden ascender al máximo previsto en el RGPD, dada la responsabilidad personal directa por la negligencia cometida en el extravío.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las multas RGPD las recibe la organización, no el empleado."
+          "explicacion": "Incorrecto. Las multas administrativas del RGPD las recibe la organización, no el empleado a título individual."
         },
         {
-          "texto": "El empleado pasa a ser interesado por la pérdida.",
+          "texto": "El empleado pasa a ser interesado por la pérdida material del soporte donde estaban los datos personales, dada la afectación directa que el incidente tiene sobre su responsabilidad laboral y sobre sus derechos como persona física implicada en el proceso.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los interesados son los titulares de los datos, no el empleado que los perdió."
+          "explicacion": "Incorrecto. Los interesados son los titulares de los datos personales perdidos (clientes), no el empleado que los perdió."
         }
       ]
     },
@@ -735,19 +735,19 @@
           "explicacion": "¡Correcto! La devolución/supresión y su acreditación cierra el ciclo de la relación contractual de tratamiento."
         },
         {
-          "texto": "Solo enviar una factura final.",
+          "texto": "Solo es necesario enviar al responsable una factura final que documente la prestación del servicio realizado, sin que existan obligaciones adicionales en materia de protección de datos personales al finalizar la relación contractual.",
           "correcta": false,
-          "explicacion": "Incorrecto. La factura es comercial; el RGPD exige devolución/supresión de datos."
+          "explicacion": "Incorrecto. La factura es documentación comercial; el RGPD exige específicamente devolución/supresión de los datos personales tratados."
         },
         {
-          "texto": "Conservar los datos como prueba para futuros litigios indefinidamente.",
+          "texto": "Conservar todos los datos personales tratados durante un plazo de 10 años como mínimo a efectos probatorios para posibles litigios futuros con el responsable o con otros terceros que pudieran reclamar responsabilidades derivadas del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Salvo obligación legal, los datos deben suprimirse o devolverse."
+          "explicacion": "Incorrecto. Salvo obligación legal específica de conservación, los datos deben suprimirse o devolverse al final del servicio."
         },
         {
-          "texto": "Publicar los datos para mayor transparencia.",
+          "texto": "Publicar los datos en abierto para garantizar la máxima transparencia con los interesados afectados, dado el principio de transparencia que rige todo tratamiento conforme al artículo 5 del Reglamento General de Protección de Datos europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Publicar datos personales es violación grave del RGPD."
+          "explicacion": "Incorrecto. Publicar datos personales es una violación gravísima del RGPD; el principio de transparencia no implica publicación masiva."
         }
       ]
     },
@@ -760,19 +760,19 @@
           "explicacion": "¡Correcto! El encargado avisa al responsable; el responsable es quien comunica externamente. Los contratos del art. 28 lo regulan."
         },
         {
-          "texto": "Debe notificar directamente a la AEPD sin avisar al responsable.",
+          "texto": "Debe notificar directamente a la Agencia Española de Protección de Datos sin necesidad de comunicarlo previamente al responsable del tratamiento, dada la urgencia inherente a cualquier brecha de seguridad y la independencia de las obligaciones del encargado frente a la autoridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El encargado no notifica a la AEPD; lo hace el responsable."
+          "explicacion": "Incorrecto. El encargado NO notifica directamente a la AEPD; debe avisar al responsable, que es quien decide la notificación externa."
         },
         {
-          "texto": "Debe ocultar el incidente al responsable para no preocuparle.",
+          "texto": "Debe ocultar el incidente al responsable del tratamiento para no preocuparle innecesariamente y resolver internamente la situación mediante sus propios recursos técnicos, dada la conveniencia de evitar alarmas que puedan afectar a la relación contractual.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ocultar una brecha es infracción grave."
+          "explicacion": "Incorrecto. Ocultar una brecha al responsable es una infracción gravísima del RGPD y de las obligaciones contractuales."
         },
         {
-          "texto": "Ninguna; las brechas son responsabilidad exclusiva del responsable.",
+          "texto": "Ninguna obligación adicional surge para el encargado del tratamiento, dado que las brechas de seguridad son responsabilidad exclusiva del responsable del tratamiento como titular jurídico de los datos personales afectados por el incidente sufrido.",
           "correcta": false,
-          "explicacion": "Incorrecto. El encargado tiene obligación expresa de avisar al responsable."
+          "explicacion": "Incorrecto. El encargado tiene obligación expresa del art. 33.2 RGPD de avisar al responsable sin dilación indebida."
         }
       ]
     },
@@ -785,19 +785,19 @@
           "explicacion": "¡Correcto! Son figuras jurídicas independientes con normativas distintas; un mismo formulario puede cubrir ambos si está bien diseñado."
         },
         {
-          "texto": "Son exactamente lo mismo.",
+          "texto": "Son exactamente la misma figura jurídica con denominaciones distintas según el ámbito normativo aplicable (RGPD o legislación sanitaria nacional), sin que existan diferencias sustanciales entre ambos conceptos al tratarse de un mismo consentimiento del interesado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Provienen de normativas distintas y tienen objetos distintos."
+          "explicacion": "Incorrecto. Provienen de normativas distintas (RGPD vs Ley 41/2002) y tienen objetos jurídicos diferenciados."
         },
         {
-          "texto": "Solo el sanitario es válido jurídicamente.",
+          "texto": "Solo el consentimiento informado de la legislación sanitaria es jurídicamente válido en el ámbito de la atención sanitaria, dado que el consentimiento ordinario del Reglamento General de Protección de Datos queda desplazado por la normativa sectorial específica.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ambos son válidos en sus respectivos ámbitos."
+          "explicacion": "Incorrecto. Ambos consentimientos son válidos y se aplican simultáneamente en sus respectivos ámbitos (datos vs actos sanitarios)."
         },
         {
-          "texto": "Solo el del RGPD aplica en hospitales.",
+          "texto": "Solo el consentimiento del RGPD es exigible en hospitales y centros sanitarios públicos o privados, sin que sea necesario obtener adicionalmente el consentimiento informado del paciente regulado por la Ley de Autonomía del Paciente del año 2002.",
           "correcta": false,
-          "explicacion": "Incorrecto. En hospitales aplican ambos, cada uno en su ámbito."
+          "explicacion": "Incorrecto. En hospitales aplican ambos consentimientos simultáneamente: el del RGPD (para los datos) y el de la Ley 41/2002 (para los actos sanitarios)."
         }
       ]
     },
@@ -810,19 +810,19 @@
           "explicacion": "¡Correcto! No es DPO; es nexo legal entre la organización extranjera y la UE. No exime de responsabilidad."
         },
         {
-          "texto": "Un abogado europeo contratado por la empresa.",
+          "texto": "Un abogado europeo contratado por la empresa extranjera para representar sus intereses ante los tribunales nacionales en caso de litigios derivados del tratamiento de datos personales realizados por la organización fuera del territorio de la Unión Europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. Puede ser un abogado, pero el papel es jurídico-específico del art. 27."
+          "explicacion": "Incorrecto. Aunque un abogado pueda ejercer el rol, el papel del representante UE es jurídico-específico del art. 27 (punto de contacto), no general."
         },
         {
-          "texto": "El DPO obligatorio para empresas extranjeras.",
+          "texto": "El Delegado de Protección de Datos (DPO) obligatorio para empresas extranjeras que tratan datos personales de residentes en la Unión Europea, dado que la designación de esta figura es el mecanismo previsto para garantizar el cumplimiento del Reglamento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son figuras distintas: representante UE ≠ DPO."
+          "explicacion": "Incorrecto. Son figuras totalmente distintas del RGPD: representante UE (art. 27) ≠ DPO (art. 37). Una organización puede necesitar ambos."
         },
         {
-          "texto": "El embajador del país de origen de la empresa.",
+          "texto": "El embajador del país de origen de la empresa extranjera ante las instituciones de la Unión Europea, que asume las funciones de representación diplomática y por extensión las relativas a la protección de los datos personales tratados por sus compatriotas.",
           "correcta": false,
-          "explicacion": "Incorrecto. No tiene nada que ver con diplomacia."
+          "explicacion": "Incorrecto. No tiene nada que ver con representación diplomática; el representante del art. 27 es una figura jurídico-comercial específica del RGPD."
         }
       ]
     },
@@ -835,19 +835,19 @@
           "explicacion": "¡Correcto! La externalización + país sin adecuación combina dos obligaciones que deben cumplirse simultáneamente."
         },
         {
-          "texto": "Únicamente el contrato de encargado; no hay transferencia internacional.",
+          "texto": "Únicamente el contrato de encargado del tratamiento; no concurre transferencia internacional porque Marruecos comparte frontera con la Unión Europea y por proximidad geográfica se considera asimilado al ámbito territorial europeo en materia de protección de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Sí hay transferencia internacional; Marruecos está fuera del EEE."
+          "explicacion": "Incorrecto. Sí hay transferencia internacional; Marruecos está fuera del EEE y requiere las garantías del Capítulo V del RGPD."
         },
         {
-          "texto": "Solo importa el idioma del contrato.",
+          "texto": "Solo importa que el contrato esté redactado en el idioma oficial del país del proveedor (árabe o francés), dado que la lengua del contrato determina la jurisdicción aplicable y por extensión la normativa de protección de datos exigible al encargado.",
           "correcta": false,
-          "explicacion": "Incorrecto. El idioma es irrelevante para las obligaciones RGPD."
+          "explicacion": "Incorrecto. El idioma es irrelevante para las obligaciones del RGPD; lo importante es el contrato art. 28 y las garantías de transferencia internacional."
         },
         {
-          "texto": "Nada especial; basta con que el call center firme un NDA.",
+          "texto": "Nada especial es exigible jurídicamente; basta con que el call center marroquí firme un acuerdo genérico de confidencialidad (NDA) sobre la información tratada para garantizar el cumplimiento de las obligaciones derivadas de la legislación europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. El NDA es insuficiente; hace falta contrato art. 28 + garantías de transferencia."
+          "explicacion": "Incorrecto. El NDA es insuficiente; hace falta contrato del art. 28 RGPD más garantías de transferencia internacional del Capítulo V."
         }
       ]
     },
@@ -860,19 +860,19 @@
           "explicacion": "¡Correcto! El EDPB recomienda elegir la base más adecuada y documentarla; no usar el consentimiento como comodín si hay otra base aplicable."
         },
         {
-          "texto": "Siempre se usa el consentimiento por seguridad.",
+          "texto": "Siempre se debe usar el consentimiento expreso del interesado por seguridad jurídica, dado que es la única base que garantiza la voluntad efectiva del titular de los datos y por tanto la mayor solidez jurídica del tratamiento en caso de futuro litigio.",
           "correcta": false,
-          "explicacion": "Incorrecto. Si el tratamiento es obligatorio por ley, pedir consentimiento es contraproducente."
+          "explicacion": "Incorrecto. Si el tratamiento es obligatorio por ley o necesario para un contrato, pedir consentimiento es contraproducente e inadecuado."
         },
         {
-          "texto": "Se pueden usar todas a la vez para máxima protección.",
+          "texto": "Se pueden usar todas las bases jurídicas aplicables simultáneamente para conseguir la máxima protección jurídica del tratamiento frente a posibles cuestionamientos posteriores del interesado o de la autoridad de control competente en el procedimiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Cada tratamiento se basa en una sola base; usar varias confunde y debilita la posición."
+          "explicacion": "Incorrecto. Cada tratamiento debe basarse en UNA sola base jurídica documentada; acumular varias confunde y debilita la posición."
         },
         {
-          "texto": "Se cambia de base cada año por rotación.",
+          "texto": "Se debe cambiar de base jurídica cada año natural por rotación obligatoria, dado el carácter dinámico de las relaciones de tratamiento de datos personales y la conveniencia de revisar periódicamente la legitimación elegida por el responsable.",
           "correcta": false,
-          "explicacion": "Incorrecto. La base se elige al inicio y se mantiene mientras el contexto no cambie."
+          "explicacion": "Incorrecto. La base jurídica se elige al inicio y se mantiene mientras el contexto no cambie sustancialmente; no se rota anualmente."
         }
       ]
     }

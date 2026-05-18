@@ -10,19 +10,19 @@
           "explicacion": "¡Correcto! El ENS asegura un nivel mínimo común de seguridad en toda la administración electrónica española."
         },
         {
-          "texto": "El régimen sancionador de las brechas de datos personales.",
+          "texto": "El régimen sancionador de las brechas de datos personales, fijando las multas máximas (20 millones de euros o 4% del volumen de negocio) y los procedimientos de notificación a la autoridad de control.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es competencia del RGPD/LOPDGDD y la AEPD."
+          "explicacion": "Incorrecto. Eso es competencia del RGPD/LOPDGDD y de la AEPD, no del ENS, que regula la seguridad en la administración electrónica."
         },
         {
-          "texto": "La protección de infraestructuras críticas exclusivamente.",
+          "texto": "La protección de las infraestructuras críticas españolas (energía, transporte, banca, agua, salud) mediante planes específicos de seguridad y la coordinación con las Fuerzas y Cuerpos de Seguridad del Estado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es la Ley PIC, distinta del ENS."
+          "explicacion": "Incorrecto. Eso es la Ley PIC y su reglamento de desarrollo (RD 704/2011), una normativa distinta del ENS aunque complementaria."
         },
         {
-          "texto": "Las relaciones laborales en la administración pública.",
+          "texto": "Las relaciones laborales en la administración pública, incluyendo los derechos de los empleados públicos, el control horario y la protección de la intimidad de los funcionarios en el lugar de trabajo.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS no es normativa laboral."
+          "explicacion": "Incorrecto. El ENS no es normativa laboral; las relaciones laborales en la AAPP se regulan por el EBEP y normas conexas."
         }
       ]
     },
@@ -35,19 +35,19 @@
           "explicacion": "¡Correcto! Aplica a TODA la AAPP, no solo al Estado central; también suele exigirse a proveedores tecnológicos que prestan servicios a la AAPP."
         },
         {
-          "texto": "Únicamente al Estado central; las CCAA quedan fuera.",
+          "texto": "Únicamente al Estado central y sus organismos autónomos; las Comunidades Autónomas y las Entidades Locales quedan fuera del ámbito y aplican sus propias normativas autonómicas en la materia.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las CCAA y la Administración Local también están dentro."
+          "explicacion": "Incorrecto. El ENS abarca expresamente a CCAA y Entidades Locales, no solo al Estado central."
         },
         {
-          "texto": "Solo a las empresas del IBEX-35.",
+          "texto": "Solo a las empresas del IBEX-35 y a aquellas que cotizan en mercados regulados, dada la criticidad económica de su actividad para el conjunto del sistema financiero español.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS es para AAPP, no para empresas privadas (aunque pueden adoptarlo voluntariamente)."
+          "explicacion": "Incorrecto. El ENS es para AAPP, no para empresas privadas (aunque éstas pueden adoptarlo voluntariamente como marco de referencia)."
         },
         {
-          "texto": "Únicamente al sector financiero y sanitario.",
+          "texto": "Únicamente al sector financiero y sanitario por considerarse sectores con datos de especial sensibilidad y necesidad reforzada de garantías de confidencialidad e integridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ámbito es la AAPP en general."
+          "explicacion": "Incorrecto. El ámbito del ENS es la AAPP en general; los sectores financiero y sanitario tienen normativas sectoriales propias (DORA, Ley 41/2002)."
         }
       ]
     },
@@ -60,19 +60,19 @@
           "explicacion": "¡Correcto! La revisión de 2022 modernizó el ENS adaptándolo al estado actual de las amenazas y a otros marcos (NIS2, RGPD)."
         },
         {
-          "texto": "Únicamente el RD 3/2010, sin modificaciones posteriores.",
+          "texto": "Únicamente el Real Decreto 3/2010 original, que sigue plenamente vigente sin modificaciones posteriores ni revisiones derivadas de la evolución del panorama de amenazas digitales.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RD 3/2010 fue sustituido por el RD 311/2022."
+          "explicacion": "Incorrecto. El RD 3/2010 fue sustituido por el RD 311/2022, que actualizó toda la normativa."
         },
         {
-          "texto": "Una directiva europea de aplicación directa.",
+          "texto": "Una directiva europea de aplicación directa en todos los Estados miembros, complementaria al RGPD y centrada en la seguridad de los sistemas de información de las administraciones públicas nacionales.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS es normativa nacional española, no comunitaria."
+          "explicacion": "Incorrecto. El ENS es normativa nacional española, no comunitaria; el equivalente europeo más cercano sería NIS2."
         },
         {
-          "texto": "Un reglamento europeo equivalente al RGPD.",
+          "texto": "Un reglamento europeo equivalente al RGPD que armoniza la seguridad informática en las administraciones públicas de todos los países de la Unión Europea, sin necesidad de transposición nacional.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS es normativa española; sus equivalentes europeos serían NIS2 o el Cybersecurity Act."
+          "explicacion": "Incorrecto. El ENS es exclusivamente español; no existe un reglamento europeo equivalente."
         }
       ]
     },
@@ -85,19 +85,19 @@
           "explicacion": "¡Correcto! Los objetivos están enunciados en el preámbulo y articulado del RD 311/2022."
         },
         {
-          "texto": "Únicamente cifrar las comunicaciones del Estado.",
+          "texto": "Cifrar todas las comunicaciones del Estado con algoritmos certificados, garantizar la firma electrónica avanzada y cualificada en todos los procedimientos administrativos y desplegar TPM en cada equipo público.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cifrado es una medida, no el objetivo del ENS."
+          "explicacion": "Incorrecto. Esos son medios técnicos concretos que pueden ser medidas, no los objetivos generales del ENS."
         },
         {
-          "texto": "Solo certificar a las empresas privadas que trabajan con la AAPP.",
+          "texto": "Certificar a las empresas privadas que trabajan con la AAPP, imponer multas a quienes incumplan los plazos de notificación y crear un registro público de incidentes con datos de las víctimas afectadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. La certificación es una consecuencia operativa, no el objetivo."
+          "explicacion": "Incorrecto. La certificación es una consecuencia operativa y el ENS no es un régimen sancionador; no son los objetivos del ENS."
         },
         {
-          "texto": "Imponer multas a entidades públicas que no cumplan.",
+          "texto": "Imponer multas a entidades públicas que no cumplan los requisitos mínimos, crear un registro público de infractores y autorizar al CCN a tomar control directo de los sistemas comprometidos sin autorización.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS no es marco sancionador; busca garantizar la seguridad."
+          "explicacion": "Incorrecto. El ENS no es marco sancionador; busca garantizar la seguridad mediante un sistema de gestión."
         }
       ]
     },
@@ -110,19 +110,19 @@
           "explicacion": "¡Correcto! Son los principios estructurales que orientan toda la aplicación del ENS."
         },
         {
-          "texto": "Cinco principios técnicos sobre cifrado y autenticación.",
+          "texto": "Cinco principios técnicos centrados en cifrado, autenticación robusta, segmentación de red, monitorización continua y respuesta automatizada a incidentes mediante orquestación SOAR.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cifrado y la autenticación son medidas, no principios del ENS."
+          "explicacion": "Incorrecto. El cifrado y la autenticación son medidas técnicas, no principios estructurales del ENS."
         },
         {
-          "texto": "Tres principios: confidencialidad, integridad y disponibilidad.",
+          "texto": "Tres principios fundamentales que coinciden con la tríada clásica de seguridad de la información: confidencialidad, integridad y disponibilidad (CIA), aplicables a todos los activos.",
           "correcta": false,
-          "explicacion": "Incorrecto. CIA son dimensiones de seguridad, no principios del ENS."
+          "explicacion": "Incorrecto. CIA son dimensiones de seguridad, no principios del ENS; además son 5 dimensiones (CIDTA), no 3."
         },
         {
-          "texto": "Diez principios alineados con el OWASP Top 10.",
+          "texto": "Diez principios alineados directamente con el OWASP Top 10 de aplicaciones web, abarcando inyección, autenticación rota, exposición de datos sensibles, XML externo y similares.",
           "correcta": false,
-          "explicacion": "Incorrecto. OWASP Top 10 es de aplicaciones web, no del ENS."
+          "explicacion": "Incorrecto. OWASP Top 10 es de aplicaciones web; nada que ver con los principios estructurales del ENS."
         }
       ]
     },
@@ -135,19 +135,19 @@
           "explicacion": "¡Correcto! Es el primer y más amplio principio: visión holística de la seguridad."
         },
         {
-          "texto": "Que basta con instalar un antivirus en cada equipo.",
+          "texto": "Que basta con instalar un antivirus en cada equipo y un firewall perimetral correctamente configurado para considerar al organismo cubierto frente a las amenazas habituales de ciberseguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Justo lo contrario: rechaza la visión puntual y técnica aislada."
+          "explicacion": "Incorrecto. Justo lo contrario: el principio rechaza la visión puntual y técnica aislada."
         },
         {
-          "texto": "Que solo IT es responsable de la seguridad.",
+          "texto": "Que solo el departamento de IT es responsable de la seguridad, mientras que las áreas funcionales y la dirección no tienen obligaciones específicas más allá de aplicar las políticas técnicas establecidas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Implica responsabilidad transversal a toda la organización."
+          "explicacion": "Incorrecto. El principio implica responsabilidad transversal a toda la organización, no solo IT."
         },
         {
-          "texto": "Que la seguridad se externaliza por completo a un proveedor.",
+          "texto": "Que la seguridad se externaliza por completo a un proveedor especializado de servicios gestionados (MSSP), descargando a la organización de cualquier responsabilidad operativa o de supervisión.",
           "correcta": false,
-          "explicacion": "Incorrecto. La externalización es opcional; el principio se refiere a integralidad."
+          "explicacion": "Incorrecto. La externalización es opcional y nunca elimina la accountability; el principio se refiere a integralidad interna."
         }
       ]
     },
@@ -160,19 +160,19 @@
           "explicacion": "¡Correcto! Son los \"requisitos mínimos\" del Capítulo III del RD; cubren tanto aspectos organizativos como operativos."
         },
         {
-          "texto": "Ninguno; el ENS no establece requisitos mínimos.",
+          "texto": "Ninguno; el ENS no establece requisitos mínimos sino únicamente recomendaciones genéricas de buenas prácticas, dejando a cada entidad pública la decisión sobre qué medidas implantar según sus recursos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS sí establece requisitos mínimos como base común."
+          "explicacion": "Incorrecto. El ENS sí establece requisitos mínimos como base común exigible para toda la AAPP."
         },
         {
-          "texto": "5 requisitos centrados solo en cifrado.",
+          "texto": "5 requisitos centrados exclusivamente en cifrado (datos en reposo, en tránsito, gestión de claves, algoritmos certificados y rotación periódica) sin abordar otros aspectos organizativos o de gestión.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son 15 y van mucho más allá del cifrado."
+          "explicacion": "Incorrecto. Son 15 requisitos y van mucho más allá del cifrado, cubriendo aspectos organizativos completos."
         },
         {
-          "texto": "133 requisitos, uno por cada control de ISO 27002.",
+          "texto": "133 requisitos, uno por cada control de la norma ISO/IEC 27002, dado que el ENS se inspira directamente en ISO 27001 y replica de forma íntegra su estructura de controles del Anexo A.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esos son los controles de ISO 27002, no los requisitos del ENS."
+          "explicacion": "Incorrecto. 133 son los controles históricos de ISO 27002, no los requisitos mínimos del ENS, que son 15."
         }
       ]
     },
@@ -185,19 +185,19 @@
           "explicacion": "¡Correcto! Las medidas se identifican con los prefijos org./op./mp. seguidos del nombre del control concreto."
         },
         {
-          "texto": "Básico, medio y alto.",
+          "texto": "Categoría Básica, categoría Media y categoría Alta, según el nivel de exigencia y la criticidad de los activos protegidos por cada conjunto de medidas dentro del Anexo II del Real Decreto.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso son las CATEGORÍAS del sistema, no los grupos de medidas."
+          "explicacion": "Incorrecto. Eso son las CATEGORÍAS del sistema (Básica/Media/Alta), no los grupos de medidas del Anexo II."
         },
         {
-          "texto": "Preventivo, detectivo y correctivo.",
+          "texto": "Medidas preventivas (antes del incidente), detectivas (durante) y correctivas (después), siguiendo el modelo clásico de gestión de incidentes con énfasis en la respuesta y recuperación de servicios.",
           "correcta": false,
           "explicacion": "Incorrecto. Esa clasificación funcional aparece como principio (prevención/detección/respuesta), no como grupos del Anexo II."
         },
         {
-          "texto": "Físico, lógico y administrativo.",
+          "texto": "Medidas físicas (instalaciones, hardware), lógicas (software, configuración) y administrativas (políticas, procedimientos), siguiendo la clasificación tradicional de controles de seguridad en muchas normas.",
           "correcta": false,
-          "explicacion": "Incorrecto. No es la división del ENS."
+          "explicacion": "Incorrecto. Es una clasificación tradicional válida en otros contextos, pero no la específica del Anexo II del ENS."
         }
       ]
     },
@@ -210,19 +210,19 @@
           "explicacion": "¡Correcto! Son medidas de gobernanza, no técnicas concretas."
         },
         {
-          "texto": "Las medidas de cifrado de datos personales únicamente.",
+          "texto": "Las medidas de cifrado de datos personales únicamente, especialmente las relacionadas con el cifrado en reposo (FDE, BitLocker, LUKS) y en tránsito (TLS) para garantizar la confidencialidad de la información.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cifrado es medida de protección [mp], no organizativa."
+          "explicacion": "Incorrecto. El cifrado es medida de protección [mp], no del marco organizativo [org]."
         },
         {
-          "texto": "Los controles de acceso físico a las instalaciones.",
+          "texto": "Los controles de acceso físico a las instalaciones, incluyendo tornos, lectores de tarjetas, sistemas biométricos, control de visitas y vigilancia de zonas restringidas mediante cámaras de seguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es Marco operacional / Protección de instalaciones."
+          "explicacion": "Incorrecto. Eso es Marco operacional / Protección de instalaciones, dentro del grupo [op]."
         },
         {
-          "texto": "Las copias de seguridad de los sistemas.",
+          "texto": "Las copias de seguridad de los sistemas, su retención, rotación, almacenamiento en ubicaciones separadas y pruebas periódicas de restauración para validar la efectividad de la estrategia de backup.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las copias son medida de protección, no organizativa."
+          "explicacion": "Incorrecto. Las copias son medida de protección [mp], no del marco organizativo."
         }
       ]
     },
@@ -235,19 +235,19 @@
           "explicacion": "¡Correcto! El ENS añade Trazabilidad y Autenticidad a la tríada CIA clásica."
         },
         {
-          "texto": "Únicamente Confidencialidad, Integridad y Disponibilidad (CIA).",
+          "texto": "Únicamente Confidencialidad, Integridad y Disponibilidad (CIA), siguiendo la tríada clásica adoptada por la mayoría de marcos internacionales de seguridad de la información sin añadir dimensiones complementarias.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS amplía la tríada CIA con T y A."
+          "explicacion": "Incorrecto. El ENS amplía la tríada CIA con dos dimensiones adicionales: Trazabilidad y Autenticidad."
         },
         {
-          "texto": "Seguridad física, lógica y administrativa.",
+          "texto": "Seguridad física (instalaciones), seguridad lógica (sistemas) y seguridad administrativa (procedimientos), siguiendo la clasificación tradicional de controles utilizada en muchas metodologías de auditoría.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa no es la clasificación de dimensiones del ENS."
+          "explicacion": "Incorrecto. Esa no es la clasificación de dimensiones del ENS, que se basa en propiedades de la información."
         },
         {
-          "texto": "Prevención, detección, respuesta y recuperación.",
+          "texto": "Prevención, detección, respuesta y recuperación, que son las cuatro fases del ciclo de gestión de incidentes según marcos como NIST SP 800-61 y que ordenan la actuación ante eventos de seguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esas son fases del ciclo de gestión, no dimensiones."
+          "explicacion": "Incorrecto. Esas son fases del ciclo de gestión, no dimensiones de seguridad del ENS."
         }
       ]
     },
@@ -260,19 +260,19 @@
           "explicacion": "¡Correcto! Trazabilidad permite reconstruir quién hizo qué y cuándo (esencial para forense y rendición de cuentas)."
         },
         {
-          "texto": "La capacidad del sistema de cifrar el tráfico de red.",
+          "texto": "La capacidad del sistema de cifrar el tráfico de red entre cliente y servidor mediante protocolos como TLS 1.3, evitando que un atacante en posición de hombre-en-el-medio pueda leer las comunicaciones.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa sería confidencialidad, no trazabilidad."
+          "explicacion": "Incorrecto. Esa capacidad corresponde a la dimensión de confidencialidad, no a la trazabilidad."
         },
         {
-          "texto": "La capacidad de mantener el sistema disponible 24/7.",
+          "texto": "La capacidad de mantener el sistema disponible 24/7 con niveles de servicio acordados (SLA) cercanos al 99,999%, mediante redundancia, alta disponibilidad y planes de continuidad bien dimensionados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es disponibilidad."
+          "explicacion": "Incorrecto. Eso es la dimensión de disponibilidad, no la trazabilidad."
         },
         {
-          "texto": "La capacidad de detectar errores de software.",
+          "texto": "La capacidad de detectar errores de software y vulnerabilidades en el código fuente mediante análisis estático (SAST), análisis dinámico (DAST) y revisiones de seguridad antes del despliegue en producción.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es debugging, no trazabilidad en el sentido del ENS."
+          "explicacion": "Incorrecto. Eso es DevSecOps/QA de seguridad, no la trazabilidad en el sentido del ENS."
         }
       ]
     },
@@ -285,19 +285,19 @@
           "explicacion": "¡Correcto! Autenticidad responde a \"¿quién es realmente el emisor?\" tanto para personas como para fuentes de datos."
         },
         {
-          "texto": "Que los datos no han sido alterados desde su origen.",
+          "texto": "Que los datos no han sido alterados desde su origen, manteniendo su contenido íntegro y verificable mediante mecanismos como hashes criptográficos, firmas digitales o registros encadenados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es integridad. La autenticidad es complementaria pero distinta."
+          "explicacion": "Incorrecto. Eso describe la integridad, que es una dimensión distinta aunque complementaria a la autenticidad."
         },
         {
-          "texto": "Que el sistema funcione sin interrupciones.",
+          "texto": "Que el sistema funcione sin interrupciones, con tiempo medio entre fallos elevado y tiempos de recuperación cortos, soportado por arquitecturas redundantes y planes de continuidad probados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es disponibilidad."
+          "explicacion": "Incorrecto. Eso es la dimensión de disponibilidad, no la autenticidad."
         },
         {
-          "texto": "Que solo el destinatario autorizado pueda leer los datos.",
+          "texto": "Que solo el destinatario autorizado pueda leer los datos, mediante mecanismos de cifrado extremo a extremo, control de acceso basado en roles y gestión segura de claves criptográficas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es confidencialidad."
+          "explicacion": "Incorrecto. Eso es la dimensión de confidencialidad, no la autenticidad."
         }
       ]
     },
@@ -310,19 +310,19 @@
           "explicacion": "¡Correcto! La categoría se determina según las valoraciones (bajo/medio/alto) de las 5 dimensiones."
         },
         {
-          "texto": "Confidencial, Reservado y Secreto.",
+          "texto": "Confidencial, Reservado y Secreto, siguiendo la clasificación clásica de información clasificada utilizada en el ámbito militar y de inteligencia que distingue tres niveles de protección creciente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa es la clasificación de información clasificada militar/CCN, no las categorías del ENS."
+          "explicacion": "Incorrecto. Esa es la clasificación de información clasificada militar/CCN (Ley 9/1968 de Secretos Oficiales), no las categorías del ENS."
         },
         {
-          "texto": "Crítica y no crítica.",
+          "texto": "Crítica y no crítica, categorización binaria que se utiliza típicamente en el ámbito de las infraestructuras estratégicas para distinguir aquellas cuya interrupción afectaría a servicios esenciales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa terminología es de la Ley PIC, no del ENS."
+          "explicacion": "Incorrecto. Esa terminología es de la Ley PIC (infraestructuras críticas), no del ENS."
         },
         {
-          "texto": "Pública, Privada e Híbrida.",
+          "texto": "Pública, Privada e Híbrida, siguiendo la clasificación habitual de modelos de despliegue de nubes en función de quién opera y consume los recursos computacionales del sistema de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esa es clasificación de nubes (cloud), no del ENS."
+          "explicacion": "Incorrecto. Esa es clasificación de modelos cloud (NIST SP 800-145), no del ENS."
         }
       ]
     },
@@ -335,19 +335,19 @@
           "explicacion": "¡Correcto! La categoría toma el nivel del peor caso entre las 5 dimensiones."
         },
         {
-          "texto": "Por la facturación de la entidad pública.",
+          "texto": "Por la facturación o presupuesto anual de la entidad pública responsable, asignándose Alta a entidades de gran tamaño, Media a entidades medianas y Básica a aquellas con presupuestos más limitados.",
           "correcta": false,
-          "explicacion": "Incorrecto. La categoría depende de las dimensiones de seguridad, no del presupuesto."
+          "explicacion": "Incorrecto. La categoría depende de las dimensiones de seguridad afectadas, no del presupuesto de la entidad."
         },
         {
-          "texto": "Por el número de funcionarios que usan el sistema.",
+          "texto": "Por el número de funcionarios que utilizan el sistema, considerándose Alta para sistemas con más de 1.000 usuarios concurrentes, Media para sistemas medianos y Básica para sistemas pequeños.",
           "correcta": false,
-          "explicacion": "Incorrecto. El número de usuarios no determina la categoría."
+          "explicacion": "Incorrecto. El número de usuarios no es criterio del ENS; la categoría se basa en las 5 dimensiones de seguridad."
         },
         {
-          "texto": "La decide libremente cada organismo sin criterios.",
+          "texto": "La decide libremente cada organismo público sin criterios objetivos, en función de las prioridades políticas, los recursos disponibles y la sensibilidad subjetiva del responsable de seguridad designado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay criterios objetivos basados en las dimensiones."
+          "explicacion": "Incorrecto. Hay criterios objetivos basados en las 5 dimensiones; no es discrecional."
         }
       ]
     },
@@ -360,19 +360,19 @@
           "explicacion": "¡Correcto! Es la escala clásica CMMI adaptada al ENS para auditar el estado de los controles."
         },
         {
-          "texto": "Tres: bajo, medio y alto.",
+          "texto": "Tres niveles equivalentes a las categorías del sistema (Bajo, Medio y Alto), donde cada nivel de madurez se asocia directamente con una categoría y determina las medidas que es obligatorio aplicar.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esos son los niveles de las dimensiones, no de madurez."
+          "explicacion": "Incorrecto. Esos son los niveles de valoración de las dimensiones (bajo/medio/alto), no de madurez de los controles."
         },
         {
-          "texto": "Cuatro: cumple, cumple parcialmente, no cumple y no aplica.",
+          "texto": "Cuatro estados aplicables a cada control: cumple, cumple parcialmente, no cumple y no aplica, siguiendo la escala habitual de los check-lists de auditoría utilizados en certificaciones ISO.",
           "correcta": false,
           "explicacion": "Incorrecto. Esa es la escala de cumplimiento de un check-list ISO, no los niveles de madurez del ENS."
         },
         {
-          "texto": "Diez niveles numerados del 1 al 10.",
+          "texto": "Diez niveles numerados del 1 al 10 con descripciones detalladas para cada uno, similar al sistema de calificación académico, donde 1 representa el peor estado y 10 el mejor estado posible.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son 6 niveles (L0 a L5)."
+          "explicacion": "Incorrecto. El ENS define 6 niveles (L0 a L5), no 10."
         }
       ]
     },
@@ -385,19 +385,19 @@
           "explicacion": "¡Correcto! L3 implica que ya no se depende de la buena voluntad o suerte; hay proceso documentado y aplicado."
         },
         {
-          "texto": "No existen medidas de seguridad.",
+          "texto": "No existen medidas de seguridad implantadas y la organización carece de cualquier proceso, procedimiento o documentación sobre cómo proteger los sistemas de información ante amenazas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es L0 (Inexistente)."
+          "explicacion": "Incorrecto. Esa descripción corresponde al nivel L0 (Inexistente), no a L3."
         },
         {
-          "texto": "La efectividad depende de la buena suerte del equipo.",
+          "texto": "La efectividad de las medidas depende de la buena suerte del equipo y de la calidad del personal disponible en cada momento, sin que haya garantías de que se vayan a aplicar correctamente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso describe L1 o L2, no L3."
+          "explicacion": "Incorrecto. Esa descripción corresponde a los niveles L1 o L2, donde aún no hay procesos definidos."
         },
         {
-          "texto": "Se aplican técnicas estadísticas y cuantitativas.",
+          "texto": "Se aplican técnicas estadísticas y cuantitativas para controlar la eficacia de las medidas mediante métricas objetivas, lo que permite a la dirección fijar metas medibles de calidad de los procesos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es L4 (Gestionado y medible)."
+          "explicacion": "Incorrecto. Esa descripción corresponde al nivel L4 (Gestionado y medible)."
         }
       ]
     },
@@ -410,19 +410,19 @@
           "explicacion": "¡Correcto! La distinción L3 → L4 es: cualitativo → cuantitativo."
         },
         {
-          "texto": "L2 (Reproducible pero intuitivo).",
+          "texto": "L2 (Reproducible pero intuitivo): donde la eficacia depende de la buena voluntad y la suerte, los éxitos pueden repetirse pero no hay plan documentado para los incidentes más allá de la mera reacción.",
           "correcta": false,
-          "explicacion": "Incorrecto. L2 todavía depende de la buena voluntad y suerte."
+          "explicacion": "Incorrecto. L2 todavía depende de la buena voluntad y suerte; no hay control estadístico."
         },
         {
-          "texto": "L1 (Inicial/ad hoc).",
+          "texto": "L1 (Inicial/ad hoc): donde las medidas existen pero no se gestionan formalmente, el éxito depende de la buena suerte y de tener personal de alta calidad en los puestos clave de la organización.",
           "correcta": false,
-          "explicacion": "Incorrecto. L1 es el nivel más bajo con medidas existentes."
+          "explicacion": "Incorrecto. L1 es de los niveles más bajos; no introduce control cuantitativo."
         },
         {
-          "texto": "L0 (Inexistente).",
+          "texto": "L0 (Inexistente): donde no existe ninguna medida de seguridad implementada y la organización ni siquiera reconoce la necesidad de gestionar los riesgos asociados a sus sistemas de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. L0 significa que ni siquiera existen medidas."
+          "explicacion": "Incorrecto. L0 significa que ni siquiera existen medidas; menos aún control estadístico."
         }
       ]
     },
@@ -435,19 +435,19 @@
           "explicacion": "¡Correcto! L5 es el nivel máximo: no solo se mide (L4), sino que se busca activamente la mejora continua basada en datos."
         },
         {
-          "texto": "Las medidas de seguridad existen pero no se gestionan.",
+          "texto": "Las medidas de seguridad existen pero no se gestionan formalmente; el éxito depende de la calidad del personal y de la buena disposición de cada responsable a aplicarlas adecuadamente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso describe L1, no L5."
+          "explicacion": "Incorrecto. Esa descripción corresponde al nivel L1 (Inicial/ad hoc), no al L5."
         },
         {
-          "texto": "No hay ninguna medida implementada.",
+          "texto": "No hay ninguna medida implementada y la organización ni siquiera reconoce que existe la necesidad de gestionar la seguridad de la información ni los riesgos asociados a sus sistemas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es L0."
+          "explicacion": "Incorrecto. Esa descripción corresponde al nivel L0 (Inexistente)."
         },
         {
-          "texto": "Solo se reacciona ante incidentes cuando ocurren.",
+          "texto": "Solo se reacciona ante incidentes cuando ocurren, sin planificación previa ni medidas proactivas; toda la actuación es post-hoc en respuesta a eventos que ya han comprometido la seguridad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso es L1/L2; L5 es proactivo y optimizado."
+          "explicacion": "Incorrecto. Esa descripción corresponde a niveles bajos (L1/L2); L5 es justo lo opuesto, totalmente proactivo."
         }
       ]
     },
@@ -460,19 +460,19 @@
           "explicacion": "¡Correcto! Sin estas figuras, la implantación carece de soporte organizativo formal."
         },
         {
-          "texto": "Solo el CISO de la organización.",
+          "texto": "Solo el CISO de la organización, que asume todas las funciones de seguridad técnica, organizativa, regulatoria y de gobernanza sin necesidad de comités ni de otras figuras complementarias.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS exige Comité + Responsable de Seguridad; el CISO en AAPP suele coincidir con el Responsable."
+          "explicacion": "Incorrecto. El ENS exige Comité + Responsable de Seguridad; el CISO en AAPP suele coincidir con el Responsable pero no agota las exigencias."
         },
         {
-          "texto": "Ninguna figura específica; basta con el director general.",
+          "texto": "Ninguna figura específica; basta con que el director general asuma genéricamente la responsabilidad de la seguridad como parte de sus competencias generales de gestión del organismo público.",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS exige roles explícitos."
+          "explicacion": "Incorrecto. El ENS exige roles explícitos formalmente designados, no asunción genérica por la dirección."
         },
         {
-          "texto": "Solo el DPO (Delegado de Protección de Datos).",
+          "texto": "Solo el DPO (Delegado de Protección de Datos), figura obligatoria para las administraciones públicas según el RGPD, que se ocupa también de todas las funciones de seguridad exigidas por el ENS.",
           "correcta": false,
-          "explicacion": "Incorrecto. El DPO es del RGPD; el ENS exige sus propias figuras."
+          "explicacion": "Incorrecto. El DPO es figura del RGPD con funciones distintas; el ENS exige sus propias figuras de seguridad."
         }
       ]
     },
@@ -485,17 +485,17 @@
           "explicacion": "¡Correcto! No puede aprobarla solo el responsable de seguridad: necesita el respaldo del máximo nivel jerárquico."
         },
         {
-          "texto": "El responsable de TI únicamente.",
+          "texto": "El responsable de TI únicamente, dado que es quien mejor conoce los aspectos técnicos del despliegue y por tanto el más cualificado para evaluar la viabilidad y adecuación de las medidas propuestas.",
           "correcta": false,
-          "explicacion": "Incorrecto. La política excede el ámbito puramente técnico."
+          "explicacion": "Incorrecto. La política excede el ámbito puramente técnico; requiere aprobación al máximo nivel jerárquico para legitimarla."
         },
         {
-          "texto": "El proveedor de servicios externo.",
+          "texto": "El proveedor de servicios externo encargado de la implantación, en su calidad de experto técnico contratado para diseñar la política y verificar que cumple con todos los requisitos del Real Decreto.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los proveedores aplican la política, no la aprueban."
+          "explicacion": "Incorrecto. Los proveedores ejecutan/asesoran, pero la aprobación formal es del titular del órgano superior."
         },
         {
-          "texto": "La AEPD.",
+          "texto": "La Agencia Española de Protección de Datos (AEPD), como autoridad de control independiente con competencias en materia de seguridad de la información en el conjunto del sector público español.",
           "correcta": false,
           "explicacion": "Incorrecto. La AEPD vigila el RGPD; no aprueba políticas ENS de otras entidades."
         }
@@ -510,19 +510,19 @@
           "explicacion": "¡Correcto! Tres niveles de verificación con grados crecientes de independencia."
         },
         {
-          "texto": "Solo se admite la autoevaluación interna.",
+          "texto": "Solo se admite la autoevaluación interna realizada por el propio responsable de seguridad, sin que sea exigible ningún tipo de verificación externa o auditoría independiente del cumplimiento del ENS.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay también auditorías internas y externas obligatorias en ciertas categorías."
+          "explicacion": "Incorrecto. Hay también auditorías internas y externas; las externas son obligatorias en ciertas categorías."
         },
         {
-          "texto": "Únicamente certificación por una agencia europea.",
+          "texto": "Únicamente la certificación obtenida a través de una agencia europea acreditada por la Comisión Europea, similar al sistema de certificación común que se aplica a productos con conformidad europea (CE).",
           "correcta": false,
-          "explicacion": "Incorrecto. La validación es nacional; la certificación ENS la realizan entidades acreditadas españolas."
+          "explicacion": "Incorrecto. La validación es nacional; la certificación ENS la realizan entidades acreditadas españolas, no una agencia europea."
         },
         {
-          "texto": "Solo pruebas técnicas automáticas con herramientas.",
+          "texto": "Solo pruebas técnicas automáticas con herramientas de escaneo de vulnerabilidades (Nessus, OpenVAS) sobre los sistemas de información, sin necesidad de revisar políticas, procedimientos o documentación.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las pruebas técnicas son parte, pero no el único método."
+          "explicacion": "Incorrecto. Las pruebas técnicas son parte, pero no el único método; la validación cubre también gobernanza y documentación."
         }
       ]
     },
@@ -535,19 +535,19 @@
           "explicacion": "¡Correcto! Quien tiene ISO 27001 está ya muy cerca de cumplir el ENS, y viceversa."
         },
         {
-          "texto": "Son normas idénticas con distinto nombre.",
+          "texto": "Son normas idénticas con distinto nombre, ya que ambas comparten la misma estructura de controles del Anexo A y los mismos requisitos generales para implantar un sistema de gestión de seguridad de la información.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son parecidas pero distintas: ámbito, alcance y origen difieren."
+          "explicacion": "Incorrecto. Son parecidas pero distintas: ámbito, alcance, origen, dimensiones y aplicación obligatoria difieren significativamente."
         },
         {
-          "texto": "Son completamente incompatibles.",
+          "texto": "Son completamente incompatibles entre sí, ya que parten de modelos conceptuales distintos y los controles de una norma contradicen frontalmente las exigencias de la otra al implantarse simultáneamente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son compatibles y se pueden implantar conjuntamente."
+          "explicacion": "Incorrecto. Son perfectamente compatibles y se pueden implantar conjuntamente; muchas organizaciones lo hacen."
         },
         {
-          "texto": "ISO 27001 deroga al ENS en España.",
+          "texto": "ISO 27001 deroga al ENS en España desde la entrada en vigor del Real Decreto 311/2022, que armonizó la normativa nacional con los estándares internacionales para evitar duplicidades de marcos regulatorios.",
           "correcta": false,
-          "explicacion": "Incorrecto. Una norma internacional voluntaria no deroga una nacional obligatoria."
+          "explicacion": "Incorrecto. Una norma internacional voluntaria no puede derogar una nacional obligatoria; ambas conviven."
         }
       ]
     },
@@ -560,19 +560,19 @@
           "explicacion": "¡Correcto! Y para proveedores que prestan servicios a la AAPP, la certificación ENS suele ser exigida contractualmente."
         },
         {
-          "texto": "No, está prohibido para empresas privadas.",
+          "texto": "No, está expresamente prohibido para empresas privadas, ya que el ámbito de aplicación del Real Decreto se limita a la AAPP y la certificación ENS no se concede a entidades fuera de ese ámbito.",
           "correcta": false,
-          "explicacion": "Incorrecto. No solo no está prohibido, sino que se anima a su adopción."
+          "explicacion": "Incorrecto. No solo no está prohibido, sino que se anima a su adopción como referencia y muchas empresas privadas se certifican."
         },
         {
-          "texto": "Solo si lo solicita el Ministerio de Defensa.",
+          "texto": "Solo si lo solicita expresamente el Ministerio de Defensa o el Centro Criptológico Nacional, dado el carácter sensible de las medidas previstas y la necesidad de control sobre quienes las aplican.",
           "correcta": false,
-          "explicacion": "Incorrecto. Cualquier empresa puede adoptarlo libremente."
+          "explicacion": "Incorrecto. Cualquier empresa puede adoptarlo libremente sin necesidad de solicitud o autorización ministerial."
         },
         {
-          "texto": "Solo si la empresa cotiza en bolsa.",
+          "texto": "Solo si la empresa cotiza en bolsa, dado que estas entidades están sometidas a una mayor presión de transparencia y rendición de cuentas que justifica adoptar marcos de seguridad reconocidos públicamente.",
           "correcta": false,
-          "explicacion": "Incorrecto. La cotización no es requisito."
+          "explicacion": "Incorrecto. La cotización no es requisito; cualquier empresa puede adoptar el ENS independientemente de su forma jurídica."
         }
       ]
     },
@@ -585,19 +585,19 @@
           "explicacion": "¡Correcto! Es un modelo similar al de ISO 27001: el ENS se certifica por terceros acreditados."
         },
         {
-          "texto": "Únicamente el Ministerio de Hacienda.",
+          "texto": "Únicamente el Ministerio de Hacienda y Función Pública, en su condición de departamento responsable de las TIC en la AAPP, mediante un procedimiento administrativo que requiere informe técnico previo del CCN.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hacienda no certifica el ENS."
+          "explicacion": "Incorrecto. Hacienda no certifica el ENS; la certificación la otorgan entidades acreditadas por ENAC."
         },
         {
-          "texto": "La AEPD.",
+          "texto": "La Agencia Española de Protección de Datos (AEPD), como autoridad independiente con competencias transversales en materia de seguridad de la información en el sector público y privado en todo el territorio nacional.",
           "correcta": false,
-          "explicacion": "Incorrecto. La AEPD vigila el RGPD, no certifica el ENS."
+          "explicacion": "Incorrecto. La AEPD vigila el RGPD; no certifica el ENS, que tiene un esquema de certificación propio."
         },
         {
-          "texto": "El propio Responsable de Seguridad de la entidad mediante autoevaluación.",
+          "texto": "El propio Responsable de Seguridad de la entidad mediante autoevaluación documentada, sin necesidad de intervención de un tercero, dado el principio de responsabilidad proactiva y autorregulación.",
           "correcta": false,
-          "explicacion": "Incorrecto. La autoevaluación es interna; la certificación la otorga un tercero acreditado."
+          "explicacion": "Incorrecto. La autoevaluación es interna y un mecanismo de validación, pero la certificación formal la otorga un tercero acreditado."
         }
       ]
     },
@@ -610,19 +610,19 @@
           "explicacion": "¡Correcto! Es una jerarquía: principios → requisitos → medidas."
         },
         {
-          "texto": "Son tres nombres distintos para lo mismo.",
+          "texto": "Son tres nombres distintos para denominar exactamente lo mismo: el catálogo de controles que el responsable de seguridad debe implantar y verificar en cada uno de los sistemas de información del organismo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son niveles jerárquicos diferentes del ENS."
+          "explicacion": "Incorrecto. Son niveles jerárquicos diferentes del ENS con funciones distintas, no sinónimos."
         },
         {
-          "texto": "Solo aplican las medidas; principios y requisitos son orientativos.",
+          "texto": "Solo aplican las medidas del Anexo II por ser las únicas con carácter normativo concreto; los principios y requisitos son orientativos y su cumplimiento queda a criterio de cada organismo público.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los tres niveles son normativamente exigibles según el ENS."
+          "explicacion": "Incorrecto. Los tres niveles son normativamente exigibles según el ENS; principios y requisitos no son meras orientaciones."
         },
         {
-          "texto": "Los requisitos derogan a los principios cuando entran en conflicto.",
+          "texto": "Los requisitos mínimos derogan a los principios básicos cuando entran en conflicto entre sí, ya que son más específicos y por tanto prevalecen según el criterio jurídico clásico de lex specialis derogat generali.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay tal conflicto; principios y requisitos se complementan."
+          "explicacion": "Incorrecto. No hay tal conflicto entre niveles; principios y requisitos se complementan jerárquicamente sin contradecirse."
         }
       ]
     },
@@ -635,19 +635,19 @@
           "explicacion": "¡Correcto! La CIA clásica es Confidencialidad, Integridad y Disponibilidad; el ENS añade T y A explícitamente."
         },
         {
-          "texto": "Confidencialidad.",
+          "texto": "La Confidencialidad, dimensión que garantiza que la información solo sea accesible para quienes están autorizados y que ha sido históricamente uno de los pilares fundamentales de la seguridad de la información.",
           "correcta": false,
-          "explicacion": "Incorrecto. La confidencialidad es parte de la CIA clásica."
+          "explicacion": "Incorrecto. La confidencialidad SÍ forma parte de la tríada CIA clásica."
         },
         {
-          "texto": "Disponibilidad.",
+          "texto": "La Disponibilidad, dimensión que asegura que los sistemas y la información estén accesibles cuando los usuarios autorizados los necesitan, manteniendo los niveles de servicio acordados con los interesados.",
           "correcta": false,
-          "explicacion": "Incorrecto. La disponibilidad es parte de la CIA clásica."
+          "explicacion": "Incorrecto. La disponibilidad SÍ forma parte de la tríada CIA clásica."
         },
         {
-          "texto": "Integridad.",
+          "texto": "La Integridad, dimensión que garantiza que la información no ha sido alterada de manera no autorizada y que conserva su exactitud, completitud y consistencia a lo largo de todo su ciclo de vida.",
           "correcta": false,
-          "explicacion": "Incorrecto. La integridad es parte de la CIA clásica."
+          "explicacion": "Incorrecto. La integridad SÍ forma parte de la tríada CIA clásica."
         }
       ]
     },
@@ -660,19 +660,19 @@
           "explicacion": "¡Correcto! El detalle por categoría/dimensión es lo que graduaría la aplicación, pero a alto nivel basta con conocer el sistema de prefijos."
         },
         {
-          "texto": "Todas las medidas se aplican igual a cualquier sistema.",
+          "texto": "Todas las medidas se aplican igual a cualquier sistema, independientemente de su categoría (Básica, Media o Alta) o de las dimensiones afectadas, en aras de la homogeneidad y simplicidad operativa.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las exigencias varían según categoría y dimensiones."
+          "explicacion": "Incorrecto. Las exigencias varían según categoría y dimensiones; el ENS modula la aplicación de cada medida."
         },
         {
-          "texto": "Solo aplican las medidas marcadas como [mp].",
+          "texto": "Solo aplican las medidas marcadas como [mp] (protección directa de activos), mientras que las medidas [org] (organización) y [op] (operación) son meramente orientativas y de aplicación voluntaria.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplican las tres familias de medidas según el caso."
+          "explicacion": "Incorrecto. Aplican las tres familias de medidas según corresponda; ninguna es voluntaria por defecto."
         },
         {
-          "texto": "Las medidas se identifican con números del 1 al 100 sin prefijos.",
+          "texto": "Las medidas se identifican con números correlativos del 1 al 100 sin prefijos identificativos, agrupadas en capítulos temáticos pero sin distinción nominal entre medidas organizativas, operacionales o de protección.",
           "correcta": false,
-          "explicacion": "Incorrecto. Usan prefijos org./op./mp. seguidos del nombre del control."
+          "explicacion": "Incorrecto. Usan prefijos org./op./mp. seguidos del nombre del control, no numeración correlativa simple."
         }
       ]
     },
@@ -685,19 +685,19 @@
           "explicacion": "¡Correcto! Son los pilares conceptuales del ENS; los controles concretos del Anexo II son el detalle de implementación."
         },
         {
-          "texto": "Los 133 controles concretos del Anexo II memorizados.",
+          "texto": "Los 133 controles concretos del Anexo II memorizados con sus identificadores, descripciones completas y nivel de aplicabilidad para cada una de las tres categorías de sistema y para cada una de las cinco dimensiones afectadas.",
           "correcta": false,
-          "explicacion": "Incorrecto. A nivel general no es necesario memorizarlos todos."
+          "explicacion": "Incorrecto. A nivel general no es necesario memorizar todos los controles; basta con entender el modelo conceptual."
         },
         {
-          "texto": "Únicamente el nombre de los Reales Decretos aplicables.",
+          "texto": "Únicamente el nombre y la numeración de los Reales Decretos aplicables (RD 3/2010 y RD 311/2022), sus fechas de publicación en el BOE y los preámbulos justificativos de cada uno de los cambios introducidos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los RD son necesarios pero insuficientes; lo importante es el modelo conceptual."
+          "explicacion": "Incorrecto. Los RDs son necesarios pero insuficientes; lo importante es entender el modelo conceptual del ENS."
         },
         {
-          "texto": "El presupuesto asignado a cada control en cada entidad.",
+          "texto": "El presupuesto anual asignado a la implantación de cada control en cada entidad pública, con desglose por capítulos presupuestarios y justificación económica detallada para cada uno de los grupos de medidas.",
           "correcta": false,
-          "explicacion": "Incorrecto. El presupuesto es operativo, no parte del modelo conceptual ENS."
+          "explicacion": "Incorrecto. El presupuesto es información operativa de cada entidad, no parte del modelo conceptual del ENS."
         }
       ]
     }
