@@ -10,19 +10,19 @@
           "explicacion": "¡Correcto! La definición es muy amplia: cubre desde el nombre hasta IPs o IDs de cookies que permitan identificar."
         },
         {
-          "texto": "Solo el nombre y los apellidos de una persona.",
+          "texto": "Solo el nombre completo y los dos apellidos de una persona física, dado que se trata de los elementos identificativos más característicos del individuo en el ordenamiento jurídico español, sin que otros datos puedan considerarse personales por sí mismos.",
           "correcta": false,
-          "explicacion": "Incorrecto. La definición es mucho más amplia y abarca cualquier información que pueda identificar."
+          "explicacion": "Incorrecto. La definición del RGPD es mucho más amplia que nombre y apellidos: incluye cualquier información identificable."
         },
         {
-          "texto": "Solo los datos almacenados en formato electrónico.",
+          "texto": "Únicamente los datos personales almacenados en formato electrónico o digital en sistemas informáticos modernos, quedando expresamente excluidos del ámbito de aplicación del Reglamento los tratamientos realizados en soporte papel o de manera manual.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplica también a tratamientos no automatizados (papel)."
+          "explicacion": "Incorrecto. El RGPD aplica también a tratamientos NO automatizados (papel) cuando forman parte de un fichero o están destinados a formarlo."
         },
         {
-          "texto": "Solo los datos sensibles (salud, religión, ideología).",
+          "texto": "Solo los datos sensibles correspondientes a las categorías especiales del artículo 9 (salud, religión, ideología, orientación sexual, datos biométricos o genéticos), considerándose el resto de información como datos comunes no protegidos por el Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esos son categorías especiales; \"dato personal\" es mucho más general."
+          "explicacion": "Incorrecto. Las categorías especiales son una subcategoría reforzada; \"dato personal\" es mucho más general."
         }
       ]
     },
@@ -35,19 +35,19 @@
           "explicacion": "¡Correcto! Permiten identificar directamente al interesado."
         },
         {
-          "texto": "Categorías especiales del art. 9 RGPD.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dado que se trata de información de máxima sensibilidad que identifica unívocamente al titular y por tanto merece la protección reforzada prevista para los datos sensibles.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los identificativos no son categoría especial salvo que se combinen con sensibles."
+          "explicacion": "Incorrecto. Los identificativos NO son categoría especial; las categorías especiales son las del art. 9 (salud, religión, ideología, biometría, etc.)."
         },
         {
-          "texto": "Datos biométricos.",
+          "texto": "Datos biométricos del interesado, dado que el DNI contiene la huella dactilar y la fotografía digital del titular, lo que les confiere automáticamente el carácter de información biométrica protegida por el artículo 9 del Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los biométricos son huella, iris, voz, etc., no DNI/email."
+          "explicacion": "Incorrecto. El DNI como número identificativo no es dato biométrico; los biométricos son huella, iris, rostro procesados para identificación."
         },
         {
-          "texto": "Datos económicos exclusivamente.",
+          "texto": "Datos económicos exclusivamente, dado que se trata de información directamente relacionada con la capacidad financiera del individuo y con la gestión de sus recursos económicos personales en el ámbito de las operaciones bancarias o comerciales.",
           "correcta": false,
-          "explicacion": "Incorrecto. La cuenta bancaria es identificativa/económica, pero DNI, email y teléfono son identificativos."
+          "explicacion": "Incorrecto. La cuenta bancaria tiene componente económico, pero DNI, email, teléfono y dirección son fundamentalmente identificativos."
         }
       ]
     },
@@ -60,19 +60,19 @@
           "explicacion": "¡Correcto! Reflejan atributos personales del interesado sin ser sensibles per se."
         },
         {
-          "texto": "Datos económicos.",
+          "texto": "Datos económicos, financieros y de seguros, dado que el estado civil y la situación familiar tienen impacto directo en la capacidad económica del interesado y en su régimen patrimonial frente a posibles acreedores o entidades financieras contratantes.",
           "correcta": false,
-          "explicacion": "Incorrecto. No son económicos."
+          "explicacion": "Incorrecto. El estado civil no son datos económicos; son datos de características personales."
         },
         {
-          "texto": "Datos académicos.",
+          "texto": "Datos académicos y profesionales del interesado, dado que la nacionalidad y la fecha de nacimiento tienen relevancia directa sobre la carrera profesional, las titulaciones convalidables y el acceso al mercado laboral en el país de residencia.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esos son los relativos a formación, no a estado civil."
+          "explicacion": "Incorrecto. Esos son los relativos a formación y trayectoria profesional (titulaciones, experiencia), no a estado civil/familia."
         },
         {
-          "texto": "Categorías especiales del art. 9.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dado el carácter sensible de la información sobre la vida familiar e íntima del titular, que merece la protección reforzada prevista para los datos especialmente sensibles del interesado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Salvo que se combinen con sensibles, el estado civil no es categoría especial; el origen racial sí lo sería."
+          "explicacion": "Incorrecto. Salvo que se combinen con datos sensibles (ej. origen étnico), estado civil y datos familiares no son categoría especial del art. 9."
         }
       ]
     },
@@ -85,19 +85,19 @@
           "explicacion": "¡Correcto! Describen el entorno social del interesado."
         },
         {
-          "texto": "Datos identificativos.",
+          "texto": "Datos identificativos directos del interesado, dado que la vivienda y las propiedades del titular constituyen elementos característicos que permiten identificarlo en el tráfico jurídico ordinario, junto con su nombre, apellidos y documento nacional de identidad.",
           "correcta": false,
-          "explicacion": "Incorrecto. Identificativos son DNI/email/teléfono."
+          "explicacion": "Incorrecto. Los identificativos son los que permiten contactar/identificar directamente (DNI, email, teléfono); los del entorno social son otra categoría."
         },
         {
-          "texto": "Categorías especiales del art. 9.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dado el carácter sensible de la información sobre el entorno doméstico, las aficiones personales y el patrimonio del titular, que merece protección reforzada en el marco europeo de protección de datos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las circunstancias sociales en sí no son categoría especial."
+          "explicacion": "Incorrecto. Las circunstancias sociales en sí no son categoría especial; el art. 9 lista taxativamente las categorías especiales (salud, religión, etc.)."
         },
         {
-          "texto": "Datos genéticos.",
+          "texto": "Datos genéticos del interesado conforme a la definición del artículo 4.13 del Reglamento europeo, dada la relación directa entre el origen familiar de la persona y la transmisión hereditaria de sus características genéticas naturales y adquiridas.",
           "correcta": false,
-          "explicacion": "Incorrecto. Genéticos son los relativos al ADN heredado."
+          "explicacion": "Incorrecto. Datos genéticos son los relativos al ADN heredado o adquirido; nada que ver con vivienda o aficiones."
         }
       ]
     },
@@ -110,19 +110,19 @@
           "explicacion": "¡Correcto! Son una categoría diferenciada referida al perfil educativo/profesional."
         },
         {
-          "texto": "Datos económicos.",
+          "texto": "Datos económicos, financieros y de seguros del interesado, dado el impacto directo que la formación académica y la experiencia profesional tienen sobre la capacidad económica del titular y sobre su solvencia frente a las entidades financieras contratantes.",
           "correcta": false,
-          "explicacion": "Incorrecto. La formación no es dato económico."
+          "explicacion": "Incorrecto. La formación no es dato económico aunque pueda correlacionarse con la capacidad de ingresos."
         },
         {
-          "texto": "Datos identificativos.",
+          "texto": "Datos identificativos directos del titular, dado que el nombre de la universidad de procedencia y las titulaciones académicas obtenidas permiten identificar inequívocamente al interesado en cualquier proceso de selección laboral o académica.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los identificativos son los que permiten contactar/identificar directamente."
+          "explicacion": "Incorrecto. Los identificativos son los que permiten identificar directamente (DNI, email, teléfono); las titulaciones son académicas/profesionales."
         },
         {
-          "texto": "Categorías especiales.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dado el carácter sensible de la información sobre la trayectoria académica del titular y su acceso al mercado laboral en condiciones de igualdad con otros candidatos.",
           "correcta": false,
-          "explicacion": "Incorrecto. No son categoría especial salvo combinaciones específicas."
+          "explicacion": "Incorrecto. La formación académica no es categoría especial salvo en combinaciones muy específicas (ej. formación religiosa que revele creencia)."
         }
       ]
     },
@@ -135,19 +135,19 @@
           "explicacion": "¡Correcto! Reflejan el detalle de la actividad laboral del interesado."
         },
         {
-          "texto": "Datos identificativos.",
+          "texto": "Datos identificativos directos del titular, dado que el puesto de trabajo y la profesión actual del interesado son elementos característicos que permiten identificarlo en el tráfico jurídico y comercial ordinario junto con su nombre y apellidos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Identificativos son los que permiten identificar al individuo (DNI, email)."
+          "explicacion": "Incorrecto. Los identificativos son los que permiten identificar directamente (DNI, email, teléfono); profesión y puesto son datos laborales."
         },
         {
-          "texto": "Datos genéticos.",
+          "texto": "Datos genéticos del interesado conforme a la definición del artículo 4.13 del Reglamento europeo, dada la relación entre la profesión heredada en algunas familias y las aptitudes profesionales naturales transmitidas de padres a hijos a lo largo de las generaciones.",
           "correcta": false,
-          "explicacion": "Incorrecto. Distractor obvio: nada que ver con ADN."
+          "explicacion": "Incorrecto. Distractor evidente: la profesión no tiene nada que ver con el ADN ni con datos genéticos."
         },
         {
-          "texto": "Categorías especiales del art. 9.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dada la información sensible que la actividad laboral revela sobre la situación personal del titular, incluyendo posibles indicadores de su ideología, religión o convicciones personales.",
           "correcta": false,
-          "explicacion": "Incorrecto. La afiliación SINDICAL sí sería categoría especial, pero la profesión en sí no."
+          "explicacion": "Incorrecto. La afiliación SINDICAL sí es categoría especial, pero la profesión o puesto de trabajo en sí mismos no lo son."
         }
       ]
     },
@@ -160,19 +160,19 @@
           "explicacion": "¡Correcto! Reflejan la actividad mercantil del interesado como persona física."
         },
         {
-          "texto": "Datos económicos, financieros y de seguros.",
+          "texto": "Datos económicos, financieros y de seguros del interesado conforme a la clasificación tradicional de la Agencia Española de Protección de Datos, dado el impacto patrimonial directo de la actividad comercial sobre la situación financiera del titular del negocio.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay solapamiento pero la categoría específica es información comercial."
+          "explicacion": "Incorrecto. Hay solapamiento entre comercial y económico, pero la categoría específica para actividad mercantil es \"información comercial\"."
         },
         {
-          "texto": "Datos especialmente protegidos.",
+          "texto": "Datos especialmente protegidos conforme al artículo 9 del Reglamento General de Protección de Datos, dada la sensibilidad de la información sobre el patrimonio empresarial del titular y la importancia económica para su sostenibilidad financiera a largo plazo.",
           "correcta": false,
-          "explicacion": "Incorrecto. No son categoría especial."
+          "explicacion": "Incorrecto. La actividad comercial no es categoría especial del art. 9 RGPD."
         },
         {
-          "texto": "Datos de circunstancias sociales únicamente.",
+          "texto": "Datos de circunstancias sociales del interesado exclusivamente, dado que la titularidad de un negocio refleja el entorno social y la posición patrimonial del individuo en el conjunto de la sociedad española y europea contemporánea.",
           "correcta": false,
-          "explicacion": "Incorrecto. La actividad comercial es categoría diferenciada de \"circunstancias sociales\"."
+          "explicacion": "Incorrecto. La actividad comercial es categoría diferenciada de \"circunstancias sociales\" (estos últimos son vivienda, aficiones, etc.)."
         }
       ]
     },
@@ -185,19 +185,19 @@
           "explicacion": "¡Correcto! Describen la situación patrimonial y aseguradora del interesado."
         },
         {
-          "texto": "Datos identificativos exclusivamente.",
+          "texto": "Datos identificativos directos del titular exclusivamente, dado que el número de cuenta bancaria y las inversiones financieras realizadas por el interesado son elementos característicos que permiten identificarlo en el tráfico jurídico y comercial ordinario.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aunque la cuenta bancaria es identificativa, los ingresos y rentas no lo son."
+          "explicacion": "Incorrecto. Aunque el IBAN es identificativo, los ingresos, rentas e inversiones son fundamentalmente económicos."
         },
         {
-          "texto": "Categorías especiales del art. 9.",
+          "texto": "Categorías especiales del artículo 9 del Reglamento General de Protección de Datos, dada la sensibilidad de la información financiera del titular y la importancia de protegerla reforzadamente frente a accesos no autorizados y filtraciones de los datos económicos.",
           "correcta": false,
-          "explicacion": "Incorrecto. La situación económica no es categoría especial por defecto."
+          "explicacion": "Incorrecto. La situación económica/financiera NO es categoría especial del art. 9 RGPD."
         },
         {
-          "texto": "Datos académicos.",
+          "texto": "Datos académicos y profesionales del interesado, dado el impacto directo que las inversiones, los préstamos hipotecarios y los seguros tienen sobre la planificación profesional del titular y sobre su capacidad de acceso al mercado laboral en distintos sectores.",
           "correcta": false,
-          "explicacion": "Incorrecto. Académicos son los relativos a formación."
+          "explicacion": "Incorrecto. Académicos son los relativos a formación; los financieros son una categoría diferenciada."
         }
       ]
     },
@@ -210,19 +210,19 @@
           "explicacion": "¡Correcto! Son los \"datos sensibles\". Su tratamiento está prohibido salvo excepciones tasadas del art. 9.2."
         },
         {
-          "texto": "Solo los datos genéticos.",
+          "texto": "Solo los datos genéticos del interesado conforme a la definición del artículo 4.13 del Reglamento europeo, dada su singularidad respecto al resto de información personal por su carácter heredado e inalterable a lo largo de toda la vida del titular.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay 9 categorías especiales en el art. 9."
+          "explicacion": "Incorrecto. Los datos genéticos son UNA de las 9 categorías especiales del art. 9; no la única."
         },
         {
-          "texto": "Solo el DNI y los datos económicos.",
+          "texto": "Solo el DNI del titular y los datos económicos asociados a sus cuentas bancarias, dado el carácter especialmente sensible de la información que identifica unívocamente al ciudadano y de la que refleja su capacidad patrimonial y de pago frente a terceros acreedores.",
           "correcta": false,
-          "explicacion": "Incorrecto. Esos no son categorías especiales."
+          "explicacion": "Incorrecto. DNI y datos económicos NO son categoría especial del art. 9; son datos identificativos/económicos comunes."
         },
         {
-          "texto": "Cualquier dato personal está en la categoría especial.",
+          "texto": "Cualquier dato personal está en la categoría especial del artículo 9 del Reglamento General de Protección de Datos, dado el carácter sensible de toda la información personal en el ámbito digital actual y la necesidad de protegerla reforzadamente frente a posibles abusos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Solo los específicamente listados por el art. 9 son categoría especial."
+          "explicacion": "Incorrecto. Solo los específicamente listados por el art. 9 son categoría especial; la mayoría de datos personales son comunes (no especiales)."
         }
       ]
     },
@@ -235,19 +235,19 @@
           "explicacion": "¡Correcto! El RGPD los introdujo expresamente como categoría especial; antes no estaban como categoría diferenciada."
         },
         {
-          "texto": "Cualquier dato familiar como apellidos o relaciones de parentesco.",
+          "texto": "Cualquier dato familiar del interesado como apellidos paternos y maternos, relaciones de parentesco con otros miembros de la familia y datos del árbol genealógico construido a partir de las certificaciones del Registro Civil correspondiente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso son características personales/sociales, no datos genéticos."
+          "explicacion": "Incorrecto. Eso son características personales/sociales/familiares; los datos genéticos en sentido del RGPD se refieren al ADN."
         },
         {
-          "texto": "Datos de descendientes registrados en el árbol genealógico.",
+          "texto": "Datos de descendientes del interesado registrados oficialmente en el árbol genealógico familiar construido a partir de las certificaciones expedidas por el Registro Civil correspondiente, sin que sea necesario el análisis biológico de muestras del individuo.",
           "correcta": false,
-          "explicacion": "Incorrecto. La genealogía no es dato genético en sentido jurídico."
+          "explicacion": "Incorrecto. La genealogía documental NO es \"dato genético\" en sentido jurídico del RGPD; los genéticos requieren análisis biológico del ADN."
         },
         {
-          "texto": "Datos del DNI heredados culturalmente.",
+          "texto": "Datos del DNI heredados culturalmente por el interesado de sus antepasados directos según la tradición familiar y los registros oficiales de la administración pública correspondiente al lugar de origen del individuo y de su entorno familiar inmediato.",
           "correcta": false,
-          "explicacion": "Incorrecto. Distractor sin sentido técnico."
+          "explicacion": "Incorrecto. Distractor sin sentido técnico; el DNI no se hereda y no es dato genético."
         }
       ]
     },
@@ -260,19 +260,19 @@
           "explicacion": "¡Correcto! Solo son categoría ESPECIAL cuando se usan para identificación unívoca; almacenar una foto no es por sí solo biométrico."
         },
         {
-          "texto": "Solo los datos del peso y la altura.",
+          "texto": "Solo los datos del peso y la altura del interesado registrados en el historial médico, dado que estas magnitudes corporales son las características fisiológicas más representativas del titular y por tanto las únicas que deben considerarse biométricas en sentido jurídico.",
           "correcta": false,
-          "explicacion": "Incorrecto. Peso y altura sin más son características personales, no biométricos en sentido del RGPD."
+          "explicacion": "Incorrecto. Peso y altura sin más no son datos biométricos en el sentido del RGPD; los biométricos exigen tratamiento técnico específico para identificación unívoca."
         },
         {
-          "texto": "Cualquier información médica.",
+          "texto": "Cualquier información médica que el interesado facilite voluntariamente al responsable del tratamiento durante el proceso de identificación, incluyendo el historial clínico completo y los resultados de las pruebas analíticas realizadas en el sistema sanitario público o privado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Eso son datos de salud, distinta categoría."
+          "explicacion": "Incorrecto. Eso son datos de salud, otra categoría especial distinta de los biométricos."
         },
         {
-          "texto": "Los datos relacionados con la edad.",
+          "texto": "Los datos relacionados con la edad cronológica del individuo y con su fecha exacta de nacimiento, dado el impacto que estos datos tienen sobre el desarrollo físico y fisiológico del titular a lo largo de las distintas etapas vitales por las que atraviesa.",
           "correcta": false,
-          "explicacion": "Incorrecto. La edad es característica personal, no biométrico."
+          "explicacion": "Incorrecto. La edad es característica personal, no dato biométrico (que exige procesamiento técnico para identificación unívoca)."
         }
       ]
     },
@@ -285,19 +285,19 @@
           "explicacion": "¡Correcto! El considerando 51 RGPD aclara que el tratamiento de fotos como identificación no se considera siempre tratamiento de categoría especial."
         },
         {
-          "texto": "Sí, cualquier foto es siempre categoría especial.",
+          "texto": "Sí, cualquier fotografía digital del rostro de una persona física se considera siempre dato biométrico de categoría especial del artículo 9 del Reglamento europeo, con independencia del uso concreto que se haga de la imagen por el responsable del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Solo lo es si se aplica tratamiento biométrico automatizado para identificación unívoca."
+          "explicacion": "Incorrecto. Una foto es dato personal, pero solo es biométrico de categoría especial cuando se procesa para identificación unívoca."
         },
         {
-          "texto": "No, las fotos nunca son datos personales.",
+          "texto": "No, las fotografías digitales del rostro nunca son datos personales conforme al Reglamento General de Protección de Datos europeo, dado el carácter público de la imagen facial de cualquier persona física cuando se muestra abiertamente en lugares accesibles al público.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las fotos identifican a personas físicas y son datos personales."
+          "explicacion": "Incorrecto. Las fotos sí son datos personales (identifican a personas físicas); el matiz es cuándo son categoría especial (biométricos)."
         },
         {
-          "texto": "Solo si la foto es en color.",
+          "texto": "Solo se considera dato biométrico de categoría especial si la fotografía digital del rostro está realizada en color con la máxima resolución técnica posible, dado que las imágenes en blanco y negro o con baja resolución no permiten la identificación unívoca del titular afectado.",
           "correcta": false,
-          "explicacion": "Incorrecto. El color es irrelevante."
+          "explicacion": "Incorrecto. El color o resolución son irrelevantes; lo determinante es si se aplica tratamiento técnico para identificación unívoca."
         }
       ]
     },
@@ -310,19 +310,19 @@
           "explicacion": "¡Correcto! Incluye historial clínico, diagnósticos, tratamientos, datos de discapacidad, resultados de pruebas, etc."
         },
         {
-          "texto": "Únicamente los relativos a hospitalizaciones graves.",
+          "texto": "Únicamente los datos relativos a las hospitalizaciones graves del interesado y a las intervenciones quirúrgicas mayores realizadas en centros sanitarios públicos o privados durante los últimos cinco años conforme a la legislación sanitaria española aplicable.",
           "correcta": false,
-          "explicacion": "Incorrecto. La definición es amplia: cualquier dato sobre salud."
+          "explicacion": "Incorrecto. La definición de datos de salud del RGPD es amplia: cualquier información sobre el estado de salud, no solo las hospitalizaciones graves."
         },
         {
-          "texto": "Solo los datos cubiertos por la Seguridad Social.",
+          "texto": "Solo los datos cubiertos por la prestación sanitaria pública gestionada por la Seguridad Social española, sin que la información tratada por entidades privadas (clínicas, mutuas, aseguradoras) tenga la consideración jurídica de \"datos de salud\" en sentido del Reglamento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplica a cualquier dato de salud, público o privado."
+          "explicacion": "Incorrecto. Aplica a cualquier dato sobre salud, sea de origen público (SNS) o privado (clínicas, mutuas, aseguradoras)."
         },
         {
-          "texto": "Solo los registros médicos electrónicos.",
+          "texto": "Solo los registros médicos electrónicos generados por aplicaciones digitales sanitarias acreditadas por el Ministerio de Sanidad, sin que tenga relevancia jurídica la información clínica recogida en soporte papel o por medios no automatizados del centro sanitario.",
           "correcta": false,
-          "explicacion": "Incorrecto. También aplica a datos en papel."
+          "explicacion": "Incorrecto. También aplica a datos en papel; el formato no determina el carácter de dato de salud."
         }
       ]
     },
@@ -335,19 +335,19 @@
           "explicacion": "¡Correcto! Es un caso de \"identificación indirecta\": no identifica sola, pero combinada con datos del ISP, sí."
         },
         {
-          "texto": "No, las IPs son números técnicos sin valor personal.",
+          "texto": "No, las direcciones IP son números técnicos asignados a los dispositivos de red sin valor personal alguno, dado que se trata de identificadores técnicos sin capacidad real para identificar al individuo concreto que se conecta tras el dispositivo correspondiente.",
           "correcta": false,
-          "explicacion": "Incorrecto. La jurisprudencia europea las considera dato personal."
+          "explicacion": "Incorrecto. La jurisprudencia europea (caso Breyer) las considera datos personales cuando hay medios razonables de identificación."
         },
         {
-          "texto": "Solo las IPv6, no las IPv4.",
+          "texto": "Solo las direcciones IPv6 son datos personales conforme al Reglamento General de Protección de Datos, dada su mayor capacidad para identificar específicamente al dispositivo conectado, mientras que las IPv4 tradicionales mantienen un carácter técnico no personal por su naturaleza compartida.",
           "correcta": false,
-          "explicacion": "Incorrecto. La distinción IPv4/IPv6 no determina el carácter de dato personal."
+          "explicacion": "Incorrecto. La distinción IPv4/IPv6 no determina el carácter de dato personal; ambas pueden serlo si permiten identificación."
         },
         {
-          "texto": "Solo si el usuario navega sin VPN.",
+          "texto": "Solo se consideran datos personales las direcciones IP cuando el usuario navega sin VPN (Virtual Private Network), dado que el uso de redes privadas virtuales anonimiza eficazmente la conexión y altera la naturaleza jurídica de la dirección visible del cliente.",
           "correcta": false,
-          "explicacion": "Incorrecto. La VPN no altera la naturaleza jurídica del dato."
+          "explicacion": "Incorrecto. La VPN no altera la naturaleza jurídica del dato; lo que cambia es la capacidad de identificación real del titular."
         }
       ]
     },
@@ -360,19 +360,19 @@
           "explicacion": "¡Correcto! Considerando 30 RGPD. Por eso la AEPD exige consentimiento expreso para cookies analíticas/publicitarias."
         },
         {
-          "texto": "No, las cookies son archivos técnicos sin carácter personal.",
+          "texto": "No, las cookies son archivos técnicos almacenados en el navegador del usuario sin carácter personal alguno, dado que se trata de simples ficheros de configuración técnica utilizados por los sitios web para mejorar la experiencia de navegación del visitante anónimo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las cookies de seguimiento sí son datos personales."
+          "explicacion": "Incorrecto. Las cookies de seguimiento/publicitarias sí son datos personales conforme al RGPD (considerando 30); solo las estrictamente técnicas pueden no serlo."
         },
         {
-          "texto": "Solo las cookies guardadas más de 24 horas.",
+          "texto": "Solo se consideran datos personales las cookies que permanezcan guardadas durante más de 24 horas en el navegador del usuario, dado que el plazo temporal mínimo de conservación es el criterio jurídico que determina la aplicabilidad del Reglamento europeo a este tipo de información.",
           "correcta": false,
-          "explicacion": "Incorrecto. La duración no es el criterio."
+          "explicacion": "Incorrecto. La duración no es el criterio; lo es la capacidad de identificar/perfilar al usuario."
         },
         {
-          "texto": "Solo si están cifradas con AES.",
+          "texto": "Solo se consideran datos personales si las cookies y los identificadores en línea están cifrados con algoritmos criptográficos reconocidos internacionalmente como AES-256, dado el carácter sensible de la información de navegación que estos identificadores permiten obtener.",
           "correcta": false,
-          "explicacion": "Incorrecto. El cifrado no determina su carácter personal."
+          "explicacion": "Incorrecto. El cifrado no determina su carácter personal; lo determinante es la capacidad de identificación/perfilado."
         }
       ]
     },
@@ -385,19 +385,20 @@
           "explicacion": "¡Correcto! En España, herederos pueden solicitar acceso, rectificación o supresión de datos de fallecidos, salvo que el fallecido lo hubiera prohibido."
         },
         {
-          "texto": "Sí, plenamente y sin restricciones temporales.",
+          "texto": "Sí, el Reglamento General de Protección de Datos aplica plenamente y sin ningún tipo de restricción temporal a los datos personales de personas fallecidas, dada la perdurabilidad de los derechos fundamentales reconocidos a todo ser humano por el ordenamiento jurídico europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD no aplica directamente a personas fallecidas."
+          "explicacion": "Incorrecto. El RGPD se refiere expresamente a personas físicas vivas; los fallecidos quedan fuera del ámbito principal del Reglamento europeo."
         },
         {
-          "texto": "Sí, durante 100 años después de la muerte.",
+          "texto": "Sí, el Reglamento europeo aplica durante un plazo máximo de 100 años desde el fallecimiento del titular para garantizar la protección de la memoria histórica de la persona y de su entorno familiar más próximo durante varias generaciones sucesivas.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay tal plazo en el RGPD."
+          "explicacion": "Incorrecto. No existe tal plazo de 100 años en el RGPD para datos de fallecidos."
         },
         {
-          "texto": "Aplica únicamente si murieron en territorio UE.",
+          "texto": "Solo aplica el Reglamento europeo a los datos de personas fallecidas si el deceso se produjo en territorio de la Unión Europea, dado el carácter territorial estricto del ámbito de aplicación del RGPD en materia de protección de los datos personales de los interesados."
+          ,
           "correcta": false,
-          "explicacion": "Incorrecto. La regla es que el RGPD no aplica a fallecidos en general."
+          "explicacion": "Incorrecto. La regla general es que el RGPD no aplica a fallecidos en general, independientemente del lugar del fallecimiento."
         }
       ]
     },
@@ -410,19 +411,19 @@
           "explicacion": "¡Correcto! info@empresa.com no es dato personal; juan.lopez@empresa.com sí lo es."
         },
         {
-          "texto": "Sí, las personas jurídicas tienen los mismos derechos que las físicas.",
+          "texto": "Sí, las personas jurídicas (empresas mercantiles, asociaciones, fundaciones) tienen exactamente los mismos derechos que las personas físicas en el ámbito del Reglamento General de Protección de Datos europeo, dada la equiparación constitucional entre ambos tipos de sujetos en el ordenamiento jurídico nacional.",
           "correcta": false,
-          "explicacion": "Incorrecto. El RGPD se limita a personas físicas."
+          "explicacion": "Incorrecto. El RGPD se limita expresamente a personas físicas; las jurídicas quedan fuera de su ámbito de protección material."
         },
         {
-          "texto": "Solo las empresas con menos de 10 empleados.",
+          "texto": "Solo están protegidas por el Reglamento las empresas con menos de 10 empleados a tiempo completo, dado el carácter quasi-personal de las microempresas familiares y la cercanía entre el patrimonio empresarial y el patrimonio personal del titular del negocio.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ninguna persona jurídica está protegida por el RGPD."
+          "explicacion": "Incorrecto. Ninguna persona jurídica está protegida directamente por el RGPD, independientemente del número de empleados."
         },
         {
-          "texto": "Solo las empresas familiares.",
+          "texto": "Solo se protege a las empresas de carácter familiar conforme a la legislación mercantil española aplicable, dada la asimilación de estas estructuras corporativas a la persona física que ostenta la titularidad efectiva del control empresarial del negocio.",
           "correcta": false,
-          "explicacion": "Incorrecto. Igualmente quedan fuera del ámbito RGPD."
+          "explicacion": "Incorrecto. Las empresas familiares también son personas jurídicas y quedan fuera del ámbito del RGPD."
         }
       ]
     },
@@ -435,19 +436,19 @@
           "explicacion": "¡Correcto! La anonimización real es exigente; la seudonimización es una medida de seguridad común."
         },
         {
-          "texto": "Son sinónimos exactos.",
+          "texto": "Son términos sinónimos absolutamente intercambiables que describen el mismo proceso técnico de transformación de los datos personales en información no identificable, sin que existan diferencias jurídicas relevantes entre ambos conceptos en el marco del Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Tienen efectos jurídicos completamente distintos."
+          "explicacion": "Incorrecto. Tienen efectos jurídicos completamente distintos: la anonimización saca el dato del RGPD; la seudonimización no."
         },
         {
-          "texto": "Seudonimizado significa cifrado y anonimizado significa borrado.",
+          "texto": "Seudonimizado significa que los datos están cifrados con AES-256, mientras que anonimizado significa que los datos personales han sido borrados completamente del sistema del responsable del tratamiento mediante un procedimiento técnico de supresión definitiva.",
           "correcta": false,
-          "explicacion": "Incorrecto. La diferencia es sobre reversibilidad de la identificación."
+          "explicacion": "Incorrecto. La diferencia es sobre reversibilidad de la identificación, no sobre cifrado vs borrado."
         },
         {
-          "texto": "Anonimizado puede revertirse; seudonimizado no.",
+          "texto": "Anonimizado puede revertirse fácilmente con las claves adecuadas y volver a los datos originales, mientras que seudonimizado significa que los datos se han eliminado de manera definitiva e irreversible del sistema del responsable del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es justo al revés."
+          "explicacion": "Incorrecto. Es justo al revés: anonimización = irreversible; seudonimización = reversible si se dispone de información adicional."
         }
       ]
     },
@@ -460,19 +461,19 @@
           "explicacion": "¡Correcto! La agregación bien hecha es una técnica de anonimización. Hay que asegurarse de que no se permita reidentificación (ej. en grupos demasiado pequeños)."
         },
         {
-          "texto": "Sí, siempre son datos personales aunque estén agregadas.",
+          "texto": "Sí, las estadísticas agregadas siguen siendo datos personales aunque estén anonimizadas mediante técnicas de agregación, dado que su origen es información personal de individuos identificables que conservan sus derechos sobre los resultados estadísticos obtenidos.",
           "correcta": false,
-          "explicacion": "Incorrecto. La agregación efectiva saca al dato del ámbito personal."
+          "explicacion": "Incorrecto. La agregación efectiva (que impide reidentificar) saca el resultado del ámbito de \"dato personal\" del RGPD."
         },
         {
-          "texto": "No, jamás son datos personales aunque permitan identificar.",
+          "texto": "No, las estadísticas agregadas no son jamás datos personales bajo ninguna circunstancia, ni siquiera cuando los grupos analizados son tan reducidos que permiten reidentificar a individuos concretos a partir de los porcentajes y resultados estadísticos publicados.",
           "correcta": false,
-          "explicacion": "Incorrecto. Si permiten reidentificar (grupos muy pequeños), siguen siendo datos personales."
+          "explicacion": "Incorrecto. Si las estadísticas permiten reidentificar (grupos muy pequeños), siguen siendo datos personales sujetos al RGPD."
         },
         {
-          "texto": "Solo son datos personales si superan 1.000 registros.",
+          "texto": "Solo son datos personales las estadísticas agregadas si el número total de registros utilizados para generarlas supera los 1.000 elementos individuales, dado el umbral cuantitativo establecido por el Reglamento europeo para determinar la aplicabilidad de la normativa.",
           "correcta": false,
-          "explicacion": "Incorrecto. No hay umbrales numéricos en el RGPD."
+          "explicacion": "Incorrecto. No existen umbrales numéricos en el RGPD; el criterio es la posibilidad real de reidentificación."
         }
       ]
     },
@@ -485,19 +486,19 @@
           "explicacion": "¡Correcto! Son una \"cuasi-categoría especial\" con regulación específica en el art. 10."
         },
         {
-          "texto": "Son datos personales ordinarios sin protección especial.",
+          "texto": "Son datos personales ordinarios sin ningún tipo de protección especial reforzada conforme al Reglamento General de Protección de Datos europeo, dado el carácter público de las resoluciones judiciales y de las sanciones administrativas firmes impuestas por las autoridades competentes.",
           "correcta": false,
-          "explicacion": "Incorrecto. Tienen régimen específico en el art. 10."
+          "explicacion": "Incorrecto. Tienen régimen específico en el art. 10 RGPD con protección reforzada análoga a las categorías especiales."
         },
         {
-          "texto": "Están en el art. 9 como categoría especial.",
+          "texto": "Están expresamente recogidos en el artículo 9 del Reglamento europeo como categoría especial dentro de la lista taxativa de datos sensibles, dada su naturaleza altamente sensible para el interesado afectado por una condena penal previa.",
           "correcta": false,
-          "explicacion": "Incorrecto. Están en el art. 10, no en el 9, aunque la protección es similar."
+          "explicacion": "Incorrecto. Están en el ART. 10 (no en el 9), aunque la protección sea análoga a las categorías especiales."
         },
         {
-          "texto": "No son datos personales porque son públicos.",
+          "texto": "No se consideran datos personales bajo el Reglamento General de Protección de Datos europeo porque las resoluciones judiciales y las condenas penales son información de naturaleza pública accesible para cualquier ciudadano interesado en consultarla.",
           "correcta": false,
-          "explicacion": "Incorrecto. Sí son datos personales y, además, con protección reforzada."
+          "explicacion": "Incorrecto. Sí son datos personales y, además, con protección reforzada del art. 10 RGPD."
         }
       ]
     },
@@ -510,19 +511,19 @@
           "explicacion": "¡Correcto! Por eso aparecen pixeladas en imágenes públicas y en cámaras de vigilancia hay régimen específico."
         },
         {
-          "texto": "No, es un número técnico del vehículo.",
+          "texto": "No, las matrículas son números técnicos asignados oficialmente por la Dirección General de Tráfico al vehículo automotor, sin relación directa con su titular y por tanto sin la consideración jurídica de dato personal en el marco del Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. La matrícula identifica al titular vía el registro."
+          "explicacion": "Incorrecto. La matrícula identifica al titular indirectamente vía el Registro de Vehículos de la DGT; la jurisprudencia y la AEPD las consideran dato personal."
         },
         {
-          "texto": "Solo si pertenece a un vehículo personal, no empresarial.",
+          "texto": "Solo se considera dato personal la matrícula si pertenece a un vehículo de uso personal del titular, no a un vehículo empresarial o industrial registrado a nombre de una persona jurídica para la realización de su actividad económica habitual.",
           "correcta": false,
-          "explicacion": "Incorrecto. Aplica con matices, pero en general las matrículas son datos personales."
+          "explicacion": "Incorrecto. La consideración como dato personal aplica con matices, pero en general las matrículas son datos personales (vinculadas al titular vía registro)."
         },
         {
-          "texto": "Solo en coches de menos de 5 años.",
+          "texto": "Solo es dato personal la matrícula de coches con una antigüedad inferior a cinco años desde su primera matriculación oficial, dado que los vehículos más antiguos quedan exceptuados del régimen del Reglamento europeo por su menor relevancia económica.",
           "correcta": false,
-          "explicacion": "Incorrecto. La antigüedad del vehículo no es relevante."
+          "explicacion": "Incorrecto. La antigüedad del vehículo no es relevante para determinar si la matrícula es dato personal."
         }
       ]
     },
@@ -535,19 +536,19 @@
           "explicacion": "¡Correcto! El art. 9.2 lista las 10 excepciones tasadas; sin alguna de ellas, los datos sensibles no pueden tratarse."
         },
         {
-          "texto": "Solo el consentimiento del interesado.",
+          "texto": "Solo el consentimiento expreso del interesado mediante una declaración o acción afirmativa clara, dado que es la única base jurídica suficiente para legitimar el tratamiento de datos sensibles conforme al Reglamento General de Protección de Datos europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay 10 excepciones; el consentimiento explícito es solo una."
+          "explicacion": "Incorrecto. Hay 10 excepciones en el art. 9.2; el consentimiento explícito es solo una de ellas."
         },
         {
-          "texto": "Cualquier interés legítimo del responsable.",
+          "texto": "Cualquier interés legítimo del responsable del tratamiento previamente ponderado conforme al artículo 6.1.f del Reglamento europeo, dada la posibilidad general de tratar datos personales cuando este interés prevalezca sobre los derechos del interesado.",
           "correcta": false,
-          "explicacion": "Incorrecto. El interés legítimo NO es base para categorías especiales."
+          "explicacion": "Incorrecto. El interés legítimo del art. 6.1.f NO es base válida para categorías especiales del art. 9; el régimen es más estricto."
         },
         {
-          "texto": "Solo el contrato con el interesado.",
+          "texto": "Solo el contrato celebrado entre el responsable del tratamiento y el interesado afectado por la actividad del responsable, conforme a la base jurídica del artículo 6.1.b del Reglamento europeo sobre tratamientos necesarios para la ejecución de un contrato.",
           "correcta": false,
-          "explicacion": "Incorrecto. El contrato del art. 6 no basta para categorías especiales."
+          "explicacion": "Incorrecto. El contrato del art. 6.1.b NO es base válida para categorías especiales; se necesita una excepción específica del art. 9.2."
         }
       ]
     },
@@ -560,19 +561,19 @@
           "explicacion": "¡Correcto! La afiliación sindical es categoría especial; su tratamiento es especialmente sensible."
         },
         {
-          "texto": "Sí, libremente, igual que cualquier otro dato.",
+          "texto": "Sí, libremente y sin necesidad de ninguna salvaguarda adicional, dado que la afiliación sindical es un dato personal ordinario que se trata exactamente igual que cualquier otra información sobre el interesado en el ámbito de las relaciones laborales ordinarias.",
           "correcta": false,
-          "explicacion": "Incorrecto. La afiliación sindical es categoría especial protegida."
+          "explicacion": "Incorrecto. La afiliación sindical es categoría especial protegida del art. 9 RGPD; no se trata libremente."
         },
         {
-          "texto": "Sí, si el sindicato lo autoriza por escrito.",
+          "texto": "Sí, siempre que el sindicato autorice expresamente por escrito el tratamiento mediante un documento firmado por su secretario general que recoja las finalidades específicas para las que se cede la información sobre la afiliación de los trabajadores.",
           "correcta": false,
-          "explicacion": "Incorrecto. Quien debe autorizar es el interesado, no el sindicato."
+          "explicacion": "Incorrecto. Quien debe autorizar es el INTERESADO (titular del dato), no el sindicato."
         },
         {
-          "texto": "Nunca puede tratarse en ningún caso.",
+          "texto": "Nunca puede tratarse en ningún caso bajo ninguna circunstancia legal, dado el carácter absolutamente prohibitivo del artículo 9 del Reglamento General de Protección de Datos europeo respecto a las categorías especiales de datos personales del interesado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Sí puede tratarse bajo las excepciones del art. 9.2."
+          "explicacion": "Incorrecto. SÍ puede tratarse bajo las excepciones del art. 9.2 (consentimiento explícito, obligaciones laborales, etc.); no está absolutamente prohibido."
         }
       ]
     },
@@ -585,19 +586,19 @@
           "explicacion": "¡Correcto! Las firmas, en sus distintas modalidades, son datos personales."
         },
         {
-          "texto": "Solo la electrónica es dato personal.",
+          "texto": "Solo la firma electrónica es dato personal del titular firmante, dado el carácter digital y verificable de los identificadores asociados al certificado electrónico utilizado, mientras que la firma manuscrita tradicional carece de la naturaleza jurídica de dato personal protegido.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ambas lo son."
+          "explicacion": "Incorrecto. Ambas son datos personales; la firma manuscrita también identifica al titular y refleja rasgos únicos."
         },
         {
-          "texto": "Solo la manuscrita es dato personal.",
+          "texto": "Solo la firma manuscrita realizada en papel es dato personal según la doctrina clásica de la Agencia Española de Protección de Datos, dado que la firma electrónica es un mecanismo técnico que carece del valor identificativo personal asociado a la firma tradicional.",
           "correcta": false,
-          "explicacion": "Incorrecto. La electrónica también lo es."
+          "explicacion": "Incorrecto. La firma electrónica también es dato personal: incluye identificadores y datos del firmante."
         },
         {
-          "texto": "Ninguna es dato personal porque no identifican a la persona.",
+          "texto": "Ninguna de las dos firmas es dato personal según el Reglamento General de Protección de Datos europeo, dado que se trata de mecanismos jurídicos de validación de documentos que no identifican por sí mismos a la persona física que los suscribe.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ambas son medios típicos de identificación."
+          "explicacion": "Incorrecto. Ambas firmas son medios típicos de identificación de personas físicas y constituyen datos personales."
         }
       ]
     },
@@ -610,19 +611,19 @@
           "explicacion": "¡Correcto! Una grabación común es dato personal; el análisis biométrico de la voz es categoría especial."
         },
         {
-          "texto": "No, la voz no es dato personal.",
+          "texto": "No, la voz humana grabada no es dato personal en ningún caso, dado el carácter natural y biológico del sonido emitido por las cuerdas vocales del individuo, sin que el ordenamiento jurídico europeo otorgue a esta información ningún tipo de protección específica reforzada.",
           "correcta": false,
-          "explicacion": "Incorrecto. Identifica al hablante; es dato personal."
+          "explicacion": "Incorrecto. La voz identifica al hablante y es dato personal según el RGPD."
         },
         {
-          "texto": "Siempre es biométrico independientemente del tratamiento.",
+          "texto": "La voz humana grabada es siempre dato biométrico de categoría especial conforme al artículo 9 del Reglamento europeo, con independencia del tratamiento técnico específico que se aplique a la información sonora captada por el responsable del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es biométrico solo cuando se aplica tratamiento técnico para identificación unívoca."
+          "explicacion": "Incorrecto. Es dato personal siempre, pero solo es BIOMÉTRICO de categoría especial cuando se aplica tratamiento técnico para identificación unívoca."
         },
         {
-          "texto": "Solo es dato personal si se transcribe a texto.",
+          "texto": "Solo se considera dato personal la voz si la grabación se transcribe a formato de texto escrito en una transcripción literal posterior firmada por un fedatario público, dado que únicamente el texto escrito tiene la consideración jurídica de información personal protegida.",
           "correcta": false,
-          "explicacion": "Incorrecto. La grabación misma es dato personal aunque no se transcriba."
+          "explicacion": "Incorrecto. La grabación de voz en sí misma es dato personal aunque no se transcriba; no se requiere fedatario público."
         }
       ]
     },
@@ -635,19 +636,19 @@
           "explicacion": "¡Correcto! La discapacidad es dato de salud; las adaptaciones son obligación legal del empresario."
         },
         {
-          "texto": "Datos identificativos sin más.",
+          "texto": "Datos identificativos ordinarios del empleado, dado que la condición de persona con discapacidad reconocida administrativamente es un atributo personal del trabajador que sirve para identificarlo en el organigrama de la empresa junto con sus datos profesionales.",
           "correcta": false,
-          "explicacion": "Incorrecto. Es categoría especial por revelar información de salud."
+          "explicacion": "Incorrecto. La discapacidad es categoría especial por revelar información de salud, no dato identificativo."
         },
         {
-          "texto": "Datos económicos.",
+          "texto": "Datos económicos del interesado, dado el impacto patrimonial directo que el reconocimiento administrativo de la discapacidad tiene sobre las prestaciones sociales y los beneficios fiscales asociados al titular del derecho conforme a la legislación tributaria aplicable.",
           "correcta": false,
-          "explicacion": "Incorrecto. No son datos económicos."
+          "explicacion": "Incorrecto. La discapacidad como tal no son datos económicos; son datos de salud (categoría especial)."
         },
         {
-          "texto": "Datos académicos.",
+          "texto": "Datos académicos y profesionales del empleado afectado, dado que las adaptaciones laborales por discapacidad guardan relación directa con el desempeño profesional del trabajador y con su acceso al mercado laboral en igualdad de condiciones con el resto de candidatos.",
           "correcta": false,
-          "explicacion": "Incorrecto. Académicos son los relativos a formación."
+          "explicacion": "Incorrecto. Académicos/profesionales son los relativos a formación y trayectoria laboral; la discapacidad es dato de salud."
         }
       ]
     },
@@ -660,19 +661,19 @@
           "explicacion": "¡Correcto! El criterio es si el email identifica directa o indirectamente a una persona física concreta."
         },
         {
-          "texto": "Sí, ambos son datos personales.",
+          "texto": "Sí, ambos correos electrónicos son datos personales conforme al Reglamento General de Protección de Datos europeo, dada la naturaleza inherente de cualquier dirección de email como medio de comunicación digital asociado a una persona o entidad concreta del tráfico jurídico.",
           "correcta": false,
-          "explicacion": "Incorrecto. info@empresa.com no identifica a persona física concreta."
+          "explicacion": "Incorrecto. info@empresa.com es genérico (persona jurídica) y no identifica directamente a una persona física concreta."
         },
         {
-          "texto": "Ninguno es dato personal.",
+          "texto": "No, ninguno de los dos correos electrónicos es dato personal a efectos del Reglamento europeo, dado el carácter público y abierto de las direcciones de email utilizadas para la comunicación electrónica en el tráfico ordinario digital de la actualidad.",
           "correcta": false,
-          "explicacion": "Incorrecto. El primero sí lo es."
+          "explicacion": "Incorrecto. juan.lopez@gmail.com SÍ es dato personal porque identifica a una persona física concreta."
         },
         {
-          "texto": "Solo si están alojados en proveedores europeos.",
+          "texto": "Solo son datos personales los correos electrónicos si están alojados en proveedores con sede en Estados Unidos como Gmail, Outlook o Yahoo, dado el régimen específico que el RGPD establece para los proveedores de servicios digitales no europeos.",
           "correcta": false,
-          "explicacion": "Incorrecto. El alojamiento no determina su carácter de dato personal."
+          "explicacion": "Incorrecto. El alojamiento del email no determina su carácter personal; lo determinante es si identifica a una persona física."
         }
       ]
     },
@@ -685,19 +686,19 @@
           "explicacion": "¡Correcto! Hay que tener cuidado con las observaciones libres: pueden colar datos sensibles inadvertidamente."
         },
         {
-          "texto": "Solo datos identificativos del cliente.",
+          "texto": "Solo datos identificativos del cliente registrado en el sistema CRM corporativo, dado que las observaciones libres de los comerciales son anotaciones internas de gestión comercial sin la consideración jurídica de datos personales protegidos por el Reglamento europeo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay datos de salud de un tercero implícitamente."
+          "explicacion": "Incorrecto. Hay datos de salud de un TERCERO (el hijo discapacitado) que es categoría especial del art. 9 RGPD."
         },
         {
-          "texto": "Ningún dato personal porque son observaciones internas.",
+          "texto": "Ningún dato personal protegido por el Reglamento General de Protección de Datos europeo, dado el carácter interno y privado de las anotaciones libres realizadas por los comerciales de la organización en sus sistemas de gestión de relaciones con clientes.",
           "correcta": false,
-          "explicacion": "Incorrecto. Las observaciones internas que identifican personas son datos personales."
+          "explicacion": "Incorrecto. Las observaciones internas que identifican personas (clientes y terceros) son datos personales y aplican el RGPD."
         },
         {
-          "texto": "Solo datos comerciales.",
+          "texto": "Solo datos comerciales asociados a la gestión de la relación con el cliente del negocio, dado que las observaciones del comercial se centran exclusivamente en la planificación de visitas y en la optimización del calendario de contactos comerciales del responsable.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay datos de salud (del hijo) que son categoría especial."
+          "explicacion": "Incorrecto. Hay datos de salud (sobre el hijo discapacitado) que es categoría especial; no son solo comerciales."
         }
       ]
     },
@@ -710,19 +711,19 @@
           "explicacion": "¡Correcto! \"Manifiestamente públicos\" requiere clara voluntad del interesado de hacerlos públicos; un perfil restringido no cumple."
         },
         {
-          "texto": "No, son datos ordinarios.",
+          "texto": "No, las opiniones políticas expresadas voluntariamente en redes sociales públicas son datos personales ordinarios sin protección especial reforzada, dado que el titular ha renunciado implícitamente a la protección al hacerlas públicas en internet libremente.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son categoría especial."
+          "explicacion": "Incorrecto. Las opiniones políticas SON categoría especial del art. 9; la publicidad solo activa una posible excepción restrictiva del art. 9.2.e."
         },
         {
-          "texto": "Sí, pero pueden tratarse libremente al estar en redes públicas.",
+          "texto": "Sí, pero pueden tratarse libremente sin ninguna restricción adicional al estar publicadas en redes sociales públicas accesibles a cualquier internauta interesado, dado que la voluntad de hacerlas públicas equivale jurídicamente a una autorización general del tratamiento.",
           "correcta": false,
-          "explicacion": "Incorrecto. La publicación no extingue la protección; solo activa una posible excepción muy restrictiva."
+          "explicacion": "Incorrecto. La publicación no extingue la protección; solo activa una posible excepción muy restrictiva del art. 9.2.e."
         },
         {
-          "texto": "Solo si se trata de cargos públicos.",
+          "texto": "Solo se consideran categoría especial las opiniones políticas si se trata de declaraciones realizadas por cargos públicos del Estado o por representantes electos en el desempeño de sus funciones, dado el carácter institucional de su actividad y la transparencia exigible.",
           "correcta": false,
-          "explicacion": "Incorrecto. El régimen es independiente de la condición del interesado, aunque cargos públicos tienen consideraciones distintas."
+          "explicacion": "Incorrecto. El régimen es independiente de la condición del interesado; cualquier opinión política es categoría especial del art. 9."
         }
       ]
     },
@@ -735,19 +736,19 @@
           "explicacion": "¡Correcto! La obligación de registro horario tiene base legal específica; los datos resultantes son personales."
         },
         {
-          "texto": "No, son datos administrativos sin valor personal.",
+          "texto": "No, son datos administrativos internos de la organización sin valor personal para el trabajador afectado, dado el carácter puramente técnico de los registros temporales asociados al desempeño de las funciones laborales habituales en el centro de trabajo.",
           "correcta": false,
-          "explicacion": "Incorrecto. Permiten identificar conducta del empleado."
+          "explicacion": "Incorrecto. Sí son datos personales: permiten identificar la conducta laboral del empleado concreto."
         },
         {
-          "texto": "Solo los datos de entrada cuentan; los de salida no.",
+          "texto": "Solo los datos de la entrada al puesto de trabajo cuentan como datos personales protegidos por el Reglamento europeo; los datos de salida del centro al final de la jornada no tienen la consideración jurídica de información personal sujeta a protección reforzada.",
           "correcta": false,
-          "explicacion": "Incorrecto. Ambos son datos personales."
+          "explicacion": "Incorrecto. Tanto entrada como salida son datos personales; ambos identifican el comportamiento laboral del empleado."
         },
         {
-          "texto": "Solo si el empleado trabaja más de 40 horas/semana.",
+          "texto": "Solo se consideran datos personales protegidos los relativos a empleados que trabajen más de 40 horas semanales en la organización, dado el umbral cuantitativo establecido por la normativa laboral española para determinar la aplicabilidad del régimen de protección.",
           "correcta": false,
-          "explicacion": "Incorrecto. La jornada no determina el carácter del dato."
+          "explicacion": "Incorrecto. La jornada no determina el carácter del dato; cualquier registro horario de empleado es dato personal."
         }
       ]
     },
@@ -760,19 +761,19 @@
           "explicacion": "¡Correcto! La geolocalización laboral es uno de los temas más sensibles; la AEPD lo vigila estrechamente."
         },
         {
-          "texto": "No, son datos del vehículo, no del trabajador.",
+          "texto": "No, son datos asociados exclusivamente al vehículo corporativo y no a la persona del trabajador que lo utiliza durante su jornada laboral, dado el carácter técnico de los registros generados por el sistema GPS sin vinculación directa con el empleado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Identifican al trabajador a través de su uso del vehículo."
+          "explicacion": "Incorrecto. Los datos del vehículo identifican al trabajador a través de su uso del mismo; son datos personales de geolocalización."
         },
         {
-          "texto": "Solo si el trabajador firma autorización.",
+          "texto": "Solo se consideran datos personales si el trabajador firma previamente una autorización notarial expresa para el tratamiento de los datos de geolocalización generados por el sistema GPS instalado por la empresa en el vehículo asignado para el desempeño profesional.",
           "correcta": false,
-          "explicacion": "Incorrecto. La base jurídica suele ser interés legítimo o contrato, no consentimiento (cuestionado por desequilibrio)."
+          "explicacion": "Incorrecto. La base jurídica suele ser interés legítimo o contrato (no consentimiento por desequilibrio); no se exige notarización."
         },
         {
-          "texto": "Solo durante la jornada laboral; fuera no son datos personales.",
+          "texto": "Solo se consideran datos personales durante la jornada laboral del trabajador; fuera de las horas oficiales de trabajo registradas en el calendario laboral, los datos de localización del GPS corporativo dejan de tener la consideración jurídica de información personal.",
           "correcta": false,
-          "explicacion": "Incorrecto. Son datos personales también fuera, y precisamente fuera no debería monitorizarse."
+          "explicacion": "Incorrecto. Son datos personales también fuera de la jornada; y precisamente fuera de la jornada NO debería monitorizarse al trabajador."
         }
       ]
     },
@@ -785,19 +786,19 @@
           "explicacion": "¡Correcto! Un formulario \"sencillo\" puede mezclar varios tipos y disparar obligaciones reforzadas."
         },
         {
-          "texto": "Solo categorías identificativas; salud no es relevante en un formulario.",
+          "texto": "Solo categorías identificativas básicas del titular del formulario presentado a la empresa responsable del tratamiento, dado el carácter puramente administrativo de la información recogida en el documento corporativo presentado para iniciar la relación contractual.",
           "correcta": false,
-          "explicacion": "Incorrecto. La salud activa categoría especial inmediatamente."
+          "explicacion": "Incorrecto. La presencia de salud (enfermedades crónicas) activa categoría especial del art. 9, no son solo identificativos."
         },
         {
-          "texto": "Únicamente categorías especiales.",
+          "texto": "Únicamente categorías especiales del artículo 9 del Reglamento General de Protección de Datos europeo, dada la presencia de información sobre enfermedades crónicas del titular en el conjunto de los datos recogidos por la empresa en el formulario presentado.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay también identificativos, empleo y económicos."
+          "explicacion": "Incorrecto. Hay también identificativos (DNI, nombre), empleo (profesión) y económicos (salario), no solo categorías especiales."
         },
         {
-          "texto": "Ninguna categoría especial mientras esté en un formulario.",
+          "texto": "Ninguna categoría especial está involucrada en el formulario presentado a la empresa por el interesado, dado que las enfermedades crónicas indicadas en el documento son simplemente información complementaria del perfil profesional sin la consideración jurídica de dato sensible reforzado.",
           "correcta": false,
-          "explicacion": "Incorrecto. El formato (formulario) no cambia la naturaleza del dato."
+          "explicacion": "Incorrecto. Las enfermedades crónicas son SALUD = categoría especial del art. 9, independientemente del contexto del formulario."
         }
       ]
     },
@@ -810,19 +811,19 @@
           "explicacion": "¡Correcto! El criterio clave es la identificabilidad razonable de una persona FÍSICA VIVA."
         },
         {
-          "texto": "Solo es dato personal lo que aparece en el DNI.",
+          "texto": "Solo es dato personal lo que aparece literalmente en el Documento Nacional de Identidad del titular (nombre, apellidos, fecha de nacimiento, foto y dirección), sin que el resto de información personal del interesado tenga la consideración jurídica de dato protegido.",
           "correcta": false,
-          "explicacion": "Incorrecto. La definición es mucho más amplia."
+          "explicacion": "Incorrecto. La definición del RGPD es mucho más amplia que el contenido del DNI; incluye cualquier información identificable."
         },
         {
-          "texto": "Cualquier dato es personal sin excepción.",
+          "texto": "Cualquier dato es absolutamente dato personal sin excepción alguna prevista en el Reglamento General de Protección de Datos europeo, dado el carácter universal del régimen de protección de datos personales aplicable en el ámbito territorial de la Unión Europea.",
           "correcta": false,
-          "explicacion": "Incorrecto. Hay excepciones (anonimizados, jurídicas, fallecidos)."
+          "explicacion": "Incorrecto. Hay excepciones claras: personas jurídicas, fallecidos (general), anonimizados, tratamientos puramente domésticos, etc."
         },
         {
-          "texto": "Solo los datos sensibles son personales.",
+          "texto": "Solo los datos sensibles correspondientes a las categorías especiales del artículo 9 (salud, religión, biometría, etc.) son datos personales protegidos por el Reglamento europeo, sin que el resto de información tenga la consideración jurídica de dato personal.",
           "correcta": false,
-          "explicacion": "Incorrecto. Los datos sensibles son una subcategoría de los personales, no el conjunto."
+          "explicacion": "Incorrecto. Los datos sensibles son una subcategoría de los personales, no el conjunto; los identificativos, comerciales, económicos, etc. también son personales."
         }
       ]
     }
