@@ -349,6 +349,30 @@
           "path": "Normativas/RA4-Alto.json"
         },
         {
+          "name": "RA4-Normativas",
+          "tema": "RA4 - Normativas de Protección de Datos (LORTAD, LOPD, LOPDGDD, RGPD, LSSI, derechos ARCO)",
+          "count": 43,
+          "path": "Normativas/RA4-Normativas.json"
+        },
+        {
+          "name": "RA4-BasesJuridicas-Roles",
+          "tema": "RA4 - Bases jurídicas del tratamiento (art. 6 RGPD) y roles (Responsable, Encargado, DPO)",
+          "count": 35,
+          "path": "Normativas/RA4-BasesJuridicas-Roles.json"
+        },
+        {
+          "name": "RA4-CasosPracticos",
+          "tema": "RA4 - Casos prácticos de aplicación del RGPD/LOPDGDD",
+          "count": 31,
+          "path": "Normativas/RA4-CasosPracticos.json"
+        },
+        {
+          "name": "RA4-CategoriasDatos",
+          "tema": "RA4 - Categorías y tipos de datos personales según RGPD y LOPDGDD",
+          "count": 33,
+          "path": "Normativas/RA4-CategoriasDatos.json"
+        },
+        {
           "name": "RA4-Medio",
           "tema": "UD4 - Legislación de protección de datos (Nivel medio)",
           "count": 40,
@@ -365,6 +389,18 @@
           "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Medio)",
           "count": 37,
           "path": "Normativas/RA5-Medio.json"
+        },
+        {
+          "name": "RA5-ENS-VisionGeneral",
+          "tema": "RA5 - Esquema Nacional de Seguridad (ENS) - Visión general (sin controles específicos)",
+          "count": 28,
+          "path": "Normativas/RA5-ENS-VisionGeneral.json"
+        },
+        {
+          "name": "RA5-Continuidad-PIC-Marcos",
+          "tema": "RA5 - Continuidad de negocio (ISO 22301), Ley PIC y marcos normativos comparados",
+          "count": 29,
+          "path": "Normativas/RA5-Continuidad-PIC-Marcos.json"
         }
       ]
     },

@@ -1,0 +1,780 @@
+{
+  "tema": "RA4 - Casos prácticos de aplicación del RGPD/LOPDGDD",
+  "preguntas": [
+    {
+      "pregunta": "Una clínica dental subcontrata a una gestoría externa para que elabore las nóminas de sus empleados. La gestoría accede a datos personales. ¿Qué relación jurídica se establece y qué documento es obligatorio?",
+      "respuestas": [
+        {
+          "texto": "Responsable (clínica) - Encargado (gestoría); es obligatorio un contrato de encargo del tratamiento conforme al art. 28 RGPD por escrito.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El contrato del art. 28 con sus cláusulas obligatorias es imprescindible para regularizar la relación."
+        },
+        {
+          "texto": "No hay obligación jurídica especial; basta con un acuerdo verbal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El art. 28 RGPD exige contrato por escrito."
+        },
+        {
+          "texto": "La gestoría se convierte automáticamente en responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es encargada porque actúa por cuenta del responsable."
+        },
+        {
+          "texto": "Ambas son corresponsables del tratamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Solo serían corresponsables si decidieran conjuntamente fines y medios."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un comercio electrónico español envía datos de pedidos a un proveedor de logística establecido en EEUU. ¿Qué debe verificarse antes de hacer la transferencia?",
+      "respuestas": [
+        {
+          "texto": "Que exista una base jurídica de transferencia internacional: decisión de adecuación (EU-US Data Privacy Framework si el proveedor está certificado), cláusulas contractuales tipo, BCR, u otras garantías del Capítulo V RGPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sin alguna de estas garantías, la transferencia es ilegal. La sentencia Schrems II eliminó el Privacy Shield; ahora rige el Data Privacy Framework (2023)."
+        },
+        {
+          "texto": "Que el proveedor firme un acuerdo de confidencialidad genérico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un NDA no es garantía de transferencia internacional bajo el RGPD."
+        },
+        {
+          "texto": "Nada; al ser un proveedor profesional, está implícitamente autorizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sin garantías específicas, la transferencia a un tercer país es ilegal."
+        },
+        {
+          "texto": "Que el proveedor pague una tasa a la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal tasa; las garantías son contractuales/normativas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una app móvil dirigida a niños recopila datos de geolocalización para \"mejorar el servicio\". ¿Qué obligaciones específicas aplican?",
+      "respuestas": [
+        {
+          "texto": "Consentimiento de los titulares de la patria potestad si el menor tiene menos de 14 años (LOPDGDD); información reforzada en lenguaje claro y adaptado; minimización (¿es geolocalización necesaria?); EIPD probablemente obligatoria.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los menores son colectivo protegido especialmente; la app debe extremar cuidados."
+        },
+        {
+          "texto": "Basta con que los padres firmen al instalar la app la primera vez.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay que verificar el consentimiento, no solo recopilarlo formalmente; además hay otras obligaciones."
+        },
+        {
+          "texto": "Si la app es gratis, no necesita consentimiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Gratis o de pago, las exigencias RGPD son las mismas."
+        },
+        {
+          "texto": "Ninguna; los niños no tienen derechos RGPD propios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: tienen protección reforzada."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa de 80 empleados trata datos de salud de sus clientes de forma regular. ¿Está obligada a designar un DPO?",
+      "respuestas": [
+        {
+          "texto": "Sí, porque trata categorías especiales (salud) a gran escala de forma sistemática, supuesto que activa la obligación del art. 37.1.c RGPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El umbral no es el tamaño de la empresa, sino la naturaleza y volumen del tratamiento."
+        },
+        {
+          "texto": "No, porque tiene menos de 250 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no fija un umbral por número de empleados para el DPO."
+        },
+        {
+          "texto": "Solo si la AEPD se lo solicita.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación nace ipso iure cuando se cumplen los criterios del art. 37."
+        },
+        {
+          "texto": "Solo si los clientes lo piden expresamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es decisión de los clientes."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un servidor web sufre un ataque y se exfiltran 2.000 emails de usuarios. ¿Qué obligaciones tiene la empresa en las próximas 72 horas?",
+      "respuestas": [
+        {
+          "texto": "Notificar la brecha a la AEPD en un máximo de 72 horas desde que tuvo constancia (salvo que sea improbable que constituya riesgo) y comunicarlo a los interesados si hay alto riesgo para sus derechos y libertades.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Art. 33 y 34 RGPD. Si no es posible en 72h, debe justificarse la demora en la notificación."
+        },
+        {
+          "texto": "Solo notificar a la policía y esperar instrucciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La denuncia policial puede ser adicional, pero la AEPD debe ser notificada en 72h."
+        },
+        {
+          "texto": "Esperar 30 días para confirmar la brecha y luego decidir.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El plazo son 72 horas, no 30 días."
+        },
+        {
+          "texto": "Borrar inmediatamente los logs para no dejar rastro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Destruir evidencia es ilegal y rompe la cadena de custodia forense."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un cliente solicita por correo electrónico que se eliminen todos sus datos personales (derecho al olvido). ¿Qué debe hacer la empresa?",
+      "respuestas": [
+        {
+          "texto": "Verificar la identidad del solicitante, analizar si concurren las causas del art. 17 RGPD, contestar en el plazo de 1 mes (prorrogable 2 meses más si es complejo) y suprimir los datos salvo excepciones legales (conservación obligatoria fiscal, defensa de reclamaciones, etc.).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El derecho al olvido no es absoluto; hay excepciones tasadas. Hay que documentar la decisión."
+        },
+        {
+          "texto": "Borrar inmediatamente todos los datos sin análisis.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay que verificar identidad, analizar si procede y respetar conservaciones obligatorias por ley."
+        },
+        {
+          "texto": "Ignorar la solicitud si llega por correo electrónico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no exige formato específico; cualquier medio es válido."
+        },
+        {
+          "texto": "Pedirle al cliente que pague una tasa de gestión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ejercicio de derechos RGPD es gratuito, salvo solicitudes manifiestamente infundadas o excesivas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa quiere instalar cámaras de videovigilancia en la zona de trabajo. ¿Qué requisitos específicos debe cumplir?",
+      "respuestas": [
+        {
+          "texto": "Informar previamente a los trabajadores y a sus representantes (LOPDGDD art. 89), colocar carteles informativos en zonas visibles, base jurídica adecuada (interés legítimo / contrato), minimización (solo zonas necesarias) y conservación máxima de 1 mes salvo excepción.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LOPDGDD regula específicamente la videovigilancia laboral. Sin información previa, las grabaciones son inválidas como prueba."
+        },
+        {
+          "texto": "Basta con instalar las cámaras; no hace falta avisar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información previa es obligatoria por LOPDGDD."
+        },
+        {
+          "texto": "Solo se permiten cámaras en zonas de descanso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justamente las zonas de descanso, vestuarios, baños están PROHIBIDAS para videovigilancia."
+        },
+        {
+          "texto": "Se pueden grabar conversaciones siempre que se justifique.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La grabación de audio en el lugar de trabajo está muy restringida y suele requerir consentimiento expreso."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un comercio quiere usar un sistema biométrico (huella dactilar) para control de acceso de empleados. ¿Qué consideraciones aplican?",
+      "respuestas": [
+        {
+          "texto": "Los datos biométricos son categoría especial (art. 9 RGPD); requiere base jurídica específica del art. 9.2, justificar la proporcionalidad frente a alternativas menos intrusivas (PIN, tarjeta), EIPD obligatoria y medidas de seguridad reforzadas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD ha sancionado múltiples implantaciones biométricas por desproporcionalidad."
+        },
+        {
+          "texto": "Es obligatorio para cumplir con el control horario; sin condiciones especiales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El control horario se puede hacer con métodos menos intrusivos; biométrico exige justificación reforzada."
+        },
+        {
+          "texto": "Basta con el consentimiento del empleado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento en relación laboral está cuestionado por desequilibrio de poder; suele necesitar otra base."
+        },
+        {
+          "texto": "No tiene ninguna consideración especial; es como una contraseña.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Datos biométricos = categoría especial con régimen reforzado."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa quiere enviar publicidad de productos nuevos a antiguos clientes que llevan 5 años sin comprar. ¿Qué base jurídica usaría y qué deberían comprobar primero?",
+      "respuestas": [
+        {
+          "texto": "Interés legítimo, siempre que hayan informado claramente del marketing al recoger los datos, hayan ofrecido siempre opción de oposición fácil, y el plazo de conservación no haya expirado (revisar política de retención).",
+          "correcta": true,
+          "explicacion": "¡Correcto! 5 años sin actividad puede ser razón para considerar que se ha excedido el plazo razonable de conservación."
+        },
+        {
+          "texto": "Pueden enviar libremente; los clientes son suyos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Clientes propios\" no eximen del RGPD/LSSI."
+        },
+        {
+          "texto": "Comprar la base de datos a otra empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería ilegal sin consentimiento adicional y trasladaría la ilegalidad."
+        },
+        {
+          "texto": "Enviar primero, preguntar después si hay quejas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay que evaluar legalidad antes de enviar."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un hotel solicita el DNI a los clientes al check-in y lo conserva 5 años. ¿Es legal?",
+      "respuestas": [
+        {
+          "texto": "Sí, con matices: la Orden INT/1922/2003 obliga a registrar viajeros; la conservación responde a obligación legal (art. 6.1.c) y solo durante el plazo que marca la normativa de hospedaje (3 años) o el específico aplicable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es obligación legal, no consentimiento. La conservación tiene plazo específico marcado por la propia obligación."
+        },
+        {
+          "texto": "No, los hoteles no pueden recoger DNI nunca.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay obligación legal específica de hospedaje."
+        },
+        {
+          "texto": "Solo es legal si el cliente firma un consentimiento explícito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La base es obligación legal, no consentimiento."
+        },
+        {
+          "texto": "Sí, pero pueden conservarlo indefinidamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay un plazo máximo de conservación marcado por la obligación legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un usuario recibe spam masivo de una tienda online a la que compró una vez hace dos años y nunca consintió expresamente marketing. ¿Qué puede hacer?",
+      "respuestas": [
+        {
+          "texto": "Ejercer el derecho de oposición ante el responsable (gratuito, en 1 mes); si no obtiene respuesta o no cesa, reclamar ante la AEPD que puede sancionar. Adicionalmente, la LSSI exige opt-in claro o relación contractual previa para marketing.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El usuario tiene mecanismos efectivos: oposición + reclamación ante AEPD."
+        },
+        {
+          "texto": "Nada; si compró una vez, ya consintió implícitamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La compra no equivale a consentimiento para marketing indefinido."
+        },
+        {
+          "texto": "Bloquear el correo en su servidor y olvidarse.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Bloquear es solución personal; existen recursos jurídicos para resolver la situación de fondo."
+        },
+        {
+          "texto": "Demandar penalmente al responsable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La vía habitual es la administrativa ante la AEPD, no la penal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un trabajador descubre que su empresa está monitorizando su correo corporativo sin haberle informado. ¿Es legal?",
+      "respuestas": [
+        {
+          "texto": "No. La LOPDGDD art. 87 exige información previa, expresa, clara e inequívoca a los trabajadores sobre la posibilidad de monitorización de dispositivos digitales. Sin ello, las pruebas obtenidas son inválidas y la empresa es sancionable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La doctrina del TC español y del TEDH (caso Bărbulescu) ha consolidado la exigencia de información previa."
+        },
+        {
+          "texto": "Sí, el correo corporativo es propiedad de la empresa y puede leerse libremente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque sea corporativo, el trabajador tiene expectativas razonables de intimidad si no se le ha informado."
+        },
+        {
+          "texto": "Solo es ilegal si encuentran información personal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ilegalidad nace de la falta de información previa, independientemente del contenido."
+        },
+        {
+          "texto": "Sí, si lo autorizó un superior jerárquico verbalmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La autorización interna no salva la falta de información al trabajador."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa quiere usar IA para decidir automáticamente qué candidatos pasan a la siguiente fase del proceso de selección. ¿Qué requisitos aplican?",
+      "respuestas": [
+        {
+          "texto": "Art. 22 RGPD: derecho a no ser objeto de decisiones automatizadas con efectos jurídicos significativos; hace falta base reforzada (consentimiento explícito, contrato o autorización legal), información clara sobre la lógica, derecho a intervención humana, expresar opinión e impugnar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las decisiones automatizadas significativas tienen un régimen específico y reforzado."
+        },
+        {
+          "texto": "Ninguno; la IA decide y punto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La automatización pura para decisiones significativas tiene fuertes restricciones."
+        },
+        {
+          "texto": "Solo es legal si el algoritmo es de código abierto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La licencia del algoritmo no es la condición; sí lo es la transparencia."
+        },
+        {
+          "texto": "Solo afecta al sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier sector donde haya decisiones automatizadas significativas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una asociación pequeña (10 socios) trata solo datos identificativos básicos (nombre, email) para su funcionamiento interno. ¿Aplica el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Sí, el RGPD aplica independientemente del tamaño; aunque las pequeñas tienen exenciones (no RAT obligatorio si <250 empleados y sin riesgo, etc.), no están exentas del cumplimiento general.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Tamaño no exime. Aplican los principios, derechos, deber de información, base jurídica adecuada, etc."
+        },
+        {
+          "texto": "No, las asociaciones pequeñas están exentas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal exención general."
+        },
+        {
+          "texto": "Solo aplica si tienen presupuesto superior a 50.000€.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no fija umbrales económicos."
+        },
+        {
+          "texto": "Solo aplica si los socios viven en distintos países.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica aunque todos sean del mismo país."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una persona crea una base de datos personal en Excel con direcciones de familiares y amigos para enviarles felicitaciones. ¿Aplica el RGPD?",
+      "respuestas": [
+        {
+          "texto": "No. El art. 2.2.c RGPD excluye expresamente el tratamiento por una persona física en el ejercicio de actividades exclusivamente personales o domésticas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la \"household exemption\". Si se publica en redes sociales o se usa para negocio, la exención se pierde."
+        },
+        {
+          "texto": "Sí, igual que en cualquier empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay exención para actividades personales/domésticas."
+        },
+        {
+          "texto": "Solo si la persona es mayor de 18 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La edad no es el criterio; lo es la finalidad doméstica."
+        },
+        {
+          "texto": "Solo si la base tiene más de 100 contactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay umbrales numéricos para la exención."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un periodista publica un reportaje con datos identificativos de un político imputado. El político alega derecho al olvido. ¿Qué prevalece?",
+      "respuestas": [
+        {
+          "texto": "El derecho al olvido cede ante el ejercicio del derecho a la información y libertad de expresión sobre asuntos de interés público (art. 17.3.a RGPD; art. 85 RGPD remite a la ponderación nacional). En personas con relevancia pública, la balanza suele inclinarse hacia la información veraz.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La doctrina Costeja (caso Google Spain) y posterior jurisprudencia balancean ambos derechos según relevancia pública e interés legítimo."
+        },
+        {
+          "texto": "Siempre el derecho al olvido sobre la libertad de información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho al olvido no es absoluto y debe ponderarse."
+        },
+        {
+          "texto": "Siempre la libertad de información, sin ponderar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Tampoco la libertad de información es absoluta."
+        },
+        {
+          "texto": "Decide la AEPD discrecionalmente sin criterios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Existen criterios jurisprudenciales claros de ponderación."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa contrata Microsoft 365 para correo y ofimática. ¿Hay que firmar contrato de encargado del tratamiento con Microsoft?",
+      "respuestas": [
+        {
+          "texto": "Sí. Microsoft 365 trata datos personales (correo, contactos, calendarios, documentos) por cuenta del cliente; Microsoft proporciona los \"Online Services Data Protection Addendum\" (DPA) que sirve como contrato de encargado del tratamiento conforme al art. 28.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los grandes proveedores cloud ofrecen DPAs estándar firmados al aceptar el servicio."
+        },
+        {
+          "texto": "No, los servicios SaaS no requieren contrato art. 28.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SaaS no exime; el contrato art. 28 sigue siendo necesario."
+        },
+        {
+          "texto": "Solo si la empresa tiene más de 1.000 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El umbral no aplica al art. 28."
+        },
+        {
+          "texto": "No, porque Microsoft es responsable, no encargado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para los datos del cliente que aloja en M365, Microsoft actúa como encargado."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa recibe una solicitud de portabilidad: el cliente quiere recibir sus datos para llevarlos a un competidor. ¿Qué obligaciones tiene?",
+      "respuestas": [
+        {
+          "texto": "Proporcionarle los datos que él mismo facilitó (no inferidos) en un formato estructurado, de uso común y legible mecánicamente (CSV, JSON), gratuitamente, en el plazo de 1 mes, y a otro responsable directamente si el cliente lo solicita y es técnicamente viable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Art. 20 RGPD. La portabilidad aplica solo a datos basados en consentimiento o contrato, no a inferidos por el responsable."
+        },
+        {
+          "texto": "Negarse porque podría perjudicar el negocio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un derecho del interesado; negarse es infracción."
+        },
+        {
+          "texto": "Cobrarle una tarifa por procesamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ejercicio de derechos es gratuito."
+        },
+        {
+          "texto": "Darle solo un PDF impreso con los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Debe ser formato estructurado legible mecánicamente, no PDF."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un hospital quiere realizar un estudio epidemiológico con datos anonimizados de sus pacientes. ¿Aplica el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Si los datos están REALMENTE anonimizados (imposibilidad de reidentificación), no aplica el RGPD a los datos resultantes; pero el PROCESO de anonimización sí es un tratamiento sujeto al RGPD, y la efectividad de la anonimización debe demostrarse.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD insiste en que muchas \"anonimizaciones\" en realidad son seudonimizaciones. La carga de la prueba está en el responsable."
+        },
+        {
+          "texto": "Nunca, los datos sanitarios anonimizados son libres siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El proceso de anonimización sí está sujeto al RGPD."
+        },
+        {
+          "texto": "Sí, aunque los datos estén anonimizados, siempre aplica el RGPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Anonimización real saca al dato del ámbito del RGPD."
+        },
+        {
+          "texto": "Solo aplica si el estudio se publica en revistas científicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La publicación científica no es el criterio."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa quiere conservar el historial completo de navegación de sus empleados en la red corporativa \"para fines de seguridad\". ¿Es proporcionado?",
+      "respuestas": [
+        {
+          "texto": "Probablemente no. Hay que respetar minimización (¿es realmente necesario el historial completo o basta con metadatos?), información previa, finalidad específica de seguridad documentada, plazo limitado de conservación y EIPD por monitorización sistemática de empleados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD ha rechazado monitorizaciones masivas \"por si acaso\" sin justificación proporcionada."
+        },
+        {
+          "texto": "Sí, la seguridad justifica cualquier monitorización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La seguridad es legítima pero debe ser proporcionada y minimizada."
+        },
+        {
+          "texto": "Sí, mientras se documente internamente sin avisar al empleado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La información previa al empleado es obligatoria."
+        },
+        {
+          "texto": "No, ninguna monitorización es legal nunca.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La monitorización proporcionada e informada sí es legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un sindicato solicita acceso a la lista de empleados de una empresa para campañas de afiliación. ¿Puede facilitarse?",
+      "respuestas": [
+        {
+          "texto": "No directamente: la afiliación sindical es dato de categoría especial (art. 9) y el derecho de información a los trabajadores se canaliza por mecanismos específicos previstos en el Estatuto de los Trabajadores, sin entregar listas masivas sin base jurídica adecuada.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La empresa no puede entregar libremente una base de datos de empleados a un tercero, ni siquiera a un sindicato."
+        },
+        {
+          "texto": "Sí, los sindicatos tienen acceso libre a todos los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal acceso libre."
+        },
+        {
+          "texto": "Sí, si el sindicato firma un acuerdo de confidencialidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El NDA no resuelve la falta de base jurídica."
+        },
+        {
+          "texto": "No, los sindicatos están prohibidos en empresas privadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La libertad sindical está garantizada constitucionalmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa quiere realizar un sorteo público en redes sociales donde los participantes deben subir una foto con su DNI visible. ¿Es lícito?",
+      "respuestas": [
+        {
+          "texto": "No. Es una violación clara del principio de minimización: pedir el DNI completo no es necesario para participar en un sorteo. Además, exponer el DNI en redes sociales facilita usurpación de identidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD ha sancionado este tipo de prácticas. Bastaría con datos mínimos para identificar al ganador."
+        },
+        {
+          "texto": "Sí, si los participantes consienten libremente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento no salva la falta de minimización ni la desproporción."
+        },
+        {
+          "texto": "Sí, si el sorteo tiene premio inferior a 1.000€.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cuantía del premio no determina la proporcionalidad."
+        },
+        {
+          "texto": "Sí, es una práctica común en redes sociales y por tanto admitida.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La práctica común no convierte algo ilegal en legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un menor de 13 años se registra en una red social falsificando su edad. ¿Quién responde si se trata su dato?",
+      "respuestas": [
+        {
+          "texto": "El responsable (plataforma) sigue obligado a implementar mecanismos razonables de verificación de edad. La falsificación por parte del menor no exime totalmente, aunque atenúa la responsabilidad si el responsable demuestra haber actuado diligentemente.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La accountability exige medios razonables; si solo se basa en autodeclaración del menor sin más, hay infracción del responsable."
+        },
+        {
+          "texto": "Solo responde el menor que mintió.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Un menor no responde jurídicamente; la responsabilidad recae en el responsable y eventualmente en los padres."
+        },
+        {
+          "texto": "Solo los padres del menor responden.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No traslada al responsable de su obligación de diligencia."
+        },
+        {
+          "texto": "Nadie responde; es un caso fortuito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sigue habiendo obligaciones para el responsable de verificación razonable."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa publica en su web la lista de empleados con foto, cargo y email. ¿Qué consideraciones aplican?",
+      "respuestas": [
+        {
+          "texto": "Hay que informar a los empleados, identificar base jurídica (interés legítimo / contrato según justificación), minimización (¿hace falta foto?), facilitar el derecho de oposición y no incluir datos sensibles. No basta con la condición de empleado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aunque sea costumbre corporativa, hay límites RGPD. El consentimiento laboral está cuestionado por desequilibrio."
+        },
+        {
+          "texto": "Es libre porque la empresa es dueña de los datos del trabajador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La empresa no es \"dueña\" de los datos personales del trabajador."
+        },
+        {
+          "texto": "Solo si los trabajadores firman renuncia notarial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se exige formato notarial; sí información y base adecuada."
+        },
+        {
+          "texto": "Está prohibido en cualquier caso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es posible con las garantías correctas."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa contratada por un ayuntamiento para gestionar el padrón pierde el USB con datos. ¿A quién responsabiliza la AEPD?",
+      "respuestas": [
+        {
+          "texto": "Al ayuntamiento como responsable; la empresa como encargada también puede ser sancionada por incumplimientos propios (falta de medidas técnicas adecuadas). Ambos deben notificar e investigar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El responsable nunca \"externaliza\" su responsabilidad; la accountability permanece. El encargado responde de sus obligaciones propias."
+        },
+        {
+          "texto": "Solo a la empresa contratada; el ayuntamiento queda exonerado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad del ayuntamiento como responsable no desaparece."
+        },
+        {
+          "texto": "Solo al ayuntamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La empresa también puede ser sancionada por incumplimientos de encargado."
+        },
+        {
+          "texto": "Al empleado concreto que perdió el USB.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El empleado no responde directamente ante la AEPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un usuario solicita el acceso a todos sus datos a una gran tecnológica y la empresa responde 8 meses después con un PDF incompleto. ¿Qué incumplimientos hay?",
+      "respuestas": [
+        {
+          "texto": "Plazo (debió contestar en 1 mes, prorrogable a 3 si complejo), forma (debe ser completa y verificable), y derecho de acceso efectivo (debe permitir conocer qué datos, fines, plazos, destinatarios, origen, decisiones automatizadas). Sancionable por la AEPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una infracción típica que la AEPD ha sancionado en grandes plataformas."
+        },
+        {
+          "texto": "Ninguno; 8 meses es razonable para grandes empresas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El plazo máximo es 3 meses incluida la prórroga justificada."
+        },
+        {
+          "texto": "Solo se podría reclamar si hay daño económico cuantificable.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD puede sancionar sin necesidad de daño económico."
+        },
+        {
+          "texto": "Solo es problema si la respuesta no estaba cifrada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es otra dimensión; aquí el problema es plazo y completitud."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa española trata datos de usuarios de toda Europa desde un único establecimiento en Madrid. Si hay una reclamación de un usuario alemán, ¿qué autoridad es competente?",
+      "respuestas": [
+        {
+          "texto": "Funciona el \"one-stop-shop\": la AEPD actúa como autoridad principal (establecimiento principal en Madrid) y coopera con la autoridad alemana (autoridad afectada). El usuario puede reclamar ante cualquiera de las dos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El mecanismo de ventanilla única evita que las empresas multinacionales se enfrenten a 27 procedimientos paralelos."
+        },
+        {
+          "texto": "Solo la autoridad alemana, porque el usuario es alemán.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El one-stop-shop concentra en la autoridad del establecimiento principal."
+        },
+        {
+          "texto": "Solo la AEPD, porque la empresa está en Madrid.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la AEPD lidera, hay cooperación obligatoria con la alemana."
+        },
+        {
+          "texto": "El usuario debe acudir directamente al Tribunal de Justicia de la UE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La vía administrativa nacional es la primera; el TJUE es excepcional."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un empresa quiere subir copias de seguridad cifradas a un cloud en EEUU. ¿Es válido el argumento \"al estar cifrado, no es transferencia internacional\"?",
+      "respuestas": [
+        {
+          "texto": "No es válido. La transferencia se produce igual aunque los datos estén cifrados, mientras el responsable o el encargado puedan descifrarlos. Solo si las claves se quedan exclusivamente en la UE (y el proveedor EEUU realmente no puede descifrar) podría argumentarse zero knowledge.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cifrado por sí solo no exime de las garantías de transferencia internacional."
+        },
+        {
+          "texto": "Sí, el cifrado AES-256 exime de toda obligación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es complemento, no sustituto de las garantías de transferencia."
+        },
+        {
+          "texto": "Sí, si el responsable firma una declaración.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una declaración unilateral no sustituye las garantías RGPD."
+        },
+        {
+          "texto": "Sí, porque cifrado es anonimización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cifrado ≠ anonimización; el cifrado es reversible."
+        }
+      ]
+    },
+    {
+      "pregunta": "Un opositor solicita ver el examen corregido para impugnarlo. La administración alega que las anotaciones del corrector son \"datos del corrector\" y no se las muestra. ¿Es correcto?",
+      "respuestas": [
+        {
+          "texto": "No. Las anotaciones referidas al opositor (su examen) son sus datos personales (información que le concierne) y forman parte del derecho de acceso. Las anotaciones puramente internas del corrector pueden tener limitaciones, pero la doctrina europea exige transparencia.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El TJUE ha confirmado que las respuestas de examen y las anotaciones del corrector son datos personales del examinando."
+        },
+        {
+          "texto": "Sí, las anotaciones son datos del corrector, no del opositor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La jurisprudencia europea ha decidido lo contrario."
+        },
+        {
+          "texto": "Sí, los exámenes están exentos del RGPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal exención general."
+        },
+        {
+          "texto": "No, pero solo si paga una tasa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho de acceso es gratuito."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa borra todos los datos del CRM antes de una inspección de la AEPD. ¿Qué consecuencias tiene?",
+      "respuestas": [
+        {
+          "texto": "Agravante grave: obstrucción a la autoridad, destrucción de pruebas, mala fe. Puede multiplicar la sanción y derivar en responsabilidad penal (delito de daños informáticos / obstrucción a la justicia).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La cooperación con la AEPD es obligatoria; destruir pruebas es de los peores movimientos posibles."
+        },
+        {
+          "texto": "Ninguna, si los datos ya no eran necesarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si la inspección los necesitaba, su borrado es obstrucción."
+        },
+        {
+          "texto": "Atenuante por haber aplicado el principio de minimización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La minimización no se ejerce \"de golpe\" justo antes de una inspección."
+        },
+        {
+          "texto": "Solo problemas si los datos eran sensibles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obstrucción es problemática independientemente de la categoría de los datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una start-up está desarrollando una nueva app de mensajería y considera la protección de datos al final del desarrollo, antes de lanzar. ¿Cumple el principio de Privacy by Design?",
+      "respuestas": [
+        {
+          "texto": "No. Privacy by Design exige integrar la protección de datos desde el momento de la concepción del producto/servicio, no como añadido final. Aplicarlo tarde puede obligar a reescribir arquitectura y exponer brechas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El art. 25 RGPD habla expresamente de \"desde el momento de la determinación de los medios\" y \"durante el propio tratamiento\"."
+        },
+        {
+          "texto": "Sí, lo importante es que se cumpla antes del lanzamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"By design\" implica desde el diseño inicial, no antes del lanzamiento."
+        },
+        {
+          "texto": "Sí, siempre que el equipo legal lo revise.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La revisión final no equivale a diseño desde origen."
+        },
+        {
+          "texto": "El principio es opcional para start-ups.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El art. 25 aplica a todos los responsables, sin excepción por tamaño."
+        }
+      ]
+    }
+  ]
+}

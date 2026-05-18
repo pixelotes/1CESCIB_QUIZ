@@ -1,0 +1,730 @@
+{
+  "tema": "RA5 - Continuidad de negocio (ISO 22301), Ley PIC y marcos normativos comparados",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué cuatro factores determinan típicamente qué marco normativo aplica a una organización?",
+      "respuestas": [
+        {
+          "texto": "1) El tipo de información que procesa, 2) la localización geográfica/jurisdicción, 3) las políticas impuestas por la propia organización, 4) el tipo de organización (pública/privada, sector regulado).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso un hospital público español tiene que cumplir RGPD + LOPDGDD + ENS + Ley 41/2002 + NIS2 + posiblemente Ley PIC, todos a la vez."
+        },
+        {
+          "texto": "Únicamente el número de empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es uno de los factores, pero no el único determinante."
+        },
+        {
+          "texto": "Solo el sector industrial concreto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El sector influye, pero hay muchos otros factores."
+        },
+        {
+          "texto": "Solo el país donde está la sede principal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La localización es factor, pero no excluye los demás (tipo de info, organización, decisiones internas)."
+        }
+      ]
+    },
+    {
+      "pregunta": "Una empresa española que vende a clientes en Europa y América Latina, ¿qué normativa de protección de datos debe respetar?",
+      "respuestas": [
+        {
+          "texto": "RGPD + LOPDGDD (porque está en la UE) + las normativas nacionales de protección de datos de cada país de Latinoamérica en el que opere (LGPD brasileña, equivalentes argentino, colombiano, mexicano, etc.).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las normas no se solapan necesariamente bien; hay que cumplir todas las aplicables al mismo tiempo."
+        },
+        {
+          "texto": "Solo el RGPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el RGPD aplica, no exime de las normas nacionales de otros países donde opera."
+        },
+        {
+          "texto": "Solo la LOPDGDD por ser española.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD aplica directamente y las normativas de los países donde opera también."
+        },
+        {
+          "texto": "Solo CCPA por afectar a algunos clientes californianos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CCPA es de California; aquí se habla de Europa y Latinoamérica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SGSI (Sistema de Gestión de Seguridad de la Información)?",
+      "respuestas": [
+        {
+          "texto": "Conjunto de políticas, procedimientos y directrices junto a los recursos y actividades asociados, administrados colectivamente para proteger los activos de información esenciales de una organización. Debe involucrar a toda la organización y contar con apoyo de la dirección.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un sistema de gestión, no una herramienta concreta; ISO 27001 lo certifica."
+        },
+        {
+          "texto": "Un software antivirus centralizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SGSI es un sistema de gestión, no un software."
+        },
+        {
+          "texto": "Un protocolo de cifrado para datos sensibles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser parte de los controles, pero no es el SGSI en sí."
+        },
+        {
+          "texto": "Una unidad del CCN dedicada a la administración pública.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SGSI es una entidad organizativa, no un departamento gubernamental."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el ciclo de mejora continua que se utiliza para implantar un SGSI?",
+      "respuestas": [
+        {
+          "texto": "El Ciclo de Deming, también conocido como PDCA (Plan, Do, Check, Act) o PHVA (Planificar, Hacer, Verificar, Actuar).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las 4 fases son iterativas: planificar la mejora, ejecutarla, verificar resultados y actuar para corregir/mejorar."
+        },
+        {
+          "texto": "El modelo Waterfall (cascada) clásico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Waterfall es desarrollo de software, no SGSI."
+        },
+        {
+          "texto": "El ciclo OODA (Observar, Orientar, Decidir, Actuar).",
+          "correcta": false,
+          "explicacion": "Incorrecto. OODA es de toma de decisiones militares; PDCA es el modelo SGSI."
+        },
+        {
+          "texto": "El ciclo SCRUM con sprints de 2 semanas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SCRUM es metodología ágil de desarrollo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué normas de la familia ISO/IEC 27000 son las más relevantes y para qué sirve cada una?",
+      "respuestas": [
+        {
+          "texto": "27000 (definiciones), 27001 (requisitos del SGSI, ÚNICA certificable), 27002 (objetivos de control y controles recomendables), 27003 (manual de implantación), 27004 (técnicas de medida), 27005 (gestión de riesgos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 27001 es la certificable; las demás son guía."
+        },
+        {
+          "texto": "Solo existe la ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay toda una familia de normas en la serie 27000."
+        },
+        {
+          "texto": "Todas son certificables individualmente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La certificable es la 27001; el resto son normas de apoyo."
+        },
+        {
+          "texto": "Son normas españolas exclusivas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO/IEC son normas internacionales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué activos se consideran \"esenciales\" según el modelo de inventario para un SGSI?",
+      "respuestas": [
+        {
+          "texto": "La información (datos críticos del negocio) y los servicios que el sistema facilita. El resto (datos, software, hardware, instalaciones, personal) son activos de soporte que sirven para tratar y entregar los esenciales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La distinción \"esenciales\" vs \"de soporte\" permite priorizar la protección hacia lo que realmente aporta valor al negocio."
+        },
+        {
+          "texto": "Únicamente los servidores físicos del CPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los servidores son activos de soporte, no esenciales."
+        },
+        {
+          "texto": "Solo el personal humano de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El personal es activo importante pero no es el único esencial."
+        },
+        {
+          "texto": "Los datos personales y nada más.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos personales son una parte de la información esencial, no la única."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dos enfoques se pueden usar para analizar las dependencias entre activos en un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Up-to-down (de un activo de negocio se identifican qué activos tecnológicos necesita) y Down-to-up (de un activo tecnológico se identifica sobre qué activos de negocio impactaría un fallo).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambos enfoques son complementarios: uno parte del valor de negocio, el otro del riesgo técnico."
+        },
+        {
+          "texto": "Solo \"top-down\" desde la dirección hacia los empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es estructura jerárquica organizativa, no análisis de dependencias de activos."
+        },
+        {
+          "texto": "Centralizado o descentralizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa terminología no es la del análisis de dependencias."
+        },
+        {
+          "texto": "Análisis técnico o legal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la clasificación correcta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las cuatro estrategias para la gestión del riesgo según ISO 27005 / el material?",
+      "respuestas": [
+        {
+          "texto": "Eliminar (suprimir el origen), Transferir (a un seguro o tercero), Asumir (aceptar el riesgo) y Mitigar (reducir probabilidad o impacto con controles).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son las 4 opciones clásicas; en cada riesgo concreto se elige la más adecuada o una combinación."
+        },
+        {
+          "texto": "Únicamente mitigar, siempre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay 4 estrategias; la elección depende del análisis coste/beneficio."
+        },
+        {
+          "texto": "Detectar, contener, erradicar y recuperar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso son fases de respuesta a incidentes (NIST SP 800-61), no estrategias de gestión de riesgos."
+        },
+        {
+          "texto": "Identificar, evaluar, documentar, archivar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la clasificación clásica de estrategias de tratamiento de riesgo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Continuidad de Negocio y qué norma internacional certifica los Sistemas de Gestión de Continuidad de Negocio (SGCN/BCMS)?",
+      "respuestas": [
+        {
+          "texto": "Es la capacidad de una organización para mantener su actividad ante una amenaza materializada (interna o externa) que afecta al desarrollo normal de las actividades. La norma internacional certificable es la ISO 22301.",
+          "correcta": true,
+          "explicacion": "¡Correcto! ISO 22301 describe los requisitos del SGCN/BCMS (Business Continuity Management System)."
+        },
+        {
+          "texto": "Es lo mismo que un SGSI; lo certifica ISO 27001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Continuidad de negocio y SGSI son distintos; SGCN es ISO 22301."
+        },
+        {
+          "texto": "La continuidad la certifica ISO 9001 (calidad).",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 9001 es calidad; ISO 22301 es continuidad."
+        },
+        {
+          "texto": "La certifica el RGPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es protección de datos, no certificación de continuidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre un Plan de Continuidad de Negocio (PCN) y un Plan de Recuperación ante Desastres (PRD)?",
+      "respuestas": [
+        {
+          "texto": "El PCN es más amplio: contempla la continuidad desde múltiples perspectivas (infraestructura física/lógica, comunicaciones, TIC, personas, logística). El PRD es reactivo y enfocado a recuperar la funcionalidad perdida por el incidente, sin entrar en analizar las causas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El PRD suele ser un componente del PCN; recuperación inmediata vs continuidad global."
+        },
+        {
+          "texto": "Son exactamente lo mismo con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son planes distintos con alcances diferentes."
+        },
+        {
+          "texto": "El PRD es más amplio que el PCN.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es al revés: el PCN abarca más."
+        },
+        {
+          "texto": "El PRD solo se activa con desastres naturales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PRD aplica a cualquier tipo de incidente que requiera recuperación, no solo desastres naturales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un PCTIC (Plan de Continuidad TIC)?",
+      "respuestas": [
+        {
+          "texto": "El plan de continuidad específico para el ámbito TIC: cómo recuperar/sustituir routers, servidores, sistemas, datos y servicios tecnológicos tras un incidente. Es un componente del PCN global de la organización.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El PCTIC es la parte tecnológica del PCN; convive con planes de infraestructura física, logística, etc."
+        },
+        {
+          "texto": "Un plan para cerrar la empresa definitivamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La continuidad es lo contrario al cierre: busca mantener actividad."
+        },
+        {
+          "texto": "Un plan de marketing para lanzamientos TIC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. PCTIC es continuidad, no marketing."
+        },
+        {
+          "texto": "Un plan para sustituir todo el hardware cada 5 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es renovación tecnológica, no continuidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las fases típicas de un PCN según el material?",
+      "respuestas": [
+        {
+          "texto": "Determinación del alcance, Análisis de la organización, Estrategia de continuidad, Respuesta a la contingencia (Plan de Crisis), Pruebas, y Formación/concienciación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Estas 6 fases cubren todo el ciclo desde el diseño hasta la actualización del PCN."
+        },
+        {
+          "texto": "Solo dos fases: planificar y ejecutar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El proceso es más amplio y estructurado."
+        },
+        {
+          "texto": "Únicamente las del ciclo PDCA.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PCN tiene fases propias diferenciadas, aunque comparte filosofía de mejora continua."
+        },
+        {
+          "texto": "Solo dos fases: incidente y recuperación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay fases previas (planificación, análisis, estrategia) y posteriores (pruebas, formación)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el Plan de Crisis dentro del PCN y por qué es el documento más importante?",
+      "respuestas": [
+        {
+          "texto": "Es el elemento principal del PCN; su objetivo es anticiparse a posibles situaciones y evitar tomar decisiones improvisadas en el momento del incidente. Define qué hacer, quién decide y qué activar.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La improvisación durante una crisis multiplica errores; el Plan de Crisis aporta estructura para decidir bajo presión."
+        },
+        {
+          "texto": "Es un documento técnico exclusivo de IT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es transversal: implica a dirección, comunicación, legal, IT, RRHH, etc."
+        },
+        {
+          "texto": "Es un documento de marketing para la prensa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque la comunicación es parte, el Plan de Crisis es operativo, no de marketing."
+        },
+        {
+          "texto": "Es la lista de teléfonos del equipo IT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa lista es un componente menor del plan; el Plan de Crisis es mucho más amplio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el MTD (Tiempo Máximo Tolerable de Caída) y para qué sirve en un PCN?",
+      "respuestas": [
+        {
+          "texto": "Es el plazo máximo que una organización puede tolerar la interrupción de un servicio crítico antes de sufrir un daño grave o irreversible al negocio. Determina los objetivos de recuperación (RTO) y el dimensionado de los planes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! MTD ≥ RTO. Si la recuperación supera el MTD, el negocio puede no sobrevivir al incidente."
+        },
+        {
+          "texto": "El número máximo de horas extra del equipo IT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con horas extra."
+        },
+        {
+          "texto": "El tiempo máximo de retención de backups.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la retención; el MTD es el de tolerancia a interrupción."
+        },
+        {
+          "texto": "El tiempo total de un proyecto IT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. MTD se refiere a la tolerancia a caída de servicio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Directiva NIS y cuál es su propósito?",
+      "respuestas": [
+        {
+          "texto": "Directiva (UE) 2016/1148 (sustituida y ampliada por NIS2 en 2022), relativa a medidas para garantizar un elevado nivel común de seguridad de las redes y sistemas de información en la UE. Objetivos: armonizar estrategias, fomentar cultura de ciberseguridad y facilitar la gestión de riesgos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIS es la primera directiva europea horizontal sobre ciberseguridad."
+        },
+        {
+          "texto": "Una norma estadounidense sobre protección de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS es directiva europea, no estadounidense."
+        },
+        {
+          "texto": "Un protocolo de red equivalente a TCP/IP.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS no es un protocolo técnico."
+        },
+        {
+          "texto": "Una herramienta de la AEPD para gestionar brechas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS es una directiva regulatoria, no una herramienta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se transpone la Directiva NIS al ordenamiento jurídico español?",
+      "respuestas": [
+        {
+          "texto": "Mediante el Real Decreto-ley 12/2018, desarrollado por el Real Decreto 43/2021. NIS2 (Directiva (UE) 2022/2555) está pendiente de transposición completa en España.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Las directivas europeas necesitan transposición nacional; el RDL 12/2018 es la transposición clave de la NIS original."
+        },
+        {
+          "texto": "Por aplicación directa, sin transposición.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las directivas SIEMPRE necesitan transposición (a diferencia de los reglamentos como el RGPD)."
+        },
+        {
+          "texto": "Por una orden ministerial del Ministerio del Interior.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La transposición se hace por norma con rango legal (RDL/Ley)."
+        },
+        {
+          "texto": "Por la Constitución Española.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Constitución no transpone directivas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A qué tipos de organizaciones afecta la Directiva NIS?",
+      "respuestas": [
+        {
+          "texto": "Empresas de servicios esenciales (energía, transporte, banca, infraestructuras de mercados financieros, salud, agua potable, infraestructura digital) y proveedores de servicios digitales (marketplaces, motores de búsqueda, cloud). Con NIS2 se amplían los sectores.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIS2 además incorpora sectores como AAPP, servicios postales, gestión de residuos, etc."
+        },
+        {
+          "texto": "Únicamente a las empresas con sede en Bruselas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica en toda la UE, no solo a Bélgica."
+        },
+        {
+          "texto": "Solo a empresas con más de 1.000 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS aplica por tipo de servicio prestado, no solo por tamaño."
+        },
+        {
+          "texto": "Únicamente a la administración pública.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS aplica a entidades privadas que prestan servicios esenciales; NIS2 amplió a más sectores."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué excepciones tiene la Directiva NIS original respecto a tamaño de empresa?",
+      "respuestas": [
+        {
+          "texto": "Pequeñas empresas y microempresas (menos de 50 trabajadores o menos de 10 millones de euros de facturación) suelen quedar fuera del ámbito, salvo casos específicos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIS2 mantiene la misma exención por tamaño, aunque amplía sectores."
+        },
+        {
+          "texto": "Únicamente las empresas familiares.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El criterio no es \"familiar\" sino por tamaño/facturación."
+        },
+        {
+          "texto": "Solo las cooperativas y mutualidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La excepción es por tamaño, no por forma jurídica."
+        },
+        {
+          "texto": "Ninguna; aplica a todas las empresas por igual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Sí hay exención por tamaño."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué figuras designa cada Estado miembro para cumplir con la Directiva NIS?",
+      "respuestas": [
+        {
+          "texto": "Una o más autoridades nacionales competentes, un punto de contacto único, y uno o varios CSIRT (Equipos de Respuesta a Incidentes de Seguridad Informática) que forman parte de una red europea.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En España: INCIBE-CERT, CCN-CERT y ESPDEF-CERT son los principales CSIRT."
+        },
+        {
+          "texto": "Solo un Director Nacional de Ciberseguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS exige varias figuras complementarias."
+        },
+        {
+          "texto": "Solo un DPO nacional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO es figura del RGPD; NIS no exige un \"DPO nacional\"."
+        },
+        {
+          "texto": "Solo un embajador en Bruselas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay tal figura específica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las \"infraestructuras críticas\" según la Ley PIC y la Estrategia de Seguridad Nacional?",
+      "respuestas": [
+        {
+          "texto": "Infraestructuras estratégicas cuyo funcionamiento es indispensable y no permite soluciones alternativas; soportan funciones sociales básicas (salud, seguridad, bienestar social y económico, funcionamiento del sector público).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Su parada o destrucción tendría consecuencias graves para la sociedad."
+        },
+        {
+          "texto": "Cualquier infraestructura tecnológica de una empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. \"Crítica\" tiene un sentido jurídico específico de servicio esencial para la sociedad."
+        },
+        {
+          "texto": "Únicamente las infraestructuras militares.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cubre energía, agua, salud, transporte, financiero, etc., además de seguridad."
+        },
+        {
+          "texto": "Los centros comerciales de gran superficie.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los centros comerciales no son infraestructura crítica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la jerarquía de planes del PNPIC (Plan Nacional de Protección de Infraestructuras Críticas)?",
+      "respuestas": [
+        {
+          "texto": "Planes Estratégicos Sectoriales (PES, describen características y vulnerabilidades del sector) → Planes de Seguridad del Operador (PSO, política general del operador) → Planes de Protección Específicos (PPE, por instalación) → Planes de Apoyo Operativo (PAO, ejecutados por Fuerzas y Cuerpos de Seguridad).",
+          "correcta": true,
+          "explicacion": "¡Correcto! De más general (PES) a más concreto (PPE), con apoyo policial (PAO)."
+        },
+        {
+          "texto": "Un único plan global llamado \"Plan PIC\".",
+          "correcta": false,
+          "explicacion": "Incorrecto. La estructura es jerárquica con varios niveles."
+        },
+        {
+          "texto": "Plan A, Plan B y Plan C según urgencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura de la Ley PIC."
+        },
+        {
+          "texto": "Solo el PSO obligatorio para cada operador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El PSO existe pero conviven con PES, PPE y PAO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Quién es el CNPIC y qué funciones tiene?",
+      "respuestas": [
+        {
+          "texto": "Centro Nacional para la Protección de las Infraestructuras Críticas: coordina y supervisa actividades de la Secretaría de Estado de Seguridad en materia de IICC; determina la criticidad, asiste al Secretario de Estado y es órgano de contacto/coordinación con los agentes del sistema.",
+          "correcta": true,
+          "explicacion": "¡Correcto! CNPIC depende del Ministerio del Interior y centraliza la coordinación nacional de protección de IICC."
+        },
+        {
+          "texto": "Es el equivalente español de la AEPD para infraestructuras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AEPD se ocupa de protección de datos; CNPIC de infraestructuras críticas."
+        },
+        {
+          "texto": "Es una empresa privada de ciberseguridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CNPIC es organismo público bajo el Ministerio del Interior."
+        },
+        {
+          "texto": "Es un sistema informático automatizado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CNPIC es una entidad organizativa, no un sistema."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué carácter tiene la información del Catálogo Nacional de Infraestructuras Críticas?",
+      "respuestas": [
+        {
+          "texto": "Carácter SECRETO, dada la alta sensibilidad de la información para la Seguridad Nacional (más de 3.500 instalaciones con su ubicación, titularidad, servicio prestado y nivel de protección requerido).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Publicar las infraestructuras críticas y sus debilidades sería un mapa de objetivos para cualquier atacante."
+        },
+        {
+          "texto": "Carácter público, disponible en la web del Ministerio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es información clasificada como secreta."
+        },
+        {
+          "texto": "Carácter abierto bajo Ley de Transparencia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Está excluido de la Ley de Transparencia por razones de Seguridad Nacional."
+        },
+        {
+          "texto": "Carácter comercial y vendible a terceros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es información comercializable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dos figuras de enlace exige el PNPIC para los operadores críticos?",
+      "respuestas": [
+        {
+          "texto": "El Responsable de Seguridad y Enlace (contacto con la Autoridad a nivel estratégico) y el Delegado de Seguridad (contacto a nivel técnico-operativo).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son los puntos de contacto formales entre operador crítico y la Autoridad. Cada operador debe nombrarlos."
+        },
+        {
+          "texto": "Únicamente el CISO de la organización.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son dos figuras específicas distintas del CISO."
+        },
+        {
+          "texto": "El Director de Recursos Humanos y el Asesor Jurídico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Ley PIC exige figuras de seguridad específicas, no genéricas."
+        },
+        {
+          "texto": "El representante sindical y un consejero externo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son funciones de enlace PIC."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los principales CSIRTs nacionales españoles y a qué ámbito atienden?",
+      "respuestas": [
+        {
+          "texto": "CCN-CERT (Sector Público y operadores estratégicos), INCIBE-CERT (ciudadanos, empresas privadas y operadores de servicios esenciales no AAPP), ESPDEF-CERT (defensa). Cada uno cubre un ámbito complementario.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un modelo de CSIRTs sectoriales que se coordinan entre sí y con la red europea."
+        },
+        {
+          "texto": "Solo existe CCN-CERT para todos los sectores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay varios CSIRTs nacionales con ámbitos diferenciados."
+        },
+        {
+          "texto": "INCIBE-CERT solo se ocupa de ciudadanos, no de empresas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. INCIBE-CERT atiende ciudadanos Y empresas privadas."
+        },
+        {
+          "texto": "ESPDEF-CERT atiende al sector privado en general.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ESPDEF-CERT es de Defensa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se relacionan RGPD, ENS, ISO 27001 y NIS si todos pueden aplicar al mismo tiempo a una organización?",
+      "respuestas": [
+        {
+          "texto": "Tienen objetivos solapados pero complementarios: RGPD protege datos personales, ENS gestiona seguridad en AAPP, ISO 27001 certifica el SGSI voluntariamente, NIS asegura servicios esenciales. Muchos controles se reutilizan; cumplir uno facilita cumplir los demás.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En la práctica, las organizaciones diseñan un único sistema de gestión que atiende a varios marcos con el menor esfuerzo posible."
+        },
+        {
+          "texto": "Son incompatibles y solo se puede cumplir uno.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son compatibles y se cumplen simultáneamente."
+        },
+        {
+          "texto": "El RGPD deroga a todos los demás.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Cada uno tiene un ámbito propio; no se derogan entre sí."
+        },
+        {
+          "texto": "Solo la AEPD vigila el cumplimiento de los cuatro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. AEPD vigila RGPD; otros marcos tienen otras autoridades (CCN para ENS, INCIBE/CCN para NIS, ENAC para ISO, etc.)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué obligación esencial introduce la Directiva NIS sobre la figura del Responsable de Seguridad de las redes y sistemas?",
+      "respuestas": [
+        {
+          "texto": "Exige su creación con funciones específicas: elaborar políticas de seguridad, supervisar su aplicación, declaración de aplicabilidad, remitir notificaciones de incidentes vía el CSIRT de referencia, aplicar instrucciones de la autoridad competente y proporcionar información requerida.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es figura obligatoria distinta del DPO del RGPD, aunque pueden coexistir y a veces coincidir."
+        },
+        {
+          "texto": "Lo elimina y deja la responsabilidad al CEO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS crea explícitamente esta figura, no la elimina."
+        },
+        {
+          "texto": "Lo convierte en figura voluntaria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS lo hace obligatorio para los operadores afectados."
+        },
+        {
+          "texto": "Lo subordina jerárquicamente al DPO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son figuras independientes con funciones distintas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo es la notificación de incidentes que exige NIS a los operadores?",
+      "respuestas": [
+        {
+          "texto": "Notificación inicial tan pronto como se tenga constancia del incidente y sus circunstancias, notificaciones intermedias para actualizar/completar información, y notificación final cuando el incidente se haya resuelto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! NIS2 además fija plazos concretos (24h alerta temprana, 72h notificación detallada, 1 mes informe final)."
+        },
+        {
+          "texto": "Una única notificación tras 30 días.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS exige notificación temprana y seguimiento, no esperar un mes."
+        },
+        {
+          "texto": "Solo se notifica si hay datos personales involucrados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS notifica cualquier incidente significativo de servicios esenciales, no solo brechas de datos personales."
+        },
+        {
+          "texto": "Notificación voluntaria a discreción del operador.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es obligatoria."
+        }
+      ]
+    },
+    {
+      "pregunta": "Resumiendo: si un operador presta servicios esenciales en España y trata datos personales, ¿qué marcos suelen aplicarle simultáneamente?",
+      "respuestas": [
+        {
+          "texto": "RGPD + LOPDGDD (protección de datos), NIS/NIS2 vía RDL 12/2018 (servicios esenciales), Ley PIC si es operador crítico, ENS si es AAPP o presta servicios a AAPP, e ISO 27001/22301 si decide certificarse voluntariamente. Y normativa sectorial específica (banca: DORA; sanidad: Ley 41/2002; etc.).",
+          "correcta": true,
+          "explicacion": "¡Correcto! El cumplimiento normativo en ciberseguridad es multi-marco; conviene integrarlo en un único sistema de gestión."
+        },
+        {
+          "texto": "Solo el RGPD y nada más.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Para servicios esenciales aplican varios marcos."
+        },
+        {
+          "texto": "Solo la ISO 27001 voluntariamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay marcos obligatorios que no se pueden obviar."
+        },
+        {
+          "texto": "Únicamente la Ley PIC.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ley PIC es solo una pieza; aplican muchos otros marcos."
+        }
+      ]
+    }
+  ]
+}

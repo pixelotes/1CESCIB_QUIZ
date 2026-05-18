@@ -1,0 +1,1080 @@
+{
+  "tema": "RA4 - Normativas de Protección de Datos (LORTAD, LOPD, LOPDGDD, RGPD, LSSI, derechos ARCO)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué diferencia hay entre una \"ley\" y un \"reglamento\" en derecho español?",
+      "respuestas": [
+        {
+          "texto": "La ley es una norma con rango superior aprobada por el Parlamento; el reglamento es una norma de desarrollo, aprobada por el Gobierno, que detalla cómo aplicar lo que la ley establece.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ley define el qué, el reglamento concreta el cómo. Un reglamento no puede contradecir la ley que desarrolla."
+        },
+        {
+          "texto": "Son sinónimos; el nombre depende del año en que se publica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ley y reglamento tienen rangos jerárquicos distintos."
+        },
+        {
+          "texto": "El reglamento tiene mayor rango que la ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: la ley es superior al reglamento."
+        },
+        {
+          "texto": "Solo el reglamento es de obligado cumplimiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son de obligado cumplimiento; la ley es además jerárquicamente superior."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre un \"reglamento\" europeo y una \"directiva\" europea?",
+      "respuestas": [
+        {
+          "texto": "El reglamento es de aplicación directa en todos los Estados miembros sin necesidad de transposición; la directiva fija objetivos y cada Estado la transpone a su ordenamiento mediante una ley nacional.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso el RGPD (reglamento) se aplica directamente; la Directiva 95/46/CE necesitó la LOPD para transponerse en España."
+        },
+        {
+          "texto": "Son lo mismo; cambia solo el nombre según el país.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son instrumentos jurídicos europeos con efectos distintos."
+        },
+        {
+          "texto": "La directiva es de aplicación directa y el reglamento necesita transposición.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario."
+        },
+        {
+          "texto": "Ambos son recomendaciones no vinculantes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambos son vinculantes; las recomendaciones son otra figura distinta."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué artículo de la Constitución Española es la base constitucional de la protección de datos personales?",
+      "respuestas": [
+        {
+          "texto": "El artículo 18.4, que establece que la ley limitará el uso de la informática para garantizar la intimidad personal y el pleno ejercicio de los derechos ciudadanos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Sobre el 18.4 CE se sostiene toda la normativa posterior (LORTAD, LOPD, LOPDGDD)."
+        },
+        {
+          "texto": "El artículo 14, sobre igualdad ante la ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El 14 CE consagra la igualdad, no la protección de datos."
+        },
+        {
+          "texto": "El artículo 20, sobre libertad de expresión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El 20 CE regula libertad de expresión e información."
+        },
+        {
+          "texto": "El artículo 16, sobre libertad ideológica y religiosa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El 16 CE regula libertad ideológica, religiosa y de culto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál fue la primera ley española sobre protección de datos personales?",
+      "respuestas": [
+        {
+          "texto": "La LORTAD (Ley Orgánica 5/1992), que reguló el tratamiento automatizado de datos personales y creó la Agencia Española de Protección de Datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Fue derogada por la LOPD en 1999, pero introdujo conceptos clave como los derechos ARCO y la AEPD."
+        },
+        {
+          "texto": "La LOPD (1999).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD fue posterior; derogó a la LORTAD."
+        },
+        {
+          "texto": "La LOPDGDD (2018).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD es de 2018, mucho posterior."
+        },
+        {
+          "texto": "La LSSI (2002).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI regula servicios de la sociedad de la información, no es la primera ley de protección de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas \"ARCO\" en derechos de protección de datos clásicos?",
+      "respuestas": [
+        {
+          "texto": "Acceso, Rectificación, Cancelación y Oposición.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son los cuatro derechos clásicos introducidos por la LORTAD y mantenidos en LOPD."
+        },
+        {
+          "texto": "Auditoría, Recopilación, Custodia y Operación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con los derechos ARCO."
+        },
+        {
+          "texto": "Anonimización, Restricción, Cifrado y Olvido.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son conceptos relacionados pero no son las siglas ARCO."
+        },
+        {
+          "texto": "Autorización, Renovación, Caducidad y Obligación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con la definición."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué nuevos derechos añadió el RGPD a los clásicos derechos ARCO?",
+      "respuestas": [
+        {
+          "texto": "Derecho a la portabilidad, derecho al olvido (supresión reforzada) y derecho a la limitación del tratamiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD amplía los ARCO con nuevos derechos para adaptarse al entorno digital."
+        },
+        {
+          "texto": "Únicamente el derecho al cifrado obligatorio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es una medida técnica, no un derecho del interesado."
+        },
+        {
+          "texto": "Derecho a la desconexión y a la firma electrónica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La desconexión digital la añade la LOPDGDD (no el RGPD) y la firma electrónica es otra normativa."
+        },
+        {
+          "texto": "Solo el derecho al acceso.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El acceso ya existía en los ARCO; el RGPD añade portabilidad, olvido y limitación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué directiva europea fue derogada con la entrada en vigor del RGPD en 2018?",
+      "respuestas": [
+        {
+          "texto": "La Directiva 95/46/CE, que fue el marco europeo armonizador previo al RGPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La 95/46/CE rigió durante más de 20 años hasta ser reemplazada por el RGPD."
+        },
+        {
+          "texto": "La Directiva NIS (2016/1148).",
+          "correcta": false,
+          "explicacion": "Incorrecto. NIS regula ciberseguridad de servicios esenciales, no protección de datos."
+        },
+        {
+          "texto": "La Directiva de servicios de pago (PSD2).",
+          "correcta": false,
+          "explicacion": "Incorrecto. PSD2 es sobre pagos electrónicos."
+        },
+        {
+          "texto": "La Directiva eIDAS.",
+          "correcta": false,
+          "explicacion": "Incorrecto. eIDAS regula identificación y firma electrónica."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué amplió la LOPD (1999) respecto a la LORTAD (1992)?",
+      "respuestas": [
+        {
+          "texto": "Extendió el ámbito a ficheros NO automatizados (papel), reforzó los derechos ciudadanos y endureció el régimen sancionador.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LORTAD solo cubría ficheros automatizados; la LOPD incorporó los ficheros en papel."
+        },
+        {
+          "texto": "Eliminó la Agencia Española de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD se mantuvo; fue creada por la LORTAD."
+        },
+        {
+          "texto": "Suprimió los derechos ARCO por considerarlos obsoletos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los derechos ARCO se mantuvieron y se reforzaron."
+        },
+        {
+          "texto": "Limitó la regulación únicamente a empresas privadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD aplica también a sector público."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué reguló el Real Decreto 1720/2007 (Reglamento de desarrollo de la LOPD)?",
+      "respuestas": [
+        {
+          "texto": "Las medidas de seguridad técnicas y organizativas en tres niveles (básico, medio, alto), procedimientos para ejercer los ARCO y obligaciones de responsable/encargado del tratamiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Los tres niveles de seguridad (básico/medio/alto) fueron una de sus aportaciones más características."
+        },
+        {
+          "texto": "La creación del Esquema Nacional de Seguridad (ENS).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS se reguló en otro Real Decreto (3/2010 y posteriores)."
+        },
+        {
+          "texto": "El régimen del DPO (Delegado de Protección de Datos).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO lo introduce el RGPD, no el reglamento de la LOPD."
+        },
+        {
+          "texto": "La obligación de cifrado AES-256 en todos los tratamientos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No prescribía algoritmos concretos; definía requisitos por nivel."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuándo se aprobó el RGPD (Reglamento UE 2016/679) y cuándo entró en aplicación efectiva?",
+      "respuestas": [
+        {
+          "texto": "Se aprobó en abril de 2016 y entró en aplicación efectiva el 25 de mayo de 2018, tras dos años de adaptación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El plazo de dos años se dio precisamente para que las organizaciones se adaptaran."
+        },
+        {
+          "texto": "Se aprobó y aplicó simultáneamente en 2018.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hubo dos años entre aprobación (2016) y aplicación (2018)."
+        },
+        {
+          "texto": "Se aprobó en 2020 tras la pandemia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es muy anterior a la pandemia."
+        },
+        {
+          "texto": "Sigue en negociación y no se ha aplicado todavía.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Lleva en aplicación desde 2018."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica del RGPD respecto a su aplicación en los Estados miembros de la UE?",
+      "respuestas": [
+        {
+          "texto": "Es de aplicación directa en todos los Estados miembros, sin necesidad de transposición a leyes nacionales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al ser un reglamento (no directiva), entra en vigor directamente en toda la UE."
+        },
+        {
+          "texto": "Cada país debe traducirlo y aprobar su propia versión.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso aplica a directivas, no a reglamentos europeos."
+        },
+        {
+          "texto": "Solo aplica a empresas con sede en Bruselas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier organización que trate datos de residentes en la UE."
+        },
+        {
+          "texto": "Es voluntario y depende de la adhesión de cada empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es de obligado cumplimiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las multas máximas previstas en el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Hasta 20 millones de euros o el 4% del volumen de negocio anual mundial total del ejercicio anterior, la que sea mayor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es uno de los regímenes sancionadores más duros del mundo en protección de datos."
+        },
+        {
+          "texto": "Hasta 100.000 euros como máximo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La sanción máxima es muy superior."
+        },
+        {
+          "texto": "Hasta el 50% del beneficio anual.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tope es 4% del volumen de negocio o 20M€."
+        },
+        {
+          "texto": "No hay multas; solo amonestaciones públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD prevé multas administrativas significativas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley española adapta el ordenamiento al RGPD y deroga la LOPD de 1999?",
+      "respuestas": [
+        {
+          "texto": "La LOPDGDD (Ley Orgánica 3/2018, de Protección de Datos Personales y Garantía de los Derechos Digitales).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LOPDGDD complementa al RGPD en lo que el reglamento europeo deja a los Estados miembros."
+        },
+        {
+          "texto": "La LSSI (Ley 34/2002).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI regula servicios de la sociedad de la información, no protege datos."
+        },
+        {
+          "texto": "El Reglamento 1720/2007.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese reglamento desarrolla la LOPD anterior, no adapta el RGPD."
+        },
+        {
+          "texto": "La Ley 41/2002 de autonomía del paciente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa ley regula datos sanitarios y consentimiento informado, no es la adaptación al RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué edad mínima fija la LOPDGDD para que un menor pueda otorgar su consentimiento al tratamiento de datos personales?",
+      "respuestas": [
+        {
+          "texto": "14 años.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD permite a los Estados fijarla entre 13 y 16 años; España optó por 14."
+        },
+        {
+          "texto": "18 años (mayoría de edad).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD permite el consentimiento desde los 14 años."
+        },
+        {
+          "texto": "16 años, igual que el resto de la UE por defecto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD fija 16 como defecto, pero España la rebajó a 14."
+        },
+        {
+          "texto": "12 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El mínimo permitido por el RGPD es 13; España optó por 14."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué novedad introduce el Título X de la LOPDGDD?",
+      "respuestas": [
+        {
+          "texto": "Una serie de derechos digitales: desconexión digital en el ámbito laboral, derecho al olvido en redes sociales y neutralidad en Internet, entre otros.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Título X es una aportación específicamente española al marco RGPD."
+        },
+        {
+          "texto": "El régimen sancionador económico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El régimen sancionador está en otros títulos."
+        },
+        {
+          "texto": "La obligación de cifrar todos los datos personales con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD no prescribe algoritmos concretos."
+        },
+        {
+          "texto": "La creación de la Agencia Española de Protección de Datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD ya existía desde la LORTAD (1992)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué regula la LSSI-CE (Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico)?",
+      "respuestas": [
+        {
+          "texto": "Las obligaciones de prestadores de servicios de la sociedad de la información (información al usuario, comunicaciones comerciales, contratación electrónica, responsabilidad de intermediarios) y la lucha contra el spam.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LSSI es complementaria al RGPD: cubre el ámbito comercial electrónico, no la protección de datos en sí."
+        },
+        {
+          "texto": "Es la ley española de protección de datos posterior a la LOPDGDD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI es de 2002, anterior a la LOPDGDD, y regula otro ámbito."
+        },
+        {
+          "texto": "Crea la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD se creó con la LORTAD en 1992."
+        },
+        {
+          "texto": "Establece las medidas técnicas de los tres niveles (básico, medio, alto).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos niveles los regula el RD 1720/2007 (reglamento de la LOPD)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué obligación característica de la LSSI deben cumplir las webs que usan cookies no estrictamente técnicas?",
+      "respuestas": [
+        {
+          "texto": "Informar al usuario y obtener su consentimiento previo (banner de cookies) antes de instalarlas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El art. 22.2 LSSI exige consentimiento informado para cookies analíticas, publicitarias o de seguimiento."
+        },
+        {
+          "texto": "Cifrar las cookies con AES-256.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI no exige cifrado específico de cookies."
+        },
+        {
+          "texto": "Eliminar todas las cookies cada 24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duración la gestiona el responsable; la obligación es informar y consentir."
+        },
+        {
+          "texto": "Pagar una tasa anual a la AEPD por cada cookie.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tal tasa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se considera \"dato personal\" según el RGPD y la LOPDGDD?",
+      "respuestas": [
+        {
+          "texto": "Cualquier información (numérica, alfabética, gráfica, fotográfica, acústica o de cualquier tipo) concerniente a una persona física identificada o identificable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La definición es muy amplia para evitar lagunas: incluye IPs, IDs de sesión, biometría, etc."
+        },
+        {
+          "texto": "Únicamente el nombre, apellidos y DNI.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La definición legal es mucho más amplia."
+        },
+        {
+          "texto": "Solo los datos almacenados en un fichero informático.",
+          "correcta": false,
+          "explicacion": "Incorrecto. También aplica a tratamientos no automatizados."
+        },
+        {
+          "texto": "Solo los datos sensibles (salud, religión, ideología).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son categorías especiales; \"dato personal\" es mucho más general."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se considera una \"categoría especial de datos\" según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Datos genéticos, biométricos, de salud, ideología, afiliación sindical, religión, origen racial/étnico, orientación sexual y similares.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD añade explícitamente los datos genéticos y biométricos a las categorías sensibles."
+        },
+        {
+          "texto": "Solo los datos económicos del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos económicos no son por sí mismos categoría especial."
+        },
+        {
+          "texto": "Únicamente el nombre y apellidos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso son datos identificativos comunes, no categoría especial."
+        },
+        {
+          "texto": "Solo los datos de empleados de la administración pública.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La categoría es por la naturaleza del dato, no por el sujeto."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué principios fundamentales recoge el RGPD para el tratamiento de datos personales?",
+      "respuestas": [
+        {
+          "texto": "Licitud, lealtad y transparencia; limitación de la finalidad; minimización; exactitud; limitación del plazo de conservación; integridad y confidencialidad; responsabilidad proactiva.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son los siete principios del artículo 5 RGPD."
+        },
+        {
+          "texto": "Únicamente confidencialidad y disponibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son atributos de seguridad, no los principios completos del RGPD."
+        },
+        {
+          "texto": "Cifrado, hashing y firma digital.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas, no los principios jurídicos."
+        },
+        {
+          "texto": "Disponibilidad permanente y máxima retención.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Justo lo contrario: el RGPD limita la retención al mínimo necesario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el principio de \"minimización de datos\"?",
+      "respuestas": [
+        {
+          "texto": "Los datos personales tratados deben ser adecuados, pertinentes y limitados a lo estrictamente necesario para la finalidad para la que son tratados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No se pueden recoger datos \"por si acaso\"; solo los imprescindibles para la finalidad declarada."
+        },
+        {
+          "texto": "Reducir el tamaño en bytes de los ficheros donde se almacenan.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un principio técnico de espacio, sino jurídico."
+        },
+        {
+          "texto": "Recoger todos los datos posibles para análisis futuros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario."
+        },
+        {
+          "texto": "Minimizar el número de personas que acceden a los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el principio de mínimo privilegio o necesidad de saber, no la minimización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué características debe cumplir el consentimiento según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Libre, específico, informado, inequívoco y mediante una declaración o acción afirmativa clara; revocable en cualquier momento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD elimina la validez del consentimiento tácito o presunto (casillas premarcadas)."
+        },
+        {
+          "texto": "Debe darse por escrito ante notario.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No requiere intervención notarial."
+        },
+        {
+          "texto": "Es válido aunque se exprese silenciosamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El consentimiento tácito no es válido en el RGPD."
+        },
+        {
+          "texto": "Es irrevocable una vez otorgado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es revocable en cualquier momento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Es válido el consentimiento mediante casillas previamente marcadas (\"acepto recibir comunicaciones\" ya seleccionada por defecto)?",
+      "respuestas": [
+        {
+          "texto": "No. El RGPD exige consentimiento expreso mediante acción afirmativa; las casillas premarcadas son consentimiento tácito, no válido.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La pasividad del usuario no equivale a consentimiento."
+        },
+        {
+          "texto": "Sí, siempre que haya un enlace para desmarcarlas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La acción de desmarcar no equivale a consentimiento expreso."
+        },
+        {
+          "texto": "Sí, si se trata de comunicaciones comerciales de bajo impacto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La validez del consentimiento no depende del impacto comercial."
+        },
+        {
+          "texto": "Sí, porque la LSSI lo permite expresamente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI exige también consentimiento explícito para cookies y comunicaciones comerciales."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el derecho al olvido según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Derecho del interesado a obtener la supresión de sus datos personales cuando ya no son necesarios para la finalidad inicial, se revoca el consentimiento, hay tratamiento ilícito o imperativo legal de supresión.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una versión reforzada del derecho de cancelación de los ARCO clásicos."
+        },
+        {
+          "texto": "Derecho a borrar los logs del sistema operativo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El derecho al olvido aplica a datos personales del interesado, no a logs técnicos."
+        },
+        {
+          "texto": "Derecho a no recibir más correos electrónicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es parcialmente el derecho de oposición a comunicaciones comerciales, no el olvido."
+        },
+        {
+          "texto": "Derecho a cambiar de proveedor de servicios sin pagar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es portabilidad, no olvido."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el derecho a la portabilidad?",
+      "respuestas": [
+        {
+          "texto": "El interesado puede recibir los datos que le afectan, que haya facilitado a un responsable, en un formato estructurado, de uso común y de lectura mecánica (ej. CSV, JSON), y transmitirlos a otro responsable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Facilita cambiar de proveedor sin perder la información acumulada."
+        },
+        {
+          "texto": "Derecho a llevar el portátil del trabajo a casa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Distractor sin sentido técnico; el RGPD no regula portátiles."
+        },
+        {
+          "texto": "Obligación de cifrar los datos en tránsito.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es una medida técnica, no un derecho del interesado."
+        },
+        {
+          "texto": "Derecho a portar datos sin pagar a la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No existe tasa por ejercer el derecho de portabilidad."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre el derecho al olvido y el derecho a la limitación del tratamiento?",
+      "respuestas": [
+        {
+          "texto": "El derecho al olvido implica la SUPRESIÓN de los datos; la limitación del tratamiento NO supone eliminación, sino que los datos se conservan pero su tratamiento queda restringido (ej. solo conservación).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La limitación es útil cuando hay disputas o procesos legales pendientes que requieren conservar pero no usar."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son derechos distintos con efectos distintos."
+        },
+        {
+          "texto": "El derecho al olvido aplica solo a menores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier interesado."
+        },
+        {
+          "texto": "La limitación borra los datos y el olvido los conserva.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo al revés."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el principio de \"responsabilidad proactiva\" (accountability) en el RGPD?",
+      "respuestas": [
+        {
+          "texto": "El responsable del tratamiento no solo debe cumplir los principios, sino que debe ser capaz de DEMOSTRAR su cumplimiento mediante documentación, registros, EIPDs, etc.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es uno de los cambios más importantes del RGPD: el peso de la prueba recae en el responsable."
+        },
+        {
+          "texto": "Notificar todas las acciones a la AEPD antes de realizarlas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La notificación previa fue eliminada precisamente por el RGPD."
+        },
+        {
+          "texto": "Tratar siempre los datos en un mismo servidor físico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con la ubicación física."
+        },
+        {
+          "texto": "Reactivar el consentimiento cada año.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La accountability no exige reactivar consentimientos anualmente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los principios de \"Privacy by Design\" y \"Privacy by Default\"?",
+      "respuestas": [
+        {
+          "texto": "Privacy by Design: la protección de datos debe integrarse desde la fase de diseño del tratamiento. Privacy by Default: por defecto, solo se tratan los datos estrictamente necesarios para la finalidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Ambos están en el artículo 25 RGPD y son pilares de la responsabilidad proactiva."
+        },
+        {
+          "texto": "Son sinónimos del mismo principio.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son principios complementarios pero distintos."
+        },
+        {
+          "texto": "Son técnicas de cifrado simétrico.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No son técnicas de cifrado, son principios de diseño."
+        },
+        {
+          "texto": "Solo aplican a aplicaciones móviles.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplican a cualquier tratamiento de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Evaluación de Impacto en Protección de Datos (EIPD o DPIA)?",
+      "respuestas": [
+        {
+          "texto": "Procedimiento que analiza el nivel de riesgo que un tratamiento supone para los derechos y libertades de los interesados; obligatoria cuando el tratamiento implique alto riesgo (perfiles, nuevas tecnologías, datos sensibles a gran escala, vigilancia sistemática).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La EIPD es preventiva: se realiza ANTES de iniciar el tratamiento."
+        },
+        {
+          "texto": "Una auditoría financiera anual obligatoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene relación con auditoría financiera."
+        },
+        {
+          "texto": "Un certificado emitido por la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD no emite la EIPD; la realiza el responsable."
+        },
+        {
+          "texto": "Un análisis de impacto SEO en el sitio web.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SEO no tiene relación con protección de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el Delegado de Protección de Datos (DPO/DPD) y cuándo es obligatorio?",
+      "respuestas": [
+        {
+          "texto": "Figura encargada de informar, asesorar y supervisar el cumplimiento normativo; obligatorio cuando el tratamiento lo realiza una autoridad pública, requiere observación habitual y sistemática a gran escala, o trata categorías especiales o datos penales a gran escala.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Puede ser interno o externo (subcontratado); su función principal es de supervisión y enlace con la AEPD."
+        },
+        {
+          "texto": "Es el responsable de comercializar las apps de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DPO no tiene función comercial."
+        },
+        {
+          "texto": "Es siempre el CEO de la organización por ley.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No tiene que ser el CEO; puede ser externo y debe tener independencia."
+        },
+        {
+          "texto": "Solo es obligatorio en empresas de más de 5.000 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligatoriedad depende del tipo de tratamiento, no del tamaño en sí."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué plazo máximo debe notificarse a la AEPD una brecha de seguridad con datos personales según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "72 horas desde que se tenga constancia de la brecha (salvo que se considere improbable que constituya un riesgo para los derechos y libertades).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Si no es posible en 72h, debe explicarse la demora en la notificación."
+        },
+        {
+          "texto": "24 horas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. 24 horas es la alerta temprana de la Directiva NIS2, no del RGPD."
+        },
+        {
+          "texto": "1 semana.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD fija 72 horas."
+        },
+        {
+          "texto": "30 días naturales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El plazo es 72 horas, no 30 días."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué sustituye al antiguo Registro General de Protección de Datos (notificación de ficheros a la AEPD) en el RGPD?",
+      "respuestas": [
+        {
+          "texto": "El Registro de Actividades del Tratamiento (RAT), que el responsable y el encargado deben llevar bajo su propia responsabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RAT está regulado en el artículo 30 del RGPD. La AEPD ofrece herramientas como Facilita RGPD para crearlo."
+        },
+        {
+          "texto": "Un certificado anual emitido por la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD no emite certificados anuales por defecto."
+        },
+        {
+          "texto": "Una auditoría externa obligatoria.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La auditoría puede ser una buena práctica, pero no es lo que sustituye al registro."
+        },
+        {
+          "texto": "Nada; con el RGPD desaparece toda obligación de registro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La obligación se mantiene, solo cambia de forma."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Están todas las empresas obligadas a llevar el Registro de Actividades del Tratamiento (RAT)?",
+      "respuestas": [
+        {
+          "texto": "Las organizaciones de menos de 250 trabajadores están exentas, salvo que el tratamiento conlleve riesgo para los derechos y libertades, no sea ocasional, o incluya categorías especiales o datos penales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! En la práctica, las excepciones son tan amplias que casi todas acaban obligadas."
+        },
+        {
+          "texto": "Sí, todas sin excepción.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay excepciones para PYMES, aunque limitadas."
+        },
+        {
+          "texto": "Solo las empresas del sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier sector según el tipo de tratamiento."
+        },
+        {
+          "texto": "Solo las administraciones públicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las AAPP siempre están obligadas, pero no son las únicas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la figura del \"encargado del tratamiento\" según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Persona física o jurídica, autoridad u organismo que trata datos personales por cuenta del responsable; ejemplos: gestoría que hace nóminas, servicio cloud de backup, soporte técnico que accede a sistemas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La relación entre responsable y encargado se formaliza mediante un contrato (art. 28 RGPD)."
+        },
+        {
+          "texto": "Es siempre el CEO de la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El encargado suele ser un proveedor externo, no el CEO."
+        },
+        {
+          "texto": "Es la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD es la autoridad de control, no encargada de tratamientos."
+        },
+        {
+          "texto": "Es el propio interesado titular de los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El interesado es a quien pertenecen los datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación hay entre RGPD y LOPDGDD en la práctica?",
+      "respuestas": [
+        {
+          "texto": "El RGPD aplica directamente como reglamento europeo; la LOPDGDD adapta el ordenamiento español al RGPD, regula lo que el reglamento deja a los Estados (ej. edad consentimiento) y añade derechos digitales específicos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son complementarios: el RGPD es el marco general; la LOPDGDD el desarrollo nacional."
+        },
+        {
+          "texto": "Son normas idénticas con distinto nombre.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son normas distintas con ámbitos y rangos distintos."
+        },
+        {
+          "texto": "La LOPDGDD deroga al RGPD en España.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una ley nacional no puede derogar un reglamento europeo."
+        },
+        {
+          "texto": "El RGPD solo aplica en Alemania y Francia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica en toda la UE."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Aplica el RGPD a una empresa con sede en EEUU que ofrece servicios a residentes en España?",
+      "respuestas": [
+        {
+          "texto": "Sí. El RGPD aplica a cualquier organización que trate datos de personas ubicadas en la UE, independientemente de dónde tenga su sede.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el principio de territorialidad extendida del RGPD: lo que importa es la ubicación del interesado, no de la empresa."
+        },
+        {
+          "texto": "No, las empresas estadounidenses están exentas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Si tratan datos de residentes en la UE, están sometidas."
+        },
+        {
+          "texto": "Solo si tienen oficina física en Bruselas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es necesario tener oficina en la UE para estar sometidas."
+        },
+        {
+          "texto": "Solo aplica a empresas con más de 1.000 empleados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no fija un mínimo de empleados."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la LORTAD fue derogada por la LOPD en 1999 y la LOPD por la LOPDGDD en 2018?",
+      "respuestas": [
+        {
+          "texto": "Por la necesidad de adaptar el ordenamiento español a las normativas europeas sucesivas: la LOPD transpuso la Directiva 95/46/CE; la LOPDGDD adapta el RGPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada paso en la normativa europea exigió actualizar la legislación española."
+        },
+        {
+          "texto": "Porque las leyes españolas caducan automáticamente cada 10 años.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las leyes no caducan automáticamente."
+        },
+        {
+          "texto": "Porque la AEPD decidió cambiarlas por motivos políticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las leyes las aprueba el Parlamento, no la AEPD."
+        },
+        {
+          "texto": "Por incumplimiento del Tribunal Constitucional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La derogación se debe a la adaptación al marco europeo."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué autoridad supervisa el cumplimiento de la normativa de protección de datos en España?",
+      "respuestas": [
+        {
+          "texto": "La Agencia Española de Protección de Datos (AEPD), creada por la LORTAD en 1992, con autoridad independiente. También existen agencias autonómicas en Cataluña, País Vasco y Andalucía.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD es la autoridad de control en el sentido del RGPD."
+        },
+        {
+          "texto": "La Comisión Europea.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Comisión propone normativa; el control es nacional (AEPD)."
+        },
+        {
+          "texto": "Cada Ministerio supervisa el suyo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supervisión es centralizada en la AEPD."
+        },
+        {
+          "texto": "El CCN-CERT.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CCN-CERT atiende incidentes del sector público; no es la autoridad RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué situaciones es OBLIGATORIO el consentimiento expreso según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Cuando el tratamiento incluya categorías especiales de datos, suponga transferencia internacional sin garantías adecuadas, o incluya decisiones automatizadas basadas en perfiles.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Para tratamientos de alto riesgo se exige consentimiento explícito y reforzado."
+        },
+        {
+          "texto": "Únicamente cuando se traten datos de menores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay otras situaciones que requieren consentimiento expreso."
+        },
+        {
+          "texto": "Solo en tratamientos del sector financiero.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No se limita al sector financiero."
+        },
+        {
+          "texto": "Solo si los datos se almacenan más de un año.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La duración del almacenamiento no es el criterio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre la LOPD (1999) y el RGPD?",
+      "respuestas": [
+        {
+          "texto": "LOPD era ley nacional con un modelo prescriptivo (medidas de seguridad por niveles fijos) y notificación de ficheros a la AEPD; el RGPD es reglamento europeo con enfoque de riesgo (medidas según análisis), sin notificación previa, con accountability y nuevos derechos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD pasa de un enfoque prescriptivo a uno basado en riesgo y responsabilidad demostrable."
+        },
+        {
+          "texto": "Son normas idénticas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay diferencias estructurales importantes."
+        },
+        {
+          "texto": "La LOPD aplica fuera de España y el RGPD solo dentro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario en términos de ámbito."
+        },
+        {
+          "texto": "La LOPD no preveía multas y el RGPD sí.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD también tenía régimen sancionador; el RGPD lo endurece."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Por qué la LOPDGDD incluye un Título X de derechos digitales no presente en el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Porque el RGPD deja margen a los Estados miembros para regular aspectos específicos. España aprovecha ese margen para añadir derechos como desconexión digital, neutralidad de Internet o testamento digital.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El Título X es una aportación española que complementa el marco europeo."
+        },
+        {
+          "texto": "Porque el RGPD prohíbe explícitamente esos derechos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no los prohíbe; deja libertad a los Estados."
+        },
+        {
+          "texto": "Porque la UE obliga a todos los países a copiarlos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es una imposición; es una decisión nacional española."
+        },
+        {
+          "texto": "Porque la LSSI exige esos derechos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI es de 2002 y no exige el Título X."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por \"seudonimización\" en el RGPD y qué la diferencia de la anonimización?",
+      "respuestas": [
+        {
+          "texto": "Seudonimización: sustituir identificadores por seudónimos (códigos, hashes con sal) reversibles si se dispone de información adicional. Anonimización: hacer imposible identificar al interesado de forma irreversible. La primera sigue siendo dato personal; la segunda ya no.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Solo la anonimización completa saca al dato del ámbito del RGPD."
+        },
+        {
+          "texto": "Son sinónimos exactos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La seudonimización es reversible; la anonimización no."
+        },
+        {
+          "texto": "Ambas son obligatorias en cualquier tratamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son medidas recomendadas, no siempre obligatorias."
+        },
+        {
+          "texto": "La seudonimización solo aplica a datos médicos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aplica a cualquier tipo de dato personal."
+        }
+      ]
+    },
+    {
+      "pregunta": "Resumiendo la cronología: ¿en qué orden cronológico aparecen las principales normas españolas de protección de datos?",
+      "respuestas": [
+        {
+          "texto": "Constitución 1978 (art. 18.4) → LORTAD 1992 → Directiva UE 95/46/CE → LOPD 1999 → RD 1720/2007 → RGPD 2016 → LOPDGDD 2018.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Esta es la secuencia histórica del marco normativo de protección de datos en España."
+        },
+        {
+          "texto": "RGPD 1995 → LOPDGDD 1999 → LOPD 2018.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las fechas y orden son erróneos."
+        },
+        {
+          "texto": "LSSI 1992 → LORTAD 2002 → RGPD 2007.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Fechas y orden incorrectos."
+        },
+        {
+          "texto": "LOPDGDD 1978 → CE 2018 → LOPD 1995.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Orden totalmente incorrecto."
+        }
+      ]
+    }
+  ]
+}
