@@ -103,17 +103,17 @@
       ]
     },
     {
-      "pregunta": "¿Cuántos niveles de madurez se consideran formalmente en el ENS para evaluar la efectividad de los controles?",
+      "pregunta": "¿Cuántos niveles de madurez se consideran en el ENS para evaluar la efectividad de los controles?",
       "respuestas": [
         {
-          "texto": "6 (L0 Inexistente, L1 Inicial, L2 Reproducible, L3 Definido, L4 Gestionado y L5 Optimizado).",
+          "texto": "5 niveles (L1 a L5). L0 indica 'Inexistente' y no se cuenta como nivel de madurez.",
           "correcta": true,
-          "explicacion": "¡Correcto! Formalmente L0 también es un nivel, así que se cuentan 6 (L0 a L5)."
+          "explicacion": "¡Correcto! Según el temario, los niveles son L1 a L5; L0 representa la ausencia de madurez."
         },
         {
-          "texto": "5 niveles, contando solo de L1 a L5 y dejando fuera L0 (Inexistente).",
+          "texto": "6 niveles, contando también L0 (Inexistente) como nivel adicional.",
           "correcta": false,
-          "explicacion": "Incorrecto. A veces se cita así, pero formalmente L0 también cuenta: son 6 niveles."
+          "explicacion": "Incorrecto según el temario. L0 expresa la inexistencia de medidas, por lo que no se cuenta."
         },
         {
           "texto": "4 niveles equivalentes a las fases del ciclo de Deming (PDCA).",

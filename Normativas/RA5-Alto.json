@@ -86,18 +86,18 @@
         },
         {
           "texto": "5 niveles (L1 a L5)",
-          "correcta": false,
-          "explicacion": "Incorrecto. Aunque se citan L1 a L5, el ENS incluye también el nivel L0 (Inexistente), totalizando 6 niveles."
+          "correcta": true,
+          "explicacion": "¡Correcto! Según el temario son 5 niveles: L1 Inicial, L2 Reproducible, L3 Proceso definido, L4 Gestionado y L5 Optimizado. L0 (Inexistente) no se cuenta porque indica ausencia de madurez."
         },
         {
           "texto": "6 niveles (L0 a L5)",
-          "correcta": true,
-          "explicacion": "¡Correcto! El ENS define seis niveles de madurez: L0 (Inexistente), L1 (Inicial/ad hoc), L2 (Reproducible pero intuitivo), L3 (Proceso definido), L4 (Gestionado y medible) y L5 (Optimizado)."
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque L0 existe conceptualmente como 'Inexistente', no se considera nivel de madurez según el temario; se cuentan 5 (L1 a L5)."
         },
         {
           "texto": "4 niveles (L1 a L4)",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS define más niveles, incluyendo L0 y L5."
+          "explicacion": "Incorrecto. El ENS define hasta el nivel L5 (Optimizado)."
         }
       ]
     },

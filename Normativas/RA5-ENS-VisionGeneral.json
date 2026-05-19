@@ -355,24 +355,24 @@
       "pregunta": "¿Cuántos niveles de madurez define el ENS para evaluar la efectividad de los controles?",
       "respuestas": [
         {
-          "texto": "Seis (L0 a L5): L0 Inexistente, L1 Inicial/ad hoc, L2 Reproducible pero intuitivo, L3 Proceso definido, L4 Gestionado y medible, L5 Optimizado.",
+          "texto": "Cinco (L1 a L5): L1 Inicial/ad hoc, L2 Reproducible pero intuitivo, L3 Proceso definido, L4 Gestionado y medible, L5 Optimizado. L0 (Inexistente) no se cuenta porque indica ausencia de madurez.",
           "correcta": true,
-          "explicacion": "¡Correcto! Es la escala clásica CMMI adaptada al ENS para auditar el estado de los controles."
+          "explicacion": "¡Correcto! Según el temario, son 5 niveles. L0 representa la inexistencia de medidas, por lo que no se considera un nivel de madurez propiamente dicho."
         },
         {
-          "texto": "Tres niveles equivalentes a las categorías del sistema (Bajo, Medio y Alto), donde cada nivel de madurez se asocia directamente con una categoría y determina las medidas que es obligatorio aplicar.",
+          "texto": "Tres niveles equivalentes a las categorías del sistema (Bajo, Medio y Alto), donde cada nivel de madurez se asocia directamente con una categoría.",
           "correcta": false,
           "explicacion": "Incorrecto. Esos son los niveles de valoración de las dimensiones (bajo/medio/alto), no de madurez de los controles."
         },
         {
-          "texto": "Cuatro estados aplicables a cada control: cumple, cumple parcialmente, no cumple y no aplica, siguiendo la escala habitual de los check-lists de auditoría utilizados en certificaciones ISO.",
+          "texto": "Cuatro estados aplicables a cada control: cumple, cumple parcialmente, no cumple y no aplica, siguiendo la escala de los check-lists de auditoría ISO.",
           "correcta": false,
           "explicacion": "Incorrecto. Esa es la escala de cumplimiento de un check-list ISO, no los niveles de madurez del ENS."
         },
         {
-          "texto": "Diez niveles numerados del 1 al 10 con descripciones detalladas para cada uno, similar al sistema de calificación académico, donde 1 representa el peor estado y 10 el mejor estado posible.",
+          "texto": "Diez niveles numerados del 1 al 10 con descripciones detalladas, similar al sistema de calificación académico (1 = peor estado, 10 = mejor).",
           "correcta": false,
-          "explicacion": "Incorrecto. El ENS define 6 niveles (L0 a L5), no 10."
+          "explicacion": "Incorrecto. El ENS no usa una escala de 10 niveles."
         }
       ]
     },
@@ -680,7 +680,7 @@
       "pregunta": "Resumiendo: ¿cuáles son los tres conceptos clave que hay que tener claros del ENS a alto nivel?",
       "respuestas": [
         {
-          "texto": "(1) Las 5 dimensiones [CIDTA], (2) las 3 categorías de sistema (Básica/Media/Alta) y (3) los 6 niveles de madurez (L0-L5). Con esos tres elementos se puede entender la estructura básica de cualquier valoración ENS.",
+          "texto": "(1) Las 5 dimensiones [CIDTA], (2) las 3 categorías de sistema (Básica/Media/Alta) y (3) los 5 niveles de madurez (L1-L5; L0 indica inexistencia). Con esos tres elementos se entiende la estructura básica de cualquier valoración ENS.",
           "correcta": true,
           "explicacion": "¡Correcto! Son los pilares conceptuales del ENS; los controles concretos del Anexo II son el detalle de implementación."
         },
