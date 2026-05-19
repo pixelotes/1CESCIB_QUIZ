@@ -1,0 +1,830 @@
+{
+  "tema": "Práctica EX2 - Repaso de examen (basado en el PDF Examen_Ciberseguridad_2025)",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es el Esquema Nacional de Seguridad (ENS)?",
+      "respuestas": [
+        {
+          "texto": "Normativa española que establece principios y requisitos para proteger la información manejada por las Administraciones Públicas y sus proveedores.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Garantiza un nivel común de seguridad en la administración electrónica."
+        },
+        {
+          "texto": "Estándar internacional voluntario para auditar empresas privadas que tratan datos personales y financieros de sus clientes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS es normativa española obligatoria para la AAPP, no un estándar internacional voluntario."
+        },
+        {
+          "texto": "Reglamento europeo aplicable a operadores de servicios esenciales y proveedores de servicios digitales en la UE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso describe la Directiva NIS/NIS2, no el ENS."
+        },
+        {
+          "texto": "Marco voluntario para empresas que quieran obtener una certificación nacional en gestión de la seguridad de la información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS es obligatorio para AAPP; las privadas pueden adoptarlo, pero no es un marco voluntario."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas ENS?",
+      "respuestas": [
+        {
+          "texto": "Esquema Nacional de Seguridad.",
+          "correcta": true,
+          "explicacion": "¡Correcto!"
+        },
+        {
+          "texto": "Entorno Nacional Seguro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la denominación oficial."
+        },
+        {
+          "texto": "Estándar Nacional de Servicios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con las siglas ENS."
+        },
+        {
+          "texto": "Estrategia Nacional de Software.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿A quién se aplica obligatoriamente el ENS?",
+      "respuestas": [
+        {
+          "texto": "A las Administraciones Públicas y a sus proveedores de servicios.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aplica a toda la AAPP y suele exigirse contractualmente a sus proveedores."
+        },
+        {
+          "texto": "A cualquier empresa privada que use ordenadores para tratar información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS no es obligatorio para empresas privadas en general."
+        },
+        {
+          "texto": "Solo a las universidades privadas y a los centros educativos concertados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ámbito del ENS es la AAPP, no centros educativos privados."
+        },
+        {
+          "texto": "A los usuarios particulares de redes sociales y servicios digitales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS no se aplica a usuarios particulares."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son los tres niveles (categorías) de seguridad del ENS?",
+      "respuestas": [
+        {
+          "texto": "Básico, Medio y Alto.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La categoría se determina a partir de las valoraciones de las 5 dimensiones."
+        },
+        {
+          "texto": "Crítico, Esencial y Normal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura del ENS."
+        },
+        {
+          "texto": "Verde, Amarillo y Rojo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una escala de semáforo, no del ENS."
+        },
+        {
+          "texto": "Inicial, Básico y Avanzado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con las categorías del ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuántos niveles de madurez se consideran formalmente en el ENS para evaluar la efectividad de los controles?",
+      "respuestas": [
+        {
+          "texto": "6 (L0 Inexistente, L1 Inicial, L2 Reproducible, L3 Definido, L4 Gestionado y L5 Optimizado).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Formalmente L0 también es un nivel, así que se cuentan 6 (L0 a L5)."
+        },
+        {
+          "texto": "5 niveles, contando solo de L1 a L5 y dejando fuera L0 (Inexistente).",
+          "correcta": false,
+          "explicacion": "Incorrecto. A veces se cita así, pero formalmente L0 también cuenta: son 6 niveles."
+        },
+        {
+          "texto": "4 niveles equivalentes a las fases del ciclo de Deming (PDCA).",
+          "correcta": false,
+          "explicacion": "Incorrecto. PDCA son fases del SGSI, no niveles de madurez del ENS."
+        },
+        {
+          "texto": "3 niveles equivalentes a las categorías del sistema (Básica, Media y Alta).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los niveles de las dimensiones, no los de madurez."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Sistema de Gestión de Seguridad de la Información.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Conjunto de políticas, procedimientos y recursos para proteger los activos de información."
+        },
+        {
+          "texto": "Servicio General de Soporte Informático.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de las siglas SGSI."
+        },
+        {
+          "texto": "Sistema Global de Seguridad Interna.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con SGSI."
+        },
+        {
+          "texto": "Software de Gestión de Sistemas Integrados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. SGSI no es un software, es un sistema de gestión."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma internacional establece los requisitos para un SGSI?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la única norma certificable de la familia 27000."
+        },
+        {
+          "texto": "ISO 9001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 9001 regula sistemas de gestión de calidad."
+        },
+        {
+          "texto": "ISO 14001.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 14001 regula sistemas de gestión ambiental."
+        },
+        {
+          "texto": "ISO 31000.",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 31000 es la norma general de gestión de riesgos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el principal objetivo de un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Proteger la confidencialidad, la integridad y la disponibilidad de la información.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la conocida tríada CIA aplicada al SGSI."
+        },
+        {
+          "texto": "Aumentar la velocidad y el rendimiento de los sistemas informáticos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El objetivo de un SGSI es la seguridad, no el rendimiento."
+        },
+        {
+          "texto": "Automatizar todas las tareas del departamento de informática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La automatización no es el objetivo del SGSI."
+        },
+        {
+          "texto": "Reducir el número de empleados del área de informática.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SGSI no busca reducir personal, sino proteger la información."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué fases componen el ciclo de Deming aplicado a un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Plan, Do, Check, Act (Planificar, Ejecutar, Verificar, Actuar).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el ciclo PDCA de mejora continua."
+        },
+        {
+          "texto": "Plan, Develop, Check, Audit (Planificar, Desarrollar, Verificar, Auditar).",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Develop' y 'Audit' no forman parte de PDCA."
+        },
+        {
+          "texto": "Prepare, Deploy, Control, Adjust (Preparar, Desplegar, Controlar, Ajustar).",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura del ciclo de Deming."
+        },
+        {
+          "texto": "Predict, Detect, Contain, Analyze (Predecir, Detectar, Contener, Analizar).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son fases de respuesta a incidentes, no del PDCA."
+        }
+      ]
+    },
+    {
+      "pregunta": "De la familia ISO/IEC 27000, ¿cuál es la única norma certificable?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001 (requisitos del SGSI).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la única que se certifica; las demás son guías de apoyo."
+        },
+        {
+          "texto": "ISO 27000 (definiciones y términos).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es la norma de vocabulario, no certificable."
+        },
+        {
+          "texto": "ISO 27002 (objetivos de control y buenas prácticas).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una guía de controles, no certificable."
+        },
+        {
+          "texto": "ISO 27005 (gestión de riesgos de seguridad).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una guía de gestión de riesgos, no certificable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué relación hay entre el RGPD y la LOPDGDD?",
+      "respuestas": [
+        {
+          "texto": "El RGPD es la norma europea; la LOPDGDD es la ley española que la adapta al contexto nacional.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LOPDGDD complementa al RGPD en los aspectos que el reglamento deja a los Estados miembros."
+        },
+        {
+          "texto": "El RGPD es voluntario y la LOPDGDD es obligatoria para empresas privadas españolas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas son de obligado cumplimiento."
+        },
+        {
+          "texto": "El RGPD aplica a empresas y la LOPDGDD aplica únicamente al sector público.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ambas aplican a sector público y privado."
+        },
+        {
+          "texto": "El RGPD es posterior y deroga totalmente a la LOPDGDD española.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPDGDD es posterior (2018) y desarrolla al RGPD (2016)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley regula actualmente la protección de datos personales en España?",
+      "respuestas": [
+        {
+          "texto": "Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales 3/2018 (LOPDGDD).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Vigente desde 2018, adapta el RGPD al ordenamiento español."
+        },
+        {
+          "texto": "Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal (LOPD).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD de 1999 fue derogada por la LOPDGDD de 2018."
+        },
+        {
+          "texto": "Reglamento General de Protección de Datos (RGPD) en exclusiva.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD aplica, pero en España se complementa con la LOPDGDD."
+        },
+        {
+          "texto": "Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI regula servicios digitales y cookies, no es la ley de protección de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "Orden cronológico correcto de las leyes de protección de datos en España:",
+      "respuestas": [
+        {
+          "texto": "LOPD 1999 → RGPD 2016 → LOPDGDD 2018.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LOPD precedió al RGPD, y la LOPDGDD adaptó este último al ordenamiento español."
+        },
+        {
+          "texto": "RGPD 2016 → LOPD 1999 → LOPDGDD 2018.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD de 1999 fue la primera de esta serie."
+        },
+        {
+          "texto": "LOPDGDD 1999 → LOPD 2016 → RGPD 2018.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las fechas y normas no se corresponden."
+        },
+        {
+          "texto": "RGPD 1999 → LOPD 2016 → LOPDGDD 2018.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es de 2016, no de 1999."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son los derechos ARCO?",
+      "respuestas": [
+        {
+          "texto": "Acceso, Rectificación, Cancelación (hoy Supresión) y Oposición.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son los cuatro derechos clásicos del interesado sobre sus datos."
+        },
+        {
+          "texto": "Auditoría, Recopilación, Custodia y Operación de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con los derechos ARCO."
+        },
+        {
+          "texto": "Autorización, Revocación, Confidencialidad y Olvido del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la definición de ARCO."
+        },
+        {
+          "texto": "Anonimización, Restricción, Cifrado y Olvido de los datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son técnicas relacionadas pero no son los derechos ARCO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué derecho permite a una persona saber qué datos personales tiene una empresa sobre ella?",
+      "respuestas": [
+        {
+          "texto": "Derecho de acceso.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El acceso permite obtener una copia de los datos tratados."
+        },
+        {
+          "texto": "Derecho de oposición.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La oposición permite oponerse al tratamiento, no consultarlo."
+        },
+        {
+          "texto": "Derecho de cancelación.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cancelación/supresión permite borrar los datos."
+        },
+        {
+          "texto": "Derecho de portabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La portabilidad permite trasladar los datos a otro responsable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el principio de minimización de datos?",
+      "respuestas": [
+        {
+          "texto": "Recoger solo los datos estrictamente necesarios para la finalidad del tratamiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No se pueden recoger datos 'por si acaso'."
+        },
+        {
+          "texto": "Usar siempre menos de cien datos personales por cada interesado registrado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No hay un número fijo; es un principio de necesidad."
+        },
+        {
+          "texto": "Reducir el número de empleados con acceso a los datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el principio de mínimo privilegio, no la minimización."
+        },
+        {
+          "texto": "Borrar todos los datos personales tras treinta días desde su recogida.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es limitación del plazo de conservación, no minimización."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la AEPD?",
+      "respuestas": [
+        {
+          "texto": "Organismo público que vela por el cumplimiento de la protección de datos en España.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la autoridad de control en el sentido del RGPD."
+        },
+        {
+          "texto": "Empresa privada certificadora de normas ISO de seguridad de la información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD es un organismo público independiente, no una certificadora."
+        },
+        {
+          "texto": "Agencia europea encargada de sancionar a las redes sociales globales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es un organismo español, no europeo."
+        },
+        {
+          "texto": "Departamento del Ministerio del Interior contra el ciberdelito y el fraude.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD es una autoridad administrativa independiente."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la AEPD?",
+      "respuestas": [
+        {
+          "texto": "Velar por el cumplimiento de la legislación de protección de datos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Supervisa, sanciona y orienta sobre el RGPD y la LOPDGDD."
+        },
+        {
+          "texto": "Crear y mantener bases de datos personales para la administración.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La AEPD no crea bases de datos; las supervisa."
+        },
+        {
+          "texto": "Sancionar a los usuarios que difunden noticias falsas en redes sociales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las noticias falsas no son competencia directa de la AEPD."
+        },
+        {
+          "texto": "Impedir el uso de redes sociales a los menores de edad en España.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es competencia de la AEPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué organismo español supervisa el cumplimiento de la normativa de protección de datos?",
+      "respuestas": [
+        {
+          "texto": "AEPD (Agencia Española de Protección de Datos).",
+          "correcta": true,
+          "explicacion": "¡Correcto! Además existen agencias autonómicas en Cataluña, País Vasco y Andalucía."
+        },
+        {
+          "texto": "INE (Instituto Nacional de Estadística).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El INE elabora estadísticas oficiales, no supervisa protección de datos."
+        },
+        {
+          "texto": "CNMC (Comisión Nacional de los Mercados y la Competencia).",
+          "correcta": false,
+          "explicacion": "Incorrecto. La CNMC supervisa mercados y competencia."
+        },
+        {
+          "texto": "CCN-CERT (Centro Criptológico Nacional - CERT).",
+          "correcta": false,
+          "explicacion": "Incorrecto. CCN-CERT atiende incidentes del sector público."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las funciones básicas del DPO (Delegado de Protección de Datos)?",
+      "respuestas": [
+        {
+          "texto": "Informar y asesorar, supervisar el cumplimiento y servir de punto de contacto con la AEPD.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El DPO es asesor, supervisor y enlace con la autoridad de control."
+        },
+        {
+          "texto": "Administrar las bases de datos y realizar las copias de seguridad periódicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son funciones técnicas del DBA, no del DPO."
+        },
+        {
+          "texto": "Cifrar la información sensible y firmar digitalmente los documentos oficiales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son tareas técnicas, no funciones del DPO."
+        },
+        {
+          "texto": "Sancionar internamente a los empleados que filtren información confidencial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El régimen disciplinario interno no es función del DPO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué caso es obligatorio designar un DPO?",
+      "respuestas": [
+        {
+          "texto": "Cuando se traten categorías especiales de datos a gran escala o haya seguimiento sistemático de personas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! También es obligatorio en autoridades y organismos públicos."
+        },
+        {
+          "texto": "Siempre que se utilicen ordenadores para tratar datos personales en la empresa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el criterio del RGPD."
+        },
+        {
+          "texto": "Solo en empresas privadas con más de diez empleados a tiempo completo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD no fija el umbral por número de empleados."
+        },
+        {
+          "texto": "Cuando se subcontraten servicios informáticos a un proveedor externo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La subcontratación no obliga por sí sola a designar DPO."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué acción puede constituir un delito contra la propiedad intelectual?",
+      "respuestas": [
+        {
+          "texto": "Reproducir y distribuir sin autorización obras protegidas por derechos de autor.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la conducta típica del delito del art. 270 CP."
+        },
+        {
+          "texto": "Compartir en privado una fotografía propia en redes sociales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son datos propios y compartirlos no es delito de propiedad intelectual."
+        },
+        {
+          "texto": "Descargar un archivo con licencia libre desde una web oficial.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Una licencia libre permite expresamente la descarga."
+        },
+        {
+          "texto": "Comprar un libro original en una librería física autorizada.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Comprar legalmente no constituye delito."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el cohecho?",
+      "respuestas": [
+        {
+          "texto": "Soborno entregado a un funcionario público para obtener un favor o beneficio.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es el típico delito de soborno a un cargo público."
+        },
+        {
+          "texto": "Uso indebido de fondos públicos por parte de quien los gestiona.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa conducta es malversación, no cohecho."
+        },
+        {
+          "texto": "Abuso de poder de un superior sobre sus subordinados en el trabajo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa figura encaja más con acoso o abuso de autoridad."
+        },
+        {
+          "texto": "Reproducción no autorizada de obras protegidas por derechos de autor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es delito contra la propiedad intelectual."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por malversación?",
+      "respuestas": [
+        {
+          "texto": "Uso indebido de fondos públicos por parte de quien los administra.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La gestiona quien tiene encomendados los caudales públicos."
+        },
+        {
+          "texto": "Soborno entregado a un funcionario para obtener un favor concreto.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es cohecho, no malversación."
+        },
+        {
+          "texto": "Abuso de poder con fines de lucro personal o para terceros cercanos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa descripción genérica encaja con corrupción."
+        },
+        {
+          "texto": "Distribución no autorizada de información confidencial a terceros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso sería revelación de secretos, no malversación."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se entiende por corrupción?",
+      "respuestas": [
+        {
+          "texto": "Abuso de poder o cargo para obtener beneficios indebidos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es una categoría genérica que engloba conductas como cohecho o tráfico de influencias."
+        },
+        {
+          "texto": "Soborno concreto entregado a un funcionario público determinado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese caso concreto es el cohecho."
+        },
+        {
+          "texto": "Uso indebido del dinero o bienes públicos administrados por un cargo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es malversación, no corrupción genérica."
+        },
+        {
+          "texto": "Reproducción ilícita de contenido protegido por derechos de autor.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es delito contra la propiedad intelectual."
+        }
+      ]
+    },
+    {
+      "pregunta": "La reforma de diciembre de 2010 introdujo por primera vez la responsabilidad penal de las...",
+      "respuestas": [
+        {
+          "texto": "Personas jurídicas.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Desde entonces, las empresas pueden ser penalmente responsables."
+        },
+        {
+          "texto": "Personas físicas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las personas físicas siempre han tenido responsabilidad penal."
+        },
+        {
+          "texto": "Organizaciones públicas y entes administrativos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Las entidades públicas tienen su propio régimen."
+        },
+        {
+          "texto": "Cónyuges y familiares directos de los imputados.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La responsabilidad penal es personal e intransferible."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Puede una empresa (persona jurídica) ser penalmente responsable por un delito cometido por un empleado?",
+      "respuestas": [
+        {
+          "texto": "Sí, si no implantó medidas razonables para prevenirlo (programas de compliance).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La falta de medidas de prevención puede generar responsabilidad penal de la empresa."
+        },
+        {
+          "texto": "No, la responsabilidad penal recae siempre y solo en la persona física autora.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Desde 2010 las personas jurídicas también pueden ser penalmente responsables."
+        },
+        {
+          "texto": "Solo si la empresa tiene más de cincuenta empleados en plantilla.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El tamaño de la plantilla no es el criterio."
+        },
+        {
+          "texto": "Solo si el delito se comete fuera del horario laboral del empleado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El horario no determina la responsabilidad penal de la empresa."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de norma europea es el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Un reglamento de aplicación directa en todos los Estados miembros.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Por eso no necesita transposición nacional para aplicarse."
+        },
+        {
+          "texto": "Una directiva que cada país transpone con una ley nacional propia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso aplicaría si fuera directiva, pero es reglamento."
+        },
+        {
+          "texto": "Una recomendación voluntaria sin efectos jurídicos vinculantes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es plenamente vinculante."
+        },
+        {
+          "texto": "Un convenio internacional firmado por terceros países no UE.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es derecho derivado de la Unión Europea."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de estos NO se considera categoría especial del art. 9 del RGPD?",
+      "respuestas": [
+        {
+          "texto": "El número de DNI del interesado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El DNI es dato identificativo común, no categoría especial."
+        },
+        {
+          "texto": "Los datos de salud del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos de salud sí son categoría especial."
+        },
+        {
+          "texto": "La afiliación sindical del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La afiliación sindical es categoría especial."
+        },
+        {
+          "texto": "Los datos biométricos para identificación unívoca.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los biométricos para identificación son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué son las categorías especiales de datos según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Origen étnico, opiniones políticas, religión, salud, biometría, vida sexual y similares.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Su tratamiento está prohibido salvo excepciones tasadas (art. 9.2)."
+        },
+        {
+          "texto": "Datos identificativos básicos como DNI, email, teléfono o dirección postal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son datos identificativos comunes, no categoría especial."
+        },
+        {
+          "texto": "Datos económicos como ingresos, hipotecas, préstamos e inversiones financieras.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos económicos no son categoría especial del art. 9."
+        },
+        {
+          "texto": "Datos académicos como titulaciones, expedientes y experiencia profesional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos académicos no son categoría especial."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dimensión del ENS garantiza que una entidad es realmente quien dice ser?",
+      "respuestas": [
+        {
+          "texto": "Autenticidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Responde a la pregunta '¿quién es realmente el emisor?'."
+        },
+        {
+          "texto": "Integridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Integridad asegura que los datos no han sido alterados."
+        },
+        {
+          "texto": "Disponibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Disponibilidad asegura el acceso cuando se necesita."
+        },
+        {
+          "texto": "Trazabilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Trazabilidad permite reconstruir quién hizo qué."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué dimensión del ENS permite imputar las actuaciones al usuario que las realizó?",
+      "respuestas": [
+        {
+          "texto": "Trazabilidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es esencial para análisis forense y rendición de cuentas."
+        },
+        {
+          "texto": "Confidencialidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Confidencialidad protege frente a accesos no autorizados."
+        },
+        {
+          "texto": "Disponibilidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Disponibilidad garantiza el acceso al servicio."
+        },
+        {
+          "texto": "Autenticidad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Autenticidad acredita la identidad, no la imputación posterior."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las cinco dimensiones de seguridad del ENS?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad, Integridad, Disponibilidad, Trazabilidad y Autenticidad.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS añade Trazabilidad y Autenticidad a la tríada CIA."
+        },
+        {
+          "texto": "Confidencialidad, Integridad y Disponibilidad únicamente (tríada CIA).",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS amplía la tríada CIA con dos dimensiones más."
+        },
+        {
+          "texto": "Seguridad física, seguridad lógica y seguridad administrativa.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es una clasificación de controles, no las dimensiones del ENS."
+        },
+        {
+          "texto": "Prevención, detección, respuesta y recuperación ante incidentes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son fases del ciclo de gestión de incidentes."
+        }
+      ]
+    }
+  ]
+}

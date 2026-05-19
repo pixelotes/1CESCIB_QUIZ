@@ -1,0 +1,630 @@
+{
+  "tema": "Práctica EX2 - Normativas de Seguridad (RA4: RGPD, LOPD, AEPD, datos personales, ARCO, minimización; RA5: ENS y SGSI)",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuándo se aprobó el RGPD (Reglamento UE 2016/679) y cuándo entró en aplicación efectiva?",
+      "respuestas": [
+        {
+          "texto": "Se aprobó en abril de 2016 y entró en aplicación efectiva el 25 de mayo de 2018, tras dos años de adaptación.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El plazo de dos años se dio precisamente para que las organizaciones se adaptaran."
+        },
+        {
+          "texto": "Se aprobó y aplicó simultáneamente en 2018, sin necesidad de plazo de adaptación previa, dado que las organizaciones europeas ya estaban familiarizadas con la Directiva 95/46/CE y por tanto no necesitaban tiempo adicional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hubo dos años completos entre la aprobación (2016) y la aplicación efectiva (2018) para permitir la adaptación."
+        },
+        {
+          "texto": "Se aprobó en marzo de 2020 como respuesta inmediata al aumento de tratamientos digitales derivado de la pandemia de COVID-19 y entró en vigor con efectos retroactivos al inicio del estado de alarma.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es muy anterior a la pandemia: aprobado en 2016, aplicable desde 2018."
+        },
+        {
+          "texto": "Sigue actualmente en fase de negociación entre las instituciones europeas y no se ha aplicado todavía en ningún Estado miembro de la Unión Europea, a la espera del consenso necesario entre Parlamento y Consejo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD lleva en aplicación desde 2018 y es directamente exigible en toda la UE desde entonces."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica del RGPD respecto a su aplicación en los Estados miembros de la UE?",
+      "respuestas": [
+        {
+          "texto": "Es de aplicación directa en todos los Estados miembros, sin necesidad de transposición a leyes nacionales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Al ser un reglamento (no directiva), entra en vigor directamente en toda la UE."
+        },
+        {
+          "texto": "Cada país debe traducirlo a su idioma oficial y aprobar su propia versión adaptada como una ley nacional independiente, con plazos y particularidades específicas según el ordenamiento jurídico de cada Estado miembro.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso aplica a directivas, no a reglamentos europeos como el RGPD que tienen aplicación directa."
+        },
+        {
+          "texto": "Solo aplica a empresas con sede social registrada en Bruselas u otra capital europea, dado que el alcance territorial del RGPD se limita estrictamente al ámbito geográfico de las instituciones de la Unión Europea.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD aplica a cualquier organización que trate datos de residentes en la UE, con independencia de dónde tenga su sede."
+        },
+        {
+          "texto": "Es voluntario y depende de la adhesión de cada empresa, que decide libremente si suscribirse al régimen del Reglamento o continuar aplicando exclusivamente la normativa nacional de protección de datos de su país.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD es de obligado cumplimiento; no hay opción de adhesión voluntaria ni renuncia."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ley española adapta el ordenamiento al RGPD y deroga la LOPD de 1999?",
+      "respuestas": [
+        {
+          "texto": "La LOPDGDD (Ley Orgánica 3/2018, de Protección de Datos Personales y Garantía de los Derechos Digitales).",
+          "correcta": true,
+          "explicacion": "¡Correcto! La LOPDGDD complementa al RGPD en lo que el reglamento europeo deja a los Estados miembros."
+        },
+        {
+          "texto": "La LSSI (Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico), que regula las obligaciones de prestadores de servicios digitales, comunicaciones comerciales y cookies en el ámbito de Internet.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LSSI regula servicios de la sociedad de la información, no es la ley que adapta el RGPD."
+        },
+        {
+          "texto": "El Real Decreto 1720/2007 de desarrollo reglamentario de la antigua LOPD de 1999, que estableció los tres niveles de seguridad (básico, medio y alto) aplicables al tratamiento de datos personales en cualquier soporte.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Ese reglamento desarrolla la LOPD anterior, no adapta el RGPD; además es anterior al RGPD."
+        },
+        {
+          "texto": "La Ley 41/2002, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, que regula el tratamiento de los datos sanitarios y la historia clínica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa ley regula datos sanitarios y consentimiento informado, pero no es la ley que adapta el RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia fundamental entre la LOPD (1999) y el RGPD?",
+      "respuestas": [
+        {
+          "texto": "LOPD era ley nacional con un modelo prescriptivo (medidas de seguridad por niveles fijos) y notificación de ficheros a la AEPD; el RGPD es reglamento europeo con enfoque de riesgo (medidas según análisis), sin notificación previa, con accountability y nuevos derechos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD pasa de un enfoque prescriptivo a uno basado en riesgo y responsabilidad demostrable."
+        },
+        {
+          "texto": "Son normas absolutamente idénticas con distinto nombre y origen, lo que significa que el ordenamiento jurídico español ha mantenido inalterada su normativa sustantiva en materia de protección de datos a lo largo de las últimas décadas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Hay diferencias estructurales muy importantes entre LOPD y RGPD."
+        },
+        {
+          "texto": "La LOPD se aplica fuera del territorio español a empresas con sede en otros países y el RGPD solo dentro del territorio nacional español, siguiendo un criterio de territorialidad estricto basado en la sede social del responsable del tratamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: la LOPD era ley nacional española; el RGPD tiene aplicación extraterritorial."
+        },
+        {
+          "texto": "La LOPD no preveía sanciones administrativas y el RGPD las introduce por primera vez en el ordenamiento jurídico español, junto con la posibilidad de imponer multas significativas a las organizaciones que incumplan sus obligaciones.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La LOPD también tenía régimen sancionador con multas; el RGPD lo endurece considerablemente pero no lo crea."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué autoridad supervisa el cumplimiento de la normativa de protección de datos en España y cuál es su función?",
+      "respuestas": [
+        {
+          "texto": "La Agencia Española de Protección de Datos (AEPD), creada por la LORTAD en 1992, con autoridad independiente. También existen agencias autonómicas en Cataluña, País Vasco y Andalucía.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La AEPD es la autoridad de control en el sentido del RGPD: supervisa, instruye procedimientos sancionadores, atiende reclamaciones y publica guías."
+        },
+        {
+          "texto": "La Comisión Europea, en su condición de órgano ejecutivo de la Unión Europea con competencia general sobre la aplicación del Derecho de la Unión, incluyendo el cumplimiento del Reglamento General de Protección de Datos en todos los Estados miembros.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La Comisión propone normativa europea; el control se hace por autoridades nacionales (AEPD en España)."
+        },
+        {
+          "texto": "Cada Ministerio supervisa la aplicación del RGPD en su propio ámbito sectorial de competencia, sin que exista una autoridad transversal con competencias generales sobre el cumplimiento de la normativa de protección de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La supervisión es centralizada en la AEPD (con agencias autonómicas complementarias), no dispersa por Ministerios."
+        },
+        {
+          "texto": "El CCN-CERT (Centro Criptológico Nacional - Computer Emergency Response Team), dependiente del Centro Nacional de Inteligencia, responsable de la respuesta a incidentes en el sector público y de la supervisión del cumplimiento del RGPD a nivel nacional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. CCN-CERT atiende incidentes del sector público; no es la autoridad de control RGPD."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se considera \"dato personal\" según el RGPD y la LOPDGDD?",
+      "respuestas": [
+        {
+          "texto": "Cualquier información (numérica, alfabética, gráfica, fotográfica, acústica o de cualquier tipo) concerniente a una persona física identificada o identificable.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La definición es muy amplia para evitar lagunas: incluye IPs, IDs de sesión, biometría, etc."
+        },
+        {
+          "texto": "Únicamente el nombre completo, los apellidos y el número del Documento Nacional de Identidad (DNI) o pasaporte de la persona, junto con la fecha de nacimiento si fuera necesaria para distinguirla de otras personas homónimas.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La definición legal de dato personal en el RGPD es mucho más amplia y cubre cualquier información identificable."
+        },
+        {
+          "texto": "Solo los datos almacenados en un fichero informático estructurado y accesible mediante criterios de búsqueda, quedando fuera del ámbito del RGPD cualquier información en soporte papel o sin estructura sistematizada de búsqueda.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El RGPD aplica también a tratamientos no automatizados (papel) cuando formen parte de un fichero o estén destinados a formarlo."
+        },
+        {
+          "texto": "Solo los datos sensibles correspondientes a las categorías especiales del art. 9 del RGPD, como salud, religión, ideología política, orientación sexual, datos biométricos o datos genéticos del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son categorías especiales (un subconjunto); \"dato personal\" es mucho más general en su definición legal."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se considera una \"categoría especial de datos\" según el RGPD?",
+      "respuestas": [
+        {
+          "texto": "Datos genéticos, biométricos, de salud, ideología, afiliación sindical, religión, origen racial/étnico, orientación sexual y similares.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD añade explícitamente los datos genéticos y biométricos a las categorías sensibles."
+        },
+        {
+          "texto": "Solo los datos económicos del interesado, como ingresos, rentas, patrimonio, situación crediticia o cualquier otra información sobre su situación financiera relevante para la concesión de préstamos o servicios bancarios.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los datos económicos no son por sí mismos categoría especial del art. 9 RGPD."
+        },
+        {
+          "texto": "Únicamente el nombre y los apellidos del interesado, considerados datos identificativos básicos pero con especial protección frente a la divulgación pública no autorizada por aplicación del derecho fundamental a la intimidad personal.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El nombre y apellidos son datos identificativos comunes, no categoría especial del art. 9."
+        },
+        {
+          "texto": "Solo los datos de los empleados de la administración pública española, dada la mayor sensibilidad del tratamiento de información sobre personal funcionario y la especial protección reforzada que la legislación les otorga.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La categoría especial se define por la naturaleza del dato (sensible), no por el sujeto al que pertenece."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas \"ARCO\" en derechos de protección de datos clásicos?",
+      "respuestas": [
+        {
+          "texto": "Acceso, Rectificación, Cancelación y Oposición.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Son los cuatro derechos clásicos introducidos por la LORTAD y mantenidos en LOPD."
+        },
+        {
+          "texto": "Auditoría, Recopilación, Custodia y Operación, siglas que identifican las cuatro fases del ciclo de vida de los datos personales en cualquier sistema de tratamiento conforme a las buenas prácticas de la AEPD.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con los derechos ARCO; los cuatro derechos son Acceso, Rectificación, Cancelación y Oposición."
+        },
+        {
+          "texto": "Anonimización, Restricción, Cifrado y Olvido, conceptos técnicos relacionados con la protección de datos pero que no corresponden con las siglas ARCO definidas en la normativa española clásica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Son conceptos relacionados con protección de datos, pero no son las siglas ARCO."
+        },
+        {
+          "texto": "Autorización, Renovación, Caducidad y Obligación, términos administrativos que se refieren al ciclo de vida del consentimiento del interesado en cualquier procedimiento de tratamiento de datos personales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No corresponde con la definición de los derechos ARCO en protección de datos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué nuevos derechos añadió el RGPD a los clásicos derechos ARCO?",
+      "respuestas": [
+        {
+          "texto": "Derecho a la portabilidad, derecho al olvido (supresión reforzada) y derecho a la limitación del tratamiento.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El RGPD amplía los ARCO con nuevos derechos para adaptarse al entorno digital."
+        },
+        {
+          "texto": "Únicamente el derecho al cifrado obligatorio de todos los datos personales con algoritmos certificados de fortaleza criptográfica equivalente a AES-256, aplicable tanto en reposo como en tránsito en cualquier tratamiento de datos.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado es una medida técnica recomendada, no un derecho del interesado contemplado en el RGPD."
+        },
+        {
+          "texto": "El derecho a la desconexión digital en el ámbito laboral y el derecho a usar firma electrónica avanzada en los procedimientos administrativos, dos novedades aplicables específicamente al sector público.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La desconexión digital la añade la LOPDGDD (no el RGPD); la firma electrónica es otra normativa distinta (eIDAS)."
+        },
+        {
+          "texto": "Solo el derecho al acceso a los datos personales del interesado por parte del responsable del tratamiento, derecho que en realidad ya existía en la legislación anterior y que el RGPD se limitó a reforzar en su alcance.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El acceso ya estaba en los ARCO clásicos; el RGPD añadió portabilidad, olvido reforzado y limitación del tratamiento."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué consiste el principio de \"minimización de datos\"?",
+      "respuestas": [
+        {
+          "texto": "Los datos personales tratados deben ser adecuados, pertinentes y limitados a lo estrictamente necesario para la finalidad para la que son tratados.",
+          "correcta": true,
+          "explicacion": "¡Correcto! No se pueden recoger datos \"por si acaso\"; solo los imprescindibles para la finalidad declarada."
+        },
+        {
+          "texto": "Reducir el tamaño total en bytes de los ficheros donde se almacenan los datos personales mediante compresión, deduplicación y optimización del formato de almacenamiento elegido por el responsable del tratamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un principio técnico de optimización de espacio, sino un principio jurídico de limitación del alcance del tratamiento."
+        },
+        {
+          "texto": "Recoger todos los datos posibles del interesado para tener disponibles análisis futuros y poder reutilizarlos con fines compatibles distintos a los de la finalidad inicial del tratamiento, maximizando así el valor extraído de la información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Es justo lo contrario: el principio prohíbe recoger \"por si acaso\" y exige limitarse a lo necesario."
+        },
+        {
+          "texto": "Minimizar el número de personas dentro de la organización que tienen acceso a los datos personales, aplicando estrictamente el principio de mínimo privilegio en las autorizaciones concedidas a empleados, contratistas y proveedores.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es el principio de mínimo privilegio o necesidad de saber; la minimización se refiere a los datos recogidos, no a quién accede."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué regula el Esquema Nacional de Seguridad (ENS) en España?",
+      "respuestas": [
+        {
+          "texto": "La política de seguridad en la utilización de medios electrónicos en la Administración Pública, garantizando la protección de información y servicios para el ejercicio de derechos y cumplimiento de deberes de los ciudadanos.",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS asegura un nivel mínimo común de seguridad en toda la administración electrónica española."
+        },
+        {
+          "texto": "El régimen sancionador de las brechas de datos personales, fijando las multas máximas (20 millones de euros o 4% del volumen de negocio) y los procedimientos de notificación a la autoridad de control.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es competencia del RGPD/LOPDGDD y de la AEPD, no del ENS, que regula la seguridad en la administración electrónica."
+        },
+        {
+          "texto": "La protección de las infraestructuras críticas españolas (energía, transporte, banca, agua, salud) mediante planes específicos de seguridad y la coordinación con las Fuerzas y Cuerpos de Seguridad del Estado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Eso es la Ley PIC y su reglamento de desarrollo (RD 704/2011), una normativa distinta del ENS aunque complementaria."
+        },
+        {
+          "texto": "Las relaciones laborales en la administración pública, incluyendo los derechos de los empleados públicos, el control horario y la protección de la intimidad de los funcionarios en el lugar de trabajo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS no es normativa laboral; las relaciones laborales en la AAPP se regulan por el EBEP y normas conexas."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el ámbito de aplicación del ENS?",
+      "respuestas": [
+        {
+          "texto": "El conjunto de la Administración Pública española: Administración General del Estado, Comunidades Autónomas, Entidades Locales y entidades de derecho público vinculadas o dependientes.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Aplica a TODA la AAPP, no solo al Estado central; también suele exigirse a proveedores tecnológicos que prestan servicios a la AAPP."
+        },
+        {
+          "texto": "Únicamente al Estado central y sus organismos autónomos; las Comunidades Autónomas y las Entidades Locales quedan fuera del ámbito y aplican sus propias normativas autonómicas en la materia.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS abarca expresamente a CCAA y Entidades Locales, no solo al Estado central."
+        },
+        {
+          "texto": "Solo a las empresas del IBEX-35 y a aquellas que cotizan en mercados regulados, dada la criticidad económica de su actividad para el conjunto del sistema financiero español.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS es para AAPP, no para empresas privadas (aunque éstas pueden adoptarlo voluntariamente como marco de referencia)."
+        },
+        {
+          "texto": "Únicamente al sector financiero y sanitario por considerarse sectores con datos de especial sensibilidad y necesidad reforzada de garantías de confidencialidad e integridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ámbito del ENS es la AAPP en general; los sectores financiero y sanitario tienen normativas sectoriales propias (DORA, Ley 41/2002)."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tres categorías (niveles de seguridad) de sistemas de información establece el ENS?",
+      "respuestas": [
+        {
+          "texto": "Básica, Media y Alta.",
+          "correcta": true,
+          "explicacion": "¡Correcto! La categoría se determina según las valoraciones (bajo/medio/alto) de las 5 dimensiones de seguridad."
+        },
+        {
+          "texto": "Confidencial, Reservado y Secreto, siguiendo la clasificación clásica de información clasificada utilizada en el ámbito militar y de inteligencia que distingue tres niveles de protección creciente.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la clasificación de información clasificada militar/CCN (Ley 9/1968 de Secretos Oficiales), no las categorías del ENS."
+        },
+        {
+          "texto": "Crítica y no crítica, categorización binaria que se utiliza típicamente en el ámbito de las infraestructuras estratégicas para distinguir aquellas cuya interrupción afectaría a servicios esenciales.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa terminología es de la Ley PIC (infraestructuras críticas), no del ENS."
+        },
+        {
+          "texto": "Pública, Privada e Híbrida, siguiendo la clasificación habitual de modelos de despliegue de nubes en función de quién opera y consume los recursos computacionales del sistema de información.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es clasificación de modelos cloud (NIST SP 800-145), no del ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuántos niveles de madurez define el ENS para evaluar la efectividad de los controles?",
+      "respuestas": [
+        {
+          "texto": "Seis (L0 a L5): L0 Inexistente, L1 Inicial/ad hoc, L2 Reproducible pero intuitivo, L3 Proceso definido, L4 Gestionado y medible, L5 Optimizado.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es la escala clásica CMMI adaptada al ENS para auditar el estado de los controles."
+        },
+        {
+          "texto": "Tres niveles equivalentes a las categorías del sistema (Bajo, Medio y Alto), donde cada nivel de madurez se asocia directamente con una categoría y determina las medidas que es obligatorio aplicar.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los niveles de valoración de las dimensiones (bajo/medio/alto), no de madurez de los controles."
+        },
+        {
+          "texto": "Cuatro estados aplicables a cada control: cumple, cumple parcialmente, no cumple y no aplica, siguiendo la escala habitual de los check-lists de auditoría utilizados en certificaciones ISO.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es la escala de cumplimiento de un check-list ISO, no los niveles de madurez del ENS."
+        },
+        {
+          "texto": "Diez niveles numerados del 1 al 10 con descripciones detalladas para cada uno, similar al sistema de calificación académico, donde 1 representa el peor estado y 10 el mejor estado posible.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS define 6 niveles (L0 a L5), no 10."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la norma certificable de la familia ISO/IEC 27000 que define el SGSI?",
+      "respuestas": [
+        {
+          "texto": "ISO 27000",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27000 contiene definiciones y términos del SGSI, pero no es certificable."
+        },
+        {
+          "texto": "ISO 27001",
+          "correcta": true,
+          "explicacion": "¡Correcto! La ISO 27001 establece los requisitos del SGSI y es la única norma certificable de la familia."
+        },
+        {
+          "texto": "ISO 27002",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27002 contiene objetivos de control y evaluaciones recomendables, es una guía no certificable."
+        },
+        {
+          "texto": "ISO 27005",
+          "correcta": false,
+          "explicacion": "Incorrecto. La ISO 27005 trata sobre la gestión de riesgos en la seguridad de la información, no es certificable."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significan las siglas SGSI?",
+      "respuestas": [
+        {
+          "texto": "Sistema General de Seguridad Informática",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el término correcto en seguridad de la información."
+        },
+        {
+          "texto": "Sistema de Gestión de Seguridad de la Información",
+          "correcta": true,
+          "explicacion": "¡Correcto! Un SGSI es un conjunto de políticas, procedimientos, recursos y actividades para proteger los activos de información esenciales."
+        },
+        {
+          "texto": "Servicio de Gestión de Seguridad Interna",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es un término utilizado en la normativa de seguridad."
+        },
+        {
+          "texto": "Sistema Global de Seguridad e Integridad",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es el significado de SGSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es un SGSI (Sistema de Gestión de Seguridad de la Información) y para qué sirve?",
+      "respuestas": [
+        {
+          "texto": "Conjunto de políticas, procedimientos y directrices junto a los recursos y actividades asociados, administrados colectivamente para proteger los activos de información esenciales de una organización. Debe involucrar a toda la organización y contar con apoyo de la dirección.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Es un sistema de gestión, no una herramienta concreta; ISO 27001 lo certifica."
+        },
+        {
+          "texto": "Un software antivirus centralizado con consola de gestión unificada, agentes desplegados en todos los endpoints corporativos y motor de detección basado en firmas, heurística y análisis de comportamiento.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SGSI es un sistema de gestión organizativo, no una solución software de protección de endpoints."
+        },
+        {
+          "texto": "Un protocolo de cifrado para datos sensibles que combina algoritmos simétricos (AES-256) y asimétricos (RSA-4096) con derivación de claves mediante PBKDF2 y autenticación HMAC-SHA-512 para garantizar la integridad.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El cifrado puede ser parte de los controles, pero el SGSI es un sistema de gestión, no un protocolo criptográfico."
+        },
+        {
+          "texto": "Una unidad del Centro Criptológico Nacional dedicada exclusivamente a la administración pública española, encargada de emitir guías STIC y supervisar el cumplimiento del Esquema Nacional de Seguridad en todas las entidades.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El SGSI es un concepto organizativo aplicable a cualquier entidad; no es un departamento del CCN."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué ciclo se utiliza para la implantación de un SGSI?",
+      "respuestas": [
+        {
+          "texto": "Ciclo de Shewhart",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque Shewhart inspiró a Deming, el ciclo se conoce por Deming en el contexto de SGSI."
+        },
+        {
+          "texto": "Ciclo de Deming (PDCA)",
+          "correcta": true,
+          "explicacion": "¡Correcto! Se aplica el modelo Plan-Do-Check-Act (PDCA), también conocido como espiral de mejora continua."
+        },
+        {
+          "texto": "Ciclo OODA",
+          "correcta": false,
+          "explicacion": "Incorrecto. OODA (Observe-Orient-Decide-Act) es un modelo militar, no de gestión de SGSI."
+        },
+        {
+          "texto": "Ciclo SDLC",
+          "correcta": false,
+          "explicacion": "Incorrecto. SDLC es el ciclo de vida del desarrollo de software, no aplica al SGSI."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa el acrónimo PDCA del ciclo de Deming?",
+      "respuestas": [
+        {
+          "texto": "Plan, Develop, Check, Audit",
+          "correcta": false,
+          "explicacion": "Incorrecto. 'Develop' y 'Audit' no forman parte del ciclo PDCA original."
+        },
+        {
+          "texto": "Plan, Do, Check, Act",
+          "correcta": true,
+          "explicacion": "¡Correcto! Planificar, Ejecutar, Verificar y Actuar son las cuatro fases del ciclo de mejora continua."
+        },
+        {
+          "texto": "Prepare, Deploy, Control, Adjust",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura estándar del ciclo de Deming."
+        },
+        {
+          "texto": "Predict, Detect, Contain, Analyze",
+          "correcta": false,
+          "explicacion": "Incorrecto. Suena a fases de respuesta a incidentes, no al ciclo PDCA."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría caen el DNI, dirección postal, número de teléfono, email personal o cuenta bancaria?",
+      "respuestas": [
+        {
+          "texto": "Datos identificativos (también llamados datos de identificación). Son la categoría más básica y común; no son sensibles pero sí personales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Permiten identificar directamente al interesado."
+        },
+        {
+          "texto": "Categorías especiales del artículo 9 del RGPD, dado que se trata de información de máxima sensibilidad que identifica unívocamente al titular.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Los identificativos NO son categoría especial; las categorías especiales son las del art. 9 (salud, religión, ideología, biometría, etc.)."
+        },
+        {
+          "texto": "Datos biométricos del interesado, dado que el DNI contiene la huella dactilar y la fotografía digital del titular.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El DNI como número identificativo no es dato biométrico; los biométricos son huella, iris, rostro procesados para identificación."
+        },
+        {
+          "texto": "Datos económicos exclusivamente, dado que se trata de información directamente relacionada con la capacidad financiera del individuo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La cuenta bancaria tiene componente económico, pero DNI, email, teléfono y dirección son fundamentalmente identificativos."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría caen los datos relativos al estado civil, fecha y lugar de nacimiento, sexo o nacionalidad?",
+      "respuestas": [
+        {
+          "texto": "Datos de características personales.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Reflejan atributos personales del interesado sin ser sensibles per se."
+        },
+        {
+          "texto": "Datos económicos, financieros y de seguros, dado que el estado civil tiene impacto directo en la capacidad económica del interesado.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El estado civil no son datos económicos; son datos de características personales."
+        },
+        {
+          "texto": "Datos académicos y profesionales del interesado, dado que la nacionalidad y la fecha de nacimiento tienen relevancia sobre la carrera profesional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los relativos a formación y trayectoria profesional (titulaciones, experiencia)."
+        },
+        {
+          "texto": "Categorías especiales del artículo 9 del RGPD, dado el carácter sensible de la información sobre la vida familiar e íntima del titular.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Salvo que se combinen con datos sensibles (ej. origen étnico), estado civil y datos familiares no son categoría especial del art. 9."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿En qué categoría caen los ingresos, rentas, inversiones, propiedades, créditos, préstamos, hipotecas o seguros?",
+      "respuestas": [
+        {
+          "texto": "Datos económicos, financieros y de seguros.",
+          "correcta": true,
+          "explicacion": "¡Correcto! Describen la situación patrimonial y aseguradora del interesado."
+        },
+        {
+          "texto": "Datos identificativos directos del titular exclusivamente, dado que el número de cuenta bancaria y las inversiones permiten identificarlo.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Aunque el IBAN es identificativo, los ingresos, rentas e inversiones son fundamentalmente económicos."
+        },
+        {
+          "texto": "Categorías especiales del artículo 9 del RGPD, dada la sensibilidad de la información financiera del titular.",
+          "correcta": false,
+          "explicacion": "Incorrecto. La situación económica/financiera NO es categoría especial del art. 9 RGPD."
+        },
+        {
+          "texto": "Datos académicos y profesionales del interesado, dado el impacto directo que las inversiones e hipotecas tienen sobre la planificación profesional.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Académicos son los relativos a formación; los financieros son una categoría diferenciada."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué norma ISO contiene los objetivos de control y las buenas prácticas recomendables para el SGSI?",
+      "respuestas": [
+        {
+          "texto": "ISO 27001",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27001 contiene los requisitos del SGSI, no los controles detallados."
+        },
+        {
+          "texto": "ISO 27002",
+          "correcta": true,
+          "explicacion": "¡Correcto! ISO 27002 es la guía de buenas prácticas con los objetivos de control que pueden implementarse en el marco de la 27001."
+        },
+        {
+          "texto": "ISO 27005",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 27005 trata sobre gestión de riesgos."
+        },
+        {
+          "texto": "ISO 22301",
+          "correcta": false,
+          "explicacion": "Incorrecto. ISO 22301 es para continuidad de negocio."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuáles son las cinco dimensiones de seguridad que utiliza el ENS para valorar los sistemas?",
+      "respuestas": [
+        {
+          "texto": "Confidencialidad [C], Integridad [I], Disponibilidad [D], Trazabilidad [T] y Autenticidad [A].",
+          "correcta": true,
+          "explicacion": "¡Correcto! El ENS añade Trazabilidad y Autenticidad a la tríada CIA clásica."
+        },
+        {
+          "texto": "Únicamente Confidencialidad, Integridad y Disponibilidad (CIA), siguiendo la tríada clásica.",
+          "correcta": false,
+          "explicacion": "Incorrecto. El ENS amplía la tríada CIA con dos dimensiones adicionales: Trazabilidad y Autenticidad."
+        },
+        {
+          "texto": "Seguridad física (instalaciones), seguridad lógica (sistemas) y seguridad administrativa (procedimientos).",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa no es la clasificación de dimensiones del ENS, que se basa en propiedades de la información."
+        },
+        {
+          "texto": "Prevención, detección, respuesta y recuperación, que son las cuatro fases del ciclo de gestión de incidentes.",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esas son fases del ciclo de gestión, no dimensiones de seguridad del ENS."
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué niveles se utilizan para valorar cada una de las dimensiones de seguridad en el ENS?",
+      "respuestas": [
+        {
+          "texto": "Crítico, Importante y Normal",
+          "correcta": false,
+          "explicacion": "Incorrecto. No es la nomenclatura del ENS."
+        },
+        {
+          "texto": "Bajo, Medio y Alto",
+          "correcta": true,
+          "explicacion": "¡Correcto! Cada dimensión (C, I, D, T, A) se valora en uno de estos tres niveles, y la categoría del sistema (Básica/Media/Alta) se toma del peor caso."
+        },
+        {
+          "texto": "L0, L1, L2, L3, L4 y L5",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esos son los niveles de madurez de los controles, no los niveles de valoración de las dimensiones."
+        },
+        {
+          "texto": "Público, Restringido y Confidencial",
+          "correcta": false,
+          "explicacion": "Incorrecto. Esa es una clasificación típica de información, no los niveles de valoración de las dimensiones del ENS."
+        }
+      ]
+    }
+  ]
+}

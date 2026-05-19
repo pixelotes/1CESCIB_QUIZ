@@ -289,6 +289,18 @@
       "name": "Normativas de Ciberseguridad",
       "files": [
         {
+          "name": "Practica-EX2-1",
+          "tema": "Práctica EX2 - Normativas de Seguridad (RA4: RGPD, LOPD, AEPD, datos personales, ARCO, minimización; RA5: ENS y SGSI)",
+          "count": 25,
+          "path": "Normativas/Practica-EX2-1.json"
+        },
+        {
+          "name": "Practica-EX2-Repaso",
+          "tema": "Práctica EX2 - Repaso de examen (basado en el PDF Examen_Ciberseguridad_2025)",
+          "count": 33,
+          "path": "Normativas/Practica-EX2-Repaso.json"
+        },
+        {
           "name": "RA1-Facil",
           "tema": "Normativa de Ciberseguridad - UD1: Cumplimiento Normativo y Legal",
           "count": 30,
@@ -349,12 +361,6 @@
           "path": "Normativas/RA4-Alto.json"
         },
         {
-          "name": "RA4-Normativas",
-          "tema": "RA4 - Normativas de Protección de Datos (LORTAD, LOPD, LOPDGDD, RGPD, LSSI, derechos ARCO)",
-          "count": 43,
-          "path": "Normativas/RA4-Normativas.json"
-        },
-        {
           "name": "RA4-BasesJuridicas-Roles",
           "tema": "RA4 - Bases jurídicas del tratamiento (art. 6 RGPD) y roles (Responsable, Encargado, DPO)",
           "count": 35,
@@ -379,16 +385,22 @@
           "path": "Normativas/RA4-Medio.json"
         },
         {
+          "name": "RA4-Normativas",
+          "tema": "RA4 - Normativas de Protección de Datos (LORTAD, LOPD, LOPDGDD, RGPD, LSSI, derechos ARCO)",
+          "count": 43,
+          "path": "Normativas/RA4-Normativas.json"
+        },
+        {
           "name": "RA5-Alto",
           "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Difícil)",
           "count": 39,
           "path": "Normativas/RA5-Alto.json"
         },
         {
-          "name": "RA5-Medio",
-          "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Medio)",
-          "count": 37,
-          "path": "Normativas/RA5-Medio.json"
+          "name": "RA5-Continuidad-PIC-Marcos",
+          "tema": "RA5 - Continuidad de negocio (ISO 22301), Ley PIC y marcos normativos comparados",
+          "count": 29,
+          "path": "Normativas/RA5-Continuidad-PIC-Marcos.json"
         },
         {
           "name": "RA5-ENS-VisionGeneral",
@@ -397,10 +409,10 @@
           "path": "Normativas/RA5-ENS-VisionGeneral.json"
         },
         {
-          "name": "RA5-Continuidad-PIC-Marcos",
-          "tema": "RA5 - Continuidad de negocio (ISO 22301), Ley PIC y marcos normativos comparados",
-          "count": 29,
-          "path": "Normativas/RA5-Continuidad-PIC-Marcos.json"
+          "name": "RA5-Medio",
+          "tema": "Normativa nacional e internacional de ciberseguridad (Nivel Medio)",
+          "count": 37,
+          "path": "Normativas/RA5-Medio.json"
         }
       ]
     },
